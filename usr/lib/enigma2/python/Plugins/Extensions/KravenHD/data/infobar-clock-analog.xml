@@ -1,0 +1,17 @@
+<!--/* Clock -->
+<widget backgroundColor="KravenBackground" font="Regular; 16" foregroundColor="white" halign="center" position="1050,690" render="Label" size="200,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2">
+    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
+  </widget>
+<panel position="1055,533" size="189,151">
+<ePixmap alphatest="blend" pixmap="KravenHD/analog08.png" position="center,0" size="189,151" zPosition="1" />
+<widget source="global.CurrentTime" render="KravenHDWatches" position="58,40" foregroundColor="white" zPosition="4" size="74,74" alphatest="blend">
+    <convert type="KravenHDExtraNumText">hourHand</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="KravenHDWatches" position="45,27" foregroundColor="white" zPosition="5" size="100,100" alphatest="blend">
+    <convert type="KravenHDExtraNumText">minHand</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="KravenHDWatches" position="53,35" foregroundColor="red" zPosition="6" size="84,84" alphatest="blend">
+    <convert type="KravenHDExtraNumText">secHand</convert>
+  </widget>
+</panel>
+    <!--Clock */-->

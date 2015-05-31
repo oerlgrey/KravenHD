@@ -1,0 +1,6 @@
+#!/bin/sh
+rm -rf /usr/share/enigma2/KravenHD
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/KravenHD
+echo "                                                          "
+echo "              ...Skin successful removed.                 "
+echo "                                                          "

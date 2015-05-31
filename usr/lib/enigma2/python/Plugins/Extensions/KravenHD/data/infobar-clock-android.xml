@@ -1,0 +1,17 @@
+    <!--/* Clock -->
+
+ <widget backgroundColor="KravenBackground" font="Regular; 26" halign="center" position="1077,622" render="Label" size="53,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
+    <convert type="KravenHDClockToText">Format:%H</convert>
+  </widget>
+  <widget backgroundColor="KravenBackground" font="Regular; 26" halign="center" position="1119,622" render="Label" size="53,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
+    <convert type="KravenHDClockToText">Format:%M</convert>
+  </widget>
+  <widget backgroundColor="KravenBackground" font="Regular; 16" foregroundColor="white" halign="center" position="1054,685" render="Label" size="200,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2">
+    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
+  </widget>
+ <widget alphatest="blend" render="MSNWeatherPixmap" position="1054,568" size="200,122" source="session.MSNWeather" transparent="1" zPosition="1">
+    <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/KravenHD/clock/,png</convert>
+  </widget><widget noWrap="1" backgroundColor="KravenBackground" font="Regular; 15" foregroundColor="black" render="Label" position="1177,654" size="60,25" source="session.MSNWeather" zPosition="2" halign="center" transparent="1">
+    <convert type="MSNWeather">temperature_current</convert>
+  </widget>
+    <!--Clock */-->

@@ -1,0 +1,64 @@
+<!-- /* ChannelSelection ZPicon -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+  <widget backgroundColor="KravenBackground" font="Regular; 40" halign="center" position="1075,0" render="Label" size="65,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDClockToText">Format:%H</convert>
+  </widget>
+  <eLabel backgroundColor="KravenBackground" font="Regular; 40" halign="center" position="1130,3" size="15,60" text=":" transparent="1" valign="top" zPosition="1" />
+  <widget backgroundColor="KravenBackground" font="Regular; 40" halign="center" position="1135,0" render="Label" size="65,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDClockToText">Format:%M</convert>
+  </widget>
+  <eLabel backgroundColor="KravenBackground" font="Regular; 26" halign="center" position="1189,17" size="15,40" text=":" transparent="1" valign="top" zPosition="1" />
+  <widget backgroundColor="KravenBackground" font="Regular; 26" halign="center" position="1193,15" render="Label" size="50,40" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDClockToText">Format:%S</convert>
+  </widget>
+  <widget backgroundColor="KravenBackground" font="Regular; 16" foregroundColor="KravenAccent1" halign="right" position="928,30" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="KravenHDClockToText">Format:%e. %B</convert>
+  </widget>
+  <widget backgroundColor="KravenBackground" font="Regular; 16" foregroundColor="KravenAccent1" halign="right" position="951,10" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="KravenHDClockToText">Format:%A</convert>
+  </widget>
+  <widget backgroundColor="KravenBackground" font="Regular; 34" foregroundColor="KravenAccent1" halign="left" position="35,10" render="Label" size="902,45" source="Title" transparent="1" valign="center" noWrap="1" />
+  <widget backgroundColor="KravenBackground" scrollbarMode="showNever"  foregroundColorMarkedSelected="green" foregroundColor="white" colorEventProgressbarBorder="KravenAccent2" colorEventProgressbarBorderSelected="KravenForeground" colorServiceDescription="blue2" colorServiceDescriptionSelected="white" colorServiceRecording="KravenRed" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="428,78" serviceInfoFont="Regular;23" serviceItemHeight="35" serviceNameFont="Regular;25" serviceNumberFont="Regular;25" size="816,564" transparent="1"  />
+  <widget source="ServiceEvent" render="KravenHDSingleEpgList" position="41,551" size="362,146" noWrap="1" font="Regular;22" foregroundColor="blue2" backgroundColor="KravenBackground" transparent="1">
+  </widget>
+  <ePixmap name="new ePixmap" pixmap="KravenHD/buttons/key_epg.png" position="1002,675" size="49,24" alphatest="blend" />
+  <ePixmap name="new ePixmap" pixmap="KravenHD/buttons/key_updown.png" position="1132,675" size="49,24" alphatest="blend" />
+  <ePixmap name="new ePixmap" pixmap="KravenHD/buttons/key_leftright.png" position="1067,675" size="49,24" alphatest="blend" />
+  <ePixmap name="new ePixmap" pixmap="KravenHD/buttons/key_menu.png" position="937,675" size="49,24" alphatest="blend"/>
+  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="113,700" size="200,5" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="288,700" size="200,5" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="463,700" size="200,5" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="640,700" size="200,5" />
+  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_red" position="118,675" size="130,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_green" position="293,675" size="130,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_yellow" position="468,675" size="130,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_blue" position="643,675" size="130,24" transparent="1" zPosition="1" />
+  <widget alphatest="blend" position="114,157" render="KravenHDXPicon" size="220,94" source="ServiceEvent" transparent="1" zPosition="4">
+  <convert type="KravenHDRefString">ServicelistRef</convert>
+</widget>
+  <widget source="ServiceEvent" render="Label" position="338,128" size="77,24" font="Regular; 18" backgroundColor="KravenBackground" transparent="1">
+    <convert type="KravenHDEventTime">EndTime</convert>
+    <convert type="KravenHDClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="46,128" size="64,24" font="Regular; 18" backgroundColor="KravenBackground" transparent="1" halign="right">
+    <convert type="KravenHDEventTime">StartTime</convert>
+    <convert type="KravenHDClockToText">
+    </convert>
+  </widget>
+  <widget source="ServiceEvent" render="Progress" position="114,138" size="220,5" borderWidth="0" backgroundColor="KravenBackground" transparent="1" zPosition="1" pixmap="KravenHD/bar/p_bar220.png">
+  <convert type="KravenHDEventTime">Progress</convert>
+</widget>
+  <eLabel position="114,140" size="220,1" backgroundColor="KravenAccent1" foregroundColor="KravenAccent1" />
+  <widget font="Regular; 22" foregroundColor="white" position="42,267" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=15000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="362,273" source="ServiceEvent" valign="top" backgroundColor="BackgroundKraven" >
+    <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+  </widget>
+  <widget font="Regular; 30" foregroundColor="blue2" position="43,85" halign="center" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=15000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="362,40" source="ServiceEvent" backgroundColor="BackgroundKraven" zPosition="-8" valign="bottom">
+    <convert type="KravenHDEventName">Name</convert>
+  </widget>
+  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/line/line368.png" position="39,545" size="368,1" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/line/line368.png" position="39,260" size="368,1" />
+  <ePixmap position="0,0" size="1280,149" zPosition="-7" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
+<ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+</screen>
+<!-- ChannelSelection ZPicon */-->

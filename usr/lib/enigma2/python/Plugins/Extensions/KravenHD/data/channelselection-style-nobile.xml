@@ -1,0 +1,64 @@
+<!-- /* ChannelSelection Nobile -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+  <ePixmap name="new ePixmap" pixmap="KravenHD/buttons/key_epg.png" position="1002,685" size="49,24" alphatest="blend" />
+  <ePixmap name="new ePixmap" pixmap="KravenHD/buttons/key_updown.png" position="1132,685" size="49,24" alphatest="blend" />
+  <ePixmap name="new ePixmap" pixmap="KravenHD/buttons/key_leftright.png" position="1067,685" size="49,24" alphatest="blend" />
+  <ePixmap name="new ePixmap" pixmap="KravenHD/buttons/key_menu.png" position="937,685" size="49,24" alphatest="blend"/>
+  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="113,710" size="200,5" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="288,710" size="200,5" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="463,710" size="200,5" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="640,710" size="200,5" />
+  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_red" position="118,685" size="130,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_green" position="293,685" size="130,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_yellow" position="468,685" size="130,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_blue" position="644,685" size="130,24" transparent="1" zPosition="1" />
+  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
+  <widget source="Title" render="Label" position="15,10" size="410,30" font="Regular; 23" halign="center" foregroundColor="white" backgroundColor="KravenBackground" transparent="1" zPosition="2" />
+  <widget source="global.CurrentTime" render="Label" position="796,10" size=" 80,28" font="Regular;25" foregroundColor="blue2" backgroundColor="KravenBackground" transparent="1">
+  <convert type="KravenHDClockToText">Default</convert>
+</widget>
+  <widget backgroundColor="KravenBackground" scrollbarMode="showNever" foregroundColorMarkedSelected="green" colorEventProgressbarBorder="KravenAccent2" colorEventProgressbarBorderSelected="KravenForeground" colorServiceDescription="blue2" colorServiceDescriptionSelected="white" colorServiceRecording="KravenRed" foregroundColorServiceNotAvail="yellow" name="list" position="17,58" serviceInfoFont="Regular;20" serviceItemHeight="28" serviceNameFont="Regular;20" serviceNumberFont="Regular;20" size="439,619" transparent="1" />
+  <widget source="ServiceEvent" render="Label" position="932,10" size="323,30" font="Regular; 23" halign="center" foregroundColor="blue2" backgroundColor="KravenBackground" transparent="1">
+  <convert type="ServiceName">Name</convert>
+</widget>
+  <widget source="ServiceEvent" render="Label" position="475,58" size="446,24" font="Regular;20" halign="center" backgroundColor="KravenBackground" transparent="1" foregroundColor="blue2">
+  <convert type="KravenHDEventName">Name</convert>
+</widget>
+  <widget source="ServiceEvent" render="Label" position="462,88" size="67,25" font="Regular; 20" halign="right" backgroundColor="KravenBackground" transparent="1" foregroundColor="white">
+    <convert type="KravenHDEventTime">StartTime</convert>
+    <convert type="KravenHDClockToText">
+    </convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="865,88" size="75,25" font="Regular; 20" halign="left" backgroundColor="KravenBackground" transparent="1" foregroundColor="white">
+    <convert type="KravenHDEventTime">EndTime</convert>
+    <convert type="KravenHDClockToText">
+    </convert>
+  </widget>
+  <widget source="ServiceEvent" render="Progress" position="534,97" size="328,8" pixmap="KravenHD/bar/p_bar355.png" transparent="1" zPosition="2">
+  <convert type="KravenHDEventTime">Progress</convert>
+</widget>
+  <widget source="ServiceEvent" render="Label" position="476,117" size="445,245" font="Regular; 19" foregroundColor="white" backgroundColor="KravenBackground" transparent="1">
+    <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+  </widget>
+  <eLabel text="jetzt läuft:" position="474,10" size="180,30" font="Regular;23" halign="left" foregroundColor="blue2" backgroundColor="KravenBackground" transparent="1" zPosition="2" />
+  <eLabel text="es folgt:" position="474,383" size="180,30" font="Regular;23" halign="left" foregroundColor="blue2" backgroundColor="KravenBackground" transparent="1" zPosition="2" />
+  <widget source="ServiceEvent" render="KravenHDSingleEpgListNobile" position="937,58" size="339,619" font="Regular;17" foregroundColor="white" backgroundColor="KravenBackground" noWrap="1" transparent="1" />
+  <widget source="ServiceEvent" render="Label" position="475,421" zPosition="1" size="446,25" font="Regular; 20" halign="left" backgroundColor="KravenBackground" transparent="1" foregroundColor="blue2">
+  <convert type="KravenHDServiceNameEventNobile">NextEvent</convert>
+</widget>
+  <widget source="ServiceEvent" render="Label" position="796,383" zPosition="1" size="80,28" font="Regular; 25" halign="left" backgroundColor="KravenBackground" transparent="1" foregroundColor="blue2">
+  <convert type="KravenHDServiceNameEventNobile">StartTime</convert>
+</widget>
+  <widget source="ServiceEvent" render="Label" position="475,458" zPosition="1" size="446,223" font="Regular; 19" backgroundColor="KravenBackground" transparent="1" foregroundColor="white">
+    <convert type="KravenHDServiceNameEventNobile">ExtendedDescription</convert>
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenHD/line/line480.png" position="476,373" size="446,1" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/line/line670.png" position="465,57" size="1,623" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/line/line670.png" position="928,57" size="1,623" />
+<widget source="Service" render="Picon" position="664,2" size="70,42" transparent="0" zPosition="2" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+	<ePixmap position="0,0" size="1280,149" zPosition="-7" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
+<ePixmap position="0,555" size="1280,170" zPosition="-7" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+</screen>
+  <!-- ChannelSelection Nobile */-->

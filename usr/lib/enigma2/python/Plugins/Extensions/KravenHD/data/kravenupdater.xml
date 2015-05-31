@@ -1,0 +1,4 @@
+    <!--/* KravenUpdater -->
+    <widget render="KravenUpdater" source="global.CurrentTime" position="889,48" size="24,24" zPosition="10" backgroundColor="KravenBackground">
+</widget>
+ <!--KravenUpdater */-->

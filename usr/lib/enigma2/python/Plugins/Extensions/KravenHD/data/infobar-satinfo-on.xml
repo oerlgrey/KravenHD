@@ -1,0 +1,5 @@
+<!-- /* Sat-Info -->
+<widget backgroundColor="KravenBackground" font="Regular;16" foregroundColor="white" halign="left" position="8,108" render="Label" size="569,66" source="session.CurrentService" transparent="0" valign="top">
+  <convert type="KravenHDExtraInfo">All</convert>
+</widget>
+<!-- Sat-Info */ -->

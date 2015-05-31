@@ -1,0 +1,6 @@
+<!--/* Volume -->
+<screen name="Volume" position="center,25" size=" 400, 28" title="Volume" zPosition="99" flags="wfNoBorder">
+  <ePixmap position=" 0, 0" zPosition="2" size="400,28" pixmap="KravenHD/infobar/vol_back.png" />
+  <widget name="Volume" position="10,10" zPosition="3" size="380, 8" pixmap="KravenHD/bar/p_barv3.png" transparent="1" />
+</screen>
+<!-- Volume */-->

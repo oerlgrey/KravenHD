@@ -1,0 +1,6 @@
+
+<!--/* CHANNEL NAME -->
+<widget font="Regular; 40" foregroundColor="transpWhite" halign="left" noWrap="1" position="11,471" render="Label" size="1260,149" source="session.CurrentService" transparent="1" valign="top" zPosition="1" alphatest="on">
+  <convert type="ServiceName">Name</convert>
+</widget>
+<!--/* CHANNEL NAME -->

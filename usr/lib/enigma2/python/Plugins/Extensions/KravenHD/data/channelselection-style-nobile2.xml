@@ -1,0 +1,32 @@
+<!-- /* ChannelSelection Nobile -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+  <ePixmap name="new ePixmap" pixmap="KravenHD/buttons/key_epg.png" position="1002,685" size="49,24" alphatest="blend" />
+  <ePixmap name="new ePixmap" pixmap="KravenHD/buttons/key_updown.png" position="1132,685" size="49,24" alphatest="blend" />
+  <ePixmap name="new ePixmap" pixmap="KravenHD/buttons/key_leftright.png" position="1067,685" size="49,24" alphatest="blend" />
+  <ePixmap name="new ePixmap" pixmap="KravenHD/buttons/key_menu.png" position="937,685" size="49,24" alphatest="blend"/>
+  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="113,710" size="200,5" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="288,710" size="200,5" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="463,710" size="200,5" />
+  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="640,710" size="200,5" />
+  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_red" position="118,685" size="130,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_green" position="293,685" size="130,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_yellow" position="468,685" size="130,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_blue" position="644,685" size="130,24" transparent="1" zPosition="1" />
+  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
+  <widget source="Title" render="Label" position="17,10" size="765,30" font="Regular; 23" halign="center" foregroundColor="white" backgroundColor="KravenBackground" transparent="1" zPosition="2" />
+  <widget source="global.CurrentTime" render="Label" position="1193,679" size=" 80,28" font="Regular;25" foregroundColor="Kraven" backgroundColor="KravenBackground" transparent="1">
+  <convert type="KravenHDClockToText">Default</convert>
+</widget>
+  <widget backgroundColor="KravenBackground" scrollbarMode="showNever" foregroundColorMarkedSelected="green" colorEventProgressbarBorder="KravenAccent2" colorEventProgressbarBorderSelected="KravenForeground" colorServiceDescription="blue2" colorServiceDescriptionSelected="white" colorServiceRecording="KravenRed" foregroundColorServiceNotAvail="yellow" name="list" position="17,52" serviceInfoFont="Regular;20" serviceItemHeight="28" serviceNameFont="Regular;20" serviceNumberFont="Regular;20" size="765,619" transparent="1"  />
+  <widget source="ServiceEvent" render="Label" position="795,10" size="474,30" font="Regular; 23" halign="center" foregroundColor="blue2" backgroundColor="KravenBackground" transparent="1">
+  <convert type="ServiceName">Name</convert>
+</widget>  
+<widget source="ServiceEvent" render="KravenHDSingleEpgListNobile" position="795,52" size="474,334" font="Regular;17" foregroundColor="blue2" backgroundColor="KravenBackground" noWrap="1" transparent="1"  />
+<ePixmap alphatest="blend" pixmap="KravenHD/line/line670.png" position="788,51" size="1,621" />
+<widget backgroundColor="BackgroundKraven" font="RegularLight; 22" foregroundColor="KravenAccent1" position="795,394" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="474,277" source="Event" valign="top" zPosition="-8">
+  <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+</widget><ePixmap alphatest="blend" pixmap="KravenHD/line/line480.png" position="795,390" size="474,1" />
+<ePixmap position="0,0" size="1280,149" zPosition="-7" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend"/>
+<ePixmap position="0,555" size="1280,170" zPosition="-7" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+</screen>
+  <!-- ChannelSelection Nobile 2 */-->

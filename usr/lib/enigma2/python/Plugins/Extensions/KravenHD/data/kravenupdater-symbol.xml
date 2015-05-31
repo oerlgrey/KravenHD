@@ -1,0 +1,10 @@
+    <!--/* KravenUpdater -->
+    <widget render="KravenUpdater" source="global.CurrentTime" position="889,48" size="24,24" zPosition="10" backgroundColor="KravenBackground">
+</widget>
+ <!--KravenUpdater */-->
+<!--/* KravenUpdaterInfo -->
+<widget source="global.CurrentTime" position="921,48" size="24,24" pixmap="KravenHD/icons/update.png" zPosition="10" alphatest="blend" backgroundColor="KravenBackground" render="Pixmap" transparent="0">
+<convert type="KravenUpdateCheck" />
+<convert type="ConditionalShowHide" />
+</widget>
+    <!--KravenUpdaterInfo */-->

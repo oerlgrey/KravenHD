@@ -1,0 +1,5 @@
+<!--/* Volume -->
+<screen name="Volume" position="548,286" size="184,184" zPosition="99" title="Volume" flags="wfNoBorder" backgroundColor="transparent">
+<widget source="global.CurrentTime" render="KravenHDVolumeCycle" position="0,0" size="184,184" alphatest="blend" transparent="1" />
+</screen>
+<!-- Volume */-->
