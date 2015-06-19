@@ -1,0 +1,22 @@
+<!-- /* ECM-Info -->
+    <eLabel backgroundColor="KravenBackground" font="Regular2;16" foregroundColor="KravenFont2" halign="left" valign="center" position="990,358" size="70,20" text="CAID:" transparent="1" zPosition="1" />
+    <widget source="session.CurrentService" render="Label" position="1063,358" size="40,20" font="Regular;16" halign="left" valign="center" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1">
+      <convert type="KravenHDEcmInfoLine">Format:%C</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1110,358" size="133,20" font="Regular;16" halign="left" valign="center" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1">
+      <convert type="KravenHDEcmInfoLine">Crypt</convert>
+    </widget>
+    <eLabel backgroundColor="KravenBackground" font="Regular2;16" foregroundColor="KravenFont2" halign="left" valign="center" position="990,378" size="70,20" text="Reader:" transparent="1" zPosition="1" />
+    <widget source="session.CurrentService" render="Label" position="1063,378" size="180,20" font="Regular;16" halign="left" valign="center" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1">
+      <convert type="KravenHDEcmInfoLine">Format:%R</convert>
+    </widget>
+    <eLabel backgroundColor="KravenBackground" font="Regular2;16" foregroundColor="KravenFont2" halign="left" valign="center" position="990,398" size="70,20" text="Source:" transparent="1" zPosition="1" />
+    <widget source="session.CurrentService" render="Label" position="1063,398" size="180,20" font="Regular;16" halign="left" valign="center" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1">
+      <convert type="KravenHDEcmInfoLine">Format:%S</convert>
+    </widget>
+    <eLabel backgroundColor="KravenBackground" font="Regular2;16" foregroundColor="KravenFont2" halign="left" valign="center" position="990,418" size="70,20" text="Time:" transparent="1" zPosition="1" />
+    <widget source="session.CurrentService" render="Label" position="1063,418" size="180,20" font="Regular;16" halign="left" valign="center" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1">
+      <convert type="KravenHDEcmInfoLine">Format:%T ms</convert>
+    </widget>
+    <eLabel backgroundColor="KravenIbarBackground" position="969,348" size="311,100" transparent="0" zPosition="-10" />
+<!-- ECM-Info */ -->

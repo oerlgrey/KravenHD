@@ -1,9 +1,9 @@
 Package: enigma2-plugin-skins-kravenhd
-Version: 5.7.4
+Version: 6.0
 Section: misc
 Priority: optional
 Architecture: all
-Depends: enigma2-plugin-systemplugins-weathercomponenthandler, enigma2-plugin-systemplugins-extnumberzap, enigma2-plugin-extensions-weatherplugin
-Maintainer: Kraven
-Description: Enigma2 Skin by Kraven
-Source: 
+Depends:
+Maintainer: Kraven and oerlgrey
+Description: Skin for Enigma2
+Source:

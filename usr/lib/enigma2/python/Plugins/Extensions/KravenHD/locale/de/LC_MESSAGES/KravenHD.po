@@ -5,786 +5,745 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: MyKravenHD\n"
+"Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-04 18:44+0100\n"
-"PO-Revision-Date: 2015-02-07 13:06+0100\n"
+"POT-Creation-Date: 2015-05-06 23:16+0200\n"
+"PO-Revision-Date: 2015-06-16 00:21+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.7.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: de\n"
 
-#: plugin.py:73
+#: KravenHDYWeather.py
+msgid "N"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "N-NE"
+msgstr "N-NO"
+
+#: KravenHDYWeather.py
+msgid "NE"
+msgstr "NO"
+
+#: KravenHDYWeather.py
+msgid "E-NE"
+msgstr "O-NO"
+
+#: KravenHDYWeather.py
+msgid "E"
+msgstr "O"
+
+#: KravenHDYWeather.py
+msgid "E-SE"
+msgstr "O-SO"
+
+#: KravenHDYWeather.py
+msgid "SE"
+msgstr "SO"
+
+#: KravenHDYWeather.py
+msgid "S-SE"
+msgstr "S-SO"
+
+#: KravenHDYWeather.py
+msgid "S"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "S-SW"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "SW"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "W-SW"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "W"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "W-NW"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "NW"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "N-NW"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "N/A"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid " km/h"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Mon"
+msgstr "MO"
+
+#: KravenHDYWeather.py
+msgid "Tue"
+msgstr "DI"
+
+#: KravenHDYWeather.py
+msgid "Wed"
+msgstr "MI"
+
+#: KravenHDYWeather.py
+msgid "Thu"
+msgstr "DO"
+
+#: KravenHDYWeather.py
+msgid "Fri"
+msgstr "FR"
+
+#: KravenHDYWeather.py
+msgid "Sat"
+msgstr "SA"
+
+#: KravenHDYWeather.py
+msgid "Sun"
+msgstr "SO"
+
+#: KravenHDYWeather.py
+msgid "Tornado"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Tropical\n"
+" storm"
+msgstr ""
+"Tropischer\n"
+" Sturm"
+
+#: KravenHDYWeather.py
+msgid "Hurricane"
+msgstr "Hurrikan"
+
+#: KravenHDYWeather.py
+msgid ""
+"Severe\n"
+" thunderstorms"
+msgstr ""
+"Schwere\n"
+" Gewitter"
+
+#: KravenHDYWeather.py
+msgid "Thunderstorms"
+msgstr "Gewitter"
+
+#: KravenHDYWeather.py
+msgid ""
+"Mixed rain\n"
+" and snow"
+msgstr ""
+"Regen\n"
+" und Schnee"
+
+#: KravenHDYWeather.py
+msgid ""
+"Mixed rain\n"
+" and sleet"
+msgstr ""
+"Regen\n"
+" und Schneeregen"
+
+#: KravenHDYWeather.py
+msgid ""
+"Mixed snow\n"
+" and sleet"
+msgstr ""
+"Schnee\n"
+" und Graupel"
+
+#: KravenHDYWeather.py
+msgid ""
+"Freezing\n"
+" drizzle"
+msgstr ""
+"Frierender\n"
+" Nieselregen"
+
+#: KravenHDYWeather.py
+msgid "Drizzle"
+msgstr "Nieselregen"
+
+#: KravenHDYWeather.py
+msgid ""
+"Freezing\n"
+" rain"
+msgstr "Eisregen"
+
+#: KravenHDYWeather.py
+msgid "Showers"
+msgstr "Regen"
+
+#: KravenHDYWeather.py
+msgid "Rain"
+msgstr "Regen"
+
+#: KravenHDYWeather.py
+msgid ""
+"Snow\n"
+" flurries"
+msgstr "Schneetreiben"
+
+#: KravenHDYWeather.py
+msgid ""
+"Light\n"
+" snow showers"
+msgstr ""
+"Leichte\n"
+" Schneeschauer"
+
+#: KravenHDYWeather.py
+msgid ""
+"Blowing\n"
+" snow"
+msgstr "Schneetreiben"
+
+#: KravenHDYWeather.py
+msgid "Snow"
+msgstr "Schnee"
+
+#: KravenHDYWeather.py
+msgid "Hail"
+msgstr "Hagel"
+
+#: KravenHDYWeather.py
+msgid "Sleet"
+msgstr "Schneeregen"
+
+#: KravenHDYWeather.py
+msgid "Dust"
+msgstr "Staub"
+
+#: KravenHDYWeather.py
+msgid "Foggy"
+msgstr "Nebelig"
+
+#: KravenHDYWeather.py
+msgid "Haze"
+msgstr "Nebel"
+
+#: KravenHDYWeather.py
+msgid "Smoky"
+msgstr "Qualmig"
+
+#: KravenHDYWeather.py
+msgid "Blustery"
+msgstr "Stürmisch"
+
+#: KravenHDYWeather.py
+msgid "Windy"
+msgstr "Windig"
+
+#: KravenHDYWeather.py
+msgid "Cold"
+msgstr "Kalt"
+
+#: KravenHDYWeather.py
+msgid "Cloudy"
+msgstr "Wolkig"
+
+#: KravenHDYWeather.py
+msgid ""
+"Mostly\n"
+" cloudy"
+msgstr ""
+"Überwiegend\n"
+" bewölkt"
+
+#: KravenHDYWeather.py
+msgid ""
+"Partly\n"
+" cloudy"
+msgstr ""
+"Teilweise\n"
+" bewölkt"
+
+#: KravenHDYWeather.py
+msgid "Clear"
+msgstr "Klar"
+
+#: KravenHDYWeather.py
+msgid "Sunny"
+msgstr "Sonnig"
+
+#: KravenHDYWeather.py
+msgid "Fair"
+msgstr "Heiter"
+
+#: KravenHDYWeather.py
+msgid ""
+"Mixed rain\n"
+" and hail"
+msgstr ""
+"Regen\n"
+" und Hagel"
+
+#: KravenHDYWeather.py
+msgid "Hot"
+msgstr "Heiss"
+
+#: KravenHDYWeather.py
+msgid ""
+"Isolated\n"
+" thunderstorms"
+msgstr ""
+"Vereinzelte\n"
+" Gewitter"
+
+#: KravenHDYWeather.py
+msgid ""
+"Scattered\n"
+" thunderstorms"
+msgstr ""
+"Vereinzelte\n"
+" Gewitter"
+
+#: KravenHDYWeather.py
+msgid ""
+"Scattered\n"
+" showers"
+msgstr ""
+"Vereinzelte\n"
+" Regenschauer"
+
+#: KravenHDYWeather.py
+msgid "Heavy snow"
+msgstr ""
+"Starker\n"
+" Schneefall"
+
+#: KravenHDYWeather.py
+msgid ""
+"Scattered\n"
+" snow showers"
+msgstr ""
+"Vereinzelte\n"
+" Schneeschauer"
+
+#: KravenHDYWeather.py
+msgid "Thundershowers"
+msgstr "Gewitter"
+
+#: KravenHDYWeather.py
+msgid "Snow showers"
+msgstr "Schneeschauer"
+
+#: KravenHDYWeather.py
+msgid ""
+"Isolated\n"
+" thundershowers"
+msgstr ""
+"Vereinzelt\n"
+" Gewitter"
+
+#: KravenHDYWeather.py
+msgid ""
+"Not\n"
+" available"
+msgstr ""
+"Nicht\n"
+" verfügbar"
+
+#: plugin.py
 msgid "Atemio4You"
 msgstr ""
 
-#: plugin.py:74
+#: plugin.py
 msgid "HDMU"
 msgstr ""
 
-#: plugin.py:75
+#: plugin.py
 msgid "openATV"
 msgstr ""
 
-#: plugin.py:76
+#: plugin.py
 msgid "openHDF"
 msgstr ""
 
-#: plugin.py:77
-msgid "openMips"
+#: plugin.py
+msgid "openMIPS"
 msgstr ""
 
-#: plugin.py:83 plugin.py:108 plugin.py:161
-msgid "Amber"
+#: plugin.py
+msgid "openNFR"
 msgstr ""
 
-#: plugin.py:84 plugin.py:110 plugin.py:163
-msgid "Blue"
-msgstr "Blau"
-
-#: plugin.py:85 plugin.py:112 plugin.py:165
-msgid "Brown"
-msgstr "Braun"
-
-#: plugin.py:86 plugin.py:114 plugin.py:167
-msgid "Cobalt"
-msgstr ""
-
-#: plugin.py:87 plugin.py:116 plugin.py:169
-msgid "Crimson"
-msgstr ""
-
-#: plugin.py:88 plugin.py:118 plugin.py:171
-msgid "Cyan"
-msgstr ""
-
-#: plugin.py:89 plugin.py:121
+#: plugin.py
 msgid "Kraven"
 msgstr ""
 
-#: plugin.py:90 plugin.py:123 plugin.py:175
-msgid "Magenta"
-msgstr ""
-
-#: plugin.py:91 plugin.py:125 plugin.py:179
-msgid "Lime"
-msgstr ""
-
-#: plugin.py:92 plugin.py:127 plugin.py:181
-msgid "Indigo"
-msgstr ""
-
-#: plugin.py:93 plugin.py:129 plugin.py:183
-msgid "Green"
-msgstr "Grün"
-
-#: plugin.py:94 plugin.py:131 plugin.py:185
-msgid "Emerald"
-msgstr ""
-
-#: plugin.py:95 plugin.py:133 plugin.py:187
-msgid "Mauve"
-msgstr ""
-
-#: plugin.py:96 plugin.py:137 plugin.py:191
-msgid "Olive"
-msgstr ""
-
-#: plugin.py:97 plugin.py:139 plugin.py:193
-msgid "Orange"
-msgstr ""
-
-#: plugin.py:98 plugin.py:141 plugin.py:195
-msgid "Pink"
-msgstr ""
-
-#: plugin.py:99 plugin.py:143 plugin.py:197
-msgid "Red"
-msgstr "Rot"
-
-#: plugin.py:100 plugin.py:145 plugin.py:199
-msgid "Sienna"
-msgstr ""
-
-#: plugin.py:101 plugin.py:147 plugin.py:201
-msgid "Steel"
-msgstr ""
-
-#: plugin.py:102 plugin.py:149 plugin.py:203
-msgid "Teal"
-msgstr ""
-
-#: plugin.py:103 plugin.py:151 plugin.py:205
-msgid "Violet"
-msgstr ""
-
-#: plugin.py:104 plugin.py:155 plugin.py:207
-msgid "Yellow"
-msgstr "Gelb"
-
-#: plugin.py:109
-msgid "Amber/White"
-msgstr "Amber/Weiß"
-
-#: plugin.py:111
-msgid "Blue/White"
-msgstr "Blau/Weiß"
-
-#: plugin.py:113
-msgid "Brown/White"
-msgstr "Braun/Weiß"
-
-#: plugin.py:115
-msgid "Cobalt/White"
-msgstr "Cobalt/Weiß"
-
-#: plugin.py:117
-msgid "Crimson/White"
-msgstr "Crimson/Weiß"
-
-#: plugin.py:119
-msgid "Cyan/White"
-msgstr "Cyan/Weiß"
-
-#: plugin.py:120
-msgid "Dodger Blue/White"
-msgstr "Dodger Blau/Weiß"
-
-#: plugin.py:122
-msgid "Colorfull"
-msgstr "Bunt"
-
-#: plugin.py:124
-msgid "Magenta/White"
-msgstr "Magenta/Weiß"
-
-#: plugin.py:126
-msgid "Lime/White"
-msgstr "Lime/Weiß"
-
-#: plugin.py:128
-msgid "Indigo/White"
-msgstr "Indigo/Weiß"
-
-#: plugin.py:130
-msgid "Green/White"
-msgstr "Grün/Weiß"
-
-#: plugin.py:132
-msgid "Emerald/White"
-msgstr ""
-
-#: plugin.py:134
-msgid "Mauve/White"
-msgstr "Mauve/Weiß"
-
-#: plugin.py:135 plugin.py:189
-msgid "Medium Blue"
-msgstr "Medium Blau"
-
-#: plugin.py:136
-msgid "Medium Blue/White"
-msgstr "Medium Blau/Weiß"
-
-#: plugin.py:138
-msgid "Olive/White"
-msgstr "Olive/Weiß"
-
-#: plugin.py:140
-msgid "Orange/White"
-msgstr "Orange/Weiß"
-
-#: plugin.py:142
-msgid "Pink/White"
-msgstr "Pink/Weiß"
-
-#: plugin.py:144
-msgid "Red/White"
-msgstr "Rot/Weiß"
-
-#: plugin.py:146
-msgid "Sienna/White"
-msgstr "Sienna/Weiß"
-
-#: plugin.py:148
-msgid "Steel/White"
-msgstr "Steel/Weiß"
-
-#: plugin.py:150
-msgid "Teal/White"
-msgstr "Teal/Weiß"
-
-#: plugin.py:152
-msgid "Violet/White"
-msgstr "Violet/Weiß"
-
-#: plugin.py:153
-msgid "White"
-msgstr ""
-
-#: plugin.py:154
-msgid "White/Grey"
-msgstr "Weiß/Grau"
-
-#: plugin.py:156
-msgid "Yellow/White"
-msgstr "Gelb/Weiß"
-
-#: plugin.py:160
-msgid "Amber transparency"
-msgstr "Amber Transparent"
-
-#: plugin.py:162
-msgid "Blue transparency"
-msgstr "Blau Transparent"
-
-#: plugin.py:164
-msgid "Brown transparency"
-msgstr "Braun Transparent"
-
-#: plugin.py:166
-msgid "Cobalt transparency"
-msgstr "Cobald Transparent"
-
-#: plugin.py:168
-msgid "Crimson transparency"
-msgstr "Crimson Transparent"
-
-#: plugin.py:170
-msgid "Cyan transparency"
-msgstr "Cyan Transparent"
-
-#: plugin.py:172
-msgid "Dodger Blue transparency"
-msgstr "Dodger Blau Transparent"
-
-#: plugin.py:173
-msgid "Dodger Blue"
-msgstr "Dodger Blau"
-
-#: plugin.py:174
-msgid "Magenta transparency"
-msgstr "Magenta Transparent"
-
-#: plugin.py:176
-msgid "KravenHD transparency"
-msgstr "KravenHD Transparent"
-
-#: plugin.py:177
-msgid "KravenHD"
-msgstr ""
-
-#: plugin.py:178
-msgid "Lime transparency"
-msgstr "Lime Transparent"
-
-#: plugin.py:180
-msgid "Indigo transparency"
-msgstr "Indigo Transparent"
-
-#: plugin.py:182
-msgid "Green transparency"
-msgstr "Grün Transparent"
-
-#: plugin.py:184
-msgid "Emerald transparency"
-msgstr "Emerald Transparent"
-
-#: plugin.py:186
-msgid "Mauve transparency"
-msgstr "Mauve Transparent"
-
-#: plugin.py:188
-msgid "Medium Blue transparency"
-msgstr "Medium Blau Transparent"
-
-#: plugin.py:190
-msgid "Olive transparency"
-msgstr "Olive Transparent"
-
-#: plugin.py:192
-msgid "Orange transparency"
-msgstr "Orange Transparent"
-
-#: plugin.py:194
-msgid "Pink transparency"
-msgstr "Pink Transparent"
-
-#: plugin.py:196
-msgid "Red transparency"
-msgstr "Rot Transparent"
-
-#: plugin.py:198
-msgid "Sienna transparency"
-msgstr "Sienna Transparent"
-
-#: plugin.py:200
-msgid "Steel transparency"
-msgstr "Steel Transparent"
-
-#: plugin.py:202
-msgid "Teal transparency"
-msgstr "Teal Transparent"
-
-#: plugin.py:204
-msgid "Violet transparency"
-msgstr "Violet Transparent"
-
-#: plugin.py:206
-msgid "Yellow transparency"
-msgstr "Gelb Transparent"
-
-#: plugin.py:211
-msgid "Blue 0%"
-msgstr "Blau 0%"
-
-#: plugin.py:212
-msgid "Blue 5%"
-msgstr "Blau 5%"
-
-#: plugin.py:213
-msgid "Blue 10%"
-msgstr "Blau 10%"
-
-#: plugin.py:214
-msgid "Blue 15%"
-msgstr "Blau 15%"
-
-#: plugin.py:215
-msgid "Black 0%"
-msgstr "Schwarz 0%"
-
-#: plugin.py:216
-msgid "Black 5%"
-msgstr "Schwarz 5%"
-
-#: plugin.py:217
-msgid "Black 10%"
-msgstr "Schwarz 10%"
-
-#: plugin.py:218
-msgid "Black 15%"
-msgstr "Schwarz 15%"
-
-#: plugin.py:219
-msgid "Green 0%"
-msgstr "Grün 0%"
-
-#: plugin.py:220
-msgid "Green 5%"
-msgstr "Grün 5%"
-
-#: plugin.py:221
-msgid "Green 10%"
-msgstr "Grün 10%"
-
-#: plugin.py:222
-msgid "Green 15%"
-msgstr "Grün 15%"
-
-#: plugin.py:223
-msgid "Violet 0%"
-msgstr ""
-
-#: plugin.py:224
-msgid "Violet 5%"
-msgstr ""
-
-#: plugin.py:225
-msgid "Violet 10%"
-msgstr ""
-
-#: plugin.py:226
-msgid "Violet 15%"
-msgstr ""
-
-#: plugin.py:227
-msgid "Red 0%"
-msgstr "Rot 0%"
-
-#: plugin.py:228
-msgid "Red 5%"
-msgstr "Rot 5%"
-
-#: plugin.py:229
-msgid "Red 10%"
-msgstr "Rot 10%"
-
-#: plugin.py:230
-msgid "Red 15%"
-msgstr "Rot 15%"
-
-#: plugin.py:231
-msgid "Kraven 0%"
-msgstr ""
-
-#: plugin.py:232
-msgid "Kraven 5%"
-msgstr ""
-
-#: plugin.py:233
-msgid "Kraven 10%"
-msgstr ""
-
-#: plugin.py:234
-msgid "Kraven 15%"
-msgstr ""
-
-#: plugin.py:240 plugin.py:321
-msgid "Classic"
-msgstr ""
-
-#: plugin.py:241
-msgid "CycleMod center"
-msgstr "CycleMod mittig"
-
-#: plugin.py:242
-msgid "CycleMod left"
-msgstr "CycleMod links"
-
-#: plugin.py:243
-msgid "Army"
-msgstr ""
-
-#: plugin.py:244
-msgid "Stony"
-msgstr ""
-
-#: plugin.py:245
-msgid "Concinnity"
-msgstr ""
-
-#: plugin.py:249 plugin.py:257 plugin.py:265
-msgid "ZPicons"
-msgstr ""
-
-#: plugin.py:250 plugin.py:258 plugin.py:266
-msgid "XPicons"
-msgstr ""
-
-#: plugin.py:251 plugin.py:259 plugin.py:267
-msgid "ZZPicons"
-msgstr ""
-
-#: plugin.py:252 plugin.py:260 plugin.py:268
-msgid "ZZZPicons"
-msgstr ""
-
-#: plugin.py:256 plugin.py:296 plugin.py:312 plugin.py:327 plugin.py:333
-#: plugin.py:343
-msgid "Off"
-msgstr "Aus"
-
-#: plugin.py:264
-msgid "No Picon"
-msgstr "Kein Picon"
-
-#: plugin.py:269
-msgid "Nobile"
-msgstr ""
-
-#: plugin.py:270
-msgid "Nobile 2"
-msgstr ""
-
-#: plugin.py:271
-msgid "Nobile MiniTV"
-msgstr ""
-
-#: plugin.py:272 plugin.py:280
-msgid "MiniTV"
-msgstr ""
-
-#: plugin.py:276
-msgid "No Cover"
-msgstr "Kein Cover"
-
-#: plugin.py:277
-msgid "Small Cover"
-msgstr "Kleines Cover"
-
-#: plugin.py:278
-msgid "Big Cover"
-msgstr "Großes Cover"
-
-#: plugin.py:279
-msgid "Very Big Cover"
-msgstr "Sehr großes Cover"
-
-#: plugin.py:285
-msgid "Z1"
-msgstr ""
-
-#: plugin.py:286
-msgid "X1"
-msgstr ""
-
-#: plugin.py:287
-msgid "X2"
-msgstr ""
-
-#: plugin.py:288
-msgid "X3"
-msgstr ""
-
-#: plugin.py:289
-msgid "ZZ1"
-msgstr ""
-
-#: plugin.py:290
-msgid "ZZ2"
-msgstr ""
-
-#: plugin.py:291
-msgid "ZZ3"
-msgstr ""
-
-#: plugin.py:292
-msgid "ZZZ1"
-msgstr ""
-
-#: plugin.py:297
-msgid "Name for Z1 Infobar"
-msgstr "Name für Z1 Infobar"
-
-#: plugin.py:298
-msgid "Name and Number for Z1 Infobar"
-msgstr "Name und Nummer für Z1 Infobar"
-
-#: plugin.py:299
-msgid "Name for X1 Infobar"
-msgstr "Name für X1 Infobar"
-
-#: plugin.py:300
-msgid "Name and Number for X1 Infobar"
-msgstr "Name und Nummer für X1 Infobar"
-
-#: plugin.py:301
-msgid "Name for X2+X3 Infobar"
-msgstr "Name für X2+X3 Infobar"
-
-#: plugin.py:302
-msgid "Name and Number for X2+X3 Infobar"
-msgstr "Name und Nummer für X2+X3 Infobar"
-
-#: plugin.py:303
-msgid "Name for ZZ1 Infobar"
-msgstr "Name für ZZ1 Infobar"
-
-#: plugin.py:304
-msgid "Name and Number for ZZ1 Infobar"
-msgstr "Name und Nummer für ZZ1 Infobar"
-
-#: plugin.py:305
-msgid "Name for ZZ2+ZZ3 Infobar"
-msgstr "Name für ZZ2+ZZ3 Infobar"
-
-#: plugin.py:306
-msgid "Name and Number for ZZ2+ZZ3 Infobar"
-msgstr "Name und Nummer für ZZ2+ZZ3 Infobar"
-
-#: plugin.py:307
-msgid "Name for ZZZ1 Infobar"
-msgstr "Name für ZZZ1 Infobar"
-
-#: plugin.py:308
-msgid "Name and Number for ZZZ1 Infobar"
-msgstr "Name und Nummer für ZZZ1 Infobar"
-
-#: plugin.py:313
-msgid "Classic not for Z1+X2 Infobar"
-msgstr "Classic nicht für Z1+X2 Infobar"
-
-#: plugin.py:314
+#: plugin.py
 msgid "Original"
 msgstr ""
 
-#: plugin.py:315
-msgid "Big not for Z1+X2 Infobar"
-msgstr "Groß nicht für Z1+X2 Infobar"
+#: plugin.py
+msgid "with Border"
+msgstr "mit Rahmen"
 
-#: plugin.py:319
-msgid "Android"
+#: plugin.py
+msgid "left"
+msgstr "links"
+
+#: plugin.py
+msgid "right"
+msgstr "rechts"
+
+#: plugin.py
+msgid "top"
+msgstr "oben"
+
+#: plugin.py
+msgid "center"
+msgstr "mittig"
+
+#: plugin.py
+msgid "low"
+msgstr "niedrig"
+
+#: plugin.py
+msgid "medium"
+msgstr "mittel"
+
+#: plugin.py
+msgid "high"
+msgstr "hoch"
+
+#: plugin.py
+msgid "Amber"
 msgstr ""
 
-#: plugin.py:320
-msgid "Analog"
+#: plugin.py
+msgid "Amber Dark"
 msgstr ""
 
-#: plugin.py:322
-msgid "Classic colored"
-msgstr "Classic farbig"
+#: plugin.py
+msgid "Black"
+msgstr "Schwarz"
 
-#: plugin.py:326
+#: plugin.py
+msgid "Blue"
+msgstr "Blau"
+
+#: plugin.py
+msgid "Blue Dark"
+msgstr "dunkel Blau"
+
+#: plugin.py
+msgid "Brown"
+msgstr "Braun"
+
+#: plugin.py
+msgid "Brown Dark"
+msgstr "dunkel Braun"
+
+#: plugin.py
+msgid "Cobalt"
+msgstr ""
+
+#: plugin.py
+msgid "Cobalt Dark"
+msgstr ""
+
+#: plugin.py
+msgid "Cyan"
+msgstr ""
+
+#: plugin.py
+msgid "Cyan Dark"
+msgstr ""
+
+#: plugin.py
+msgid "Grey"
+msgstr "Grau"
+
+#: plugin.py
+msgid "Grey Dark"
+msgstr "dunkel Grau"
+
+#: plugin.py
+msgid "Green"
+msgstr "Grün"
+
+#: plugin.py
+msgid "Green Dark"
+msgstr "dunkel Grün"
+
+#: plugin.py
+msgid "Olive"
+msgstr ""
+
+#: plugin.py
+msgid "Olive Dark"
+msgstr "dunkel Olive"
+
+#: plugin.py
+msgid "Orange"
+msgstr ""
+
+#: plugin.py
+msgid "Orange Dark"
+msgstr "dunkel Orange"
+
+#: plugin.py
+msgid "Pink"
+msgstr ""
+
+#: plugin.py
+msgid "Pink Dark"
+msgstr ""
+
+#: plugin.py
+msgid "Red"
+msgstr "Rot"
+
+#: plugin.py
+msgid "Red Dark"
+msgstr "dunkel Rot"
+
+#: plugin.py
+msgid "Steel"
+msgstr ""
+
+#: plugin.py
+msgid "Steel Dark"
+msgstr ""
+
+#: plugin.py
+msgid "Violet"
+msgstr ""
+
+#: plugin.py
+msgid "Violet Dark"
+msgstr ""
+
+#: plugin.py
+msgid "White"
+msgstr "Weiß"
+
+#: plugin.py
+msgid "Off"
+msgstr "Aus"
+
+#: plugin.py
+msgid "No Cover"
+msgstr "Kein Cover"
+
+#: plugin.py
+msgid "Small Cover"
+msgstr "Kleines Cover"
+
+#: plugin.py
+msgid "Big Cover"
+msgstr "Großes Cover"
+
+#: plugin.py
+msgid "Very Big Cover"
+msgstr "Sehr großes Cover"
+
+#: plugin.py
 msgid "On"
-msgstr "An"
+msgstr "Ein"
 
-#: plugin.py:331
-msgid "Big"
-msgstr "Groß"
-
-#: plugin.py:332
-msgid "Small"
-msgstr "Klein"
-
-#: plugin.py:337
-msgid "for Z1 Infobar"
-msgstr "Für Z1 Infobar"
-
-#: plugin.py:338
-msgid "for X1 Infobar"
-msgstr "Für X1 Infobar"
-
-#: plugin.py:339
-msgid "for X2+X3 Infobar"
-msgstr "Für X2+X3 Infobar"
-
-#: plugin.py:340
-msgid "for ZZ1 Infobar"
-msgstr "Für ZZ1 Infobar"
-
-#: plugin.py:341
-msgid "for ZZ2+ZZ3 Infobar"
-msgstr "Für ZZ2+ZZ3 Infobar"
-
-#: plugin.py:342
-msgid "for ZZZ1 Infobar"
-msgstr "Für ZZZ1 Infobar"
-
-#: plugin.py:380
-msgid "----------------------------- Image  --------------------------------"
-msgstr "----------------------------- Allgemein  ------------------------------"
-
-#: plugin.py:381
-msgid "Image"
-msgstr ""
-
-#: plugin.py:382
-msgid "----------------------------- Color  --------------------------------"
-msgstr "----------------------------- Farbe  -----------------------------------"
-
-#: plugin.py:383
-msgid "Font"
-msgstr "Schrift"
-
-#: plugin.py:384
-msgid "Listselection"
-msgstr "Auswahlbalken"
-
-#: plugin.py:385
-msgid "Progress-/Volumebar"
-msgstr "Fortschritts-/Lautstärkebalken"
-
-#: plugin.py:386
-msgid "Background-/Transparency"
-msgstr "Hintergrund-/Transparenz"
-
-#: plugin.py:387
-msgid "----------------------------- General  --------------------------------"
-msgstr "----------------------------- Allgemein  ------------------------------"
-
-#: plugin.py:388
-msgid "Channel Selection"
-msgstr "Senderliste"
-
-#: plugin.py:389
-msgid "EMC"
-msgstr ""
-
-#: plugin.py:390
-msgid "SecondInfobar"
-msgstr "Zweite Infobar"
-
-#: plugin.py:391
-msgid "ExtNumberZap"
-msgstr ""
-
-#: plugin.py:392
-msgid "Volume"
-msgstr "Lautstärke"
-
-#: plugin.py:393
-msgid "----------------------------- InfoBar  --------------------------------"
-msgstr ""
-
-#: plugin.py:394
-msgid "InfobarStyle"
-msgstr "Infobar Ansicht"
-
-#: plugin.py:395
-msgid "ECM Info"
-msgstr "ECM-Informationen"
-
-#: plugin.py:396
-msgid "Sat Info"
-msgstr "Sat-Informationen"
-
-#: plugin.py:397
-msgid "System Info"
-msgstr "System-Informationen"
-
-#: plugin.py:398
-msgid "Channel Name"
-msgstr "Kanal-Name"
-
-#: plugin.py:399
-msgid "Clock"
-msgstr "Uhr"
-
-#: plugin.py:400
+#: plugin.py
 msgid "Weather"
 msgstr "Wetter"
 
-#: plugin.py:443
+#: plugin.py
+msgid "Standard"
+msgstr ""
+
+#: plugin.py
+msgid "Analog"
+msgstr ""
+
+#: plugin.py
+msgid "Android"
+msgstr ""
+
+#: plugin.py
+msgid "Standard big"
+msgstr "Standard groß"
+
+#: plugin.py
+msgid "Color"
+msgstr "Farbig"
+
+#: plugin.py
+msgid "Big"
+msgstr "Groß"
+
+#: plugin.py
+msgid "Small"
+msgstr "Klein"
+
+#: plugin.py
+msgid "Image"
+msgstr ""
+
+#: plugin.py
+msgid "Style"
+msgstr ""
+
+#: plugin.py:591
+msgid "Font Style"
+msgstr "Schriftart"
+
+#: plugin.py
+msgid "Running Text"
+msgstr ""
+
+#: plugin.py
+msgid "Background Transparency"
+msgstr "Hintergrund Transparenz"
+
+#: plugin.py
+msgid "Weather ID"
+msgstr "Wetter ID"
+
+#: plugin.py
+msgid "______________________ Colors __________________________________"
+msgstr "______________________ Farben __________________________________"
+
+#: plugin.py
+msgid "Line"
+msgstr "Linie"
+
+#: plugin.py
+msgid "Background"
+msgstr "Hintergrund"
+
+#: plugin.py
+msgid "Border"
+msgstr "Rahmen"
+
+#: plugin.py
+msgid "Listselection"
+msgstr "Auswahlbalken"
+
+#: plugin.py
+msgid "Listselection Border"
+msgstr "Auswahlbalken Rahmen"
+
+#: plugin.py
+msgid "Progress-/Volumebar"
+msgstr "Fortschritts-/Lautstärkebalken"
+
+#: plugin.py
+msgid "Font 1"
+msgstr "Schrift 1"
+
+#: plugin.py
+msgid "Font 2"
+msgstr "Schrift 2"
+
+#: plugin.py
+msgid "Selection Font"
+msgstr "Ausgewählte Schrift"
+
+#: plugin.py
+msgid "Button Text"
+msgstr ""
+
+#: plugin.py
+msgid "Clock"
+msgstr "Uhr"
+
+#: plugin.py
+msgid "Clock Analog Color"
+msgstr "Farbe Analoguhr"
+
+#: plugin.py
+msgid "______________________ General __________________________________"
+msgstr "______________________ Allgemein __________________________________"
+
+#: plugin.py
+msgid "Channel Selection"
+msgstr "Kanalauswahl"
+
+#: plugin.py
+msgid "ExtNumberZap"
+msgstr ""
+
+#: plugin.py
+msgid "Volume Style"
+msgstr ""
+
+#: plugin.py
 msgid "Do you really want to reboot now?"
 msgstr "Wollen Sie jetzt neu starten?"
 
-#: plugin.py:444 plugin.py:592
+#: plugin.py
 msgid "Restart GUI"
 msgstr "GUI neu starten"
 
-#: plugin.py:447
-msgid "Information"
-msgstr ""
-
-#: plugin.py:588
+#: plugin.py
 msgid "Error creating Skin!"
 msgstr "Fehler beim Erstellen des Skin!"
 
-#: plugin.py:591
+#: plugin.py
 msgid ""
-"GUI needs a restart to apply a new skin.\n"
+"GUI needs a restart to download files and apply a new skin.\n"
 "Do you want to Restart the GUI now?"
 msgstr ""
-"Zur Übernahme der Oberfläche muss die GUI\n"
-"neu gestartet werden. Jetzt neu starten?"
+"Zum herunterladen der Dateien und schreiben des Skin,\n"
+"muss die Oberfläche neu gestartet werden.\n"
+"\n"
+"Wollen Sie jetzt neu starten?"
 
-#: plugin.py:641
+#: plugin.py
 msgid "Configuration tool for KravenHD"
 msgstr "Konfigurationstool für KravenHD"
 
-#~ msgid "Original only for Z1+X2 Infobar"
-#~ msgstr "Original nur für Z1+X2 Infobar"
+#: plugin.py
+msgid "No Picon"
+msgstr "Kein Picon"
 
-#, fuzzy
-#~ msgid "Off for ZZ1 and Adroid"
-#~ msgstr "Aus für ZZ1"
+#: plugin.py
+msgid "Name small"
+msgstr "Name klein"
 
-#~ msgid "DeadEyE transparency"
-#~ msgstr "DeadEyE Transparent"
+#: plugin.py
+msgid "Name & Number small"
+msgstr "Name & Nummer klein"
 
-#~ msgid "Kraven transparency"
-#~ msgstr "Kraven Transparent"
+#: plugin.py
+msgid "Name big"
+msgstr "Name groß"
 
-#~ msgid "Kraven-Original transparency"
-#~ msgstr "Kraven-Original Transparent"
+#: plugin.py
+msgid "Name & Number big"
+msgstr "Name & Nummer groß"
 
-#~ msgid "Skalli transparency"
-#~ msgstr "Skalli Transparent"
+#: plugin.py
+msgid "Name & Number"
+msgstr "Name & Nummer"
 
-#~ msgid "Clock Widget"
-#~ msgstr "Uhr"
+#: plugin.py
+msgid "Channelname"
+msgstr "Kanalname"
+
+#: plugin.py
+msgid "Light"
+msgstr "Hell"
+
+#: plugin.py
+msgid "Dark"
+msgstr "Dunkel"

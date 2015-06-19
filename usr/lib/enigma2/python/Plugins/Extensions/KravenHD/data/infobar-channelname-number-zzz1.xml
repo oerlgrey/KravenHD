@@ -1,6 +1,5 @@
-
-<!--/* CHANNEL NAME and Number -->
-<widget font="Regular; 40" foregroundColor="transpWhite" halign="left" noWrap="1" position="435,454" render="Label" size="756,50" source="session.CurrentService" transparent="1" valign="top" zPosition="1" alphatest="on">
-  <convert type="KravenHDExtServiceInfo">ServiceNumberAndName</convert>
-</widget>
-<!-- CHANNEL NAME and Number */-->
+<!--/* Channelname -->
+  <widget font="Regular; 40" foregroundColor="KravenFont1" backgroundColor="transparent" halign="left" noWrap="1" position="446,464" render="Label" size="754,50" source="session.CurrentService" transparent="1" valign="top" zPosition="1">
+    <convert type="KravenHDExtServiceInfo">ServiceNumberAndName</convert>
+  </widget>
+<!-- Channelname */-->

@@ -1,0 +1,5 @@
+<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1280,720" title="InfoBar">
+  <panel name="template_infobar_style_zz1_zzz1" />
+  <widget alphatest="blend" position="20,542" size="400,170" render="KravenHDXPicon" source="session.CurrentService" transparent="1" zPosition="4">
+    <convert type="ServiceName">Reference</convert>
+  </widget>

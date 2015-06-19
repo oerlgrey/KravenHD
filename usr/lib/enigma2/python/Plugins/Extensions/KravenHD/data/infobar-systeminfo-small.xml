@@ -1,8 +1,0 @@
-<!-- /* System-Info -->
- <widget source="global.CurrentTime" render="KravenHDSYSTemp" position="952,108" size="286,25" font="Regular; 18" halign="left" foregroundColor="white" backgroundColor="KravenBackground" transparent="0" zPosition="2">
-  </widget>
-  <widget source="session.CurrentService" render="Label" position="824,132" size="420,25" font="Regular; 18" halign="left" valign="center" transparent="0" zPosition="6" foregroundColor="white" backgroundColor="KravenBackground">
-    <convert type="KravenHDCpuUsage">CPU Utilization:$0 (Core #1: $1, Core #2: $2)</convert>
-  </widget>
-  <eLabel text="System-Temp :" position="824,108" size="420,25" font="Regular; 18" halign="left" backgroundColor="KravenBackground" transparent="0" zPosition="1" foregroundColor="white" />
-<!-- System-Info */ -->

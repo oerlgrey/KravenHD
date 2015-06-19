@@ -1,60 +1,32 @@
 <!-- /* EMC BigCover -->
 <screen name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
-  <eLabel backgroundColor="KravenBackground" font="RegularLight; 36" foregroundColor="KravenAccent1" halign="center" position="33,12" shadowColor="#000000" size="450,45" text="Enhanced Movie Center" transparent="1" />
-  <widget backgroundColor="KravenBackground" font="Regular; 40" halign="center" position="1075,0" render="Label" size="65,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="KravenHDClockToText">Format:%H</convert>
+  <eLabel backgroundColor="KravenBackground" font="Regular; 36" foregroundColor="KravenFont2" halign="center" position="33,12" shadowColor="#000000" size="450,45" text="Enhanced Movie Center" transparent="1" />
+  <widget name="list" position="491,100" size="755,352" itemHeight="32" BackColorSel="KravenSelection" CoolFont="Regular;23" CoolSelectFont="Regular;23" CoolDateFont="Regular;23" CoolMoviePos="35" CoolMovieSize="545" CoolFolderSize="550" CoolTitleColor="0" CoolDatePos="1000" CoolDateWidth="150" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="1000" CoolBarPos="640" CoolBarHPos="10" CoolBarSize="55,10" CoolBarSizeSa="110,16" DefaultColor="white" UnwatchedColor="KravenFont1" WatchingColor="green" FinishedColor="KravenFont1" RecordingColor="red" foregroundColorSelected="KravenSelFont" scrollbarMode="showNever" transparent="1"  />
+  <widget source="Title" render="Label" position="489,73" size="755,30" font="Regular; 20" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" halign="right" />
+  <widget name="wait" position="43,375" size="1198,50" zPosition="1" font="Regular; 32" foregroundColor="KravenFont1" backgroundColor="KravenBackground" halign="center" valign="center" />
+  <widget source="Service" render="Label" position="32,63" wrap="1" size="445,58" font="Regular; 24" halign="center" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1">
+    <convert type="EMCEventName">Name</convert>
   </widget>
-  <eLabel backgroundColor="KravenBackground" font="Regular; 40" halign="center" position="1130,3" size="15,60" text=":" transparent="1" valign="top" zPosition="1" />
-  <widget backgroundColor="KravenBackground" font="Regular; 40" halign="center" position="1135,0" render="Label" size="65,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="KravenHDClockToText">Format:%M</convert>
+  <widget source="Service" render="Label" position="31,168" size="445,40" font="Regular; 22" halign="center" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1">
+    <convert type="EMCMovieInfo">RecordServiceName</convert>
   </widget>
-  <eLabel backgroundColor="KravenBackground" font="Regular; 26" halign="center" position="1189,17" size="15,40" text=":" transparent="1" valign="top" zPosition="1" />
-  <widget backgroundColor="KravenBackground" font="Regular; 26" halign="center" position="1193,15" render="Label" size="50,40" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="KravenHDClockToText">Format:%S</convert>
-  </widget>
-  <widget backgroundColor="KravenBackground" font="Regular; 15" foregroundColor="KravenAccent1" halign="right" position="930,35" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
-    <convert type="KravenHDClockToText">Format:%e. %B</convert>
-  </widget>
-  <widget backgroundColor="KravenBackground" font="Regular; 15" foregroundColor="KravenAccent1" halign="right" position="953,16" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A</convert>
-  </widget>
-  <widget name="list" position="491,109" size="755,351" itemHeight="32" BackColorSel="#00200E04" CoolFont="Regular;23" CoolSelectFont="Regular;23" CoolDateFont="Regular;23" CoolMoviePos="35" CoolMovieSize="545" CoolFolderSize="550" CoolTitleColor="0" CoolDatePos="1000" CoolDateWidth="150" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="1000" CoolBarPos="640" CoolBarHPos="10" CoolBarSize="55,10" CoolBarSizeSa="110,16" DefaultColor="white" UnwatchedColor="KravenAccent1" WatchingColor="KravenGreen" FinishedColor="KravenAccent1" RecordingColor="red" foregroundColorSelected="white" scrollbarMode="showNever" transparent="1"  />
-  <widget source="Title" render="Label" position="489,73" size="755,30" font="Regular; 20" foregroundColor="KravenAccent1" backgroundColor="KravenBackground" transparent="1" halign="right" />
-  <widget name="wait" position="43,375" size="1198,50" zPosition="1" font="Regular; 32" foregroundColor="KravenAccent1" backgroundColor="KravenBackground" halign="center" valign="center" />
-  <widget source="Service" render="Label" position="32,63" wrap="1" size="445,58" font="RegularLight; 24" halign="center" backgroundColor="KravenBackground" foregroundColor="white" transparent="1">
-  <convert type="EMCEventName">Name</convert>
-</widget>
-  <widget source="Service" render="Label" position="31,168" size="445,40" font="RegularLight; 22" halign="center" backgroundColor="KravenBackground" foregroundColor="white" transparent="1">
-  <convert type="EMCMovieInfo">RecordServiceName</convert>
-</widget>
-  <widget source="Service" render="KravenHDRunningText" position="490,475" size="755,189" font="RegularLight; 22" options="movetype=running,direction=top,startpoint=0,startdelay=15000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="white" backgroundColor="BackgroundKraven" zPosition="-8" halign="left" valign="top">
+  <widget source="Service" render="KravenHDRunningText" position="490,466" size="755,189" font="Regular; 22" options="movetype=running,direction=top,startpoint=0,startdelay=15000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" halign="left" valign="top">
     <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
   </widget>
-  <widget source="Service" render="Label" position="32,130" size="445,30" font="RegularLight; 21" halign="center" backgroundColor="KravenBackground" foregroundColor="blue2" transparent="1">
-  <convert type="EMCServiceTime">StartTime</convert>
-  <convert type="EMCClockToText">Date</convert>
-</widget>
-  <widget source="Service" render="Label" position="176,590" size="150,33" font="RegularLight; 20" halign="center" backgroundColor="KravenBackground" foregroundColor="blue2" transparent="1">
+  <widget source="Service" render="Label" position="32,130" size="445,30" font="Regular; 21" halign="center" backgroundColor="KravenBackground" foregroundColor="KravenFont2" transparent="1">
+    <convert type="EMCServiceTime">StartTime</convert>
+    <convert type="EMCClockToText">Date</convert>
+  </widget>
+  <widget source="Service" render="Label" position="176,590" size="150,33" font="Regular; 20" halign="center" backgroundColor="KravenBackground" foregroundColor="KravenFont2" transparent="1">
     <convert type="EMCMovieInfo">FileSize</convert>
   </widget>
-  <widget name="key_green" position="395,675" size="250,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="KravenBackground" transparent="1" text="SFortschritt" />
-  <widget name="key_yellow" position="675,675" size="250,24" zPosition="1" font="Regular; 20" halign="left" backgroundColor="KravenBackground" transparent="1" />
-  <widget name="Cover" position="110,222" size="274,361" zPosition="4" backgroundColor="KravenBackground3" alphatest="on" transparent="0" />
-  <ePixmap alphatest="blend" name="new ePixmap" pixmap="KravenHD/buttons/key_menu.png" position="1190,675" size="49,24" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="111,700" size="200,5" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="390,700" size="200,5" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="670,700" size="200,5" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="950,700" size="200,5" />
-  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_red" position="115,675" size="250,24" transparent="1" zPosition="1" />
-  <widget backgroundColor="KravenBackground" font="Regular; 20" halign="left" name="key_blue" position="955,675" size="230,24" transparent="1" zPosition="1" />
-  <eLabel backgroundColor="KravenBorder" position="27,720" size="1220,1" transparent="0" zPosition="-5" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/line/line755.png" position="491,467" size="755,1" />
-<widget source="Service" render="Label" position="176,627" size="150,33" font="Regular; 20" halign="center" backgroundColor="KravenBackground" transparent="1" foregroundColor="white">
-  <convert type="EMCServiceTime">Duration</convert>
-  <convert type="EMCClockToText">InMinutes</convert>
-</widget>
-<ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-<ePixmap position="0,555" size="1280,170" zPosition="-7" pixmap="KravenHD/infobar/ibar.png"  alphatest="blend" />
+  <widget name="Cover" position="110,222" size="274,361" zPosition="4" backgroundColor="KravenBackground" alphatest="on" transparent="0" />
+  <eLabel position="491,458" size="755,1" backgroundColor="KravenLine" />
+  <widget source="Service" render="Label" position="176,627" size="150,33" font="Regular; 20" halign="center" backgroundColor="KravenBackground" transparent="1" foregroundColor="KravenFont1">
+    <convert type="EMCServiceTime">Duration</convert>
+    <convert type="EMCClockToText">InMinutes</convert>
+  </widget>
+  <panel name="template_emc" />
+  <panel name="template_colorkey_text" />
 </screen>
 <!-- EMC BigCover */-->

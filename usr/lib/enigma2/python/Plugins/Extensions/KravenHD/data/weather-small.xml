@@ -1,0 +1,15 @@
+<!-- /* Weather -->
+  <widget alphatest="blend" render="KravenHDPiconUni" position="1010,38" size="70,70" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="8">
+    <convert type="KravenHDYWeather">picon</convert>
+  </widget>
+<widget noWrap="1" backgroundColor="KravenBackground" font="Regular2; 30" foregroundColor="KravenFont2" render="Label" position="1094,49" size="80,40" source="session.CurrentService" zPosition="3" halign="center" valign="center" transparent="1">
+    <convert type="KravenHDYWeather">temp</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="KravenBackground" font="Regular; 20" foregroundColor="KravenFont1" render="Label" position="1180,42" size="50,26" source="session.CurrentService" zPosition="8" halign="center" valign="center" transparent="1">
+    <convert type="KravenHDYWeather">ftemp_high0</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="KravenBackground" font="Regular; 20" foregroundColor="KravenFont1" render="Label" position="1180,68" size="50,26" source="session.CurrentService" zPosition="8" halign="center" valign="center" transparent="1">
+    <convert type="KravenHDYWeather">ftemp_low0</convert>
+  </widget>
+  <eLabel backgroundColor="KravenIbarBackground" position="969,0" size="311,133" transparent="0" zPosition="-10" />
+<!-- Weather */-->

@@ -1,217 +1,110 @@
-<!-- /* main-custom-openatv -->
 
+<!-- /* main-custom-openatv -->
 <!-- ********** openATV ********** -->
 
 <!-- About -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="About" position="0,0" size="1280,720" title="About">
-    <widget backgroundColor="KravenBackground" font="Regular; 43" halign="center" position="988,463" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="KravenHDClockToText">Format:%H</convert>
-    </widget>
-    <eLabel backgroundColor="KravenBackground" font="Regular; 43" halign="center" position="1045,463" size="15,80" text=":" transparent="1" valign="center" zPosition="1" />
-    <widget backgroundColor="KravenBackground" font="Regular; 43" halign="center" position="1055,463" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="KravenHDClockToText">Format:%M</convert>
-    </widget>
-    <eLabel backgroundColor="KravenBackground" font="Regular; 32" halign="center" position="1111,477" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
-    <widget backgroundColor="KravenBackground" font="Regular; 32" halign="center" position="1121,477" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="KravenHDClockToText">Format:%S</convert>
-    </widget>
-    <widget backgroundColor="KravenBackground" font="Regular; 18" foregroundColor="KravenAccent1" halign="center" position="978,563" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="KravenHDClockToText">Format:%e. %B</convert>
-    </widget>
-    <widget backgroundColor="KravenBackground" font="Regular; 18" foregroundColor="KravenAccent1" halign="center" position="978,538" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-      <convert type="KravenHDClockToText">Format:%A</convert>
-    </widget>
-    <widget backgroundColor="KravenBackground" font="RegularLight; 26" position="70,71" render="Label" size="700,40" source="EnigmaVersion" transparent="1" />
-    <widget backgroundColor="KravenBackground" font="RegularLight; 26" position="70,111" render="Label" size="700,40" source="ImageVersion" transparent="1" />
-    <widget backgroundColor="KravenBackground" font="RegularLight; 26" position="70,151" render="Label" size="700,40" source="FPVersion" transparent="1" />
-    <widget backgroundColor="KravenBackground" font="RegularLight; 26" position="70,191" render="Label" size="700,40" source="TunerHeader" transparent="1" />
-    <widget backgroundColor="KravenBackground" font="RegularLight; 24" position="70,231" render="Label" size="700,40" source="Tuner0" transparent="1" />
-    <widget backgroundColor="KravenBackground" font="RegularLight; 24" position="70,271" render="Label" size="700,40" source="Tuner1" transparent="1" />
-    <widget backgroundColor="KravenBackground" font="RegularLight; 24" position="70,311" render="Label" size="700,40" source="Tuner2" transparent="1" />
-    <widget backgroundColor="KravenBackground" font="RegularLight; 24" position="70,351" render="Label" size="700,40" source="Tuner3" transparent="1" />
-    <eLabel backgroundColor="KravenBackground" font="RegularLight; 26" position="69,441" size="700,40" text="Support for Image: " transparent="1" />
-    <eLabel backgroundColor="KravenBackground" font="RegularLight; 26" position="69,480" size="700,40" text="www.opena.tv" transparent="1" />
-    <widget backgroundColor="KravenBackground" font="RegularLight; 26" position="70,520" render="Label" size="700,40" source="HDDHeader" transparent="1" />
-    <widget backgroundColor="KravenBackground" font="RegularLight; 24" position="70,560" render="Label" size="700,65" source="hddA" transparent="1" />
-    <ePixmap pixmap="KravenHD/icons/Logo.png" position="922,130" size="300,280" alphatest="blend" />
-    <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-    <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-    <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
-  </screen>
- 
- 
+  <widget backgroundColor="KravenBackground" font="Regular2; 26" position="70,71" render="Label" size="700,40" source="EnigmaVersion" transparent="1" />
+  <widget backgroundColor="KravenBackground" font="Regular2; 26" position="70,111" render="Label" size="700,40" source="ImageVersion" transparent="1" />
+  <widget backgroundColor="KravenBackground" font="Regular2; 26" position="70,151" render="Label" size="700,40" source="FPVersion" transparent="1" />
+  <widget backgroundColor="KravenBackground" font="Regular2; 26" position="70,191" render="Label" size="700,40" source="TunerHeader" transparent="1" />
+  <widget backgroundColor="KravenBackground" font="Regular2; 24" position="70,231" render="Label" size="700,40" source="Tuner0" transparent="1" />
+  <widget backgroundColor="KravenBackground" font="Regular2; 24" position="70,271" render="Label" size="700,40" source="Tuner1" transparent="1" />
+  <widget backgroundColor="KravenBackground" font="Regular2; 24" position="70,311" render="Label" size="700,40" source="Tuner2" transparent="1" />
+  <widget backgroundColor="KravenBackground" font="Regular2; 24" position="70,351" render="Label" size="700,40" source="Tuner3" transparent="1" />
+  <eLabel backgroundColor="KravenBackground" font="Regular2; 26" position="69,441" size="700,40" text="Support for Image: " transparent="1" />
+  <eLabel backgroundColor="KravenBackground" font="Regular2; 26" position="69,480" size="700,40" text="www.opena.tv" transparent="1" />
+  <widget backgroundColor="KravenBackground" font="Regular2; 26" position="70,520" render="Label" size="700,40" source="HDDHeader" transparent="1" />
+  <widget backgroundColor="KravenBackground" font="Regular2; 24" position="70,560" render="Label" size="700,65" source="hddA" transparent="1" />
+  <panel name="template_menu_left" />
+</screen>
+
  <!-- AboutOE -->
-  <screen name="AboutOE" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="black">
-    <widget source="Title" render="Label" font="Regular; 35" position="70,47" size="800,43" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="white" backgroundColor="KravenBackground" />
-    <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-      <convert type="KravenHDClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-      <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <widget source="lab1" render="Label" position="70,123" size="369,35" font="Regular;30" transparent="1" zPosition="2" />
-    <widget source="lab2" render="Label" position="70,173" size="370,25" font="Regular;19" transparent="1" zPosition="2" />
-    <widget source="lab3" render="Label" position="70,213" size="369,25" font="Regular;19" transparent="1" zPosition="1" />
-    <eLabel text="OPEN SOURCE" position="810,450" size="353,28" font="Regular;22" transparent="1" zPosition="1" />
-    <eLabel text="https://github.com/openatv" position="810,493" size="352,28" font="Regular;19" transparent="1" zPosition="1" />
-    <eLabel text="https://github.com/oe-alliance" position="810,536" size="354,28" font="Regular;19" transparent="1" zPosition="1" />
-    <widget name="AboutScrollLabel" position="70,253" size="650,360" scrollbarMode="showOnDemand" font="Regular;20" transparent="1" zPosition="1" />
-    <ePixmap pixmap="KravenHD/icons/Logo.png" position="822,126" size="300,280" alphatest="blend" />
-    <ePixmap position="70,620" size="70,30" pixmap="KravenHD/buttons/key_info.png" alphatest="blend" />
-    <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-    <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-    <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
-  </screen>
-  
-  
- <!-- Devices --> 
-  <screen name="Devices" position="0,0" size="1280,720" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="Title" render="Label" font="Regular; 35" position="70,47" size="800,43" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="white" backgroundColor="KravenBackground" />
-    <ePixmap pixmap="KravenHD/icons/Logo.png" position="909,134" size="300,280" alphatest="blend" />
-    <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-      <convert type="KravenHDClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-      <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <widget source="TunerHeader" render="Label" position="70,121" size="458,36" font="Regular;20" transparent="1" zPosition="1" />
-    <widget source="nims" render="Label" position="70,162" size="458,108" font="Regular;18" transparent="1" zPosition="1" enableWrapAround="0" />
-    <widget source="HDDHeader" render="Label" position="70,275" size="458,36" font="Regular;20" transparent="1" zPosition="1" />
-    <widget source="hdd" render="Label" position="70,315" size="458,112" font="Regular;18" transparent="1" zPosition="1" enableWrapAround="0" />
-    <widget source="MountsHeader" render="Label" position="70,431" size="458,36" font="Regular;20" transparent="1" zPosition="1" />
-    <widget source="mounts" render="Label" position="70,471" size="458,143" font="Regular;18" transparent="1" zPosition="1" enableWrapAround="0" />
-    <widget source="global.CurrentTime" render="KravenHDEGclock" position="665,135" borderColor="white" zPosition="4" size="80,80" transparent="1">
-      <convert type="KravenHDEGAnalogic">Hours</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="KravenHDEGclock" position="645,115" borderColor="white" zPosition="5" size="120,120" transparent="1">
-      <convert type="KravenHDEGAnalogic">Minutes</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="KravenHDEGclock" position="645,115" borderColor="red" zPosition="6" size="120,120" transparent="1">
-      <convert type="KravenHDEGAnalogic">Seconds</convert>
-    </widget>
-    <ePixmap name="clock" position="630,100" size="150,150" pixmap="KravenHD/clock_bg.png" zPosition="1" alphatest="on" />
-    <widget source="global.CurrentTime" render="KravenHDEGclock" position="645,315" borderColor="red" zPosition="6" size="120,120" transparent="1">
-      <convert type="AAFinfo">Harddiskspace</convert>
-    </widget>
-    <ePixmap name="harddiskspace" position="630,300" size="150,150" pixmap="KravenHD/gauge_bg.png" zPosition="1" alphatest="on" />
-    <widget source="session.CurrentService" render="Label" position="682,397" size="50,15" font="Regular; 14" halign="center" valign="top" zPosition="7" backgroundColor="transpWhite" transparent="1" foregroundColor="black">
-      <convert type="AAFinfo">HarddiskspaceText</convert>
-    </widget>
-    <eLabel text="/media/hdd Used" position="609,458" size="200,25" font="Regular; 20" halign="center" backgroundColor="black" transparent="1" />
-    <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-    <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-    <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
-  </screen>
+<screen name="AboutOE" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
+  <widget source="lab1" render="Label" position="70,123" size="369,35" font="Regular;30" transparent="1" zPosition="2" />
+  <widget source="lab2" render="Label" position="70,173" size="370,25" font="Regular;19" transparent="1" zPosition="2" />
+  <widget source="lab3" render="Label" position="70,213" size="369,25" font="Regular;19" transparent="1" zPosition="1" />
+  <eLabel text="OPEN SOURCE" position="477,123" size="353,28" font="Regular2; 22" transparent="1" zPosition="1" foregroundColor="KravenFont2" />
+  <eLabel text="https://github.com/openatv" position="477,173" size="352,28" font="Regular2; 19" transparent="1" zPosition="1" foregroundColor="KravenFont2" />
+  <eLabel text="https://github.com/oe-alliance" position="477,213" size="354,28" font="Regular2; 19" transparent="1" zPosition="1" foregroundColor="KravenFont2" />
+  <widget name="AboutScrollLabel" position="70,253" size="650,360" scrollbarMode="showOnDemand" font="Regular;20" transparent="1" zPosition="1" />
+  <panel name="template_menu_left" />
+</screen>
+
+  <!-- Devices -->
+<screen name="Devices" position="0,0" size="1280,720" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
+  <widget source="TunerHeader" render="Label" position="70,121" size="458,36" font="Regular2; 20" backgroundColor="KravenBackground" transparent="1" zPosition="1" foregroundColor="KravenFont2" />
+  <widget source="nims" render="Label" position="70,163" size="458,108" font="Regular;18" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" zPosition="1" enableWrapAround="0" />
+  <widget source="HDDHeader" render="Label" position="70,275" size="458,36" font="Regular2; 20" transparent="1" zPosition="1" backgroundColor="KravenBackground" foregroundColor="KravenFont2" />
+  <widget source="hdd" render="Label" position="70,315" size="458,112" font="Regular;18" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" zPosition="1" enableWrapAround="0" />
+  <widget source="MountsHeader" render="Label" position="70,431" size="458,36" font="Regular2; 20" transparent="1" zPosition="1" backgroundColor="KravenBackground" foregroundColor="KravenFont2" />
+  <widget source="mounts" render="Label" position="70,471" size="458,143" font="Regular;18" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" zPosition="1" enableWrapAround="0" />
+  <widget source="global.CurrentTime" render="KravenHDEGclock" position="665,135" borderColor="KravenFont1" zPosition="4" size="80,80" transparent="1">
+    <convert type="KravenHDEGAnalogic">Hours</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="KravenHDEGclock" position="645,115" borderColor="KravenFont1" zPosition="5" size="120,120" transparent="1">
+    <convert type="KravenHDEGAnalogic">Minutes</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="KravenHDEGclock" position="645,115" borderColor="KravenFont1" zPosition="6" size="120,120" transparent="1">
+    <convert type="KravenHDEGAnalogic">Seconds</convert>
+  </widget>
+  <ePixmap name="clock" position="630,100" size="150,150" pixmap="KravenHD/buttons/clock_bg.png" zPosition="1" alphatest="on" />
+  <widget source="global.CurrentTime" render="KravenHDEGclock" position="645,315" borderColor="KravenFont2" zPosition="6" size="120,120" transparent="1">
+    <convert type="AAFinfo">Harddiskspace</convert>
+  </widget>
+  <ePixmap name="harddiskspace" position="630,300" size="150,150" pixmap="KravenHD/buttons/gauge_bg.png" zPosition="1" alphatest="on" />
+  <widget source="session.CurrentService" render="Label" position="682,397" size="50,15" font="Regular; 14" halign="center" valign="top" zPosition="7" backgroundColor="transpWhite" transparent="1" foregroundColor="KravenFont2">
+    <convert type="AAFinfo">HarddiskspaceText</convert>
+  </widget>
+  <eLabel text="/media/hdd Used" position="609,458" size="200,25" font="Regular2; 20" halign="center" backgroundColor="KravenBackground" transparent="1" foregroundColor="KravenFont2" />
+  <panel name="template_menu_left" />
+</screen>
 
 <!-- supportchannel_ListChannel_ListScreen -->
 <screen name="supportchannel_ListChannel_ListScreen" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-    <widget text="openATV" render="Label" font="Regular; 35" position="70,47" size="800,43" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="white" backgroundColor="KravenBackground" />
-    <widget name="coverArt" pixmap="~/original/images/no_coverArt.png" position="599,157" size="270,200" transparent="1" alphatest="blend" borderWidth="2" borderColor="un555556" />
-    <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-      <convert type="KravenHDClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-      <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <widget name="liste" position="68,155" size="520,240" backgroundColor="KravenBackground" transparent="1" />
-    <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="100,662" size="200,5" alphatest="blend" />
-    <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="390,662" size="200,5" alphatest="blend" />
-    <ePixmap pixmap="KravenHD/buttons/key_yellow1.png" position="680,662" size="200,5" alphatest="blend" />
-    <ePixmap pixmap="KravenHD/buttons/key_blue1.png" position="970,662" size="200,5" alphatest="blend" />
-    <widget name="key_red" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-    <widget name="key_green" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-    <widget name="key_yellow" position="685,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-    <widget name="key_blue" position="975,637" size="260,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-    <widget name="VideoPrio" position="728,369" size="105,25" backgroundColor="KravenBackground" transparent="1" foregroundColor="KravenAccent1" font="Regular; 20" valign="center" halign="right" zPosition="1" />
-    <widget name="vPrio" position="842,369" size="25,25" backgroundColor="KravenBackground" transparent="1" font="Regular;20" valign="center" halign="center" zPosition="1" foregroundColor="white" />
-    <widget name="Page" position="684,369" size="56,25" backgroundColor="KravenBackground" transparent="1" foregroundColor="KravenAccent1" font="Regular;20" valign="center" halign="right" zPosition="0" />
-    <widget name="page" position="739,369" size="95,25" backgroundColor="KravenBackground" transparent="1" font="Regular;20" valign="center" halign="right" zPosition="0" />
-    <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-    <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-    <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
-    <widget name="ContentTitle" position="67,110" size="800,30" backgroundColor="KravenBackground" zPosition="0" foregroundColor="white" font="Regular;22" halign="center" transparent="1" />
-    <widget name="name" position="67,410" size="800,30" foregroundColor="white" backgroundColor="KravenBackground" transparent="1" font="Regular; 22" valign="top" zPosition="0" />
-    <widget name="handlung" position="67,456" size="800,170" backgroundColor="KravenBackground" transparent="1" font="Regular;20" valign="top" zPosition="0" />
-    <ePixmap pixmap="KravenHD/icons/Logo.png" position="916,223" size="300,280" alphatest="blend" />
-  </screen>
-  
-  
+  <widget name="coverArt" pixmap="~/original/images/no_coverArt.png" position="599,157" size="270,200" transparent="1" alphatest="blend" borderWidth="2" borderColor="un555556" />
+  <widget name="liste" position="68,155" size="520,240" backgroundColor="KravenBackground" transparent="1" />
+  <widget name="VideoPrio" position="728,369" size="105,25" backgroundColor="KravenBackground" transparent="1" foregroundColor="KravenFont1" font="Regular; 20" valign="center" halign="right" zPosition="1" />
+  <widget name="vPrio" position="842,369" size="25,25" backgroundColor="KravenBackground" transparent="1" font="Regular;20" valign="center" halign="center" zPosition="1" foregroundColor="white" />
+  <widget name="Page" position="684,369" size="56,25" backgroundColor="KravenBackground" transparent="1" foregroundColor="KravenFont1" font="Regular;20" valign="center" halign="right" zPosition="0" />
+  <widget name="page" position="739,369" size="95,25" backgroundColor="KravenBackground" transparent="1" font="Regular;20" valign="center" halign="right" zPosition="0" />
+  <eLabel backgroundColor="KravenBackground" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
+  <widget name="ContentTitle" position="67,110" size="800,30" backgroundColor="KravenBackground" zPosition="0" foregroundColor="white" font="Regular;22" halign="center" transparent="1" />
+  <widget name="name" position="67,410" size="800,30" foregroundColor="white" backgroundColor="KravenBackground" transparent="1" font="Regular; 22" valign="top" zPosition="0" />
+  <widget name="handlung" position="67,456" size="800,170" backgroundColor="KravenBackground" transparent="1" font="Regular;20" valign="top" zPosition="0" />
+  <panel name="template_menu_full_button" />
+  <panel name="template_colorkey_text" />
+</screen>
+
 <!-- supportchannel_YTChannel -->
 <screen name="supportchannel_YTChannel" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-    <widget text="Support Channel" render="Label" font="Regular; 35" position="70,47" size="800,43" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="white" backgroundColor="KravenBackground" />
-    <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-      <convert type="KravenHDClockToText">Default</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-      <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-    </widget>
-    <eLabel position="50,104" size="1000,520" backgroundColor="KravenBackground" transparent="1" />
-    <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="100,662" size="200,5" alphatest="blend" />
-    <widget name="name" position="265,152" size="535,30" foregroundColor="white" backgroundColor="KravenBackground" transparent="1" font="Regular; 22" valign="center" halign="center" />
-    <widget name="key_red" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-    <widget name="ContentTitle" position="266,114" size="535,30" backgroundColor="KravenBackground" zPosition="5" foregroundColor="white" font="Regular; 22" halign="center" transparent="1" />
-    <widget name="genreList" position="264,189" size="535,420" backgroundColor="KravenBackground" transparent="1" />
-    <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-    <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-    <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
-  </screen>
-  
+  <widget name="name" position="160,152" size="535,30" backgroundColor="KravenBackground" transparent="1" font="Regular; 22" valign="center" halign="center" />
+  <widget name="ContentTitle" position="160,114" size="535,30" backgroundColor="KravenBackground" zPosition="5" foregroundColor="KravenFont2" font="Regular2; 22" halign="center" transparent="1" />
+  <widget name="genreList" position="160,189" size="535,420" backgroundColor="KravenBackground" transparent="1" />
+  <panel name="template_menu_left_button" />
+  <panel name="template_colorkey_text" />
+</screen>
+
 <!-- InfoPanel -->
 <screen name="Info" position="0,0" size="1280,720" flags="wfNoBorder" title="Panel-Info" backgroundColor="transparent">
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="895,221" size="300,280" alphatest="blend" />
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
-  <widget name="label2" position="57,67" size="800,30" font="Regular; 30" foregroundColor="white" backgroundColor="KravenBackground" transparent="1" halign="center" />
-  <widget name="label1" position="53,134" size="800,510" font="Regular; 19" backgroundColor="KravenBackground" transparent="1" halign="left" />
-  <widget source="Title" render="Label" font="Regular; 35" position="919,154" size="256,43" transparent="1" halign="CENTER" valign="center" zPosition="1" foregroundColor="white" backgroundColor="KravenBackground" />
+  <widget name="label2" position="70,80" size="708,40" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="KravenBackground" transparent="1" halign="center" />
+  <widget name="label1" position="70,130" size="708,480" font="Regular;20" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" halign="left" />
+  <panel name="template_menu_left" />
 </screen>
 
 <!-- QuickMenu -->
 <screen name="QuickMenu" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-  <eLabel text="Schnellstart Menü" position="67,6" size="800,43" font="Regular;35" backgroundColor="KravenBackground" transparent="1" />
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="889,135" size="300,280" alphatest="blend" />
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <widget name="list" position="68,58" size="370,460" backgroundColor="KravenBackground" itemHeight="50" transparent="1" />
-  <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="100,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="390,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_yellow1.png" position="680,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_blue1.png" position="970,662" size="200,5" alphatest="blend" />
-  <widget name="key_red" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_green" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_yellow" position="685,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_blue" position="975,637" size="260,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
-  <widget name="description" position="66,539" size="1150,110" zPosition="1" font="Regular;22" halign="center" backgroundColor="KravenBackground" transparent="1" />
-  <widget name="sublist" position="448,58" size="300,400" backgroundColor="KravenBackground" itemHeight="50" transparent="1" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/line/line460.png" position="442,58" size="3,460" />
+  <widget name="list" position="70,80" size="330,400" backgroundColor="KravenBackground" itemHeight="50" transparent="1" />
+  <widget name="description" position="70,525" size="708,110" zPosition="1" font="Regular2;22" foregroundColor="KravenFont2" halign="center" backgroundColor="KravenBackground" transparent="1" />
+  <widget name="sublist" position="448,80" size="330,400" backgroundColor="KravenBackground" itemHeight="50" transparent="1" />
+  <panel name="template_colorkey_text" />
+  <panel name="template_menu_left_button" />
 </screen>
 
 <!-- QuickMenuDevices -->
 <screen name="QuickMenuDevices" position="0,0" size="1280,720" title="Devices" flags="wfNoBorder" backgroundColor="transparent">
-  <eLabel text="Available Devices" position="70,48" size="800,43" font="Regular;35" backgroundColor="KravenBackground" transparent="1" />
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="916,223" size="300,280" alphatest="blend" />
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <widget name="lab1" position="121,148" size="700,50" font="Regular; 20" alphatest="blend" transparent="1" halign="center" />
-  <widget source="devicelist" render="Listbox" position="66,142" size="780,450" zPosition="3" transparent="1">
+  <widget name="lab1" position="125,148" size="618,50" font="Regular2; 20" alphatest="blend" transparent="1" halign="center" foregroundColor="KravenFont2" />
+  <widget source="devicelist" render="Listbox" position="70,127" size="708,450" zPosition="3" transparent="1">
     <convert type="TemplatedMultiContent">
 				{"template": [
 				 MultiContentEntryText(pos = (90, 0), size = (600, 30), font=0, text = 0),
@@ -221,148 +114,66 @@
 				"fonts": [gFont("Regular", 24),gFont("Regular", 20)],
 				"itemHeight": 85
 				}
-			</convert>
+	</convert>
   </widget>
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+  <panel name="template_menu_left" />
 </screen>
 
 <!-- Infopanel -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="Infopanel" position="0,0" size="1280,720" title="Info Panel" transparent="0">
-  <widget backgroundColor="KravenBackground" font="Regular; 43" halign="center" position="858,453" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="KravenHDClockToText">Format:%H</convert>
-  </widget>
-  <eLabel backgroundColor="KravenBackground" font="Regular; 43" halign="center" position="915,453" size="15,80" text=":" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="KravenBackground" font="Regular; 43" halign="center" position="925,453" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="KravenHDClockToText">Format:%M</convert>
-  </widget>
-  <eLabel backgroundColor="KravenBackground" font="Regular; 32" halign="center" position="981,467" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="KravenBackground" font="Regular; 32" halign="center" position="991,467" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="KravenHDClockToText">Format:%S</convert>
-  </widget>
-  <widget backgroundColor="KravenBackground" font="Regular; 18" foregroundColor="KravenAccent1" halign="center" position="848,548" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="KravenHDClockToText">Format:%e. %B</convert>
-  </widget>
-  <widget backgroundColor="KravenBackground" font="Regular; 18" foregroundColor="KravenAccent1" halign="center" position="848,523" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
-    <convert type="KravenHDClockToText">Format:%A</convert>
-  </widget>
-  <eLabel backgroundColor="KravenBackground" font="Regular; 30" halign="center" position="800,65" size="300,65" text="Info Panel" transparent="1" valign="center" zPosition="1" />
-  <widget name="Mlist" position="196,65" size="510,600" transparent="1" />
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="800,130" size="300,280" alphatest="blend" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />&gt;
-  <widget backgroundColor="KravenBackground" font="Regular; 18" foregroundColor="KravenAccent1" halign="center" position="848,434" render="Label" size="203,30" source="session.MSNWeather" transparent="1" valign="center" zPosition="1">
-  <convert type="MSNWeather">temperature_current</convert>
-  </widget>
-  <widget backgroundColor="KravenBackground" font="Regular; 18" foregroundColor="KravenAccent1" halign="center" position="848,409" render="Label" size="203,30" source="session.MSNWeather" transparent="1" valign="center" zPosition="1">
-  <convert type="MSNWeather">temperature_text,current</convert>
-  </widget>
+  <widget name="Mlist" position="70,80" size="708,540" transparent="1" />
+  <panel name="template_menu_left" />
 </screen>
 
 <!-- Softwarepanel -->
 <screen name="SoftwarePanel" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-  <widget source="Title" render="Label" font="Regular; 35" position="70,47" size="800,43" transparent="1" halign="left" valign="center" foregroundColor="white" backgroundColor="KravenBackground" />
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="851,96" size="300,280" alphatest="blend" />
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <widget source="list" render="Listbox" position="70,120" size="700,450" backgroundColor="KravenBackground" itemHeight="50" alphatest="blend" transparent="1">
+  <widget source="list" render="Listbox" position="70,90" size="708,520" backgroundColor="KravenBackground" itemHeight="50" alphatest="blend" transparent="1">
     <convert type="TemplatedMultiContent">
 			{"template": [
-					MultiContentEntryText(pos = (5, 1), size = (540, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-					MultiContentEntryText(pos = (5, 26), size = (540, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+					MultiContentEntryText(pos = (6, 2), size = (540, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					MultiContentEntryText(pos = (6, 28), size = (540, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
 					MultiContentEntryPixmapAlphaTest(pos = (605, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
 					MultiContentEntryPixmapAlphaTest(pos = (5, 50), size = (610, 2), png = 5), # index 4 is the div pixmap
 				],
 			"fonts": [gFont("Regular", 22),gFont("Regular", 14)],
 			"itemHeight": 52
 			}
-		</convert>
+	</convert>
   </widget>
-  <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="100,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="390,662" size="200,5" alphatest="blend" />
-  <widget name="key_red" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_green" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
-  <widget name="a_off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" position="868,551" zPosition="1" size="36,97" alphatest="on" />
-  <widget name="a_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" position="868,551" zPosition="1" size="36,97" alphatest="on" />
-  <widget name="a_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" position="868,551" zPosition="1" size="36,97" alphatest="on" />
-  <widget name="a_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" position="868,551" zPosition="1" size="36,97" alphatest="on" />
-  <widget name="packagetext" position="844,387" size="250,30" zPosition="1" font="Regular;25" halign="right" transparent="1" />
-  <widget name="packagenr" position="1103,387" size="50,30" zPosition="1" font="Regular;25" halign="right" transparent="1" />
-  <widget name="feedstatusRED" position="911,557" size="200,30" zPosition="1" font="Regular;25" halign="left" transparent="1" />
-  <widget name="feedstatusYELLOW" position="911,587" size="200,30" zPosition="1" font="Regular;25" halign="left" transparent="1" />
-  <widget name="feedstatusGREEN" position="911,617" size="200,30" zPosition="1" font="Regular;25" halign="left" transparent="1" />
+  <widget name="packagetext" position="918,391" size="250,30" zPosition="1" font="Regular2; 25" halign="right" transparent="1" backgroundColor="KravenBackground" foregroundColor="KravenFont2" />
+  <widget name="packagenr" position="1181,391" size="50,30" zPosition="1" font="Regular2; 25" halign="right" transparent="1" backgroundColor="KravenBackground" foregroundColor="KravenFont2" />
+  <widget name="feedstatusRED" position="997,557" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" />
+  <widget name="feedstatusYELLOW" position="997,587" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" />
+  <widget name="feedstatusGREEN" position="997,617" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" />
+  <widget name="a_off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+  <widget name="a_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+  <widget name="a_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+  <widget name="a_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+  <panel name="template_colorkey_text" />
+  <panel name="template_menu_full_button" />
 </screen>
 
 <!-- SoftcamPanel -->
 <screen name="SoftcamPanel" position="0,0" size="1280,720" title="Softcam Panel" backgroundColor="transparent" flags="wfNoBorder">
-  <eLabel text="Softcam Panel" position="70,47" size="800,43" font="Regular;35" backgroundColor="KravenBackground" transparent="1" />
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="916,223" size="300,280" alphatest="blend" />
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <widget name="config" position="70,126" size="500,100" enableWrapAround="1" transparent="1" />
-  <widget font="Regular; 22" name="enigma2" position="609,164" size="185,25" transparent="1" />
-  <widget font="Regular; 20" name="actifcam" position="70,235" size="380,32" transparent="1" />
-  <widget font="Regular; 20" name="actifcam2" position="454,235" size="380,32" transparent="1" />
-  <widget font="Regular; 20" name="ecminfo" position="70,278" size="764,300" transparent="1" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/line/line764.png" position="70,229" size="764,2" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/line/line764.png" position="70,271" size="764,2" />
-  <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="100,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="390,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_yellow1.png" position="680,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_blue1.png" position="970,662" size="200,5" alphatest="blend" />
-  <widget name="key_red" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_green" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_yellow" position="685,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_blue" position="975,637" size="260,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+  <widget name="config" font="Regular; 20" position="70,126" size="500,100" enableWrapAround="1" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+  <widget font="Regular2; 22" name="enigma2" position="591,164" size="185,25" transparent="1" backgroundColor="KravenBackground" foregroundColor="KravenFont2" />
+  <widget font="Regular2; 20" name="actifcam" position="70,235" size="352,64" transparent="1" backgroundColor="KravenBackground" foregroundColor="KravenFont2" />
+  <widget font="Regular2; 20" name="actifcam2" position="426,235" size="352,64" transparent="1" backgroundColor="KravenBackground" foregroundColor="KravenFont2" />
+  <widget font="Regular; 20" name="ecminfo" position="70,308" size="708,300" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+  <panel name="template_colorkey_text" />
+  <panel name="template_menu_left_button" />
 </screen>
 
 <!-- ShowSoftcamPanelExtensions -->
 <screen name="ShowSoftcamPanelExtensions" position="0,0" size="1280,720" title="Softcam-Panel Setup" flags="wfNoBorder" backgroundColor="transparent">
-  <widget source="Title" render="Label" font="Regular; 35" position="70,47" size="800,43" transparent="1" halign="left" valign="center" zPosition="1" backgroundColor="KravenBackground" />
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="916,223" size="300,280" alphatest="blend" />
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <widget name="config" position="71,119" size="800,481" enableWrapAround="1" backgroundColor="KravenBackground" transparent="1" />
-  <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="100,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="390,662" size="200,5" alphatest="blend" />
-  <widget name="key_red" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_green" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+  <widget name="config" position="70,80" size="708,540" enableWrapAround="1" backgroundColor="KravenBackground" transparent="1" />
+  <panel name="template_colorkey_text" />
+  <panel name="template_menu_left_button" />
 </screen>
 
 <!-- ShowSoftcamPackages -->
 <screen name="ShowSoftcamPackages" position="0,0" size="1280,720" title="New Packages" flags="wfNoBorder" backgroundColor="transparent">
-  <widget source="Title" render="Label" font="Regular; 35" position="70,47" size="800,43" transparent="1" halign="left" valign="center" zPosition="1" backgroundColor="KravenBackground" />
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="916,223" size="300,280" alphatest="blend" />
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <widget source="list" render="Listbox" position="70,120" size="800,480" transparent="1" foregroundColorSelected="white">
+  <widget source="list" render="Listbox" position="70,80" size="708,540" transparent="1" foregroundColorSelected="white">
     <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (18, 5), size = (48, 48), png = 4), # index 4 is the status pixmap
@@ -373,52 +184,24 @@
 				"fonts": [gFont("Regular", 22),gFont("Regular", 16)],
 				"itemHeight": 60
 				}
-			</convert>
+	</convert>
   </widget>
-  <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="100,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="390,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_ok.png" position="653,638" size="49,40" alphatest="blend" />
-  <widget name="key_red" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_green" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_ok" position="711,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+  <panel name="template_colorkey_text" />
+  <panel name="template_menu_left_button" />
 </screen>
 
 
 <!-- DevicePanelConf -->
 <screen name="DevicePanelConf" position="0,0" size="1280,720" title="DevicePanelConf" backgroundColor="transparent" flags="wfNoBorder">
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="913,183" size="300,280" alphatest="blend" />
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <eLabel text="Mount Manager Setup" position="70,47" size="800,43" font="Regular;35" backgroundColor="KravenBackground" transparent="1" />
   <widget name="config" position="70,120" size="700,371" enableWrapAround="1" backgroundColor="KravenBackground" transparent="1" />
-  <widget name="Linconn" position="71,505" size="700,20" font="Regular;18" halign="center" valign="center" />
-  <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="100,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="390,662" size="200,5" alphatest="blend" />
-  <widget name="key_red" position="105,637" size="240,24" zPosition="1" font="RegularLight;20" halign="left" backgroundColor="KravenBackground" transparent="1" />
-  <widget name="key_green" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" transparent="1" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+  <widget name="Linconn" position="70,505" size="700,20" font="Regular2; 18" halign="center" valign="center" foregroundColor="KravenFont2" />
+  <panel name="template_colorkey_text" />
+  <panel name="template_menu_left_button" />
 </screen>
 
 <!-- HddMount -->
 <screen name="HddMount" position="0,0" size="1280,720" title="HddMount" flags="wfNoBorder" backgroundColor="transparent">
-  <eLabel text="Mount Manager" position="70,47" size="800,43" font="Regular;35" backgroundColor="KravenBackground" transparent="1" />
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="908,147" size="300,280" alphatest="blend" />
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <widget source="list" render="Listbox" position="71,120" size="700,371" font="Regular;16" transparent="1">
+  <widget source="list" render="Listbox" position="70,120" size="700,371" font="Regular;16" transparent="1">
     <convert type="TemplatedMultiContent">
 				{"template": [
 				 MultiContentEntryText(pos = (90, 0), size = (600, 30), font=0, text = 0),
@@ -428,143 +211,79 @@
 				"fonts": [gFont("Regular", 24),gFont("Regular", 20)],
 				"itemHeight": 85
 				}
-			</convert>
+	</convert>
   </widget>
-  <widget name="lab1" zPosition="2" position="126,129" size="600,40" font="Regular;22" halign="center" transparent="1" />
-  <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="100,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="390,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_yellow1.png" position="680,662" size="200,5" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/buttons/key_blue1.png" position="970,662" size="200,5" alphatest="blend" />
-  <widget name="key_red" position="105,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_green" position="395,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_yellow" position="685,637" size="240,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <widget name="key_blue" position="975,637" size="260,24" zPosition="1" font="RegularLight; 20" halign="left" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+  <widget backgroundColor="KravenBackground" name="lab1" zPosition="2" position="126,129" size="600,40" font="Regular2; 22" halign="center" transparent="1" foregroundColor="KravenFont2" />
+  <panel name="template_colorkey_text" />
+  <panel name="template_menu_left_button" />
 </screen>
 
 <!-- HarddiskSelection -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskSelection" position="0,0" size="1280,720" title="Select HDD">
- <ePixmap pixmap="KravenHD/icons/Logo.png" position="908,147" size="300,280" alphatest="blend" />
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <eLabel backgroundColor="KravenBackground" font="RegularLight;35" position="70,47" size="800,43" text="Select HDD" transparent="1" />
-  <widget itemHeight="30" name="hddlist" position="70,130" size="700,275" transparent="1" />
-  
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+  <widget itemHeight="30" name="hddlist" position="70,80" size="708,540" transparent="1" />
+  <panel name="template_menu_left" />
 </screen>
 
 <!-- HarddiskSetup -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskSetup" position="0,0" size="1280,720" title="Harddisk">
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <eLabel backgroundColor="KravenBackground" font="RegularLight;35" position="70,47" size="800,43" text="Harddisk Setup" transparent="1" />
-  <widget font="RegularLight;23" name="model" position="70,150" size="700,25" transparent="1" />
-  <widget font="RegularLight;23" name="capacity" position="70,200" size="700,25" transparent="1" />
-  <widget font="RegularLight;23" name="bus" position="70,250" size="700,25" transparent="1" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="100,665" size="200,5" />
-  <widget backgroundColor="KravenBackground" font="RegularLight;20" name="initializetext" position="110,640" size="3000,24" transparent="1" zPosition="1" />
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="910,94" size="300,280" alphatest="blend" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+  <widget font="Regular2;23" name="model" position="70,150" size="700,25" transparent="1" />
+  <widget font="Regular2;23" name="capacity" position="70,200" size="700,25" transparent="1" />
+  <widget font="Regular2;23" name="bus" position="70,250" size="700,25" transparent="1" />
+  <widget backgroundColor="KravenBackground" font="Regular2;20" name="initializetext" position="18,618" size="816,24" transparent="1" zPosition="1" foregroundColor="KravenFont2" />
+  <panel name="template_colorkey_text" />
+  <panel name="template_menu_left_button" />
 </screen>
 
 <!-- HarddiskWait -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskWait" position="0,0" size="1280,720">
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <widget backgroundColor="KravenBackground" font="RegularLight;35" position="70,47" render="Label" size="800,43" source="Title" transparent="1" />
-  <widget name="wait" position="70,130" size="700,275" transparent="1" />
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="888,129" size="300,280" alphatest="blend" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+  <widget name="wait" position="70,80" size="708,540" transparent="1" />
+  <panel name="template_menu_left" />
 </screen>
 
 <!-- DriverManagerFile -->
 <screen flags="wfNoBorder" name="DriverManagerFile" position="0,0" size="1280,720" title="Select file to execute" transparent="0" backgroundColor="transparent">
- <ePixmap pixmap="KravenHD/icons/Logo.png" position="908,147" size="300,280" alphatest="blend" />
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <widget backgroundColor="KravenBackground" font="RegularLight;32" position="70,47" render="Label" size="800,43" source="title" transparent="1" />
-  <widget backgroundColor="KravenBackground" font="RegularLight;23" name="driverfile" position="70,115" size="700,28" transparent="1" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/line/line700.png" position="70,155" size="700,2" />
-  <widget backgroundColor="KravenBackground" itemHeight="30" name="filelist" position="70,165" size="700,450" transparent="1" zPosition="3" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="100,665" size="200,5" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="390,665" size="200,5" />
-  <widget backgroundColor="KravenBackground" font="RegularLight;20" halign="left" position="105,640" render="Label" size="240,24" source="key_red" transparent="1" zPosition="1" />
-  <widget backgroundColor="KravenBackground" font="RegularLight;20" halign="left" position="395,640" render="Label" size="240,24" source="key_green" transparent="1" zPosition="1" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-9" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-9" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+  <widget backgroundColor="KravenBackground" font="Regular2;23" name="driverfile" position="70,74" size="708,28" transparent="1" foregroundColor="KravenFont2" />
+  <widget backgroundColor="KravenBackground" itemHeight="30" name="filelist" position="70,107" size="708,540" transparent="1" zPosition="3" />
+  <panel name="template_colorkey_text_source" />
+  <panel name="template_menu_left_button" />
 </screen>
   
 <!-- ButtonSetup -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HotkeySetup" position="0,0" size="1280,720" title="Tasteneinstellungen">
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <eLabel backgroundColor="KravenBackground" font="RegularLight;35" position="81,28" size="400,43" text="Tasteneinstellungen" transparent="1" />
-  <widget name="list" position="85,99" size="385,529" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="white" enableWrapAround="1" backgroundColor="BackgroundKraven" zPosition="-8" />
-  <widget name="choosen" position="473,99" size="385,530" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" foregroundColor="KravenAccent1" backgroundColor="BackgroundKraven" zPosition="-8" />
-  <widget name="description" position="876,382" size="302,250" font="Regular;16" foregroundColor="blue2" valign="center" halign="center" backgroundColor="BackgroundKraven" zPosition="-8" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="80,695" size="200,5" />
-  <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="390,695" size="200,5" alphatest="blend" />
-  <widget backgroundColor="KravenBackground" font="RegularLight;20" halign="left" position="85,670" render="Label" size="240,24" source="key_red" transparent="1" zPosition="1" />
-  <widget backgroundColor="KravenBackground" font="RegularLight;20" halign="left" position="395,670" render="Label" size="240,24" source="key_green" transparent="1" zPosition="1" />
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="877,95" size="300,280" alphatest="blend" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-7" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-7" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+  <widget name="list" position="40,99" size="385,529" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="white" enableWrapAround="1" backgroundColor="KravenBackground" zPosition="-8" />
+  <widget name="choosen" position="427,99" size="385,530" scrollbarMode="showOnDemand" font="Regular2; 22" itemHeight="28" foregroundColor="KravenFont1" backgroundColor="KravenBackground" zPosition="-8" />
+  <widget name="description" position="934,255" size="302,250" font="Regular2; 16" foregroundColor="KravenFont2" valign="center" halign="center" backgroundColor="KravenBackground" zPosition="-8" />
+  <panel name="template_colorkey_text_source" />
+  <panel name="template_menu_full_button" />
 </screen>
-
 
 <!-- ButtonSetupSelect -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="ButtonSetupSelect" position="0,0" size="1280,720" title="Tasteneinstellungen">
-  <widget source="global.CurrentTime" render="Label" position="1120,37" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Default</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="870,67" size="350,25" font="RegularLight; 20" halign="right" backgroundColor="KravenBackground" transparent="1">
-    <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
-  </widget>
-  <eLabel backgroundColor="KravenBackground" font="RegularLight;35" position="81,28" size="400,43" text="Tasteneinstellungen" transparent="1" />
-  <widget name="list" position="85,99" size="385,529" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="white" enableWrapAround="1" backgroundColor="BackgroundKraven" zPosition="-8" />
-  <widget name="choosen" position="473,99" size="385,530" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" foregroundColor="KravenAccent1" backgroundColor="BackgroundKraven" zPosition="-8" />
-  <widget name="description" position="876,382" size="302,250" font="Regular;16" foregroundColor="blue2" valign="center" halign="center" backgroundColor="BackgroundKraven" zPosition="-8" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="80,695" size="200,5" />
-  <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="390,695" size="200,5" alphatest="blend" />
-  <widget backgroundColor="KravenBackground" font="RegularLight;20" halign="left" position="85,670" render="Label" size="240,24" source="key_red" transparent="1" zPosition="1" />
-  <widget backgroundColor="KravenBackground" font="RegularLight;20" halign="left" position="395,670" render="Label" size="240,24" source="key_green" transparent="1" zPosition="1" />
-  <ePixmap pixmap="KravenHD/icons/Logo.png" position="877,95" size="300,280" alphatest="blend" />
-  <eLabel backgroundColor="BackgroundKraven" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-  <ePixmap position="0,0" size="1280,149" zPosition="-7" pixmap="KravenHD/infobar/ibaro.png" alphatest="blend" />
-  <ePixmap position="0,555" size="1280,170" zPosition="-7" pixmap="KravenHD/infobar/ibar.png" alphatest="blend" />
+  <widget name="list" position="40,99" size="385,529" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="white" enableWrapAround="1" backgroundColor="KravenBackground" zPosition="-8" />
+  <widget name="choosen" position="427,99" size="385,530" scrollbarMode="showOnDemand" font="Regular2; 22" itemHeight="28" foregroundColor="KravenFont1" backgroundColor="KravenBackground" zPosition="-8" />
+  <widget name="description" position="934,255" size="302,250" font="Regular2; 16" foregroundColor="KravenFont2" valign="center" halign="center" backgroundColor="KravenBackground" zPosition="-8" />
+  <panel name="template_colorkey_text_source" />
+  <panel name="template_menu_full_button" />
 </screen>
 
+<!-- Animation -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="AnimationSetupScreen" position="0,0" size="1280,720" title="Animation Setup">
+  <widget backgroundColor="KravenBackground" name="list" itemHeight="30" font="Regular;22" foregroundColor="KravenFont1" position="70,80" size="708,510" scrollbarMode="showOnDemand" transparent="1" />
+  <panel name="template_menu_left_button" />
+  <panel name="template_colorkey_text_source" />
+</screen>
 
+<!-- AnimationSetupConfig -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="AnimationSetupConfig" position="0,0" size="1280,720" title="AnimationSetupConfig">
+  <widget backgroundColor="KravenBackground" name="config" itemHeight="30" font="Regular;22" foregroundColor="KravenFont1" position="70,80" size="708,100" scrollbarMode="showOnDemand" transparent="1" />
+  <panel name="template_menu_left_button" />
+  <panel name="template_colorkey_text_source" />
+</screen>
 
-
+<!-- Tastenbelegung -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="ButtonSetup" position="0,0" size="1280,720" title="">
+  <widget backgroundColor="KravenBackground" name="list" itemHeight="30" font="Regular;22" foregroundColor="KravenFont1" position="70,80" size="708,420" scrollbarMode="showOnDemand" transparent="1" />
+  <widget backgroundColor="KravenBackground" name="description" position="70,548" size="708,67" zPosition="2" font="Regular2;22" foregroundColor="KravenFont2" valign="center" halign="center" transparent="1" />
+  <panel name="template_menu_left" />
+</screen>
 <!-- main-custom-openatv */ -->

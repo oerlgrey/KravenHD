@@ -1,7 +1,16 @@
 #!/bin/sh
+echo "Checking Mediaportal installed..."
+if [ -d /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_720 ]; then
+  rm /var/lib/opkg/lock
+  opkg install --force-overwrite http://www.gigablue-support.org/skins/MediaPortal/enigma2-plugin-skins-mediaportal-kravense_1.2_all.ipk
+  touch /var/lib/opkg/lock
+else
+  echo
+fi
 if [ -f /tmp/skin.xml ]; then
 mv /tmp/skin.xml /usr/share/enigma2/KravenHD
 fi
 echo "                                                          "
 echo "             ...Skin successful installed.                "
 echo "                                                          "
+exit 0

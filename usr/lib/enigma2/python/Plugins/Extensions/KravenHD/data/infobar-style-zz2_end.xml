@@ -1,0 +1,6 @@
+  <panel name="template_infobar_style_zz2" />
+  <panel name="template_secondinfobar" />
+  <widget source="session.CurrentService" position="37,495" size="1199,22" font="Regular2; 20" render="Label" halign="center" valign="center" foregroundColor="KravenFont2" backgroundColor="KravenBackground" transparent="1" zPosition="1">
+    <convert type="KravenHDMyCaidDisplay">Default</convert>
+  </widget>
+</screen>

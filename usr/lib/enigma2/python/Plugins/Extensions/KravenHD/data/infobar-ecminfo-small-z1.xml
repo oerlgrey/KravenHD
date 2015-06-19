@@ -1,5 +1,0 @@
-<!-- /* ECM-Info -->
-<widget source="session.CurrentService" render="Label" position="274,601" size="655,20" font="Regular;16" halign="left" foregroundColor="blue2" backgroundColor="black" transparent="1" zPosition="5" alphatest="blend">
-  <convert type="KravenHDCaidInfo2">%T</convert>
-</widget>
-<!-- ECM-Info */ -->

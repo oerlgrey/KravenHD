@@ -13,7 +13,7 @@ class KravenHDVolumeCycle(Renderer):
     def changed(self, what):
         if not self.suspended:
             value = str(eDVBVolumecontrol.getInstance().getVolume())
-            self.instance.setPixmapFromFile('/usr/share/enigma2/KravenHD/cycle/' + value + '.png')
+            self.instance.setPixmapFromFile('/usr/share/enigma2/KravenHD/volume/' + value + '.png')
 
     def pollme(self):
         self.changed(None)

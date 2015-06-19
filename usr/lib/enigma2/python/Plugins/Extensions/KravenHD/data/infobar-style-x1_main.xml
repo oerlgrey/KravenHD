@@ -1,0 +1,2 @@
+<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1280,720" title="InfoBar">
+  <panel name="template_infobar_style_x1" />
