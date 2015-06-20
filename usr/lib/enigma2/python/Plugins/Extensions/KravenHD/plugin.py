@@ -599,6 +599,11 @@ config.plugins.KravenHD.ButtonStyleFont = ConfigSelection(default="00fffff8", ch
 				("00373737", _("Dark"))
 				])
 				
+config.plugins.KravenHD.FontStyle = ConfigSelection(default="NotoSans", choices = [
+				("NotoSans", _("NotoSans")),
+				("OpenSans", _("OpenSans"))
+				])
+				
 #######################################################################
 
 class KravenHD(ConfigListScreen, Screen):
@@ -653,9 +658,10 @@ class KravenHD(ConfigListScreen, Screen):
 		list = []
 		list.append(getConfigListEntry(_("______________________ System __________________________________"), ))
 		list.append(getConfigListEntry(_("Image"), config.plugins.KravenHD.Image))
-		list.append(getConfigListEntry(_("Running Text"), config.plugins.KravenHD.RunningText))
+		list.append(getConfigListEntry(_("Font Style"), config.plugins.KravenHD.FontStyle))
 		list.append(getConfigListEntry(_("Button Style"), config.plugins.KravenHD.ButtonStyle))
 		list.append(getConfigListEntry(_("Background Transparency"), config.plugins.KravenHD.BackgroundColorTrans))
+		list.append(getConfigListEntry(_("Running Text"), config.plugins.KravenHD.RunningText))
 		list.append(getConfigListEntry(_("Weather ID"), config.plugins.KravenHD.weather_city))
 		list.append(getConfigListEntry(_("______________________ Colors __________________________________"), ))
 		list.append(getConfigListEntry(_("Line"), config.plugins.KravenHD.Line))
@@ -791,6 +797,7 @@ class KravenHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(["00fffff1", config.plugins.KravenHD.Border.value])
 			self.skinSearchAndReplace.append(["00fffff5", config.plugins.KravenHD.Line.value])
 			self.skinSearchAndReplace.append(["buttons_light", config.plugins.KravenHD.ButtonStyle.value])
+			self.skinSearchAndReplace.append(["NotoSans", config.plugins.KravenHD.FontStyle.value])
 			
 			### ButtonStyleFont
 			if config.plugins.KravenHD.ButtonStyle.value == "buttons_light":
