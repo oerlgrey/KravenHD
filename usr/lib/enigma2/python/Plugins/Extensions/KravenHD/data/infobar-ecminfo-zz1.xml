@@ -1,0 +1,5 @@
+<!-- /* ECM-Info -->
+<widget source="session.CurrentService" render="Label" position="446,525" size="655,20" font="Regular;16" halign="left" foregroundColor="KravenButtonStyleFont" backgroundColor="KravenBackground" transparent="1" zPosition="5" alphatest="blend">
+  <convert type="KravenHDEcmInfoLine">Format:CAID: %C - Reader: %R - ECM: %T ms</convert>
+</widget>
+<!-- ECM-Info */ -->

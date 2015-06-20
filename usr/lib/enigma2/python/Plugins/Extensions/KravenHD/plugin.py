@@ -586,7 +586,26 @@ config.plugins.KravenHD.SatInfo = ConfigSelection(default="none", choices = [
 				
 config.plugins.KravenHD.ECMInfo = ConfigSelection(default="none", choices = [
 				("none", _("Off")),
-				("ecminfo", _("On"))
+				("infobar-ecminfo-x1", _("Bottom")),
+				("ecminfo", _("Right"))
+				])
+				
+config.plugins.KravenHD.ECMInfo2 = ConfigSelection(default="none", choices = [
+				("none", _("Off")),
+				("infobar-ecminfo-x2", _("Bottom")),
+				("ecminfo", _("Right"))
+				])
+				
+config.plugins.KravenHD.ECMInfo3 = ConfigSelection(default="none", choices = [
+				("none", _("Off")),
+				("infobar-ecminfo-zz1", _("Bottom")),
+				("ecminfo", _("Right"))
+				])
+				
+config.plugins.KravenHD.ECMInfo4 = ConfigSelection(default="none", choices = [
+				("none", _("Off")),
+				("infobar-ecminfo-zz2", _("Bottom")),
+				("ecminfo", _("Right"))
 				])
 				
 config.plugins.KravenHD.ButtonStyle = ConfigSelection(default="buttons_light", choices = [
@@ -667,6 +686,7 @@ class KravenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("Line"), config.plugins.KravenHD.Line))
 		list.append(getConfigListEntry(_("Infobar"), config.plugins.KravenHD.SkinColorInfobar))
 		list.append(getConfigListEntry(_("Background"), config.plugins.KravenHD.Background))
+		list.append(getConfigListEntry(_("Border"), config.plugins.KravenHD.Border))
 		list.append(getConfigListEntry(_("Listselection"), config.plugins.KravenHD.SelectionBackground))
 		list.append(getConfigListEntry(_("Listselection Border"), config.plugins.KravenHD.SelectionBorder))
 		list.append(getConfigListEntry(_("Progress-/Volumebar"), config.plugins.KravenHD.Progress))
@@ -699,7 +719,14 @@ class KravenHD(ConfigListScreen, Screen):
 		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1":
 			list.append(getConfigListEntry(_("Weather"), config.plugins.KravenHD.WeatherStyle2))
 		list.append(getConfigListEntry(_("Sat-Info"), config.plugins.KravenHD.SatInfo))
-		list.append(getConfigListEntry(_("ECM-Info"), config.plugins.KravenHD.ECMInfo))
+		if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
+			list.append(getConfigListEntry(_("ECM-Info"), config.plugins.KravenHD.ECMInfo))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2":
+			list.append(getConfigListEntry(_("ECM-Info"), config.plugins.KravenHD.ECMInfo2))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz4" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
+			list.append(getConfigListEntry(_("ECM-Info"), config.plugins.KravenHD.ECMInfo3))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3":
+			list.append(getConfigListEntry(_("ECM-Info"), config.plugins.KravenHD.ECMInfo4))
 		list.append(getConfigListEntry(_("______________________ General __________________________________"), ))
 		list.append(getConfigListEntry(_("Channel Selection"), config.plugins.KravenHD.ChannelSelectionStyle))
 		list.append(getConfigListEntry(_("EMC"), config.plugins.KravenHD.EMCStyle))
@@ -861,7 +888,14 @@ class KravenHD(ConfigListScreen, Screen):
 			self.appendSkinFile(self.daten + config.plugins.KravenHD.SatInfo.value + ".xml")
 
 			###ecm-info
-			self.appendSkinFile(self.daten + config.plugins.KravenHD.ECMInfo.value + ".xml")
+			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.ECMInfo.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.ECMInfo2.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz4" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.ECMInfo3.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.ECMInfo4.value + ".xml")
 
 			###weather-style
 			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz4" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
