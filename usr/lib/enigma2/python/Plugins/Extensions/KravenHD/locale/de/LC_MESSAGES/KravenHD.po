@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2015-06-16 00:21+0100\n"
+"PO-Revision-Date: 2015-06-21 09:51+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -407,6 +407,10 @@ msgid "right"
 msgstr "rechts"
 
 #: plugin.py
+msgid "bottom"
+msgstr "unten"
+
+#: plugin.py
 msgid "top"
 msgstr "oben"
 
@@ -460,7 +464,7 @@ msgstr ""
 
 #: plugin.py
 msgid "Cobalt Dark"
-msgstr ""
+msgstr "dunkel Cobalt"
 
 #: plugin.py
 msgid "Cyan"
@@ -468,7 +472,7 @@ msgstr ""
 
 #: plugin.py
 msgid "Cyan Dark"
-msgstr ""
+msgstr "dunkel Cyan"
 
 #: plugin.py
 msgid "Grey"
@@ -508,7 +512,7 @@ msgstr ""
 
 #: plugin.py
 msgid "Pink Dark"
-msgstr ""
+msgstr "dunkel Pink"
 
 #: plugin.py
 msgid "Red"
@@ -524,7 +528,7 @@ msgstr ""
 
 #: plugin.py
 msgid "Steel Dark"
-msgstr ""
+msgstr "dunkel Steel"
 
 #: plugin.py
 msgid "Violet"
@@ -532,7 +536,7 @@ msgstr ""
 
 #: plugin.py
 msgid "Violet Dark"
-msgstr ""
+msgstr "dunkel Violet"
 
 #: plugin.py
 msgid "White"
