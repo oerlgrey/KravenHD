@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2015-06-21 09:51+0100\n"
+"PO-Revision-Date: 2015-06-21 10:08+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -399,36 +399,36 @@ msgid "with Border"
 msgstr "mit Rahmen"
 
 #: plugin.py
-msgid "left"
-msgstr "links"
+msgid "Left"
+msgstr "Links"
 
 #: plugin.py
-msgid "right"
-msgstr "rechts"
+msgid "Right"
+msgstr "Rechts"
 
 #: plugin.py
-msgid "bottom"
-msgstr "unten"
+msgid "Bottom"
+msgstr "Unten"
 
 #: plugin.py
-msgid "top"
-msgstr "oben"
+msgid "Top"
+msgstr "Oben"
 
 #: plugin.py
-msgid "center"
-msgstr "mittig"
+msgid "Center"
+msgstr "Mittig"
 
 #: plugin.py
-msgid "low"
-msgstr "niedrig"
+msgid "Low"
+msgstr "Niedrig"
 
 #: plugin.py
-msgid "medium"
-msgstr "mittel"
+msgid "Medium"
+msgstr "Mittel"
 
 #: plugin.py
-msgid "high"
-msgstr "hoch"
+msgid "High"
+msgstr "Hoch"
 
 #: plugin.py
 msgid "Amber"
@@ -436,7 +436,7 @@ msgstr ""
 
 #: plugin.py
 msgid "Amber Dark"
-msgstr ""
+msgstr "dunkel Amber"
 
 #: plugin.py
 msgid "Black"

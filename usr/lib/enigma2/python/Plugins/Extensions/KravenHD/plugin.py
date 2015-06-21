@@ -80,16 +80,16 @@ config.plugins.KravenHD.Image = ConfigSelection(default="main-custom-openatv", c
 config.plugins.KravenHD.Volume = ConfigSelection(default="volume-border", choices = [
 				("volume-original", _("Original")),
 				("volume-border", _("with Border")),
-				("volume-left", _("left")),
-				("volume-right", _("right")),
-				("volume-top", _("top")),
-				("volume-center", _("center"))
+				("volume-left", _("Left")),
+				("volume-right", _("Right")),
+				("volume-top", _("Top")),
+				("volume-center", _("Center"))
 				])
 				
 config.plugins.KravenHD.BackgroundColorTrans = ConfigSelection(default="0A", choices = [
-				("0A", _("low")),
-				("4A", _("medium")),
-				("8C", _("high"))
+				("0A", _("Low")),
+				("4A", _("Medium")),
+				("8C", _("High"))
 				])
 				
 config.plugins.KravenHD.Background = ConfigSelection(default="000000", choices = [
