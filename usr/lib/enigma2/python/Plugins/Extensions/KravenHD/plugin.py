@@ -618,9 +618,9 @@ config.plugins.KravenHD.ButtonStyleFont = ConfigSelection(default="00fffff8", ch
 				("00373737", _("Dark"))
 				])
 				
-config.plugins.KravenHD.FontStyle = ConfigSelection(default="NotoSans", choices = [
-				("NotoSans", _("NotoSans")),
-				("OpenSans", _("OpenSans"))
+config.plugins.KravenHD.FontStyle = ConfigSelection(default="OpenSans", choices = [
+				("NotoSans", _("OpenSans")),
+				("OpenSans", _("NotoSans"))
 				])
 				
 #######################################################################
@@ -638,7 +638,7 @@ class KravenHD(ConfigListScreen, Screen):
   <eLabel position="877,487" size="368,2" backgroundColor="#00f0a30a" />
   <eLabel position="875,278" size="2,211" backgroundColor="#00f0a30a" />
   <eLabel position="1245,278" size="2,211" backgroundColor="#00f0a30a" />
-  <widget name="helperimage" position="877,280" size="368,207" zPosition="1" valign="bottom" backgroundColor="#00000000" />
+  <widget name="helperimage" position="877,280" size="368,207" zPosition="1" backgroundColor="#00000000" />
   <eLabel backgroundColor="#00000000" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
   <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
   <eLabel backgroundColor="#00000000" position="0,0" size="1280,720" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
@@ -920,7 +920,7 @@ class KravenHD(ConfigListScreen, Screen):
 			self.appendSkinFile(self.daten + "plugins.xml")
 
 			#EMCSTYLE
-			self.appendSkinFile(self.daten + config.plugins.KravenHD.EMCStyle.value +".xml")			
+			self.appendSkinFile(self.daten + config.plugins.KravenHD.EMCStyle.value + ".xml")			
 
 			#NumberZapExtStyle
 			self.appendSkinFile(self.daten + config.plugins.KravenHD.NumberZapExt.value + ".xml")
