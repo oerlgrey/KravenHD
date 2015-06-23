@@ -45,10 +45,10 @@
     <font filename="KravenHD/fonts/NotoSans-Bold.ttf" name="Regular2" scale="95" />
   </fonts>
   <subtitles>
-    <sub font="Regular;30" name="Subtitle_TTX" shadowColor="#shadow" shadowOffset="3,3" />
-    <sub font="Regular;30" foregroundColor="grey" name="Subtitle_Regular" shadowColor="#shadow" shadowOffset="3,3" />
-    <sub font="Replacement;30" foregroundColor="grey" name="Subtitle_Bold" shadowColor="#shadow" shadowOffset="3,3" />
-    <sub font="Regular;30" foregroundColor="orange" name="Subtitle_Italic" shadowColor="#shadow" shadowOffset="3,3" />
+    <sub font="Regular;30" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="3,3" />
+    <sub font="Regular;30" foregroundColor="grey" name="Subtitle_Regular" shadowColor="shadow" shadowOffset="3,3" />
+    <sub font="Replacement;30" foregroundColor="grey" name="Subtitle_Bold" shadowColor="shadow" shadowOffset="3,3" />
+    <sub font="Regular;30" foregroundColor="orange" name="Subtitle_Italic" shadowColor="shadow" shadowOffset="3,3" />
   </subtitles>
   <windowstyle id="0" type="skinned">
     <title font="Regular;24" offset="20,5" />
