@@ -115,7 +115,7 @@
   <widget name="list" position="43,90" size="385,529" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="white" enableWrapAround="1" backgroundColor="KravenBackground" zPosition="-8" />
   <widget name="choosen" position="430,90" size="385,530" scrollbarMode="showOnDemand" font="Regular2; 22" itemHeight="28" foregroundColor="KravenFont2" backgroundColor="KravenBackground" zPosition="-8" />
   <widget name="description" position="934,249" size="302,250" font="Regular2; 16" foregroundColor="KravenFont2" valign="center" halign="center" backgroundColor="KravenBackground" zPosition="-8" />
-<panel name="template_menu_left_right_button" />
+<panel name="template_menu_full_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
   <!-- HotkeySetupSelect -->
@@ -124,7 +124,7 @@
   <widget name="list" position="44,90" size="385,529" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="white" enableWrapAround="1" backgroundColor="KravenBackground" zPosition="-8" />
   <widget name="choosen" position="430,90" size="385,530" scrollbarMode="showOnDemand" font="Regular2; 22" itemHeight="28" foregroundColor="KravenFont2" backgroundColor="KravenBackground" zPosition="-8" />
   <widget name="description" position="934,249" size="302,250" font="Regular2; 16" foregroundColor="KravenFont2" valign="center" halign="center" backgroundColor="KravenBackground" zPosition="-8" />
-<panel name="template_menu_left_right_button" />
+<panel name="template_menu_full_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
   <!-- HddSetup -->
