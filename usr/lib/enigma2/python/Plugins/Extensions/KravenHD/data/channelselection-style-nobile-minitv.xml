@@ -18,7 +18,7 @@
     <convert type="KravenHDClockToText">
     </convert>
   </widget>
-  <widget position="534,97" size="328,8" render="Progress" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="KravenProgress">
+  <widget position="534,97" size="328,8" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress">
     <convert type="KravenHDEventTime">Progress</convert>
   </widget>
   <widget source="ServiceEvent" render="Label" position="476,117" size="445,245" font="Regular; 19" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1">
