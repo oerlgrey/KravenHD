@@ -518,6 +518,28 @@ config.plugins.KravenHD.InfobarChannelName7 = ConfigSelection(default="none", ch
 				("infobar-channelname-zzz1", _("Name")),
 				("infobar-channelname-number-zzz1", _("Name & Number"))
 				])
+				
+config.plugins.KravenHD.InfobarChannelName8 = ConfigSelection(default="none", choices = [
+				("none", _("Off")),
+				("infobar-channelname-small-x3", _("Name small")),
+				("infobar-channelname-number-small-x3", _("Name & Number small")),
+				("infobar-channelname-x3", _("Name big")),
+				("infobar-channelname-number-x3", _("Name & Number big"))
+				])
+				
+config.plugins.KravenHD.InfobarChannelName9 = ConfigSelection(default="none", choices = [
+				("none", _("Off")),
+				("infobar-channelname-small-z2", _("Name small")),
+				("infobar-channelname-number-small-z2", _("Name & Number small")),
+				("infobar-channelname-z2", _("Name big")),
+				("infobar-channelname-number-z2", _("Name & Number big"))
+				])
+				
+config.plugins.KravenHD.InfobarChannelName10 = ConfigSelection(default="none", choices = [
+				("none", _("Off")),
+				("infobar-channelname-zz3", _("Name")),
+				("infobar-channelname-number-zz3", _("Name & Number"))
+				])
 							
 config.plugins.KravenHD.ChannelSelectionStyle = ConfigSelection(default="channelselection-style-minitv", choices = [
 				("channelselection-style-nopicon", _("No Picon")),
@@ -710,6 +732,12 @@ class KravenHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("Channelname"), config.plugins.KravenHD.InfobarChannelName6))
 		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
 			list.append(getConfigListEntry(_("Channelname"), config.plugins.KravenHD.InfobarChannelName7))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3":
+			list.append(getConfigListEntry(_("Channelname"), config.plugins.KravenHD.InfobarChannelName8))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2":
+			list.append(getConfigListEntry(_("Channelname"), config.plugins.KravenHD.InfobarChannelName9))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3":
+			list.append(getConfigListEntry(_("Channelname"), config.plugins.KravenHD.InfobarChannelName10))
 		if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
 			list.append(getConfigListEntry(_("Clock"), config.plugins.KravenHD.ClockStyle))
 		if config.plugins.KravenHD.ClockStyle.value == "clock-analog":
@@ -879,6 +907,12 @@ class KravenHD(ConfigListScreen, Screen):
 				self.appendSkinFile(self.daten + config.plugins.KravenHD.InfobarChannelName6.value + ".xml")
 			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
 				self.appendSkinFile(self.daten + config.plugins.KravenHD.InfobarChannelName7.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.InfobarChannelName8.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.InfobarChannelName9.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.InfobarChannelName10.value + ".xml")
 
 			###clock-style_ib
 			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":

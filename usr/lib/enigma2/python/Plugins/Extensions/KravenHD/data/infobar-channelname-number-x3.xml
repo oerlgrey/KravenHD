@@ -1,0 +1,5 @@
+<!--/* Channelname -->
+  <widget font="Regular; 80" foregroundColor="KravenFont1" backgroundColor="transparent" halign="left" noWrap="1" position="20,452" render="Label" size="1240,120" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDExtServiceInfo">ServiceNumberAndName</convert>
+  </widget>
+<!-- Channelname */-->
