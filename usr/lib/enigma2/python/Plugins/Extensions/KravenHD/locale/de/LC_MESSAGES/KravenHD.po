@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2015-06-21 10:08+0100\n"
+"PO-Revision-Date: 2015-07-11 15:38+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -751,3 +751,15 @@ msgstr "Hell"
 #: plugin.py
 msgid "Dark"
 msgstr "Dunkel"
+
+#: plugin.py
+msgid "left/right"
+msgstr "Nebeneinander"
+
+#: plugin.py
+msgid "top/bottom"
+msgstr "Untereinander"
+
+#: plugin.py
+msgid "single"
+msgstr "Einzeln"

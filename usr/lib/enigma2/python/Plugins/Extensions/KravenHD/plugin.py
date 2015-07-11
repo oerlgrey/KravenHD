@@ -606,6 +606,12 @@ config.plugins.KravenHD.SatInfo = ConfigSelection(default="none", choices = [
 				("satinfo", _("On"))
 				])
 				
+config.plugins.KravenHD.SystemInfo = ConfigSelection(default="none", choices = [
+				("none", _("Off")),
+				("systeminfo-big", _("Big")),
+				("systeminfo-small", _("Small"))
+				])
+				
 config.plugins.KravenHD.ECMInfo = ConfigSelection(default="none", choices = [
 				("none", _("Off")),
 				("infobar-ecminfo-x1", _("Bottom")),
@@ -645,6 +651,66 @@ config.plugins.KravenHD.FontStyle = ConfigSelection(default="OpenSans", choices 
 				("OpenSans", _("NotoSans"))
 				])
 				
+config.plugins.KravenHD.SIB = ConfigSelection(default="infobar-style-x1_end", choices = [
+				("infobar-style-x1_end", _("top/bottom")),
+				("infobar-style-x1_end2", _("left/right")),
+				("infobar-style-x1_end3", _("single"))
+				])
+				
+config.plugins.KravenHD.SIB1 = ConfigSelection(default="infobar-style-x2_end", choices = [
+				("infobar-style-x2_end", _("top/bottom")),
+				("infobar-style-x2_end2", _("left/right")),
+				("infobar-style-x2_end3", _("single"))
+				])
+				
+config.plugins.KravenHD.SIB2 = ConfigSelection(default="infobar-style-x3_end", choices = [
+				("infobar-style-x3_end", _("top/bottom")),
+				("infobar-style-x3_end2", _("left/right")),
+				("infobar-style-x3_end3", _("single"))
+				])
+				
+config.plugins.KravenHD.SIB3 = ConfigSelection(default="infobar-style-z1_end", choices = [
+				("infobar-style-z1_end", _("top/bottom")),
+				("infobar-style-z1_end2", _("left/right")),
+				("infobar-style-z1_end3", _("single"))
+				])
+				
+config.plugins.KravenHD.SIB4 = ConfigSelection(default="infobar-style-z2_end", choices = [
+				("infobar-style-z2_end", _("top/bottom")),
+				("infobar-style-z2_end2", _("left/right")),
+				("infobar-style-z2_end3", _("single"))
+				])
+				
+config.plugins.KravenHD.SIB5 = ConfigSelection(default="infobar-style-zz1_end", choices = [
+				("infobar-style-zz1_end", _("top/bottom")),
+				("infobar-style-zz1_end2", _("left/right")),
+				("infobar-style-zz1_end3", _("single"))
+				])
+				
+config.plugins.KravenHD.SIB6 = ConfigSelection(default="infobar-style-zz2_end", choices = [
+				("infobar-style-zz2_end", _("top/bottom")),
+				("infobar-style-zz2_end2", _("left/right")),
+				("infobar-style-zz2_end3", _("single"))
+				])
+				
+config.plugins.KravenHD.SIB7 = ConfigSelection(default="infobar-style-zz3_end", choices = [
+				("infobar-style-zz3_end", _("top/bottom")),
+				("infobar-style-zz3_end2", _("left/right")),
+				("infobar-style-zz3_end3", _("single"))
+				])
+				
+config.plugins.KravenHD.SIB7 = ConfigSelection(default="infobar-style-zz4_end", choices = [
+				("infobar-style-zz4_end", _("top/bottom")),
+				("infobar-style-zz4_end2", _("left/right")),
+				("infobar-style-zz4_end3", _("single"))
+				])
+				
+config.plugins.KravenHD.SIB9 = ConfigSelection(default="infobar-style-zzz1_end", choices = [
+				("infobar-style-zzz1_end", _("top/bottom")),
+				("infobar-style-zzz1_end2", _("left/right")),
+				("infobar-style-zzz1_end3", _("single"))
+				])
+				
 #######################################################################
 
 class KravenHD(ConfigListScreen, Screen):
@@ -671,7 +737,7 @@ class KravenHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="875,96" size="372,46" text="KravenHD" font="Regular2; 34" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" name="," />
-  <eLabel position="875,156" size="372,46" text="Version: 6.0" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+  <eLabel position="875,156" size="372,46" text="Version: 6.1" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
 </screen>
 """
 
@@ -747,6 +813,7 @@ class KravenHD(ConfigListScreen, Screen):
 		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1":
 			list.append(getConfigListEntry(_("Weather"), config.plugins.KravenHD.WeatherStyle2))
 		list.append(getConfigListEntry(_("Sat-Info"), config.plugins.KravenHD.SatInfo))
+		list.append(getConfigListEntry(_("System-Info"), config.plugins.KravenHD.SystemInfo))
 		if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
 			list.append(getConfigListEntry(_("ECM-Info"), config.plugins.KravenHD.ECMInfo))
 		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2":
@@ -756,6 +823,26 @@ class KravenHD(ConfigListScreen, Screen):
 		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3":
 			list.append(getConfigListEntry(_("ECM-Info"), config.plugins.KravenHD.ECMInfo4))
 		list.append(getConfigListEntry(_("______________________ General __________________________________"), ))
+		if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
+			list.append(getConfigListEntry(_("Second Infobar"), config.plugins.KravenHD.SIB))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2":
+			list.append(getConfigListEntry(_("Second Infobar"), config.plugins.KravenHD.SIB1))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3":
+			list.append(getConfigListEntry(_("Second Infobar"), config.plugins.KravenHD.SIB2))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1":
+			list.append(getConfigListEntry(_("Second Infobar"), config.plugins.KravenHD.SIB3))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2":
+			list.append(getConfigListEntry(_("Second Infobar"), config.plugins.KravenHD.SIB4))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1":
+			list.append(getConfigListEntry(_("Second Infobar"), config.plugins.KravenHD.SIB5))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2":
+			list.append(getConfigListEntry(_("Second Infobar"), config.plugins.KravenHD.SIB6))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3":
+			list.append(getConfigListEntry(_("Second Infobar"), config.plugins.KravenHD.SIB7))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz4":
+			list.append(getConfigListEntry(_("Second Infobar"), config.plugins.KravenHD.SIB8))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
+			list.append(getConfigListEntry(_("Second Infobar"), config.plugins.KravenHD.SIB9))
 		list.append(getConfigListEntry(_("Channel Selection"), config.plugins.KravenHD.ChannelSelectionStyle))
 		list.append(getConfigListEntry(_("EMC"), config.plugins.KravenHD.EMCStyle))
 		list.append(getConfigListEntry(_("ExtNumberZap"), config.plugins.KravenHD.NumberZapExt))
@@ -770,7 +857,14 @@ class KravenHD(ConfigListScreen, Screen):
 	def GetPicturePath(self):
 		try:
 			returnValue = self["config"].getCurrent()[1].value
-			path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/" + returnValue + ".jpg"
+			if returnValue == "infobar-style-x1_end" or returnValue == "infobar-style-x2_end" or returnValue == "infobar-style-x3_end" or returnValue == "infobar-style-z1_end" or returnValue == "infobar-style-z2_end" or returnValue == "infobar-style-zz1_end" or returnValue == "infobar-style-zz2_end" or returnValue == "infobar-style-zz3_end" or returnValue == "infobar-style-zz4_end" or returnValue == "infobar-style-zzz1_end":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/SIB.jpg"
+			elif returnValue == "infobar-style-x1_end2" or returnValue == "infobar-style-x2_end2" or returnValue == "infobar-style-x3_end2" or returnValue == "infobar-style-z1_end2" or returnValue == "infobar-style-z2_end2" or returnValue == "infobar-style-zz1_end2" or returnValue == "infobar-style-zz2_end2" or returnValue == "infobar-style-zz3_end2" or returnValue == "infobar-style-zz4_end2" or returnValue == "infobar-style-zzz1_end2":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/SIB1.jpg"
+			elif returnValue == "infobar-style-x1_end3" or returnValue == "infobar-style-x2_end3" or returnValue == "infobar-style-x3_end3" or returnValue == "infobar-style-z1_end3" or returnValue == "infobar-style-z2_end3" or returnValue == "infobar-style-zz1_end3" or returnValue == "infobar-style-zz2_end3" or returnValue == "infobar-style-zz3_end3" or returnValue == "infobar-style-zz4_end3" or returnValue == "infobar-style-zzz1_end3":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/SIB2.jpg"
+			else:
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/" + returnValue + ".jpg"
 			if fileExists(path):
 				return path
 			else:
@@ -921,6 +1015,9 @@ class KravenHD(ConfigListScreen, Screen):
 			###sat-info
 			self.appendSkinFile(self.daten + config.plugins.KravenHD.SatInfo.value + ".xml")
 
+			###system-info
+			self.appendSkinFile(self.daten + config.plugins.KravenHD.SystemInfo.value + ".xml")
+
 			###ecm-info
 			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
 				self.appendSkinFile(self.daten + config.plugins.KravenHD.ECMInfo.value + ".xml")
@@ -944,8 +1041,27 @@ class KravenHD(ConfigListScreen, Screen):
 			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
 				self.appendSkinFile(self.daten + config.plugins.KravenHD.ClockStyle.value + ".xml")
 
-			###Infobar_end
-			self.appendSkinFile(self.daten + config.plugins.KravenHD.InfobarStyle.value + "_end.xml")
+			### Infobar_end (SIB)
+			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.SIB.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.SIB1.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.SIB2.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.SIB3.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.SIB4.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.SIB5.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.SIB6.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.SIB7.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz4":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.SIB8.value + ".xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
+				self.appendSkinFile(self.daten + config.plugins.KravenHD.SIB9.value + ".xml")
 
 			###Main XML
 			self.appendSkinFile(self.daten + "main.xml")
