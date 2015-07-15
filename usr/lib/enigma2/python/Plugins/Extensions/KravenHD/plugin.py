@@ -699,7 +699,7 @@ config.plugins.KravenHD.SIB7 = ConfigSelection(default="infobar-style-zz3_end", 
 				("infobar-style-zz3_end3", _("single"))
 				])
 				
-config.plugins.KravenHD.SIB7 = ConfigSelection(default="infobar-style-zz4_end", choices = [
+config.plugins.KravenHD.SIB8 = ConfigSelection(default="infobar-style-zz4_end", choices = [
 				("infobar-style-zz4_end", _("top/bottom")),
 				("infobar-style-zz4_end2", _("left/right")),
 				("infobar-style-zz4_end3", _("single"))
