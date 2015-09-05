@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Kraven <kravenhd@web.de>, 2015.
+# Kraven <KravenHD@web.de>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2015-07-11 15:38+0100\n"
+"PO-Revision-Date: 2015-09-05 09:25+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -17,10 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.7.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: KravenHDYWeather.py
-msgid "N"
-msgstr ""
 
 #: KravenHDYWeather.py
 msgid "N-NE"
@@ -51,46 +47,6 @@ msgid "S-SE"
 msgstr "S-SO"
 
 #: KravenHDYWeather.py
-msgid "S"
-msgstr ""
-
-#: KravenHDYWeather.py
-msgid "S-SW"
-msgstr ""
-
-#: KravenHDYWeather.py
-msgid "SW"
-msgstr ""
-
-#: KravenHDYWeather.py
-msgid "W-SW"
-msgstr ""
-
-#: KravenHDYWeather.py
-msgid "W"
-msgstr ""
-
-#: KravenHDYWeather.py
-msgid "W-NW"
-msgstr ""
-
-#: KravenHDYWeather.py
-msgid "NW"
-msgstr ""
-
-#: KravenHDYWeather.py
-msgid "N-NW"
-msgstr ""
-
-#: KravenHDYWeather.py
-msgid "N/A"
-msgstr ""
-
-#: KravenHDYWeather.py
-msgid " km/h"
-msgstr ""
-
-#: KravenHDYWeather.py
 msgid "Mon"
 msgstr "MO"
 
@@ -117,10 +73,6 @@ msgstr "SA"
 #: KravenHDYWeather.py
 msgid "Sun"
 msgstr "SO"
-
-#: KravenHDYWeather.py
-msgid "Tornado"
-msgstr ""
 
 #: KravenHDYWeather.py
 msgid ""
@@ -362,353 +314,365 @@ msgstr ""
 "Nicht\n"
 " verfügbar"
 
-#: plugin.py
-msgid "Atemio4You"
-msgstr ""
+#: KravenHDYWeather.py
+msgid " from "
+msgstr " aus "
 
-#: plugin.py
-msgid "HDMU"
-msgstr ""
+#: KravenHDYWeather.py
+msgid "% humidity"
+msgstr "% Luftfeuchte"
 
-#: plugin.py
-msgid "openATV"
-msgstr ""
+#: KravenHDYWeather.py
+msgid ", feels "
+msgstr ", gefühlt "
 
-#: plugin.py
-msgid "openHDF"
-msgstr ""
-
-#: plugin.py
-msgid "openMIPS"
-msgstr ""
-
-#: plugin.py
-msgid "openNFR"
-msgstr ""
-
-#: plugin.py
-msgid "Kraven"
-msgstr ""
-
-#: plugin.py
-msgid "Original"
-msgstr ""
-
-#: plugin.py
+#: KravenHD.py
 msgid "with Border"
 msgstr "mit Rahmen"
 
-#: plugin.py
-msgid "Left"
-msgstr "Links"
+#: KravenHD.py
+msgid "left"
+msgstr "links"
 
-#: plugin.py
-msgid "Right"
-msgstr "Rechts"
+#: KravenHD.py
+msgid "right"
+msgstr "rechts"
 
-#: plugin.py
-msgid "Bottom"
-msgstr "Unten"
+#: KravenHD.py
+msgid "bottom"
+msgstr "unten"
 
-#: plugin.py
-msgid "Top"
-msgstr "Oben"
+#: KravenHD.py
+msgid "top"
+msgstr "oben"
 
-#: plugin.py
-msgid "Center"
-msgstr "Mittig"
+#: KravenHD.py
+msgid "center"
+msgstr "mittig"
 
-#: plugin.py
-msgid "Low"
-msgstr "Niedrig"
+#: KravenHD.py
+msgid "low"
+msgstr "niedrig"
 
-#: plugin.py
-msgid "Medium"
-msgstr "Mittel"
+#: KravenHD.py
+msgid "medium"
+msgstr "mittel"
 
-#: plugin.py
-msgid "High"
-msgstr "Hoch"
+#: KravenHD.py
+msgid "high"
+msgstr "hoch"
 
-#: plugin.py
-msgid "Amber"
-msgstr ""
+#: KravenHD.py
+msgid "amber"
+msgstr "amber"
 
-#: plugin.py
-msgid "Amber Dark"
-msgstr "dunkel Amber"
+#: KravenHD.py
+msgid "amber dark"
+msgstr "amber dunkel"
 
-#: plugin.py
-msgid "Black"
-msgstr "Schwarz"
+#: KravenHD.py
+msgid "black"
+msgstr "schwarz"
 
-#: plugin.py
-msgid "Blue"
-msgstr "Blau"
+#: KravenHD.py
+msgid "blue"
+msgstr "blau"
 
-#: plugin.py
-msgid "Blue Dark"
-msgstr "dunkel Blau"
+#: KravenHD.py
+msgid "blue dark"
+msgstr "blau dunkel"
 
-#: plugin.py
-msgid "Brown"
-msgstr "Braun"
+#: KravenHD.py
+msgid "brown"
+msgstr "braun"
 
-#: plugin.py
-msgid "Brown Dark"
-msgstr "dunkel Braun"
+#: KravenHD.py
+msgid "brown dark"
+msgstr "braun dunkel"
 
-#: plugin.py
-msgid "Cobalt"
-msgstr ""
+#: KravenHD.py
+msgid "cobalt"
+msgstr "cobalt"
 
-#: plugin.py
-msgid "Cobalt Dark"
-msgstr "dunkel Cobalt"
+#: KravenHD.py
+msgid "cobalt dark"
+msgstr "cobalt dunkel"
 
-#: plugin.py
-msgid "Cyan"
-msgstr ""
+#: KravenHD.py
+msgid "cyan"
+msgstr "cyan"
 
-#: plugin.py
-msgid "Cyan Dark"
-msgstr "dunkel Cyan"
+#: KravenHD.py
+msgid "cyan dark"
+msgstr "cyan dunkel"
 
-#: plugin.py
-msgid "Grey"
-msgstr "Grau"
+#: KravenHD.py
+msgid "grey"
+msgstr "grau"
 
-#: plugin.py
-msgid "Grey Dark"
-msgstr "dunkel Grau"
+#: KravenHD.py
+msgid "grey dark"
+msgstr "grau dunkel"
 
-#: plugin.py
-msgid "Green"
-msgstr "Grün"
+#: KravenHD.py
+msgid "green"
+msgstr "grün"
 
-#: plugin.py
-msgid "Green Dark"
-msgstr "dunkel Grün"
+#: KravenHD.py
+msgid "green dark"
+msgstr "grün dunkel"
 
-#: plugin.py
-msgid "Olive"
-msgstr ""
+#: KravenHD.py
+msgid "Kraven dark"
+msgstr "Kraven dunkel"
 
-#: plugin.py
-msgid "Olive Dark"
-msgstr "dunkel Olive"
+#: KravenHD.py
+msgid "olive"
+msgstr "olive"
 
-#: plugin.py
-msgid "Orange"
-msgstr ""
+#: KravenHD.py
+msgid "olive dark"
+msgstr "olive dunkel"
 
-#: plugin.py
-msgid "Orange Dark"
-msgstr "dunkel Orange"
+#: KravenHD.py
+msgid "orange"
+msgstr "orange"
 
-#: plugin.py
-msgid "Pink"
-msgstr ""
+#: KravenHD.py
+msgid "orange dark"
+msgstr "orange dunkel"
 
-#: plugin.py
-msgid "Pink Dark"
-msgstr "dunkel Pink"
+#: KravenHD.py
+msgid "pink"
+msgstr "pink"
 
-#: plugin.py
-msgid "Red"
-msgstr "Rot"
+#: KravenHD.py
+msgid "pink dark"
+msgstr "pink dunkel"
 
-#: plugin.py
-msgid "Red Dark"
-msgstr "dunkel Rot"
+#: KravenHD.py
+msgid "red"
+msgstr "rot"
 
-#: plugin.py
-msgid "Steel"
-msgstr ""
+#: KravenHD.py
+msgid "red dark"
+msgstr "rot dunkel"
 
-#: plugin.py
-msgid "Steel Dark"
-msgstr "dunkel Steel"
+#: KravenHD.py
+msgid "steel"
+msgstr "steel"
 
-#: plugin.py
-msgid "Violet"
-msgstr ""
+#: KravenHD.py
+msgid "steel dark"
+msgstr "steel dunkel"
 
-#: plugin.py
-msgid "Violet Dark"
-msgstr "dunkel Violet"
+#: KravenHD.py
+msgid "violet"
+msgstr "violet"
 
-#: plugin.py
-msgid "White"
-msgstr "Weiß"
+#: KravenHD.py
+msgid "violet dark"
+msgstr "violet dunkel"
 
-#: plugin.py
-msgid "Off"
-msgstr "Aus"
+#: KravenHD.py
+msgid "white"
+msgstr "weiß"
 
-#: plugin.py
-msgid "No Cover"
-msgstr "Kein Cover"
+#: KravenHD.py
+msgid "yellow"
+msgstr "gelb"
 
-#: plugin.py
-msgid "Small Cover"
-msgstr "Kleines Cover"
+#: KravenHD.py
+msgid "off"
+msgstr "aus"
 
-#: plugin.py
-msgid "Big Cover"
-msgstr "Großes Cover"
+#: KravenHD.py
+msgid "no Cover"
+msgstr "kein Cover"
 
-#: plugin.py
-msgid "Very Big Cover"
-msgstr "Sehr großes Cover"
+#: KravenHD.py
+msgid "no Cover2"
+msgstr "kein Cover2"
 
-#: plugin.py
-msgid "On"
-msgstr "Ein"
+#: KravenHD.py
+msgid "small Cover"
+msgstr "kleines Cover"
 
-#: plugin.py
+#: KravenHD.py
+msgid "small Cover2"
+msgstr "kleines Cover2"
+
+#: KravenHD.py
+msgid "big Cover"
+msgstr "großes Cover"
+
+#: KravenHD.py
+msgid "big Cover2"
+msgstr "großes Cover2"
+
+#: KravenHD.py
+msgid "very big Cover"
+msgstr "sehr großes Cover"
+
+#: KravenHD.py
+msgid "very big Cover2"
+msgstr "sehr großes Cover2"
+
+#: KravenHD.py
+msgid "on"
+msgstr "ein"
+
+#: KravenHD.py
 msgid "Weather"
 msgstr "Wetter"
 
-#: plugin.py
-msgid "Standard"
-msgstr ""
+#: KravenHD.py
+msgid "standard"
+msgstr "standard"
 
-#: plugin.py
-msgid "Analog"
-msgstr ""
+#: KravenHD.py
+msgid "standard big"
+msgstr "standard groß"
 
-#: plugin.py
-msgid "Android"
-msgstr ""
+#: KravenHD.py
+msgid "colored"
+msgstr "farbig"
 
-#: plugin.py
-msgid "Standard big"
-msgstr "Standard groß"
+#: KravenHD.py
+msgid "colorfull"
+msgstr "bunt"
 
-#: plugin.py
-msgid "Color"
-msgstr "Farbig"
+#: KravenHD.py
+msgid "big"
+msgstr "groß"
 
-#: plugin.py
-msgid "Big"
-msgstr "Groß"
+#: KravenHD.py
+msgid "small"
+msgstr "klein"
 
-#: plugin.py
-msgid "Small"
-msgstr "Klein"
+#: KravenHD.py
+msgid "Running Text (Delay)"
+msgstr "Laufschrift (Verzögerung)"
 
-#: plugin.py
-msgid "Image"
-msgstr ""
+#: KravenHD.py
+msgid "Background-Transparency"
+msgstr "Hintergrund-Transparenz"
 
-#: plugin.py
-msgid "Style"
-msgstr ""
+#: KravenHD.py
+msgid "Weather-ID"
+msgstr "Wetter-ID"
 
-#: plugin.py:591
-msgid "Font Style"
-msgstr "Schriftart"
+#: KravenHD.py
+msgid "______________________ Global-Colors ___________________________"
+msgstr "______________________ Globale Farben __________________________"
 
-#: plugin.py
-msgid "Running Text"
-msgstr ""
+#: KravenHD.py
+msgid "______________________ Infobar__________________________________"
+msgstr "______________________ Infobar__________________________________"
 
-#: plugin.py
-msgid "Background Transparency"
-msgstr "Hintergrund Transparenz"
+#: KravenHD.py
+msgid "______________________ Views____________________________________"
+msgstr "______________________ Ansichten________________________________"
 
-#: plugin.py
-msgid "Weather ID"
-msgstr "Wetter ID"
+#: KravenHD.py
+msgid "Lines"
+msgstr "Linien"
 
-#: plugin.py
-msgid "______________________ Colors __________________________________"
-msgstr "______________________ Farben __________________________________"
-
-#: plugin.py
-msgid "Line"
-msgstr "Linie"
-
-#: plugin.py
+#: KravenHD.py
 msgid "Background"
 msgstr "Hintergrund"
 
-#: plugin.py
-msgid "Border"
-msgstr "Rahmen"
+#: KravenHD.py
+msgid "Progress-Border"
+msgstr "Fortschrittsbalken-Rahmen"
 
-#: plugin.py
+#: KravenHD.py
 msgid "Listselection"
 msgstr "Auswahlbalken"
 
-#: plugin.py
-msgid "Listselection Border"
-msgstr "Auswahlbalken Rahmen"
+#: KravenHD.py
+msgid "Listselection-Border"
+msgstr "Auswahlbalken-Rahmen"
 
-#: plugin.py
+#: KravenHD.py
 msgid "Progress-/Volumebar"
 msgstr "Fortschritts-/Lautstärkebalken"
 
-#: plugin.py
-msgid "Font 1"
-msgstr "Schrift 1"
+#: KravenHD.py
+msgid "Primary-Font"
+msgstr "Primär-Schrift"
 
-#: plugin.py
-msgid "Font 2"
-msgstr "Schrift 2"
+#: KravenHD.py
+msgid "Secondary-Font"
+msgstr "Sekundär-Schrift"
 
-#: plugin.py
-msgid "Selection Font"
-msgstr "Ausgewählte Schrift"
+#: KravenHD.py
+msgid "Selection-Font"
+msgstr "Auswahl-Schrift"
 
-#: plugin.py
-msgid "Button Text"
-msgstr ""
+#: KravenHD.py
+msgid "Marking-Font"
+msgstr "Markierungs-Schrift"
 
-#: plugin.py
-msgid "Clock"
-msgstr "Uhr"
+#: KravenHD.py
+msgid "ECM-Font"
+msgstr "ECM-Schrift"
 
-#: plugin.py
-msgid "Clock Analog Color"
-msgstr "Farbe Analoguhr"
+#: KravenHD.py
+msgid "Colorbutton-Font"
+msgstr "Farbtasten-Schrift"
 
-#: plugin.py
+#: KravenHD.py
+msgid "Clock-Style"
+msgstr "Uhr-Anzeige"
+
+#: KravenHD.py
+msgid "Analog-Clock-Color"
+msgstr "Analoguhr-Farbe"
+
+#: KravenHD.py
+msgid "System-Infos"
+msgstr "System-Infos"
+
+#: KravenHD.py
+msgid "Satellite-Infos"
+msgstr "Satelliten-Infos"
+
+#: KravenHD.py
+msgid "ECM-Infos"
+msgstr "ECM-Infos"
+
+#: KravenHD.py
 msgid "______________________ General __________________________________"
 msgstr "______________________ Allgemein __________________________________"
 
-#: plugin.py
-msgid "Channel Selection"
-msgstr "Kanalauswahl"
+#: KravenHD.py
+msgid "Channellist"
+msgstr "Kanalliste"
 
-#: plugin.py
-msgid "ExtNumberZap"
-msgstr ""
+#: KravenHD.py
+msgid "Volume"
+msgstr "Lautstärke"
 
-#: plugin.py
-msgid "Volume Style"
-msgstr ""
-
-#: plugin.py
+#: KravenHD.py
 msgid "Do you really want to reboot now?"
 msgstr "Wollen Sie jetzt neu starten?"
 
-#: plugin.py
+#: KravenHD.py
 msgid "Restart GUI"
 msgstr "GUI neu starten"
 
-#: plugin.py
+#: KravenHD.py
 msgid "Error creating Skin!"
-msgstr "Fehler beim Erstellen des Skin!"
+msgstr "Fehler beim Erstellen des Skins!"
 
-#: plugin.py
+#: KravenHD.py
 msgid ""
-"GUI needs a restart to download files and apply a new skin.\n"
+"GUI needs a restart to apply a new skin.\n"
 "Do you want to Restart the GUI now?"
 msgstr ""
-"Zum herunterladen der Dateien und schreiben des Skin,\n"
-"muss die Oberfläche neu gestartet werden.\n"
+"Zum Schreiben des Skin muss die Oberfläche\n"
+"neu gestartet werden.\n"
 "\n"
 "Wollen Sie jetzt neu starten?"
 
@@ -716,50 +680,122 @@ msgstr ""
 msgid "Configuration tool for KravenHD"
 msgstr "Konfigurationstool für KravenHD"
 
-#: plugin.py
-msgid "No Picon"
-msgstr "Kein Picon"
+#: KravenHD.py
+msgid "no Picon"
+msgstr "kein Picon"
 
-#: plugin.py
+#: KravenHD.py
 msgid "Name small"
 msgstr "Name klein"
 
-#: plugin.py
+#: KravenHD.py
 msgid "Name & Number small"
 msgstr "Name & Nummer klein"
 
-#: plugin.py
+#: KravenHD.py
 msgid "Name big"
 msgstr "Name groß"
 
-#: plugin.py
+#: KravenHD.py
 msgid "Name & Number big"
 msgstr "Name & Nummer groß"
 
-#: plugin.py
+#: KravenHD.py
 msgid "Name & Number"
 msgstr "Name & Nummer"
 
-#: plugin.py
-msgid "Channelname"
-msgstr "Kanalname"
+#: KravenHD.py
+msgid "Channelname/-number-Font"
+msgstr "Kanalname/-nummer-Schrift"
 
-#: plugin.py
-msgid "Light"
-msgstr "Hell"
+#: KravenHD.py
+msgid "Channelname/-number"
+msgstr "Kanalname/-nummer"
 
-#: plugin.py
-msgid "Dark"
-msgstr "Dunkel"
+#: KravenHD.py
+msgid "Infobox-Contents"
+msgstr "Infobox-Inhalte"
 
-#: plugin.py
-msgid "left/right"
-msgstr "Nebeneinander"
-
-#: plugin.py
+#: KravenHD.py
 msgid "top/bottom"
-msgstr "Untereinander"
+msgstr "untereinander"
 
-#: plugin.py
+#: KravenHD.py
+msgid "left/right"
+msgstr "nebeneinander"
+
+#: KravenHD.py
 msgid "single"
-msgstr "Einzeln"
+msgstr "einfach"
+
+#: KravenHD.py
+msgid "MiniTV left"
+msgstr "MiniTV links"
+
+#: KravenHD.py
+msgid "MiniTV right"
+msgstr "MiniTV rechts"
+
+#: KravenHD.py
+msgid "Tuner number/Record"
+msgstr "Tuneranzahl/Aufnahme"
+
+#: KravenHD.py
+msgid "Infobar-Icons"
+msgstr "Infobar-Icons"
+
+#: KravenHD.py
+msgid "Icons (except Infobar)"
+msgstr "Icons (ausgenommen Infobar)"
+
+#: KravenHD.py
+msgid "Infobar-Background"
+msgstr "Infobar-Hintergrund"
+
+#: KravenHD.py
+msgid "Icons + 4 Tuner + Resolution + Infobox"
+msgstr "Icons + 4 Tuner + Auflösung + Infobox"
+
+#: KravenHD.py
+msgid "Icons + REC + 2 Tuner + Resolution + Infobox"
+msgstr "Icons + REC + 2 Tuner + Auflösung + Infobox"
+
+#: KravenHD.py
+msgid "Show Infobar-Background"
+msgstr "Zeige Infobar-Hintergrund"
+
+#: KravenHD.py
+msgid "in all Screens"
+msgstr "in allen Screens"
+
+#: KravenHD.py
+msgid "only Infobar, SecondInfobar & Players"
+msgstr "nur Infobar, SecondInfobar & Players"
+
+#: KravenHD.py
+msgid "light"
+msgstr "hell"
+
+#: KravenHD.py
+msgid "dark"
+msgstr "dunkel"
+
+#: KravenHD.py
+msgid "Infobar-Style"
+msgstr "Infobar-Stil"
+
+#: KravenHD.py
+msgid "only available for Clock Analog"
+msgstr "nur verfügbar für Analog-Uhr"
+
+#: KravenHD.py
+msgid "not available in this style"
+msgstr "in diesem Stil nicht verfügbar"
+
+#: KravenHDEcmInfoLine.py
+msgid "not available"
+msgstr "Nicht vorhanden"
+
+#: KravenHDEcmInfoLine.py
+msgid "free to air"
+msgstr "Frei empfangbar"

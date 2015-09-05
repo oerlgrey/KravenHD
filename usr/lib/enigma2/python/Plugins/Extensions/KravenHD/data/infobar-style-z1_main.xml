@@ -1,6 +1,39 @@
-<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1280,720" title="InfoBar">
-  <panel name="template_infobar_style_x2_x3_z1_z2" />
-  <panel name="template_infobar_icons_top" />
+  <widget font="Regular;30" foregroundColor="KravenFont1" halign="left" noWrap="1" position="439,615" render="KravenHDRunningText" options="movetype=running,startpoint=0,startdelay=5000,wrap=0,always=0,repeat=2,oneshot=1" size="472,40" source="session.Event_Now" backgroundColor="KravenInfobarBackground" transparent="1" zPosition="1">
+    <convert type="KravenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="KravenInfobarBackground" font="Regular; 22" foregroundColor="KravenFont1" halign="right" position="914,620" render="Label" size="107,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDEventTime">Remaining</convert>
+    <convert type="KravenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget position="273,658" render="Progress" size="746,5" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress749.png">
+    <convert type="KravenHDEventTime">Progress</convert>
+  </widget>
+  <widget backgroundColor="KravenInfobarBackground" font="Regular; 22" foregroundColor="KravenFont1" halign="right" noWrap="1" position="253,620" render="Label" size="70,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDEventTime">StartTime</convert>
+    <convert type="KravenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="KravenInfobarBackground" font="Regular; 20" foregroundColor="KravenFont2" halign="center" noWrap="1" position="325,673" size="40,35" text="bis" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="KravenInfobarBackground" font="Regular; 22" foregroundColor="KravenFont1" halign="left" noWrap="1" position="367,620" render="Label" size="70,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDEventTime">EndTime</convert>
+    <convert type="KravenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular; 30" foregroundColor="KravenFont2" halign="left" position="439,667" render="KravenHDRunningText" options="movetype=running,startpoint=0,startdelay=5000,wrap=0,always=0,repeat=2,oneshot=1" size="472,40" source="session.Event_Next" valign="top" backgroundColor="KravenInfobarBackground" transparent="1" zPosition="1">
+    <convert type="KravenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="KravenInfobarBackground" font="Regular; 22" foregroundColor="KravenFont2" valign="center" halign="right" position="914,671" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="KravenHDEventTime">Duration</convert>
+    <convert type="KravenHDClockToText">InMinutes</convert>
+  </widget>
+  <eLabel position="273,660" size="746,1" backgroundColor="KravenLine" />
+  <widget backgroundColor="KravenInfobarBackground" font="Regular; 22" foregroundColor="KravenFont2" halign="left" noWrap="1" position="367,671" render="Label" size="70,35" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDEventTime">EndTime</convert>
+    <convert type="KravenHDClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="KravenInfobarBackground" font="Regular; 22" foregroundColor="KravenFont2" halign="right" noWrap="1" position="253,671" render="Label" size="70,35" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDEventTime">StartTime</convert>
+    <convert type="KravenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="KravenInfobarBackground" font="Regular; 20" foregroundColor="KravenFont1" halign="center" noWrap="1" position="325,622" size="40,35" text="bis" transparent="1" valign="center" zPosition="1" />
   <widget alphatest="blend" position="20,618" size="220,94" render="KravenHDXPicon" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>

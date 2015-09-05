@@ -1,9 +1,9 @@
 Package: enigma2-plugin-skins-kravenhd
-Version: 6.1
+Version: 6.2.1
 Section: misc
 Priority: optional
 Architecture: all
 Depends:
-Maintainer: Kraven and oerlgrey
+Maintainer: Kraven, oerlgrey and stony272
 Description: Skin for Enigma2
 Source:

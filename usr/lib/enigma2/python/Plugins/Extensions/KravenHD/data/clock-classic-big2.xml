@@ -1,0 +1,19 @@
+    <!--/* Clock -->
+  <widget backgroundColor="KravenInfobarBackground" font="Regular; 43" foregroundColor="KravenFont1" halign="center" position="1062,606" render="Label" size="65,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDClockToText">Format:%H</convert>
+  </widget>
+  <eLabel backgroundColor="KravenInfobarBackground" font="Regular; 43" foregroundColor="KravenFont1" halign="center" position="1118,606" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="KravenInfobarBackground" font="Regular; 43" foregroundColor="KravenFont1" halign="center" position="1129,606" render="Label" size="65,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDClockToText">Format:%M</convert>
+  </widget>
+  <eLabel backgroundColor="KravenInfobarBackground" font="Regular; 32" foregroundColor="KravenFont1" halign="center" position="1185,610" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="KravenInfobarBackground" font="Regular; 32" foregroundColor="KravenFont1" halign="center" position="1194,610" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDClockToText">Format:%S</convert>
+  </widget>
+  <widget backgroundColor="KravenInfobarBackground" font="Regular; 28" foregroundColor="KravenFont2" halign="center" position="1053,674" render="Label" size="203,34" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDClockToText">Format:%e. %B</convert>
+  </widget>
+  <widget backgroundColor="KravenInfobarBackground" font="Regular; 28" foregroundColor="KravenFont2" halign="center" position="1053,567" render="Label" size="203,34" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+    <convert type="KravenHDClockToText">Format:%A</convert>
+  </widget>
+    <!--Clock */-->

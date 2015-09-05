@@ -1,6 +1,18 @@
-<!-- /* Sat-Info -->
-  <widget backgroundColor="KravenBackground" font="Regular;16" foregroundColor="KravenFont1" halign="left" position="990,200" render="Label" size="253,140" source="session.CurrentService" transparent="1" valign="center">
-    <convert type="KravenHDExtraInfo">All</convert>
+<!-- Sat-Info -->
+  <eLabel backgroundColor="KravenIbarBackground" position="969,194" size="311,115" transparent="0" zPosition="-1" />
+  <eLabel text="Tuner:" position="990,210" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <eLabel text="Signal:" position="990,230" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <eLabel text="Video:" position="990,250" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <eLabel text="ECM:" position="990,270" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1040,210" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+    <convert type="KravenHDExtraInfo">TunerInfo</convert>
   </widget>
-  <eLabel backgroundColor="KravenIbarBackground" position="969,194" size="311,154" transparent="0" zPosition="-10" />
-<!-- Sat-Info */ -->
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1040,230" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+    <convert type="KravenHDExtraInfo">SignalInfo</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1040,250" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+    <convert type="KravenHDExtraInfo">VideoInfo</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1040,270" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+    <convert type="KravenHDEcmInfoLine">Format:%C, %R, %T ms</convert>
+  </widget>

@@ -19,7 +19,6 @@
 from Components.config import config
 from Components.Converter.Converter import Converter
 from Components.Element import cached
-from Components.Console import Console as iConsole
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from Poll import Poll
 import time, gettext, os
@@ -75,6 +74,9 @@ class KravenHDYWeather(Poll, Converter, object):
 	fpicon4 = 31
 	feels = 32
 	cityid = 33
+	wind = 34
+	templang = 35
+	klima = 36
 
 	def __init__(self, type):
 		Converter.__init__(self, type)
@@ -148,18 +150,20 @@ class KravenHDYWeather(Poll, Converter, object):
 			self.type = self.fpicon4
 		elif type == "cityid":
 			self.type = self.cityid
-		self.iConsole = iConsole()
+		elif type == "wind":
+			self.type = self.wind
+		elif type == "templang":
+			self.type = self.templang
+		elif type == "klima":
+			self.type = self.klima
 		self.poll_interval = time_update_ms
 		self.poll_enabled = True
+		
 	def write_none(self):
-		self.iConsole.ePopen("echo -e 'None' >> /tmp/KravenHDweather.xml")
+		os.popen("echo -e 'None' >> /tmp/KravenHDweather.xml")
 		
 	def get_xmlfile(self):
-		self.iConsole.ePopen("wget -P /tmp -T2 'http://xml.weather.yahoo.com/forecastrss?w=%s&u=c' -O /tmp/KravenHDweather.xml" % config.plugins.KravenHD.weather_city.value, self.control_xml)
-		
-	def control_xml(self, result, retval, extra_args):
-		if retval is not 0:
-			self.write_none()
+		os.popen("wget -P /tmp -T2 'http://xml.weather.yahoo.com/forecastrss?w=%s&u=c' -O /tmp/KravenHDweather.xml" % str(config.plugins.KravenHD.weather_city.value))
 			
 	@cached
 	def getText(self):
@@ -949,7 +953,55 @@ class KravenHDYWeather(Poll, Converter, object):
 				info = "N/A"
 		elif self.type == self.cityid:
 			info = config.plugins.KravenHD.weather_city.value
-                return info
+		elif self.type == self.wind:
+			wspeed = xweather['yspeed'][:-3] + _(' km/h')
+			if not xweather['ydirection'] is 'N/A':
+				direct = int(xweather['ydirection'])
+				if direct >= 0 and direct <= 20:
+					wdirect = _('N')
+				elif direct >= 21 and direct <= 35:
+					wdirect = _('N-NE')
+				elif direct >= 36 and direct <= 55:
+					wdirect = _('NE')
+				elif direct >= 56 and direct <= 70:
+					wdirect = _('E-NE')
+				elif direct >= 71 and direct <= 110:
+					wdirect = _('E')
+				elif direct >= 111 and direct <= 125:
+					wdirect = _('E-SE')
+				elif direct >= 126 and direct <= 145:
+					wdirect = _('SE')
+				elif direct >= 146 and direct <= 160:
+					wdirect = _('S-SE')
+				elif direct >= 161 and direct <= 200:
+					wdirect = _('S')
+				elif direct >= 201 and direct <= 215:
+					wdirect = _('S-SW')
+				elif direct >= 216 and direct <= 235:
+					wdirect = _('SW')
+				elif direct >= 236 and direct <= 250:
+					wdirect = _('W-SW')
+				elif direct >= 251 and direct <= 290:
+					wdirect = _('W')
+				elif direct >= 291 and direct <= 305:
+					wdirect = _('W-NW')
+				elif direct >= 306 and direct <= 325:
+					wdirect = _('NW')
+				elif direct >= 326 and direct <= 340:
+					wdirect = _('N-NW')
+				elif direct >= 341 and direct <= 360:
+					wdirect = _('N')
+				else:
+					wdirect = _('N/A')
+			info = wspeed + _(' from ') + wdirect
+		elif self.type == self.templang:
+			if not info is "N/A":
+				temp1 = xweather['ytemp'] + '%s' % unichr(176).encode("latin-1") + xweather['ymetric']
+				temp2 = xweather['feels'] + '%s' % unichr(176).encode("latin-1") + xweather['ymetric']
+				info = temp1 + _(', feels ') + temp2
+		elif self.type == self.klima:
+			info = xweather['yhumidity'] + _('% humidity')
+		return info
 ######################################################
 	text = property(getText)
 

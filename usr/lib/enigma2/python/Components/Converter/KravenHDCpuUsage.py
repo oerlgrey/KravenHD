@@ -85,7 +85,7 @@ class CpuUsageMonitor(Poll, object):
 		Poll.__init__(self)
 		self.__callbacks = [ ]
 		self.__curr_info = self.getCpusInfo()
-		self.poll_interval = 500
+		self.poll_interval = 1000
 
 	def getCpusCount(self):
 		return len(self.__curr_info) - 1

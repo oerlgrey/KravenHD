@@ -1,5 +1,5 @@
  <!-- Clock Analog */-->
-  <widget backgroundColor="KravenBackground" font="Regular2; 18" foregroundColor="KravenFont2" halign="center" position="1058,684" render="Label" size="220,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2">
+  <widget backgroundColor="KravenInfobarBackground" font="Regular2; 18" foregroundColor="KravenFont2" halign="center" position="1058,684" render="Label" size="220,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2">
     <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
   </widget>
   <ePixmap alphatest="blend" pixmap="KravenHD/clock/analog.png" position="1091,558" size="149,125" zPosition="1" />

@@ -1,5 +1,5 @@
 <!-- /* ECM-Info -->
-<widget source="session.CurrentService" render="Label" position="275,592" size="655,20" font="Regular;16" halign="left" foregroundColor="KravenButtonStyleFont" backgroundColor="KravenBackground" transparent="1" zPosition="5" alphatest="blend">
-  <convert type="KravenHDMyCaidDisplay">Default</convert>
+<widget source="session.CurrentService" render="Label" position="275,591" size="655,22" font="Regular;16" halign="left" foregroundColor="KravenECMFont" backgroundColor="KravenIbarBackground" transparent="1" zPosition="5">
+  <convert type="KravenHDCaidDisplay">Default</convert>
 </widget>
 <!-- ECM-Info */ -->

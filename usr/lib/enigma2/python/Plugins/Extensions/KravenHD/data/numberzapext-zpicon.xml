@@ -1,6 +1,6 @@
 <!--/* NumberZapExt -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="NumberZapExt" position="264,216" size="714,243" title="QuickZap">
-  <widget name="chPicon" backgroundColor="KravenBackground" position="377,75" size="225,94" transparent="1" zPosition="1" alphatest="blend" />
+  <widget name="chPicon" backgroundColor="KravenBackground" position="372,75" size="225,94" transparent="1" zPosition="1" alphatest="blend" />
   <widget font="Regular; 80" foregroundColor="KravenFont1" halign="center" name="chNum" position="97,72" size="136,100" transparent="0" zPosition="0" />
   <widget font="Regular; 20" foregroundColor="KravenFont1" halign="center" name="chName" noWrap="1" position="295,179" size="387,26" transparent="0" zPosition="0" />
   <eLabel halign="center"  position="270,32" size="427,181" zPosition="-1" />

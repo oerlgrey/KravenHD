@@ -27,6 +27,9 @@ class KravenHDLayoutInfo(Poll, Converter):
         type = type.split(',')
         self.shortFormat = 'Short' in type
         self.fullFormat = 'Full' in type
+        self.freiFormat = 'Frei' in type
+        self.genutztFormat = 'Genutzt' in type
+        self.langFormat = 'Lang' in type
         if 'HddTemp' in type:
             self.type = self.HDDTEMP
         elif 'LoadAvg' in type:
@@ -78,7 +81,20 @@ class KravenHDLayoutInfo(Poll, Converter):
             else:
                 list = self.getMemInfo(entry[0])
             if list[0] == 0:
-                text = '%s: Not Available' % entry[1]
+                if self.freiFormat or self.genutztFormat or self.langFormat:
+                    text = 'Nicht vorhanden'
+                else:
+                    text = '%s: Not Available' % entry[1]
+            elif self.freiFormat:
+                    text = '%s, %s frei' % (self.getSizeStr(list[0]),
+                    self.getSizeStr(list[2]))
+            elif self.genutztFormat:
+                    text = '%s, %s%% genutzt' % (self.getSizeStr(list[0]), list[3])
+            elif self.langFormat:
+                 text = '%s, %s frei, %s genutzt (%s%%)' % (self.getSizeStr(list[0]),
+                 self.getSizeStr(list[2]),
+                 self.getSizeStr(list[1]),
+                 list[3])
             elif self.shortFormat:
                 text = '%s: %s, in use: %s%%' % (entry[1], self.getSizeStr(list[0]), list[3])
             elif self.fullFormat:
@@ -134,7 +150,7 @@ class KravenHDLayoutInfo(Poll, Converter):
         info = '0'
         try:
             out_line = popen('cat /proc/loadavg').readline()
-            info = 'loadavg:' + out_line[:15]
+            info = '' + str(out_line)[:4]
             textvalue = info
         except:
             pass

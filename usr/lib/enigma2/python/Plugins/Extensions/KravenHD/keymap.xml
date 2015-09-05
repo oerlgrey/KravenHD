@@ -1,0 +1,6 @@
+<keymap>
+	<map context="KravenHDConfigActions">
+		<key id="KEY_CHANNELUP" mapto="nextBouquet" flags="m" />
+		<key id="KEY_CHANNELDOWN" mapto="prevBouquet" flags="m" />
+	</map>
+</keymap>

@@ -18,8 +18,21 @@ from enigma import iServiceInformation
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Poll import Poll
-import time
-import os
+import time, os, gettext
+from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
+from Components.Language import language
+
+lang = language.getLanguage()
+os.environ["LANGUAGE"] = lang[:2]
+gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
+gettext.textdomain("enigma2")
+gettext.bindtextdomain("KravenHD", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/KravenHD/locale/"))
+
+def _(txt):
+	t = gettext.dgettext("KravenHD", txt)
+	if t == txt:
+		t = gettext.gettext(txt)
+	return t
 
 class KravenHDEcmInfoLine(Poll, Converter, object):
 	Auto = 0
@@ -73,15 +86,15 @@ class KravenHDEcmInfoLine(Poll, Converter, object):
 		iscrypt = info.getInfo(iServiceInformation.sIsCrypted)
 		if self.type is self.Auto or self.type is self.Format or self.type is self.PreDefine:
 			if not iscrypt or iscrypt == -1:
-				return _('FTA')
+				return _('free to air')
 			elif iscrypt and not os.path.isfile('/tmp/ecm.info'):
-				return _('N/A')
+				return _('not available')
 			elif iscrypt and os.path.isfile('/tmp/ecm.info'):
 				try:
 					if not os.stat('/tmp/ecm.info').st_size:
-						return _('N/A')
+						return _('not available')
 				except:
-					return _('N/A')
+					return _('not available')
 		if os.path.isfile('/tmp/ecm.info'):
 			try:
 				filedata = open('/tmp/ecm.info')
@@ -192,7 +205,7 @@ class KravenHDEcmInfoLine(Poll, Converter, object):
 
 		if not out_data.get('source', '') is 'emu' and os.path.isfile('/tmp/ecm.info'):
 			if int((time.time() - os.stat("/tmp/ecm.info").st_mtime)) > 14:
-				return _('N/A')
+				return _('not available')
 
 		if self.type is self.PreDefine:
 			if out_data.get('source', '') is 'emu':
@@ -244,7 +257,7 @@ class KravenHDEcmInfoLine(Poll, Converter, object):
 			if out_data.get('caid', '') is not '':
 				return self.TxtCaids.get(out_data.get('caid')[:2])
 			else:
-				return _('N/A')
+				return _('not available')
 
 		elif self.type is self.Format:
 			return self.paramert_str.replace('Format:', '').replace('%C', out_data.get('caid', '')).replace('%P', out_data.get('prov', '')).replace('%T', out_data.get('time', '')).replace('%U', out_data.get('using', ''))\

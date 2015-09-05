@@ -47,11 +47,11 @@
   <widget source="global.CurrentTime" render="KravenHDEGclock" position="645,115" borderColor="KravenFont1" zPosition="6" size="120,120" transparent="1">
     <convert type="KravenHDEGAnalogic">Seconds</convert>
   </widget>
-  <ePixmap name="clock" position="630,100" size="150,150" pixmap="KravenHD/buttons/clock_bg.png" zPosition="1" alphatest="on" />
+  <ePixmap name="clock" position="630,100" size="150,150" pixmap="KravenHD/icons-light/icons/clock_bg.png" zPosition="1" alphatest="on" />
   <widget source="global.CurrentTime" render="KravenHDEGclock" position="645,315" borderColor="KravenFont2" zPosition="6" size="120,120" transparent="1">
     <convert type="AAFinfo">Harddiskspace</convert>
   </widget>
-  <ePixmap name="harddiskspace" position="630,300" size="150,150" pixmap="KravenHD/buttons/gauge_bg.png" zPosition="1" alphatest="on" />
+  <ePixmap name="harddiskspace" position="630,300" size="150,150" pixmap="KravenHD/icons-light/icons/gauge_bg.png" zPosition="1" alphatest="on" />
   <widget source="session.CurrentService" render="Label" position="682,397" size="50,15" font="Regular; 14" halign="center" valign="top" zPosition="7" backgroundColor="transpWhite" transparent="1" foregroundColor="KravenFont2">
     <convert type="AAFinfo">HarddiskspaceText</convert>
   </widget>

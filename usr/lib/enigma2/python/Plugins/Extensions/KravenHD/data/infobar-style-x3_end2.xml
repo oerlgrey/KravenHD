@@ -1,21 +1,16 @@
-  <panel name="template_infobar_style_x2_x3_z1_z2" />
-  <panel name="template_secondinfobar" />
-  <widget alphatest="blend" position="20,580" size="220,132" render="KravenHDXPicon" source="session.CurrentService" transparent="1" zPosition="4">
-    <convert type="ServiceName">Reference</convert>
-  </widget>
-  <widget source="session.CurrentService" position="37,495" size="1199,22" font="Regular2; 20" render="Label" halign="center" valign="center" foregroundColor="KravenFont2" backgroundColor="KravenBackground" transparent="1" zPosition="1">
-    <convert type="KravenHDMyCaidDisplay">Default</convert>
-  </widget>
-  <widget backgroundColor="KravenBackground" font="Regular2; 30" halign="left" noWrap="1" position="40,43" render="Label" size="570,76" source="session.Event_Now" transparent="1" valign="center">
+  <widget backgroundColor="KravenBackground" font="Regular2; 30" halign="left" noWrap="1" position="40,43" render="Label" size="570,76" source="session.Event_Now" transparent="1" foregroundColor="KravenFont1">
     <convert type="KravenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="KravenBackground" font="Regular2; 30" halign="left" noWrap="1" position="660,43" render="Label" size="570,76" source="session.Event_Next" transparent="1" valign="center" foregroundColor="KravenFont2">
+  <widget backgroundColor="KravenBackground" font="Regular2; 30" halign="left" noWrap="1" position="660,43" render="Label" size="570,76" source="session.Event_Next" transparent="1" foregroundColor="KravenFont2">
     <convert type="KravenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="KravenBackground" font="Regular; 22" foregroundColor="KravenFont1" halign="left" position="40,130" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="570,351" source="session.Event_Now" transparent="1">
+  <widget backgroundColor="KravenBackground" font="Regular2; 26" foregroundColor="KravenFont1" halign="left" position="40,130" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="570,396" source="session.Event_Now" transparent="1">
     <convert type="KravenHDEventName">ExtendedDescription</convert>
   </widget>
-  <widget backgroundColor="KravenBackground" font="Regular; 22" foregroundColor="KravenFont2" halign="left" position="660,130" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="570,351" source="session.Event_Next" transparent="1">
+  <widget backgroundColor="KravenBackground" font="Regular2; 26" foregroundColor="KravenFont2" halign="left" position="660,130" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="570,396" source="session.Event_Next" transparent="1">
     <convert type="KravenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="275,591" size="655,22" font="Regular;16" halign="left" foregroundColor="KravenECMFont" backgroundColor="KravenBackground" transparent="1" zPosition="5">
+    <convert type="KravenHDCaidDisplay">Default</convert>
   </widget>
 </screen>

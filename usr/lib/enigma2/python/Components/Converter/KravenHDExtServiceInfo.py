@@ -71,7 +71,7 @@ class KravenHDExtServiceInfo(Converter, object):
 		elif self.type == self.SERVICENUMBER:
 			text = number
 		elif self.type == self.SERVICENUMBERANDNAME:
-			text = number + " " + name
+			text = number + " - " + name
 		elif self.type == self.ORBITALPOSITION:
 			text = orbital
 		elif self.type == self.SATNAME:

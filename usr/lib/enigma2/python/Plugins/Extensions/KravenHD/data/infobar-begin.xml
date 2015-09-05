@@ -1,0 +1,3 @@
+<!--/* InfoBar -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1280,720" title="InfoBar">
+  <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,473" size="1280,400" zPosition="-9" />

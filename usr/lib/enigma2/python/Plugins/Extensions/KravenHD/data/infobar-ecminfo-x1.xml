@@ -1,5 +1,5 @@
 <!-- /* ECM-Info -->
-<widget source="session.CurrentService" render="Label" position="273,694" size="403,20" font="Regular;16" halign="left" valign="top" foregroundColor="KravenButtonStyleFont" backgroundColor="KravenBackground" transparent="1" zPosition="5" alphatest="blend">
+<widget source="session.CurrentService" render="Label" position="273,693" size="403,22" font="Regular;16" halign="left" valign="top" foregroundColor="KravenECMFont" backgroundColor="KravenInfobarBackground" transparent="1" zPosition="5">
   <convert type="KravenHDEcmInfoLine">Format:CAID: %C - Reader: %R - ECM: %T ms</convert>
 </widget>
 <!-- ECM-Info */ -->

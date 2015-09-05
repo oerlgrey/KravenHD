@@ -23,6 +23,22 @@ from enigma import iServiceInformation, iPlayableService
 from Components.Element import cached
 from Poll import Poll
 
+import time, os, gettext
+from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
+from Components.Language import language
+
+lang = language.getLanguage()
+os.environ["LANGUAGE"] = lang[:2]
+gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
+gettext.textdomain("enigma2")
+gettext.bindtextdomain("KravenHD", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/KravenHD/locale/"))
+
+def _(txt):
+	t = gettext.dgettext("KravenHD", txt)
+	if t == txt:
+		t = gettext.gettext(txt)
+	return t
+
 class KravenHDCaidDisplay(Poll, Converter, object):
 	def __init__(self, type):
 		Poll.__init__(self)
@@ -78,7 +94,7 @@ class KravenHDCaidDisplay(Poll, Converter, object):
 
 	@cached
 	def getText(self):
-		textvalue = ""
+		textvalue = _('free to air')
 		service = self.source.service
 		if service:
 			info = service and service.info()

@@ -1,0 +1,43 @@
+</screen>
+
+<!-- SecondInfoBar -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1280,720" title="SecondInfoBar">
+  <eLabel text="Flash:" position="40,11" size="50,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="82,11" size="180,20" halign="left" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+    <convert type="KravenHDLayoutInfo">FlashInfo,Genutzt</convert>
+  </widget>
+  <eLabel text="HDD:" position="270,11" size="50,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="308,11" size="140,20" halign="left" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+    <convert type="KravenHDLayoutInfo">HddInfo,Frei</convert>
+  </widget>
+  <eLabel text="Video:" position="460,11" size="50,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="505,11" size="280,20" halign="left" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+    <convert type="KravenHDExtraInfo">VideoInfo</convert>   
+  </widget>
+  <eLabel text="SYS:" position="796,11" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="824,11" size="35,20" halign="right" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+    <convert type="KravenHDTempFanInfo">TempInfo</convert>   
+  </widget>
+  <eLabel text="U/m:" position="869,11" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="905,11" size="35,20" halign="right" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+    <convert type="KravenHDTempFanInfo">FanInfo</convert>
+  </widget>
+  <eLabel text="CPU:" position="950,11" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="980,11" size="35,20" halign="right" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+    <convert type="KravenHDCpuUsage">$0</convert>   
+  </widget>
+  <eLabel text="Last:" position="1026,11" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1055,11" size="35,20" halign="right" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="10" noWrap="1" foregroundColor="KravenFont1">
+    <convert type="KravenHDLayoutInfo">LoadAvg</convert>
+  </widget>
+  <eLabel text="Sat:" position="1100,11" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1125,11" size="40,20" halign="right" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+     <convert type="KravenHDExtServiceInfo">OrbitalPosition</convert>
+  </widget>
+  <eLabel text="SNR:" position="1175,11" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" foregroundColor="KravenFont2" />
+  <widget source="session.FrontendStatus" render="Label" font="Regular;16" position="1205,11" size="35,20" halign="right" valign="bottom" backgroundColor="KravenInfobarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+     <convert type="KravenHDFrontendInfo">SNR</convert>
+  </widget>
+  <eLabel backgroundColor="KravenBackground" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
+  <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,490" size="1280,400" zPosition="-9" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-20" size="1280,443" zPosition="-9" alphatest="blend" />
