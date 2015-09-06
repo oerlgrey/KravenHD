@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2015-09-05 09:25+0100\n"
+"PO-Revision-Date: 2015-09-06 12:25+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -573,6 +573,22 @@ msgstr "______________________ Infobar__________________________________"
 #: KravenHD.py
 msgid "______________________ Views____________________________________"
 msgstr "______________________ Ansichten________________________________"
+
+#: KravenHD.py
+msgid "______________________ Channellist______________________________"
+msgstr "______________________ Kanalliste_______________________________"
+
+#: KravenHD.py
+msgid "Channellist-Style"
+msgstr "Kanallisten-Stil"
+
+#: KravenHD.py
+msgid "Primetime"
+msgstr "Primetime"
+
+#: KravenHD.py
+msgid "Primetime-Font"
+msgstr "Primetime-Schrift"
 
 #: KravenHD.py
 msgid "Lines"

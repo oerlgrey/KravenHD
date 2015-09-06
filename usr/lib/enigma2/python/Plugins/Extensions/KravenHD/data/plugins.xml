@@ -255,7 +255,7 @@
     <widget name="File" position="70,80" size="708,160" scrollbarMode="showNever" backgroundColor="KravenBackground" transparent="1" />
     <widget name="CPto" position="70,240" size="708,330" scrollbarMode="showNever" backgroundColor="KravenBackground" transparent="1" />
     <eLabel text="Move" position="70,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
-    <eLabel text="Copy" position="320,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="Copy" position="570,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
     <panel name="template_menu_left_button" />
   </screen>
   <!-- MusicExplorer -->
@@ -1175,8 +1175,7 @@
   <!-- ********** WebRadioFS ********** -->
   <!-- WebradioFSScreen_12 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WebradioFSScreen_12" position="0,0" size="1280,720" title="">
-    <ePixmap alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_rec_off.png" position="1036,674" size="43,22" zPosition="2" />
-    <widget name="rec_pic" alphatest="blend" pixmap="KravenHD/icons-infobar/icons/ico_rec_on.png" position="1036,674" size="43,22" zPosition="2" />
+    <widget name="rec_pic" alphatest="blend" position="1036,672" size="34,22" zPosition="2" />
     <widget backgroundColor="KravenBackground" font="Regular;18" foregroundColor="KravenFont1" halign="center" name="rec_txt" position="70,620" size="708,26" transparent="1" valign="center" zPosition="2" />
     <widget backgroundColor="KravenBackground" font="Regular;18" foregroundColor="KravenFont1" halign="center" name="rec_txt2" position="70,620" size="708,26" transparent="1" valign="center" zPosition="3" />
     <widget backgroundColor="KravenBackground" enableWrapAround="1" foregroundColor="KravenFont1" name="streamlist" position="70,80" size="708,477" transparent="1" zPosition="2" />

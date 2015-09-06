@@ -29,7 +29,7 @@ from Screens.Console import Console
 from Screens.Standby import TryQuitMainloop
 from Components.ActionMap import ActionMap
 from Components.AVSwitch import AVSwitch
-from Components.config import config, configfile, ConfigYesNo, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigNumber, ConfigText, ConfigInteger
+from Components.config import config, configfile, ConfigYesNo, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigNumber, ConfigText, ConfigInteger, ConfigClock
 from Components.ConfigList import ConfigListScreen
 from Components.Sources.StaticText import StaticText
 from Components.Label import Label
@@ -39,7 +39,7 @@ from shutil import move
 from skin import parseColor
 from Components.Pixmap import Pixmap
 from Components.Label import Label
-import gettext
+import gettext, time
 from enigma import ePicLoad, getDesktop, eConsoleAppContainer
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 #############################################################
@@ -67,6 +67,7 @@ def translateBlock(block):
 
 config.plugins.KravenHD = ConfigSubsection()
 config.plugins.KravenHD.weather_city = ConfigNumber(default="676757")
+config.plugins.KravenHD.Primetime = ConfigClock(default=time.mktime((0, 0, 0, 20, 15, 0, 0, 0, 0)))
 				
 config.plugins.KravenHD.Image = ConfigSelection(default="main-custom-openatv", choices = [
 				("main-custom-atemio4you", _("Atemio4You")),
@@ -133,6 +134,10 @@ config.plugins.KravenHD.SkinColorInfobar = ConfigSelection(default="000000", cho
 				("0E0C3F", _("blue dark")),
 				("7D5929", _("brown")),
 				("3F2D15", _("brown dark")),
+				("0050EF", _("cobalt")),
+				("001F59", _("cobalt dark")),
+				("1BA1E2", _("cyan")),
+				("0F5B7F", _("cyan dark")),
 				("FFEA04", _("yellow")),
 				("999999", _("grey")),
 				("3F3F3F", _("grey dark")),
@@ -140,6 +145,8 @@ config.plugins.KravenHD.SkinColorInfobar = ConfigSelection(default="000000", cho
 				("213305", _("green dark")),
 				("A19181", _("Kraven")),
 				("28150B", _("Kraven dark")),
+				("6D8764", _("olive")),
+				("313D2D", _("olive dark")),
 				("C3461B", _("orange")),
 				("892E13", _("orange dark")),
 				("F472D0", _("pink")),
@@ -147,6 +154,8 @@ config.plugins.KravenHD.SkinColorInfobar = ConfigSelection(default="000000", cho
 				("E51400", _("red")),
 				("330400", _("red dark")),
 				("000000", _("black")),
+				("647687", _("steel")),
+				("262C33", _("steel dark")),
 				("6C0AAB", _("violet")),
 				("1F0333", _("violet dark")),
 				("ffffff", _("white"))
@@ -357,6 +366,40 @@ config.plugins.KravenHD.ECMFont = ConfigSelection(default="0070AD11", choices = 
 				])
 				
 config.plugins.KravenHD.ChannelnameFont = ConfigSelection(default="00ffffff", choices = [
+				("00F0A30A", _("amber")),
+				("00B27708", _("amber dark")),
+				("001B1775", _("blue")),
+				("000E0C3F", _("blue dark")),
+				("007D5929", _("brown")),
+				("003F2D15", _("brown dark")),
+				("000050EF", _("cobalt")),
+				("00001F59", _("cobalt dark")),
+				("001BA1E2", _("cyan")),
+				("000F5B7F", _("cyan dark")),
+				("00FFEA04", _("yellow")),
+				("00999999", _("grey")),
+				("003F3F3F", _("grey dark")),
+				("0070AD11", _("green")),
+				("00213305", _("green dark")),
+				("00A19181", _("Kraven")),
+				("0028150B", _("Kraven dark")),
+				("006D8764", _("olive")),
+				("00313D2D", _("olive dark")),
+				("00C3461B", _("orange")),
+				("00892E13", _("orange dark")),
+				("00F472D0", _("pink")),
+				("00723562", _("pink dark")),
+				("00E51400", _("red")),
+				("00330400", _("red dark")),
+				("00000000", _("black")),
+				("00647687", _("steel")),
+				("00262C33", _("steel dark")),
+				("006C0AAB", _("violet")),
+				("001F0333", _("violet dark")),
+				("00ffffff", _("white"))
+				])
+				
+config.plugins.KravenHD.PrimetimeFont = ConfigSelection(default="00ffffff", choices = [
 				("00F0A30A", _("amber")),
 				("00B27708", _("amber dark")),
 				("001B1775", _("blue")),
@@ -922,7 +965,7 @@ class KravenHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="830,80" size="402,46" text="KravenHD" font="Regular; 36" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" name="," />
-  <eLabel position="845,130" size="372,46" text="Version: 6.2.1" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+  <eLabel position="845,130" size="372,46" text="Version: 6.2.2" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
   <ePixmap backgroundColor="#00000000" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/about.png" position="847,230" size="368,207" zPosition="-9" />
   <widget name="helperimage" position="847,230" size="368,207" zPosition="1" backgroundColor="#00000000" />
 </screen>
@@ -1038,8 +1081,11 @@ class KravenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("Satellite-Infos"), config.plugins.KravenHD.SatInfo))
 		list.append(getConfigListEntry(_("ECM-Infos"), config.plugins.KravenHD.ECMInfo))
 		list.append(getConfigListEntry(" ", ))
+		list.append(getConfigListEntry(_("______________________ Channellist______________________________"), ))
+		list.append(getConfigListEntry(_("Channellist-Style"), config.plugins.KravenHD.ChannelSelectionStyle))
+		list.append(getConfigListEntry(_("Primetime"), config.plugins.KravenHD.Primetime))
+		list.append(getConfigListEntry(_("Primetime-Font"), config.plugins.KravenHD.PrimetimeFont))
 		list.append(getConfigListEntry(_("______________________ Views____________________________________"), ))
-		list.append(getConfigListEntry(_("Channellist"), config.plugins.KravenHD.ChannelSelectionStyle))
 		list.append(getConfigListEntry(_("Volume"), config.plugins.KravenHD.Volume))
 		list.append(getConfigListEntry(_("CoolTVGuide"), config.plugins.KravenHD.CoolTVGuide))
 		list.append(getConfigListEntry(_("EnhancedMovieCenter"), config.plugins.KravenHD.EMCStyle))
@@ -1250,6 +1296,7 @@ class KravenHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(['name="KravenMarkedFont" value="#00ffffff', 'name="KravenMarkedFont" value="#' + config.plugins.KravenHD.MarkedFont.value])
 			self.skinSearchAndReplace.append(['name="KravenECMFont" value="#0070AD11', 'name="KravenECMFont" value="#' + config.plugins.KravenHD.ECMFont.value])
 			self.skinSearchAndReplace.append(['name="KravenChannelnameFont" value="#00ffffff', 'name="KravenChannelnameFont" value="#' + config.plugins.KravenHD.ChannelnameFont.value])
+			self.skinSearchAndReplace.append(['name="KravenPrimetimeFont" value="#00ffffff', 'name="KravenPrimetimeFont" value="#' + config.plugins.KravenHD.PrimetimeFont.value])
 			self.skinSearchAndReplace.append(['name="KravenButtonText" value="#00ffffff', 'name="KravenButtonText" value="#' + config.plugins.KravenHD.ButtonText.value])
 			
 			### Infobar-Icons

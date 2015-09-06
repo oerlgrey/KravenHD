@@ -32,6 +32,7 @@
     <color name="KravenMarkedFont" value="#00ffffff" />
     <color name="KravenECMFont" value="#0070AD11" />
     <color name="KravenChannelnameFont" value="#00ffffff" />
+    <color name="KravenPrimetimeFont" value="#00ffffff" />
     <color name="orange" value="#00dc5221" />
     <color name="rds_text_bg" value="#00003258" />
     <color name="red" value="#00f23d21" />

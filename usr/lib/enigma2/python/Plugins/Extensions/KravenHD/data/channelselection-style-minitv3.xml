@@ -19,11 +19,15 @@
       <convert type="KravenHDEventTime">EndTime</convert>
       <convert type="KravenHDClockToText">Format:%H:%M</convert>
     </widget>
-    <widget position="90,120" render="Progress" size="410,5" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress410.png">
+    <widget position="92,120" render="Progress" size="406,5" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress410.png">
       <convert type="KravenHDEventTime">Progress</convert>
     </widget>
-    <eLabel position="90,122" size="410,1" backgroundColor="KravenLine" />
-    <widget source="ServiceEvent" render="KravenHDSingleEpgList" position="42,586" size="505,80" font="Regular;19" backgroundColor="KravenBackground" foregroundColor="KravenFont2" transparent="1">
+    <eLabel position="92,122" size="406,1" backgroundColor="KravenLine" />
+    <eLabel position="42,587" size="505,1" backgroundColor="KravenLine" />
+    <widget backgroundColor="KravenBackground" foregroundColor="KravenFont2" font="Regular;22" source="ServiceEvent" render="KravenHDSingleEpgList" position="42,591" size="505,27" transparent="1" noWrap="1">
+    </widget>
+    <widget backgroundColor="KravenBackground" foregroundColor="KravenPrimetimeFont" font="Regular;22" source="ServiceEvent" render="Label" position="42,618" size="505,27" transparent="1" noWrap="1">
+      <convert type="KravenHDNextEvents">PrimeTime,noDuration</convert>
     </widget>
     <widget backgroundColor="KravenBackground" font="Regular2;34" foregroundColor="KravenFont2" position="70,12" render="Label" size="800,46" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
     <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="65,692" size="200,5" />

@@ -9,7 +9,7 @@ from Components.VariableText import VariableText
 from enigma import eLabel, eEPGCache, eServiceReference
 from time import localtime, strftime, mktime, time
 from datetime import datetime
-
+from Components.config import config
 
 class KravenHDNextEvents(Converter, object):
 	Event1 = 0
@@ -71,7 +71,10 @@ class KravenHDNextEvents(Converter, object):
 			curEvent = self.source.getCurrentEvent()
 			if curEvent:
 				now = localtime(time())
-				dt = datetime(now.tm_year, now.tm_mon, now.tm_mday, 20, 15)
+				try:
+	                           dt = datetime(now.tm_year, now.tm_mon, now.tm_mday, int(config.plugins.KravenHD.Primetime.value[0]), int(config.plugins.KravenHD.Primetime.value[1]))
+                                except:
+                                   dt = datetime(now.tm_year, now.tm_mon, now.tm_mday, 20, 15)
 				primeTime = int(mktime(dt.timetuple()))
 				self.epgcache.startTimeQuery(eServiceReference(ref.toString()), primeTime)
 				next = self.epgcache.getNextTimeEntry()

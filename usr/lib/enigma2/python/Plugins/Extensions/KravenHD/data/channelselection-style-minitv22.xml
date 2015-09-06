@@ -18,7 +18,10 @@
       <convert type="KravenHDEventTime">Progress</convert>
     </widget>
     <eLabel position="90,122" size="410,1" backgroundColor="KravenLine" />
-    <widget source="ServiceEvent" render="KravenHDSingleEpgList" halign="center" position="42,585" size="505,80" font="Regular;19" backgroundColor="KravenBackground" foregroundColor="KravenFont2" transparent="1">
+    <widget backgroundColor="KravenBackground" foregroundColor="KravenFont2" font="Regular;22" source="ServiceEvent" render="KravenHDSingleEpgList" position="42,586" size="505,27" transparent="1" noWrap="1">
+    </widget>
+    <widget backgroundColor="KravenBackground" foregroundColor="KravenPrimetimeFont" font="Regular;22" source="ServiceEvent" render="Label" position="42,613" size="505,27" transparent="1" noWrap="1">
+      <convert type="KravenHDNextEvents">PrimeTime,noDuration</convert>
     </widget>
     <widget source="ServiceEvent" render="KravenHDMiniTV" position="97,361" size="400,220" backgroundColor="transparent" zPosition="3">
       <convert type="KravenHDMiniTVDisplay" />

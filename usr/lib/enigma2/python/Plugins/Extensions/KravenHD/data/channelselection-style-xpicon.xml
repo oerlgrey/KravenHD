@@ -1,8 +1,11 @@
 <!-- /* ChannelSelection XPicon -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
   <widget backgroundColor="KravenBackground" scrollbarMode="showNever" picServiceEventProgressbar="KravenHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="426,77" serviceInfoFont="Regular;23" serviceItemHeight="35" serviceNameFont="Regular;25" serviceNumberFont="Regular;25" size="816,564" transparent="1" />
-  <widget source="ServiceEvent" render="KravenHDSingleEpgList" position="41,551" size="362,146" noWrap="1" font="Regular;22" foregroundColor="KravenFont2" backgroundColor="KravenBackground" transparent="1">
-  </widget>
+    <widget backgroundColor="KravenBackground" foregroundColor="KravenFont2" font="Regular;22" source="ServiceEvent" render="KravenHDSingleEpgList" position="42,551" size="362,54" transparent="1" noWrap="1">
+    </widget>
+    <widget backgroundColor="KravenBackground" foregroundColor="KravenPrimetimeFont" font="Regular;22" source="ServiceEvent" render="Label" position="42,605" size="362,27" transparent="1" noWrap="1">
+      <convert type="KravenHDNextEvents">PrimeTime,noDuration</convert>
+    </widget>
   <widget alphatest="blend" position="114,153" render="KravenHDXPicon" size="220,132" source="ServiceEvent" transparent="1" zPosition="4">
     <convert type="KravenHDRefString">ServicelistRef</convert>
   </widget>
