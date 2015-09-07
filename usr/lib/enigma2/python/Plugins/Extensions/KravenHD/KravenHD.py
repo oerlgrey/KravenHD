@@ -399,7 +399,7 @@ config.plugins.KravenHD.ChannelnameFont = ConfigSelection(default="00ffffff", ch
 				("00ffffff", _("white"))
 				])
 				
-config.plugins.KravenHD.PrimetimeFont = ConfigSelection(default="00ffffff", choices = [
+config.plugins.KravenHD.PrimetimeFont = ConfigSelection(default="0070AD11", choices = [
 				("00F0A30A", _("amber")),
 				("00B27708", _("amber dark")),
 				("001B1775", _("blue")),
@@ -1140,69 +1140,69 @@ class KravenHD(ConfigListScreen, Screen):
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/none.jpg"
 			elif returnValue == "startdelay=2000" or returnValue == "startdelay=4000" or returnValue == "startdelay=6000" or returnValue == "startdelay=8000" or returnValue == "startdelay=10000":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/running-delay.jpg"
-			elif returnValue == "F0A30A" or returnValue == "4AF0A30A" or returnValue == "00F0A30A":
+			elif returnValue == "F0A30A" or returnValue == "00F0A30A":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/amber.jpg"
-			elif returnValue == "B27708" or returnValue == "4AB27708" or returnValue == "00B27708":
+			elif returnValue == "B27708" or returnValue == "00B27708":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/amber_dark.jpg"
-			elif returnValue == "1B1775" or returnValue == "4A1B1775" or returnValue == "001B1775":
+			elif returnValue == "1B1775" or returnValue == "001B1775":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/blue.jpg"
-			elif returnValue == "0E0C3F" or returnValue == "4A0E0C3F" or returnValue == "000E0C3F":
+			elif returnValue == "0E0C3F" or returnValue == "000E0C3F":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/blue_dark.jpg"
-			elif returnValue == "7D5929" or returnValue == "4A7D5929" or returnValue == "007D5929":
+			elif returnValue == "7D5929" or returnValue == "007D5929":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/brown.jpg"
-			elif returnValue == "3F2D15" or returnValue == "4A3F2D15" or returnValue == "003F2D15":
+			elif returnValue == "3F2D15" or returnValue == "003F2D15":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/brown_dark.jpg"
 			elif returnValue == "progress":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/colorfull.jpg"
-			elif returnValue == "0050EF" or returnValue == "4A0050EF" or returnValue == "000050EF":
+			elif returnValue == "0050EF" or returnValue == "000050EF":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/cobalt.jpg"
-			elif returnValue == "001F59" or returnValue == "4A001F59" or returnValue == "00001F59":
+			elif returnValue == "001F59" or returnValue == "00001F59":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/cobalt_dark.jpg"
-			elif returnValue == "1BA1E2" or returnValue == "4A1BA1E2" or returnValue == "001BA1E2":
+			elif returnValue == "1BA1E2" or returnValue == "001BA1E2":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/cyan.jpg"
-			elif returnValue == "0F5B7F" or returnValue == "4A0F5B7F" or returnValue == "000F5B7F":
+			elif returnValue == "0F5B7F" or returnValue == "000F5B7F":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/cyan_dark.jpg"
-			elif returnValue == "FFEA04" or returnValue == "4AFFEA04" or returnValue == "00FFEA04":
+			elif returnValue == "FFEA04" or returnValue == "00FFEA04":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/yellow.jpg"
-			elif returnValue == "999999" or returnValue == "4A999999" or returnValue == "00999999":
+			elif returnValue == "999999" or returnValue == "00999999":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/grey.jpg"
-			elif returnValue == "3F3F3F" or returnValue == "4A3F3F3F" or returnValue == "003F3F3F":
+			elif returnValue == "3F3F3F" or returnValue == "003F3F3F":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/grey_dark.jpg"
-			elif returnValue == "70AD11" or returnValue == "4A70AD11" or returnValue == "0070AD11":
+			elif returnValue == "70AD11" or returnValue == "0070AD11":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/green.jpg"
-			elif returnValue == "213305" or returnValue == "4A213305" or returnValue == "00213305":
+			elif returnValue == "213305" or returnValue == "00213305":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/green_dark.jpg"
-			elif returnValue == "A19181" or returnValue == "4AA19181" or returnValue == "00A19181":
+			elif returnValue == "A19181" or returnValue == "00A19181":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/kraven.jpg"
-			elif returnValue == "28150B" or returnValue == "4A28150B" or returnValue == "0028150B":
+			elif returnValue == "28150B" or returnValue == "0028150B":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/kraven_dark.jpg"
-			elif returnValue == "6D8764" or returnValue == "4A6D8764" or returnValue == "006D8764":
+			elif returnValue == "6D8764" or returnValue == "006D8764":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/olive.jpg"
-			elif returnValue == "313D2D" or returnValue == "4A313D2D" or returnValue == "00313D2D":
+			elif returnValue == "313D2D" or returnValue == "00313D2D":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/olive_dark.jpg"
-			elif returnValue == "C3461B" or returnValue == "4AC3461B" or returnValue == "00C3461B":
+			elif returnValue == "C3461B" or returnValue == "00C3461B":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/orange.jpg"
-			elif returnValue == "892E13" or returnValue == "4A892E13" or returnValue == "00892E13":
+			elif returnValue == "892E13" or returnValue == "00892E13":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/orange_dark.jpg"
-			elif returnValue == "F472D0" or returnValue == "4AF472D0" or returnValue == "00F472D0":
+			elif returnValue == "F472D0" or returnValue == "00F472D0":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/pink.jpg"
-			elif returnValue == "723562" or returnValue == "4A723562" or returnValue == "00723562":
+			elif returnValue == "723562" or returnValue == "00723562":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/pink_dark.jpg"
-			elif returnValue == "E51400" or returnValue == "4AE51400" or returnValue == "00E51400":
+			elif returnValue == "E51400" or returnValue == "00E51400":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/red.jpg"
-			elif returnValue == "330400" or returnValue == "4A330400" or returnValue == "00330400":
+			elif returnValue == "330400" or returnValue == "00330400":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/red_dark.jpg"
-			elif returnValue == "000000" or returnValue == "4A000000" or returnValue == "00000000":
+			elif returnValue == "000000" or returnValue == "00000000":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/black.jpg"
-			elif returnValue == "647687" or returnValue == "4A647687" or returnValue == "00647687":
+			elif returnValue == "647687" or returnValue == "00647687":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/steel.jpg"
-			elif returnValue == "262C33" or returnValue == "4A262C33" or returnValue == "00262C33":
+			elif returnValue == "262C33" or returnValue == "00262C33":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/steel_dark.jpg"
-			elif returnValue == "6C0AAB" or returnValue == "4A6C0AAB" or returnValue == "006C0AAB":
+			elif returnValue == "6C0AAB" or returnValue == "006C0AAB":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/violet.jpg"
-			elif returnValue == "1F0333" or returnValue == "4A1F0333" or returnValue == "001F0333":
+			elif returnValue == "1F0333" or returnValue == "001F0333":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/violet_dark.jpg"
-			elif returnValue == "ffffff" or returnValue == "4Affffff" or returnValue == "00ffffff":
+			elif returnValue == "ffffff" or returnValue == "00ffffff":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/white.jpg"
 			elif returnValue == "about":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/about.png"
@@ -1213,8 +1213,7 @@ class KravenHD(ConfigListScreen, Screen):
 			else:
 				return "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/black.jpg"
 		except:
-			## weather
-			return "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/676757.jpg"
+			return "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/black.jpg"
 
 	def UpdatePicture(self):
 		self.PicLoad.PictureData.get().append(self.DecodePicture)
@@ -1296,7 +1295,7 @@ class KravenHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(['name="KravenMarkedFont" value="#00ffffff', 'name="KravenMarkedFont" value="#' + config.plugins.KravenHD.MarkedFont.value])
 			self.skinSearchAndReplace.append(['name="KravenECMFont" value="#0070AD11', 'name="KravenECMFont" value="#' + config.plugins.KravenHD.ECMFont.value])
 			self.skinSearchAndReplace.append(['name="KravenChannelnameFont" value="#00ffffff', 'name="KravenChannelnameFont" value="#' + config.plugins.KravenHD.ChannelnameFont.value])
-			self.skinSearchAndReplace.append(['name="KravenPrimetimeFont" value="#00ffffff', 'name="KravenPrimetimeFont" value="#' + config.plugins.KravenHD.PrimetimeFont.value])
+			self.skinSearchAndReplace.append(['name="KravenPrimetimeFont" value="#0070AD11', 'name="KravenPrimetimeFont" value="#' + config.plugins.KravenHD.PrimetimeFont.value])
 			self.skinSearchAndReplace.append(['name="KravenButtonText" value="#00ffffff', 'name="KravenButtonText" value="#' + config.plugins.KravenHD.ButtonText.value])
 			
 			### Infobar-Icons
