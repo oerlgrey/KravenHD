@@ -265,4 +265,22 @@
   <panel name="template_menu_full_button" />
   <panel name="template_colorkey_text_source" />
 </screen>
+  <!-- AdapterSetup -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup">
+    <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" position="70,80" render="Label" size="495,30" source="Adapter" transparent="1" />
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,130" size="708,240" transparent="1" />
+    <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" halign="center" position="70,585" render="Label" size="708,30" source="introduction2" transparent="1" />
+    <widget source="IPtext" render="Label" position="835,432" size="210,24" font="Regular;20" halign="right" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="Netmasktext" render="Label" position="835,462" size="210,24" font="Regular;20" halign="right" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="Gatewaytext" render="Label" position="835,492" size="210,24" font="Regular;20" halign="right" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="DNS1text" render="Label" position="835,522" size="210,24" font="Regular;20" halign="right" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="DNS2text" render="Label" position="835,552" size="210,24" font="Regular;20" halign="right" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="IP" render="Label" position="1055,432" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="Mask" render="Label" position="1055,462" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="Gateway" render="Label" position="1055,492" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="DNS1" render="Label" position="1055,522" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="DNS2" render="Label" position="1055,552" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
   <!-- main-custom-openhdf */ -->
