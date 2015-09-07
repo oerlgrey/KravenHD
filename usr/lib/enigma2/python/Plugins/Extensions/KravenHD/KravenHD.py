@@ -1213,7 +1213,7 @@ class KravenHD(ConfigListScreen, Screen):
 			else:
 				return "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/black.jpg"
 		except:
-			return "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/black.jpg"
+			return "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/fb.jpg"
 
 	def UpdatePicture(self):
 		self.PicLoad.PictureData.get().append(self.DecodePicture)
