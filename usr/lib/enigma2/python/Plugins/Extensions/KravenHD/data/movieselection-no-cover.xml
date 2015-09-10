@@ -1,7 +1,7 @@
     <!-- MovieSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieSelection" position="0,0" size="1280,720" title="">
     <widget name="waitingtext" position="0,0" size="0,0" />
-	<eLabel text="MovieSelection" position="70,12" size="708,46" backgroundColor="KravenBackground" font="Regular2;34" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
+	<eLabel text="MovieSelection" position="70,12" size="708,46" backgroundColor="KravenInfobar2Background" font="Regular2;34" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
     <widget name="list" position="70,110" size="708,540" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular;17" halign="right" name="freeDiskSpace" position="70,80" size="708,24" transparent="1" valign="center" />
     <widget backgroundColor="KravenBackground" font="Regular2;30" foregroundColor="KravenFont2" position="848,55" render="Label" size="377,75" source="Service" transparent="1" zPosition="1">
@@ -18,7 +18,7 @@
       <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <eLabel backgroundColor="KravenBackground" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
-    <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1" valign="center" foregroundColor="KravenFont1">
+    <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenInfobar2Background" transparent="1" valign="center" foregroundColor="KravenFont1">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
     <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="65,692" size="200,5" />
@@ -27,8 +27,9 @@
     <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="815,692" size="200,5" />
     <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_red" position="70,665" size="220,26" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_green" position="320,665" size="220,26" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_yellow" position="570,665" size="220,26" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_blue" position="820,665" size="220,26" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="2" />
+    <widget font="Regular; 20" halign="left" valign="center" name="key_red" position="70,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+    <widget font="Regular; 20" halign="left" valign="center" name="key_green" position="320,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+    <widget font="Regular; 20" halign="left" valign="center" name="key_yellow" position="570,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+    <widget font="Regular; 20" halign="left" valign="center" name="key_blue" position="820,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="2" />
+    <panel name="key_menu_ok_exit" />
   </screen>

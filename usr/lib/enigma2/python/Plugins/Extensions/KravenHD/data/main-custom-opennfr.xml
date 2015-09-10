@@ -265,10 +265,10 @@
   <widget name="swapstatus_label" position="70,612" size="250,30" foregroundColor="KravenFont1" font="Regular;20" transparent="1" />
   <widget name="swapstatus_status" position="320,612" size="250,30" halign="right" foregroundColor="KravenFont1" font="Regular;20" transparent="1" />
   <widget font="Regular; 22" halign="left" name="status" position="70,80" size="710,25" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-  <widget name="ButtonRedtext" font="Regular; 20" halign="left" valign="center" position="64,662" size="148,48" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" /> 
-  <widget name="ButtonGreentext" font="Regular; 20" halign="left" valign="center" position="264,662" size="148,48" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-  <widget name="ButtonYellowtext" font="Regular; 20" halign="left" valign="center" position="464,662" size="148,48" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-  <widget name="ButtonBluetext" font="Regular; 20" halign="left" valign="center" position="664,662" size="148,48" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+  <widget name="ButtonRedtext" font="Regular; 20" halign="left" valign="center" position="64,662" size="148,48" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" /> 
+  <widget name="ButtonGreentext" font="Regular; 20" halign="left" valign="center" position="264,662" size="148,48" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+  <widget name="ButtonYellowtext" font="Regular; 20" halign="left" valign="center" position="464,662" size="148,48" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+  <widget name="ButtonBluetext" font="Regular; 20" halign="left" valign="center" position="664,662" size="148,48" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
   <panel name="template_menu_left_button" />
 </screen>
 

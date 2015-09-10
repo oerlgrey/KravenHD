@@ -1,6 +1,6 @@
 <!-- /* EMC MiniTV -->
 <screen name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
-  <eLabel backgroundColor="KravenBackground" font="Regular2;34" foregroundColor="KravenFont2" halign="center" position="33,12" size="450,45" text="Enhanced Movie Center" transparent="1" />
+  <eLabel backgroundColor="KravenInfobar2Background" font="Regular2;34" foregroundColor="KravenFont2" halign="center" position="33,12" size="450,45" text="Enhanced Movie Center" transparent="1" />
   <widget name="list" position="51,102" size="755,352" itemHeight="32" CoolFont="Regular;23" CoolSelectFont="Regular;23" CoolDateFont="Regular;23" CoolProgressPos="1000" CoolBarPos="620" CoolBarHPos="10" CoolBarSize="50,10" CoolBarSizeSa="110,16" CoolMoviePos="35" CoolMovieSize="545" CoolFolderSize="550" CoolDatePos="1000" CoolDateWidth="150" CoolTitleColor="1" CoolDateColor="1" CoolHighlightColor="0" DefaultColor="KravenFont1" UnwatchedColor="KravenFont1" WatchingColor="blue" FinishedColor="green" RecordingColor="red" BackColor="KravenBackground" BackColorSel="KravenSelection" FrontColorSel="KravenSelFont" backgroundColorSelected="KravenSelection" foregroundColorSelected="KravenSelFont" backgroundColor="KravenBackground" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
   <widget source="Service" render="Label" position="51,70" size="541,27" font="Regular; 22" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" noWrap="1" halign="left">
 	<convert type="KravenHDDiskSpace">path</convert>
@@ -35,7 +35,7 @@
   </widget>
   <widget source="session.VideoPicture" render="Pig" position="845,228" size="391,220" zPosition="3" backgroundColor="transparent" />
   <widget name="Cover" position="992,460" size="100,151" zPosition="4" backgroundColor="KravenBackground" alphatest="on" transparent="0" />
-  <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1" valign="center" foregroundColor="KravenFont1">
+  <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenInfobar2Background" transparent="1" valign="center" foregroundColor="KravenFont1">
     <convert type="KravenHDClockToText">Default</convert>
   </widget>
   <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="65,692" size="200,5" />
@@ -45,9 +45,10 @@
     <eLabel backgroundColor="KravenBackground" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
   <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
   <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
-  <widget font="Regular; 20" halign="left" valign="center" name="key_red" position="70,665" size="220,26" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-  <widget font="Regular; 20" halign="left" valign="center" name="key_green" position="320,665" size="220,26" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-  <widget font="Regular; 20" halign="left" valign="center" name="key_yellow" position="570,665" size="220,26" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-  <widget font="Regular; 20" halign="left" valign="center" name="key_blue" position="820,665" size="220,26" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="2" />
+  <widget font="Regular; 20" halign="left" valign="center" name="key_red" position="70,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+  <widget font="Regular; 20" halign="left" valign="center" name="key_green" position="320,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+  <widget font="Regular; 20" halign="left" valign="center" name="key_yellow" position="570,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+  <widget font="Regular; 20" halign="left" valign="center" name="key_blue" position="820,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="2" />
+  <panel name="key_menu_ok_exit" />
 </screen>
 <!-- EMC MiniTV */-->

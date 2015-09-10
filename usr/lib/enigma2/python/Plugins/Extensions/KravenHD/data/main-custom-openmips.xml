@@ -296,8 +296,8 @@
     <widget source="Gateway" render="Label" position="1055,492" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
     <widget source="DNS1" render="Label" position="1055,522" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
     <widget source="DNS2" render="Label" position="1055,552" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <widget font="Regular; 20" halign="left" valign="center" source="key_red" position="70,665" size="220,26" render="Label" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" source="key_blue" position="820,665" size="220,26" render="Label" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+    <widget font="Regular; 20" halign="left" valign="center" source="key_red" position="70,665" size="220,26" render="Label" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+    <widget font="Regular; 20" halign="left" valign="center" source="key_blue" position="820,665" size="220,26" render="Label" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
     <panel name="template_menu_left_button" />
   </screen>
 

@@ -965,7 +965,7 @@ class KravenHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="830,80" size="402,46" text="KravenHD" font="Regular; 36" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" name="," />
-  <eLabel position="845,130" size="372,46" text="Version: 6.2.2" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+  <eLabel position="845,130" size="372,46" text="Version: 6.2.6" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
   <ePixmap backgroundColor="#00000000" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/about.png" position="847,230" size="368,207" zPosition="-9" />
   <widget name="helperimage" position="847,230" size="368,207" zPosition="1" backgroundColor="#00000000" />
 </screen>
@@ -1370,20 +1370,24 @@ class KravenHD(ConfigListScreen, Screen):
 			self.ibar = ("ibaro_" + self.skincolorinfobarcolor + ".png")
 			self.skinSearchAndReplace.append(["ibaro.png", self.ibar])
 			
+			### Menu OK Exit
+			if config.plugins.KravenHD.Image.value == "main-custom-atemio4you" or config.plugins.KravenHD.Image.value == "main-custom-openhdf" or config.plugins.KravenHD.Image.value == "main-custom-openmips" or config.plugins.KravenHD.Image.value == "main-custom-opennfr":
+				self.skinSearchAndReplace.append(['<panel name="key_menu_ok_exit" />'," "])
+				self.skinSearchAndReplace.append(['<panel name="key_ok_exit" />'," "])
+				self.skinSearchAndReplace.append(['<panel name="key_exit" />'," "])
+				self.skinSearchAndReplace.append(['<ePixmap  pixmap="KravenHD/icons-light/infobar/key_menu.png" position="1090,235" size="43,22" alphatest="blend" />'," "])
+				self.skinSearchAndReplace.append(['<ePixmap  pixmap="KravenHD/icons-light/infobar/key_ok.png" position="1140,235" size="43,22" alphatest="blend" />'," "])
+				self.skinSearchAndReplace.append(['<ePixmap  pixmap="KravenHD/icons-light/infobar/key_exit.png" position="1190,235" size="43,22" alphatest="blend" />'," "])
+			
 			### IB Color visible
 			if config.plugins.KravenHD.IBColor.value == "only-infobar":
+				self.skinSearchAndReplace.append(['name="KravenInfobar2Background" value="#00000000', 'name="KravenInfobar2Background" value="#' + config.plugins.KravenHD.BackgroundColorTrans.value + config.plugins.KravenHD.Background.value])
 				self.skinSearchAndReplace.append(['<ePixmap pixmap="KravenHD/header-kraven/ibar_' + config.plugins.KravenHD.SkinColorInfobar.value + '.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />'," "])
 				self.skinSearchAndReplace.append(['<ePixmap pixmap="KravenHD/header-kraven/ibaro_' + config.plugins.KravenHD.SkinColorInfobar.value + '.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />'," "])
 				self.skinSearchAndReplace.append(['<ePixmap pixmap="KravenHD/header-kraven/ibar_' + config.plugins.KravenHD.SkinColorInfobar.value + '.png" position="0,555" size="400,400" alphatest="blend" zPosition="-9" />'," "])
 				self.skinSearchAndReplace.append(['<ePixmap pixmap="KravenHD/header-kraven/ibaro_' + config.plugins.KravenHD.SkinColorInfobar.value + '.png" position="0,-60" size="400,443" alphatest="blend" zPosition="-9" />'," "])
 			elif config.plugins.KravenHD.IBColor.value == "all-screens":
-				self.skinSearchAndReplace.append(['backgroundColor="KravenBackground" font="Regular2;34" foregroundColor="KravenFont2"','backgroundColor="KravenInfobarBackground" font="Regular2;34" foregroundColor="KravenFont2"'])
-				self.skinSearchAndReplace.append(['backgroundColor="KravenBackground"  font="Regular2;30"','backgroundColor="KravenInfobarBackground" font="Regular2;30"'])
-				self.skinSearchAndReplace.append(['backgroundColor="KravenBackground" foregroundColor="KravenButtonText"','backgroundColor="KravenInfobarBackground" foregroundColor="KravenButtonText"'])
-				self.skinSearchAndReplace.append(['position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground"','position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenInfobarBackground"'])
-				self.skinSearchAndReplace.append(['position="274,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground"','position="274,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenInfobarBackground"'])
-				self.skinSearchAndReplace.append(['KravenBackground" position="390,22" font="Regular;24','KravenInfobarBackground" position="390,22" font="Regular;24'])
-				self.skinSearchAndReplace.append(['KravenBackground" name="date" position="1060,670','KravenInfobarBackground" name="date" position="1060,670'])
+				self.skinSearchAndReplace.append(['name="KravenInfobar2Background" value="#00000000', 'name="KravenInfobar2Background" value="#00' + config.plugins.KravenHD.SkinColorInfobar.value])
 			
 			self.analogstylecolor = config.plugins.KravenHD.AnalogStyle.value
 			self.analog = ("analog_" + self.analogstylecolor + ".png")
@@ -1464,15 +1468,21 @@ class KravenHD(ConfigListScreen, Screen):
 			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
 				if config.plugins.KravenHD.ECMInfo.value == "ecm-info-on":
 					self.appendSkinFile(self.daten + "infobar-ecminfo-x1.xml")
-			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2":
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1":
 				if config.plugins.KravenHD.ECMInfo.value == "ecm-info-on":
 					self.appendSkinFile(self.daten + "infobar-ecminfo-x2.xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2":
+				if config.plugins.KravenHD.ECMInfo.value == "ecm-info-on":
+					self.appendSkinFile(self.daten + "infobar-ecminfo-x3.xml")
 			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz4" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
 				if config.plugins.KravenHD.ECMInfo.value == "ecm-info-on":
 					self.appendSkinFile(self.daten + "infobar-ecminfo-zz1.xml")
-			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3":
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2":
 				if config.plugins.KravenHD.ECMInfo.value == "ecm-info-on":
 					self.appendSkinFile(self.daten + "infobar-ecminfo-zz2.xml")
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3":
+				if config.plugins.KravenHD.ECMInfo.value == "ecm-info-on":
+					self.appendSkinFile(self.daten + "infobar-ecminfo-zz3.xml")
 
 			### system-info
 			self.appendSkinFile(self.daten + config.plugins.KravenHD.SystemInfo.value + ".xml")

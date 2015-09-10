@@ -163,7 +163,7 @@ class KravenHDYWeather(Poll, Converter, object):
 		os.popen("echo -e 'None' >> /tmp/KravenHDweather.xml")
 		
 	def get_xmlfile(self):
-		os.popen("wget -P /tmp -T2 'http://xml.weather.yahoo.com/forecastrss?w=%s&u=c' -O /tmp/KravenHDweather.xml" % str(config.plugins.KravenHD.weather_city.value))
+		os.popen("wget -P /tmp -T2 'http://weather.yahooapis.com/forecastrss?w=%s&u=c' -O /tmp/KravenHDweather.xml" % str(config.plugins.KravenHD.weather_city.value))
 			
 	@cached
 	def getText(self):
@@ -199,10 +199,10 @@ class KravenHDYWeather(Poll, Converter, object):
 				xweather['ytemp'] = line.split('temp')[1].split('"')[1]
 			elif "<yweather:forecast" in line:
 				fweather.append(line.split('<yweather:forecast')[-1].split('/>')[0].strip())
-				
-		if self.type == self.city:
+		try:		
+		   if self.type == self.city:
 			info = xweather['ycity']
-		elif self.type == self.direction:
+		   elif self.type == self.direction:
 			if not xweather['ydirection'] is 'N/A':
 				direct = int(xweather['ydirection'])
 				if direct >= 0 and direct <= 20:
@@ -241,22 +241,22 @@ class KravenHDYWeather(Poll, Converter, object):
 					info = _('N')
                                 else:
 					info = _('N/A')
-		elif self.type == self.speed:
+		   elif self.type == self.speed:
 			info = xweather['yspeed'] + _(' km/h')
-		elif self.type == self.humidity:
+		   elif self.type == self.humidity:
 			info = xweather['yhumidity'] + '%'
-		elif self.type == self.wtext:
+		   elif self.type == self.wtext:
 			info = xweather['ytext']
-		elif self.type == self.feels:
+		   elif self.type == self.feels:
 			if not info is "N/A":
 				info = xweather['feels'] + '%s' % unichr(176).encode("latin-1") + xweather['ymetric']
-		elif self.type == self.temp:
+		   elif self.type == self.temp:
 			if not info is "N/A":
 				info = xweather['ytemp'] + '%s' % unichr(176).encode("latin-1") + xweather['ymetric']
-		elif self.type == self.picon:
+		   elif self.type == self.picon:
 			info = xweather['ypicon']
 #####################################################
-		elif self.type == self.fweekday0:
+		   elif self.type == self.fweekday0:
 			if len(fweather) >= 1:
 				if fweather[0].split('"')[1] == 'Mon':
 					info = _('Mon')
@@ -276,7 +276,7 @@ class KravenHDYWeather(Poll, Converter, object):
 					info = "N/A"
 			else:
 				info = "N/A"
-		elif self.type == self.fweekday1:
+		   elif self.type == self.fweekday1:
 			if len(fweather) >= 2:
 				if fweather[1].split('"')[1] == 'Mon':
 					info = _('Mon')
@@ -296,7 +296,7 @@ class KravenHDYWeather(Poll, Converter, object):
 					info = "N/A"
 			else:
 				info = "N/A"
-		elif self.type == self.fweekday2:
+		   elif self.type == self.fweekday2:
 			if len(fweather) >= 3:
 				if fweather[2].split('"')[1] == 'Mon':
 					info = _('Mon')
@@ -316,7 +316,7 @@ class KravenHDYWeather(Poll, Converter, object):
 					info = "N/A"
 			else:
 				info = "N/A"
-		elif self.type == self.fweekday3:
+		   elif self.type == self.fweekday3:
 			if len(fweather) >= 4:
 				if fweather[3].split('"')[1] == 'Mon':
 					info = _('Mon')
@@ -336,7 +336,7 @@ class KravenHDYWeather(Poll, Converter, object):
 					info = "N/A"
 			else:
 				info = "N/A"
-		elif self.type == self.fweekday4:
+		   elif self.type == self.fweekday4:
 			if len(fweather) >= 5:
 				if fweather[4].split('"')[1] == 'Mon':
 					info = _('Mon')
@@ -356,82 +356,82 @@ class KravenHDYWeather(Poll, Converter, object):
 					info = "N/A"
 			else:
 				info = "N/A"
-		elif self.type == self.ftemp_high0:
+		   elif self.type == self.ftemp_high0:
 			if len(fweather) >= 1:
 				info = fweather[0].split('"')[7] + '%s' % unichr(176).encode("latin-1")
 			else:
 				info = "N/A"
-		elif self.type == self.ftemp_low0:
+		   elif self.type == self.ftemp_low0:
 			if len(fweather) >= 1:
 				info = fweather[0].split('"')[5] + '%s' % unichr(176).encode("latin-1")
 			else:
 				info = "N/A"
-		elif self.type == self.ftemp_high1:
+		   elif self.type == self.ftemp_high1:
 			if len(fweather) >= 2:
 				info = fweather[1].split('"')[7] + '%s' % unichr(176).encode("latin-1")
 			else:
 				info = "N/A"
-		elif self.type == self.ftemp_low1:
+		   elif self.type == self.ftemp_low1:
 			if len(fweather) >= 2:
 				info = fweather[1].split('"')[5] + '%s' % unichr(176).encode("latin-1")
 			else:
 				info = "N/A"
-		elif self.type == self.ftemp_high2:
+		   elif self.type == self.ftemp_high2:
 			if len(fweather) >= 3:
 				info = fweather[2].split('"')[7] + '%s' % unichr(176).encode("latin-1")
 			else:
 				info = "N/A"
-		elif self.type == self.ftemp_low2:
+		   elif self.type == self.ftemp_low2:
 			if len(fweather) >= 3:
 				info = fweather[2].split('"')[5] + '%s' % unichr(176).encode("latin-1")
 			else:
 				info = "N/A"
-		elif self.type == self.ftemp_high3:
+		   elif self.type == self.ftemp_high3:
 			if len(fweather) >= 4:
 				info = fweather[3].split('"')[7] + '%s' % unichr(176).encode("latin-1")
 			else:
 				info = "N/A"
-		elif self.type == self.ftemp_low3:
+		   elif self.type == self.ftemp_low3:
 			if len(fweather) >= 4:
 				info = fweather[3].split('"')[5] + '%s' % unichr(176).encode("latin-1")
 			else:
 				info = "N/A"
-		elif self.type == self.ftemp_high4:
+		   elif self.type == self.ftemp_high4:
 			if len(fweather) >= 5:
 				info = fweather[4].split('"')[7] + '%s' % unichr(176).encode("latin-1")
 			else:
 				info = "N/A"
-		elif self.type == self.ftemp_low4:
+		   elif self.type == self.ftemp_low4:
 			if len(fweather) >= 5:
 				info = fweather[4].split('"')[5] + '%s' % unichr(176).encode("latin-1")
 			else:
 				info = "N/A"
-		elif self.type == self.fpicon0:
+		   elif self.type == self.fpicon0:
 			if len(fweather) >= 1:
 				info = fweather[0].split('"')[-2]
 			else:
 				info = "3200"
-		elif self.type == self.fpicon1:
+		   elif self.type == self.fpicon1:
 			if len(fweather) >= 2:
 				info = fweather[1].split('"')[-2]
 			else:
 				info = "3200"
-		elif self.type == self.fpicon2:
+		   elif self.type == self.fpicon2:
 			if len(fweather) >= 3:
 				info = fweather[2].split('"')[-2]
 			else:
 				info = "3200"
-		elif self.type == self.fpicon3:
+		   elif self.type == self.fpicon3:
 			if len(fweather) >= 4:
 				info = fweather[3].split('"')[-2]
 			else:
 				info = "3200"
-		elif self.type == self.fpicon4:
+		   elif self.type == self.fpicon4:
 			if len(fweather) >= 5:
 				info = fweather[4].split('"')[-2]
 			else:
 				info = "3200"
-		elif self.type == self.ftext0:
+		   elif self.type == self.ftext0:
 			if len(fweather) >= 1:
 				if fweather[0].split('"')[-2] == '0':
 					info = _('Tornado')
@@ -535,7 +535,7 @@ class KravenHDYWeather(Poll, Converter, object):
 					info = "N/A"
 			else:
 				info = "N/A"
-		elif self.type == self.ftext1:
+		   elif self.type == self.ftext1:
 			if len(fweather) >= 2:
 				if fweather[1].split('"')[-2] == '0':
 					info = _('Tornado')
@@ -639,7 +639,7 @@ class KravenHDYWeather(Poll, Converter, object):
 					info = "N/A"
 			else:
 				info = "N/A"
-		elif self.type == self.ftext2:
+		   elif self.type == self.ftext2:
 			if len(fweather) >= 3:
 				if fweather[2].split('"')[-2] == '0':
 					info = _('Tornado')
@@ -743,7 +743,7 @@ class KravenHDYWeather(Poll, Converter, object):
 					info = "N/A"
 			else:
 				info = "N/A"
-		elif self.type == self.ftext3:
+		   elif self.type == self.ftext3:
 			if len(fweather) >= 4:
 				if fweather[3].split('"')[-2] == '0':
 					info = _('Tornado')
@@ -847,7 +847,7 @@ class KravenHDYWeather(Poll, Converter, object):
 					info = "N/A"
 			else:
 				info = "N/A"
-		elif self.type == self.ftext4:
+		   elif self.type == self.ftext4:
 			if len(fweather) >= 5:
 				if fweather[4].split('"')[-2] == '0':
 					info = _('Tornado')
@@ -951,9 +951,9 @@ class KravenHDYWeather(Poll, Converter, object):
 					info = "N/A"
 			else:
 				info = "N/A"
-		elif self.type == self.cityid:
+		   elif self.type == self.cityid:
 			info = config.plugins.KravenHD.weather_city.value
-		elif self.type == self.wind:
+		   elif self.type == self.wind:
 			wspeed = xweather['yspeed'][:-3] + _(' km/h')
 			if not xweather['ydirection'] is 'N/A':
 				direct = int(xweather['ydirection'])
@@ -994,14 +994,16 @@ class KravenHDYWeather(Poll, Converter, object):
 				else:
 					wdirect = _('N/A')
 			info = wspeed + _(' from ') + wdirect
-		elif self.type == self.templang:
+		   elif self.type == self.templang:
 			if not info is "N/A":
 				temp1 = xweather['ytemp'] + '%s' % unichr(176).encode("latin-1") + xweather['ymetric']
 				temp2 = xweather['feels'] + '%s' % unichr(176).encode("latin-1") + xweather['ymetric']
 				info = temp1 + _(', feels ') + temp2
-		elif self.type == self.klima:
+		   elif self.type == self.klima:
 			info = xweather['yhumidity'] + _('% humidity')
-		return info
+                except IndexError:
+                   info = "N/A"
+                return info
 ######################################################
 	text = property(getText)
 

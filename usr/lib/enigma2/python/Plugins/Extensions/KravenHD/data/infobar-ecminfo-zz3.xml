@@ -1,0 +1,5 @@
+<!-- /* ECM-Info -->
+<widget source="session.CurrentService" render="Label" position="439,587" size="655,22" font="Regular;16" halign="left" foregroundColor="KravenECMFont" backgroundColor="KravenIbarBackground" transparent="1" zPosition="1">
+  <convert type="KravenHDCaidDisplay2">Default</convert>
+</widget>
+<!-- ECM-Info */ -->

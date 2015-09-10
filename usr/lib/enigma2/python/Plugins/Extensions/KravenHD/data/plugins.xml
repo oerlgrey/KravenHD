@@ -233,10 +233,10 @@
   <!-- DreamExplorerII -->
   <screen name="DreamExplorerII" position="0,0" size="1280,720" flags="wfNoBorder" title="Dream-Explorer" backgroundColor="transparent">
     <widget name="filelist" position="70,80" size="708,540" scrollbarMode="showNever" backgroundColor="KravenBackground" transparent="1" />
-    <eLabel text="delete" position="70,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
-    <eLabel text="Rename" position="320,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
-    <eLabel text="Move/Copy" position="570,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
-    <eLabel text="Bookmarks" position="820,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="delete" position="70,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="Rename" position="320,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="Move/Copy" position="570,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="Bookmarks" position="820,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
     <panel name="template_menu_left_button" />
   </screen>
   <!-- vEditor -->
@@ -254,8 +254,8 @@
   <screen name="CPmaniger" position="0,0" size="1280,720" flags="wfNoBorder" title="Select Copy/Move location..." backgroundColor="transparent">
     <widget name="File" position="70,80" size="708,160" scrollbarMode="showNever" backgroundColor="KravenBackground" transparent="1" />
     <widget name="CPto" position="70,240" size="708,330" scrollbarMode="showNever" backgroundColor="KravenBackground" transparent="1" />
-    <eLabel text="Move" position="70,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
-    <eLabel text="Copy" position="570,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="Move" position="70,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="Copy" position="570,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
     <panel name="template_menu_left_button" />
   </screen>
   <!-- MusicExplorer -->
@@ -422,11 +422,11 @@
     <ePixmap  pixmap="KravenHD/icons-light/icons/key_menu.png" position="67,543" size="43,22" alphatest="blend" />
     <eLabel text="Einfache Suche" position="132,507" size="240,24" zPosition="1" font="Regular; 20" foregroundColor="KravenButtonText" halign="left" backgroundColor="KravenBackground" transparent="1" />
     <ePixmap  pixmap="KravenHD/icons-light/icons/key_ok.png" position="67,508" size="43,22" alphatest="blend" />
-    <widget backgroundColor="KravenBackground" font="Regular2;34" foregroundColor="KravenFont2" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
+    <widget backgroundColor="KravenInfobar2Background" font="Regular2;34" foregroundColor="KravenFont2" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
     <eLabel text="Einstellungen" position="132,542" size="240,24" zPosition="1" font="Regular; 20" foregroundColor="KravenButtonText" halign="left" backgroundColor="KravenBackground" transparent="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="ButtonRedText" position="70,665" size="220,26" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="ButtonGreenText" position="320,665" size="220,26" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <eLabel text="Manage Cover" position="570,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
+    <widget font="Regular; 20" halign="left" valign="center" name="ButtonRedText" position="70,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+    <widget font="Regular; 20" halign="left" valign="center" name="ButtonGreenText" position="320,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
+    <eLabel text="Manage Cover" position="570,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
     <panel name="template_menu_full_button" />
   </screen>
   <!-- imdbSetup -->
@@ -468,9 +468,9 @@
     <widget name="resulttext" position="70,600" size="708,28" font="Regular2; 22" halign="center" backgroundColor="KravenBackground" transparent="1" foregroundColor="KravenFont2" />
     <ePixmap  pixmap="KravenHD/icons-light/infobar/key_exit.png" position="655,675" size="43,22" alphatest="blend" />
     <ePixmap  pixmap="KravenHD/icons-light/infobar/key_epg.png" position="444,675" size="43,22" alphatest="blend" />
-    <widget name="movieinfo" position="75,676" size="148,24" font="Regular; 17" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" halign="left" valign="top" />
-    <widget name="save" position="286,676" size="148,24" font="Regular; 17" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" halign="left" valign="top" />
-    <widget name="setup" position="497,676" size="148,24" font="Regular; 17" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" halign="left" valign="top" />
+    <widget name="movieinfo" position="75,676" size="148,24" font="Regular; 17" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" halign="left" valign="top" />
+    <widget name="save" position="286,676" size="148,24" font="Regular; 17" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" halign="left" valign="top" />
+    <widget name="setup" position="497,676" size="148,24" font="Regular; 17" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" halign="left" valign="top" />
     <panel name="template_menu_full" />
   </screen>
   <!-- MovieInfoPreview -->
@@ -749,15 +749,15 @@
   <!-- DirectoryBrowser -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="DirectoryBrowser" position="0,0" size="1280,720" title="Directorybrowser">
     <widget name="filelist" position="70,80" scrollbarMode="showNever" size="708,540" transparent="1" zPosition="3" />
-    <eLabel text="Cancel" position="70,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
-    <eLabel text="Save" position="320,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="Cancel" position="70,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="Save" position="320,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
     <panel name="template_menu_left_button" />
   </screen>
   <!-- MediaPlayerSettings -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MediaPlayerSettings" position="0,0" size="1280,720" title="Edit Settings">
     <widget name="config" position="70,80" scrollbarMode="showNever" size="708,540" transparent="1" zPosition="3" />
-    <eLabel text="Cancel" position="70,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
-    <eLabel text="Save" position="320,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="Cancel" position="70,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="Save" position="320,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
     <panel name="template_menu_left_button" />
   </screen>
   <!-- ********** Merlin Music Player ********** -->
@@ -809,8 +809,8 @@
   <!-- MerlinMusicPlayerSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MerlinMusicPlayerSetup" position="0,0" size="1280,710" title="Merlin Music Player">
     <widget name="config" position="70,80" size="708,540" backgroundColor="KravenBackground" transparent="1" />
-    <eLabel text="Cancel" position="70,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
-    <eLabel text="OK" position="320,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="Cancel" position="70,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
+    <eLabel text="OK" position="320,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
     <panel name="template_menu_left_button" />
   </screen>
   <!-- MerlinMusicPlayerSongList -->
@@ -1213,7 +1213,7 @@
     <widget alphatest="blend" name="random" position="144,472" size="50,30" />
     <widget alphatest="blend" name="subdirs" position="231,472" size="50,30" />
     <widget alphatest="blend" name="auto" position="319,472" size="50,30" />
-    <widget source="global.CurrentTime" render="Label" position="274,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenBackground" transparent="1" valign="center" foregroundColor="KravenFont1">
+    <widget source="global.CurrentTime" render="Label" position="274,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenInfobar2Background" transparent="1" valign="center" foregroundColor="KravenFont1">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
     <eLabel backgroundColor="KravenBackground" position="0,0" size="400,720" transparent="0" zPosition="-9" />

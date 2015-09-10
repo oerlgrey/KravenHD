@@ -38,7 +38,7 @@ def _(txt):
 		t = gettext.gettext(txt)
 	return t
 
-class KravenHDCaidDisplay(Poll, Converter, object):
+class KravenHDCaidDisplay2(Poll, Converter, object):
 	def __init__(self, type):
 		Poll.__init__(self)
 		Converter.__init__(self, type)
@@ -93,7 +93,7 @@ class KravenHDCaidDisplay(Poll, Converter, object):
 
 	@cached
 	def getText(self):
-		textvalue = ""
+		textvalue = _('free to air')
 		service = self.source.service
 		if service:
 			info = service and service.info()

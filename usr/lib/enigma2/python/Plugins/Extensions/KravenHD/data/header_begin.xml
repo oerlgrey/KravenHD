@@ -24,6 +24,7 @@
     <color name="KravenButtonStyleFont" value="#00fff0e0" />
     <color name="KravenLine" value="#00ffffff" />
     <color name="KravenInfobarBackground" value="#001B1775" />
+    <color name="KravenInfobar2Background" value="#00000000" />
     <color name="KravenNameBackground" value="#A01B1775" />
     <color name="KravenIbarBackground" value="#4A1B1775" />
     <color name="KravenProgress" value="#00C3461B" />
