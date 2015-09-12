@@ -1298,31 +1298,34 @@ class KravenHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(['name="KravenPrimetimeFont" value="#0070AD11', 'name="KravenPrimetimeFont" value="#' + config.plugins.KravenHD.PrimetimeFont.value])
 			self.skinSearchAndReplace.append(['name="KravenButtonText" value="#00ffffff', 'name="KravenButtonText" value="#' + config.plugins.KravenHD.ButtonText.value])
 			
+			### Icons
+			if config.plugins.KravenHD.IBColor.value == "only-infobar" and config.plugins.KravenHD.IconStyle2.value == "icons-dark2":
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_epg", "KravenHD/icons-dark/icons/key_epg"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_exit", "KravenHD/icons-dark/icons/key_exit"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_menu", "KravenHD/icons-dark/icons/key_menu"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_ok", "KravenHD/icons-dark/icons/key_ok"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/icons", "KravenHD/icons-dark/icons"])
+			elif config.plugins.KravenHD.IBColor.value == "only-infobar" and config.plugins.KravenHD.IconStyle2.value == "icons-light2":
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_epg", "KravenHD/icons-light/icons/key_epg"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_exit", "KravenHD/icons-light/icons/key_exit"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_menu", "KravenHD/icons-light/icons/key_menu"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_ok", "KravenHD/icons-light/icons/key_ok"])
+			elif config.plugins.KravenHD.IBColor.value == "all-screens" and config.plugins.KravenHD.IconStyle2.value == "icons-dark2":
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_epg", "KravenHD/icons-light/infobar/key_epg"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_exit", "KravenHD/icons-light/infobar/key_exit"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_menu", "KravenHD/icons-light/infobar/key_menu"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_ok", "KravenHD/icons-light/infobar/key_ok"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/icons", "KravenHD/icons-dark/icons"])
+			elif config.plugins.KravenHD.IBColor.value == "all-screens" and config.plugins.KravenHD.IconStyle2.value == "icons-light2":
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_epg", "KravenHD/icons-light/infobar/key_epg"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_exit", "KravenHD/icons-light/infobar/key_exit"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_menu", "KravenHD/icons-light/infobar/key_menu"])
+				self.skinSearchAndReplace.append(["KravenHD/icons-light/key_ok", "KravenHD/icons-light/infobar/key_ok"])
+			
 			### Infobar-Icons
 			if config.plugins.KravenHD.IconStyle.value == "icons-dark":
 				self.skinSearchAndReplace.append(['name="KravenButtonStyleFont" value="#00fff0e0"', 'name="KravenButtonStyleFont" value="#00000000"'])
 				self.skinSearchAndReplace.append(["KravenHD/icons-light/infobar", "KravenHD/icons-dark/infobar"])
-			
-			### Icons
-			if config.plugins.KravenHD.IconStyle.value == "icons-dark":
-				if config.plugins.KravenHD.IBColor.value == "only-infobar":
-					if config.plugins.KravenHD.IconStyle2.value == "icons-dark2":
-						self.skinSearchAndReplace.append(["light/infobar/key_epg", "dark/infobar/key_epg"])
-						self.skinSearchAndReplace.append(["light/infobar/key_exit", "dark/infobar/key_exit"])
-						self.skinSearchAndReplace.append(["light/infobar/key_menu", "dark/infobar/key_menu"])
-						self.skinSearchAndReplace.append(["light/infobar/key_ok", "dark/infobar/key_ok"])
-						self.skinSearchAndReplace.append(["light/icons/", "dark/icons/"])
-					elif config.plugins.KravenHD.IconStyle2.value == "icons-light2":
-						self.skinSearchAndReplace.append(["dark/infobar/key_epg", "light/infobar/key_epg"])
-						self.skinSearchAndReplace.append(["dark/infobar/key_exit", "light/infobar/key_exit"])
-						self.skinSearchAndReplace.append(["dark/infobar/key_menu", "light/infobar/key_menu"])
-						self.skinSearchAndReplace.append(["dark/infobar/key_ok", "light/infobar/key_ok"])
-						self.skinSearchAndReplace.append(["dark/icons/", "light/icons/"])
-				elif config.plugins.KravenHD.IBColor.value == "all-screens":
-					if config.plugins.KravenHD.IconStyle2.value == "icons-dark2":
-						self.skinSearchAndReplace.append(["light/icons/", "dark/icons/"])
-					elif config.plugins.KravenHD.IconStyle2.value == "icons-light2":
-						self.skinSearchAndReplace.append(["dark/icons/", "light/icons/"])
 			
 			### Progress
 			if not config.plugins.KravenHD.Progress.value == "progress":

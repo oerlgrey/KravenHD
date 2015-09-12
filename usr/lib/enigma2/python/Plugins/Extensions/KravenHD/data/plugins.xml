@@ -461,13 +461,13 @@
   </screen>
   <!-- DownloadMovieInfo -->
   <screen name="DownloadMovieInfo" position="0,0" size="1280,720" title="Download Movie Info" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap  pixmap="KravenHD/icons-light/infobar/key_ok.png" position="22,675" size="43,22" alphatest="blend" />
-    <ePixmap  pixmap="KravenHD/icons-light/infobar/key_menu.png" position="233,675" size="43,22" alphatest="blend" />
+    <ePixmap  pixmap="KravenHD/icons-light/key_ok.png" position="22,675" size="43,22" alphatest="blend" />
+    <ePixmap  pixmap="KravenHD/icons-light/key_menu.png" position="233,675" size="43,22" alphatest="blend" />
     <widget name="movielist" position="70,164" size="708,420" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" backgroundColor="KravenBackground" transparent="1" />
     <widget name="movie_name" position="70,80" size="708,70" font="Regular; 30" backgroundColor="KravenBackground" transparent="1" />
     <widget name="resulttext" position="70,600" size="708,28" font="Regular2; 22" halign="center" backgroundColor="KravenBackground" transparent="1" foregroundColor="KravenFont2" />
-    <ePixmap  pixmap="KravenHD/icons-light/infobar/key_exit.png" position="655,675" size="43,22" alphatest="blend" />
-    <ePixmap  pixmap="KravenHD/icons-light/infobar/key_epg.png" position="444,675" size="43,22" alphatest="blend" />
+    <ePixmap  pixmap="KravenHD/icons-light/key_exit.png" position="655,675" size="43,22" alphatest="blend" />
+    <ePixmap  pixmap="KravenHD/icons-light/key_epg.png" position="444,675" size="43,22" alphatest="blend" />
     <widget name="movieinfo" position="75,676" size="148,24" font="Regular; 17" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" halign="left" valign="top" />
     <widget name="save" position="286,676" size="148,24" font="Regular; 17" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" halign="left" valign="top" />
     <widget name="setup" position="497,676" size="148,24" font="Regular; 17" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" halign="left" valign="top" />

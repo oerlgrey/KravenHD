@@ -80,14 +80,14 @@
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
   </screen>
   <screen name="key_exit">
-    <ePixmap pixmap="KravenHD/icons-light/infobar/key_exit.png" position="1190,670" size="43,22" alphatest="blend" />
+    <ePixmap pixmap="KravenHD/icons-light/key_exit.png" position="1190,670" size="43,22" alphatest="blend" />
   </screen>
   <screen name="key_ok_exit">
-    <ePixmap pixmap="KravenHD/icons-light/infobar/key_ok.png" position="1140,670" size="43,22" alphatest="blend" />
-    <ePixmap pixmap="KravenHD/icons-light/infobar/key_exit.png" position="1190,670" size="43,22" alphatest="blend" />
+    <ePixmap pixmap="KravenHD/icons-light/key_ok.png" position="1140,670" size="43,22" alphatest="blend" />
+    <ePixmap pixmap="KravenHD/icons-light/key_exit.png" position="1190,670" size="43,22" alphatest="blend" />
   </screen>
   <screen name="key_menu_ok_exit">
-    <ePixmap pixmap="KravenHD/icons-light/infobar/key_menu.png" position="1090,670" size="43,22" alphatest="blend" />
-    <ePixmap pixmap="KravenHD/icons-light/infobar/key_ok.png" position="1140,670" size="43,22" alphatest="blend" />
-    <ePixmap pixmap="KravenHD/icons-light/infobar/key_exit.png" position="1190,670" size="43,22" alphatest="blend" />
+    <ePixmap pixmap="KravenHD/icons-light/key_menu.png" position="1090,670" size="43,22" alphatest="blend" />
+    <ePixmap pixmap="KravenHD/icons-light/key_ok.png" position="1140,670" size="43,22" alphatest="blend" />
+    <ePixmap pixmap="KravenHD/icons-light/key_exit.png" position="1190,670" size="43,22" alphatest="blend" />
   </screen>
