@@ -1,5 +1,20 @@
 from Components.Converter.Converter import Converter
 from Components.Element import cached
+from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
+from Components.Language import language
+import gettext, os
+
+lang = language.getLanguage()
+os.environ["LANGUAGE"] = lang[:2]
+gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
+gettext.textdomain("enigma2")
+gettext.bindtextdomain("KravenHD", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/KravenHD/locale/"))
+
+def _(txt):
+	t = gettext.dgettext("KravenHD", txt)
+	if t == txt:
+		t = gettext.gettext(txt)
+	return t
 
 class KravenHDFrontendInfo(Converter, object):
 	BER = 0
@@ -43,7 +58,7 @@ class KravenHDFrontendInfo(Converter, object):
 			percent = self.source.snr
 		elif self.type == self.SNRdB:
 			if self.source.snr_db is not None:
-				return "%3.02f dB" % (self.source.snr_db / 100.0)
+				return "%3.01f" % (self.source.snr_db / 100.0) + _("dB")
 			elif self.source.snr is not None: #fallback to normal SNR...
 				percent = self.source.snr
 		elif self.type == self.TUNER_TYPE:

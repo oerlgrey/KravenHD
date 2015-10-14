@@ -24,16 +24,17 @@
     <color name="KravenButtonStyleFont" value="#00fff0e0" />
     <color name="KravenLine" value="#00ffffff" />
     <color name="KravenInfobarBackground" value="#001B1775" />
-    <color name="KravenInfobar2Background" value="#00000000" />
     <color name="KravenNameBackground" value="#A01B1775" />
     <color name="KravenIbarBackground" value="#4A1B1775" />
+    <color name="KravenInfobar2Background" value="#00000000" />
     <color name="KravenProgress" value="#00C3461B" />
     <color name="KravenSelection" value="#00213305" />
     <color name="KravenSelFont" value="#00ffffff" />
     <color name="KravenMarkedFont" value="#00ffffff" />
-    <color name="KravenECMFont" value="#0070AD11" />
+    <color name="KravenECMFont" value="#00ffffff" />
     <color name="KravenChannelnameFont" value="#00ffffff" />
     <color name="KravenPrimetimeFont" value="#0070AD11" />
+    <color name="KravenMeteoFont" value="#00fff0e0" />
     <color name="orange" value="#00dc5221" />
     <color name="rds_text_bg" value="#00003258" />
     <color name="red" value="#00f23d21" />
@@ -50,6 +51,7 @@
     <font filename="KravenHD/fonts/nmsbd2.ttf" name="Arial" scale="100" />
     <font filename="KravenHD/fonts/OpenSans-Regular.ttf" name="Regular" scale="95" />
     <font filename="KravenHD/fonts/OpenSans-Semibold.ttf" name="Regular2" scale="95" />
+    <font filename="KravenHD/fonts/meteocons.ttf" name="Meteo" scale="100" />
   </fonts>
   <subtitles>
     <sub font="Regular;30" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="3,3" />

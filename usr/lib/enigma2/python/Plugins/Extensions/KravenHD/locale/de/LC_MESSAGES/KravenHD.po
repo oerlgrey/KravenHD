@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2015-09-06 12:25+0100\n"
+"PO-Revision-Date: 2015-10-14 19:34+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -543,6 +543,10 @@ msgid "colorfull"
 msgstr "bunt"
 
 #: KravenHD.py
+msgid "colorfull2"
+msgstr "bunt2"
+
+#: KravenHD.py
 msgid "big"
 msgstr "groß"
 
@@ -567,16 +571,44 @@ msgid "______________________ Global-Colors ___________________________"
 msgstr "______________________ Globale Farben __________________________"
 
 #: KravenHD.py
-msgid "______________________ Infobar__________________________________"
-msgstr "______________________ Infobar__________________________________"
+msgid "______________________ Infobar _________________________________"
+msgstr "______________________ Infobar _________________________________"
 
 #: KravenHD.py
-msgid "______________________ Views____________________________________"
-msgstr "______________________ Ansichten________________________________"
+msgid "______________________ Views ___________________________________"
+msgstr "______________________ Ansichten _______________________________"
 
 #: KravenHD.py
-msgid "______________________ Channellist______________________________"
-msgstr "______________________ Kanalliste_______________________________"
+msgid "______________________ Channellist _____________________________"
+msgstr "______________________ Kanalliste ______________________________"
+
+#: KravenHD.py
+msgid "______________________ Weather _________________________________"
+msgstr "______________________ Wetter __________________________________"
+
+#: KravenHD.py
+msgid "Refresh interval (in minutes)"
+msgstr "Aktualisierungsintervall (in Minuten)"
+
+#: KravenHD.py
+msgid "Screennames"
+msgstr "Screennamen"
+
+#: KravenHD.py
+msgid "Menus"
+msgstr "Menüs"
+
+#: KravenHD.py
+msgid "Weather-Style"
+msgstr "Wetter-Stil"
+
+#: KravenHD.py
+msgid "Meteo-Color"
+msgstr "Meteo-Farbe"
+
+#: KravenHD.py
+msgid "only available for Meteo-Style"
+msgstr "nur verfügbar für Meteo-Stil"
 
 #: KravenHD.py
 msgid "Channellist-Style"
@@ -587,8 +619,16 @@ msgid "Primetime"
 msgstr "Primetime"
 
 #: KravenHD.py
+msgid "Primetime-Time"
+msgstr "Primetime-Uhrzeit"
+
+#: KravenHD.py
 msgid "Primetime-Font"
 msgstr "Primetime-Schrift"
+
+#: KravenHD.py
+msgid "only available when Primetime is activated"
+msgstr "nur verfügbar bei aktivierter Primetime"
 
 #: KravenHD.py
 msgid "Lines"
@@ -687,7 +727,7 @@ msgid ""
 "GUI needs a restart to apply a new skin.\n"
 "Do you want to Restart the GUI now?"
 msgstr ""
-"Zum Schreiben des Skin muss die Oberfläche\n"
+"Zum Aktivieren des Skin muss die Oberfläche\n"
 "neu gestartet werden.\n"
 "\n"
 "Wollen Sie jetzt neu starten?"
@@ -797,8 +837,24 @@ msgid "dark"
 msgstr "dunkel"
 
 #: KravenHD.py
+msgid "thin"
+msgstr "schmal"
+
+#: KravenHD.py
+msgid "middle"
+msgstr "mittel"
+
+#: KravenHD.py
+msgid "wide"
+msgstr "breit"
+
+#: KravenHD.py
 msgid "Infobar-Style"
 msgstr "Infobar-Stil"
+
+#: KravenHD.py
+msgid "Scrollbars"
+msgstr "Scrollbalken"
 
 #: KravenHD.py
 msgid "only available for Clock Analog"
@@ -808,10 +864,34 @@ msgstr "nur verfügbar für Analog-Uhr"
 msgid "not available in this style"
 msgstr "in diesem Stil nicht verfügbar"
 
-#: KravenHDEcmInfoLine.py
+#: KravenHD.py
+msgid "not available when scrollbars activated"
+msgstr "nicht verfügbar bei aktivierten Scrollbalken"
+
+#: KravenHD.py
+msgid "Tuner/Satellite + SNR"
+msgstr "Tuner/Satellit + SNR"
+
+#: KravenHD.py
+msgid "Tuner/Satellite + dB"
+msgstr "Tuner/Satellit + dB"
+
+#: KravenHD.py
+msgid "CPU + Load"
+msgstr "CPU + Systemlast"
+
+#: KravenHD.py
+msgid "Temperature + Fan"
+msgstr "Temperatur + Lüfter"
+
+#: KravenHDECMLine.py
 msgid "not available"
 msgstr "Nicht vorhanden"
 
-#: KravenHDEcmInfoLine.py
+#: KravenHDECMLine.py
 msgid "free to air"
 msgstr "Frei empfangbar"
+
+#: KravenHDFrontendInfo.py
+msgid "dB"
+msgstr "dB"

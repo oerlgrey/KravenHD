@@ -168,4 +168,8 @@ class KravenHDExtServiceInfo(Converter, object):
 					else:
 						orbital = str((float(orbital))/10.0) + "E"
 					return orbital
+				elif (transponderData["tuner_type"] == "DVB-T") or (transponderData["tuner_type"] == "DVB-T2"):
+					return "DVB-T"
+				elif (transponderData["tuner_type"] == "DVB-C"):
+					return "DVB-C"
 		return ""

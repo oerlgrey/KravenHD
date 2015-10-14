@@ -2,42 +2,41 @@
   <!-- /* Main -->
   <!-- ********** Screens ********** -->
   <screen name="AboutReleaseNotes" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="list" font="Regular;20" itemHeight="30" position="70,121" size="708,420" transparent="1" backgroundColor="KravenBackground" />
-    <panel name="template_menu_left" />
+    <widget name="list" font="Regular;20" itemHeight="30" position="70,121" size="708,420" transparent="1" scrollbarMode="showOnDemand" backgroundColor="KravenBackground" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="AboutReleaseNotes" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ChoiceBox" position="0,0" size="1280,720">
     <eLabel backgroundColor="KravenInfobar2Background" font="Regular2;34" foregroundColor="KravenFont2" text="Auswahlfenster" position="70,12" size="708,46" halign="center" valign="center" zPosition="1" transparent="1" />
 	<widget backgroundColor="KravenBackground" font="Regular2;20" foregroundColor="KravenFont2" position="70,80" size="708,27" render="Label" source="Title" halign="left" valign="center" transparent="1" />
 	<widget backgroundColor="KravenBackground" font="Regular2;20" foregroundColor="KravenFont2" position="70,107" size="708,80" halign="left" valign="center" name="text" transparent="1" />
-	<widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="list" position="70,193" size="708,450" transparent="1" />
-    <eLabel backgroundColor="KravenBackground" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
-    <ePixmap pixmap="KravenHD/logo.png" position="900,120" size="300,300" backgroundColor="KravenBackground" alphatest="blend" />
-    <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenInfobar2Background" transparent="1" valign="center" foregroundColor="KravenFont1">
-      <convert type="KravenHDClockToText">Default</convert>
-    </widget>
-    <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
-    <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
+	<widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="list" scrollbarMode="showOnDemand" position="70,193" size="708,450" transparent="1" />
+    <panel name="template_menu_logo2" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ChoiceBox" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen name="ConsoleBox" position="0,0" size="1280,720" title="Console Box" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="text" font="Regular;20" itemHeight="30" position="70,120" size="708,420" transparent="1" backgroundColor="KravenBackground" foregroundColor="KravenFont1" />
-    <panel name="template_menu_left" />
+    <widget name="text" font="Regular;20" itemHeight="30" position="70,120" size="708,420" transparent="1" scrollbarMode="showOnDemand" backgroundColor="KravenBackground" foregroundColor="KravenFont1" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ConsoleBox" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Console" position="0,0" size="1280,720" title="Command execution...">
-    <widget backgroundColor="KravenBackground" font="Console;18" name="text" position="70,120" size="708,500" transparent="1" foregroundColor="KravenFont1" />
-    <panel name="template_menu_left" />
+    <widget backgroundColor="KravenBackground" font="Console;18" name="text" position="70,120" size="708,500" scrollbarMode="showOnDemand" transparent="1" foregroundColor="KravenFont1" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Console" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HdmiCECSetupScreen" position="0,0" size="1280,720" title="HDMI CEC setup">
-    <widget name="config" itemHeight="30" font="Regular;22" position="70,80" size="708,500" transparent="1" zPosition="2" foregroundColor="KravenFont1" />
+    <widget name="config" itemHeight="30" font="Regular;22" position="70,80" size="708,500" scrollbarMode="showOnDemand" transparent="1" zPosition="2" foregroundColor="KravenFont1" />
     <widget source="current_address" render="Label" position="161,621" size="500,30" zPosition="10" font="Regular2; 21" halign="center" valign="center" backgroundColor="KravenBackground" transparent="1" foregroundColor="KravenFont2" />
     <widget source="fixed_address" render="Label" position="161,621" size="500,30" zPosition="10" font="Regular2; 21" halign="center" valign="center" backgroundColor="KravenBackground" transparent="1" foregroundColor="KravenFont2" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="HdmiCECSetupScreen" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen name="HistoryZapSelector" position="0,0" size="1280,720" title="History Zap" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="menu" render="Listbox" position="70,120" size="708,500" backgroundColor="KravenBackground" transparent="1">
+    <widget source="menu" render="Listbox" position="70,120" size="708,500" scrollbarMode="showOnDemand" backgroundColor="KravenBackground" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (60, 10), size = (10, 20), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -52,11 +51,12 @@
 				}
           </convert>
     </widget>
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="HistoryZapSelector" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="LanguageSelection" position="0,0" size="1280,720" title="Language selection">
-    <widget position="70,120" render="Listbox" size="708,420" source="languages" transparent="1" zPosition="3">
+    <widget position="70,120" render="Listbox" size="708,420" scrollbarMode="showOnDemand" source="languages" transparent="1" zPosition="3">
       <convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (130, 17), size = (550, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
@@ -67,52 +67,59 @@
 				}
 			</convert>
     </widget>
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="LanguageSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="LEDBrightnessSetup" position="0,0" size="1280,720" title="LED Brightness Setup">
-    <widget name="config" position="70,120" size="708,455" transparent="1" zPosition="2" foregroundColor="KravenFont1" />
+    <widget name="config" position="70,120" size="708,455" scrollbarMode="showOnDemand" transparent="1" zPosition="2" foregroundColor="KravenFont1" />
     <widget font="Regular2; 18" halign="center" name="current_entry" position="70,585" size="708,40" valign="center" foregroundColor="KravenFont2" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="LEDBrightnessSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ManualFancontrol" position="0,0" size="1280,720" title="Fancontrol Settings in Standby mode">
-    <widget name="config" position="70,120" size="708,420" transparent="1" zPosition="2" foregroundColor="KravenFont1" />
+    <widget name="config" position="70,120" size="708,420" scrollbarMode="showOnDemand" transparent="1" zPosition="2" foregroundColor="KravenFont1" />
     <widget backgroundColor="KravenBackground" font="Regular2; 24" foregroundColor="KravenFont2" position="70,560" render="Label" size="708,30" source="current" transparent="1" zPosition="1" />
     <panel name="template_colorkey_text" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ManualFancontrol" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Mute" position="49,40" size="70,70" title="Mute" zPosition="11">
     <ePixmap alphatest="blend" borderColor="transparent" borderWidth="0" pixmap="KravenHD/icons-light/icons/mute.png" position="3,3" size="64,64" transparent="1" zPosition="-1" />
     <eLabel backgroundColor="KravenBackground" position="0,0" size="70,70" zPosition="-10" />
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RecordPathsSettings" position="0,0" size="1280,720" title="Recording paths...">
-    <widget backgroundColor="KravenBackground" itemHeight="30" name="config" position="70,120" size="708,500" transparent="1" foregroundColor="KravenFont1" />
+    <widget backgroundColor="KravenBackground" itemHeight="30" name="config" position="70,120" size="708,500" scrollbarMode="showOnDemand" transparent="1" foregroundColor="KravenFont1" />
     <panel name="template_colorkey_text" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="RecordPathsSettings" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RemoteControlCode" position="0,0" size="1280,720" title="Position Setup">
-    <widget name="config" position="70,80" itemHeight="30" font="Regular;22" size="708,500" transparent="1" zPosition="2" foregroundColor="KravenFont1" />
-    <panel name="template_menu_left" />
+    <widget name="config" position="70,80" itemHeight="30" font="Regular;22" size="708,500" scrollbarMode="showOnDemand" transparent="1" zPosition="2" foregroundColor="KravenFont1" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="RemoteControlCode" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen name="ScriptRunner" position="0,0" size="1280,720" title="Script Runner" flags="wfNoBorder" backgroundColor="transparent">
     <widget backgroundColor="KravenBackground" name="lab1" position="70,120" size="708,50" font="Regular2; 20" alphatest="blend" transparent="1" halign="center" foregroundColor="KravenFont2" />
-    <widget name="list" position="70,202" size="708,370" alphatest="blend" transparent="1" />
+    <widget name="list" position="70,202" size="708,370" scrollbarMode="showOnDemand" alphatest="blend" transparent="1" />
     <applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(25)
 		</applet>
     <panel name="template_colorkey_text" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ScriptRunner" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SkinSelector" position="0,0" size="1280,720" title="Skin Selector">
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="35" font="Regular;23" name="SkinList" position="221,143" scrollbarMode="showNever" size="389,453" transparent="1" foregroundColor="KravenFont1">
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="35" font="Regular;23" name="SkinList" position="221,143" scrollbarMode="showOnDemand" size="389,453" transparent="1" foregroundColor="KravenFont1">
     </widget>
     <widget alphatest="blend" name="Preview" position="941,182" size="280,240" />
     <widget backgroundColor="KravenBackground" font="Regular2; 18" halign="center" position="220,80" render="Label" size="392,49" source="introduction" transparent="1" foregroundColor="KravenFont2" />
     <panel name="template_menu_full" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="SkinSelector" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen flags="wfNoBorder" name="Standby" position="0,0" size="1280,720" title="Standby" />
   <screen name="SundtekControlCenter" position="0,0" size="1280,720" title="SundtekControlCenter" flags="wfNoBorder" backgroundColor="transparent">
@@ -125,8 +132,9 @@
     <widget font="Regular; 20" halign="left" valign="center" name="btt_green" position="320,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
     <widget font="Regular; 20" halign="left" valign="center" name="btt_yellow" position="570,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
     <widget font="Regular; 20" halign="left" valign="center" name="btt_blue" position="820,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Standby" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen name="Swap" title="Swap" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
     <widget backgroundColor="KravenBackground" name="autostart_off" position="102,413" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
@@ -139,16 +147,18 @@
     <widget name="labsize" position="245,190" size="220,30" font="Regular;20" valign="center" backgroundColor="grey" foregroundColor="black" />
     <widget name="inactive" position="245,250" size="100,30" font="Regular;20" valign="center" halign="center" backgroundColor="red" />
     <widget name="active" position="245,250" size="100,30" font="Regular;20" valign="center" halign="center" backgroundColor="green" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Swap" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen name="SystemMemoryInfo" position="0,0" size="1280,720" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="lab1" render="Label" position="70,120" size="708,35" font="Regular2; 30" backgroundColor="KravenBackground" transparent="1" zPosition="2" foregroundColor="KravenFont2" />
     <widget source="lab2" render="Label" position="70,165" size="708,25" font="Regular2; 19" backgroundColor="KravenBackground" transparent="1" zPosition="2" foregroundColor="KravenFont2" />
     <widget name="AboutScrollLabel" scrollbarMode="showOnDemand" position="70,210" size="708,390" font="Regular;20" backgroundColor="KravenBackground" transparent="1" zPosition="1" foregroundColor="KravenFont1" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="SystemMemoryInfo" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UnhandledKey" position="49,40" size="70,70" title="UnhandledKey" zPosition="100">
     <widget alphatest="blend" name="UnhandledKeyPixmap" pixmap="KravenHD/icons-light/icons/error.png" position="3,3" size="64,64" zPosition="2" />
@@ -177,9 +187,10 @@
     <widget backgroundColor="KravenBackground" font="Regular2; 22" foregroundColor="KravenFont2" position="897,76" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="366,572" source="Event" valign="top" transparent="1" zPosition="-8">
       <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
-    <panel name="template_menu_full_button" />
+    <panel name="template_menu_full" />
     <panel name="template_colorkey_text" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="EPGSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- EPGSelectionEPGBar_HD -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGSelectionEPGBar_HD" position="0,0" size="1280,720" title="EPG Selection">
@@ -202,7 +213,7 @@
     <widget backgroundColor="KravenBackground" font="Regular2; 20" foregroundColor="KravenFont2" position="725,525" render="Label" size="529,125" source="Event" transparent="1">
       <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
-    <widget name="list" position="22,525" size="685,125" transparent="1" />
+    <widget name="list" position="22,525" size="685,125" scrollbarMode="showOnDemand" transparent="1" />
     <eLabel backgroundColor="KravenBorder" position="6,715" size="1266,2" zPosition="2" />
     <eLabel backgroundColor="KravenBorder" position="6,511" size="1266,2" zPosition="2" />
     <eLabel backgroundColor="KravenBorder" position="6,511" size="2,205" zPosition="2" />
@@ -215,6 +226,7 @@
     <eLabel backgroundColor="KravenBackground" position="6,513" size="1265,204" transparent="0" zPosition="-9" />
     <eLabel backgroundColor="Line" position="6,497" size="1265,1" zPosition="2" />
     <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="EPGSelectionEPGBar_HD" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- EventView -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EventView" position="0,0" size="1280,720" title="Eventview">
@@ -235,9 +247,10 @@
     <widget backgroundColor="KravenBackground" foregroundColor="KravenFont2" font="Regular2; 35" halign="left" name="channel" position="45,85" size="854,60" transparent="1" />
     <widget backgroundColor="KravenBackground" foregroundColor="KravenFont2" font="Regular2; 30" halign="right" name="datetime" position="928,85" size="307,60" transparent="1" valign="center" />
     <widget backgroundColor="KravenBackground" font="Regular2; 24" halign="center" name="duration" position="965,603" size="270,40" transparent="1" foregroundColor="KravenFont2" />
-    <panel name="template_menu_full_button" />
+    <panel name="template_menu_full" />
     <panel name="template_colorkey_text" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="EventView" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- EventViewSimple -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EventViewSimple" position="0,0" size="1280,720" title="Eventview">
@@ -258,8 +271,9 @@
     <widget backgroundColor="KravenBackground" foregroundColor="KravenFont2" font="Regular2; 35" halign="left" name="channel" position="45,85" size="854,60" transparent="1" />
     <widget backgroundColor="KravenBackground" foregroundColor="KravenFont2" font="Regular2; 30" halign="right" name="datetime" position="928,85" size="307,60" transparent="1" valign="center" />
     <widget backgroundColor="KravenBackground" font="Regular2; 24" halign="center" name="duration" position="965,603" size="270,40" transparent="1" foregroundColor="KravenFont2" />
-    <panel name="template_menu_full_button" />
+    <panel name="template_menu_full" />
     <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="EventViewSimple" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- EPGSelectionMulti -->
   <screen name="EPGSelectionMulti" position="0,0" size="1280,720" title="EPG Selection" flags="wfNoBorder" backgroundColor="transparent">
@@ -270,13 +284,14 @@
     <widget backgroundColor="KravenBackground" font="Regular; 22" halign="center" name="next_text" position="220,80" size="150,30" text="NEXT" transparent="1" zPosition="10" />
     <widget backgroundColor="KravenBackground" font="Regular; 22" halign="center" name="more_text" position="370,80" size="150,30" text="MORE" transparent="1" zPosition="10" />
     <widget backgroundColor="KravenBackground" font="Regular; 22" halign="right" name="date" position="960,80" size="250,30" transparent="1" valign="center" />
-    <widget backgroundColor="KravenBackground" itemHeight="30" name="list" position="50,135" size="1180,360" enableWrapAround="1" transparent="1" />
+    <widget backgroundColor="KravenBackground" itemHeight="30" name="list" position="50,135" size="1180,360" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular; 22" foregroundColor="KravenFont1" halign="left" position="50,508" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1180,135" source="Event" transparent="1">
       <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
-    <panel name="template_menu_full_button" />
+    <panel name="template_menu_full" />
     <panel name="template_colorkey_text" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="EPGSelectionMulti" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- GraphMultiEPG -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="GraphMultiEPG" position="0,0" size="1280,720" title="Electronic Program Guide">
@@ -307,8 +322,9 @@
     <widget name="timeline4" foregroundColor="orange" position="0,398" size="1,230" zPosition="1" />
     <widget name="timeline5" foregroundColor="orange" position="0,398" size="1,230" zPosition="1" />
     <widget alphatest="blend" name="timeline_now" foregroundColor="orange" position="0,330" size="5,295" zPosition="2" />
-    <panel name="template_menu_full_button" />
+    <panel name="template_menu_full" />
     <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="GraphMultiEPG" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- GraphicalEPG -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="GraphicalEPG" position="0,0" size="1280,720" title="Electronic Program Guide">
@@ -334,8 +350,9 @@
     <widget EntryBackgroundColor="KravenBackground" EntryBackgroundColorSelected="KravenFont1" EntryBorderColor="KravenFont1" itemHeight="60" name="list" position="25,300" size="1230,345" transparent="1" />
     <widget name="timeline_now" position="80,297" zPosition="2" size="13,355" pixmap="KravenHD/epg/timeline-now.png" alphatest="blend" />
     <eLabel position="101,119" size="990,1" backgroundColor="KravenFont1" />
-    <panel name="template_menu_full_button" />
+    <panel name="template_menu_full" />
     <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="GraphicalEPG" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- GraphicalEPGPIG -->
   <screen name="GraphicalEPGPIG" position="0,0" size="1280,720" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="KravenBackground" transparent="0">
@@ -361,9 +378,10 @@
     <widget name="timeline_now" position="80,297" zPosition="2" size="13,355" pixmap="KravenHD/epg/timeline-now.png" alphatest="blend" />
     <widget source="session.VideoPicture" render="Pig" position="927,77" size="330,187" zPosition="3" backgroundColor="transparent" />
     <eLabel position="101,125" size="535,1" backgroundColor="KravenLine" />
-    <panel name="template_menu_full_button" />
+    <panel name="template_menu_full" />
     <panel name="template_colorkey_text" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="GraphicalEPGPIG" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- GraphicalInfoBarEPG -->
   <screen name="GraphicalInfoBarEPG" title="InfoBar" position="0,435" size="1280,285" backgroundColor="KravenBackground" flags="wfNoBorder">
@@ -377,7 +395,7 @@
     <convert type="ServiceName">Reference</convert>
   </widget>
   <widget source="session.RecordState" render="Pixmap" pixmap="KravenHD/icons-light/infobar/ico_rec_on.png" position="848,234" size="43,22" zPosition="2" alphatest="blend">
-    <convert type="ConditionalShowHide">Blink</convert>
+    <convert type="ConditionalShowHide" />
   </widget>
   <widget name="lab1" position="9,75" size="1256,145" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="KravenBackground" transparent="1" />
   <widget name="timeline_text" position="10,75" size="1260,25" foregroundColor="KravenFont1" font="Regular; 20" transparent="0" zPosition="21" />
@@ -396,6 +414,7 @@
   <ePixmap  pixmap="KravenHD/icons-light/infobar/key_menu.png" position="1090,235" size="43,22" alphatest="blend" />
   <ePixmap  pixmap="KravenHD/icons-light/infobar/key_ok.png" position="1140,235" size="43,22" alphatest="blend" />
   <ePixmap  pixmap="KravenHD/icons-light/infobar/key_exit.png" position="1190,235" size="43,22" alphatest="blend" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="GraphicalInfoBarEPG" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
     <!-- QuickEPG -->
   <screen name="QuickEPG" flags="wfNoBorder" position="0,435" size="1280,285" title="InfoBar" backgroundColor="KravenBackground">
@@ -413,7 +432,7 @@
     <convert type="KravenHDClockToText">Default</convert>
   </widget>
   <widget source="session.RecordState" render="Pixmap" pixmap="KravenHD/icons-light/infobar/ico_rec_on.png" zPosition="2" position="840,235" size="43,22" alphatest="blend">
-    <convert type="ConditionalShowHide">Blink</convert>
+    <convert type="ConditionalShowHide" />
   </widget>
   <widget name="list" position="17,95" size="715,120" font="Regular; 24" foregroundColor="KravenFont1" backgroundColor="KravenBackground" />
   <widget source="Service" render="Picon" position="12,18" size="70,42" transparent="0" zPosition="2" alphatest="blend">
@@ -431,6 +450,7 @@
   <ePixmap  pixmap="KravenHD/icons-light/infobar/key_menu.png" position="1090,235" size="43,22" alphatest="blend" />
   <ePixmap  pixmap="KravenHD/icons-light/infobar/key_ok.png" position="1140,235" size="43,22" alphatest="blend" />
   <ePixmap  pixmap="KravenHD/icons-light/infobar/key_exit.png" position="1190,235" size="43,22" alphatest="blend" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="QuickEPG" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
   <!-- ********** Menu ********** -->
   <!-- Menu -->
@@ -443,8 +463,9 @@
 				}
 	  </convert>
     </widget>
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Menu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- menu_setup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_setup" position="0,0" size="1280,720" title="Main menu" transparent="0">
@@ -456,8 +477,9 @@
 				}
 	  </convert>
     </widget>
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="menu_setup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- menu_system -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_system" position="0,0" size="1280,720" title="Main menu" transparent="0">
@@ -469,8 +491,9 @@
 				}
 	  </convert>
     </widget>
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="menu_system" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- menu_information -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_information" position="0,0" size="1280,720" title="Main menu">
@@ -482,8 +505,9 @@
 				}
 	  </convert>
     </widget>
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="menu_information" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- menu_scan -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_scan" position="0,0" size="1280,720" title="Main menu">
@@ -495,8 +519,9 @@
 				}
 	  </convert>
     </widget>
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="menu_scan" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- menu_mainmenu -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_mainmenu" position="0,0" size="1280,720" title="Main menu">
@@ -508,8 +533,9 @@
 				}
 	  </convert>
     </widget>
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="menu_mainmenu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- menu_timermenu -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_timermenu" position="0,0" size="1280,720" title="Main menu" transparent="0">
@@ -521,8 +547,9 @@
 				}
 	  </convert>
     </widget>
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="menu_timermenu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- menu_shutdown -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_shutdown" position="0,0" size="1283,723" title="Main menu">
@@ -534,14 +561,16 @@
 				}
 	  </convert>
     </widget>
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="menu_shutdown" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ChannelContextMenu -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelContextMenu" position="center,center" size="1280,720" title="Channellist menu" transparent="0">
     <widget enableWrapAround="1" itemHeight="35" name="menu" position="70,80" scrollbarMode="showNever" size="708,540" transparent="1" zPosition="3" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ChannelContextMenu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** NumberZap ********** -->
   <!-- NumberZap -->
@@ -594,7 +623,7 @@
     <ePixmap alphatest="blend" pixmap="KravenHD/buttons/red.png" position="496,309" size="24,24" />
     <widget backgroundColor="KravenBackground" font="Regular2;21" name="languagetext" position="535,310" size="150,23" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" name="text" position="670,120" size="540,300" transparent="1" />
-    <widget position="510,430" render="Listbox" size="700,160" source="list" transparent="1" zPosition="13">
+    <widget position="510,430" render="Listbox" size="700,160" scrollbarMode="showOnDemand" source="list" transparent="1" zPosition="13">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -602,15 +631,17 @@
 				}
 			</convert>
     </widget>
-    <widget itemHeight="32" name="config" position="510,430" size="700,160" transparent="1" zPosition="14" />
+    <widget itemHeight="32" name="config" position="510,430" size="700,160" scrollbarMode="showOnDemand" transparent="1" zPosition="14" />
     <panel name="template_menu_full" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CleanupWizard" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CleanupWizardConfiguration -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CleanupWizardConfiguration" position="0,0" size="1280,720" title="CleanupWizard settings">
-    <widget backgroundColor="KravenBackground" itemHeight="30" name="config" position="70,80" size="708,450" transparent="1" />
+    <widget backgroundColor="KravenBackground" itemHeight="30" name="config" position="70,80" size="708,450" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" halign="center" position="70,560" render="Label" size="708,25" source="status" transparent="1" foregroundColor="KravenFont2" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CleanupWizardConfiguration" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- DefaultSatLists -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="DefaultSatLists" position="0,0" size="1280,720" title="Welcome...">
@@ -618,7 +649,7 @@
     <ePixmap alphatest="blend" pixmap="KravenHD/buttons/red.png" position="496,309" size="24,24" />
     <widget backgroundColor="KravenBackground" font="Regular2;21" name="languagetext" position="535,310" size="150,23" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" name="text" position="670,120" size="540,300" transparent="1" />
-    <widget position="510,430" render="Listbox" size="700,160" source="list" transparent="1" zPosition="13">
+    <widget position="510,430" render="Listbox" size="700,160" source="list" scrollbarMode="showOnDemand" transparent="1" zPosition="13">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -626,8 +657,9 @@
 				}
 			</convert>
     </widget>
-    <widget itemHeight="32" name="config" position="510,430" size="700,160" transparent="1" zPosition="14" />
+    <widget itemHeight="32" name="config" position="510,430" size="700,160" scrollbarMode="showOnDemand" transparent="1" zPosition="14" />
     <panel name="template_menu_full" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="DefaultSatLists" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- DefaultWizard -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="DefaultWizard" position="0,0" size="1280,720" title="Welcome...">
@@ -635,7 +667,7 @@
     <ePixmap alphatest="blend" pixmap="KravenHD/buttons/red.png" position="496,309" size="24,24" />
     <widget backgroundColor="KravenBackground" font="Regular2;21" name="languagetext" position="535,310" size="150,23" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" name="text" position="670,120" size="540,300" transparent="1" />
-    <widget position="510,430" render="Listbox" size="700,160" source="list" transparent="1" zPosition="13">
+    <widget position="510,430" render="Listbox" size="700,160" scrollbarMode="showOnDemand" source="list" transparent="1" zPosition="13">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -643,8 +675,9 @@
 				}
 			</convert>
     </widget>
-    <widget itemHeight="32" name="config" position="510,430" size="700,160" transparent="1" zPosition="14" />
+    <widget itemHeight="32" name="config" position="510,430" size="700,160" scrollbarMode="showOnDemand" transparent="1" zPosition="14" />
     <panel name="template_menu_full" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="DefaultWizard" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- DreamPackageWizard -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="DreamPackageWizard" position="0,0" size="1280,720" title="Welcome...">
@@ -652,7 +685,7 @@
     <ePixmap alphatest="blend" pixmap="KravenHD/buttons/red.png" position="496,309" size="24,24" />
     <widget backgroundColor="KravenBackground" font="Regular2;21" name="languagetext" position="535,310" size="150,23" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" name="text" position="671,120" size="540,300" transparent="1" />
-    <widget position="510,430" render="Listbox" size="700,160" source="list" transparent="1" zPosition="13">
+    <widget position="510,430" render="Listbox" size="700,160" scrollbarMode="showOnDemand" source="list" transparent="1" zPosition="13">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -660,8 +693,9 @@
 				}
 			</convert>
     </widget>
-    <widget itemHeight="32" name="config" position="510,430" size="700,160" transparent="1" zPosition="14" />
+    <widget itemHeight="32" name="config" position="510,430" size="700,160" scrollbarMode="showOnDemand" transparent="1" zPosition="14" />
     <panel name="template_menu_full" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="DreamPackageWizard" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ImageWizard -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ImageWizard" position="0,0" size="1280,720" title="Welcome...">
@@ -674,7 +708,7 @@
     <ePixmap alphatest="blend" pixmap="KravenHD/buttons/red.png" position="496,309" size="24,24" />
     <widget backgroundColor="KravenBackground" font="Regular2;21" name="languagetext" position="535,310" size="150,23" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" name="text" position="670,120" size="540,300" transparent="1" />
-    <widget position="510,430" render="Listbox" size="700,160" source="list" transparent="1" zPosition="13">
+    <widget position="510,430" render="Listbox" size="700,160" scrollbarMode="showOnDemand" source="list" transparent="1" zPosition="13">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -682,9 +716,10 @@
 				}
 			</convert>
     </widget>
-    <widget itemHeight="32" name="config" position="510,430" size="700,160" transparent="1" zPosition="14" />
+    <widget itemHeight="32" name="config" position="510,430" size="700,160" scrollbarMode="showOnDemand" transparent="1" zPosition="14" />
     <panel name="template_menu_full" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ImageWizard" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- LanguageWizard -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="LanguageWizard" position="0,0" size="1280,720" title="Welcome...">
@@ -695,7 +730,7 @@
     <widget alphatest="blend" name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" zPosition="11" />
     <widget alphatest="blend" name="wizard" pixmap="skin_default/wizard.png" position="500,120" size="110,174" transparent="1" zPosition="10" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" name="text" position="671,120" size="540,300" transparent="1" />
-    <widget position="511,430" render="Listbox" size="700,180" source="languages" transparent="1" zPosition="13">
+    <widget position="511,430" render="Listbox" size="700,180" scrollbarMode="showOnDemand" source="languages" transparent="1" zPosition="13">
       <convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (130, 17), size = (530, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
@@ -707,13 +742,15 @@
 			</convert>
     </widget>
     <panel name="template_menu_full" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="LanguageWizard" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- MPHelp -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MPHelp" position="0,0" size="1280,720" title="Help">
-    <widget name="detailtext" position="70,80" size="708,540" zPosition="10" font="Regular;22" foregroundColor="KravenFont1" transparent="1" halign="left" valign="top" />
-    <panel name="template_menu_left_button" />
+    <widget name="detailtext" position="70,80" size="708,540" scrollbarMode="showOnDemand" zPosition="10" font="Regular;22" foregroundColor="KravenFont1" transparent="1" halign="left" valign="top" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="MPHelp" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkWizard -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NetworkWizard" position="0,0" size="1280,720" title="Welcome...">
@@ -726,7 +763,7 @@
     <ePixmap alphatest="blend" pixmap="KravenHD/buttons/red.png" position="496,309" size="24,24" />
     <widget backgroundColor="KravenBackground" font="Regular2;21" name="languagetext" position="535,310" size="150,23" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" name="text" position="670,120" size="540,300" transparent="1" />
-    <widget position="510,430" render="Listbox" size="700,160" source="list" transparent="1" zPosition="13">
+    <widget position="510,430" render="Listbox" size="700,160" scrollbarMode="showOnDemand" source="list" transparent="1" zPosition="13">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -734,10 +771,11 @@
 				}
 			</convert>
     </widget>
-    <widget itemHeight="32" name="config" position="510,430" size="700,160" transparent="1" zPosition="14" />
-    <panel name="template_menu_full_button" />
+    <widget itemHeight="32" name="config" position="510,430" size="700,160" scrollbarMode="showOnDemand" transparent="1" zPosition="14" />
+    <panel name="template_menu_full" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkWizard" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- StartWizard -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="StartWizard" position="0,0" size="1280,720" title="Welcome...">
@@ -750,7 +788,7 @@
     <ePixmap alphatest="blend" pixmap="KravenHD/buttons/red.png" position="496,309" size="24,24" />
     <widget backgroundColor="KravenBackground" font="Regular2;21" name="languagetext" position="535,310" size="150,23" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" name="text" position="671,120" size="540,300" transparent="1" />
-    <widget position="510,430" render="Listbox" size="700,160" source="list" transparent="1" zPosition="13">
+    <widget position="510,430" render="Listbox" size="700,160" scrollbarMode="showOnDemand" source="list" transparent="1" zPosition="13">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -758,8 +796,9 @@
 				}
 			</convert>
     </widget>
-    <widget itemHeight="32" name="config" position="510,430" size="700,160" transparent="1" zPosition="14" />
+    <widget itemHeight="32" name="config" position="510,430" size="700,160" scrollbarMode="showOnDemand" transparent="1" zPosition="14" />
     <panel name="template_menu_full" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="StartWizard" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- VideoWizard -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="VideoWizard" position="0,0" size="1280,720" title="Welcome...">
@@ -773,7 +812,7 @@
     <widget backgroundColor="KravenBackground" font="Regular2;21" name="languagetext" position="535,310" size="150,23" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" name="text" position="670,120" size="540,300" transparent="1" />
     <widget alphatest="blend" name="portpic" position="510,435" size="128,128" transparent="1" zPosition="10" />
-    <widget position="700,430" render="Listbox" size="510,160" source="list" transparent="1" zPosition="13">
+    <widget position="700,430" render="Listbox" size="510,160" scrollbarMode="showOnDemand" source="list" transparent="1" zPosition="13">
       <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
@@ -781,24 +820,26 @@
 				}
 			</convert>
     </widget>
-    <widget itemHeight="32" name="config" position="700,430" size="510,160" transparent="1" zPosition="14" />
+    <widget itemHeight="32" name="config" position="700,430" size="510,160" scrollbarMode="showOnDemand" transparent="1" zPosition="14" />
     <panel name="template_menu_full" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="VideoWizard" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- HelpMenu -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HelpMenu" position="0,0" size="1280,720" title="Menu">
     <widget alphatest="blend" name="rc" pixmaps="KravenHD/rc.png,rcold.png" position="160,115" size="154,500" zPosition="10" />
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="yellow" halign="center" name="long_key" position="90,620" size="300,30" transparent="1" />
-    <widget itemHeight="38" name="list" position="500,120" size="720,494" transparent="1" />
+    <widget itemHeight="38" name="list" position="500,120" size="720,494" scrollbarMode="showOnDemand" transparent="1" />
     <widget alphatest="blend" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11" />
     <widget alphatest="blend" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11" />
     <widget alphatest="blend" name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" zPosition="11" />
     <widget alphatest="blend" name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" zPosition="11" />
     <panel name="template_menu_full" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="HelpMenu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** VideoEnhancement ********** -->
   <!-- VideoEnhancementPreview -->
   <screen backgroundColor="KravenBackground" name="VideoEnhancementPreview" position="center,480" size="600,200" title="VideoEnhancementPreview">
-    <widget itemHeight="30" name="config" position="10,10" size="580,90" />
+    <widget itemHeight="30" name="config" position="10,10" size="580,90" scrollbarMode="showOnDemand" />
     <widget font="Regular2;22" halign="center" position="10,123" render="Label" size="580,26" source="introduction" transparent="1" valign="center" />
     <eLabel backgroundColor="KravenBackground" position="0,160" size="600,40" zPosition="1" />
     <ePixmap alphatest="blend" pixmap="KravenHD/buttons/red.png" position="25,165" size="24,24" zPosition="2" />
@@ -808,11 +849,12 @@
   </screen>
   <!-- VideoEnhancementSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="VideoEnhancementSetup" position="0,0" size="1280,720" title="VideoEnhancementSetup">
-    <widget backgroundColor="KravenBackground" itemHeight="30" name="config" position="70,80" size="700,450" transparent="1" />
+    <widget backgroundColor="KravenBackground" itemHeight="30" name="config" position="70,80" size="700,450" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" halign="center" name="introduction" position="70,560" size="700,25" transparent="1" foregroundColor="KravenFont2" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="VideoEnhancementSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Network ********** -->
   <!-- AdapterSetupConfiguration -->
@@ -820,15 +862,16 @@
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" position="70,80" render="Label" size="495,28" source="IF" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" position="576,80" render="Label" size="160,28" source="Statustext" transparent="1" />
     <widget alphatest="blend" name="statuspic" pixmaps="KravenHD/buttons/green.png,KravenHD/buttons/grey.png" position="742,82" size="24,24" transparent="1" />
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="35" name="menulist" position="70,130" size="708,280" transparent="1" />
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="35" name="menulist" position="70,130" size="708,280" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,485" render="Label" size="708,100" source="description" transparent="1" valign="center" />
     <widget font="Regular; 20" halign="left" valign="center" source="key_red" position="70,665" size="220,26" render="Label" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="AdapterSetupConfiguration" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkAdapterSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NetworkAdapterSelection" position="0,0" size="1280,720" title="Select Network Adapter">
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" position="70,80" render="Listbox" size="708,450" source="list" transparent="1">
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" position="70,80" render="Listbox" size="708,450" scrollbarMode="showOnDemand" source="list" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (10, 10), size = (54, 54), png = 3), # index 3 is the interface pixmap
@@ -842,8 +885,9 @@
 			</convert>
     </widget>
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" name="introduction" position="70,585" size="708,28" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkAdapterSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkAdapterTest -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NetworkAdapterTest" position="0,0" size="1280,720" title="Network test...">
@@ -880,13 +924,14 @@
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColors="grey,grey,#ffffff" halign="center" name="EditSettings_Text" position="470,531" size="300,34" transparent="1" valign="center" zPosition="2" />
     <widget alphatest="blend" name="EditSettingsButton" pixmaps="KravenHD/menu/lan-seloff.png,KravenHD/menu/lan-sel300.png" position="470,530" size="300,35" zPosition="2" />
     <widget font="Regular2;22" foregroundColor="KravenFont2" halign="center" name="InfoText" position="70,80" size="700,570" valign="center" zPosition="25" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkAdapterTest" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkBrowser -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NetworkBrowser" position="0,0" size="1280,720" title="Network Neighbourhood">
-    <widget position="70,80" render="Listbox" size="708,480" source="list" transparent="1" zPosition="3">
+    <widget position="70,80" render="Listbox" size="708,480" scrollbarMode="showOnDemand" source="list" transparent="1" zPosition="3">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 1), # index 1 is the expandable/expanded/verticalline icon
@@ -902,22 +947,24 @@
 			</convert>
     </widget>
     <widget font="Regular2;22" backgroundColor="KravenBackground" foregroundColor="KravenFont2" halign="center" position="70,585" render="Label" size="708,30" source="infotext" transparent="1" zPosition="3" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkBrowser" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- AutoMountEdit -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoMountEdit" position="0,0" size="1280,720" title="MountEdit">
-    <widget itemHeight="30" name="config" position="70,80" size="708,450" transparent="1" />
+    <widget itemHeight="30" name="config" position="70,80" size="708,450" scrollbarMode="showOnDemand" transparent="1" />
     <widget alphatest="blend" name="HelpWindow" position="120,470" size="1,1" transparent="1" zPosition="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,585" render="Label" size="708,28" source="introduction" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="AutoMountEdit" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- AutoMountManager -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoMountManager" position="0,0" size="1280,720" title="AutoMountManager">
-    <widget backgroundColor="KravenBackground" position="70,80" render="Listbox" size="708,480" source="config" transparent="1">
+    <widget backgroundColor="KravenBackground" position="70,80" render="Listbox" size="708,480" scrollbarMode="showOnDemand" source="config" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (60, 5), size = (620, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
@@ -930,16 +977,17 @@
 			</convert>
     </widget>
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,585" render="Label" size="708,28" source="introduction" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="AutoMountManager" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- AutoMountView -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoMountView" position="0,0" size="1280,720" title="MountView">
     <widget font="Regular2;20" foregroundColor="KravenFont2" halign="center" position="70,80" render="Label" size="130,90" source="legend1" transparent="1" valign="center" />
     <widget font="Regular2;20" foregroundColor="KravenFont2" halign="center" position="230,80" render="Label" size="400,90" source="legend2" transparent="1" valign="center" />
     <widget font="Regular2;20" foregroundColor="KravenFont2" halign="center" position="650,80" render="Label" size="120,90" source="legend3" transparent="1" valign="center" />
-    <widget position="70,220" render="Listbox" size="708,320" source="config" transparent="1">
+    <widget position="70,220" render="Listbox" size="708,320" scrollbarMode="showOnDemand" source="config" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (40, 6), size = (48, 48), png = 0), # index 0 is the isMounted pixmap
@@ -955,21 +1003,23 @@
 			</convert>
     </widget>
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,558" render="Label" size="708,28" source="introduction" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="AutoMountView" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- UserDialog -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UserDialog" position="0,0" size="1280,720" title="UserDialog">
-    <widget name="config" position="70,80" size="708,350" transparent="1" zPosition="3" />
+    <widget name="config" position="70,80" size="708,350" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
     <widget alphatest="blend" name="HelpWindow" position="120,430" size="1,1" transparent="1" zPosition="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,558" render="Label" size="708,28" source="introduction" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="UserDialog" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- UserManager -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UserManager" position="0,0" size="1280,720" title="UserManager">
-    <widget position="70,80" render="Listbox" size="708,420" source="config" transparent="1" zPosition="3">
+    <widget position="70,80" render="Listbox" size="708,420" scrollbarMode="showOnDemand" source="config" transparent="1" zPosition="3">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (80, 4), size = (590, 50), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
@@ -981,14 +1031,15 @@
 			</convert>
     </widget>
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,558" render="Label" size="708,28" source="introduction" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="UserManager" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- WlanScan -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WlanScan" position="0,0" size="1280,720" title="Choose a Wireless Network">
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" position="70,80" render="Label" size="708,30" source="info" transparent="1" />
-    <widget position="70,125" render="Listbox" size="708,450" source="list" transparent="1">
+    <widget position="70,125" render="Listbox" size="708,450" scrollbarMode="showOnDemand" source="list" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (10, 8), size = (650, 35), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the essid
@@ -1002,8 +1053,9 @@
 				}
 			</convert>
     </widget>
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="WlanScan" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- WlanStatus -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WlanStatus" position="0,0" size="1280,720" title="Wireless Network State">
@@ -1022,80 +1074,90 @@
     <widget backgroundColor="KravenBackground" font="Regular;22" foregroundColor="KravenFont1" position="470,345" render="Label" size="280,35" source="enc" transparent="1" valign="center" />
     <widget font="Regular2;22" foregroundColor="KravenFont2" position="70,400" render="Label" size="160,28" source="Statustext" transparent="1" />
     <widget alphatest="blend" name="statuspic" pixmaps="KravenHD/buttons/green.png,KravenHD/buttons/grey.png" position="238,402" size="24,24" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="WlanStatus" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- WlanSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WlanSelection" position="0,0" size="1280,720" title="Wireless Network Configuration...">
-    <widget backgroundColor="KravenBackground" name="menulist" position="58,80" size="360,438" transparent="1" zPosition="10" />
+    <widget backgroundColor="KravenBackground" name="menulist" position="58,80" size="360,438" scrollbarMode="showOnDemand" transparent="1" zPosition="10" />
     <widget backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenFont1" halign="center" position="438,80" render="Label" size="280,460" source="description" transparent="1" valign="center" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="WlanSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- WlanSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WlanSetup" position="0,0" size="1280,720" title="Wireless Network Configuration...">
-    <widget backgroundColor="KravenBackground" name="menulist" position="58,80" size="360,438" transparent="1" zPosition="10" />
+    <widget backgroundColor="KravenBackground" name="menulist" position="58,80" size="360,438" scrollbarMode="showOnDemand" transparent="1" zPosition="10" />
     <widget backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenFont1" halign="center" position="438,80" render="Label" size="280,460" source="description" transparent="1" valign="center" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="WlanSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- WlanConfig -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WlanConfig" position="0,0" size="1280,720" title="Wireless Network Configuration...">
-    <widget backgroundColor="KravenBackground" name="config" position="70,180" size="708,380" transparent="1" zPosition="10" />
+    <widget backgroundColor="KravenBackground" name="config" position="70,180" size="708,380" scrollbarMode="showOnDemand" transparent="1" zPosition="10" />
     <eLabel backgroundColor="KravenBackground" font="Regular;22" foregroundColor="KravenFont1" position="70,471" size="200,26" text="IP Address : " transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular;22" foregroundColor="KravenFont1" halign="center" position="285,471" render="Label" size="200,26" source="ipaddress" transparent="1" valign="center" zPosition="1" />
     <eLabel backgroundColor="KravenBackground" font="Regular;22" foregroundColor="KravenFont1" position="70,511" size="200,26" text="NetMask : " transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular;22" foregroundColor="KravenFont1" halign="center" position="285,511" render="Label" size="200,26" source="netmask" transparent="1" valign="center" zPosition="1" />
     <eLabel backgroundColor="KravenBackground" font="Regular;22" foregroundColor="KravenFont1" position="70,551" size="200,26" text="Gateway : " transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular;22" foregroundColor="KravenFont1" halign="center" position="285,551" render="Label" size="200,26" source="gateway" transparent="1" valign="center" zPosition="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="WlanConfig" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- WlanScanAp -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WlanScanAp" position="0,0" size="1280,720" title="Wireless Network Configuration...">
-    <widget backgroundColor="KravenBackground" name="menulist" position="70,80" size="360,480" transparent="1" zPosition="10" />
+    <widget backgroundColor="KravenBackground" name="menulist" position="70,80" size="360,480" scrollbarMode="showOnDemand" transparent="1" zPosition="10" />
     <widget backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenFont1" halign="center" position="470,80" render="Label" size="300,30" source="Address" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenFont1" halign="center" position="470,109" render="Label" size="300,30" source="ESSID" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenFont1" halign="center" position="470,140" render="Label" size="300,30" source="Protocol" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenFont1" halign="center" position="470,170" render="Label" size="300,30" source="Frequency" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenFont1" halign="center" position="470,200" render="Label" size="300,30" source="Encryption key" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenFont1" halign="center" position="470,231" render="Label" size="300,60" source="BitRate" transparent="1" valign="center" zPosition="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="WlanScanAp" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- Wlanstatus -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Wlanstatus" position="0,0" size="1280,720" title="Wireless Network Configuration...">
-    <widget backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenFont1" position="70,80" render="Label" size="708,500" source="status" transparent="1" zPosition="1" />
-    <panel name="template_menu_left_button" />
+    <widget backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenFont1" position="70,80" render="Label" size="708,500" scrollbarMode="showOnDemand" source="status" transparent="1" zPosition="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Wlanstatus" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NTPManager -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NTPManager" position="0,0" size="1280,720" title="NTP-Server Contenant Selection">
-    <widget itemHeight="30" name="menu" position="70,80" size="708,480" transparent="1" />
-    <panel name="template_menu_left" />
+    <widget itemHeight="30" name="menu" position="70,80" size="708,480" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NTPManager" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- SelectCountry -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SelectCountry" position="0,0" size="1280,720" title="NTP-Server Country Selection">
-    <widget itemHeight="30" name="countrymenu" position="70,80" size="708,480" transparent="1" />
-    <panel name="template_menu_left" />
+    <widget itemHeight="30" name="countrymenu" position="70,80" size="708,480" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="SelectCountry" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- LocationBox -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="LocationBox" position="0,0" size="1280,720" title="Location Box">
     <widget backgroundColor="KravenBackground" font="Regular;24" foregroundColor="KravenFont1" name="text" position="70,80" size="708,28" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular;24" foregroundColor="KravenFont1" name="target" position="70,115" size="708,28" transparent="1" />
-    <widget itemHeight="30" name="filelist" position="70,160" selectionDisabled="1" size="708,150" transparent="1" />
+    <widget itemHeight="30" name="filelist" position="70,160" selectionDisabled="1" size="708,150" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular;24" foregroundColor="KravenFont1" name="textbook" position="70,380" size="708,28" transparent="1" />
-    <widget itemHeight="30" name="booklist" position="70,425" size="708,150" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget itemHeight="30" name="booklist" position="70,425" size="708,150" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="LocationBox" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NameserverSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NameserverSetup" position="0,0" size="1280,720" title="Nameserver Setup">
-    <widget backgroundColor="KravenBackground" itemHeight="30" name="config" position="70,80" size="708,450" transparent="1" />
+    <widget backgroundColor="KravenBackground" itemHeight="30" name="config" position="70,80" size="708,450" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" name="introduction" position="70,560" size="708,28" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NameserverSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- SystemNetworkInfo -->
   <screen name="SystemNetworkInfo" position="0,0" size="1280,720" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
@@ -1116,15 +1178,17 @@
     <widget source="IF" render="Label" position="181,504" size="375,25" zPosition="10" font="Regular;20" backgroundColor="KravenBackground" foregroundColor="KravenFont1" halign="left" transparent="1" />
     <widget source="Statustext" render="Label" position="70,544" size="150,28" zPosition="10" font="Regular2;22" backgroundColor="KravenBackground" foregroundColor="KravenFont2" halign="left" transparent="1" />
     <widget name="statuspic" pixmaps="skin_default/buttons/button_green.png,skin_default/buttons/button_green_off.png" position="220,550" zPosition="10" size="15,16" transparent="1" alphatest="on" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="SystemNetworkInfo" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkMountsMenu -->
   <screen name="NetworkMountsMenu" position="0,0" size="1280,720" title="Mounts Setup" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="menulist" position="70,80" size="708,510" itemHeight="30" font="Regular;20" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColorSelected="KravenSelection" foregroundColorSelected="KravenFont1" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkMountsMenu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkAfp -->
   <screen name="NetworkAfp" position="0,0" size="1280,720" title="AFP Setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -1134,8 +1198,9 @@
     <widget name="labstop" position="320,140" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" foregroundColor="KravenFont1" zPosition="1" />
     <widget name="labrun" position="320,140" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" foregroundColor="KravenFont1" zPosition="2" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkAfp" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkFtp -->
   <screen name="NetworkFtp" title="FTP Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -1144,7 +1209,8 @@
     <widget name="labstop" position="320,140" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" foregroundColor="KravenFont1" zPosition="1" />
     <widget name="labrun" position="320,140" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" foregroundColor="KravenFont1" zPosition="2" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkFtp" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkInadyn -->
   <screen name="NetworkInadyn" title="Inadyn Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -1167,22 +1233,25 @@
     <widget name="system" position="110,440" size="100,30" font="Regular;22" valign="center" halign="left" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" />
     <widget name="labsys" position="320,440" size="350,30" font="Regular;22" valign="center" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkInadyn" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkInadynSetup -->
   <screen name="NetworkInadynSetup" title="Inadyn Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="config" position="70,80" size="708,510" backgroundColor="KravenBackground" foregroundColor="KravenFont1" backgroundColorSelected="KravenSelection" foregroundColorSelected="KravenFont1" itemHeight="30" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="HelpWindow" position="120,405" size="708,160" zPosition="1" backgroundColor="KravenBackground" transparent="0" alphatest="on" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkInadynSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkInadynLog -->
   <screen name="NetworkInadynLog" title="Inadyn Log" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="infotext" position="70,80" size="708,500" font="Regular;18" zPosition="3" backgroundColorSelected="KravenSelection" foregroundColorSelected="KravenFont1" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" />
-    <panel name="template_menu_left" />
+    <widget name="infotext" position="70,80" size="708,500" scrollbarMode="showOnDemand" font="Regular;18" zPosition="3" backgroundColorSelected="KravenSelection" foregroundColorSelected="KravenFont1" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkInadynLog" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkMiniDLNA -->
   <screen name="NetworkMiniDLNA" title="MiniDLNA Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -1212,8 +1281,9 @@
     <widget name="dlnaactive" position="70,530" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
     <widget name="dlnainactive" position="70,530" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkMiniDLNA" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkNfs -->
   <screen name="NetworkNfs" title="NFS Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -1223,8 +1293,9 @@
     <widget name="labstop" position="320,140" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" foregroundColor="KravenFont1" zPosition="1" />
     <widget name="labrun" position="320,140" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" foregroundColor="KravenFont1" zPosition="2" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkNfs" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkOpenvpn -->
   <screen name="NetworkOpenvpn" title="OpenVpn Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -1234,8 +1305,9 @@
     <widget name="labstop" position="320,140" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" foregroundColor="KravenFont1" zPosition="1" />
     <widget name="labrun" position="320,140" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" foregroundColor="KravenFont1" zPosition="2" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkOpenvpn" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkSABnzbd -->
   <screen name="NetworkSABnzbd" title="SABnzbd Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -1245,8 +1317,9 @@
     <widget name="labstop" position="320,140" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" foregroundColor="KravenFont1" zPosition="1" />
     <widget name="labrun" position="320,140" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" foregroundColor="KravenFont1" zPosition="2" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkSABnzbd" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkSamba -->
   <screen name="NetworkSamba" title="Samba Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -1256,13 +1329,15 @@
     <widget name="labstop" position="320,140" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" foregroundColor="KravenFont1" zPosition="1" />
     <widget name="labrun" position="320,140" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" foregroundColor="KravenFont1" zPosition="2" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkSamba" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkSambaLog -->
   <screen name="NetworkSambaLog" title="Samba Log" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="infotext" position="70,80" size="708,500" zPosition="3" itemHeight="25" font="Regular; 18" scrollbarMode="showOnDemand" backgroundColor="KravenBackground" foregroundColor="KravenFont1" backgroundColorSelected="KravenSelection" foregroundColorSelected="KravenFont1" transparent="0" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkSambaLog" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkTelnet -->
   <screen name="NetworkTelnet" title="Telnet Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -1271,29 +1346,33 @@
     <widget name="labstop" position="320,170" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" foregroundColor="KravenFont1" zPosition="1" />
     <widget name="labrun" position="320,170" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" foregroundColor="KravenFont1" zPosition="2" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkTelnet" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkuShareSetup -->
   <screen name="NetworkuShareSetup" title="uShare Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="config" position="70,80" size="708,510" backgroundColor="KravenBackground" foregroundColor="KravenFont1" backgroundColorSelected="KravenSelection" foregroundColorSelected="KravenFont1" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="HelpWindow" position="120,405" size="708,160" zPosition="1" backgroundColor="KravenBackground" transparent="0" alphatest="on" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkuShareSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- uShareSelection -->
   <screen name="uShareSelection" title="uShare Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="checkList" position="70,80" size="708,510" backgroundColor="KravenBackground" foregroundColor="KravenFont1" backgroundColorSelected="KravenSelection" foregroundColorSelected="KravenFont1" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" transparent="1" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="uShareSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ScanIP -->
   <screen name="ScanIP" title="Scan IP" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="config" position="70,80" size="708,500" font="Regular;22" zPosition="3" backgroundColorSelected="KravenSelection" foregroundColorSelected="KravenFont1" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" />
+    <widget name="config" position="70,80" size="708,500" scrollbarMode="showOnDemand" font="Regular;22" zPosition="3" backgroundColorSelected="KravenSelection" foregroundColorSelected="KravenFont1" backgroundColor="KravenBackground" foregroundColor="KravenFont1" transparent="1" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ScanIP" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkuShare -->
   <screen name="NetworkuShare" title="uShare Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -1326,47 +1405,53 @@
     <widget name="dlnaactive" position="400,530" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
     <widget name="dlnainactive" position="400,530" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkuShare" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NetworkMacSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NetworkMacSetup" position="0,0" size="1280,720" title=" ">
     <widget backgroundColor="KravenBackground" itemHeight="30" name="config" position="70,80" size="708,100" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" valign="center" position="70,485" render="Label" size="708,100" source="introduction" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NetworkMacSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Timer ********** -->
   <!-- TimeInput -->
   <screen backgroundColor="KravenBackground" flags="wfNoBorder" name="TimeInput" position="148,281" size="500,155" title="Time Input">
     <widget itemHeight="30" name="config" position="10,54" size="480,90" backgroundColor="KravenBackground" foregroundColor="KravenFont1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="TimeInput" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- TimerEditList -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEditList" position="0,0" size="1280,720" title="Timer Editor">
-    <widget name="timerlist" position="45,80" size="766,540" scrollbarMode="showOnDemand" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget name="timerlist" position="45,80" size="733,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="TimerEditList" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- TimerEntry -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEntry" position="0,0" size="1280,720" title="Timer entry">
-    <widget itemHeight="30" name="config" position="70,80" size="708,390" transparent="1" />
+    <widget itemHeight="30" name="config" position="70,80" size="708,390" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="HelpWindow" position="156,479" size="532,170" flags="wfNoBorder" />
     <eLabel font="Regular;20" halign="left" valign="center" text="Abbrechen" position="70,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
     <eLabel font="Regular;20" halign="left" valign="center" text="OK" position="320,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
     <panel name="template_colorkey_text" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="TimerEntry" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- TimerLog -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerLog" position="0,0" size="1280,720" title="Timer log">
-    <widget name="loglist" position="70,80" size="708,250" transparent="1" />
+    <widget name="loglist" position="70,80" size="708,250" scrollbarMode="showOnDemand" transparent="1" />
     <widget font="Regular2;20" foregroundColor="KravenFont2" name="logentry" position="70,372" size="708,130" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="TimerLog" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- TimerSanityConflict -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerSanityConflict" position="0,0" size="1280,720" title="Timer sanity error">
@@ -1381,13 +1466,15 @@
     <widget font="Regular;20" halign="left" valign="center" name="key_green" position="375,320" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
     <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="75,510" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
     <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="375,510" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="TimerSanityConflict" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- TimerSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerSelection" position="0,0" size="1280,720" title="Timer selection">
     <widget name="timerlist" position="70,80" size="708,550" scrollbarMode="showNever" transparent="1" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="TimerSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- SleepTimerEdit -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SleepTimerEdit" position="0,0" size="1280,720" title="Sleep Timer">
@@ -1395,8 +1482,9 @@
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" name="input" position="350,140" size="50,25" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" name="aftertext" position="400,140" size="120,25" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" name="current_status" position="100,180" size="690,30" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="SleepTimerEdit" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- TimerEdit -->
   <screen name="TimerEdit" backgroundColor="KravenBackground" position="70,130" size="590,335">
@@ -1414,38 +1502,42 @@
   </screen>
   <!-- CronTimers -->
   <screen name="CronTimers" position="0,0" size="1280,720" title="CronManager" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="list" render="Listbox" position="70,120" size="708,450" transparent="1" backgroundColor="KravenBackground" backgroundColorSelected="ListboxSelectedBackground">
+    <widget source="list" render="Listbox" position="70,120" size="708,450" scrollbarMode="showOnDemand" transparent="1" backgroundColor="KravenBackground" backgroundColorSelected="ListboxSelectedBackground">
       <convert type="StringList" />
     </widget>
     <widget name="labactive" position="180,80" size="100,24" font="Regular;20" foregroundColor="KravenFont1" valign="center" halign="center" backgroundColor="green" zPosition="2" />
     <widget name="lab1" position="70,80" size="100,24" font="Regular;20" foregroundColor="KravenFont1" valign="center" transparent="1" />
     <widget name="labrun" position="396,80" size="100,24" font="Regular;20" foregroundColor="KravenFont1" valign="center" halign="center" backgroundColor="green" zPosition="2" />
     <widget name="lab2" position="299,80" size="150,24" font="Regular;20" foregroundColor="KravenFont1" valign="center" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CronTimers" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Common Interface ********** -->
   <!-- CiSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CiSelection" position="0,0" size="1280,720" title="Common Interface">
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" name="text" position="70,80" size="700,28" transparent="1" />
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="entries" position="70,130" size="708,450" transparent="1" foregroundColor="KravenFont1" />
-    <panel name="template_menu_left" />
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="entries" position="70,130" size="708,450" scrollbarMode="showOnDemand" transparent="1" foregroundColor="KravenFont1" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CiSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- MMIDialog -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MMIDialog" position="0,0" size="1280,720" title="Common Interface">
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" name="title" position="70,80" size="708,28" transparent="1" />
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="entries" position="70,131" size="708,420" transparent="1" foregroundColor="KravenFont1" />
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="entries" position="70,131" size="708,420" scrollbarMode="showOnDemand" transparent="1" foregroundColor="KravenFont1" />
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" halign="center" name="bottom" position="70,562" size="708,28" transparent="1" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="MMIDialog" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CIselectMainMenu -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CIselectMainMenu" position="0,0" size="1280,720" title="CI Assignment">
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="CiList" position="70,80" size="708,450" transparent="1" foregroundColor="KravenFont1" />
-    <panel name="template_menu_left_button" />
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="CiList" position="70,80" size="708,450" scrollbarMode="showOnDemand" transparent="1" foregroundColor="KravenFont1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CIselectMainMenu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CIconfigMenu -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CIconfigMenu" position="0,0" size="1280,720" title="CI Assignment">
@@ -1454,37 +1546,42 @@
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" position="70,340" render="Label" size="708,28" source="ServiceList_desc" transparent="1" />
     <widget itemHeight="30" name="ServiceList" position="70,390" size="708,200" transparent="1" foregroundColor="KravenFont1" />
     <widget backgroundColor="KravenBackground" font="Regular;22" foregroundColor="KravenFont1" position="70,390" render="Label" size="708,200" source="ServiceList_info" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CIconfigMenu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- easyCIconfigMenu -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="easyCIconfigMenu" position="0,0" size="1280,720" title="CI Assignment">
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" position="70,80" render="Label" size="708,28" source="ServiceList_desc" transparent="1" />
-    <widget itemHeight="30" name="ServiceList" position="70,130" size="708,450" transparent="1" />
+    <widget itemHeight="30" name="ServiceList" position="70,130" size="708,450" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular;22" foregroundColor="KravenFont1" position="70,130" render="Label" size="708,450" source="ServiceList_info" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="easyCIconfigMenu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CAidSelect -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CAidSelect" position="0,0" size="1280,720" title="select CAId's">
-    <widget backgroundColor="KravenBackground" itemHeight="30" name="list" position="70,80" size="708,420" transparent="1" />
+    <widget backgroundColor="KravenBackground" itemHeight="30" name="list" position="70,80" size="708,420" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,595" render="Label" size="708,28" source="introduction" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CAidSelect" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- myProviderSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="myProviderSelection" position="0,0" size="1280,720" title="Select provider to add...">
-    <widget backgroundColor="KravenBackground" itemHeight="30" name="list" position="70,80" size="708,450" transparent="1" />
+    <widget backgroundColor="KravenBackground" itemHeight="30" name="list" position="70,80" size="708,450" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,595" render="Label" size="708,28" source="introduction" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="myProviderSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- myChannelSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="myChannelSelection" position="0,0" size="1280,720" title="Select service to add...">
-    <widget backgroundColor="KravenBackground" itemHeight="30" name="list" position="70,80" size="708,450" transparent="1" />
+    <widget backgroundColor="KravenBackground" itemHeight="30" name="list" position="70,80" size="708,450" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,595" render="Label" size="708,28" source="introduction" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="myChannelSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Messages ********** -->
   <!-- MessageBoxTemplate -->
@@ -1643,18 +1740,24 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   <!-- ********** Plugin Browser ********** -->
   <!-- PluginBrowser -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser">
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" name="list" position="70,80" size="708,550" transparent="1" />
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" name="list" position="70,80" size="708,550" scrollbarMode="showOnDemand" transparent="1" />
     <eLabel backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenButtonText" halign="left" valign="center" text="Remove Plugins" position="70,665" size="220,26" transparent="1" zPosition="1" />
     <eLabel backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenButtonText" halign="left" valign="center" text="Download Plugins" position="320,665" size="220,26" transparent="1" zPosition="1" />
-    <panel name="template_menu_left_button" />
+    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="65,692" size="200,5" />
+    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="315,692" size="200,5" />
+    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="565,692" size="200,5" />
+    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="815,692" size="200,5" />
+    <panel name="template_menu_logo" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="PluginBrowser" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
    <!-- PluginDownloadBrowser -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PluginDownloadBrowser" position="0,0" size="1280,720" title="Downloadable plugins">
-    <widget backgroundColor="KravenBackground" name="list" position="70,80" size="708,550" transparent="1" zPosition="4" />
+    <widget backgroundColor="KravenBackground" name="list" position="70,80" size="708,550" scrollbarMode="showOnDemand" transparent="1" zPosition="4" />
     <widget font="Regular2;22" backgroundColor="KravenBackground" foregroundColor="KravenFont2" halign="center" name="text" position="70,662" size="708,48" transparent="1" valign="center" zPosition="1" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="PluginDownloadBrowser" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Channel Selection and Infobar ********** -->
   <!-- SlimChannelSelection -->
@@ -1681,14 +1784,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     </widget>
     <widget source="PrimeTime" render="KravenHDNextEvents" position="891,680" size="362,30" noWrap="1" font="Regular2;22" foregroundColor="KravenFont2" backgroundColor="KravenBackground" transparent="1">
     </widget>
-    <panel name="template_menu_full_button" />
+    <panel name="template_menu_full" />
     <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="SlimChannelSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- SimpleChannelSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SimpleChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
     <widget colorEventProgressbarBorder="KravenFont1" colorEventProgressbarBorderSelected="KravenFont1" colorServiceDescription="KravenFont1" colorServiceDescriptionSelected="yellow" foregroundColorServiceNotAvail="#777777" name="list" position="70,80" serviceInfoFont="Regular2;21" serviceItemHeight="30" serviceNameFont="Regular;22" serviceNumberFont="Regular;22" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="SimpleChannelSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ChannelSelectionRadio -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelectionRadio" position="0,201" size="1280,520" title="Radio Channel Selection">
@@ -1707,19 +1812,22 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   <ePixmap pixmap="KravenHD/buttons/key_yellow1.png" position="565,692" size="200,5" backgroundColor="KravenBackground" alphatest="blend" />
   <ePixmap pixmap="KravenHD/buttons/key_blue1.png" position="815,692" size="200,5" backgroundColor="KravenBackground" alphatest="blend" />
   <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ChannelSelectionRadio" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
   <!-- mySmallChannelSelection -->
   <screen name="mySmallChannelSelection" position="0,0" size="1280,720" title="Select service to add..." flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="list" position="70,80" size="708,540" font="Regular;22" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget name="list" position="70,80" size="708,540" scrollbarMode="showOnDemand" font="Regular;22" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="mySmallChannelSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- BouquetSelector -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="BouquetSelector" position="0,0" size="1280,720" title="Choose bouquet">
     <eLabel backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" position="70,90" size="708,28" text="Choose bouquet" transparent="1" />
-    <widget enableWrapAround="1" itemHeight="30" name="menu" position="70,130" size="708,450" transparent="1" zPosition="3" />
-    <panel name="template_menu_left" />
+    <widget enableWrapAround="1" itemHeight="30" name="menu" position="70,130" size="708,450" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="BouquetSelector" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
 
 <!-- InfoBarLite -->
@@ -1801,22 +1909,25 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   <!-- ********** Parental Control ********** -->
   <!-- ParentalControlChangePin -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ParentalControlChangePin" position="0,0" size="1280,720" title="Change pin code">
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ParentalControlChangePin" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ParentalControlEditor -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ParentalControlEditor" position="0,0" size="1280,720" title="Parental control services Editor">
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="servicelist" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="servicelist" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ParentalControlEditor" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ParentalControlSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ParentalControlSetup" position="0,0" size="1280,720" title="Parental control setup">
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ParentalControlSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Audio and Video  ********** -->
   <!-- VideoFinetune -->
@@ -1825,9 +1936,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   </screen>
   <!-- UI3DSetupScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UI3DSetupScreen" position="0,0" size="1280,720" title="UI 3D setup">
-    <widget name="config" position="70,80" size="708,540" transparent="1" zPosition="2" />
-    <panel name="template_menu_left_button" />
+    <widget name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="UI3DSetupScreen" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- UIPositionSetup -->
   <screen backgroundColor="black" flags="wfNoBorder" name="UIPositionSetup" position="0,0" size="1280,720" title="Position Setup">
@@ -1846,11 +1958,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   </screen>
   <!-- Volume_adjust -->
   <screen name="Volume_adjust" position="0,0" size="1280,720" title="Volume Adjust" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="ServiceList" position="70,80" size="708,450" font="Regular;21" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget name="ServiceList" position="70,80" size="708,450" scrollbarMode="showOnDemand" font="Regular;21" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
     <widget source="press_menu" render="Label" position="70,585" zPosition="1" size="708,28" font="Regular2;22" foregroundColor="KravenFont2" halign="left" valign="center" backgroundColor="KravenBackground" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Volume_adjust" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- AudioSelection -->
   <screen name="AudioSelection" title="Audio" position="center,center" size="600,426" flags="wfNoBorder" backgroundColor="KravenBackground">
@@ -1895,33 +2008,37 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <eLabel text="Cancel" backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenButtonText" halign="left" position="389,388" size="220,30" transparent="1" zPosition="1" />
     <ePixmap pixmap="KravenHD/icons-light/icons/key_ok.png" alphatest="blend" position="35,390" size="43,22" zPosition="3" />
     <eLabel text="Auswahl" backgroundColor="KravenBackground" font="Regular;20" foregroundColor="KravenButtonText" halign="left" position="86,388" size="220,30" transparent="1" zPosition="3" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="AudioSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- Change_volume -->
   <screen name="Change_volume" position="0,0" size="1280,720" title="Change Volume offset" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="config" position="70,80" size="708,540" font="Regular;21" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" font="Regular;21" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Change_volume" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- AC3LipSyncSetup -->
   <screen name="AC3LipSyncSetup" position="0,0" size="1280,720" title="AC3 Lip Sync Setup" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="config" position="70,80" size="708,540" font="Regular;21" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" font="Regular;21" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="AC3LipSyncSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- Volume_Config -->
   <screen name="Volume_Config" position="0,0" size="1280,720" title="Volume Config" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="config" position="70,80" zPosition="1" size="708,242" font="Regular;22" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="KravenBackground" />
+    <widget name="config" position="70,80" zPosition="1" size="708,242" scrollbarMode="showOnDemand" font="Regular;22" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="KravenBackground" />
     <widget name="infotext" position="70,340" size="708,242" font="Regular2;22" foregroundColor="KravenFont2" halign="left" valign="top" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Volume_Config" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Subtitles and Subservices ********** -->
   <!-- SubservicesQuickzap -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SubservicesQuickzap" position="380,600" size="560,100" title="Subservices">
     <widget alphatest="blend" pixmap="skin_default/icons/record.png" position="450,0" render="Pixmap" size="14,14" source="session.RecordState" zPosition="2">
-      <convert type="ConditionalShowHide">Blink</convert>
+      <convert type="ConditionalShowHide" />
     </widget>
     <eLabel backgroundColor="KravenBackground" font="Regular2;20" foregroundColor="KravenFont2" halign="center" position="0,0" size="560,28" text="Subservices" valign="center" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" name="CurrentSubserviceNumber" position="0,28" size="70,48" valign="center" />
@@ -1931,8 +2048,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   </screen>
   <!-- Subtitles -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Subtitles" position="0,0" size="1280,720" title="Subtitle selection">
-    <widget backgroundColor="KravenBackground" itemHeight="30" name="config" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left" />
+    <widget backgroundColor="KravenBackground" itemHeight="30" name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Subtitles" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- SubtitleDisplay -->
   <screen zPosition="-1" flags="wfNoBorder" backgroundColor="transparent" name="SubtitleDisplay" position="0,0" size="1280,720" />
@@ -1958,25 +2076,28 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   </screen>
   <!-- AutoTimeshift -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimeshift" position="0,0" size="1280,720" title="Auto Timeshift Configuration">
-    <widget name="config" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_button" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="AutoTimeshift" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Flash Online ********** -->
   <!-- doFlashImage -->
   <screen name="doFlashImage" position="0,0" size="1280,720" title="doFlashImage" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="imageList" position="70,80" size="708,540" font="Regular;21" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="KravenBackground" />
-    <panel name="template_menu_left_button" />
+    <widget name="imageList" position="70,80" size="708,540" scrollbarMode="showOnDemand" font="Regular;21" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="KravenBackground" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="doFlashImage" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- FlashOnline -->
   <screen name="FlashOnline" position="0,0" size="1280,720" title="FlashOnline" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="info-online" position="70,80" zPosition="1" size="708,242" font="Regular;22" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="KravenBackground" />
     <widget name="info-local" position="70,340" zPosition="1" size="708,242" font="Regular;22" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="KravenBackground" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="FlashOnline" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- JobView -->
   <screen name="JobView" position="0,0" size="1280,720" title="JobView" flags="wfNoBorder" backgroundColor="transparent">
@@ -1997,7 +2118,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="KravenBackground" source="job_task" render="Label" position="70,160" size="708,50" font="Regular2;22" foregroundColor="KravenFont2" />
     <widget backgroundColor="KravenBackground" source="job_status" render="Label" position="70,291" size="480,28" font="Regular2;22" foregroundColor="KravenFont2" />
     <widget name="config" position="70,335" size="480,20" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="JobView" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Tuner Setup ********** -->
   <!-- Dish -->
@@ -2006,7 +2128,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   </screen>
   <!-- NimSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NimSelection" position="0,0" size="1280,720" title="Choose Tuner">
-    <widget enableWrapAround="1" position="70,80" render="Listbox" size="708,440" source="nimlist" transparent="1">
+    <widget enableWrapAround="1" position="70,80" render="Listbox" size="708,440" scrollbarMode="showOnDemand" source="nimlist" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (10, 8), size = (680, 30), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
@@ -2017,18 +2139,20 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 				}
 			</convert>
     </widget>
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NimSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- NimSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NimSetup" position="0,0" size="1280,720" title="Reception Settings">
-    <widget itemHeight="30" name="config" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left" />
+    <widget itemHeight="30" name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="NimSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- PositionerSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PositionerSetup" position="0,0" size="1280,720" title="Positioner setup...">
-    <widget backgroundColor="KravenBackground" itemHeight="30" name="list" position="220,120" size="400,180" transparent="1" />
+    <widget backgroundColor="KravenBackground" itemHeight="30" name="list" position="220,120" size="400,180" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="red" font="Regular2;20" foregroundColor="KravenFont2" halign="center" name="red" position=" 70,330" size="170,100" valign="center" alphatest="blend" />
     <widget backgroundColor="green" font="Regular2;20" foregroundColor="KravenFont2" halign="center" name="green" position="241,330" size="170,100" valign="center" alphatest="blend" />
     <widget backgroundColor="yellow" font="Regular2;20" foregroundColor="KravenFont2" halign="center" name="yellow" position="410,330" size="170,100" valign="center" alphatest="blend" />
@@ -2052,8 +2176,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="KravenBackground" font="Regular2;20" foregroundColor="KravenFont2" name="polarisation" position="650,595" size="150,25" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;20" foregroundColor="KravenFont2" name="lock_state" position="160,560" size="200,25" transparent="1" />
     <eLabel backgroundColor="KravenBackground" font="Regular2;20" foregroundColor="KravenFont2" position="70,560" size="80,25" text="Lock:" transparent="1" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="PositionerSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- Satfinder -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Satfinder" position="0,0" size="1280,720" title="Satfinder">
@@ -2083,25 +2208,28 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
       <convert type="FrontendInfo">LOCK</convert>
       <convert type="ConditionalShowHide">Invert</convert>
     </widget>
-    <widget itemHeight="30" name="config" position="120,249" size="600,330" transparent="1" foregroundColor="KravenFont1" />
+    <widget itemHeight="30" name="config" position="120,249" size="600,330" scrollbarMode="showOnDemand" transparent="1" foregroundColor="KravenFont1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" name="introduction" position="70,595" size="708,28" transparent="1" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Satfinder" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ScanSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ScanSetup" position="0,0" size="1280,720" title="Service scan">
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,480" transparent="1" />
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,480" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" name="introduction" position="70,595" size="708,28" transparent="1" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ScanSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ScanSimple -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ScanSimple" position="0,0" size="1280,720" title="Service scan">
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" name="header" position="70,80" size="708,30" transparent="1" />
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,130" size="708,450" transparent="1" />
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,130" size="708,450" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" name="footer" position="70,595" size="708,28" transparent="1" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ScanSimple" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ServiceScan -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ServiceScan" position="0,0" size="1280,720" title="Service Scan">
@@ -2125,53 +2253,59 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="KravenBackground" font="Regular2;20" foregroundColor="KravenFont2" name="scan_state" position="70,180" size="600,25" transparent="1" zPosition="2" />
     <widget backgroundColor="KravenBackground" font="Regular2;20" foregroundColor="KravenFont2" name="pass" position="70,210" size="600,25" transparent="1" />
     <widget borderColor="KravenFont1" borderWidth="1" name="scan_progress" position="70,250" size="600,15" transparent="1" />
-    <widget itemHeight="30" name="servicelist" position="120,300" selectionDisabled="1" size="600,300" transparent="1" />
-    <panel name="template_menu_left" />
+    <widget itemHeight="30" name="servicelist" position="120,300" selectionDisabled="1" size="600,300" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ServiceScan" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ServiceInfo -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ServiceInfo" position="0,0" size="1280,720" title="Serviceinfo">
-    <widget backgroundColor="KravenBackground" itemHeight="40" name="infolist" position="70,80" selectionDisabled="1" size="708,480" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget backgroundColor="KravenBackground" itemHeight="40" name="infolist" position="70,80" selectionDisabled="1" size="708,480" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ServiceInfo" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- Setup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Setup" position="0,0" size="1280,720" title="Setup">
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Setup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- Blindscan -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Blindscan" position="0,0" size="1280,720" title="Blindscan">
-    <widget name="config" position="70,80" size="708,450" transparent="1" />
+    <widget name="config" position="70,80" size="708,450" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" name="introduction" position="70,595" size="708,28" transparent="1" zPosition="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Blindscan" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CableScanScreen -->
   <screen name="CableScanScreen" position="0,0" size="1280,720" title="Cable Scan" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="config" position="70,80" size="500,250" scrollbarMode="showOnDemand" backgroundColor="KravenBackground" transparent="1" />
     <widget name="introduction" position="70,595" size="500,28" font="Regular2;22" foregroundColor="KravenFont2" halign="center" backgroundColor="KravenBackground" transparent="1" />
-    <eLabel backgroundColor="KravenBackground" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CableScanScreen" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CableScanStatus -->
   <screen name="CableScanStatus" position="0,0" size="1280,720" title="Cable Scan" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="frontend" pixmap="icons/scan-c.png" position="105,556" size="64,64" transparent="1" alphatest="on" />
     <widget name="scan_state" position="173,557" zPosition="2" size="400,30" font="Regular2;18" foregroundColor="KravenFont2" backgroundColor="KravenBackground" transparent="1" />
     <widget name="scan_progress" position="174,602" size="400,15" pixmap="progress_big.png" borderWidth="2" borderColor="white" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CableScanStatus" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Software Manager Screens ********** -->
   <!-- SoftwareManagerSetup -->
   <screen name="SoftwareManagerSetup" position="0,0" size="1280,720" title="SoftwareManager setup" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="config" font="Regular;22" itemHeight="32" foregroundColor="KravenFont1" position="70,80" zPosition="1" size="708,360" halign="left" valign="top" transparent="1" backgroundColor="KravenBackground" />
+    <widget name="config" font="Regular;22" itemHeight="32" foregroundColor="KravenFont1" position="70,80" zPosition="1" size="708,360" scrollbarMode="showOnDemand" halign="left" valign="top" transparent="1" backgroundColor="KravenBackground" />
     <widget source="introduction" render="Label" position="70,587" size="708,60" font="Regular2;22" foregroundColor="KravenFont2" halign="left" valign="center" transparent="1" backgroundColor="KravenBackground" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="SoftwareManagerSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- SoftwareManagerInfo -->
   <screen name="SoftwareManagerInfo" position="center,center" size="1280,720" title="SoftwareManager information" flags="wfNoBorder" backgroundColor="transparent">
@@ -2187,13 +2321,15 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     </widget>
     <widget source="introduction" render="Label" position="70,585" size="708,30" zPosition="10" font="Regular2;22" ForegroundColor="KravenFont2" halign="center" valign="center" backgroundColor="KravenBackground" transparent="1" />
     <panel name="template_colorkey_text_source" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="SoftwareManagerInfo" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- SoftwareUpdateChanges -->
   <screen name="SoftwareUpdateChanges" position="0,0" size="1280,720" title="SoftwareUpdateChanges" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="text" position="70,80" size="708,540" font="Regular;22" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget name="text" position="70,80" size="708,540" scrollbarMode="showOnDemand" font="Regular;22" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="SoftwareUpdateChanges" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- UpdatePluginMenu -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UpdatePluginMenu" position="0,0" size="1280,720" title="Softwaremanager...">
@@ -2217,9 +2353,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 				}
 			</convert>
     </widget>
-    <panel name="template_menu_full_button" />
+    <panel name="template_menu_full" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="UpdatePluginMenu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- PluginDetails -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PluginDetails" position="0,0" size="1280,720" title="Plugin details">
@@ -2227,9 +2364,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="KravenBackground" font="Regular2;27" foregroundColor="KravenFont2" position="130,125" render="Label" size="540,30" source="author" transparent="1" />
     <widget alphatest="blend" name="screenshot" position=" 70,190" size="320,230" zPosition="10" />
     <widget backgroundColor="KravenBackground" font="Regular;22" foregroundColor="KravenFont1" name="detailtext" position="400,190" size="370,420" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="PluginDetails" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- PluginManager -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PluginManager" position="0,0" size="1280,720" title="Plugin manager">
@@ -2252,13 +2390,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 			</convert>
     </widget>
     <widget font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,585" render="Label" shadowColor="KravenBackground" shadowOffset="-2,-2" size="708,25" source="status" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="PluginManager" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- PluginManagerInfo -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PluginManagerInfo" position="0,0" size="1280,720" title="Plugin manager activity">
-    <widget position="70,80" render="Listbox" size="708,450" source="list" transparent="1">
+    <widget position="70,80" render="Listbox" size="708,450" scrollbarMode="showOnDemand" source="list" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (18, 14), size = (48, 48), png = 2), # index 2 is the status pixmap
@@ -2271,13 +2410,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 			</convert>
     </widget>
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,595" render="Label" size="708,28" source="status" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="PluginManagerInfo" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- PluginManagerHelp -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PluginManagerHelp" position="0,0" size="1280,720" title="Plugin manager help">
-    <widget position="70,80" render="Listbox" size="708,450" source="list" transparent="1">
+    <widget position="70,80" render="Listbox" size="708,450" scrollbarMode="showOnDemand" source="list" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (90, 5), size = (565, 26), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
@@ -2290,8 +2430,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 			</convert>
     </widget>
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,585" render="Label" size="708,25" source="status" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="PluginManagerHelp" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- UpdatePlugin -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UpdatePlugin" position="0,0" size="1280,720" title="Software Update...">
@@ -2299,8 +2440,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="KravenBackground" font="Regular2;20" foregroundColor="KravenFont2" position="80,190" render="Label" size="688,25" source="package" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;20" foregroundColor="KravenFont2" position="80,230" render="Label" size="688,50" source="status" transparent="1" />
     <widget borderWidth="1" name="slider" position="70,320" size="708,20" transparent="1" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="UpdatePlugin" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- Ipkg -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Ipkg" position="0,0" size="1280,720" title="Installing Software...">
@@ -2308,32 +2450,36 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="KravenBackground" font="Regular2;20" foregroundColor="KravenFont2" name="package" position="80,190" size="688,25" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;20" foregroundColor="KravenFont2" name="status" position="80,230" size="688,50" transparent="1" />
     <widget borderWidth="1" name="slider" position="70,320" size="708,20" transparent="1" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Ipkg" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- IpkgInstaller -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="IpkgInstaller" position="0,0" size="1280,720" title="...">
-    <widget itemHeight="30" name="list" position="70,80" size="708,450" transparent="1" />
+    <widget itemHeight="30" name="list" position="70,80" size="708,450" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,595" render="Label" size="708,28" source="introduction" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="IpkgInstaller" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- IPKGMenu -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="IPKGMenu" position="0,0" size="1280,720" title="Select IPKG source.....">
-    <widget itemHeight="30" name="filelist" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget itemHeight="30" name="filelist" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="IPKGMenu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- IPKGSource -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="IPKGSource" position="0,0" size="1280,720" title="IPKG source">
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" name="text" position="70,80" size="708,28" zPosition="3" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="IPKGSource" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- PacketManager -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PacketManager" position="0,0" size="1280,720" title="PacketManager">
-    <widget position="70,80" render="Listbox" size="708,540" source="list" transparent="1">
+    <widget position="70,80" render="Listbox" size="708,540" scrollbarMode="showOnDemand" source="list" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (18, 5), size = (48, 48), png = 4), # index 4 is the status pixmap
@@ -2346,47 +2492,53 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 				}
 			</convert>
     </widget>
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="PacketManager" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- BackupSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="BackupSelection" position="0,0" size="1280,720" title="Select files/folders to backup...">
-    <widget name="checkList" position="70,80" size="708,540" itemHeight="30" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget name="checkList" position="70,80" size="708,540" scrollbarMode="showOnDemand" itemHeight="30" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="BackupSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- BackupSuiteRestore -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="BackupSuiteRestore" position="0,0" size="1280,720" title="Restore Backups">
-    <widget itemHeight="30" name="filelist" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget itemHeight="30" name="filelist" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="BackupSuiteRestore" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ImageBackup -->
   <screen name="ImageBackup" position="0,0" size="1280,720" title="Image Backup" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="info-hdd" position="70,80" zPosition="1" size="708,150" font="Regular;22" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="KravenBackground" />
     <widget name="info-usb" position="70,245" zPosition="1" size="708,330" font="Regular;22" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="KravenBackground" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
     <panel name="key_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ImageBackup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- RestoreMenu -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RestoreMenu" position="0,0" size="1280,720" title="Restore Backups">
-    <widget itemHeight="30" name="filelist" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget itemHeight="30" name="filelist" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="RestoreMenu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- RestoreMenuImage -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RestoreMenuImage" position="0,0" size="1280,720" title="Restore Backups">
-    <widget itemHeight="30" name="filelist" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget itemHeight="30" name="filelist" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="RestoreMenuImage" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- InputDeviceSelection -->
   <screen name="InputDeviceSelection" position="0,0" size="1280,720" title="Select input device" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="list" render="Listbox" position="68,80" size="708,490" zPosition="10" transparent="1">
+    <widget source="list" render="Listbox" position="68,80" size="708,490" scrollbarMode="showOnDemand" zPosition="10" transparent="1">
       <convert type="TemplatedMultiContent">
 							{"template": [
 									MultiContentEntryPixmapAlphaTest(pos = (2, 8), size = (54, 54), png = 2), # index 3 is the interface pixmap
@@ -2398,92 +2550,105 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 			</convert>
     </widget>
     <widget source="introduction" render="Label" position="70,595" size="708,28" zPosition="10" font="Regular2;22" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="InputDeviceSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- InputDeviceSetup -->
   <screen name="InputDeviceSetup" position="0,0" size="1280,720" title="Input device setup" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="config" font="Regular;22" foregroundColor="KravenFont1" position="70,80" size="708,480" transparent="1" />
+    <widget name="config" font="Regular;22" foregroundColor="KravenFont1" position="70,80" size="708,480" scrollbarMode="showOnDemand" transparent="1" />
     <widget source="introduction" render="Label" position="70,595" size="708,28" zPosition="10" font="Regular2;22" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="InputDeviceSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Cron Manager ********** -->
   <!-- CronManager -->
   <screen flags="wfNoBorder" name="CronManager" position="0,0" size="1280,720" title="CronManager" backgroundColor="transparent">
-    <widget name="showjobs" position="70,80" size="708,540" transparent="1" foregroundColor="KravenFont1" />
-    <panel name="template_menu_left_button" />
+    <widget name="showjobs" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" foregroundColor="KravenFont1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CronManager" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- addJob -->
   <screen flags="wfNoBorder" name="addJob" position="0,0" size="1280,720" title="Add Cron Job" backgroundColor="transparent">
-    <widget name="config" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="addJob" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- modifyJob -->
   <screen flags="wfNoBorder" name="modifyJob" position="0,0" size="1280,720" title="Modify Cron Job" backgroundColor="transparent">
-    <widget name="config" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="modifyJob" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CronManagerFile -->
   <screen flags="wfNoBorder" name="CronManagerFile" position="0,0" size="1280,720" title="Select file to execute" backgroundColor="transparent">
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" name="executable" position="70,80" size="708,30" transparent="1" />
-    <widget backgroundColor="KravenBackground" itemHeight="30" name="filelist" position="70,130" size="708,480" transparent="1" zPosition="3" />
-    <panel name="template_menu_left_button" />
+    <widget backgroundColor="KravenBackground" itemHeight="30" name="filelist" position="70,130" size="708,480" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CronManagerFile" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Exe Manager ********** -->
   <!-- ExeManager -->
   <screen flags="wfNoBorder" name="ExeManager" position="0,0" size="1280,720" title="ExeManager" backgroundColor="transparent">
-    <widget name="showexe" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget name="showexe" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ExeManager" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- addExe -->
   <screen flags="wfNoBorder" name="addExe" position="0,0" size="1280,720" backgroundColor="transparent" title="Add executable">
-    <widget name="config" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="addExe" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- modifyExe -->
   <screen flags="wfNoBorder" name="modifyExe" position="0,0" size="1280,720" backgroundColor="transparent" title="Modify executable">
-    <widget name="config" position="70,80" size="708,540" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="modifyExe" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ExeManagerFile -->
   <screen flags="wfNoBorder" name="ExeManagerFile" position="0,0" backgroundColor="transparent" size="1280,720" title="Select file to execute">
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" name="executable" position="70,75" size="708,28" transparent="1" />
-    <widget backgroundColor="KravenBackground" itemHeight="30" name="filelist" position="70,110" size="708,540" transparent="1" zPosition="3" />
-    <panel name="template_menu_left_button" />
+    <widget backgroundColor="KravenBackground" itemHeight="30" name="filelist" position="70,110" size="708,540" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ExeManagerFile" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** Crashlog ********** -->
   <!-- CrashlogAutoSubmitConfiguration -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CrashlogAutoSubmitConfiguration" position="0,0" size="1280,720" title="CrashlogAutoSubmit settings">
-    <widget enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,480" transparent="1" />
+    <widget enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,480" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,580" render="Label" size="708,28" source="status" transparent="1" />
     <widget name="HelpWindow" position="120,470" size="1,1" zPosition="10" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CrashlogAutoSubmitConfiguration" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CrashlogReportConfiguration -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CrashlogReportConfiguration" position="center,center" size="1280,720" title="CrashlogReport Setting">
-    <widget itemHeight="36" name="config" position="70,80" size="708,432" transparent="1" zPosition="2" foregroundColor="KravenFont1" />
+    <widget itemHeight="36" name="config" position="70,80" size="708,432" scrollbarMode="showOnDemand" transparent="1" zPosition="2" foregroundColor="KravenFont1" />
     <widget backgroundColor="KravenBackground" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="70,552" render="Label" size="708,70" source="status" transparent="1" valign="center" zPosition="10" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CrashlogReportConfiguration" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ********** FPGA ********** -->
   <!-- FPGAUpgrade -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="FPGAUpgrade" position="0,0" size="1280,720" title="FPGA Upgrade">
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" halign="left" position="70,80" render="Label" size="708,30" source="status" transparent="1" zPosition="1" />
-    <widget name="file_list" position="70,130" size="708,480" transparent="1" />
+    <widget name="file_list" position="70,130" size="708,480" scrollbarMode="showOnDemand" transparent="1" />
     <panel name="template_colorkey_text" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="FPGAUpgrade" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- UpgradeStatus -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UpgradeStatus" position="0,0" size="1280,720" title="FPGA Upgrade">
@@ -2491,7 +2656,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="KravenFont1" name="slider" position="70,200" size="708,30" />
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" halign="center" name="status" position="70,200" size="700,30" transparent="1" zPosition="1" />
     <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" halign="left" position="70,560" render="Label" size="700,30" source="info" transparent="1" zPosition="1" />
-    <panel name="template_menu_left" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="UpgradeStatus" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- TempFanControl -->
   <screen name="TempFanControl" position="0,0" size="1280,720" title="Fan Control" flags="wfNoBorder" backgroundColor="transparent">
@@ -2580,6 +2746,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget font="Regular; 20" halign="left" valign="center" source="green" position="320,665" size="220,26" render="Label" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
     <widget font="Regular; 20" halign="left" valign="center" source="yellow" position="570,665" size="220,26" render="Label" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
     <widget font="Regular; 20" halign="left" valign="center" source="blue" position="820,665" size="220,26" render="Label" backgroundColor="KravenBackground" foregroundColor="white" transparent="1" zPosition="1" />
-    <panel name="template_menu_left_button" />
+    <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="TempFanControl" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- Main */ -->

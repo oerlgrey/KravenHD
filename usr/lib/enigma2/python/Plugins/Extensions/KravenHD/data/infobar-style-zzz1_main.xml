@@ -108,13 +108,13 @@
     <convert type="KravenHDExtraInfo">Resolution</convert>    
   </widget>
   <ePixmap pixmap="KravenHD/icons-light/infobar/aufloesung2.png" position="671,687" size="116,22" zPosition="1" alphatest="blend" />
-  <widget backgroundColor="KravenInfobarBackground" font="Regular;19" foregroundColor="KravenButtonStyleFont" halign="left" position="676,685" size="50,22" render="Label" source="session.CurrentService" transparent="1">
+  <widget backgroundColor="KravenInfobarBackground" font="Regular;19" foregroundColor="KravenButtonStyleFont" halign="left" position="674,685" size="55,22" render="Label" source="session.CurrentService" transparent="1">
     <convert  type="KravenHDExtServiceInfo">OrbitalPosition</convert>
   </widget>
-  <widget render="Label" font="Regular; 19" position="718,685" size="65,22" halign="right" backgroundColor="KravenInfobarBackground" transparent="1" noWrap="1" foregroundColor="KravenButtonStyleFont"  source="session.FrontendStatus">
+  <widget render="Label" font="Regular; 19" position="717,685" size="67,22" halign="right" backgroundColor="KravenInfobarBackground" transparent="1" noWrap="1" foregroundColor="KravenButtonStyleFont"  source="session.FrontendStatus">
     <convert  type="KravenHDFrontendInfo">SNR</convert>
   </widget>
-  <eLabel text="  S:"  font="Regular; 19" position="723,685" size="30,22" halign="left" backgroundColor="KravenInfobarBackground" transparent="1" foregroundColor="KravenButtonStyleFont" />
+  <!--<eLabel text="  S:"  font="Regular; 19" position="723,685" size="30,22" halign="left" backgroundColor="KravenInfobarBackground" transparent="1" foregroundColor="KravenButtonStyleFont" />-->
   <widget alphatest="blend" position="20,472" size="400,240" render="KravenHDXPicon" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>

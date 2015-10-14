@@ -9,9 +9,9 @@
     <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
   </widget>
   <widget alphatest="blend" render="KravenHDPiconAndroid" position="1054,568" size="200,122" source="session.CurrentService" path="clock" transparent="1" zPosition="1">
-    <convert type="KravenHDYWeather">picon</convert>
+    <convert type="KravenHDWeather">currentWeatherPicon</convert>
   </widget>
   <widget noWrap="1" backgroundColor="KravenInfobarBackground" font="Regular; 17" foregroundColor="black" render="Label" position="1175,653" size="60,25" source="session.CurrentService" zPosition="2" halign="center" valign="center" transparent="1">
-    <convert type="KravenHDYWeather">temp</convert>
+    <convert type="KravenHDWeather">currentWeatherTemp</convert>
   </widget>
     <!--Clock */-->

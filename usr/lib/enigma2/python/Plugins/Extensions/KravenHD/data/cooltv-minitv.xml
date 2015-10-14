@@ -45,6 +45,7 @@
     <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CoolSingleGuide - MiniTV" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CoolInfoGuide -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolInfoGuide" position="0,0" size="1280,720" title="Cool Info Guide">
@@ -86,6 +87,7 @@
     <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CoolInfoGuide - MiniTV" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CoolTVGuide -->
   <screen backgroundColor="transparent" name="CoolTVGuide" position="0,0" size="1280,720" flags="wfNoBorder" title="Cool TV Guide">
@@ -129,6 +131,7 @@
     <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CoolTVGuide - MiniTV" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CoolNiceGuide -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolNiceGuide" position="0,0" size="1280,720" title="Cool Nice Guide">
@@ -173,6 +176,7 @@
     <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CoolNiceGuide - MiniTV" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CoolSearch -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolSearch" position="0,0" size="1280,720" title="Cool Search">
@@ -208,6 +212,7 @@
     <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CoolSearch - MiniTV" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CoolEasyGuide -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolEasyGuide" position="0,0" size="1280,720" title="Cool Easy Guide">
@@ -244,6 +249,7 @@
     <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CoolEasyGuide - MiniTV" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CoolMultiGuide -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolMultiGuide" position="0,0" size="1280,720" title="Cool Multi Guide">
@@ -288,6 +294,7 @@
     <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CoolMultiGuide - MiniTV" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CoolTinyGuide -->
   <screen backgroundColor="transparent" name="CoolTinyGuide" position="0,0" size="1280,720" flags="wfNoBorder" title="Cool Tiny Guide">
@@ -331,6 +338,7 @@
     <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CoolTinyGuide - MiniTV" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CoolChannelGuide -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolChannelGuide" position="0,0" size="1280,720" title="Cool Channel Guide">
@@ -373,27 +381,6 @@
     <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
     <panel name="key_menu_ok_exit" />
-  </screen>
-    <!-- CoolTVGuideSetup -->
-  <screen backgroundColor="KravenBackground" flags="wfNoBorder" name="CoolTVGuideSetup" position="0,0" size="1280,720">
-    <eLabel backgroundColor="KravenInfobar2Background" font="Regular2;34" foregroundColor="KravenFont2" position="70,12" text="Cool TV Guide Setup" size="708,46" transparent="1" halign="center" valign="center" noWrap="1" />
-    <widget backgroundColor="KravenBackground" enableWrapAround="1" name="config" position="70,80" size="708,350" transparent="1" foregroundColor="KravenFont1" />
-    <widget backgroundColor="KravenBackground" font="Regular2; 34" foregroundColor="KravenFont2" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="65,692" size="200,5" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="315,692" size="200,5" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="565,692" size="200,5" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="815,692" size="200,5" />
-    <eLabel backgroundColor="KravenBackground" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
-    <ePixmap pixmap="KravenHD/logo.png" position="900,120" size="300,300" backgroundColor="KravenBackground" alphatest="blend" />
-    <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenInfobar2Background" transparent="1" valign="center" foregroundColor="KravenFont1">
-      <convert type="KravenHDClockToText">Default</convert>
-    </widget>
-      <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
-      <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_red" position="70,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_green" position="320,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_yellow" position="570,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_blue" position="820,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="2" />
-    <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="CoolChannelGuide - MiniTV" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- CoolTVGuide */-->

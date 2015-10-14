@@ -18,7 +18,7 @@
   <widget source="session.CurrentService" render="Label" font="Regular;16" position="1210,320" size="40,20" halign="right" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
     <convert type="KravenHDLayoutInfo">LoadAvg</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1080,340" size="40,20" halign="right" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1070,340" size="50,20" halign="right" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
     <convert type="KravenHDExtServiceInfo">OrbitalPosition</convert>
   </widget>
   <widget source="session.FrontendStatus" render="Label" font="Regular;16" position="1210,340" size="40,20" halign="right" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">

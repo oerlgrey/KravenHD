@@ -24,10 +24,10 @@
     <eLabel text="jetzt läuft:" position="474,60" size="180,30" font="Regular;23" halign="left" foregroundColor="KravenFont2" backgroundColor="KravenBackground" transparent="1" zPosition="2" />
     <eLabel text="es folgt:" position="474,380" size="180,30" font="Regular;23" halign="left" foregroundColor="KravenFont2" backgroundColor="KravenBackground" transparent="1" zPosition="2" />
     <widget source="session.VideoPicture" render="Pig" position="41,55" size="391,220" zPosition="3" backgroundColor="transparent" />
-    <widget source="ServiceEvent" render="KravenHDSingleEpgListNobile" position="937,58" size="339,572" font="Regular;17" foregroundColor="KravenFont1" backgroundColor="KravenBackground" noWrap="1" transparent="1" />
-    <widget backgroundColor="KravenBackground" foregroundColor="KravenPrimetimeFont" font="Regular;17" source="ServiceEvent" render="Label" position="937,630" size="339,22" transparent="1" noWrap="1">
-      <convert type="KravenHDNextEvents">PrimeTime,noDuration</convert>
-    </widget>
+    <widget source="ServiceEvent" render="KravenHDSingleEpgListNobile" size="339,572" position="937,58" font="Regular;17" foregroundColor="KravenFont1" backgroundColor="KravenBackground" noWrap="1" transparent="1" />
+    <!--<widget backgroundColor="KravenBackground" foregroundColor="KravenPrimetimeFont" font="Regular;17" source="ServiceEvent" render="Label" position="937,630" size="339,22" transparent="1" noWrap="1">
+      <convert type="KravenHDEventsInfo">PrimeTime,noDuration</convert>
+    </widget>-->
     <widget source="ServiceEvent" render="Label" position="474,418" zPosition="1" size="446,25" font="Regular; 20" halign="left" backgroundColor="KravenBackground" transparent="1" foregroundColor="KravenFont2">
       <convert type="KravenHDServiceNameEventNobile">NextEvent</convert>
     </widget>
@@ -42,20 +42,14 @@
     <eLabel position="928,57" size="1,596" backgroundColor="KravenLine" />
     <eLabel position="17,280" size="439,1" backgroundColor="KravenLine" />
     <widget backgroundColor="KravenInfobar2Background" font="Regular2;34" foregroundColor="KravenFont2" position="70,12" render="Label" size="800,46" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="65,692" size="200,5" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="315,692" size="200,5" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="565,692" size="200,5" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="815,692" size="200,5" />
     <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenInfobar2Background" transparent="1" valign="center" foregroundColor="KravenFont1">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
     <eLabel backgroundColor="KravenBackground" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
     <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_red" position="70,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_green" position="320,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_yellow" position="570,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_blue" position="820,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="2" />
+    <panel name="template_colorkey_text" />
     <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ChannelSelection - Nobile MiniTV" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- ChannelSelection Nobile Mini TV */-->

@@ -1,7 +1,7 @@
 <!-- /* EMC SmallCover -->
 <screen name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
   <eLabel backgroundColor="KravenInfobar2Background" font="Regular2;34" foregroundColor="KravenFont2" halign="center" position="33,12" size="450,45" text="Enhanced Movie Center" transparent="1" />
-  <widget name="list" position="491,102" size="755,512" itemHeight="32" CoolFont="Regular;23" CoolSelectFont="Regular;23" CoolDateFont="Regular;23" CoolProgressPos="1000" CoolBarPos="620" CoolBarHPos="10" CoolBarSize="50,10" CoolBarSizeSa="110,16" CoolMoviePos="35" CoolMovieSize="545" CoolFolderSize="550" CoolDatePos="1000" CoolDateWidth="150" CoolTitleColor="1" CoolDateColor="1" CoolHighlightColor="0" DefaultColor="KravenFont1" UnwatchedColor="KravenFont1" WatchingColor="blue" FinishedColor="green" RecordingColor="red" BackColor="KravenBackground" BackColorSel="KravenSelection" FrontColorSel="KravenSelFont" backgroundColorSelected="KravenSelection" foregroundColorSelected="KravenSelFont" backgroundColor="KravenBackground" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+  <widget name="list" position="491,102" size="755,512" itemHeight="32" CoolFont="Regular;23" CoolSelectFont="Regular;23" CoolDateFont="Regular;23" CoolProgressPos="1000" CoolBarPos="620" CoolBarHPos="10" CoolBarSize="50,10" CoolBarSizeSa="110,16" CoolMoviePos="35" CoolMovieSize="545" CoolFolderSize="550" CoolDatePos="1000" CoolDateWidth="150" CoolTitleColor="1" CoolDateColor="1" CoolHighlightColor="0" DefaultColor="KravenFont1" UnwatchedColor="KravenFont1" WatchingColor="blue" FinishedColor="green" RecordingColor="red" BackColor="KravenBackground" BackColorSel="KravenSelection" FrontColorSel="KravenSelFont" backgroundColorSelected="KravenSelection" foregroundColorSelected="KravenSelFont" backgroundColor="KravenBackground" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
   <widget source="Service" render="Label" position="491,70" size="541,27" font="Regular; 22" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" noWrap="1" halign="left">
 	<convert type="KravenHDDiskSpace">path</convert>
   </widget>
@@ -56,5 +56,6 @@
   <widget font="Regular; 20" halign="left" valign="center" name="key_yellow" position="570,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
   <widget font="Regular; 20" halign="left" valign="center" name="key_blue" position="820,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="2" />
   <panel name="key_menu_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="EMCSelection - small Cover" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 <!-- EMC SmallCover */-->

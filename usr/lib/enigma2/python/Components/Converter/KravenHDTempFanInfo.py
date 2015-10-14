@@ -1,8 +1,23 @@
+#
+#  CPU/SYS TEMP and FAN RPM Info
+#
+#  Coded by tomele for Kraven Skins
+#  Thankfully inspired by different unknown authors
+#
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
+#
+
 from Components.config import config
 from Components.Converter.Converter import Converter
-from enigma import iServiceInformation, iPlayableService
 from Components.Element import cached
+from enigma import iServiceInformation, iPlayableService
 from Poll import Poll
+from os import path
 
 class KravenHDTempFanInfo(Poll, Converter, object):
     TEMPINFO = 0
@@ -34,30 +49,36 @@ class KravenHDTempFanInfo(Poll, Converter, object):
     text = property(getText)
 
     def tempfile(self):
-        temp = ''
-        unit = ''
+        systemp = "N/A"
         try:
-            f = open('/proc/stb/sensors/temp0/value', 'rb')
-            temp = f.readline().strip()
-            f.close()
-            f = open('/proc/stb/sensors/temp0/unit', 'rb')
-            unit = f.readline().strip()
-            f.close()
-            tempinfo = '' + str(temp) + '\xc2\xb0' + str(unit)
-            return tempinfo
+            if path.exists('/proc/stb/sensors/temp0/value'):
+                f = open('/proc/stb/sensors/temp0/value', 'rb')
+                systemp = str(f.readline().strip())
+                f.close()
+            elif path.exists('/proc/stb/fp/temp_sensor'):
+                f = open('/proc/stb/fp/temp_sensor', 'rb')
+                systemp = str(f.readline().strip())
+                f.close()
         except:
             pass
+        if systemp <> "N/A":
+            if len(systemp) > 2:
+                systemp = systemp[:2]
+            systemp = systemp + str('\xc2\xb0') + "C"
+        return systemp
 
     def fanfile(self):
-        fan = ''
+        faninfo = "N/A"
         try:
-            f = open('/proc/stb/fp/fan_speed', 'rb')
-            fan = f.readline().strip()
-            f.close()
-            faninfo = '' + str(fan)[:-4]
-            return faninfo
+            if path.exists('/proc/stb/fp/fan_speed'):
+                f = open('/proc/stb/fp/fan_speed', 'rb')
+                faninfo = str(f.readline().strip())
+                f.close()
         except:
             pass
+        if faninfo <> "N/A":
+            faninfo = faninfo[:-4]
+        return faninfo
 
     def changed(self, what):
         if what[0] == self.CHANGED_SPECIFIC and what[1] == iPlayableService.evUpdatedInfo or what[0] == self.CHANGED_POLL:

@@ -15,7 +15,8 @@
   <eLabel backgroundColor="KravenBackground" font="Regular2; 26" foregroundColor="KravenFont2" position="69,480" size="700,40" text="www.hdfreaks.cc" transparent="1" />
   <widget backgroundColor="KravenBackground" font="Regular2; 26" foregroundColor="KravenFont2" position="70,520" render="Label" size="700,40" source="HDDHeader" transparent="1" />
   <widget backgroundColor="KravenBackground" font="Regular2; 24" foregroundColor="KravenFont2" position="70,560" render="Label" size="700,65" source="hddA" transparent="1" />
-  <panel name="template_menu_left" />
+  <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="About" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- AboutOE -->
@@ -27,7 +28,8 @@
   <eLabel text="https://github.com/openhdf" position="460,163" size="352,28" font="Regular2; 19" transparent="1" zPosition="1" foregroundColor="KravenFont2" />
   <eLabel text="https://github.com/oe-alliance" position="460,203" size="354,28" font="Regular2; 19" transparent="1" zPosition="1" foregroundColor="KravenFont2" />
   <widget name="AboutScrollLabel" position="70,253" size="650,360" scrollbarMode="showOnDemand" font="Regular;20" foregroundColor="KravenFont1" transparent="1" zPosition="1" />
-  <panel name="template_menu_left" />
+  <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="AboutOE" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- UpdatePluginMenu -->
@@ -60,7 +62,8 @@
   <eLabel text="No Update! / nicht updaten!" position="202,509" size="396,25" zPosition="1" font="Regular; 20" foregroundColor="white" halign="left" backgroundColor="red" transparent="0" />
   <eLabel text="update at your own risk / auf eigene Gefahr!" position="202,546" size="396,25" zPosition="1" font="Regular; 18" halign="left" foregroundColor="black" backgroundColor="yellow" transparent="0" />
   <panel name="template_colorkey_text" />
-  <panel name="template_menu_left_button" />
+  <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="UpdatePluginMenu" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- Devices -->
@@ -71,7 +74,8 @@
   <widget source="hdd" render="Label" position="70,315" size="708,112" font="Regular;18" foregroundColor="KravenFont1" transparent="1" zPosition="1" enableWrapAround="0" />
   <widget source="MountsHeader" render="Label" position="70,431" size="708,36" font="Regular;20" foregroundColor="KravenFont1" transparent="1" zPosition="1" />
   <widget source="mounts" render="Label" position="70,471" size="708,143" font="Regular;18" foregroundColor="KravenFont1" transparent="1" zPosition="1" enableWrapAround="0" />
-  <panel name="template_menu_left" />
+  <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Devices" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- HotkeySetup -->
@@ -79,8 +83,9 @@
   <widget name="list" position="40,99" size="385,529" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="KravenFont1" enableWrapAround="1" backgroundColor="KravenBackground" zPosition="-8" />
   <widget name="choosen" position="428,99" size="385,530" scrollbarMode="showOnDemand" font="Regular2; 22" itemHeight="28" foregroundColor="KravenFont2" backgroundColor="KravenBackground" zPosition="-8" />
   <widget name="description" position="935,228" size="302,250" font="Regular2; 16" foregroundColor="KravenFont2" valign="center" halign="center" backgroundColor="KravenBackground" zPosition="-8" />
-  <panel name="template_menu_full_button" />
+  <panel name="template_menu_full" />
   <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="HotkeySetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- ButtonSetupSelect -->
@@ -88,8 +93,9 @@
   <widget name="list" position="40,99" size="385,529" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="KravenFont1" enableWrapAround="1" backgroundColor="KravenBackground" zPosition="-8" />
   <widget name="choosen" position="427,99" size="385,530" scrollbarMode="showOnDemand" font="Regular2; 22" itemHeight="28" foregroundColor="KravenFont2" backgroundColor="KravenBackground" zPosition="-8" />
   <widget name="description" position="935,228" size="302,250" font="Regular2; 16" foregroundColor="KravenFont2" valign="center" halign="center" backgroundColor="KravenBackground" zPosition="-8" />
-  <panel name="template_menu_full_button" />
+  <panel name="template_menu_full" />
   <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ButtonSetupSelect" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- HddSetup -->
@@ -106,8 +112,9 @@
 				}
 	</convert>
   </widget>
-  <panel name="template_menu_left_button" />
+  <panel name="template_menu_logo" />
   <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="HddSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- HddPartitions -->
@@ -125,8 +132,9 @@
 				}
 	</convert>
   </widget>
-  <panel name="template_menu_left_button" />
+  <panel name="template_menu_logo" />
   <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="HddPartitions" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- HddMounts -->
@@ -143,8 +151,9 @@
 				}
 	</convert>
   </widget>
-  <panel name="template_menu_left_button" />
+  <panel name="template_menu_logo" />
   <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="HddMount" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- HddInfo -->
@@ -159,8 +168,9 @@
   <widget font="Regular;20" foregroundColor="KravenFont1" halign="left" name="readDisk" position="95,500" size="580,25" valign="center" backgroundColor="KravenBackground" transparent="1" />
   <widget font="Regular;20" foregroundColor="KravenFont1" halign="left" name="readCache" position="95,530" size="580,25" valign="center" backgroundColor="KravenBackground" transparent="1" />
   <widget font="Regular;20" foregroundColor="KravenFont1" halign="left" name="temp" position="95,560" size="580,25" valign="center" backgroundColor="KravenBackground" transparent="1" />
-  <panel name="template_menu_left_button" />
+  <panel name="template_menu_logo" />
   <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="HddInfo" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- HddFastRemove -->
@@ -177,15 +187,17 @@
 				}
 	</convert>
   </widget>
-  <panel name="template_menu_left_button" />
+  <panel name="template_menu_logo" />
   <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="HddFastRemove" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- LED_GigaSetup -->
 <screen name="LED_GigaSetup" position="0,0" size="1280,720" title="LED Setup" backgroundColor="transparent">
   <widget name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
-  <panel name="template_menu_left_button" />
+  <panel name="template_menu_logo" />
   <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="LED_GigaSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- VFDSkinSelector -->
@@ -195,8 +207,9 @@
   <widget name="SkinList" position="70,158" size="270,371" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="KravenBackground" transparent="1" />
   <widget name="Preview" position="422,261" size="280,210" zPosition="2" backgroundColor="KravenBackground" transparent="0" alphatest="on" />
   <widget name="lab3" position="70,549" halign="center" size="700,26" zPosition="1" foregroundColor="KravenFont2" font="Regular2; 22" transparent="1" />
-  <panel name="template_menu_left_button" />
+  <panel name="template_menu_logo" />
   <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="VFDSkinSelector" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- HFD Toolbox -->
@@ -204,14 +217,16 @@
   <widget name="menu" position="70,100" size="510,469" scrollbarMode="showOnDemand" transparent="1" />
   <ePixmap position="70,445" size="380,57" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/HDF-Toolbox/banner.png" zPosition="2" alphatest="on" />
   <eLabel text="Toolbox Version - 13.11.2014" position="536,607" size="304,45" font="Regular2; 22" valign="center" halign="center" transparent="1" foregroundColor="KravenFont2" />
-  <panel name="template_menu_left" />
+  <panel name="template_menu_logo" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Fantastic" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- LogManager -->
 <screen name="LogManager" position="0,0" size="1280,720" title="Log Manager" backgroundColor="transparent">
-  <widget name="list" position="70,80" size="708,540" font="Regular;14" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-  <panel name="template_menu_left_button" />
+  <widget name="list" position="70,80" size="708,540" scrollbarMode="showOnDemand" font="Regular;14" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+  <panel name="template_menu_logo" />
   <panel name="template_colorkey_text" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="LogManager" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- DownloadMenu -->
@@ -236,13 +251,14 @@
   <widget name="key_6" position="853,510" zPosition="2" size="200,25" valign="center" halign="right" font="Regular;15" foregroundColor="KravenFont1" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
   <ePixmap name="0" position="1058,535" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_0.png" transparent="1" alphatest="on" />
   <widget name="key_0" position="853,535" zPosition="2" size="200,25" valign="center" halign="right" font="Regular;15" foregroundColor="KravenFont1" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
-  <panel name="template_menu_full_button" />
+  <panel name="template_menu_full" />
   <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Hdf_Downloader" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
 
   <!-- Softcam Cardserver Manager -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="ScSelection" position="0,0" size="1280,720" title="Softcam Cardserver Manager">
-  <widget name="entries" position="68,160" size="505,310" enableWrapAround="1" backgroundColor="KravenBackground" transparent="1" />
+  <widget name="entries" position="68,160" size="505,310" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="KravenBackground" transparent="1" />
   <eLabel font="Regular;18" foregroundColor="KravenFont1" halign="left" valign="top" position="695,160" size="90,26" text="ECM:" zPosition="2" transparent="1" />
   <widget source="session.CurrentService" render="Label" position="780,160" size="490,56" transparent="1" zPosition="2" font="Regular;18" foregroundColor="KravenFont1" valign="top" halign="left" noWrap="1">
     <convert type="CryptoInfo">VerboseInfo</convert>
@@ -262,25 +278,30 @@
   <widget source="session.CurrentService" render="Label" zPosition="2" position="850,260" size="55,24" halign="left" valign="top" font="Regular;18" foregroundColor="KravenFont1" transparent="1">
     <convert type="KravenHDServiceInfo">VideoHeight</convert>
   </widget>
-  <panel name="template_menu_full_button" />
+  <panel name="template_menu_full" />
   <panel name="template_colorkey_text_source" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="ScSelection" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
   <!-- AdapterSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup">
-    <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" position="70,80" render="Label" size="495,30" source="Adapter" transparent="1" />
+    <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" position="70,80" render="Label" size="495,30" scrollbarMode="showOnDemand" source="Adapter" transparent="1" />
     <widget backgroundColor="KravenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,130" size="708,240" transparent="1" />
-    <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" halign="center" position="70,585" render="Label" size="708,30" source="introduction2" transparent="1" />
-    <widget source="IPtext" render="Label" position="835,432" size="210,24" font="Regular;20" halign="right" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <widget source="Netmasktext" render="Label" position="835,462" size="210,24" font="Regular;20" halign="right" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <widget source="Gatewaytext" render="Label" position="835,492" size="210,24" font="Regular;20" halign="right" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <widget source="DNS1text" render="Label" position="835,522" size="210,24" font="Regular;20" halign="right" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <widget source="DNS2text" render="Label" position="835,552" size="210,24" font="Regular;20" halign="right" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <widget source="IP" render="Label" position="1055,432" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <widget source="Mask" render="Label" position="1055,462" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <widget source="Gateway" render="Label" position="1055,492" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <widget source="DNS1" render="Label" position="1055,522" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <widget source="DNS2" render="Label" position="1055,552" size="210,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget backgroundColor="KravenBackground" font="Regular2;24" foregroundColor="KravenFont2" halign="center" position="70,605" render="Label" size="708,30" source="introduction2" transparent="1" />
+    <widget backgroundColor="KravenInfobar2Background" font="Regular2;34" foregroundColor="KravenFont2" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
+    <widget source="introduction" render="Label" position="70,390" size="430,32" font="Regular;24" halign="left" foregroundColor="KravenFont2" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="IPtext" render="Label" position="70,432" size="220,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="Netmasktext" render="Label" position="70,462" size="220,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="Gatewaytext" render="Label" position="70,492" size="220,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="DNS1text" render="Label" position="70,522" size="220,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="DNS2text" render="Label" position="70,552" size="220,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="IP" render="Label" position="250,432" size="220,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="Mask" render="Label" position="250,462" size="220,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="Gateway" render="Label" position="250,492" size="220,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="DNS1" render="Label" position="250,522" size="220,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <widget source="DNS2" render="Label" position="250,552" size="220,24" font="Regular;20" halign="left" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" />
+    <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <panel name="key_ok_exit" />
+    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="AdapterSetup" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
   <!-- main-custom-openhdf */ -->

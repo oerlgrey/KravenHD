@@ -1,8 +1,21 @@
 #
-# Converter NextEvents
-# by m0rphU & LN
-# thanks to Shaderman & Dr.Best
+#  EVENTS INFO Converter
 #
+#  Based on Converter NextEvents
+#  by m0rphU & LN
+#
+#  Modified by tomele for Kraven Skins:
+#  Added support for current event
+#  Added descriptions as output
+#
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
+#
+
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.VariableText import VariableText
@@ -11,15 +24,20 @@ from time import localtime, strftime, mktime, time
 from datetime import datetime
 from Components.config import config
 
-class KravenHDNextEvents(Converter, object):
+class KravenHDEventsInfo(Converter, object):
+	
 	Event1 = 0
 	Event2 = 1
 	Event3 = 2
 	PrimeTime = 3
+	Event0 = 4
+	
 	noDuration = 10
 	onlyDuration = 11
 	withDuration = 12
 	showDuration = 12
+	shortDescription = 13
+	longDescription = 14
 
 	def __init__(self, type):
 		Converter.__init__(self, type)
@@ -32,21 +50,27 @@ class KravenHDNextEvents(Converter, object):
 		type = args.pop(0)
 		showDuration = args.pop(0)
 				
-		if type == "Event2":
+		if type == "Event1":
+			self.type = self.Event1
+		elif type == "Event2":
 			self.type = self.Event2
 		elif type == "Event3":
 			self.type = self.Event3
 		elif type == "PrimeTime":
 			self.type = self.PrimeTime
 		else:
-			self.type = self.Event1
+			self.type = self.Event0
 			
 		if showDuration == "noDuration":
 			self.showDuration = self.noDuration
 		elif showDuration == "onlyDuration":
 			self.showDuration = self.onlyDuration
-		else:
+		elif showDuration == "showDuration":
 			self.showDuration = self.withDuration
+		elif showDuration == "shortDescription":
+			self.showDuration = self.shortDescription
+		else:
+			self.showDuration = self.longDescription
 	
 	@cached
 	def getText(self):
@@ -80,6 +104,11 @@ class KravenHDNextEvents(Converter, object):
 				next = self.epgcache.getNextTimeEntry()
 				if next and (next.getBeginTime() <= int(mktime(dt.timetuple()))):
 					textvalue = self.formatEvent(next)
+		else:
+			event = self.source.event
+			if event:
+				textvalue = self.formatEvent(event)
+
 		return textvalue
 
 	text = property(getText)
@@ -89,6 +118,8 @@ class KravenHDNextEvents(Converter, object):
 		end = strftime("%H:%M", localtime(event.getBeginTime() + event.getDuration()))
 		title = event.getEventName()#[:self.titleWidth]
 		duration = "%d min" % (event.getDuration() / 60)
+		sdescr = event.getShortDescription()
+		ldescr = event.getExtendedDescription()
 		if self.showDuration == self.withDuration:
 			f = "{begin} - {end:10}{title:<} -  {duration}"
 			return f.format(begin = begin, end = end, title = title, duration = duration)
@@ -97,5 +128,9 @@ class KravenHDNextEvents(Converter, object):
 		elif self.showDuration == self.noDuration:
 			f = "{begin} {title:<}"
 			return f.format(begin = begin, end = end, title = title)
+		elif self.showDuration == self.shortDescription:
+			return sdescr
+		elif self.showDuration == self.longDescription:
+			return ldescr
 		else:
 			return ""

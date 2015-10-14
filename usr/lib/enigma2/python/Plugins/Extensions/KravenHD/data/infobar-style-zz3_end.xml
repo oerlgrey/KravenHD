@@ -11,6 +11,7 @@
     <convert type="KravenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="439,587" size="655,22" font="Regular;16" halign="left" foregroundColor="KravenECMFont" backgroundColor="KravenBackground" transparent="1" zPosition="1">
-    <convert type="KravenHDCaidDisplay2">Default</convert>
+    <convert type="KravenHDECMLine">Long</convert>
   </widget>
+  <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Infobar - ZZ3 / Secondinfobar - top/bottom" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
