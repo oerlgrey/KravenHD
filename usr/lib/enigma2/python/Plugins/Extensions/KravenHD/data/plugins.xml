@@ -284,6 +284,10 @@
     <eLabel text="Rename" position="320,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
     <eLabel text="Move/Copy" position="570,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
     <eLabel text="Bookmarks" position="820,665" size="220,26" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" />
+    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="65,692" size="200,5" />
+    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="315,692" size="200,5" />
+    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="565,692" size="200,5" />
+    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="815,692" size="200,5" />
     <panel name="template_menu_logo" />
     <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="DreamExplorerII" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
