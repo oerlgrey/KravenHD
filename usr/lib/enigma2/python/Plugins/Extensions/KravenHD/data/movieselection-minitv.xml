@@ -1,4 +1,3 @@
-<<<<<<< .mine
     <!-- MovieSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieSelection" position="0,0" size="1280,720" title="">
     <widget name="waitingtext" position="0,0" size="0,0" />
@@ -11,7 +10,7 @@
     </widget>
     <widget backgroundColor="KravenBackground" font="Regular2;17" foregroundColor="KravenFont2" halign="left" position="838,624" render="Label" size="70,24" source="Service" transparent="1" zPosition="1">
       <convert type="ServiceTime">Duration</convert>
-      <convert type="ClockToText">AsLength</convert>
+      <convert type="KravenHDClockToText">AsLength</convert>
     </widget>
     <widget backgroundColor="KravenBackground" font="Regular2;17" foregroundColor="KravenFont2" halign="right" position="1106,624" render="Label" size="100, 24" source="Service" transparent="1" zPosition="1">
       <convert type="MovieInfo">FileSize</convert>
@@ -23,56 +22,9 @@
     <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenInfobar2Background" transparent="1" valign="center" foregroundColor="KravenFont1">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="65,692" size="200,5" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="315,692" size="200,5" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="565,692" size="200,5" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="815,692" size="200,5" />
     <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_red" position="70,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_green" position="320,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_yellow" position="570,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_blue" position="820,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="2" />
+    <panel name="template_colorkey_text" />
     <panel name="key_menu_ok_exit" />
     <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="MovieSelection - MiniTV" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
-||||||| .r0
-=======
-    <!-- MovieSelection -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieSelection" position="0,0" size="1280,720" title="">
-    <widget name="waitingtext" position="0,0" size="0,0" />
-	<eLabel text="MovieSelection" position="70,12" size="708,46" backgroundColor="KravenInfobar2Background" font="Regular2;34" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
-    <widget name="list" position="70,110" size="708,540" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
-    <widget backgroundColor="KravenBackground" font="Regular;17" halign="right" name="freeDiskSpace" position="70,80" size="708,24" transparent="1" valign="center" />
-	<widget source="session.VideoPicture" render="Pig" position="838,80" size="384,216" zPosition="3" backgroundColor="transparent" />
-    <widget backgroundColor="KravenBackground" font="Regular2;30" foregroundColor="KravenFont2" position="838,305" render="Label" size="384,75" source="Service" transparent="1" zPosition="1">
-      <convert type="KravenHDEventName">Name</convert>
-    </widget>
-    <widget backgroundColor="KravenBackground" font="Regular2;17" foregroundColor="KravenFont2" halign="left" position="838,624" render="Label" size="70,24" source="Service" transparent="1" zPosition="1">
-      <convert type="ServiceTime">Duration</convert>
-      <convert type="ClockToText">AsLength</convert>
-    </widget>
-    <widget backgroundColor="KravenBackground" font="Regular2;17" foregroundColor="KravenFont2" halign="right" position="1106,624" render="Label" size="100, 24" source="Service" transparent="1" zPosition="1">
-      <convert type="MovieInfo">FileSize</convert>
-    </widget>
-    <widget backgroundColor="KravenBackground" font="Regular;19" foregroundColor="KravenFont1" position="838,390" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="384,225" source="Service" transparent="1" valign="top">
-      <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
-    </widget>
-    <eLabel backgroundColor="KravenBackground" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
-    <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenInfobar2Background" transparent="1" valign="center" foregroundColor="KravenFont1">
-      <convert type="KravenHDClockToText">Default</convert>
-    </widget>
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="65,692" size="200,5" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="315,692" size="200,5" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="565,692" size="200,5" />
-    <ePixmap backgroundColor="KravenBackground" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="815,692" size="200,5" />
-    <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
-    <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_red" position="70,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_green" position="320,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_yellow" position="570,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="key_blue" position="820,665" size="220,26" backgroundColor="KravenInfobar2Background" foregroundColor="KravenButtonText" transparent="1" zPosition="2" />
-    <panel name="key_menu_ok_exit" />
-    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="MovieSelection - MiniTV" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
-  </screen>
->>>>>>> .r31

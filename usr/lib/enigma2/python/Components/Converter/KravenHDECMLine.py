@@ -141,7 +141,7 @@ class KravenHDECMLine(Poll, Converter, object):
 					if self.type == self.VERYSHORT:
 						ecmline = caid + ', ' + ecmtime
 					elif self.type == self.SHORT:
-						ecmline = caid + ' - ' + hops + ' - ' + ecmtime
+						ecmline = caid + ' - ' + address + ' - ' + ecmtime
 					else:
 						ecmline = active + ' - ' + caid + ' - ' + system + ' - ' + address + ' - ' + hops + ' - ' + ecmtime					
 	
@@ -150,7 +150,7 @@ class KravenHDECMLine(Poll, Converter, object):
 					if self.type == self.VERYSHORT:
 						ecmline = caid + ', ' + ecmtime
 					elif self.type == self.SHORT:
-						ecmline = caid + ' - ' + hops + ' - ' + ecmtime
+						ecmline = caid + ' - ' + reader + ' - ' + ecmtime
 					else:
 						ecmline = active + ' - ' + caid + ' - ' + system + ' - ' + reader + ' - ' + hops + ' - ' + ecmtime
 	
@@ -159,7 +159,7 @@ class KravenHDECMLine(Poll, Converter, object):
 					if self.type == self.VERYSHORT:
 						ecmline = caid + ', ' + ecmtime
 					elif self.type == self.SHORT:
-						ecmline = caid + ' - ' + ecmtime
+						ecmline = caid + ' - ' + prov + ' - ' + ecmtime
 					else:
 						ecmline = active + ' - ' + caid + ' - ' + system + ' - ' + prov + ' - ' + source + ' - ' + ecmtime
 	
