@@ -7,10 +7,10 @@
     <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="570,665" size="220,26" text="Reboot" transparent="1" />
     <widget name="config" position="70,70" size="708,570" itemHeight="30" font="Regular;24" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="1" backgroundColor="#00000000" />
     <eLabel position="70,15" size="708,46" text="KravenHD - Konfigurationstool" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" name="," />
-    <eLabel position="847,228" size="368,2" backgroundColor="#00f0a30a" />
-    <eLabel position="847,437" size="368,2" backgroundColor="#00f0a30a" />
-    <eLabel position="845,228" size="2,211" backgroundColor="#00f0a30a" />
-    <eLabel position="1215,228" size="2,211" backgroundColor="#00f0a30a" />
+    <eLabel position="847,200" size="368,2" backgroundColor="#00f0a30a" />
+    <eLabel position="847,409" size="368,2" backgroundColor="#00f0a30a" />
+    <eLabel position="845,200" size="2,211" backgroundColor="#00f0a30a" />
+    <eLabel position="1215,200" size="2,211" backgroundColor="#00f0a30a" />
     <eLabel backgroundColor="#00000000" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
     <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="65,692" size="200,5" backgroundColor="#00000000" alphatest="blend" />
     <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="315,692" size="200,5" backgroundColor="#00000000" alphatest="blend" />
@@ -22,8 +22,9 @@
     <widget source="session.CurrentService" render="Label" position="845,130" size="372,46" font="Regular;30" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
       <convert type="KravenHDVersInfo">Kraven</convert>
     </widget>
-    <ePixmap backgroundColor="#00000000" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/about.png" position="847,230" size="368,207" zPosition="-9" />
-    <widget name="helperimage" position="847,230" size="368,207" zPosition="1" backgroundColor="#00000000" />
+    <ePixmap backgroundColor="#00000000" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/about.png" position="847,202" size="368,207" zPosition="-9" />
+    <widget name="helperimage" position="847,202" size="368,207" zPosition="1" backgroundColor="#00000000" />
+    <widget source="help" render="Label" position="847,450" size="368,196" font="Regular2;20" backgroundColor="#00000000" foregroundColor="#0070AD11" halign="center" valign="top" transparent="1" />
     <ePixmap pixmap="KravenHD/icons-light/key_exit.png" position="1190,670" size="43,22" alphatest="blend" />
     <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="KravenHD" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
