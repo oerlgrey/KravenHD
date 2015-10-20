@@ -19,7 +19,7 @@
     <convert type="EMCMovieInfo">RecordServiceName</convert>
   </widget>
   <widget source="Service" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="50,464" size="755,187" font="Regular; 22" foregroundColor="KravenFont1" backgroundColor="KravenBackground" transparent="1" zPosition="2" halign="left" valign="top">
-    <convert type="KravenHDEventName">ExtendedDescription</convert>
+    <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
   </widget>
   <widget name="Cover" position="870,166" size="374,461" zPosition="4" backgroundColor="KravenBackground" alphatest="on" transparent="0" />
   <eLabel backgroundColor="KravenBackground" position="0,0" size="1280,720" transparent="0" zPosition="-10" />

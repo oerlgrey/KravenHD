@@ -33,25 +33,52 @@ def _(txt):
 
 class KravenHDECMLine(Poll, Converter, object):
 
-	VERYSHORT = 0
-	SHORT = 1
-	LONG = 2
-	INVISIBLE = 3
+	SATINFO = 0
+	VERYSHORTCAID = 1
+	VERYSHORTREADER = 2
+	SHORTHOPS = 3
+	SHORTREADER = 4
+	NORMAL = 5
+	LONG = 6
+	VERYLONG = 7
+	
+	FTAINVISIBLE = 0
+	FTAVISIBLE = 1
 	
 	def __init__(self, type):
 		Poll.__init__(self)
 		Converter.__init__(self, type)
 
-		if type == "VeryShort":
-			self.type = self.VERYSHORT
-		elif type == "Short":
-			self.type = self.SHORT
-		elif type == "Long":
+		args = type.split(',')
+		if len(args) != 2: 
+			raise ElementError("type must contain exactly 2 arguments")
+	
+		type = args.pop(0)
+		invisible = args.pop(0)
+				
+		if type == 'SatInfo':
+			self.type = self.SATINFO
+		elif type == 'VeryShortCaid':
+			self.type = self.VERYSHORTCAID
+		elif type == 'VeryShortReader':
+			self.type = self.VERYSHORTREADER
+		elif type == 'ShortHops':
+			self.type = self.SHORTHOPS
+		elif type == 'ShortReader':
+			self.type = self.SHORTREADER
+		elif type == 'Normal':
+			self.type = self.NORMAL
+		elif type == 'Long':
 			self.type = self.LONG
 		else:
-			self.type = self.INVISIBLE
+			self.type = self.VERYLONG
+		
+		if invisible == "FTAInvisible":
+			self.invisible = self.FTAINVISIBLE
+		else:
+			self.invisible = self.FTAVISIBLE
 
-		self.poll_interval = 1000
+		self.poll_interval = 5000
 		self.poll_enabled = True
 
 	@cached
@@ -66,6 +93,7 @@ class KravenHDECMLine(Poll, Converter, object):
 				flines = f.readlines()
 				f.close()
 			except:
+				ecmline = _('not available')
 				pass
 			else:
 				camInfo = {}
@@ -138,37 +166,67 @@ class KravenHDECMLine(Poll, Converter, object):
 					
 				elif 'system' in camInfo :
 					active = 'CCCAM'
-					if self.type == self.VERYSHORT:
+					if self.type == self.SATINFO:
 						ecmline = caid + ', ' + ecmtime
-					elif self.type == self.SHORT:
+					elif self.type == self.VERYSHORTCAID:
+						ecmline = caid + ' - ' + ecmtime
+					elif self.type == self.VERYSHORTREADER:
+						ecmline = address + ' - ' + ecmtime
+					elif self.type == self.SHORTHOPS:
+						ecmline = caid + ' - ' + hops + ' - ' + ecmtime
+					elif self.type == self.SHORTREADER:
 						ecmline = caid + ' - ' + address + ' - ' + ecmtime
+					elif self.type == self.NORMAL:
+						ecmline = caid + ' - ' + address + ' - ' + hops + ' - ' + ecmtime					
+					elif self.type == self.LONG:
+						ecmline = caid + ' - ' + system + ' - ' + address + ' - ' + hops + ' - ' + ecmtime					
 					else:
 						ecmline = active + ' - ' + caid + ' - ' + system + ' - ' + address + ' - ' + hops + ' - ' + ecmtime					
 	
 				elif 'reader' in camInfo :
 					active = 'OSCAM'
-					if self.type == self.VERYSHORT:
+					if self.type == self.SATINFO:
 						ecmline = caid + ', ' + ecmtime
-					elif self.type == self.SHORT:
+					elif self.type == self.VERYSHORTCAID:
+						ecmline = caid + ' - ' + ecmtime
+					elif self.type == self.VERYSHORTREADER:
+						ecmline = reader + ' - ' + ecmtime
+					elif self.type == self.SHORTHOPS:
+						ecmline = caid + ' - ' + hops + ' - ' + ecmtime
+					elif self.type == self.SHORTREADER:
 						ecmline = caid + ' - ' + reader + ' - ' + ecmtime
+					elif self.type == self.NORMAL:
+						ecmline = caid + ' - ' + reader + ' - ' + hops + ' - ' + ecmtime					
+					elif self.type == self.LONG:
+						ecmline = caid + ' - ' + system + ' - ' + reader + ' - ' + hops + ' - ' + ecmtime					
 					else:
 						ecmline = active + ' - ' + caid + ' - ' + system + ' - ' + reader + ' - ' + hops + ' - ' + ecmtime
 	
 				elif 'prov' in camInfo :
 					active = 'MGCAMD'
-					if self.type == self.VERYSHORT:
+					if self.type == self.SATINFO:
 						ecmline = caid + ', ' + ecmtime
-					elif self.type == self.SHORT:
-						ecmline = caid + ' - ' + prov + ' - ' + ecmtime
+					elif self.type == self.VERYSHORTCAID:
+						ecmline = caid + ' - ' + ecmtime
+					elif self.type == self.VERYSHORTREADER:
+						ecmline = source + ' - ' + ecmtime
+					elif self.type == self.SHORTHOPS:
+						ecmline = caid + ' - ' + ecmtime
+					elif self.type == self.SHORTREADER:
+						ecmline = caid + ' - ' + source + ' - ' + ecmtime
+					elif self.type == self.NORMAL:
+						ecmline = caid + ' - ' + source + ' - ' + prov + ' - ' + ecmtime					
+					elif self.type == self.LONG:
+						ecmline = caid + ' - ' + system + ' - ' + source + ' - ' + prov + ' - ' + ecmtime					
 					else:
-						ecmline = active + ' - ' + caid + ' - ' + system + ' - ' + prov + ' - ' + source + ' - ' + ecmtime
+						ecmline = active + ' - ' + caid + ' - ' + system + ' - ' + source + ' - ' + prov + ' - ' + ecmtime
 	
 				else:
 					active = 'Unknown'
 					ecmline = _('not available')
 
 		else:
-			if self.type == self.INVISIBLE:
+			if self.invisible == self.FTAINVISIBLE:
 				ecmline = ''
 			else:
 				ecmline = _('free to air')		

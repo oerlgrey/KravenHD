@@ -1,5 +1,5 @@
 <!-- /* ECM-Info -->
 <widget source="session.CurrentService" render="Label" position="446,524" size="655,22" font="Regular;16" halign="left" foregroundColor="KravenECMFont" backgroundColor="KravenIbarBackground" transparent="1" zPosition="5">
-  <convert type="KravenHDECMLine">Invisible</convert>
+  <convert type="KravenHDECMLine">ECMLine,FTAInvisible</convert>
 </widget>
 <!-- ECM-Info */ -->

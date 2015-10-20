@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2015-10-14 19:34+0100\n"
+"PO-Revision-Date: 2015-10-20 20:56+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -697,6 +697,42 @@ msgstr "Satelliten-Infos"
 #: KravenHD.py
 msgid "ECM-Infos"
 msgstr "ECM-Infos"
+
+#: KravenHD.py
+msgid "ECM-Contents"
+msgstr "ECM-Inhalte"
+
+#: KravenHD.py
+msgid "Show 'free to air'"
+msgstr "Zeige 'Frei empfangbar'"
+
+#: KravenHD.py
+msgid "CAID + Time"
+msgstr "CAID + Zeit"
+
+#: KravenHD.py
+msgid "Reader + Time"
+msgstr "Reader + Zeit"
+
+#: KravenHD.py
+msgid "CAID + Hops + Time"
+msgstr "CAID + Hops + Zeit"
+
+#: KravenHD.py
+msgid "CAID + Reader + Time"
+msgstr "CAID + Reader + Zeit"
+
+#: KravenHD.py
+msgid "CAID + Reader + Hops + Time"
+msgstr "CAID + Reader + Hops + Zeit"
+
+#: KravenHD.py
+msgid "CAID + System + Reader + Hops + Time"
+msgstr "CAID + System + Reader + Hops + Zeit"
+
+#: KravenHD.py
+msgid "Active + CAID + System + Reader + Hops + Time"
+msgstr "Aktiv + CAID + System + Reader + Hops + Zeit"
 
 #: KravenHD.py
 msgid "______________________ General __________________________________"

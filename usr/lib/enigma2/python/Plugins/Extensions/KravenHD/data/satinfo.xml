@@ -14,5 +14,5 @@
     <convert type="KravenHDExtraInfo">VideoInfo</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" font="Regular;16" position="1040,270" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIbarBackground" transparent="1" noWrap="1" foregroundColor="KravenFont1">
-    <convert type="KravenHDECMLine">VeryShort</convert>
+    <convert type="KravenHDECMLine">SatInfo,freetoair</convert>
   </widget>

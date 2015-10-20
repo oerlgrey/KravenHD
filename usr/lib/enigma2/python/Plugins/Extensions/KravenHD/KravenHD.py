@@ -829,6 +829,37 @@ config.plugins.KravenHD.ECMInfo = ConfigSelection(default="ecm-info-on", choices
 				("ecm-info-on", _("on"))
 				])
 				
+config.plugins.KravenHD.ECMLine1 = ConfigSelection(default="VeryShortCaid", choices = [
+				("VeryShortCaid", _("CAID + Time")),
+				("VeryShortReader", _("Reader + Time")),
+				("ShortHops", _("CAID + Hops + Time")),
+				("ShortReader", _("CAID + Reader + Time"))
+				])
+				
+config.plugins.KravenHD.ECMLine2 = ConfigSelection(default="VeryShortCaid", choices = [
+				("VeryShortCaid", _("CAID + Time")),
+				("VeryShortReader", _("Reader + Time")),
+				("ShortHops", _("CAID + Hops + Time")),
+				("ShortReader", _("CAID + Reader + Time")),
+				("Normal", _("CAID + Reader + Hops + Time")),
+				("Long", _("CAID + System + Reader + Hops + Time")),
+				("VeryLong", _("Active + CAID + System + Reader + Hops + Time"))
+				])
+				
+config.plugins.KravenHD.ECMLine3 = ConfigSelection(default="VeryShortCaid", choices = [
+				("VeryShortCaid", _("CAID + Time")),
+				("VeryShortReader", _("Reader + Time")),
+				("ShortHops", _("CAID + Hops + Time")),
+				("ShortReader", _("CAID + Reader + Time")),
+				("Normal", _("CAID + Reader + Hops + Time")),
+				("Long", _("CAID + System + Reader + Hops + Time"))
+				])
+				
+config.plugins.KravenHD.FTA = ConfigSelection(default="FTAVisible", choices = [
+				("FTAVisible", _("on")),
+				("none", _("off"))
+				])
+				
 config.plugins.KravenHD.SystemInfo = ConfigSelection(default="none", choices = [
 				("none", _("off")),
 				("systeminfo-big", _("big")),
@@ -1020,7 +1051,7 @@ class KravenHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="830,80" size="402,46" text="KravenHD" font="Regular; 36" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" name="," />
-  <eLabel position="845,130" size="372,46" text="Version: 6.5.2" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+  <eLabel position="845,130" size="372,46" text="Version: 6.6.0" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
   <ePixmap backgroundColor="#00000000" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/about.png" position="847,202" size="368,207" zPosition="-9" />
   <widget name="helperimage" position="847,202" size="368,207" zPosition="1" backgroundColor="#00000000" />
   <widget source="help" render="Label" position="847,450" size="368,196" font="Regular2;20" backgroundColor="#00000000" foregroundColor="#0070AD11" halign="center" valign="top" transparent="1" />
@@ -1148,6 +1179,13 @@ class KravenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("System-Infos"), config.plugins.KravenHD.SystemInfo, _(" ")))
 		list.append(getConfigListEntry(_("Satellite-Infos"), config.plugins.KravenHD.SatInfo, _(" ")))
 		list.append(getConfigListEntry(_("ECM-Infos"), config.plugins.KravenHD.ECMInfo, _(" ")))
+		if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
+			list.append(getConfigListEntry(_("ECM-Contents"), config.plugins.KravenHD.ECMLine1, _(" ")))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2":
+			list.append(getConfigListEntry(_("ECM-Contents"), config.plugins.KravenHD.ECMLine2, _(" ")))
+		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz4" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
+			list.append(getConfigListEntry(_("ECM-Contents"), config.plugins.KravenHD.ECMLine3, _(" ")))
+		list.append(getConfigListEntry(_("Show 'free to air'"), config.plugins.KravenHD.FTA, _(" ")))
 		list.append(getConfigListEntry(_("ECM-Font"), config.plugins.KravenHD.ECMFont, _(" ")))
 		list.append(getConfigListEntry(_("______________________ Channellist _____________________________"), ))
 		if fileExists("/usr/lib/enigma2/python/Components/Converter/MiniTVDisplay.py") and fileExists("/usr/lib/enigma2/python/Components/Renderer/MiniTV.py"):
@@ -1294,6 +1332,22 @@ class KravenHD(ConfigListScreen, Screen):
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/about.png"
 			elif returnValue == "meteo-light":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/meteo.jpg"
+			elif returnValue == "VeryShortCaid":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/ecm-info-on.jpg"
+			elif returnValue == "VeryShortReader":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/ecm-info-on.jpg"
+			elif returnValue == "ShortHops":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/ecm-info-on.jpg"
+			elif returnValue == "ShortReader":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/ecm-info-on.jpg"
+			elif returnValue == "Normal":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/ecm-info-on.jpg"
+			elif returnValue == "Long":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/ecm-info-on.jpg"
+			elif returnValue == "VeryLong":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/ecm-info-on.jpg"
+			elif returnValue == "FTAVisible":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/ecm-info-on.jpg"
 			else:
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/" + returnValue + ".jpg"
 			if fileExists(path):
@@ -1640,6 +1694,22 @@ class KravenHD(ConfigListScreen, Screen):
 				self.appendSkinFile(self.daten + config.plugins.KravenHD.ClockStyle2.value + ".xml")
 			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
 				self.appendSkinFile(self.daten + config.plugins.KravenHD.ClockStyle3.value + ".xml")
+				
+			### FTA
+			if config.plugins.KravenHD.FTA.value == "FTAVisible":
+				self.skinSearchAndReplace.append(['FTAInvisible</convert>', 'FTAVisible</convert>'])
+			elif config.plugins.KravenHD.FTA.value == "none":
+				self.skinSearchAndReplace.append(['FTAVisible</convert>', 'FTAInvisible</convert>'])
+
+			### ecm-contents
+			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
+				self.skinSearchAndReplace.append(['<convert type="KravenHDECMLine">ECMLine,FTAInvisible</convert>', '<convert type="KravenHDECMLine">' + config.plugins.KravenHD.ECMLine1.value + ',FTAInvisible</convert>'])
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2":
+				self.skinSearchAndReplace.append(['<convert type="KravenHDECMLine">ECMLine,FTAInvisible</convert>', '<convert type="KravenHDECMLine">' + config.plugins.KravenHD.ECMLine2.value + ',FTAInvisible</convert>'])
+				self.skinSearchAndReplace.append(['<convert type="KravenHDECMLine">ECMLine,FTAVisible</convert>', '<convert type="KravenHDECMLine">' + config.plugins.KravenHD.ECMLine2.value + ',FTAVisible</convert>'])
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz4" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
+				self.skinSearchAndReplace.append(['<convert type="KravenHDECMLine">ECMLine,FTAInvisible</convert>', '<convert type="KravenHDECMLine">' + config.plugins.KravenHD.ECMLine3.value + ',FTAInvisible</convert>'])
+				self.skinSearchAndReplace.append(['<convert type="KravenHDECMLine">ECMLine,FTAVisible</convert>', '<convert type="KravenHDECMLine">' + config.plugins.KravenHD.ECMLine3.value + ',FTAVisible</convert>'])
 
 			### ecm-info
 			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":

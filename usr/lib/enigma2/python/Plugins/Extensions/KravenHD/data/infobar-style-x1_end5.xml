@@ -47,7 +47,7 @@
     <convert type="KravenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="273,693" size="403,22" font="Regular;16" halign="left" valign="top" foregroundColor="KravenECMFont" backgroundColor="KravenInfobarBackground" transparent="1" zPosition="5">
-    <convert type="KravenHDECMLine">Short</convert>
+    <convert type="KravenHDECMLine">ECMLine,FTAInvisible</convert>
   </widget>
   <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="Infobar - X1 / Secondinfobar - Weather" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
 </screen>
