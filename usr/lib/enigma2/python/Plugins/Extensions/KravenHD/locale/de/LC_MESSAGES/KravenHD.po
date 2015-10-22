@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2015-10-20 20:56+0100\n"
+"PO-Revision-Date: 2015-10-21 17:05+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -731,8 +731,8 @@ msgid "CAID + System + Reader + Hops + Time"
 msgstr "CAID + System + Reader + Hops + Zeit"
 
 #: KravenHD.py
-msgid "Active + CAID + System + Reader + Hops + Time"
-msgstr "Aktiv + CAID + System + Reader + Hops + Zeit"
+msgid "CAM + CAID + System + Reader + Hops + Time"
+msgstr "CAM + CAID + System + Reader + Hops + Zeit"
 
 #: KravenHD.py
 msgid "______________________ General __________________________________"

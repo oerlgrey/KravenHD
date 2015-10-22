@@ -1,6 +1,6 @@
 #######################################################################
 #
-# KravenHD by Team Kraven
+# KravenHD by Kraven, oerlgrey, stony272 and tomele
 # 
 # Thankfully inspired by:
 # MyMetrix
@@ -843,7 +843,7 @@ config.plugins.KravenHD.ECMLine2 = ConfigSelection(default="VeryShortCaid", choi
 				("ShortReader", _("CAID + Reader + Time")),
 				("Normal", _("CAID + Reader + Hops + Time")),
 				("Long", _("CAID + System + Reader + Hops + Time")),
-				("VeryLong", _("Active + CAID + System + Reader + Hops + Time"))
+				("VeryLong", _("CAM + CAID + System + Reader + Hops + Time"))
 				])
 				
 config.plugins.KravenHD.ECMLine3 = ConfigSelection(default="VeryShortCaid", choices = [
@@ -1051,7 +1051,7 @@ class KravenHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="830,80" size="402,46" text="KravenHD" font="Regular; 36" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" name="," />
-  <eLabel position="845,130" size="372,46" text="Version: 6.6.0" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+  <eLabel position="845,130" size="372,46" text="Version: 6.6.1" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
   <ePixmap backgroundColor="#00000000" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/about.png" position="847,202" size="368,207" zPosition="-9" />
   <widget name="helperimage" position="847,202" size="368,207" zPosition="1" backgroundColor="#00000000" />
   <widget source="help" render="Label" position="847,450" size="368,196" font="Regular2;20" backgroundColor="#00000000" foregroundColor="#0070AD11" halign="center" valign="top" transparent="1" />
@@ -1704,6 +1704,7 @@ class KravenHD(ConfigListScreen, Screen):
 			### ecm-contents
 			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
 				self.skinSearchAndReplace.append(['<convert type="KravenHDECMLine">ECMLine,FTAInvisible</convert>', '<convert type="KravenHDECMLine">' + config.plugins.KravenHD.ECMLine1.value + ',FTAInvisible</convert>'])
+				self.skinSearchAndReplace.append(['<convert type="KravenHDECMLine">ECMLine,FTAVisible</convert>', '<convert type="KravenHDECMLine">' + config.plugins.KravenHD.ECMLine1.value + ',FTAVisible</convert>'])
 			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x2" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x3" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z1" or config.plugins.KravenHD.InfobarStyle.value == "infobar-style-z2":
 				self.skinSearchAndReplace.append(['<convert type="KravenHDECMLine">ECMLine,FTAInvisible</convert>', '<convert type="KravenHDECMLine">' + config.plugins.KravenHD.ECMLine2.value + ',FTAInvisible</convert>'])
 				self.skinSearchAndReplace.append(['<convert type="KravenHDECMLine">ECMLine,FTAVisible</convert>', '<convert type="KravenHDECMLine">' + config.plugins.KravenHD.ECMLine2.value + ',FTAVisible</convert>'])
