@@ -54,12 +54,11 @@ class KravenHDWeather(Converter, object):
 	def getText(self):
 		WeatherInfo = weather_data.WeatherInfo
 		
-		# modification by tomele 
 		# due to yahoo changing the forecast scheme hours after the actual day has changed
 		# read actual day name and tomorrow forecast day name
 
-		self.aday = _(strftime("%a", time.localtime()))
-		self.fday = WeatherInfo["forecastTomorrowDay"]
+		self.aday = _(strftime("%a", time.localtime())).upper()
+		self.fday = WeatherInfo["forecastTomorrowDay"].upper()
 		
 		# if actual day equals tomorrow forecast day, shift forecasts left one day
 
@@ -110,7 +109,7 @@ class KravenHDWeather(Converter, object):
 			WeatherInfo["forecastTomorrow3Text"] = "N/A"
 			WeatherInfo["forecastTomorrow3Picon"] = "N/A"
 
-		# end of modification by tomele
+		# end of yahoo forecast fix
 				
 		if self.type == "currentLocation":
 			return WeatherInfo[self.type]
