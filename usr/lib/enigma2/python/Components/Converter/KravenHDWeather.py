@@ -62,7 +62,7 @@ class KravenHDWeather(Converter, object):
 		
 		# if actual day equals tomorrow forecast day, shift forecasts left one day
 
-		if self.aday == self.fday:
+		if self.fday == self.aday:
 			
 			WeatherInfo["forecastTodayCode"] = WeatherInfo["forecastTomorrowCode"] 
 			WeatherInfo["forecastTodayDay"] = WeatherInfo["forecastTomorrowDay"] 
@@ -101,13 +101,27 @@ class KravenHDWeather(Converter, object):
 			WeatherInfo["forecastTomorrow2Picon"] = WeatherInfo["forecastTomorrow3Picon"] 
 		
 			WeatherInfo["forecastTomorrow3Code"] = "("
-			WeatherInfo["forecastTomorrow3Day"] = "N/A"
-			WeatherInfo["forecastTomorrow3Date"] = "N/A"
-			WeatherInfo["forecastTomorrow3TempMax"] = "0"
-			WeatherInfo["forecastTomorrow3TempMin"] = "0"
-			WeatherInfo["forecastTomorrow3TempMinMax"] = "0"
-			WeatherInfo["forecastTomorrow3Text"] = "N/A"
-			WeatherInfo["forecastTomorrow3Picon"] = "N/A"
+			WeatherInfo["forecastTomorrow3Date"] = ""
+			WeatherInfo["forecastTomorrow3TempMax"] = ""
+			WeatherInfo["forecastTomorrow3TempMin"] = ""
+			WeatherInfo["forecastTomorrow3TempMinMax"] = ""
+			WeatherInfo["forecastTomorrow3Text"] = ""
+			WeatherInfo["forecastTomorrow3Picon"] = "3200"
+
+			if WeatherInfo["forecastTomorrow3Day"] == "MO":
+				WeatherInfo["forecastTomorrow3Day"] = "DI"
+			elif WeatherInfo["forecastTomorrow3Day"] == "DI":
+ 				WeatherInfo["forecastTomorrow3Day"] = "MI"
+			elif WeatherInfo["forecastTomorrow3Day"] == "MI":
+ 				WeatherInfo["forecastTomorrow3Day"] = "DO"
+			elif WeatherInfo["forecastTomorrow3Day"] == "DO":
+ 				WeatherInfo["forecastTomorrow3Day"] = "FR"
+			elif WeatherInfo["forecastTomorrow3Day"] == "FR":
+ 				WeatherInfo["forecastTomorrow3Day"] = "SA"
+			elif WeatherInfo["forecastTomorrow3Day"] == "SA":
+ 				WeatherInfo["forecastTomorrow3Day"] = "SO"
+			elif WeatherInfo["forecastTomorrow3Day"] == "SO":
+ 				WeatherInfo["forecastTomorrow3Day"] = "MO"
 
 		# end of yahoo forecast fix
 				
@@ -237,9 +251,9 @@ class KravenHDWeather(Converter, object):
 		elif self.type == "forecastTodayDate":
 			return WeatherInfo[self.type]
 		elif self.type == "forecastTodayTempMin":
-			return WeatherInfo[self.type] + "°"
+			return WeatherInfo[self.type]
 		elif self.type == "forecastTodayTempMax":
-			return WeatherInfo[self.type] + "°"
+			return WeatherInfo[self.type]
 		elif self.type == "forecastTodayTempMinMax":
 			return WeatherInfo[self.type]
 		elif self.type == "forecastTodayText":
@@ -352,9 +366,9 @@ class KravenHDWeather(Converter, object):
 		elif self.type == "forecastTomorrowDate":
 			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrowTempMin":
-			return WeatherInfo[self.type] + "°"
+			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrowTempMax":
-			return WeatherInfo[self.type] + "°"
+			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrowTempMinMax":
 			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrowText":
@@ -467,9 +481,9 @@ class KravenHDWeather(Converter, object):
 		elif self.type == "forecastTomorrow1Date":
 			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrow1TempMin":
-			return WeatherInfo[self.type] + "°"
+			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrow1TempMax":
-			return WeatherInfo[self.type] + "°"
+			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrow1TempMinMax":
 			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrow1Text":
@@ -582,9 +596,9 @@ class KravenHDWeather(Converter, object):
 		elif self.type == "forecastTomorrow2Date":
 			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrow2TempMin":
-			return WeatherInfo[self.type] + "°"
+			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrow2TempMax":
-			return WeatherInfo[self.type] + "°"
+			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrow2TempMinMax":
 			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrow2Text":
@@ -697,9 +711,9 @@ class KravenHDWeather(Converter, object):
 		elif self.type == "forecastTomorrow3Date":
 			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrow3TempMin":
-			return WeatherInfo[self.type] + "°"
+			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrow3TempMax":
-			return WeatherInfo[self.type] + "°"
+			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrow3TempMinMax":
 			return WeatherInfo[self.type]
 		elif self.type == "forecastTomorrow3Text":
@@ -951,8 +965,8 @@ class WeatherData:
 			self.WeatherInfo["forecastTodayCode"] = self.ConvertCondition(weather.getAttributeNode('code').nodeValue)
 			self.WeatherInfo["forecastTodayDay"] = _(weather.getAttributeNode('day').nodeValue)
 			self.WeatherInfo["forecastTodayDate"] = self.getWeatherDate(weather)
-			self.WeatherInfo["forecastTodayTempMax"] = self.getTemp(weather.getAttributeNode('high').nodeValue)
-			self.WeatherInfo["forecastTodayTempMin"] = self.getTemp(weather.getAttributeNode('low').nodeValue)
+			self.WeatherInfo["forecastTodayTempMax"] = self.getTemp(weather.getAttributeNode('high').nodeValue) + "°C"
+			self.WeatherInfo["forecastTodayTempMin"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°C"
 			self.WeatherInfo["forecastTodayTempMinMax"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°/" + self.getTemp(weather.getAttributeNode('high').nodeValue) + "°"
 			self.WeatherInfo["forecastTodayText"] = _(str(weather.getAttributeNode('text').nodeValue))
 			self.WeatherInfo["forecastTodayPicon"] = _(str(weather.getAttributeNode('code').nodeValue))
@@ -961,8 +975,8 @@ class WeatherData:
 			self.WeatherInfo["forecastTomorrowCode"] = self.ConvertCondition(weather.getAttributeNode('code').nodeValue)
 			self.WeatherInfo["forecastTomorrowDay"] = _(weather.getAttributeNode('day').nodeValue)
 			self.WeatherInfo["forecastTomorrowDate"] = self.getWeatherDate(weather)
-			self.WeatherInfo["forecastTomorrowTempMax"] = self.getTemp(weather.getAttributeNode('high').nodeValue)
-			self.WeatherInfo["forecastTomorrowTempMin"] = self.getTemp(weather.getAttributeNode('low').nodeValue)
+			self.WeatherInfo["forecastTomorrowTempMax"] = self.getTemp(weather.getAttributeNode('high').nodeValue) + "°C"
+			self.WeatherInfo["forecastTomorrowTempMin"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°C"
 			self.WeatherInfo["forecastTomorrowTempMinMax"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°/" + self.getTemp(weather.getAttributeNode('high').nodeValue) + "°"
 			self.WeatherInfo["forecastTomorrowText"] = _(str(weather.getAttributeNode('text').nodeValue))
 			self.WeatherInfo["forecastTomorrowPicon"] = _(str(weather.getAttributeNode('code').nodeValue))
@@ -971,8 +985,8 @@ class WeatherData:
 			self.WeatherInfo["forecastTomorrow1Code"] = self.ConvertCondition(weather.getAttributeNode('code').nodeValue)
 			self.WeatherInfo["forecastTomorrow1Day"] = _(weather.getAttributeNode('day').nodeValue)
 			self.WeatherInfo["forecastTomorrow1Date"] = self.getWeatherDate(weather)
-			self.WeatherInfo["forecastTomorrow1TempMax"] = self.getTemp(weather.getAttributeNode('high').nodeValue)
-			self.WeatherInfo["forecastTomorrow1TempMin"] = self.getTemp(weather.getAttributeNode('low').nodeValue)
+			self.WeatherInfo["forecastTomorrow1TempMax"] = self.getTemp(weather.getAttributeNode('high').nodeValue) + "°C"
+			self.WeatherInfo["forecastTomorrow1TempMin"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°C"
 			self.WeatherInfo["forecastTomorrow1TempMinMax"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°/" + self.getTemp(weather.getAttributeNode('high').nodeValue) + "°"
 			self.WeatherInfo["forecastTomorrow1Text"] = _(str(weather.getAttributeNode('text').nodeValue))
 			self.WeatherInfo["forecastTomorrow1Picon"] = _(str(weather.getAttributeNode('code').nodeValue))
@@ -981,8 +995,8 @@ class WeatherData:
 			self.WeatherInfo["forecastTomorrow2Code"] = self.ConvertCondition(weather.getAttributeNode('code').nodeValue)
 			self.WeatherInfo["forecastTomorrow2Day"] = _(weather.getAttributeNode('day').nodeValue)
 			self.WeatherInfo["forecastTomorrow2Date"] = self.getWeatherDate(weather)
-			self.WeatherInfo["forecastTomorrow2TempMax"] = self.getTemp(weather.getAttributeNode('high').nodeValue)
-			self.WeatherInfo["forecastTomorrow2TempMin"] = self.getTemp(weather.getAttributeNode('low').nodeValue)
+			self.WeatherInfo["forecastTomorrow2TempMax"] = self.getTemp(weather.getAttributeNode('high').nodeValue) + "°C"
+			self.WeatherInfo["forecastTomorrow2TempMin"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°C"
 			self.WeatherInfo["forecastTomorrow2TempMinMax"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°/" + self.getTemp(weather.getAttributeNode('high').nodeValue) + "°"
 			self.WeatherInfo["forecastTomorrow2Text"] = _(str(weather.getAttributeNode('text').nodeValue))
 			self.WeatherInfo["forecastTomorrow2Picon"] = _(str(weather.getAttributeNode('code').nodeValue))
@@ -991,8 +1005,8 @@ class WeatherData:
 			self.WeatherInfo["forecastTomorrow3Code"] = self.ConvertCondition(weather.getAttributeNode('code').nodeValue)
 			self.WeatherInfo["forecastTomorrow3Day"] = _(weather.getAttributeNode('day').nodeValue)
 			self.WeatherInfo["forecastTomorrow3Date"] = self.getWeatherDate(weather)
-			self.WeatherInfo["forecastTomorrow3TempMax"] = self.getTemp(weather.getAttributeNode('high').nodeValue)
-			self.WeatherInfo["forecastTomorrow3TempMin"] = self.getTemp(weather.getAttributeNode('low').nodeValue)
+			self.WeatherInfo["forecastTomorrow3TempMax"] = self.getTemp(weather.getAttributeNode('high').nodeValue) + "°C"
+			self.WeatherInfo["forecastTomorrow3TempMin"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°C"
 			self.WeatherInfo["forecastTomorrow3TempMinMax"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°/" + self.getTemp(weather.getAttributeNode('high').nodeValue) + "°"
 			self.WeatherInfo["forecastTomorrow3Text"] =_(str(weather.getAttributeNode('text').nodeValue))
 			self.WeatherInfo["forecastTomorrow3Picon"] = _(str(weather.getAttributeNode('code').nodeValue))

@@ -5,7 +5,7 @@
 ##
 ## Example usage in the skin.xml:
 ##		<widget source="session.CurrentService" render="Label" position="164,435" size="390,28" font="Regular;26" transparent="1" >
-##			<convert type="MetrixHDExtServiceInfo">Config</convert>
+##			<convert type="KravenHDExtServiceInfo">Config</convert>
 ##		</widget>
 ##
 ## Known issues with the ServiceNumber Converter:
@@ -62,7 +62,16 @@ class KravenHDExtServiceInfo(Converter, object):
 
 		text = ""
 		name = info.getName().replace('\xc2\x86', '').replace('\xc2\x87', '')
-		number = self.getServiceNumber(name, info.getInfoString(iServiceInformation.sServiceref))
+		try:
+			service = self.source.serviceref
+			num = service and service.getChannelNum() or None
+		except:
+			num = None
+		if num:
+			number = str(num)
+		else:
+			num = self.getServiceNumber(name, info.getInfoString(iServiceInformation.sServiceref))
+			number = num and str(num) or ''
 		orbital = self.getOrbitalPosition(info)
 		satName = self.satNames.get(orbital, orbital)
 

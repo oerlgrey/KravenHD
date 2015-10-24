@@ -1,5 +1,5 @@
 <!--/* Channelname -->
-  <widget font="Regular; 40" foregroundColor="KravenChannelnameFont" backgroundColor="KravenNameBackground" halign="left" noWrap="1" position="20,512" render="Label" size="1240,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+  <widget font="Regular; 40" foregroundColor="KravenChannelnameFont" backgroundColor="KravenNameBackground" halign="left" noWrap="1" position="20,527" render="Label" size="1240,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
     <convert type="ServiceName">Name</convert>
   </widget>
 <!--/* Channelname -->

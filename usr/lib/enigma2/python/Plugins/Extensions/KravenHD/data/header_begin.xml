@@ -1,7 +1,9 @@
 <skin>
   <copyright>
     <!-- DONT REMOVE THIS DISCLAIMER -->
-    <!-- KravenHD by Team Kraven -->
+    <!-- KravenHD by Team-Kraven -->
+    <!-- Icons and buttons by stony272 -->
+    <!-- Thanks to TBX and Mike99 -->
     <!-- You can change this skin for PERSONAL USE ONLY -->
     <!-- You are not allowed to publish our skin without our permission -->
   </copyright>
@@ -15,6 +17,7 @@
     <color name="green" value="#00389416" />
     <color name="grey" value="#00f0e3d6" />
     <color name="KravenBackground" value="#00000000" />
+    <color name="KravenBackground2" value="#00000000" />
     <color name="KravenBorder" value="#00ffffff" />
     <color name="KravenButtonText" value="#00ffffff" />
     <color name="KravenFont1" value="#00ffffff" />
@@ -71,3 +74,13 @@
     <color color="KravenMarkedFont" name="ListboxMarkedAndSelectedForeground" />
     <color color="KravenFont1" name="WindowTitleForeground" />
     <color color="KravenBackground" name="WindowTitleBackground" />
+    <borderset name="bsWindow">
+      <pixmap filename="KravenHD/bsWindow/bs_tl.png" pos="bpTopLeft" />
+      <pixmap filename="KravenHD/bsWindow/bs_t.png" pos="bpTop" />
+      <pixmap filename="KravenHD/bsWindow/bs_tr.png" pos="bpTopRight" />
+      <pixmap filename="KravenHD/bsWindow/bs_l.png" pos="bpLeft" />
+      <pixmap filename="KravenHD/bsWindow/bs_r.png" pos="bpRight" />
+      <pixmap filename="KravenHD/bsWindow/bs_bl.png" pos="bpBottomLeft" />
+      <pixmap filename="KravenHD/bsWindow/bs_b.png" pos="bpBottom" />
+      <pixmap filename="KravenHD/bsWindow/bs_br.png" pos="bpBottomRight" />
+    </borderset>

@@ -1,6 +1,6 @@
 #######################################################################
 #
-# KravenHD by Kraven, oerlgrey, stony272 and tomele
+# KravenHD by Team-Kraven
 # 
 # Thankfully inspired by:
 # MyMetrix
@@ -1051,7 +1051,7 @@ class KravenHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="830,80" size="402,46" text="KravenHD" font="Regular; 36" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" name="," />
-  <eLabel position="845,130" size="372,46" text="Version: 6.6.1" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+  <eLabel position="845,130" size="372,46" text="Version: 6.7.0" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
   <ePixmap backgroundColor="#00000000" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/about.png" position="847,202" size="368,207" zPosition="-9" />
   <widget name="helperimage" position="847,202" size="368,207" zPosition="1" backgroundColor="#00000000" />
   <widget source="help" render="Label" position="847,450" size="368,196" font="Regular2;20" backgroundColor="#00000000" foregroundColor="#0070AD11" halign="center" valign="top" transparent="1" />
@@ -1424,6 +1424,7 @@ class KravenHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace = []
 			self.skinSearchAndReplace.append(['name="KravenBackground" value="#00', 'name="KravenBackground" value="#' + config.plugins.KravenHD.BackgroundColorTrans.value])
 			self.skinSearchAndReplace.append(['name="KravenBackground" value="#' + config.plugins.KravenHD.BackgroundColorTrans.value + "000000", 'name="KravenBackground" value="#' + config.plugins.KravenHD.BackgroundColorTrans.value + config.plugins.KravenHD.Background.value])
+			self.skinSearchAndReplace.append(['name="KravenBackground2" value="#00000000', 'name="KravenBackground2" value="#00' + config.plugins.KravenHD.Background.value])
 			self.skinSearchAndReplace.append(['name="KravenInfobarBackground" value="#001B1775', 'name="KravenInfobarBackground" value="#00' + config.plugins.KravenHD.SkinColorInfobar.value])
 			self.skinSearchAndReplace.append(['name="KravenNameBackground" value="#A01B1775', 'name="KravenNameBackground" value="#A0' + config.plugins.KravenHD.SkinColorInfobar.value])
 			self.skinSearchAndReplace.append(['name="KravenIbarBackground" value="#4A1B1775', 'name="KravenIbarBackground" value="#4A' + config.plugins.KravenHD.SkinColorInfobar.value])
