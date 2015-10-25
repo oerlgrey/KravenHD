@@ -1,0 +1,895 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kraven <KravenHD@web.de>, 2015.
+# Hasan Kiran <sunder67@hotmail.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: KravenHD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-06 23:16+0200\n"
+"PO-Revision-Date: 2015-10-25 03:54+0300\n"
+"Last-Translator: Hasan Kiran <Sunder67@hotmail.com>\n"
+"Language-Team: Turkish <sunder67@hotmail.com>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: KravenHDYWeather.py
+msgid "N-NE"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "NE"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "E-NE"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "E"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "E-SE"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "SE"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "S-SE"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Mon"
+msgstr "Ptesi"
+
+#: KravenHDYWeather.py
+msgid "Tue"
+msgstr "Salı"
+
+#: KravenHDYWeather.py
+msgid "Wed"
+msgstr "Çarş"
+
+#: KravenHDYWeather.py
+msgid "Thu"
+msgstr "Perş"
+
+#: KravenHDYWeather.py
+msgid "Fri"
+msgstr "Cuma"
+
+#: KravenHDYWeather.py
+msgid "Sat"
+msgstr "Ctesi"
+
+#: KravenHDYWeather.py
+msgid "Sun"
+msgstr "Paz"
+
+#: KravenHDYWeather.py
+msgid ""
+"Tropical\n"
+" storm"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Hurricane"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Severe\n"
+" thunderstorms"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Thunderstorms"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Mixed rain\n"
+" and snow"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Mixed rain\n"
+" and sleet"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Mixed snow\n"
+" and sleet"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Freezing\n"
+" drizzle"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Drizzle"
+msgstr "Çiseleme"
+
+#: KravenHDYWeather.py
+msgid ""
+"Freezing\n"
+" rain"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Showers"
+msgstr "Sağanak"
+
+#: KravenHDYWeather.py
+msgid "Rain"
+msgstr "Yağmur"
+
+#: KravenHDYWeather.py
+msgid ""
+"Snow\n"
+" flurries"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Light\n"
+" snow showers"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Blowing\n"
+" snow"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Snow"
+msgstr "Kar"
+
+#: KravenHDYWeather.py
+msgid "Hail"
+msgstr "Dolu"
+
+#: KravenHDYWeather.py
+msgid "Sleet"
+msgstr "Karla Larışık Yağmur"
+
+#: KravenHDYWeather.py
+msgid "Dust"
+msgstr "Toz"
+
+#: KravenHDYWeather.py
+msgid "Foggy"
+msgstr "Sisli"
+
+#: KravenHDYWeather.py
+msgid "Haze"
+msgstr "Puslu"
+
+#: KravenHDYWeather.py
+msgid "Smoky"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Blustery"
+msgstr "Rüzgarlı"
+
+#: KravenHDYWeather.py
+msgid "Windy"
+msgstr "Rüzgârlı"
+
+#: KravenHDYWeather.py
+msgid "Cold"
+msgstr "Soğuk"
+
+#: KravenHDYWeather.py
+msgid "Cloudy"
+msgstr "Bulutlu"
+
+#: KravenHDYWeather.py
+msgid ""
+"Mostly\n"
+" cloudy"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Partly\n"
+" cloudy"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Clear"
+msgstr "Açık"
+
+#: KravenHDYWeather.py
+msgid "Sunny"
+msgstr "Güneşli"
+
+#: KravenHDYWeather.py
+msgid "Fair"
+msgstr "Güzel"
+
+#: KravenHDYWeather.py
+msgid ""
+"Mixed rain\n"
+" and hail"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Hot"
+msgstr "Sıcak"
+
+#: KravenHDYWeather.py
+msgid ""
+"Isolated\n"
+" thunderstorms"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Scattered\n"
+" thunderstorms"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Scattered\n"
+" showers"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Heavy snow"
+msgstr "Şiddetli kar"
+
+#: KravenHDYWeather.py
+msgid ""
+"Scattered\n"
+" snow showers"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Thundershowers"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "Snow showers"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Isolated\n"
+" thundershowers"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ""
+"Not\n"
+" available"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid " from "
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid "% humidity"
+msgstr ""
+
+#: KravenHDYWeather.py
+msgid ", feels "
+msgstr ""
+
+#: KravenHD.py
+msgid "with Border"
+msgstr ""
+
+#: KravenHD.py
+msgid "left"
+msgstr "sol"
+
+#: KravenHD.py
+msgid "right"
+msgstr ""
+
+#: KravenHD.py
+msgid "bottom"
+msgstr ""
+
+#: KravenHD.py
+msgid "top"
+msgstr ""
+
+#: KravenHD.py
+msgid "center"
+msgstr ""
+
+#: KravenHD.py
+msgid "low"
+msgstr "düşük"
+
+#: KravenHD.py
+msgid "medium"
+msgstr "orta"
+
+#: KravenHD.py
+msgid "high"
+msgstr "yüksek"
+
+#: KravenHD.py
+msgid "amber"
+msgstr ""
+
+#: KravenHD.py
+msgid "amber dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "black"
+msgstr "siyah"
+
+#: KravenHD.py
+msgid "blue"
+msgstr "mavi"
+
+#: KravenHD.py
+msgid "blue dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "brown"
+msgstr "kahverengi"
+
+#: KravenHD.py
+msgid "brown dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "cobalt"
+msgstr ""
+
+#: KravenHD.py
+msgid "cobalt dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "cyan"
+msgstr "camgöbeği"
+
+#: KravenHD.py
+msgid "cyan dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "grey"
+msgstr "gri"
+
+#: KravenHD.py
+msgid "grey dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "green"
+msgstr ""
+
+#: KravenHD.py
+msgid "green dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "Kraven dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "olive"
+msgstr ""
+
+#: KravenHD.py
+msgid "olive dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "orange"
+msgstr ""
+
+#: KravenHD.py
+msgid "orange dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "pink"
+msgstr "pembe"
+
+#: KravenHD.py
+msgid "pink dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "red"
+msgstr "kırmızı"
+
+#: KravenHD.py
+msgid "red dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "steel"
+msgstr ""
+
+#: KravenHD.py
+msgid "steel dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "violet"
+msgstr ""
+
+#: KravenHD.py
+msgid "violet dark"
+msgstr ""
+
+#: KravenHD.py
+msgid "white"
+msgstr "Beyaz"
+
+#: KravenHD.py
+msgid "yellow"
+msgstr "sarı"
+
+#: KravenHD.py
+msgid "off"
+msgstr "kapalı"
+
+#: KravenHD.py
+msgid "no Cover"
+msgstr ""
+
+#: KravenHD.py
+msgid "no Cover2"
+msgstr ""
+
+#: KravenHD.py
+msgid "small Cover"
+msgstr ""
+
+#: KravenHD.py
+msgid "small Cover2"
+msgstr ""
+
+#: KravenHD.py
+msgid "big Cover"
+msgstr ""
+
+#: KravenHD.py
+msgid "big Cover2"
+msgstr ""
+
+#: KravenHD.py
+msgid "very big Cover"
+msgstr ""
+
+#: KravenHD.py
+msgid "very big Cover2"
+msgstr ""
+
+#: KravenHD.py
+msgid "on"
+msgstr "açık"
+
+#: KravenHD.py
+msgid "Weather"
+msgstr "Hava Durumu"
+
+#: KravenHD.py
+msgid "standard"
+msgstr "standart"
+
+#: KravenHD.py
+msgid "standard big"
+msgstr ""
+
+#: KravenHD.py
+msgid "colored"
+msgstr ""
+
+#: KravenHD.py
+msgid "colorfull"
+msgstr ""
+
+#: KravenHD.py
+msgid "colorfull2"
+msgstr ""
+
+#: KravenHD.py
+msgid "big"
+msgstr "büyük"
+
+#: KravenHD.py
+msgid "small"
+msgstr "küçük"
+
+#: KravenHD.py
+msgid "Running Text (Delay)"
+msgstr ""
+
+#: KravenHD.py
+msgid "Background-Transparency"
+msgstr ""
+
+#: KravenHD.py
+msgid "Weather-ID"
+msgstr ""
+
+#: KravenHD.py
+msgid "______________________ Global-Colors ___________________________"
+msgstr ""
+
+#: KravenHD.py
+msgid "______________________ Infobar _________________________________"
+msgstr ""
+
+#: KravenHD.py
+msgid "______________________ Views ___________________________________"
+msgstr ""
+
+#: KravenHD.py
+msgid "______________________ Channellist _____________________________"
+msgstr ""
+
+#: KravenHD.py
+msgid "______________________ Weather _________________________________"
+msgstr ""
+
+#: KravenHD.py
+msgid "Refresh interval (in minutes)"
+msgstr ""
+
+#: KravenHD.py
+msgid "Screennames"
+msgstr ""
+
+#: KravenHD.py
+msgid "Menus"
+msgstr "Menüler"
+
+#: KravenHD.py
+msgid "Weather-Style"
+msgstr ""
+
+#: KravenHD.py
+msgid "Meteo-Color"
+msgstr ""
+
+#: KravenHD.py
+msgid "only available for Meteo-Style"
+msgstr ""
+
+#: KravenHD.py
+msgid "Channellist-Style"
+msgstr ""
+
+#: KravenHD.py
+msgid "Primetime"
+msgstr ""
+
+#: KravenHD.py
+msgid "Primetime-Time"
+msgstr ""
+
+#: KravenHD.py
+msgid "Primetime-Font"
+msgstr ""
+
+#: KravenHD.py
+msgid "only available when Primetime is activated"
+msgstr ""
+
+#: KravenHD.py
+msgid "Lines"
+msgstr ""
+
+#: KravenHD.py
+msgid "Background"
+msgstr "Arkaplan"
+
+#: KravenHD.py
+msgid "Progress-Border"
+msgstr ""
+
+#: KravenHD.py
+msgid "Listselection"
+msgstr ""
+
+#: KravenHD.py
+msgid "Listselection-Border"
+msgstr ""
+
+#: KravenHD.py
+msgid "Progress-/Volumebar"
+msgstr ""
+
+#: KravenHD.py
+msgid "Primary-Font"
+msgstr ""
+
+#: KravenHD.py
+msgid "Secondary-Font"
+msgstr ""
+
+#: KravenHD.py
+msgid "Selection-Font"
+msgstr ""
+
+#: KravenHD.py
+msgid "Marking-Font"
+msgstr ""
+
+#: KravenHD.py
+msgid "ECM-Font"
+msgstr ""
+
+#: KravenHD.py
+msgid "Colorbutton-Font"
+msgstr ""
+
+#: KravenHD.py
+msgid "Clock-Style"
+msgstr ""
+
+#: KravenHD.py
+msgid "Analog-Clock-Color"
+msgstr ""
+
+#: KravenHD.py
+msgid "System-Infos"
+msgstr ""
+
+#: KravenHD.py
+msgid "Satellite-Infos"
+msgstr ""
+
+#: KravenHD.py
+msgid "ECM-Infos"
+msgstr ""
+
+#: KravenHD.py
+msgid "ECM-Contents"
+msgstr ""
+
+#: KravenHD.py
+msgid "Show 'free to air'"
+msgstr ""
+
+#: KravenHD.py
+msgid "CAID + Time"
+msgstr ""
+
+#: KravenHD.py
+msgid "Reader + Time"
+msgstr ""
+
+#: KravenHD.py
+msgid "CAID + Hops + Time"
+msgstr ""
+
+#: KravenHD.py
+msgid "CAID + Reader + Time"
+msgstr ""
+
+#: KravenHD.py
+msgid "CAID + Reader + Hops + Time"
+msgstr ""
+
+#: KravenHD.py
+msgid "CAID + System + Reader + Hops + Time"
+msgstr ""
+
+#: KravenHD.py
+msgid "CAM + CAID + System + Reader + Hops + Time"
+msgstr ""
+
+#: KravenHD.py
+msgid "______________________ General __________________________________"
+msgstr ""
+
+#: KravenHD.py
+msgid "Channellist"
+msgstr ""
+
+#: KravenHD.py
+msgid "Volume"
+msgstr ""
+
+#: KravenHD.py
+msgid "Do you really want to reboot now?"
+msgstr ""
+
+#: KravenHD.py
+msgid "Restart GUI"
+msgstr ""
+
+#: KravenHD.py
+msgid "Error creating Skin!"
+msgstr ""
+
+#: KravenHD.py
+msgid ""
+"GUI needs a restart to apply a new skin.\n"
+"Do you want to Restart the GUI now?"
+msgstr ""
+
+#: plugin.py
+msgid "Configuration tool for KravenHD"
+msgstr ""
+
+#: KravenHD.py
+msgid "no Picon"
+msgstr ""
+
+#: KravenHD.py
+msgid "Name small"
+msgstr ""
+
+#: KravenHD.py
+msgid "Name & Number small"
+msgstr ""
+
+#: KravenHD.py
+msgid "Name big"
+msgstr ""
+
+#: KravenHD.py
+msgid "Name & Number big"
+msgstr ""
+
+#: KravenHD.py
+msgid "Name & Number"
+msgstr ""
+
+#: KravenHD.py
+msgid "Channelname/-number-Font"
+msgstr ""
+
+#: KravenHD.py
+msgid "Channelname/-number"
+msgstr ""
+
+#: KravenHD.py
+msgid "Infobox-Contents"
+msgstr ""
+
+#: KravenHD.py
+msgid "top/bottom"
+msgstr ""
+
+#: KravenHD.py
+msgid "left/right"
+msgstr ""
+
+#: KravenHD.py
+msgid "single"
+msgstr ""
+
+#: KravenHD.py
+msgid "MiniTV left"
+msgstr ""
+
+#: KravenHD.py
+msgid "MiniTV right"
+msgstr ""
+
+#: KravenHD.py
+msgid "Tuner number/Record"
+msgstr ""
+
+#: KravenHD.py
+msgid "Infobar-Icons"
+msgstr ""
+
+#: KravenHD.py
+msgid "Icons (except Infobar)"
+msgstr ""
+
+#: KravenHD.py
+msgid "Infobar-Background"
+msgstr ""
+
+#: KravenHD.py
+msgid "Icons + 4 Tuner + Resolution + Infobox"
+msgstr ""
+
+#: KravenHD.py
+msgid "Icons + REC + 2 Tuner + Resolution + Infobox"
+msgstr ""
+
+#: KravenHD.py
+msgid "Show Infobar-Background"
+msgstr ""
+
+#: KravenHD.py
+msgid "in all Screens"
+msgstr ""
+
+#: KravenHD.py
+msgid "only Infobar, SecondInfobar & Players"
+msgstr ""
+
+#: KravenHD.py
+msgid "light"
+msgstr "açık"
+
+#: KravenHD.py
+msgid "dark"
+msgstr "koyu"
+
+#: KravenHD.py
+msgid "thin"
+msgstr "ince"
+
+#: KravenHD.py
+msgid "middle"
+msgstr "orta"
+
+#: KravenHD.py
+msgid "wide"
+msgstr "geniş"
+
+#: KravenHD.py
+msgid "Infobar-Style"
+msgstr ""
+
+#: KravenHD.py
+msgid "Scrollbars"
+msgstr ""
+
+#: KravenHD.py
+msgid "only available for Clock Analog"
+msgstr ""
+
+#: KravenHD.py
+msgid "not available in this style"
+msgstr ""
+
+#: KravenHD.py
+msgid "not available when scrollbars activated"
+msgstr ""
+
+#: KravenHD.py
+msgid "Tuner/Satellite + SNR"
+msgstr ""
+
+#: KravenHD.py
+msgid "Tuner/Satellite + dB"
+msgstr ""
+
+#: KravenHD.py
+msgid "CPU + Load"
+msgstr ""
+
+#: KravenHD.py
+msgid "Temperature + Fan"
+msgstr ""
+
+#: KravenHDECMLine.py
+msgid "not available"
+msgstr "kullanılabilir değil"
+
+#: KravenHDECMLine.py
+msgid "free to air"
+msgstr ""
+
+#: KravenHDFrontendInfo.py
+msgid "dB"
+msgstr ""
