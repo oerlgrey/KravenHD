@@ -355,9 +355,10 @@
   <!-- SleepTimer -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SleepTimerEdit" position="0,0" size="1280,720" title="Sleep Timer">
     <widget backgroundColor="KravenBackground" name="config" itemHeight="30" font="Regular;22" foregroundColor="KravenFont1" position="70,80" size="708,60" transparent="1" />
-    <widget backgroundColor="KravenBackground" name="description" font="Regular;22" halign="center" foregroundColor="KravenFont1" position="70,545" size="708,54" transparent="1" />
+    <widget backgroundColor="KravenBackground" name="description" font="Regular2;22" halign="center" foregroundColor="KravenFont2" position="70,545" size="708,54" transparent="1" />
     <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
+    <panel name="key_ok_exit" />
     <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="SleepTimerEdit" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
   </screen>
 <!-- main-custom-openatv */ -->

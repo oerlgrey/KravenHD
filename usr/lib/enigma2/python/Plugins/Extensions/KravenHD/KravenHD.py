@@ -1051,7 +1051,7 @@ class KravenHD(ConfigListScreen, Screen):
     <convert type="ClockToText">Default</convert>
   </widget>
   <eLabel position="830,80" size="402,46" text="KravenHD" font="Regular; 36" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" name="," />
-  <eLabel position="845,130" size="372,46" text="Version: 6.7.0" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+  <eLabel position="845,130" size="372,46" text="Version: 6.7.1" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
   <ePixmap backgroundColor="#00000000" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/about.png" position="847,202" size="368,207" zPosition="-9" />
   <widget name="helperimage" position="847,202" size="368,207" zPosition="1" backgroundColor="#00000000" />
   <widget source="help" render="Label" position="847,450" size="368,196" font="Regular2;20" backgroundColor="#00000000" foregroundColor="#0070AD11" halign="center" valign="top" transparent="1" />
@@ -1790,6 +1790,11 @@ class KravenHD(ConfigListScreen, Screen):
 
 			### Main XML
 			self.appendSkinFile(self.daten + "main.xml")
+
+			### SerienRecorder
+			console = eConsoleAppContainer()
+			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/plugin.py"):
+				console.execute("rm -rf /usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/skins/KravenHD; mkdir /usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/skins/KravenHD; cp /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/data/SR_skin.xml /usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/skins/KravenHD/SR_skin.xml")
 
 			### Plugins XML
 			self.appendSkinFile(self.daten + "plugins.xml")
