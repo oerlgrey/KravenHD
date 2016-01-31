@@ -44,6 +44,9 @@ fi
 if [ -f /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/data/skin-user.xml ]; then
     cp /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/data/skin-user.xml /tmp
 fi
+if [ -f /usr/share/enigma2/KravenHD/skin.xml ]; then
+    rm -rf /usr/share/enigma2/KravenHD/skin.xml
+fi
 echo "                                                           "
 echo "        The Skin KravenHD is now being installed...        "
 echo "                                                           "
