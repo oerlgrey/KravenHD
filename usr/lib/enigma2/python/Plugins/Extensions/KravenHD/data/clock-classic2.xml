@@ -1,19 +1,19 @@
     <!--/* Clock -->
-  <widget backgroundColor="KravenInfobarBackground" font="Regular; 43" foregroundColor="KravenFont1" halign="center" position="1062,600" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="KravenIBbg" font="Regular; 43" foregroundColor="KravenIBFont1" halign="center" position="1062,600" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
     <convert type="KravenHDClockToText">Format:%H</convert>
   </widget>
-  <eLabel backgroundColor="KravenInfobarBackground" font="Regular; 43" foregroundColor="KravenFont1" halign="center" position="1119,600" size="15,80" text=":" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="KravenInfobarBackground" font="Regular; 43" foregroundColor="KravenFont1" halign="center" position="1129,600" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+  <eLabel backgroundColor="KravenIBbg" font="Regular; 43" foregroundColor="KravenIBFont1" halign="center" position="1119,600" size="15,80" text=":" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="KravenIBbg" font="Regular; 43" foregroundColor="KravenIBFont1" halign="center" position="1129,600" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
     <convert type="KravenHDClockToText">Format:%M</convert>
   </widget>
-  <eLabel backgroundColor="KravenInfobarBackground" font="Regular; 32" foregroundColor="KravenFont1" halign="center" position="1185,614" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="KravenInfobarBackground" font="Regular; 32" foregroundColor="KravenFont1" halign="center" position="1194,614" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+  <eLabel backgroundColor="KravenIBbg" font="Regular; 32" foregroundColor="KravenIBFont1" halign="center" position="1185,614" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="KravenIBbg" font="Regular; 32" foregroundColor="KravenIBFont1" halign="center" position="1194,614" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
     <convert type="KravenHDClockToText">Format:%S</convert>
   </widget>
-  <widget backgroundColor="KravenInfobarBackground" font="Regular; 18" foregroundColor="KravenFont2" halign="center" position="1053,679" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="KravenIBbg" font="Regular; 18" foregroundColor="KravenIBFont2" halign="center" position="1053,679" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
     <convert type="KravenHDClockToText">Format:%e. %B</convert>
   </widget>
-  <widget backgroundColor="KravenInfobarBackground" font="Regular; 18" foregroundColor="KravenFont2" halign="center" position="1053,659" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="KravenIBbg" font="Regular; 18" foregroundColor="KravenIBFont2" halign="center" position="1053,659" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
     <convert type="KravenHDClockToText">Format:%A</convert>
   </widget>
     <!--Clock */-->

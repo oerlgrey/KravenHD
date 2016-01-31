@@ -1,0 +1,5 @@
+  <!-- ********** Timeshift ********** -->
+  <!-- TimeshiftState -->
+  <screen name="TimeshiftState" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+    <ePixmap pixmap="KravenHD/backg.png" position="0,0" size="1280,720" zPosition="-9" />
+    <ePixmap pixmap="KravenHD/ibar.png" position="0,470" size="1280,310" zPosition="-9" alphatest="blend" />

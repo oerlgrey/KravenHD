@@ -1,0 +1,5 @@
+  <!-- PVRState -->
+  <screen name="PVRState" position="center,center" size="110,45" flags="wfNoBorder" backgroundColor="transparent" zPosition="10">
+    <eLabel backgroundColor="KravenIBbg" position="0,0" size="110,45" transparent="0" zPosition="-10" />
+    <widget backgroundColor="KravenIBbg" font="Regular; 30" foregroundColor="KravenIBFont1" halign="center" name="state" position="0,0" size="110,45" text="&gt;&gt; 256" transparent="1" valign="center" zPosition="5" />
+  </screen>

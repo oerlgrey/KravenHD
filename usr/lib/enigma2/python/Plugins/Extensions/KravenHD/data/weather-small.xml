@@ -1,15 +1,15 @@
 <!-- /* Weather -->
-  <widget source="session.CurrentService" position="1010,38" transparent="1" zPosition="8" size="70,70" render="KravenHDPiconUni" alphatest="blend" path="WetterIcons">
-    <convert  type="KravenHDWeather">currentWeatherPicon</convert>
+  <ePixmap pixmap="KravenHD/wsmall.png" position="890,-10" size="400,210" zPosition="-9" alphatest="blend"/>
+  <widget source="session.CurrentService" position="960,55" transparent="1" zPosition="8" size="70,70" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons">
+    <convert  type="KravenHDWeather">Day_0,MeteoIcon</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="KravenInfobarBackground" font="Regular2; 30" foregroundColor="KravenFont2" render="Label" position="1094,49" size="80,40" source="session.CurrentService" zPosition="3" halign="center" valign="center" transparent="1">
-    <convert type="KravenHDWeather">currentWeatherTemp</convert>
+  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular2; 36" foregroundColor="KravenIBFont2" render="Label" position="1030,55" size="115,70" source="session.CurrentService" zPosition="3" halign="right" valign="center" transparent="1">
+    <convert type="KravenHDWeather">Day_0,DayTemp</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="KravenInfobarBackground" font="Regular; 20" foregroundColor="KravenFont1" render="Label" position="1180,42" size="50,26" source="session.CurrentService" zPosition="8" halign="center" valign="center" transparent="1">
-    <convert type="KravenHDWeather">forecastTodayTempMax</convert>
+  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular; 24" foregroundColor="KravenIBFont1" render="Label" position="1145,55" size="75,35" source="session.CurrentService" zPosition="8" halign="right" valign="center" transparent="1">
+    <convert type="KravenHDWeather">Day_0,MaxTemp</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="KravenInfobarBackground" font="Regular; 20" foregroundColor="KravenFont1" render="Label" position="1180,68" size="50,26" source="session.CurrentService" zPosition="8" halign="center" valign="center" transparent="1">
-    <convert type="KravenHDWeather">forecastTodayTempMin</convert>
+  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular; 24" foregroundColor="KravenIBFont1" render="Label" position="1145,90" size="75,35" source="session.CurrentService" zPosition="8" halign="right" valign="center" transparent="1">
+    <convert type="KravenHDWeather">Day_0,MinTemp</convert>
   </widget>
-  <eLabel backgroundColor="KravenInfobarBackground" position="969,0" size="311,133" transparent="0" zPosition="-10" />
 <!-- Weather */-->

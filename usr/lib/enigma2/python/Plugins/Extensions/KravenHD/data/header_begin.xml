@@ -16,26 +16,38 @@
     <color name="blue" value="#000064c7" />
     <color name="green" value="#00389416" />
     <color name="grey" value="#00f0e3d6" />
-    <color name="KravenBackground" value="#00000000" />
-    <color name="KravenBackground2" value="#00000000" />
-    <color name="KravenBorder" value="#00ffffff" />
-    <color name="KravenButtonText" value="#00ffffff" />
+    <color name="Kravenbg" value="#00000000" />
+    <color name="Kravenbg2" value="#00000000" />
+    <color name="Kravenbg3" value="#00000000" />
+    <color name="Kravenbg4" value="#00000000" />
+    <color name="Kravenbg5" value="#00000000" />
+    <color name="KravenIBbg" value="#001B1775" />
+    <color name="KravenIBbg2" value="#00000000" />
+    <color name="KravenIBbg3" value="#00000000" />
+    <color name="KravenIBbg4" value="#00000000" />
+    <color name="KravenIBCoolbg" value="#00000000" />
     <color name="KravenFont1" value="#00ffffff" />
     <color name="KravenFont2" value="#00F0A30A" />
-    <color name="KravenButtonStyleFont" value="#00fff0e0" />
+    <color name="KravenIBFont1" value="#00ffffff" />
+    <color name="KravenIBFont2" value="#00F0A30A" />
+    <color name="KravenName" value="#00ffffff" />
+    <color name="KravenNamebg" value="#A01B1775" />
+    <color name="KravenECMbg" value="#F1325698" />
+    <color name="KravenButton" value="#00ffffff" />
+    <color name="KravenIcon" value="#00fff0e0" />
+    <color name="KravenBorder" value="#00ffffff" />
+    <color name="KravenBorder2" value="#003F3F3F" />
     <color name="KravenLine" value="#00ffffff" />
-    <color name="KravenInfobarBackground" value="#001B1775" />
-    <color name="KravenNameBackground" value="#A01B1775" />
-    <color name="KravenIbarBackground" value="#4A1B1775" />
-    <color name="KravenInfobar2Background" value="#00000000" />
     <color name="KravenProgress" value="#00C3461B" />
-    <color name="KravenSelection" value="#00213305" />
+    <color name="KravenSelection" value="#000050EF" />
     <color name="KravenSelFont" value="#00ffffff" />
-    <color name="KravenMarkedFont" value="#00ffffff" />
-    <color name="KravenECMFont" value="#00ffffff" />
-    <color name="KravenChannelnameFont" value="#00ffffff" />
-    <color name="KravenPrimetimeFont" value="#0070AD11" />
-    <color name="KravenMeteoFont" value="#00fff0e0" />
+    <color name="KravenEMCSelection" value="#000050EF" />
+    <color name="KravenEMCSelFont" value="#00ffffff" />
+    <color name="KravenMarked" value="#00ffffff" />
+    <color name="KravenECM" value="#00ffffff" />
+	<color name="KravenNotAvailable" value="#00FFEA04" />
+    <color name="KravenPrime" value="#0070AD11" />
+    <color name="KravenMeteo" value="#00fff0e0" />
     <color name="orange" value="#00dc5221" />
     <color name="rds_text_bg" value="#00003258" />
     <color name="red" value="#00f23d21" />
@@ -53,6 +65,8 @@
     <font filename="KravenHD/fonts/OpenSans-Regular.ttf" name="Regular" scale="95" />
     <font filename="KravenHD/fonts/OpenSans-Semibold.ttf" name="Regular2" scale="95" />
     <font filename="KravenHD/fonts/meteocons.ttf" name="Meteo" scale="100" />
+	<font filename="KravenHD/fonts/owfont-regular.ttf" name="Meteo2" scale="100" />
+	<font filename="KravenHD/fonts/accuweather_tbx.otf" name="Meteo3" scale="100" />
   </fonts>
   <subtitles>
     <sub font="Regular;30" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="3,3" />
@@ -62,18 +76,18 @@
   </subtitles>
   <windowstyle id="0" type="skinned">
     <title font="Regular;24" offset="20,5" />
-    <color color="KravenBackground" name="Background" />
+    <color color="Kravenbg" name="Background" />
     <color color="KravenFont1" name="LabelForeground" />
-    <color color="KravenBackground" name="ListboxBackground" />
+    <color color="Kravenbg" name="ListboxBackground" />
     <color color="KravenFont1" name="ListboxForeground" />
     <color color="KravenSelection" name="ListboxSelectedBackground" />
     <color color="KravenSelFont" name="ListboxSelectedForeground" />
-    <color color="KravenBackground" name="ListboxMarkedBackground" />
-    <color color="KravenMarkedFont" name="ListboxMarkedForeground" />
+    <color color="Kravenbg" name="ListboxMarkedBackground" />
+    <color color="KravenMarked" name="ListboxMarkedForeground" />
     <color color="KravenSelection" name="ListboxMarkedAndSelectedBackground" />
-    <color color="KravenMarkedFont" name="ListboxMarkedAndSelectedForeground" />
+    <color color="KravenMarked" name="ListboxMarkedAndSelectedForeground" />
     <color color="KravenFont1" name="WindowTitleForeground" />
-    <color color="KravenBackground" name="WindowTitleBackground" />
+    <color color="Kravenbg" name="WindowTitleBackground" />
     <borderset name="bsWindow">
       <pixmap filename="KravenHD/bsWindow/bs_tl.png" pos="bpTopLeft" />
       <pixmap filename="KravenHD/bsWindow/bs_t.png" pos="bpTop" />

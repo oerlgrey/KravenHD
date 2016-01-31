@@ -79,7 +79,7 @@ class KravenHDExtraInfo(Poll, Converter, object):
 	def createFrequency(self,fedata):
 		frequency = fedata.get("frequency")
 		if frequency:
-			return str(frequency)
+			return frequency
 		return ""
 
 	def createSymbolRate(self,fedata):

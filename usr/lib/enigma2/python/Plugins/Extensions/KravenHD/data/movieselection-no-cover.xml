@@ -1,29 +1,29 @@
     <!-- MovieSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieSelection" position="0,0" size="1280,720" title="">
     <widget name="waitingtext" position="0,0" size="0,0" />
-	<eLabel text="MovieSelection" position="70,12" size="708,46" backgroundColor="KravenInfobar2Background" font="Regular2;34" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
-    <widget name="list" position="70,110" size="708,540" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
-    <widget backgroundColor="KravenBackground" font="Regular;17" halign="right" name="freeDiskSpace" position="70,80" size="708,24" transparent="1" valign="center" />
-    <widget backgroundColor="KravenBackground" font="Regular2;30" foregroundColor="KravenFont2" position="848,55" render="Label" size="377,75" source="Service" transparent="1" zPosition="1">
+	<eLabel text="MovieSelection" position="70,12" size="708,46" backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+    <widget name="list" position="70,110" size="708,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="Kravenbg" font="Regular;17" halign="right" name="freeDiskSpace" position="70,80" size="708,24" transparent="1" valign="center" />
+    <widget backgroundColor="Kravenbg" font="Regular2;30" foregroundColor="KravenFont2" position="848,55" render="Label" size="377,75" source="Service" transparent="1" zPosition="1">
       <convert type="KravenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="KravenBackground" font="Regular2;17" foregroundColor="KravenFont2" halign="left" position="848,624" render="Label" size="70,24" source="Service" transparent="1" zPosition="1">
+    <widget backgroundColor="Kravenbg" font="Regular2;17" foregroundColor="KravenFont2" halign="left" position="848,624" render="Label" size="70,24" source="Service" transparent="1" zPosition="1">
       <convert type="ServiceTime">Duration</convert>
       <convert type="KravenHDClockToText">AsLength</convert>
     </widget>
-    <widget backgroundColor="KravenBackground" font="Regular2;17" foregroundColor="KravenFont2" halign="right" position="1135,624" render="Label" size="100, 24" source="Service" transparent="1" zPosition="1">
+    <widget backgroundColor="Kravenbg" font="Regular2;17" foregroundColor="KravenFont2" halign="right" position="1135,624" render="Label" size="100, 24" source="Service" transparent="1" zPosition="1">
       <convert type="MovieInfo">FileSize</convert>
     </widget>
-    <widget backgroundColor="KravenBackground" font="Regular;19" foregroundColor="KravenFont1" position="848,168" render="Label" size="377,405" source="Service" transparent="1" valign="top">
+    <widget backgroundColor="Kravenbg" font="Regular;19" foregroundColor="KravenFont1" position="848,168" render="Label" size="377,405" source="Service" transparent="1" valign="top">
       <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
-    <eLabel backgroundColor="KravenBackground" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
-    <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenInfobar2Background" transparent="1" valign="center" foregroundColor="KravenFont1">
+    <eLabel backgroundColor="Kravenbg" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
+    <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenMFont1" position="1138,22" size="100,28" font="Regular;26" halign="right" transparent="1" valign="center">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
-    <ePixmap pixmap="KravenHD/header-kraven/ibar.png" position="0,570" size="1280,400" alphatest="blend" zPosition="-9" />
-    <ePixmap pixmap="KravenHD/header-kraven/ibaro.png" position="0,-60" size="1280,443" alphatest="blend" zPosition="-9" />
+    <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
+    <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
     <panel name="template_colorkey_text" />
     <panel name="key_menu_ok_exit" />
-    <!--<eLabel backgroundColor="KravenInfobar2Background" font="Regular;13" foregroundColor="red" text="MovieSelection - no Cover" position="70,0" size="500,16" halign="left" valign="center" transparent="1" />-->
+    <!--<text="MovieSelection - no Cover" position="70,0" />-->
   </screen>

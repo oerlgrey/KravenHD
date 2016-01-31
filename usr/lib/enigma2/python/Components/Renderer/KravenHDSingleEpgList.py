@@ -36,7 +36,7 @@ class KravenHDSingleEpgList(Renderer, VariableText):
                         else:
                             text = text + 'n/a\n'
                     maxx += 1
-                    if maxx > 4:
+                    if maxx > 15:
                         break
 
             self.text = text

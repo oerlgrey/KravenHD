@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2015-10-21 17:05+0100\n"
+"PO-Revision-Date: 2016-01-30 21:54+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -326,6 +326,38 @@ msgstr "% Luftfeuchte"
 msgid ", feels "
 msgstr ", gefühlt "
 
+#: KravenHDECMLine.py
+msgid "not available"
+msgstr "Nicht vorhanden"
+
+#: KravenHDECMLine.py
+msgid "free to air"
+msgstr "Frei empfangbar"
+
+#: KravenHDECMLine.py
+msgid "CAM/Card unsupported"
+msgstr "CAM/Karte nicht unterstützt"
+
+#: KravenHDECMLine.py
+msgid "unknown"
+msgstr "unbekannt"
+
+#: KravenHDECMLine.py
+msgid "System: unknown"
+msgstr "System: unbekannt"
+
+#: KravenHDECMLine.py
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: KravenHDECMLine.py
+msgid "waiting for information ..."
+msgstr "Warte auf Informationen ..."
+
+#: KravenHDECMLine.py
+msgid "no information available"
+msgstr "Keine Informationen verfügbar"
+
 #: KravenHD.py
 msgid "with Border"
 msgstr "mit Rahmen"
@@ -351,24 +383,16 @@ msgid "center"
 msgstr "mittig"
 
 #: KravenHD.py
-msgid "low"
-msgstr "niedrig"
-
-#: KravenHD.py
-msgid "medium"
-msgstr "mittel"
-
-#: KravenHD.py
-msgid "high"
-msgstr "hoch"
-
-#: KravenHD.py
 msgid "amber"
-msgstr "amber"
+msgstr "bernstein"
 
 #: KravenHD.py
 msgid "amber dark"
-msgstr "amber dunkel"
+msgstr "bernstein dunkel"
+
+#: KravenHD.py
+msgid "amber very dark"
+msgstr "bernstein sehr dunkel"
 
 #: KravenHD.py
 msgid "black"
@@ -383,12 +407,20 @@ msgid "blue dark"
 msgstr "blau dunkel"
 
 #: KravenHD.py
+msgid "blue very dark"
+msgstr "blau sehr dunkel"
+
+#: KravenHD.py
 msgid "brown"
 msgstr "braun"
 
 #: KravenHD.py
 msgid "brown dark"
 msgstr "braun dunkel"
+
+#: KravenHD.py
+msgid "brown very dark"
+msgstr "braun sehr dunkel"
 
 #: KravenHD.py
 msgid "cobalt"
@@ -399,12 +431,20 @@ msgid "cobalt dark"
 msgstr "cobalt dunkel"
 
 #: KravenHD.py
+msgid "cobalt very dark"
+msgstr "cobalt sehr dunkel"
+
+#: KravenHD.py
 msgid "cyan"
 msgstr "cyan"
 
 #: KravenHD.py
 msgid "cyan dark"
 msgstr "cyan dunkel"
+
+#: KravenHD.py
+msgid "cyan very dark"
+msgstr "cyan sehr dunkel"
 
 #: KravenHD.py
 msgid "grey"
@@ -415,6 +455,10 @@ msgid "grey dark"
 msgstr "grau dunkel"
 
 #: KravenHD.py
+msgid "grey very dark"
+msgstr "grau sehr dunkel"
+
+#: KravenHD.py
 msgid "green"
 msgstr "grün"
 
@@ -423,8 +467,16 @@ msgid "green dark"
 msgstr "grün dunkel"
 
 #: KravenHD.py
+msgid "green very dark"
+msgstr "grün sehr dunkel"
+
+#: KravenHD.py
 msgid "Kraven dark"
 msgstr "Kraven dunkel"
+
+#: KravenHD.py
+msgid "Kraven very dark"
+msgstr "Kraven sehr dunkel"
 
 #: KravenHD.py
 msgid "olive"
@@ -435,12 +487,20 @@ msgid "olive dark"
 msgstr "olive dunkel"
 
 #: KravenHD.py
+msgid "olive very dark"
+msgstr "olive sehr dunkel"
+
+#: KravenHD.py
 msgid "orange"
 msgstr "orange"
 
 #: KravenHD.py
 msgid "orange dark"
 msgstr "orange dunkel"
+
+#: KravenHD.py
+msgid "orange very dark"
+msgstr "orange sehr dunkel"
 
 #: KravenHD.py
 msgid "pink"
@@ -451,6 +511,10 @@ msgid "pink dark"
 msgstr "pink dunkel"
 
 #: KravenHD.py
+msgid "pink very dark"
+msgstr "pink sehr dunkel"
+
+#: KravenHD.py
 msgid "red"
 msgstr "rot"
 
@@ -459,20 +523,32 @@ msgid "red dark"
 msgstr "rot dunkel"
 
 #: KravenHD.py
+msgid "red very dark"
+msgstr "rot sehr dunkel"
+
+#: KravenHD.py
 msgid "steel"
-msgstr "steel"
+msgstr "stahl"
 
 #: KravenHD.py
 msgid "steel dark"
-msgstr "steel dunkel"
+msgstr "stahl dunkel"
+
+#: KravenHD.py
+msgid "steel very dark"
+msgstr "stahl sehr dunkel"
 
 #: KravenHD.py
 msgid "violet"
-msgstr "violet"
+msgstr "violett"
 
 #: KravenHD.py
 msgid "violet dark"
-msgstr "violet dunkel"
+msgstr "violett dunkel"
+
+#: KravenHD.py
+msgid "violet very dark"
+msgstr "violett sehr dunkel"
 
 #: KravenHD.py
 msgid "white"
@@ -527,16 +603,32 @@ msgid "Weather"
 msgstr "Wetter"
 
 #: KravenHD.py
+msgid "Weather2"
+msgstr "Wetter2"
+
+#: KravenHD.py
 msgid "standard"
-msgstr "standard"
+msgstr "Standard"
 
 #: KravenHD.py
 msgid "standard big"
-msgstr "standard groß"
+msgstr "Standard groß"
 
 #: KravenHD.py
+msgid "analog"
+msgstr "Analog"
+
+#: KravenHD.py
+msgid "android"
+msgstr "Android"
+
+#: KravenHD.py
+msgid "flip"
+msgstr "Flip"
+
+#: KravenVB.py
 msgid "colored"
-msgstr "farbig"
+msgstr "Farbig"
 
 #: KravenHD.py
 msgid "colorfull"
@@ -555,8 +647,16 @@ msgid "small"
 msgstr "klein"
 
 #: KravenHD.py
+msgid "big + Sat"
+msgstr "groß + Sat"
+
+#: KravenHD.py
 msgid "Running Text (Delay)"
 msgstr "Laufschrift (Verzögerung)"
+
+#: KravenHD.py
+msgid "Running Text (Speed)"
+msgstr "Laufschrift (Geschwindigkeit)"
 
 #: KravenHD.py
 msgid "Background-Transparency"
@@ -567,24 +667,24 @@ msgid "Weather-ID"
 msgstr "Wetter-ID"
 
 #: KravenHD.py
-msgid "______________________ Global-Colors ___________________________"
-msgstr "______________________ Globale Farben __________________________"
+msgid "GLOBAL COLORS ________________________________________________________"
+msgstr "GLOBALE FARBEN _______________________________________________________"
 
 #: KravenHD.py
-msgid "______________________ Infobar _________________________________"
-msgstr "______________________ Infobar _________________________________"
+msgid "VIEWS ________________________________________________________________"
+msgstr "ANSICHTEN ____________________________________________________________"
 
 #: KravenHD.py
-msgid "______________________ Views ___________________________________"
-msgstr "______________________ Ansichten _______________________________"
+msgid "CHANNELLIST __________________________________________________________"
+msgstr "KANALLISTE ___________________________________________________________"
 
 #: KravenHD.py
-msgid "______________________ Channellist _____________________________"
-msgstr "______________________ Kanalliste ______________________________"
+msgid "WEATHER ______________________________________________________________"
+msgstr "WETTER _______________________________________________________________"
 
 #: KravenHD.py
-msgid "______________________ Weather _________________________________"
-msgstr "______________________ Wetter __________________________________"
+msgid "PROFILES _____________________________________________________________"
+msgstr "PROFILE ______________________________________________________________"
 
 #: KravenHD.py
 msgid "Refresh interval (in minutes)"
@@ -613,6 +713,18 @@ msgstr "nur verfügbar für Meteo-Stil"
 #: KravenHD.py
 msgid "Channellist-Style"
 msgstr "Kanallisten-Stil"
+
+#: KravenHD.py
+msgid "Channellist-Transparenz"
+msgstr "Kanallisten-Transparenz"
+
+#: KravenHD.py
+msgid "Choose the degree of background transparency for the channellists."
+msgstr "Wählen Sie den Grad der Hintergrundtransparenz für die Kanallisten."
+
+#: KravenHD.py
+msgid "This option is not available for extended preview styles."
+msgstr "Diese Option ist nicht verfügbar für Kanallisten vom Typ \"Erweiterte Vorschau\"."
 
 #: KravenHD.py
 msgid "Primetime"
@@ -663,8 +775,8 @@ msgid "Secondary-Font"
 msgstr "Sekundär-Schrift"
 
 #: KravenHD.py
-msgid "Selection-Font"
-msgstr "Auswahl-Schrift"
+msgid "Listselection-Font"
+msgstr "Auswahlbalken-Schrift"
 
 #: KravenHD.py
 msgid "Marking-Font"
@@ -691,10 +803,6 @@ msgid "System-Infos"
 msgstr "System-Infos"
 
 #: KravenHD.py
-msgid "Satellite-Infos"
-msgstr "Satelliten-Infos"
-
-#: KravenHD.py
 msgid "ECM-Infos"
 msgstr "ECM-Infos"
 
@@ -707,36 +815,28 @@ msgid "Show 'free to air'"
 msgstr "Zeige 'Frei empfangbar'"
 
 #: KravenHD.py
-msgid "CAID + Time"
-msgstr "CAID + Zeit"
+msgid "short with CAID"
+msgstr "kurz mit CAID"
 
 #: KravenHD.py
-msgid "Reader + Time"
-msgstr "Reader + Zeit"
+msgid "short with source"
+msgstr "kurz mit Quelle"
 
 #: KravenHD.py
-msgid "CAID + Hops + Time"
-msgstr "CAID + Hops + Zeit"
+msgid "compact"
+msgstr "kompakt"
 
 #: KravenHD.py
-msgid "CAID + Reader + Time"
-msgstr "CAID + Reader + Zeit"
+msgid "balanced"
+msgstr "ausgewogen"
 
 #: KravenHD.py
-msgid "CAID + Reader + Hops + Time"
-msgstr "CAID + Reader + Hops + Zeit"
+msgid "extensive"
+msgstr "ausführlich"
 
 #: KravenHD.py
-msgid "CAID + System + Reader + Hops + Time"
-msgstr "CAID + System + Reader + Hops + Zeit"
-
-#: KravenHD.py
-msgid "CAM + CAID + System + Reader + Hops + Time"
-msgstr "CAM + CAID + System + Reader + Hops + Zeit"
-
-#: KravenHD.py
-msgid "______________________ General __________________________________"
-msgstr "______________________ Allgemein __________________________________"
+msgid "complete"
+msgstr "vollständig"
 
 #: KravenHD.py
 msgid "Channellist"
@@ -749,6 +849,14 @@ msgstr "Lautstärke"
 #: KravenHD.py
 msgid "Do you really want to reboot now?"
 msgstr "Wollen Sie jetzt neu starten?"
+
+#: KravenHD.py
+msgid "Do you really want to reset all values to the selected default profile?"
+msgstr "Wollen Sie wirklich alle Werte auf das ausgewählte Standardprofil zurücksetzen?"
+
+#: KravenHD.py
+msgid "Do you really want to exit without saving?"
+msgstr "Wollen Sie wirklich beenden, ohne zu speichern?"
 
 #: KravenHD.py
 msgid "Restart GUI"
@@ -829,32 +937,52 @@ msgid "MiniTV right"
 msgstr "MiniTV rechts"
 
 #: KravenHD.py
+msgid "Preview"
+msgstr "Vorschau"
+
+#: KravenHD.py
+msgid "Preview (2x OK)"
+msgstr "Vorschau (2x OK)"
+
+#: KravenHD.py
+msgid "Extended Preview"
+msgstr "Erweiterte Vorschau"
+
+#: KravenHD.py
+msgid "Nobile Preview"
+msgstr "Nobile Vorschau"
+
+#: KravenHD.py
+msgid "Nobile Preview (2x OK)"
+msgstr "Nobile Vorschau (2x OK)"
+
+#: KravenHD.py
+msgid "Nobile Extended Preview"
+msgstr "Nobile Erweiterte Vorschau"
+
+#: KravenHD.py
 msgid "Tuner number/Record"
 msgstr "Tuneranzahl/Aufnahme"
 
 #: KravenHD.py
 msgid "Infobar-Icons"
-msgstr "Infobar-Icons"
+msgstr "Infoleisten-Icons"
 
 #: KravenHD.py
 msgid "Icons (except Infobar)"
-msgstr "Icons (ausgenommen Infobar)"
+msgstr "Icons (außer Infoleiste)"
 
 #: KravenHD.py
 msgid "Infobar-Background"
-msgstr "Infobar-Hintergrund"
+msgstr "Infoleisten-Hintergrund"
 
 #: KravenHD.py
-msgid "Icons + 4 Tuner + Resolution + Infobox"
-msgstr "Icons + 4 Tuner + Auflösung + Infobox"
-
-#: KravenHD.py
-msgid "Icons + REC + 2 Tuner + Resolution + Infobox"
-msgstr "Icons + REC + 2 Tuner + Auflösung + Infobox"
+msgid "Infobar-Transparency"
+msgstr "Infoleisten-Transparenz"
 
 #: KravenHD.py
 msgid "Show Infobar-Background"
-msgstr "Zeige Infobar-Hintergrund"
+msgstr "Infoleisten-Hintergrund"
 
 #: KravenHD.py
 msgid "in all Screens"
@@ -862,7 +990,7 @@ msgstr "in allen Screens"
 
 #: KravenHD.py
 msgid "only Infobar, SecondInfobar & Players"
-msgstr "nur Infobar, SecondInfobar & Players"
+msgstr "nur Infoleiste, \"SecondInfobar\" & Wiedergabe"
 
 #: KravenHD.py
 msgid "light"
@@ -886,7 +1014,7 @@ msgstr "breit"
 
 #: KravenHD.py
 msgid "Infobar-Style"
-msgstr "Infobar-Stil"
+msgstr "Infoleisten-Stil"
 
 #: KravenHD.py
 msgid "Scrollbars"
@@ -920,14 +1048,678 @@ msgstr "CPU + Systemlast"
 msgid "Temperature + Fan"
 msgstr "Temperatur + Lüfter"
 
-#: KravenHDECMLine.py
-msgid "not available"
-msgstr "Nicht vorhanden"
+#: KravenHD.py
+msgid "The KravenHD skin will be generated by this plugin according to your preferences. Make your settings and watch the changes in the preview window above. When finished, save your skin by pressing the green button and restart the GUI."
+msgstr "Der KravenHD Skin wird durch dieses Plugin nach Ihren Wünschen erzeugt. Machen Sie Ihre Einstellungen und beobachten Sie die Änderungen im Vorschaufenster oben. Zum Schluss speichern Sie den Skin (grüne Taste) und starten die Oberfläche neu."
 
-#: KravenHDECMLine.py
-msgid "free to air"
-msgstr "Frei empfangbar"
+#: KravenHD.py
+msgid "Choose between light and dark icons in system screens. The icons in the infobars are not affected."
+msgstr "Wählen Sie zwischen hellen und dunklen Symbolen in Systemseiten. Die Symbole in den Infoleisten sind davon nicht betroffen."
 
-#: KravenHDFrontendInfo.py
-msgid "dB"
-msgstr "dB"
+#: KravenHD.py
+msgid "Choose the start delay for running text."
+msgstr "Wählen Sie die Startverzögerung für Laufschriften."
+
+#: KravenHD.py
+msgid "Choose the speed for running text."
+msgstr "Wählen Sie die Geschwindigkeit für Laufschriften."
+
+#: KravenHD.py
+msgid "only available when Running Text is activated"
+msgstr "nur verfügbar bei aktivierter Laufschrift"
+
+#: KravenHD.py
+msgid "This option is not available because running text is deactivated."
+msgstr "Diese Option ist nicht verfügbar, da die Laufschrift deaktiviert ist."
+
+#: KravenHD.py
+msgid "Choose the width of scrollbars in lists or deactivate scrollbars completely."
+msgstr "Wählen Sie die Breite der Bildlaufleisten in Listen oder deaktivieren Sie diese komplett."
+
+#: KravenHD.py
+msgid "Choose from different options to display the system menus. Press OK for the FAQs with details on installing menu icons."
+msgstr "Wählen Sie eine von verschiedenen Varianten für die Darstellung der Systemmenüs. Drücken Sie OK für die FAQs mit Details zur Installation von Menü-Symbolen."
+
+#: KravenHD.py
+msgid "Choose the background color for all screens. You can choose from a list of predefined colors or create your own color using RGB sliders."
+msgstr "Wählen Sie die Hintergrundfarbe für alle Seiten. Sie können aus einer Liste von vordefinierten Farben wählen oder Ihre eigene Farbe mit RGB-Reglern erzeugen."
+
+#: KravenHD.py
+msgid "Choose the degree of background transparency for all screens except system menus and channellists."
+msgstr "Wählen Sie den Grad der Hintergrundtransparenz für alle Seiten außer Systemmenüs und Kanallisten."
+
+#: KravenHD.py
+msgid "Choose the background color of selection bars."
+msgstr "Wählen Sie die Hintergrundfarbe der Auswahlbalken."
+
+#: KravenHD.py
+msgid "Choose the border color of selection bars or deactivate borders completely."
+msgstr "Wählen Sie die Rahmenfarbe der Auswahlbalken oder deaktivieren Sie die Rahmen komplett."
+
+#: KravenHD.py
+msgid "Choose the color of progress bars."
+msgstr "Wählen Sie die Farbe der Fortschrittsbalken."
+
+#: KravenHD.py
+msgid "Choose the border color of progress bars."
+msgstr "Wählen Sie die Rahmenfarbe der Fortschrittsbalken."
+
+#: KravenHD.py
+msgid "Choose the color of all lines. This affects dividers as well as the line in the center of some progress bars."
+msgstr "Wählen Sie die Farbe für alle Linien. Dies betrifft Trennlinien sowie die Linie in der Mitte einiger Fortschrittsbalken."
+
+#: KravenHD.py
+msgid "Choose the color of the primary font. The primary font is used for list items, textboxes and other important information."
+msgstr "Wählen Sie die Farbe der primären Schrift. Die primäre Schrift wird für Listeneinträge, Textfelder und andere wichtige Informationen verwendet."
+
+#: KravenHD.py
+msgid "Choose the color of the secondary font. The secondary font is used for headers, labels and other additional information."
+msgstr "Wählen Sie die Farbe der sekundären Schrift. Die sekundäre Schrift wird für Überschriften, Labels und andere zusätzliche Informationen verwendet."
+
+#: KravenHD.py
+msgid "Choose the color of the font in selection bars."
+msgstr "Wählen Sie die Farbe der Schrift in Auswahlbalken."
+
+#: KravenHD.py
+msgid "Choose the font color of marked list items."
+msgstr "Wählen Sie die Schriftfarbe von markierten Listenelementen."
+
+#: KravenHD.py
+msgid "Choose the font color of the color button labels."
+msgstr "Wählen Sie die Schriftfarbe der Farbtastenbeschriftungen."
+
+#: KravenHD.py
+msgid "Specify the weather ID for your location. You can find it at https://weather.yahoo.com. Just enter your ZIP or city and get your weather. The number at the end of the URL is your ID."
+msgstr "Geben Sie die Wetter-ID für Ihre Position an. Sie finden Sie unter https://weather.yahoo.com. Geben Sie Ihre PLZ oder Stadt ein und rufen Sie Ihr Wetter ab. Die Zahl am Ende der URL ist Ihre ID."
+
+#: KravenHD.py
+msgid "Choose the frequency of loading weather data from the internet. Please note that it can take some time to show the weather after a reboot."
+msgstr "Wählen Sie die Häufigkeit für das Laden von Wetterdaten aus dem Internet. Bitte beachten Sie, dass es nach einem Neustart einige Zeit dauern kann, bis das Wetter angezeigt wird."
+
+#: KravenHD.py
+msgid "Choose between graphical weather symbols and Meteo symbols."
+msgstr "Wählen Sie zwischen grafischen Wettersymbolen und Meteo-Symbolen."
+
+#: KravenHD.py
+msgid "Choose between light and dark Meteo symbols."
+msgstr "Wählen Sie zwischen hellen und dunklen Meteo-Symbolen."
+
+#: KravenHD.py
+msgid "Choose from different infobar styles. Please note that not every style provides every feature. Therefore some features might be unavailable for the chosen style."
+msgstr "Wählen Sie eine von verschiedenen Infoleisten-Varianten. Bitte beachten Sie, dass nicht jede Variante jede Funktion bietet. Deshalb sind einige Funktionen für die ausgewählte Variante möglicherweise nicht verfügbar."
+
+#: KravenHD.py
+msgid "Choose the background color of the infobars. You can choose from a list of predefined colors or create your own color using RGB sliders."
+msgstr "Wählen Sie die Hintergrundfarbe der Infoleisten. Sie können aus einer Liste von vordefinierten Farben wählen oder Ihre eigene Farbe mit RGB-Reglern erzeugen."
+
+#: KravenHD.py
+msgid "Choose the degree of background transparency for the infobars."
+msgstr "Wählen Sie den Grad der Hintergrundtransparenz für die Infoleisten."
+
+#: KravenHD.py
+msgid "Choose whether you want to see the infobar background in all screens (bicolored background)."
+msgstr "Wählen Sie, ob Sie den Infoleisten-Hintergrund auf allen Seiten sehen wollen (zweifarbiger Hintergrund)."
+
+#: KravenHD.py
+msgid "Choose between light and dark infobar icons."
+msgstr "Wählen Sie zwischen hellen und dunklen Infoleisten-Symbolen."
+
+#: KravenHD.py
+msgid "Choose from different options to display tuner and recording state."
+msgstr "Wählen Sie eine von verschiedenen Varianten für die Anzeige von Tunern und Aufnahmezustand."
+
+#: KravenHD.py
+msgid "Choose which informations will be shown in the info box."
+msgstr "Wählen Sie, welche Informationen in der Infobox angezeigt werden sollen."
+
+#: KravenHD.py
+msgid "Choose from different options to show the weather in the infobar."
+msgstr "Wählen Sie eine von verschiedenen Varianten, um das Wetter in der Infoleiste anzuzeigen."
+
+#: KravenHD.py
+msgid "Activate or deactivate displaying the weather in the infobar."
+msgstr "Aktivieren oder deaktivieren Sie die Wetteranzeige in der Infoleiste."
+
+#: KravenHD.py
+msgid "Choose from different options to show the channel name and number in the infobar."
+msgstr "Wählen Sie eine von verschiedenen Varianten, um Kanal-Namen und -Nummer in der Infoleiste anzuzeigen."
+
+#: KravenHD.py
+msgid "Choose the font color of channel name and number"
+msgstr "Wählen Sie die Schriftfarbe für Kanal-Name und -Nummer"
+
+#: KravenHD.py
+msgid "Choose from different options to show the clock in the infobar."
+msgstr "Wählen Sie eine von verschiedenen Varianten, um die Uhr in der Infoleiste anzuzeigen."
+
+#: KravenHD.py
+msgid "Choose from different colors for the analog type clock in the infobar."
+msgstr "Wählen Sie eine von verschiedenen Farben für die Analoguhr in der Infoleiste."
+
+#: KravenHD.py
+msgid "Choose from different additional windows with system informations or deactivate them completely."
+msgstr "Wählen Sie eines von verschiedenen zusätzlichen Fenstern mit Systeminformationen oder deaktivieren Sie diese komplett."
+
+#: KravenHD.py
+msgid "Activate or deactivate an additional window with satellite informations."
+msgstr "Aktivieren oder deaktivieren Sie ein zusätzliches Fenster mit Satelliten-Informationen."
+
+#: KravenHD.py
+msgid "Activate or deactivate ECM informations in the infobar."
+msgstr "Aktivieren oder deaktivieren Sie ECM-Informationen in der Infoleiste."
+
+#: KravenHD.py
+msgid "Choose from different options to display the ECM informations."
+msgstr "Wählen Sie eine von verschiedenen Varianten, um die ECM-Informationen anzuzeigen."
+
+#: KravenHD.py
+msgid "Choose whether 'free to air' is displayed or not for unencrypted channels."
+msgstr "Wählen Sie, ob \"Frei empfangbar\" für unverschlüsselte Sender angezeigt wird oder nicht."
+
+#: KravenHD.py
+msgid "Choose the font color of the ECM information."
+msgstr "Wählen Sie die Schriftfarbe der ECM-Informationen."
+
+#: KravenHD.py
+msgid "Choose from different styles for the channel selection screen."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für die Kanalauswahl."
+
+#: KravenHD.py
+msgid "Choose whether primetime program information is displayed or not."
+msgstr "Wählen Sie, ob Hauptsendezeit-Programminformationen angezeigt werden oder nicht."
+
+#: KravenHD.py
+msgid "Specify the time for your primetime."
+msgstr "Geben Sie die Uhrzeit für Ihre Hauptsendezeit ein."
+
+#: KravenHD.py
+msgid "Choose the font color of the primetime information."
+msgstr "Wählen Sie die Schriftfarbe der Hauptsendezeit-Informationen."
+
+#: KravenHD.py
+msgid "Choose from different styles for the volume display."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für die Lautstärkeanzeige."
+
+#: KravenHD.py
+msgid "Choose from different styles for CoolTVGuide."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für \"CoolTVGuide\"."
+
+#: KravenHD.py
+msgid "only available for 'Custom EMC-Selection-Colors'"
+msgstr "nur verfügbar für \"Eigene EMC-Auswahl-Farben\""
+
+#: KravenHD.py
+msgid "EMC-Style"
+msgstr "EMC-Stil"
+
+#: KravenHD.py
+msgid "Choose whether you want to customize the selection-colors for EnhancedMovieCenter."
+msgstr "Wählen Sie, ob Sie die Auswahl-Farben für EnhancedMovieCenter anpassen möchten."
+
+#: KravenHD.py
+msgid "Custom EMC-Selection-Colors"
+msgstr "Eigene EMC-Auswahl-Farben"
+
+#: KravenHD.py
+msgid "EMC-Listselection"
+msgstr "EMC-Auswahlbalken"
+
+#: KravenHD.py
+msgid "Choose the background color of selection bars for EnhancedMovieCenter."
+msgstr "Wählen Sie die Hintergrundfarbe der Auswahlbalken für EnhancedMovieCenter."
+
+#: KravenHD.py
+msgid "EMC-Selection-Font"
+msgstr "EMC-Auswahl-Schrift"
+
+#: KravenHD.py
+msgid "Choose the color of the font in selection bars for EnhancedMovieCenter."
+msgstr "Wählen Sie die Farbe der Schrift in Auswahlbalken für EnhancedMovieCenter."
+
+#: KravenHD.py
+msgid "This option is not available because 'Custom EMC-Selection-Colors' is deactivated."
+msgstr "Diese Option ist nicht verfügbar, da \"Eigene EMC-Auswahl-Farben\" deaktiviert ist."
+
+#: KravenHD.py
+msgid "Choose from different styles for EnhancedMovieCenter."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für \"EnhancedMovieCenter\"."
+
+#: KravenHD.py
+msgid "not available for Nobile-Styles"
+msgstr "nicht verfügbar für Nobile-Listen"
+
+#: KravenHD.py
+msgid "Servicenumber/-name Fontsize"
+msgstr "Sendernummer/-name Schriftgrösse"
+
+#: KravenHD.py
+msgid "Serviceinfo Fontsize"
+msgstr "Sendungsinfo Schriftgrösse"
+
+#: KravenHD.py
+msgid "This option is not available for nobile styles."
+msgstr "Diese Option ist nicht verfügbar für Nobile-Listen."
+
+#: KravenHD.py
+msgid "Choose the font size of channelnumber and channelname."
+msgstr "Wählen Sie die Schriftgrösse für Kanalnummer und Kanalname."
+
+#: KravenHD.py
+msgid "Choose the font size of serviceinformation."
+msgstr "Wählen Sie die Schriftgrösse für die Sendungsinformation."
+
+#: KravenHD.py
+msgid "Choose from different styles for MovieSelection."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für die Filmauswahl."
+
+#: KravenHD.py
+msgid "Choose from different styles for SecondInfobar."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für \"SecondInfoBar\"."
+
+#: KravenHD.py
+msgid "Choose from different styles for ExtNumberZap."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für \"ExtNumberZap\"."
+
+#: KravenHD.py
+msgid "Activate or deactivate small screen names for debugging purposes."
+msgstr "Aktivieren oder deaktivieren Sie die Anzeige von kleinen Seiten-Namen für die Fehlersuche."
+
+#: KravenHD.py
+msgid "only available when activated"
+msgstr "nur verfügbar, wenn aktiviert"
+
+#: KravenHD.py
+msgid "only available when ECM-Infos are activated"
+msgstr "nur verfügbar bei aktivierten ECM-Infos"
+
+#: KravenHD.py
+msgid "self"
+msgstr "eigene RGB-Farbe"
+
+#: KravenHD.py
+msgid "only available for self-colors"
+msgstr "nur verfügbar für \"eigene RGB-Farbe\""
+
+#: KravenHD.py
+msgid "          red"
+msgstr "          Rot"
+
+#: KravenHD.py
+msgid "          green"
+msgstr "          Grün"
+
+#: KravenHD.py
+msgid "          blue"
+msgstr "          Blau"
+
+#: KravenHD.py
+msgid "Set the intensity of this basic color with the slider."
+msgstr "Bestimmen Sie die Intensität dieser Grundfarbe mit dem Einstellbalken."
+
+#: KravenHD.py
+msgid "This option is not available because displaying channel name and number is deactivated."
+msgstr "Diese Option ist nicht verfügbar, da die Anzeige von Kanal-Name und -Nummer deaktiviert ist."
+
+#: KravenHD.py
+msgid "This option is not available because Meteo symbols are not selected."
+msgstr "Diese Option ist nicht verfügbar, da nicht die Meteo-Symbole ausgewählt sind."
+
+#: KravenHD.py
+msgid "This option is not available because scrollbars are activated."
+msgstr "Diese Option ist nicht verfügbar, da Bildlaufleisten aktiviert sind."
+
+#: KravenHD.py
+msgid "This option is not available for the selected infobar style."
+msgstr "Diese Option ist für die ausgewählte Darstellungs-Variante der Infoleiste nicht verfügbar."
+
+#: KravenHD.py
+msgid "This option is not available for the selected clock type."
+msgstr "Diese Option ist für den ausgewählten Uhrentyp nicht verfügbar."
+
+#: KravenHD.py
+msgid "This option is not available because displaying ECM information is deactivated."
+msgstr "Diese Option ist nicht verfügbar, da die Anzeige von ECM-Informationen deaktiviert ist."
+
+#: KravenHD.py
+msgid "This option is not available because displaying primetime information is deactivated."
+msgstr "Diese Option ist nicht verfügbar, da die Anzeige von Hauptsendezeit-Informationen deaktiviert ist."
+
+#: KravenHDLayoutInfo.py
+msgid "free"
+msgstr "frei"
+
+#: KravenHDLayoutInfo.py
+msgid "used"
+msgstr "genutzt"
+
+#: KravenHDLayoutInfo.py
+msgid "Free"
+msgstr "Frei"
+
+#: KravenHDLayoutInfo.py
+msgid "Used"
+msgstr "Genutzt"
+
+#: KravenHD.py
+msgid "Active Profile"
+msgstr "Aktives Profil"
+
+#: KravenHD.py
+msgid "Save profile"
+msgstr "Profil speichern"
+
+#: KravenHD.py
+msgid "Select the profile you want to work with. Profiles are saved automatically on switching them or by pressing the yellow button. New profiles will be generated based on the actual one. Profiles are interchangeable between boxes."
+msgstr "Wählen Sie das Profil, mit dem Sie arbeiten wollen. Profile werden automatisch beim Wechseln oder mit der gelben Taste gespeichert. Neue Profile werden auf der Basis des aktuellen erzeugt. Profile sind zwischen Boxen austauschbar."
+
+#: KravenHD.py
+msgid "Profile "
+msgstr "Profil "
+
+#: KravenHD.py
+msgid " saved successfully."
+msgstr " erfolgreich gespeichert."
+
+#: KravenHD.py
+msgid " could not be saved!"
+msgstr " konnte nicht gespeichert werden!"
+
+#: KravenHD.py
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: KravenHD.py
+msgid "Save skin"
+msgstr "Skin speichern"
+
+#: KravenHD.py
+msgid "Reset profile"
+msgstr "Profil zurücksetzen"
+
+#: KravenHD.py
+msgid "not available for this channellist style"
+msgstr "für diesen Kanallisten-Stil nicht verfügbar"
+
+#: KravenHD.py
+msgid "Zap (1xOK)"
+msgstr "Umschalten (1xOK)"
+
+#: KravenHD.py
+msgid "Dual TV"
+msgstr "Doppel-TV"
+
+#: KravenHD.py
+msgid "Dual TV 2"
+msgstr "Doppel-TV 2"
+
+#: KravenHD.py
+msgid "Preview (2xOK)"
+msgstr "Vorschau (2xOK)"
+
+#: KravenHD.py
+msgid "Channellist-Mode"
+msgstr "Kanallisten-Modus"
+
+#: KravenHD.py
+msgid "Choose between direct zapping (1xOK) and zapping after preview (2xOK)."
+msgstr "Wählen Sie zwischen direktem Umschalten (1xOK) und Umschalten nach Vorschau (2xOK)."
+
+#: KravenHD.py
+msgid "This option is only available for MiniTV, Extended Preview and DualTV channellist styles."
+msgstr "Diese Option ist nur für die Kanallisten-Stile vom Typ \"MiniTV\", \"Erweiterte Vorschau\" und \"Doppel-TV\" verfügbar."
+
+#: KravenHD.py
+msgid "This option is not available for MiniTV, Preview and DualTV channellist styles."
+msgstr "Diese Option ist für die Kanallisten-Stile vom Typ \"MiniTV\", \"Vorschau\" und \"Doppel-TV\" nicht verfügbar."
+
+#: KravenHD.py
+msgid "not available for MiniTV"
+msgstr "nicht verfügbar bei MiniTV"
+
+#: KravenHD.py
+msgid "This option is not available because MiniTV for system menus is activated."
+msgstr "Diese Option ist nicht verfügbar, da MiniTV in Systemmenüs aktiviert ist."
+
+#: KravenHD.py
+msgid "press OK for the FAQs"
+msgstr "Drücken Sie OK für die FAQs"
+
+#: KravenHD.py
+msgid "only available when weather activated"
+msgstr "nur verfügbar bei aktiviertem Wetter"
+
+#: KravenHD.py
+msgid "This option is not available because weather is deactivated."
+msgstr "Diese Option ist nicht verfügbar, da die Wetteranzeige deaktiviert ist."
+
+#: KravenHD.py
+msgid "Choose the degree of background transparency for system menu screens."
+msgstr "Wählen Sie den Grad der Hintergrund-Transparenz für Systemmenüs."
+
+#: KravenHD.py
+msgid "Menu-Transparency"
+msgstr "Menü-Transparenz"
+
+#: KravenHD.py
+msgid "not available (channellist style)"
+msgstr "nicht verfügbar (Kanallisten-Stil)"
+
+#: KravenHD.py
+msgid "This option is not available because the channellist style is Preview, Extended Preview or DualTV."
+msgstr "Diese Option ist nicht verfügbar, da der Kanallisten-Stil vom Typ \"Vorschau\", \"Erweiterte Vorschau\" oder \"Doppel-TV\" ist."
+
+#: KravenHD.py
+msgid "Primary-Infobar-Font"
+msgstr "Primäre Infoleisten-Schrift"
+
+#: KravenHD.py
+msgid "Secondary-Infobar-Font"
+msgstr "Sekundäre Infoleisten-Schrift"
+
+#: KravenHD.py
+msgid "Choose the color of the primary infobar font."
+msgstr "Wählen Sie die Farbe der primären Infoleisten-Schrift."
+
+#: KravenHD.py
+msgid "Choose the color of the secondary infobar font."
+msgstr "Wählen Sie die Farbe der sekundären Infoleisten-Schrift."
+
+#: KravenHD.py
+msgid "ANTIALIASING BRIGHTNESS ________________________________________________________________"
+msgstr "KANTENGLÄTTUNGS-HELLIGKEIT ________________________________________________________________"
+
+#: KravenHD.py
+msgid "INFOBAR ______________________________________________________________"
+msgstr "INFOLEISTE ______________________________________________________________"
+
+#: KravenHD.py
+msgid "Infobar"
+msgstr "Infoleiste"
+
+#: KravenHD.py
+msgid "ECM Infos"
+msgstr "ECM-Infos"
+
+#: KravenHD.py
+msgid "Screens"
+msgstr "Bildschirmseiten"
+
+#: KravenHD.py
+msgid "Reduce distortions (faint/blurry) or color frames around fonts in the infobar and widgets by adjusting the antialiasing brightness."
+msgstr "Verringern Sie Störungen (undeutlich/verschwommen) oder farbige Rahmen um Schriften in der Infoleiste und in Infofenstern durch Anpassen der Kantenglättungs-Helligkeit."
+
+#: KravenHD.py
+msgid "Reduce distortions (faint/blurry) or color frames around the ecm information in the infobar by adjusting the antialiasing brightness."
+msgstr "Verringern Sie Störungen (undeutlich/verschwommen) oder farbige Rahmen um die ECM-Informationen in der Infoleiste durch Anpassen der Kantenglättungs-Helligkeit."
+
+#: KravenHD.py
+msgid "Reduce distortions (faint/blurry) or color frames around fonts at top and bottom of screens by adjusting the antialiasing brightness."
+msgstr "Verringern Sie Störungen (undeutlich/verschwommen) oder farbige Rahmen um Schriften im oberen und unteren Bereich von Bildschirmseiten durch Anpassen der Kantenglättungs-Helligkeit."
+
+#: KravenHD.py
+msgid "Default Profile for Reset"
+msgstr "Standardprofil fürs Zurücksetzen"
+
+#: KravenHD.py
+msgid "Select the default profile you want to use when resetting the active profile (blue button). You can add your own default profiles under /etc/enigma2/kraven_default_n (n<=20)."
+msgstr "Wählen Sie das Standardprofil, das Sie zum Zurücksetzen des aktiven Profils nutzen möchten (blaue Taste). Sie können Ihre eigenen Standardprofile unter /etc/enigma2/kraven_default_n (n<=20) hinzufügen."
+
+#: KravenHD.py
+msgid "hardcoded"
+msgstr "fest programmiert"
+
+#: KravenHD.py
+msgid "0 (hardcoded)"
+msgstr "0 (fest programmiert)"
+
+#: KravenHD.py
+msgid "Choose whether you want the Kraven skin to be applied to 'Serienrecorder' or not. Activation of this option prohibits the skin selection in the SR-plugin."
+msgstr "Wählen Sie, ob der Kraven Skin auf \"Serienrecorder\" angewendet werden soll. Aktivieren dieser Option verhindert die Skin-Auswahl im SR-Plugin."
+
+#: KravenHD.py
+msgid "Icons"
+msgstr "Symbole"
+
+#: KravenHD.py
+msgid "MiniTV + Icons"
+msgstr "MiniTV + Symbole"
+
+#: KravenHD.py
+msgid "only available for Menu with Icons"
+msgstr "nur verfügbar für Menüs mit Symbolen"
+
+#: KravenHD.py
+msgid "Choose from different icon sets for the menu screens."
+msgstr "Wählen Sie einen von verschiedenen Symbol-Sätzen für die System-Menüs."
+
+#: KravenHD.py
+msgid "This option is not available for the selected menu style."
+msgstr "Diese Option ist für die ausgewählte Darstellungs-Variante der Menüs nicht verfügbar."
+
+#: KravenHD.py
+msgid "MiniTV-Border"
+msgstr "MiniTV-Rahmen"
+
+#: KravenHD.py
+msgid "Choose the border color of MiniTV's."
+msgstr "Wählen Sie die Rahmenfarbe für MiniTV's."
+
+#: KravenHD.py
+msgid "Choose whether you want the Kraven skin to be applied to 'MediaPortal' or not. To remove it again, you must deactivate it here and activate another skin in 'MediaPortal'."
+msgstr "Wählen Sie, ob der Kraven Skin auf \"MediaPortal\" angewendet werden soll. Um ihn wieder zu entfernen, müssen Sie ihn hier deaktivieren und in \"MediaPortal\" einen anderen Skin aktivieren."
+
+#: KravenHD.py
+msgid "MediaPortal not installed"
+msgstr "MediaPortal nicht installiert"
+
+#: KravenHD.py
+msgid "This option is not available because 'MediaPortal' is not installed."
+msgstr "Diese Option ist nicht verfügbar, da \"MediaPortal\" nicht installiert ist."
+
+#: KravenHD.py
+msgid "'not available'-Font"
+msgstr "'nicht verfügbar'-Schrift"
+
+#: KravenHD.py
+msgid "Choose the font color of channels that are unavailable at the moment."
+msgstr "Wählen Sie die Schriftfarbe von Kanälen, die derzeit nicht verfügbar sind."
+
+#: KravenHD.py
+msgid "Choose from different options to display the PVR state."
+msgstr "Wählen Sie eine von verschiedenen Varianten für die Darstellung des PVR-Zustands."
+
+#: KravenHD.py
+msgid "center big"
+msgstr "mittig groß"
+
+#: KravenHD.py
+msgid "center small"
+msgstr "mittig klein"
+
+#: KravenHD.py
+msgid "left small"
+msgstr "links klein"
+
+#: KravenHD.py
+msgid "Search by"
+msgstr "Suchen über"
+
+#: KravenHD.py
+msgid "Search String"
+msgstr "Suchbegriff"
+
+#: KravenHD.py
+msgid "Choose from different servers for the weather data."
+msgstr "Wählen Sie einen von verschiedenen Servern für die Wetterdaten."
+
+#: KravenHD.py
+msgid "Choose from different options to specify your location."
+msgstr "Wählen Sie eine von verschiedenen Varianten, um Ihren Standort anzugeben."
+
+#: KravenHD.py
+msgid "Specify any search string for your location (zip/city/district/state single or combined). Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
+msgstr "Geben Sie einen beliebigen Suchbegriff für Ihren Standort ein (PLZ/Stadt/Ortsteil/Land einzeln oder kombiniert). Drücken Sie OK, um die virtuelle Tastatur zu nutzen. Gehen Sie im Menü hoch oder runter, um die Suche zu starten."
+
+#: KravenHD.py
+msgid "Specify the GM code for your location. You can find it at https://weather.codes. Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
+msgstr "Geben Sie den GM-Code für Ihren Standort an. Sie finden diesen unter https://weather.codes. Drücken Sie OK, um die virtuelle Tastatur zu nutzen. Gehen Sie im Menü hoch oder runter, um die Suche zu starten."
+
+#: KravenHD.py
+msgid "Specify the language for the weather output."
+msgstr "Wählen Sie die Sprache für die Wetter-Anzeige."
+
+#: KravenHD.py
+msgid "Enter the search string for your location:"
+msgstr "Geben Sie den Suchbegriff für Ihren Standort ein:"
+
+#: KravenHD.py
+msgid "Enter the GM code for your location:"
+msgstr "Geben Sie den GM-Code für Ihren Standort ein:"
+
+#: KravenHDYWeather.py
+msgid "TU"
+msgstr "DI"
+
+#: KravenHDYWeather.py
+msgid "WE"
+msgstr "MI"
+
+#: KravenHDYWeather.py
+msgid "TH"
+msgstr "DO"
+
+#: KravenHDYWeather.py
+msgid "SU"
+msgstr "SO"
+
+#: KravenHDYWeather.py
+msgid "No data for IP"
+msgstr "Keine Daten für IP"
+
+#: KravenHDYWeather.py
+msgid ""
+"\n"
+"\n"
+"No data for search string,\n"
+"fallback to IP"
+msgstr ""
+"\n"
+"\n"
+"Keine Daten für Suchbegriff,\n"
+"Rückgriff auf IP"
+
+#: KravenHDYWeather.py
+msgid ""
+"\n"
+"\n"
+"No data for GM code,\n"
+"fallback to IP"
+msgstr ""
+"\n"
+"\n"
+"Keine Daten für GM-Code,\n"
+"Rückgriff auf IP"
+
+#: KravenHDYWeather.py
+msgid "No Accu ID found"
+msgstr "Keine Accu-ID gefunden"

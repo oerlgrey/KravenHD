@@ -1,10 +1,10 @@
 <!--/* Volume -->
 <screen name="Volume" position="47,38" size="330,80" title="Volume" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
   <widget name="Volume" position="72,36" size="170,5" zPosition="3" transparent="1" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress170.png" />
-  <ePixmap position="6,7" size="64,64" zPosition="1" pixmap="KravenHD/icons-light/icons/volume.png" transparent="0" alphatest="blend" />
-  <widget font="Regular;40" foregroundColor="KravenFont1" backgroundColor="KravenBackground" halign="center" valign="center" render="KravenHDVolumeText" source="global.CurrentTime" position="243,8" size="85,60" zPosition="20" transparent="1" />
+  <ePixmap position="6,7" size="64,64" zPosition="1" pixmap="KravenHD/global-icons/volume.png" transparent="0" alphatest="blend" />
+  <widget font="Regular;40" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" render="KravenHDVolumeText" source="global.CurrentTime" position="243,8" size="85,60" zPosition="20" transparent="1" />
   <eLabel position="72,38" size="170,1" backgroundColor="KravenFont1" foregroundColor="KravenFont1" />
-  <eLabel position="2,1" size="327,77" backgroundColor="KravenBackground" zPosition="-2" transparent="0" />
+  <eLabel position="2,1" size="327,77" backgroundColor="Kravenbg" zPosition="-2" transparent="0" />
   <eLabel backgroundColor="KravenBorder" position="1,1" size="328,2" zPosition="2" />
   <eLabel backgroundColor="KravenBorder" position="2,76" size="327,2" zPosition="2" />
   <eLabel backgroundColor="KravenBorder" position="1,1" size="2,77" zPosition="2" />

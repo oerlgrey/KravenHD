@@ -1,7 +1,7 @@
 #
 #  Version Converter
 #
-#  Coded by tomele for Kraven Skins
+#  Coded by tomele and tbx for Kraven Skins
 #
 #  This code is licensed under the Creative Commons 
 #  Attribution-NonCommercial-ShareAlike 3.0 Unported 
@@ -22,12 +22,7 @@ class KravenHDVersInfo(Converter, object):
 	
 	@cached
 	def getText(self):
-		line=""
-		version=""
-		os.popen("opkg info enigma2-plugin-skins-kravenhd > /tmp/KravenVersion")
-		for line in open("/tmp/KravenVersion"):
-			if "Version:" in line:
-				version=line
-		return version
+		version = os.popen("opkg status enigma2-plugin-skins-kravenhd | grep -e 'Version' | cut -d '+' -f1").read()
+		return version.rstrip()
 	
 	text = property(getText)

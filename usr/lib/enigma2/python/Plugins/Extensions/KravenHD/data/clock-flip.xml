@@ -1,0 +1,18 @@
+	<!-- Clock Flip */-->
+	<widget source="global.CurrentTime" position="1078,665" size="150,22" font="Regular2; 18" render="Label" halign="center" valign="top" zPosition="12" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont2" transparent="1">
+	  <convert type="KravenHDClockToText">Format:%d.%m.%Y</convert>
+	</widget>
+	<ePixmap alphatest="blend" pixmap="KravenHD/clock/flip/default.png" position="1103,608" size="100,52" zPosition="1" />
+	<widget source="global.CurrentTime" render="KravenHDFlipClock" position="1109,618" zPosition="4" size="17,32" alphatest="blend" transparent="1">
+	  <convert type="KravenHDClockToText">Format:H1 %H</convert>
+	</widget>
+	<widget source="global.CurrentTime" render="KravenHDFlipClock" position="1131,618" zPosition="4" size="17,32" alphatest="blend" transparent="1">
+	  <convert type="KravenHDClockToText">Format:H2 %H</convert>
+	</widget>
+	<widget source="global.CurrentTime" render="KravenHDFlipClock" position="1157,618" zPosition="4" size="17,32" alphatest="blend" transparent="1">
+	  <convert type="KravenHDClockToText">Format:M1 %M</convert>
+	</widget>
+	<widget source="global.CurrentTime" render="KravenHDFlipClock" position="1180,618" zPosition="4" size="17,32" alphatest="blend" transparent="1">
+	  <convert type="KravenHDClockToText">Format:M2 %M</convert>
+	</widget>
+	<!-- Clock Flip */-->

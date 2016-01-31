@@ -1,26 +1,26 @@
   <widget alphatest="blend" position="20,580" size="220,132" render="KravenHDXPicon" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget font="Regular;30" foregroundColor="KravenFont1" halign="left" noWrap="1" position="439,559" render="KravenHDRunningText" options="movetype=running,startpoint=0,startdelay=5000,wrap=0,always=0,repeat=2,oneshot=1" size="472,40" source="session.Event_Now" backgroundColor="KravenInfobarBackground" transparent="1" zPosition="1">
+  <widget font="Regular;30" foregroundColor="KravenIBFont1" halign="left" noWrap="1" position="439,559" render="KravenHDRunningText" options="movetype=running,startpoint=0,startdelay=5000,steptime=80,wrap=0,always=0,repeat=2,oneshot=1" size="472,40" source="session.Event_Now" backgroundColor="KravenIBbg" transparent="1" zPosition="1">
     <convert type="KravenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="KravenInfobarBackground" font="Regular; 22" foregroundColor="KravenFont1" halign="right" position="913,564" render="Label" size="107,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="KravenIBbg" font="Regular; 22" foregroundColor="KravenIBFont1" halign="right" position="913,564" render="Label" size="107,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="KravenHDEventTime">Remaining</convert>
     <convert type="KravenHDRemainingToText">InMinutes</convert>
   </widget>
-  <widget backgroundColor="KravenInfobarBackground" font="Regular; 22" foregroundColor="KravenFont1" halign="right" noWrap="1" position="253,564" render="Label" size="70,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="KravenIBbg" font="Regular; 22" foregroundColor="KravenIBFont1" halign="right" noWrap="1" position="253,564" render="Label" size="70,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="KravenHDEventTime">StartTime</convert>
     <convert type="KravenHDClockToText">Default</convert>
   </widget>
-  <eLabel backgroundColor="KravenInfobarBackground" font="Regular; 20" foregroundColor="KravenFont1" halign="center" noWrap="1" position="325,566" size="40,35" text="bis" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="KravenInfobarBackground" font="Regular; 22" foregroundColor="KravenFont1" halign="left" noWrap="1" position="367,564" render="Label" size="70,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <eLabel backgroundColor="KravenIBbg" font="Regular; 20" foregroundColor="KravenIBFont1" halign="center" noWrap="1" position="325,565" size="40,35" text="bis" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="KravenIBbg" font="Regular; 22" foregroundColor="KravenIBFont1" halign="left" noWrap="1" position="367,564" render="Label" size="70,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="KravenHDEventTime">EndTime</convert>
     <convert type="KravenHDClockToText">Default</convert>
   </widget>
-  <widget font="Regular; 30" foregroundColor="KravenFont2" halign="left" position="439,650" render="KravenHDRunningText" options="movetype=running,startpoint=0,startdelay=5000,wrap=0,always=0,repeat=2,oneshot=1" size="472,40" source="session.Event_Next" valign="top" backgroundColor="KravenInfobarBackground" transparent="1" zPosition="1">
+  <widget font="Regular; 30" foregroundColor="KravenIBFont2" halign="left" position="439,650" render="KravenHDRunningText" options="movetype=running,startpoint=0,startdelay=5000,steptime=80,wrap=0,always=0,repeat=2,oneshot=1" size="472,40" source="session.Event_Next" valign="top" backgroundColor="KravenIBbg" transparent="1" zPosition="1">
     <convert type="KravenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="KravenInfobarBackground" font="Regular; 22" foregroundColor="KravenFont2" valign="center" halign="right" position="914,656" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+  <widget backgroundColor="KravenIBbg" font="Regular; 22" foregroundColor="KravenIBFont2" valign="center" halign="right" position="914,656" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
     <convert type="KravenHDEventTime">Duration</convert>
     <convert type="KravenHDClockToText">InMinutes</convert>
   </widget>
@@ -28,93 +28,93 @@
     <convert type="KravenHDEventTime">Progress</convert>
   </widget>
   <eLabel position="273,604" size="746,1" backgroundColor="KravenLine" />
-  <ePixmap alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_rec_off.png" position="627,620" size="43,22" zPosition="2" />
-  <widget alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_rec_on.png" position="627,620" render="Pixmap" size="43,22" source="session.RecordState" zPosition="5">
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_rec_off.png" position="627,620" size="43,22" zPosition="2" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_rec_on.png" position="627,620" render="Pixmap" size="43,22" source="session.RecordState" zPosition="5">
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_hbbtv_off.png" position="677,620" size="43,22" zPosition="1" />
-  <widget alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_hbbtv_on.png" position="677,620" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="5">
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hbbtv_off.png" position="677,620" size="43,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hbbtv_on.png" position="677,620" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="5">
     <convert type="KravenHDServiceInfo">HasHBBTV</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_sub_off.png" position="727,620" size="43,22" zPosition="1" />
-  <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons-light/infobar/ico_sub_on.png" position="727,620" size="43,22" zPosition="2" alphatest="blend">
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_sub_off.png" position="727,620" size="43,22" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/infobar-icons/ico_sub_on.png" position="727,620" size="43,22" zPosition="2" alphatest="blend">
     <convert type="KravenHDServiceInfo">SubtitlesAvailable</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_txt_off.png" position="777,620" size="43,22" zPosition="1" />
-  <widget alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_txt_on.png" position="777,620" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="5">
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_txt_off.png" position="777,620" size="43,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_txt_on.png" position="777,620" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="5">
     <convert type="KravenHDServiceInfo">HasTelext</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_dolby_off.png" position="827,620" size="43,22" zPosition="1" />
-  <widget alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_dolby_on.png" position="827,620" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_dolby_off.png" position="827,620" size="43,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_dolby_on.png" position="827,620" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
     <convert type="KravenHDServiceInfo">IsMultichannel</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_format_off.png" position="877,620" size="43,22" zPosition="1" />
-  <widget alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_format_on.png" position="877,620" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_format_off.png" position="877,620" size="43,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_format_on.png" position="877,620" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
     <convert type="KravenHDServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_hd_off.png" position="927,620" size="43,22" zPosition="1" />
-  <widget alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_hd_on.png" position="927,620" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hd_off.png" position="927,620" size="43,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hd_on.png" position="927,620" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
     <convert type="KravenHDServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_crypt_off.png" position="977,620" size="43,22" zPosition="1" />
-  <widget alphatest="blend" pixmap="KravenHD/icons-light/infobar/ico_crypt_on.png" position="977,620" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="5">
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_crypt_off.png" position="977,620" size="43,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_crypt_on.png" position="977,620" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="5">
     <convert type="KravenHDServiceInfo">IsCrypted</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/icons-light/infobar/c_on.png" position="731,696" zPosition="2" size="20,22" alphatest="blend">
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/c_on.png" position="731,696" zPosition="2" size="20,22" alphatest="blend">
     <convert type="TunerInfo">TunerUseMask</convert>
     <convert type="ValueBitTest">4</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/icons-light/infobar/b_on.png" position="706,696" zPosition="2" size="20,22" alphatest="blend">
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/b_on.png" position="706,696" zPosition="2" size="20,22" alphatest="blend">
     <convert type="TunerInfo">TunerUseMask</convert>
     <convert type="ValueBitTest">2</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap pixmap="KravenHD/icons-light/infobar/a_off.png" position="681,696" size="20,22" zPosition="1" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/icons-light/infobar/b_off.png" position="706,696" size="20,22" zPosition="1" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/icons-light/infobar/c_off.png" position="731,696" size="20,22" zPosition="1" alphatest="blend" />
-  <ePixmap pixmap="KravenHD/icons-light/infobar/d_off.png" position="756,696" size="20,22" zPosition="1" alphatest="blend" />
-  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/icons-light/infobar/a_on.png" position="681,696" zPosition="2" size="20,22" alphatest="blend">
+  <ePixmap pixmap="KravenHD/infobar-icons/a_off.png" position="681,696" size="20,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/b_off.png" position="706,696" size="20,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/c_off.png" position="731,696" size="20,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/d_off.png" position="756,696" size="20,22" zPosition="1" alphatest="blend" />
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/a_on.png" position="681,696" zPosition="2" size="20,22" alphatest="blend">
     <convert type="TunerInfo">TunerUseMask</convert>
     <convert type="ValueBitTest">1</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/icons-light/infobar/d_on.png" position="756,696" zPosition="2" size="20,22" alphatest="blend">
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/d_on.png" position="756,696" zPosition="2" size="20,22" alphatest="blend">
     <convert type="TunerInfo">TunerUseMask</convert>
     <convert type="ValueBitTest">8</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget backgroundColor="KravenInfobarBackground" font="Regular; 22" foregroundColor="KravenFont2" halign="left" noWrap="1" position="367,656" render="Label" size="70,35" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="KravenIBbg" font="Regular; 22" foregroundColor="KravenIBFont2" halign="left" noWrap="1" position="367,656" render="Label" size="70,35" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
     <convert type="KravenHDEventTime">EndTime</convert>
     <convert type="KravenHDClockToText">Default</convert>
   </widget>
-  <widget backgroundColor="KravenInfobarBackground" font="Regular; 22" foregroundColor="KravenFont2" halign="right" noWrap="1" position="253,656" render="Label" size="70,35" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="KravenIBbg" font="Regular; 22" foregroundColor="KravenIBFont2" halign="right" noWrap="1" position="253,656" render="Label" size="70,35" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
     <convert type="KravenHDEventTime">StartTime</convert>
     <convert type="KravenHDClockToText">Default</convert>
   </widget>
-  <eLabel backgroundColor="KravenInfobarBackground" font="Regular; 20" foregroundColor="KravenFont2" halign="center" noWrap="1" position="325,658" size="40,35" text="bis" transparent="1" valign="center" zPosition="1" />
-  <eLabel backgroundColor="KravenInfobarBackground" foregroundColor="KravenFont1" font="Regular; 20" halign="center" noWrap="1" position="261,614" size="190,35" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="KravenInfobarBackground" foregroundColor="KravenFont1" font="Regular; 20" halign="left" position="445,614" render="Label" size="150,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <eLabel backgroundColor="KravenIBbg" font="Regular; 20" foregroundColor="KravenIBFont2" halign="center" noWrap="1" position="325,657" size="40,35" text="bis" transparent="1" valign="center" zPosition="1" />
+  <eLabel backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular; 20" halign="center" noWrap="1" position="261,614" size="190,35" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular; 20" halign="left" position="445,614" render="Label" size="150,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="KravenHDEventTime">RunTime</convert>
     <convert type="KravenHDRemainingToText">InMinutes</convert>
   </widget>
-  <ePixmap pixmap="KravenHD/icons-light/infobar/aufloesung.png" position="786,696" size="112,22" zPosition="1" alphatest="blend" />
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="787,694" size="110,22" font="Regular; 19" halign="center" backgroundColor="KravenInfobarBackground" foregroundColor="KravenButtonStyleFont" transparent="1">
+  <ePixmap pixmap="KravenHD/infobar-icons/aufloesung.png" position="786,696" size="112,22" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="787,694" size="110,22" font="Regular; 19" halign="center" backgroundColor="KravenIBbg" foregroundColor="KravenIcon" transparent="1">
     <convert type="KravenHDExtraInfo">Resolution</convert>    
   </widget>
-  <ePixmap pixmap="KravenHD/icons-light/infobar/aufloesung2.png" position="906,696" size="116,22" zPosition="1" alphatest="blend" />
-  <widget backgroundColor="KravenInfobarBackground" font="Regular;19" foregroundColor="KravenButtonStyleFont" halign="left" position="909,694" size="55,22" render="Label" source="session.CurrentService" transparent="1">
+  <ePixmap pixmap="KravenHD/infobar-icons/aufloesung2.png" position="906,696" size="116,22" zPosition="1" alphatest="blend" />
+  <widget backgroundColor="KravenIBbg" font="Regular;19" foregroundColor="KravenIcon" halign="left" position="909,694" size="55,22" render="Label" source="session.CurrentService" transparent="1">
     <convert  type="KravenHDExtServiceInfo">OrbitalPosition</convert>
   </widget>
-  <widget render="Label" font="Regular; 19" position="952,694" size="67,22" halign="right" backgroundColor="KravenInfobarBackground" transparent="1" noWrap="1" foregroundColor="KravenButtonStyleFont"  source="session.FrontendStatus">
+  <widget render="Label" font="Regular; 19" position="952,694" size="67,22" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIcon"  source="session.FrontendStatus">
     <convert  type="KravenHDFrontendInfo">SNR</convert>
   </widget>
-  <!--<eLabel text="  S:"  font="Regular; 19" position="958,694" size="30,22" halign="left" backgroundColor="KravenInfobarBackground" transparent="1" foregroundColor="KravenButtonStyleFont" />-->
+  <!--<eLabel text="  S:"  font="Regular; 19" position="958,694" size="30,22" halign="left" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIcon" />-->
