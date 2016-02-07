@@ -339,6 +339,8 @@ config.plugins.KravenHD.PrimetimeFont = ConfigSelection(default="0070AD11", choi
 				
 config.plugins.KravenHD.ButtonText = ConfigSelection(default="00ffffff", choices = ColorList)
 				
+config.plugins.KravenHD.Android = ConfigSelection(default="00000000", choices = ColorList)
+				
 config.plugins.KravenHD.Border = ConfigSelection(default="00ffffff", choices = ColorList)
 				
 config.plugins.KravenHD.Progress = ConfigSelection(default="progress", choices = [
@@ -700,10 +702,6 @@ config.plugins.KravenHD.ClockStyleNA = ConfigSelection(default="not-available", 
 				("not-available", _("not available in this style"))
 				])
 				
-config.plugins.KravenHD.AnalogStyleNA = ConfigSelection(default="not-available", choices = [
-				("not-available", _("only available for Clock Analog"))
-				])
-				
 config.plugins.KravenHD.IBtopNA = ConfigSelection(default="not-available", choices = [
 				("not-available", _("not available in this style"))
 				])
@@ -865,7 +863,7 @@ class KravenHD(ConfigListScreen, Screen):
 	<convert type="KravenHDClockToText">Default</convert>
   </widget>
   <eLabel position="830,80" size="402,46" text="KravenHD" font="Regular; 36" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00f0a30a" />
-  <eLabel position="845,139" size="372,40" text="Version: 7.0.0" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+  <eLabel position="845,139" size="372,40" text="Version: 7.1.0" font="Regular; 30" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget name="helperimage" position="847,210" size="368,207" zPosition="1" backgroundColor="#00000000" />
   <widget source="Canvas" render="Canvas" position="847,210" size="368,207" zPosition="-1" backgroundColor="#00000000" />
   <widget source="help" render="Label" position="847,440" size="368,196" font="Regular;20" backgroundColor="#00000000" foregroundColor="#00f0a30a" halign="left" valign="top" transparent="1" />
@@ -1030,9 +1028,11 @@ class KravenHD(ConfigListScreen, Screen):
 			self.actClockstyle="none"
 		if self.actClockstyle == "clock-analog":
 			list.append(getConfigListEntry(_("Analog-Clock-Color"), config.plugins.KravenHD.AnalogStyle, _("Choose from different colors for the analog type clock in the infobar.")))
-		else:
-			list.append(getConfigListEntry(_("Analog-Clock-Color"), config.plugins.KravenHD.AnalogStyleNA, _("This option is not available for the selected clock type.")))
+		if self.actClockstyle == "clock-android":
+			list.append(getConfigListEntry(_("Android-Temp-Color"), config.plugins.KravenHD.Android, _("Choose the font color of android-clock temperature.")))
 		list.append(getConfigListEntry(_("System-Infos"), config.plugins.KravenHD.SystemInfo, _("Choose from different additional windows with system informations or deactivate them completely.")))
+		if not self.actClockstyle in ("clock-analog","clock-android"):
+			list.append(getConfigListEntry(_(" "), ))
 		list.append(getConfigListEntry(_("ECM INFOS ____________________________________________________________"), config.plugins.KravenHD.About, _(" ")))
 		list.append(getConfigListEntry(_(" "), ))
 		if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
@@ -1282,6 +1282,8 @@ class KravenHD(ConfigListScreen, Screen):
 			self.showColor(self.hexRGB(config.plugins.KravenHD.MarkedFont.value))
 		elif option == config.plugins.KravenHD.ButtonText:
 			self.showColor(self.hexRGB(config.plugins.KravenHD.ButtonText.value))
+		elif option == config.plugins.KravenHD.Android:
+			self.showColor(self.hexRGB(config.plugins.KravenHD.Android.value))
 		elif option == config.plugins.KravenHD.ChannelSelectionServiceNA:
 			self.showColor(self.hexRGB(config.plugins.KravenHD.ChannelSelectionServiceNA.value))
 		elif option == config.plugins.KravenHD.InfobarColor:
@@ -1523,12 +1525,17 @@ class KravenHD(ConfigListScreen, Screen):
 		if config.plugins.KravenHD.Logo.value == "minitv":
 			self.skinSearchAndReplace.append(['<panel name="template_menu_logo" />', '<panel name="template_menu_minitv" />'])
 			self.skinSearchAndReplace.append(['<panel name="template_menu_logo2" />', '<panel name="template_menu_minitv2" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_menu_logo3" />', '<panel name="template_menu_minitv" />'])
 		elif config.plugins.KravenHD.Logo.value == "metrix-icons":
 			self.skinSearchAndReplace.append(['<panel name="template_menu_logo" />', '<panel name="template_menu_metrix-icons" />'])
 			self.skinSearchAndReplace.append(['<panel name="template_menu_logo2" />', '<panel name="template_menu_metrix-icons2" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_menu_logo3" />', '<panel name="template_menu_metrix-icons3" />'])
 		elif config.plugins.KravenHD.Logo.value == "minitv-metrix-icons":
 			self.skinSearchAndReplace.append(['<panel name="template_menu_logo" />', '<panel name="template_menu_minitv-metrix-icons" />'])
 			self.skinSearchAndReplace.append(['<panel name="template_menu_logo2" />', '<panel name="template_menu_minitv-metrix-icons2" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_menu_logo3" />', '<panel name="template_menu_minitv-metrix-icons3" />'])
+		elif config.plugins.KravenHD.Logo.value == "logo":
+			self.skinSearchAndReplace.append(['<panel name="template_menu_logo3" />', '<panel name="template_menu_logo" />'])
 
 		### Font Colors
 		self.skinSearchAndReplace.append(['name="KravenFont1" value="#00ffffff', 'name="KravenFont1" value="#' + config.plugins.KravenHD.Font1.value])
@@ -1546,6 +1553,7 @@ class KravenHD(ConfigListScreen, Screen):
 		self.skinSearchAndReplace.append(['name="KravenECM" value="#00ffffff', 'name="KravenECM" value="#' + config.plugins.KravenHD.ECMFont.value])
 		self.skinSearchAndReplace.append(['name="KravenName" value="#00ffffff', 'name="KravenName" value="#' + config.plugins.KravenHD.ChannelnameFont.value])
 		self.skinSearchAndReplace.append(['name="KravenButton" value="#00ffffff', 'name="KravenButton" value="#' + config.plugins.KravenHD.ButtonText.value])
+		self.skinSearchAndReplace.append(['name="KravenAndroid" value="#00ffffff', 'name="KravenAndroid" value="#' + config.plugins.KravenHD.Android.value])
 
 		### ChannelSelection 'not available' Font
 		self.skinSearchAndReplace.append(['name="KravenNotAvailable" value="#00FFEA04', 'name="KravenNotAvailable" value="#' + config.plugins.KravenHD.ChannelSelectionServiceNA.value])
@@ -1601,23 +1609,23 @@ class KravenHD(ConfigListScreen, Screen):
 		if config.plugins.KravenHD.weather_server.value == "_owm":
 			self.skinSearchAndReplace.append(['KravenHDWeather', 'KravenHDWeather_owm'])
 			if config.plugins.KravenHD.WeatherView.value == "meteo":
-				self.skinSearchAndReplace.append(['size="50,50" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="50,50" render="Label" font="Meteo2; 40" halign="right" valign="center" foregroundColor="KravenMeteo" backgroundColor="KravenIBbg" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo2; 45" halign="center" valign="center" foregroundColor="KravenMeteo" backgroundColor="KravenIBbg" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="70,70" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo2; 70" halign="center" valign="center" foregroundColor="KravenMeteo" backgroundColor="KravenIBbg" noWrap="1"'])
+				self.skinSearchAndReplace.append(['size="50,50" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="50,50" render="Label" font="Meteo2; 40" halign="right" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
+				self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo2; 45" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
+				self.skinSearchAndReplace.append(['size="70,70" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo2; 70" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['MeteoIcon</convert>', 'MeteoFont</convert>'])
 		elif config.plugins.KravenHD.weather_server.value == "_accu":
 			self.skinSearchAndReplace.append(['KravenHDWeather', 'KravenHDWeather_accu'])
 			if config.plugins.KravenHD.WeatherView.value == "meteo":
-				self.skinSearchAndReplace.append(['size="50,50" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="50,50" render="Label" font="Meteo3; 40" halign="right" valign="center" foregroundColor="KravenMeteo" backgroundColor="KravenIBbg" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo3; 45" halign="center" valign="center" foregroundColor="KravenMeteo" backgroundColor="KravenIBbg" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="70,70" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo3; 70" halign="center" valign="center" foregroundColor="KravenMeteo" backgroundColor="KravenIBbg" noWrap="1"'])
+				self.skinSearchAndReplace.append(['size="50,50" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="50,50" render="Label" font="Meteo3; 40" halign="right" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
+				self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo3; 45" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
+				self.skinSearchAndReplace.append(['size="70,70" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo3; 70" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['MeteoIcon</convert>', 'MeteoFont</convert>'])
 		elif config.plugins.KravenHD.weather_server.value == "_realtek":
 			self.skinSearchAndReplace.append(['KravenHDWeather', 'KravenHDWeather_realtek'])
 			if config.plugins.KravenHD.WeatherView.value == "meteo":
-				self.skinSearchAndReplace.append(['size="50,50" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="50,50" render="Label" font="Meteo3; 40" halign="right" valign="center" foregroundColor="KravenMeteo" backgroundColor="KravenIBbg" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo3; 45" halign="center" valign="center" foregroundColor="KravenMeteo" backgroundColor="KravenIBbg" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="70,70" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo3; 70" halign="center" valign="center" foregroundColor="KravenMeteo" backgroundColor="KravenIBbg" noWrap="1"'])
+				self.skinSearchAndReplace.append(['size="50,50" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="50,50" render="Label" font="Meteo3; 40" halign="right" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
+				self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo3; 45" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
+				self.skinSearchAndReplace.append(['size="70,70" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo3; 70" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['MeteoIcon</convert>', 'MeteoFont</convert>'])
 
 		### Meteo-Font
@@ -2019,6 +2027,15 @@ class KravenHD(ConfigListScreen, Screen):
 
 		### Plugins XML
 		self.appendSkinFile(self.daten + "plugins.xml")
+
+		### MSNWeatherPlugin XML
+		console1 = eConsoleAppContainer()
+		if fileExists("/usr/lib/enigma2/python/Components/Converter/MSNWeather.pyo"):
+			self.appendSkinFile(self.daten + "MSNWeatherPlugin.xml")
+			if not fileExists("/usr/share/enigma2/KravenHD/msn_weather_icons/1.png"):
+				console1.execute("wget -q https://raw.githubusercontent.com/KravenHD/SevenHD-Daten/master/SevenHD/msn/msn-icon.tar.gz -O /tmp/msn-icon.tar.gz; tar xf /tmp/msn-icon.tar.gz -C /usr/share/enigma2/KravenHD/")
+		else:
+			self.appendSkinFile(self.daten + "MSNWeatherPlugin2.xml")
 
 		### InfobarTunerState
 		if self.actWeatherstyle in ("weather-big","weather-left"):

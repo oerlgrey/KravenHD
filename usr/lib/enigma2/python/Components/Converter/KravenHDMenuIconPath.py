@@ -24,6 +24,7 @@ class KravenHDMenuIconPath(Poll,Converter,object):
 		self.poll_enabled = True
 		self.logo = "/usr/share/enigma2/KravenHD/logo.png"
 		self.path = "/usr/share/enigma2/Kraven-menu-icons/"
+		self.userpath = "/usr/share/enigma2/Kraven-user-icons/"
 		self.type = str(type)
 		
 		self.names=[
@@ -170,23 +171,36 @@ class KravenHDMenuIconPath(Poll,Converter,object):
 	
 	@cached
 	def getText(self):
-		cur = self.source.current
-		if cur and len(cur) > 2:
-			selection = cur[2]
-			if selection in ("skin_selector","atilehd_setup"):
-				return self.logo
-			name = self.path+selection.lower()+".png"
-			if fileExists(name):
-				return name
-			name=""
-			for pair in self.names:
-				if pair[0] == selection:
-					name=self.path+pair[1]
-					break
-			if name != "" and fileExists(name):
-				return name
-			if fileExists(self.path+"plugin.png"):
-				return self.path+"plugin.png" 
+		try:
+			cur = self.source.current
+			if cur and len(cur) > 2:
+				selection = cur[2]
+				if selection in ("skin_selector","atilehd_setup"):
+					return self.logo
+				name = self.userpath+selection.lower()+".png"
+				if fileExists(name):
+					return name
+				name = self.path+selection.lower()+".png"
+				if fileExists(name):
+					return name
+				name=""
+				for pair in self.names:
+					if pair[0] == selection:
+						break
+				name=self.userpath+pair[1]
+				if name != "" and fileExists(name):
+					return name
+				name=self.path+pair[1]
+				if name != "" and fileExists(name):
+					return name
+		except:
+			pass
+		name=self.userpath+"plugin.png"
+		if fileExists(name):
+			return name
+		name=self.path+"plugin.png"
+		if fileExists(name):
+			return name
 		return self.logo
 	
 	text = property(getText)

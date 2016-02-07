@@ -34,6 +34,7 @@
     <color name="KravenNamebg" value="#A01B1775" />
     <color name="KravenECMbg" value="#F1325698" />
     <color name="KravenButton" value="#00ffffff" />
+    <color name="KravenAndroid" value="#00ffffff" />
     <color name="KravenIcon" value="#00fff0e0" />
     <color name="KravenBorder" value="#00ffffff" />
     <color name="KravenBorder2" value="#003F3F3F" />

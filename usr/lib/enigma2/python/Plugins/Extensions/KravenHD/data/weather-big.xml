@@ -2,7 +2,7 @@
   <widget backgroundColor="KravenIBbg" font="Regular2; 20" foregroundColor="KravenIBFont2" render="Label" position="22,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
     <convert type="KravenHDWeather">Day_0,WetterDate</convert>
   </widget>
-  <widget source="session.CurrentService" position="83,10" transparent="1" zPosition="8" size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend">
+  <widget backgroundColor="KravenIBbg" source="session.CurrentService" position="83,10" transparent="1" zPosition="8" size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend">
     <convert  type="KravenHDWeather">Day_0,MeteoIcon</convert>
   </widget>
   <widget backgroundColor="KravenIBbg" font="Regular2; 16" foregroundColor="KravenIBFont2" render="KravenHDRunningText" options="movetype=swimming,direction=top,startpoint=0,startdelay=3000,step=20,steptime=3000,wrap=1,always=0,repeat=0" position="50,61" size="118,40" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center" >
@@ -17,7 +17,7 @@
   <widget backgroundColor="KravenIBbg" font="Regular2; 20" foregroundColor="KravenIBFont2" render="Label" position="209,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
     <convert type="KravenHDWeather">Day_1,WetterDate</convert>
   </widget>
-  <widget source="session.CurrentService" position="269,10" transparent="1" zPosition="8" size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend">
+  <widget backgroundColor="KravenIBbg" source="session.CurrentService" position="269,10" transparent="1" zPosition="8" size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend">
     <convert  type="KravenHDWeather">Day_1,MeteoIcon</convert>
   </widget>
   <widget backgroundColor="KravenIBbg" font="Regular2; 16" foregroundColor="KravenIBFont2" render="KravenHDRunningText" options="movetype=swimming,direction=top,startpoint=0,startdelay=3000,step=20,steptime=3000,wrap=1,always=0,repeat=0" position="235,61" size="118,40" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
@@ -32,7 +32,7 @@
   <widget backgroundColor="KravenIBbg" font="Regular2; 20" foregroundColor="KravenIBFont2" render="Label" position="395,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
     <convert type="KravenHDWeather">Day_2,WetterDate</convert>
   </widget>
-  <widget source="session.CurrentService" position="456,10" transparent="1" zPosition="8" size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend">
+  <widget backgroundColor="KravenIBbg" source="session.CurrentService" position="456,10" transparent="1" zPosition="8" size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend">
     <convert  type="KravenHDWeather">Day_2,MeteoIcon</convert>
   </widget>
   <widget backgroundColor="KravenIBbg" font="Regular2; 16" foregroundColor="KravenIBFont2" render="KravenHDRunningText" options="movetype=swimming,direction=top,startpoint=0,startdelay=3000,step=20,steptime=3000,wrap=1,always=0,repeat=0" position="424,61" size="118,40" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
@@ -47,7 +47,7 @@
   <widget backgroundColor="KravenIBbg" font="Regular2; 20" foregroundColor="KravenIBFont2" render="Label" position="580,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
     <convert type="KravenHDWeather">Day_3,WetterDate</convert>
   </widget>
-  <widget source="session.CurrentService" position="641,10" transparent="1" zPosition="8" size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend">
+  <widget backgroundColor="KravenIBbg" source="session.CurrentService" position="641,10" transparent="1" zPosition="8" size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend">
     <convert  type="KravenHDWeather">Day_3,MeteoIcon</convert>
   </widget>
   <widget backgroundColor="KravenIBbg" font="Regular2; 16" foregroundColor="KravenIBFont2" render="KravenHDRunningText" options="movetype=swimming,direction=top,startpoint=0,startdelay=3000,step=20,steptime=3000,wrap=1,always=0,repeat=0" position="609,61" size="118,40" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
@@ -62,7 +62,7 @@
   <widget backgroundColor="KravenIBbg" font="Regular2; 20" foregroundColor="KravenIBFont2" render="Label" position="765,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
     <convert type="KravenHDWeather">Day_4,WetterDate</convert>
   </widget>
-  <widget source="session.CurrentService" position="826,10" transparent="1" zPosition="8" size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend">
+  <widget backgroundColor="KravenIBbg" source="session.CurrentService" position="826,10" transparent="1" zPosition="8" size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend">
     <convert  type="KravenHDWeather">Day_4,MeteoIcon</convert>
   </widget>
   <widget backgroundColor="KravenIBbg" font="Regular2; 16" foregroundColor="KravenIBFont2" render="KravenHDRunningText" options="movetype=swimming,direction=top,startpoint=0,startdelay=3000,step=20,steptime=3000,wrap=1,always=0,repeat=0" position="794,61" size="118,40" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">

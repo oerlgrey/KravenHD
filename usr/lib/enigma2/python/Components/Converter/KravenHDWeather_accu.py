@@ -22,6 +22,7 @@ from Components.Element import cached
 from Components.config import config
 from enigma import eTimer
 import requests, time, os, gettext
+from Poll import Poll
 
 lang = language.getLanguage()
 os.environ["LANGUAGE"] = lang[:2]
@@ -40,20 +41,29 @@ URL2 = 'http://api.accuweather.com/currentconditions/v1/' + str(config.plugins.K
 
 WEATHER_DATA1 = None
 WEATHER_DATA2 = None
+WEATHER_LOAD = True
 
-class KravenHDWeather_accu(Converter, object):
+class KravenHDWeather_accu(Poll, Converter, object):
 	def __init__(self, type):
+		Poll.__init__(self)
 		Converter.__init__(self, type)
+		self.poll_interval = 60000
+		self.poll_enabled = True
 		type = type.split(',')
 		self.day_value = type[0]
 		self.what = type[1]
 		self.timer = eTimer()
 		self.timer.callback.append(self.reset)
 		self.timer.callback.append(self.get_Data)
+		self.data = None
 		self.get_Data()
 
 	@cached
 	def getText(self):
+		global WEATHER_DATA1
+		global WEATHER_DATA2
+		self.data = WEATHER_DATA1
+		self.data2 = WEATHER_DATA2
 		day = self.day_value.split('_')[1]
 		if self.what == 'DayTemp':
 			self.info = self.getDayTemp()
@@ -91,21 +101,25 @@ class KravenHDWeather_accu(Converter, object):
 	text = property(getText)
 
 	def reset(self):
-		global WEATHER_DATA1
-		global WEATHER_DATA2
-		WEATHER_DATA1 = None
-		WEATHER_DATA2 = None
+		global WEATHER_LOAD
+		WEATHER_LOAD = True
 
 	def get_Data(self):
 		global WEATHER_DATA1
 		global WEATHER_DATA2
-		if WEATHER_DATA1 is None or WEATHER_DATA2 is None:
-			res = requests.request('get', URL)
-			self.data = res.json()
-			WEATHER_DATA1 = self.data
-			res2 = requests.request('get', URL2)
-			self.data2 = res2.json()
-			WEATHER_DATA2 = self.data2
+		global WEATHER_LOAD
+		if WEATHER_LOAD == True:
+			try:
+				print "KravenWeather: Weather download from AccuWeather"
+				res = requests.request('get', URL)
+				self.data = res.json()
+				WEATHER_DATA1 = self.data
+				res2 = requests.request('get', URL2)
+				self.data2 = res2.json()
+				WEATHER_DATA2 = self.data2
+				WEATHER_LOAD = False
+			except:
+				pass
 			timeout = int(config.plugins.KravenHD.refreshInterval.value) * 1000.0 * 60.0
 			self.timer.start(int(timeout), True)
 		else:
