@@ -2,7 +2,7 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieSelection" position="0,0" size="1280,720" title="">
     <widget name="waitingtext" position="0,0" size="0,0" />
 	<eLabel text="MovieSelection" position="70,12" size="708,46" backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
-    <widget name="list" position="70,110" size="708,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="list" position="70,110" size="708,540" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
     <widget backgroundColor="Kravenbg" font="Regular;17" halign="right" name="freeDiskSpace" position="70,80" size="708,24" transparent="1" valign="center" />
     <widget backgroundColor="Kravenbg" font="Regular2;30" foregroundColor="KravenFont2" position="848,55" render="Label" size="377,75" source="Service" transparent="1" zPosition="1">
       <convert type="KravenHDEventName">Name</convert>
@@ -21,9 +21,10 @@
     <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenMFont1" position="1138,22" size="100,28" font="Regular;26" halign="right" transparent="1" valign="center">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
-	<widget source="Service" render="KravenHDCover" position="970,475" size="120,180" zPosition="4" backgroundColor="Kravenbg" alphatest="blend" transparent="1" />
+	<widget source="Service" render="Cover" position="970,475" size="120,180" zPosition="4" backgroundColor="Kravenbg" alphatest="blend" transparent="1" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- EMC -->
     <panel name="template_colorkey_text" />
     <panel name="key_menu_ok_exit" />
     <!--<text="MovieSelection - small Cover" position="70,0" />-->

@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mphelp skin="KravenHDFaq" caption="KravenHD FAQ">
 	<page title="FAQ">
-		<text value="Warum finde ich KravenHD in der Skinauswahl nicht ? ___________________
+		<text value="WARUM FINDE ICH KRAVENHD IN DER SKINAUSWAHL NICHT ?
 \nDer KravenHD Skin muss erst erzeugt werden. Rufen Sie das Plugin KravenHD auf, machen Sie Ihre Einstellungen und speichern Sie das Skin mit der grünen Taste. Nach einem GUI-Neustart ist der Skin aktiv.
-\n\nWie gebe ich meine Wetterposition ein ? _________________________________
+\n\nWIE GEBE ICH MEINE WETTERPOSITION EIN ?
 \nWählen Sie zunächst aus, wonach Sie suchen wollen. Geben Sie dann im nächsten Feld den zu suchenden Begriff ein. Hoch/runter startet die Suche. Im Vorschaufeld sehen Sie das jeweilige Ergebnis.
-\n\nWarum sehe ich keine Sender-Picons in der Infobar ? ____________________
+\n\nWARUM SEHE ICH KEINE SENDER-PICONS IN DER INFOBAR ?
 \nDer Ordner mit Ihren Picons hat einen falschen Namen. Benennen Sie den Ordner, in dem Ihre Picons gespeichert sind, in 'picon' um.
-\n\nWarum ist der Skin an den Rändern abgeschnitten ? _____________________
+\n\nWARUM IST DER SKIN AN DEN RÄNDERN ABGESCHNITTEN ?
 \nSie haben wahrscheinlich Overscan an Ihrem TV eingeschaltet. Diese Funktion schneidet die Bildränder ab. Deaktivieren Sie Overscan oder installieren Sie die Systemerweiterung 'uipositionersetup'. Mit 'Menü positionieren' können Sie den Overscan ausgleichen.
-\n\nWie kann ich zwischen den Einstellungs-Profilen wechseln ? _____________
+\n\nWIE KANN ICH ZWISCHEN DEN EINSTELLUNGS-PROFILEN WECHSELN ?
 \nDie Profile können Sie im Plugin mit rechts/links auf dem Punkt 'Aktives Profil' wechseln. Beim Wechsel wird das vorige Profil automatisch gespeichert und das neue geladen. Wenn das neue noch nicht existiert, wird es mit den Einstellungen des vorigen erzeugt.
-\n\nWie kann ich meine Einstellungen auf eine andere Box kopieren ? _______
+\n\nWIE KANN ICH EINSTELLUNGEN AUF EINE ANDERE BOX KOPIEREN ?
 \nSie finden die Profile unter /etc/enigma2/kraven_profile_x. Kopieren Sie einfach das gewünschte Profil auf die Zielbox, wählen Sie es dort im Plugin aus und erzeugen Ihr Skin damit neu.
-\n\nWie kann ich ein Profil klonen, um Einstellungen zu übernehmen ? ______
+\n\nWIE KANN ICH EIN PROFIL KLONEN ?
 \nSie finden die Profile unter /etc/enigma2/kraven_profile_x. Kopieren Sie einfach das Ausgangsprofil über das Zielprofil. Sie können auf diese Weise auch neue Standardprofile erzeugen. Kopieren Sie das Ausgangsprofil einfach nach /etc/enigma2/kraven_default_x.
-\n\n\n\n\nWas kann ich gegen gestörte Schriften oder Farbränder tun ? ___________
+\n\n\n\n\nWAS KANN ICH GEGEN GESTÖRTE SCHRIFTEN / FARBRÄNDER TUN ?
 \nUnsaubere Schriften und Farbränder werden manchmal von der Kantenglättung verursacht. Gehen Sie im Plugin zum Punkt 'Kantenglättungs-Helligkeit' und passen die Werte je nach Situation an.
-\n\nWie kann ich meine eigenen Menü-Icons einfügen ? _____________________
-\nErstellen Sie ein Verzeichnis /usr/share/enigma2/Kraven-user-icons und kopieren Sie Ihre Icons dorthin. Diese Icons haben Vorrang vor den internen Icons."/>
+\n\nWIE KANN ICH MEINE EIGENEN MENÜ-ICONS EINFÜGEN ?
+\nErstellen Sie ein Verzeichnis /usr/share/enigma2/Kraven-user-icons und kopieren Sie Ihre Icons dorthin. Diese Icons haben Vorrang vor den internen Icons.
+\n\nWIE KANN ICH MEINE EIGENEN WETTER-ICONS EINFÜGEN ?
+\nErstellen Sie ein Verzeichnis /usr/share/enigma2/Kraven-user-icons und kopieren Sie Ihre Icons dorthin. Diese Icons haben Vorrang vor den internen Icons. Es werden nur YWeather-Iconsätze unterstützt."/>
 	</page>
 	<page title="FAQ">
-		<text value="Why is there no KravenHD in the skin selection ? ________________________
+		<text value="WHY IS THERE NO KRAVENHD IN THE SKIN SELECTION ?
 \nThe KravenHD skin must be generated first. Call the extension KravenHD, make your settings and save the skin with the green button. The skin will be active after a GUI restart.
-\n\nHow can I enter my weather location ? __________________________________
+\n\nHOW CAN I ENTER MY WEATHER LOCATION ?
 \nFirst enter what you will search for. In the next field please enter the search term. Up/Down will start the search. You can see the result in the preview pane.
-\n\nWhy are there no channel picons in the infobar ? ________________________
+\n\nWHY ARE THERE NO CHANNEL PICONS IN THE INFOBAR ?
 \nThe folder containing your picons has a wrong name. Rename the folder with your picons to 'picon'.
-\n\nWhy is the skin cut off at the edges ? ____________________________________
+\n\nWHY IS THE SKIN CUT OFF AT THE EDGES ?
 \nYou have probably turned on overscan on your TV. This function truncates the edges. Disable overscan or install the system extension 'uipositionersetup'. With this extension 'Position menu' you can compensate for the overscan.
-\n\nHow can I switch the settings profiles ? __________________________________
+\n\nHOW CAN I SWITCH THE SETTINGS PROFILES ?
 \nYou can switch the profiles with right/left on the 'active profile' option. On switching the prior profile gets saved automatically and the new one gets loaded. If the new one doesnt exist, it gets generated based on the settings of the prior one.
-\n\nHow can I copy my settings to a different box ? __________________________
+\n\nHOW CAN I COPY MY SETTINGS TO A DIFFERENT BOX ?
 \nYou can find the profiles under /etc/enigma2/kraven_profile_x. Just copy the file with your profile to the target box, choose it in the plugin there and create your skin again.
-\n\nHow can I clone a profile to take over certain settings ? __________________
+\n\nHOW CAN I CLONE A PROFILE ?
 \nYou can find the profiles under /etc/enigma2/kraven_profile_x. Just copy the source profile over the target profile. Choose the target profile in the plugin and create your skin again. You can also create new default profiles in this way. Just copy the source profile to /etc/enigma2/kraven_default_x.
-\n\n\n\nWhat can I do against distorted fonts or color frames ? __________________
+\n\n\n\nWHAT CAN I DO AGAINST DISTORTED FONTS / COLOR FRAMES ?
 \nDistorted fonts and color frames are sometimes caused by antialiasing. Navigate to 'Antialiasing Brightness' in the plugin and adjust the values according to the situation.
-\n\nHow can I insert my own menu icons ? __________________________________
-\nCreate a directory /usr/share/enigma2/Kraven-user-icons and copy your icons there. These icons have priority over the internal icons."/>
+\n\nHOW CAN I INSERT MY OWN MENU ICONS ?
+\nCreate a directory /usr/share/enigma2/Kraven-user-icons and copy your icons there. These icons have priority over the internal icons.
+\n\nHOW CAN I INSERT MY OWN WEATHER ICONS ?
+\nCreate a directory /usr/share/enigma2/Kraven-user-icons and copy your icons there. These icons have priority over the internal icons. Only YWeather icon sets are supported."/>
 	</page>
 </mphelp>

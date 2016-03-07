@@ -114,10 +114,16 @@ class KravenHDPig(Renderer):
 	def changed(self,what):
 		if InfoBar.instance:
 			current=self.source.getCurrentService()
-			if InfoBar.instance.session.pipshown:
-				InfoBar.instance.session.pip.playService(current)
+			service=current and current.toString()
+			radio=service and service.startswith("1:0:2")
+			if radio and InfoBar.instance.session.pipshown:
+				InfoBar.instance.servicelist.setCurrentSelection(current)
+				InfoBar.instance.servicelist.zap()
 			else:
-				InfoBar.instance.session.nav.playService(current)
+				if InfoBar.instance.session.pipshown:
+					InfoBar.instance.session.pip.playService(current)
+				else:
+					InfoBar.instance.session.nav.playService(current)
 
 	def onHide(self):
 		if self.instance:

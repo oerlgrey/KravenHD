@@ -1,10 +1,10 @@
   <!-- MSNWeatherPlugin -->
   <screen name="MSNWeatherPlugin" position="0,0" size="1280,720" title="Weather Plugin" flags="wfNoBorder" backgroundColor="transparent">
-    <widget backgroundColor="KravenIBbg2" font="Regular2;22" foregroundColor="KravenMFont2" position="85,25" render="Label" size="220,27" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
-    <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenMFont1" position="1095,25" size="100,27" font="Regular;22" halign="right" transparent="1" valign="center">
+    <widget backgroundColor="Kravenbg" font="Regular2;22" foregroundColor="KravenFont2" position="85,25" render="Label" size="220,27" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
+    <widget source="global.CurrentTime" render="Label" backgroundColor="Kravenbg" foregroundColor="KravenFont1" position="1095,25" size="100,27" font="Regular;22" halign="right" transparent="1" valign="center">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
-	<widget render="Label" source="caption" font="Regular2;22" foregroundColor="KravenMFont2" position="570,25" size="410,27" backgroundColor="KravenIBbg2" zPosition="3" transparent="1" halign="center" valign="center" noWrap="1" />
+	<widget render="Label" source="caption" font="Regular2;22" foregroundColor="KravenFont2" position="570,25" size="410,27" backgroundColor="Kravenbg" zPosition="3" transparent="1" halign="center" valign="center" noWrap="1" />
 	<widget render="Label" source="observationpoint" font="Regular;18" foregroundColor="KravenFont1" position="590,80" size="370,55" backgroundColor="Kravenbg" zPosition="3" transparent="1" halign="center" valign="top" />
 	<!--day1-->
 	<widget source="session.MSNWeather" render="Label" font="Regular;28" foregroundColor="white" position="288,15" size="180,45" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
@@ -91,7 +91,5 @@
 	  <convert type="MSNWeather">temperature_text,day5</convert>
 	</widget>
     <eLabel backgroundColor="Kravenbg" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
-    <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
-    <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
     <!--<text="MSNWeatherPlugin" position="70,0" />-->
   </screen>

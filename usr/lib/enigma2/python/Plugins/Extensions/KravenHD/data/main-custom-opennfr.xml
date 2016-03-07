@@ -121,15 +121,15 @@
 			}
 	</convert>
   </widget>
-  <widget name="packagetext" position="918,391" size="250,30" zPosition="1" font="Regular2; 25" halign="right" transparent="1" backgroundColor="Kravenbg" foregroundColor="KravenFont2" />
-  <widget name="packagenr" position="1181,391" size="50,30" zPosition="1" font="Regular2; 25" halign="right" transparent="1" backgroundColor="Kravenbg" foregroundColor="KravenFont2" />
-  <widget name="feedstatusRED" position="997,557" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
-  <widget name="feedstatusYELLOW" position="997,587" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
-  <widget name="feedstatusGREEN" position="997,617" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
-  <widget name="a_off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
-  <widget name="a_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
-  <widget name="a_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
-  <widget name="a_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+  <widget name="packagetext" position="918,340" size="250,30" zPosition="1" font="Regular2; 25" halign="right" transparent="1" backgroundColor="Kravenbg" foregroundColor="KravenFont2" />
+  <widget name="packagenr" position="1181,340" size="50,30" zPosition="1" font="Regular2; 25" halign="right" transparent="1" backgroundColor="Kravenbg" foregroundColor="KravenFont2" />
+  <widget name="feedstatusRED" position="997,506" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+  <widget name="feedstatusYELLOW" position="997,536" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+  <widget name="feedstatusGREEN" position="997,566" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1" />
+  <widget name="a_off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" position="954,500" zPosition="1" size="36,97" alphatest="on" />
+  <widget name="a_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" position="954,500" zPosition="1" size="36,97" alphatest="on" />
+  <widget name="a_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" position="954,500" zPosition="1" size="36,97" alphatest="on" />
+  <widget name="a_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" position="954,500" zPosition="1" size="36,97" alphatest="on" />
   <panel name="template_colorkey_text" />
   <panel name="template_menu_full" />
     <!--<text="SoftwarePanel" position="70,0" />-->

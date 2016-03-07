@@ -52,7 +52,7 @@
   </widget>
   <ePixmap pixmap="KravenHD/ibaro3.png" position="0,0" size="1280,145" zPosition="-9" alphatest="blend"/>
   <ePixmap pixmap="KravenHD/infobar-icons/aufloesung.png" position="1029,23" size="112,22" zPosition="1" alphatest="blend" />
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="1029,21" size="110,22" font="Regular; 19" halign="center" backgroundColor="KravenIBbg" foregroundColor="KravenIcon" transparent="1">
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="1030,21" size="110,22" font="Regular; 19" halign="center" backgroundColor="KravenIBbg" foregroundColor="KravenIcon" transparent="1">
     <convert type="KravenHDExtraInfo">Resolution</convert>
   </widget>
   <ePixmap pixmap="KravenHD/infobar-icons/aufloesung2.png" position="1149,23" size="116,22" zPosition="1" alphatest="blend" />

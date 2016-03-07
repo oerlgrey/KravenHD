@@ -1,5 +1,5 @@
-<!-- /* EMC VeryBigCover -->
-<screen name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
+  <!-- /* EMC VeryBigCover -->
+  <screen name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel backgroundColor="Kravenbg" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
     <eLabel backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenMFont2" halign="left" position="42,12" size="708,46" text="Enhanced Movie Center" transparent="1" />
     <widget name="Cover" position="64,70" size="342,513" zPosition="4" backgroundColor="Kravenbg" alphatest="on" transparent="0" />
@@ -28,12 +28,13 @@
     </widget>
     <widget name="wait" position="43,375" size="1198,50" zPosition="1" font="Regular; 32" foregroundColor="KravenFont1" backgroundColor="Kravenbg" halign="center" valign="center" />
     <widget source="global.CurrentTime" render="Label" position="1138,22" size="100,28" font="Regular;26" halign="right" backgroundColor="KravenIBbg2" transparent="1" valign="center" foregroundColor="KravenMFont1">
-      <convert type="ClockToText">Default</convert>
+      <convert type="KravenHDClockToText">Default</convert>
     </widget>
     <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- EMC -->
     <panel name="template_colorkey_text42" />
     <panel name="key_menu_ok_exit" />
     <!--<text="EMCSelection - very big Cover" position="42,0" />-->
-</screen>
-<!-- EMC VeryBigCover */-->
+  </screen>
+  <!-- EMC VeryBigCover */-->

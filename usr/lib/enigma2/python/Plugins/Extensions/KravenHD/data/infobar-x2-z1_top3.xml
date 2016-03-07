@@ -1,0 +1,92 @@
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_txt_off.png" position="568,23" size="43,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_txt_on.png" position="568,23" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="5">
+    <convert type="KravenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_dolby_off.png" position="618,23" size="43,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_dolby_on.png" position="618,23" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
+    <convert type="KravenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_format_off.png" position="668,23" size="43,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_format_on.png" position="668,23" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
+    <convert type="KravenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hd_off.png" position="718,23" size="43,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hd_on.png" position="718,23" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
+    <convert type="KravenHDServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">721,1980</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_crypt_off.png" position="768,23" size="43,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_crypt_on.png" position="768,23" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="5">
+    <convert type="KravenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hbbtv_off.png" position="818,23" size="43,22" zPosition="1" />
+  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hbbtv_on.png" position="818,23" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="5">
+    <convert type="KravenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="KravenHD/infobar-icons/a_off2.png" position="868,23" size="15,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/b_off2.png" position="888,23" size="15,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/c_off2.png" position="908,23" size="15,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/d_off2.png" position="928,23" size="15,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/e_off2.png" position="948,23" size="15,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/f_off2.png" position="968,23" size="15,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/g_off2.png" position="988,23" size="15,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/h_off2.png" position="1008,23" size="15,22" zPosition="1" alphatest="blend" />
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/a_on2.png" position="868,23" zPosition="2" size="15,22" alphatest="blend">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/b_on2.png" position="888,23" zPosition="2" size="15,22" alphatest="blend">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/c_on2.png" position="908,23" zPosition="2" size="15,22" alphatest="blend">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/d_on2.png" position="928,23" zPosition="2" size="15,22" alphatest="blend">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/e_on2.png" position="948,23" zPosition="2" size="15,22" alphatest="blend">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">16</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/f_on2.png" position="968,23" zPosition="2" size="15,22" alphatest="blend">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">32</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/g_on2.png" position="988,23" zPosition="2" size="15,22" alphatest="blend">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">64</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/h_on2.png" position="1008,23" zPosition="2" size="15,22" alphatest="blend">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">128</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="KravenHD/ibaro3.png" position="0,0" size="1280,145" zPosition="-9" alphatest="blend"/>
+  <ePixmap pixmap="KravenHD/infobar-icons/aufloesung.png" position="1030,23" size="112,22" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="1031,21" size="110,22" font="Regular; 19" halign="center" backgroundColor="KravenIBbg" foregroundColor="KravenIcon" transparent="1">
+    <convert type="KravenHDExtraInfo">Resolution</convert>
+  </widget>
+  <ePixmap pixmap="KravenHD/infobar-icons/aufloesung2.png" position="1148,23" size="116,22" zPosition="1" alphatest="blend" />
+  <widget backgroundColor="KravenIBbg" font="Regular;19" foregroundColor="KravenIcon" halign="left" position="1150,21" size="55,22" render="Label" source="session.CurrentService" transparent="1">
+    <convert  type="KravenHDExtServiceInfo">OrbitalPosition</convert>
+  </widget>
+  <widget render="Label" font="Regular; 19" position="1193,21" size="67,22" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIcon"  source="session.FrontendStatus">
+    <convert  type="KravenHDFrontendInfo">SNR</convert>
+  </widget>
+  <!--<eLabel text="  S:"  font="Regular; 19" position="1198,21" size="30,22" halign="left" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIcon" />-->

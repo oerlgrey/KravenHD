@@ -134,7 +134,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <panel name="template_menu_logo" />
     <!--<text="ManualFancontrol" position="70,0" />-->
   </screen>
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="Mute" position="49,40" size="70,70" title="Mute" zPosition="11">
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="Mute" position="49,40" size="70,70" title="Mute" zPosition="11">
     <ePixmap alphatest="blend" borderColor="transparent" borderWidth="0" pixmap="KravenHD/global-icons/mute.png" position="3,3" size="64,64" transparent="1" zPosition="-1" />
     <eLabel backgroundColor="Kravenbg" position="0,0" size="70,70" zPosition="-10" />
   </screen>
@@ -209,7 +209,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <panel name="key_exit" />
     <!--<text="SystemMemoryInfo" position="70,0" />-->
   </screen>
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="UnhandledKey" position="49,40" size="70,70" title="UnhandledKey" zPosition="100">
+  <screen backgroundColor="Kravenbg" flags="wfNoBorder" name="UnhandledKey" position="49,40" size="70,70" title="UnhandledKey" zPosition="100">
     <widget alphatest="blend" name="UnhandledKeyPixmap" pixmap="KravenHD/global-icons/error.png" position="3,3" size="64,64" zPosition="2" />
     <eLabel backgroundColor="Kravenbg" position="0,0" size="70,70" zPosition="1" />
   </screen>
@@ -295,15 +295,15 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EventView" position="0,0" size="1280,720" title="Eventview">
     <widget backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenMFont2" position="42,12" render="Label" size="708,46" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
     <widget backgroundColor="Kravenbg" scrollbarMode="showNever" font="Regular2; 26" name="epg_description" position="42,155" size="1196,443" transparent="1" />
-    <widget alphatest="blend" pixmap="KravenHD/global-icons/ico_dolby_on.png" position="42,615" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
+    <widget alphatest="blend" pixmap="KravenHD/global-icons/ico_dolby_on.png" position="42,605" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
       <convert type="KravenHDServiceInfo">IsMultichannel</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="KravenHD/global-icons/ico_format_on.png" position="92,615" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
+    <widget alphatest="blend" pixmap="KravenHD/global-icons/ico_format_on.png" position="92,605" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
       <convert type="KravenHDServiceInfo">IsWidescreen</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="KravenHD/global-icons/ico_hd_on.png" position="142,615" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
+    <widget alphatest="blend" pixmap="KravenHD/global-icons/ico_hd_on.png" position="142,605" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
       <convert type="KravenHDServiceInfo">VideoWidth</convert>
       <convert type="KravenHDValueRange">721,1980</convert>
       <convert type="ConditionalShowHide" />
@@ -317,6 +317,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <eLabel backgroundColor="Kravenbg" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,550" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- Menü -->
     <panel name="template_colorkey_text42" />
     <panel name="key_menu_ok_exit" />
     <!--<text="EventView" position="70,0" />-->
@@ -462,6 +463,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     </widget>
     <ePixmap pixmap="KravenHD/ibar.png" position="0,550" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- Menü -->
     <panel name="template_colorkey_text" />
     <panel name="key_menu_ok_exit" />
     <!--<text="GraphicalEPGPIG" position="70,0" />-->

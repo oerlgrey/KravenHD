@@ -1,0 +1,29 @@
+<!-- System-Info -->
+  <eLabel text="Temperatur:" position="1000,325" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+  <eLabel text="CPU-Last:" position="1000,345" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+  <eLabel text="Satellit:" position="1000,365" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+  <eLabel text="Drehzahl:" position="1145,325" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+  <eLabel text="Systemlast:" position="1145,345" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+  <eLabel text="Signal:" position="1145,365" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2" />
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1090,325" size="40,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+    <convert type="KravenHDTempFanInfo">TempInfo</convert>   
+  </widget>
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1220,325" size="40,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+    <convert type="KravenHDTempFanInfo">FanInfo</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1090,345" size="40,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+    <convert type="KravenHDCpuUsage">$0</convert>   
+  </widget>
+    <widget source="session.CurrentService" render="Label" font="Regular;16" position="1220,345" size="40,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+    <convert type="KravenHDLayoutInfo">LoadAvg</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1080,365" size="50,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+    <convert type="KravenHDExtServiceInfo">OrbitalPosition</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" font="Regular;16" position="1220,365" size="40,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+    <convert type="KravenHDFrontendInfo">SNR</convert>
+  </widget>
+  <eLabel backgroundColor="KravenIBLine" position="980,315" size="300,2" zPosition="-8" />
+  <eLabel backgroundColor="KravenIBLine" position="980,393" size="300,2" zPosition="-8" />
+  <eLabel backgroundColor="KravenIBLine" position="980,317" size="2,76" zPosition="-8" />
+  <eLabel position="980,315" size="300,80" backgroundColor="KravenIBbg" zPosition="-9" />

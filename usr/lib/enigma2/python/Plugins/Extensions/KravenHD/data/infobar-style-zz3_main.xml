@@ -23,3 +23,5 @@
   <widget font="Regular; 30" foregroundColor="KravenIBFont2"  halign="left" position="510,666" render="KravenHDRunningText" options="movetype=running,startpoint=0,startdelay=5000,steptime=80,wrap=0,always=0,repeat=2,oneshot=1" size="437,42" source="session.Event_Next" valign="top" backgroundColor="KravenIBbg" transparent="1" zPosition="1">
     <convert type="KravenHDEventName">Name</convert>
   </widget>
+  <!--<eLabel position="0,535" size="1280,185" backgroundColor="KravenIBbg" zPosition="-9" />
+  <eLabel position="0,535" size="1280,2" backgroundColor="KravenIBLine" zPosition="-8" />-->

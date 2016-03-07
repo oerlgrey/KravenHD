@@ -99,6 +99,7 @@ class KravenHDWeather_realtek(Poll, Converter, object):
 	def reset(self):
 		global WEATHER_LOAD
 		WEATHER_LOAD = True
+		self.timer.stop()
 
 	def get_Data(self):
 		global WEATHER_DATA
@@ -122,14 +123,15 @@ class KravenHDWeather_realtek(Poll, Converter, object):
 				for child in root.findall('forecast'):
 					for item in child.findall('day'):
 						for entrie in item.findall('daytime'):
-							index += 1
-							self.data['Day_%s' % str(index)] = {}
+							if index > 0:
+								self.data['Day_%s' % str(index)] = {}
+								self.data['Day_%s' % str(index)]['skycodeday'] = entrie.find('weathericon').text
+								self.data['Day_%s' % str(index)]['skytextday'] = entrie.find('txtshort').text
 							self.data['Day_%s' % str(index)]['day'] = item.find('obsdate').text
 							self.data['Day_%s' % str(index)]['low'] = entrie.find('lowtemperature').text
 							self.data['Day_%s' % str(index)]['high'] = entrie.find('hightemperature').text
-							self.data['Day_%s' % str(index)]['skycodeday'] = entrie.find('weathericon').text
-							self.data['Day_%s' % str(index)]['skytextday'] = entrie.find('txtshort').text
 							self.data['Day_%s' % str(index)]['precip'] = entrie.find('rainamount').text
+							index += 1
 				WEATHER_DATA = self.data
 				WEATHER_LOAD = False
 			except:
@@ -141,7 +143,7 @@ class KravenHDWeather_realtek(Poll, Converter, object):
 
 	def getMinTemp(self, day):
 		try:
-			temp = self.data['Day_%s' % str(day+1)]['low']
+			temp = self.data['Day_%s' % str(day)]['low']
 			if temp == '':
 				return temp
 			return str(temp) + '°'
@@ -150,7 +152,7 @@ class KravenHDWeather_realtek(Poll, Converter, object):
 
 	def getMaxTemp(self, day):
 		try:
-			temp = self.data['Day_%s' % str(day+1)]['high']
+			temp = self.data['Day_%s' % str(day)]['high']
 			if temp == '':
 				return temp
 			return str(temp) + '°'
@@ -161,7 +163,7 @@ class KravenHDWeather_realtek(Poll, Converter, object):
 		try:
 			temp = self.data['Day_0']['temp']
 			feels = self.data['Day_0']['feelslike']
-			return str(temp) + '°C' + _(", feels ") + str(feels) + '°C'
+			return str(int(temp)) + '°C' + _(", feels ") + str(int(feels)) + '°C'
 		except:
 			return 'N/A'
 
@@ -174,14 +176,21 @@ class KravenHDWeather_realtek(Poll, Converter, object):
 
 	def getWeatherDes(self, day):
 		try:
-			weather = self.data['Day_%s' % str(day+1)]['skytextday']
+			weather = self.data['Day_%s' % str(day)]['skytextday']
+			weather = weather.replace("Ã¤","ä")
+			weather = weather.replace("Ã¶","ö")
+			weather = weather.replace("Ã¼","ü")
+			weather = weather.replace("ÃŸ","ß")
+			weather = weather.replace("Ã„","Ä")
+			weather = weather.replace("Ã–","Ö")
+			weather = weather.replace("Ãœ","Ü")
 			return str(weather)
 		except:
 			return ''
 
 	def getWeatherIcon(self, day):
 		try:
-			weathericon = self.data['Day_%s' % str(day+1)]['skycodeday']
+			weathericon = self.data['Day_%s' % str(day)]['skycodeday']
 			return str(weathericon)
 		except:
 			return 'N/A'
@@ -196,7 +205,7 @@ class KravenHDWeather_realtek(Poll, Converter, object):
 
 	def getWeatherDate(self, day):
 		try:
-			weather_date = self.data['Day_%s' % str(day+1)]['day']
+			weather_date = self.data['Day_%s' % str(day)]['day']
 			date_struc = datetime.strptime(weather_date,"%m/%d/%Y")
 			weather_dayname = date_struc.strftime('%a')
 			return _(str(weather_dayname).upper()[:2])
@@ -219,49 +228,85 @@ class KravenHDWeather_realtek(Poll, Converter, object):
 
 	def getMeteoFont(self, day):
 		try:
-			font = self.data['Day_%s' % str(day+1)]['skycodeday']
-			font_icon = '0x' + str(20 + int(font))
-			weather_font_icon = unichr(int(font_icon, 16)).encode('utf-8')
-			return str(weather_font_icon)
+			font = self.data['Day_%s' % str(day)]['skycodeday']
+			font = int(font)
+			if font in (1,2):
+				icon = "B" # sun
+			elif font in (3,4):
+				icon = "H" # sun + cloud
+			elif font == 5:
+				icon = "E" # mist
+			elif font in (6,7,8,38):
+				icon = "Y" # clouds
+			elif font == 11:
+				icon = "M" # fog
+			elif font in (12,13,14,39,40):
+				icon = "Q" # shower
+			elif font in (15,16,17,41,42):
+				icon = "P" # thunderstorm
+			elif font == 18:
+				icon = "R" # rain
+			elif font in (19,20,21,43):
+				icon = "U" # flurries
+			elif font in (22,23,44):
+				icon = "W" # snow
+			elif font == 24:
+				icon = "G" # ice
+			elif font in (25,26,29):
+				icon = "X" # sleet
+			elif font in (30,31):
+				icon = "'" # temperature
+			elif font == 32:
+				icon = "F" # wind
+			elif font in (33,34):
+				icon = "C" # moon
+			elif font in (35,36,37):
+				icon = "I" # moon + cloud
+			else:
+				icon = "(" # compass
+			return str(icon)
 		except:
-			return 'N/A'
+			return "(" # compass
 
 	def getWind(self):
-		direct = int(float(self.data['Day_0']['winddisplay']))
-		if direct >= 0 and direct <= 20:
-			wdirect = _('N')
-		elif direct >= 21 and direct <= 35:
-			wdirect = _('N-NE')
-		elif direct >= 36 and direct <= 55:
-			wdirect = _('NE')
-		elif direct >= 56 and direct <= 70:
-			wdirect = _('E-NE')
-		elif direct >= 71 and direct <= 110:
-			wdirect = _('E')
-		elif direct >= 111 and direct <= 125:
-			wdirect = _('E-SE')
-		elif direct >= 126 and direct <= 145:
-			wdirect = _('SE')
-		elif direct >= 146 and direct <= 160:
-			wdirect = _('S-SE')
-		elif direct >= 161 and direct <= 200:
-			wdirect = _('S')
-		elif direct >= 201 and direct <= 215:
-			wdirect = _('S-SW')
-		elif direct >= 216 and direct <= 235:
-			wdirect = _('SW')
-		elif direct >= 236 and direct <= 250:
-			wdirect = _('W-SW')
-		elif direct >= 251 and direct <= 290:
-			wdirect = _('W')
-		elif direct >= 291 and direct <= 305:
-			wdirect = _('W-NW')
-		elif direct >= 306 and direct <= 325:
-			wdirect = _('NW')
-		elif direct >= 326 and direct <= 340:
-			wdirect = _('N-NW')
-		elif direct >= 341 and direct <= 360:
-			wdirect = _('N')
-		else:
-			wdirect = "N/A"
-		return wdirect
+		try:
+			direct = int(float(self.data['Day_0']['winddisplay']))
+			if direct >= 0 and direct <= 20:
+				wdirect = _('N')
+			elif direct >= 21 and direct <= 35:
+				wdirect = _('N-NE')
+			elif direct >= 36 and direct <= 55:
+				wdirect = _('NE')
+			elif direct >= 56 and direct <= 70:
+				wdirect = _('E-NE')
+			elif direct >= 71 and direct <= 110:
+				wdirect = _('E')
+			elif direct >= 111 and direct <= 125:
+				wdirect = _('E-SE')
+			elif direct >= 126 and direct <= 145:
+				wdirect = _('SE')
+			elif direct >= 146 and direct <= 160:
+				wdirect = _('S-SE')
+			elif direct >= 161 and direct <= 200:
+				wdirect = _('S')
+			elif direct >= 201 and direct <= 215:
+				wdirect = _('S-SW')
+			elif direct >= 216 and direct <= 235:
+				wdirect = _('SW')
+			elif direct >= 236 and direct <= 250:
+				wdirect = _('W-SW')
+			elif direct >= 251 and direct <= 290:
+				wdirect = _('W')
+			elif direct >= 291 and direct <= 305:
+				wdirect = _('W-NW')
+			elif direct >= 306 and direct <= 325:
+				wdirect = _('NW')
+			elif direct >= 326 and direct <= 340:
+				wdirect = _('N-NW')
+			elif direct >= 341 and direct <= 360:
+				wdirect = _('N')
+			else:
+				wdirect = "N/A"
+			return wdirect
+		except:
+			return 'N/A'

@@ -171,7 +171,7 @@ class KravenHDMenuIconPath(Poll,Converter,object):
 	
 	@cached
 	def getText(self):
-		try:
+		try: # is it a menu? then we handle it according to current selection
 			cur = self.source.current
 			if cur and len(cur) > 2:
 				selection = cur[2]
@@ -194,7 +194,12 @@ class KravenHDMenuIconPath(Poll,Converter,object):
 				if name != "" and fileExists(name):
 					return name
 		except:
-			pass
+			try: # is it a screen? then we handle it according to title
+				text=self.source.text
+				if text in ("zapHistory","Senderhistorie"):
+					return self.logo
+			except:
+				pass
 		name=self.userpath+"plugin.png"
 		if fileExists(name):
 			return name

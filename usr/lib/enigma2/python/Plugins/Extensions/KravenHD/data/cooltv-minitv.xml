@@ -26,16 +26,16 @@
     </widget>
     <widget CoolDayColor="KravenFont1" CoolDayPos="0" CoolDaySize="50" CoolEventColor="KravenFont1" CoolEventFont="Regular;22" CoolEventPos="146" CoolFont="Regular;22" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolTimeColor="KravenFont1" CoolTimePos="70" CoolTimeSize="66" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" itemHeight="30" name="list" position="438,60" size="800,360" transparent="1" zPosition="-8" />
     <widget backgroundColor="KravenIBCoolbg" name="date" position="950,22" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
-    <widget source="session.VideoPicture" render="Pig" position="42,60" size="384,216" zPosition="-11" backgroundColor="transparent" />
-    <eLabel backgroundColor="#00000000" position="42,60" size="384,216" transparent="0" zPosition="-12" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,273" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="423,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,60" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,276" size="1280,444" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,60" size="42,216" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="426,60" size="854,216" transparent="0" zPosition="-10" />
+    <widget source="session.VideoPicture" render="Pig" position="42,65" size="368,207" zPosition="-11" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="42,65" size="368,207" transparent="0" zPosition="-12" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,269" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="407,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,65" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,272" size="1280,448" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,65" size="42,207" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="410,65" size="870,207" transparent="0" zPosition="-10" />
     <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBCoolbg" foregroundColor="KravenMFont1" position="1138,22" size="100,28" font="Regular;26" halign="right" transparent="1" valign="center">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
@@ -49,6 +49,7 @@
     <ePixmap backgroundColor="Kravenbg2" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="792,692" size="200,5" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- CoolTV -->
     <panel name="key_menu_ok_exit" />
     <!--<text="CoolSingleGuide - MiniTV" position="42,0" />-->
   </screen>
@@ -71,21 +72,21 @@
       <convert type="KravenHDRemainingToText">InMinutes</convert>
     </widget>
     <eLabel backgroundColor="Kravenbg2" font="Regular;22" foregroundColor="KravenFont1" halign="left" position="915,73" size="300,30" text="Similar broadcasts:" transparent="1" zPosition="3" />
-    <widget backgroundColor="Kravenbg2" font="Regular;22" foregroundColor="KravenFont1" halign="left" name="CoolSimilar" position="915,100" size="336,180" transparent="1" zPosition="3" />
-    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" name="CoolShort" position="450,160" size="400,130" transparent="1" zPosition="3" />
+    <widget backgroundColor="Kravenbg2" font="Regular;22" foregroundColor="KravenFont1" halign="left" name="CoolSimilar" scrollbarWidth="5" position="915,100" size="336,180" transparent="1" zPosition="3" />
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" name="CoolShort" scrollbarWidth="5" position="450,160" size="400,130" transparent="1" zPosition="3" />
     <widget CoolBackColorSel="KravenSelection" CoolDayColor="orange" CoolDayPos="5" CoolDaySize="60" CoolDurationColor="blue" CoolDurationPos="1065" CoolDurationSize="115" CoolEventColor="orange" CoolEventPos="265" CoolFont="Regular;26" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolTimeColor="#3B98C9" CoolTimePos="65" CoolTimeSize="200" CoolTunerCol="#606060" backgroundColor="Kravenbg2" itemHeight="32" name="CoolEvent" position="42,295" size="1196,35" transparent="1" zPosition="5" />
-    <widget backgroundColor="Kravenbg2" font="Regular;28" foregroundColor="KravenFont1" name="CoolDescription" position="42,340" size="1196,296" transparent="1" zPosition="5" />
+    <widget backgroundColor="Kravenbg2" font="Regular;28" foregroundColor="KravenFont1" name="CoolDescription" scrollbarWidth="5" position="42,340" size="1196,296" transparent="1" zPosition="5" />
     <widget backgroundColor="KravenIBCoolbg" name="date" position="950,22" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
-    <widget source="session.VideoPicture" render="Pig" position="42,60" size="384,216" zPosition="-11" backgroundColor="transparent" />
-    <eLabel backgroundColor="#00000000" position="42,60" size="384,216" transparent="0" zPosition="-12" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,273" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="423,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,60" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,276" size="1280,444" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,60" size="42,216" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="426,60" size="854,216" transparent="0" zPosition="-10" />
+    <widget source="session.VideoPicture" render="Pig" position="42,65" size="368,207" zPosition="-11" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="42,65" size="368,207" transparent="0" zPosition="-12" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,269" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="407,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,65" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,272" size="1280,448" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,65" size="42,207" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="410,65" size="870,207" transparent="0" zPosition="-10" />
     <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBCoolbg" foregroundColor="KravenMFont1" position="1138,22" size="100,28" font="Regular;26" halign="right" transparent="1" valign="center">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
@@ -99,6 +100,7 @@
     <ePixmap backgroundColor="Kravenbg2" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="792,692" size="200,5" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- CoolTV -->
     <panel name="key_menu_ok_exit" />
     <!--<text="CoolInfoGuide - MiniTV" position="42,0" />-->
   </screen>
@@ -143,6 +145,7 @@
     <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- CoolTV -->
     <panel name="key_menu_ok_exit" />
     <!--<text="CoolTVGuide - MiniTV" position="42,0" />-->
   </screen>
@@ -176,16 +179,16 @@
     <widget name="timeline5" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
     <widget alphatest="on" name="timeline_now" pixmap="KravenHD/epg/timelineCooltv.jpg" position="0,313" size="3,335" zPosition="2" />
     <widget backgroundColor="KravenIBCoolbg" name="date" position="950,22" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
-    <widget source="session.VideoPicture" render="Pig" position="42,60" size="384,216" zPosition="-11" backgroundColor="transparent" />
-    <eLabel backgroundColor="#00000000" position="42,60" size="384,216" transparent="0" zPosition="-12" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,273" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="423,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,60" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,276" size="1280,444" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,60" size="42,216" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="426,60" size="854,216" transparent="0" zPosition="-10" />
+    <widget source="session.VideoPicture" render="Pig" position="42,65" size="368,207" zPosition="-11" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="42,65" size="368,207" transparent="0" zPosition="-12" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,269" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="407,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,65" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,272" size="1280,448" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,65" size="42,207" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="410,65" size="870,207" transparent="0" zPosition="-10" />
     <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBCoolbg" foregroundColor="KravenMFont1" position="1138,22" size="100,28" font="Regular;26" halign="right" transparent="1" valign="center">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
@@ -199,6 +202,7 @@
     <ePixmap backgroundColor="Kravenbg2" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="792,692" size="200,5" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- CoolTV -->
     <panel name="key_menu_ok_exit" />
     <!--<text="CoolNiceGuide - MiniTV" position="42,0" />-->
   </screen>
@@ -223,16 +227,16 @@
       <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget CoolDateColor="KravenFont1" CoolDateHPos="0" CoolDatePos="70" CoolDateSize="70" CoolDayColor="KravenFont1" CoolDayHPos="0" CoolDayPos="0" CoolDaySize="50" CoolEventColor="KravenFont1" CoolEventFont="Regular;24" CoolEventHPos="0" CoolEventPos="500" CoolEventSize="706" CoolFont="Regular;24" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolRecEventBackColor="Kravenbg2" CoolServiceColor="KravenFont1" CoolServiceFont="Regular;24" CoolServiceHPos="0" CoolServicePos="230" CoolServiceSize="280" CoolTimeColor="KravenFont1" CoolTimeHPos="0" CoolTimePos="150" CoolTimeSize="70" backgroundColor="Kravenbg2" itemHeight="32" name="list" position="42,300" size="1196,320" transparent="1" zPosition="3" />
-    <widget source="session.VideoPicture" render="Pig" position="42,60" size="384,216" zPosition="-11" backgroundColor="transparent" />
-    <eLabel backgroundColor="#00000000" position="42,60" size="384,216" transparent="0" zPosition="-12" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,273" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="423,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,60" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,276" size="1280,444" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,60" size="42,216" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="426,60" size="854,216" transparent="0" zPosition="-10" />
+    <widget source="session.VideoPicture" render="Pig" position="42,65" size="368,207" zPosition="-11" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="42,65" size="368,207" transparent="0" zPosition="-12" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,269" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="407,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,65" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,272" size="1280,448" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,65" size="42,207" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="410,65" size="870,207" transparent="0" zPosition="-10" />
     <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBCoolbg" foregroundColor="KravenMFont1" position="1138,22" size="100,28" font="Regular;26" halign="right" transparent="1" valign="center">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
@@ -246,6 +250,7 @@
     <ePixmap backgroundColor="Kravenbg2" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="792,692" size="200,5" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- CoolTV -->
     <panel name="key_menu_ok_exit" />
     <!--<text="CoolSearch - MiniTV" position="42,0" />-->
   </screen>
@@ -271,16 +276,16 @@
     </widget>
     <widget CoolBackColorSel="KravenSelection" CoolCurrentCol="KravenSelFont" CoolBarColor="KravenFont1" CoolBarHPos="7" CoolBarHigh="17" CoolBarPos="270" CoolBarSize="150" CoolDurationPos="1081" CoolDurationColor="KravenFont1" CoolDurationSize="105" CoolEventColor="KravenFont1" CoolEventFont="Regular;24" CoolEventHPos="0" CoolEventPos="435" CoolEventSize="626" CoolFont="Regular;24" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="KravenFont1" CoolServiceFont="Regular;24" CoolServiceHPos="0" CoolServicePos="0" CoolServiceSize="235" CoolTimeHPos="0" CoolTimePos="260" CoolTimeSize="150" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" itemHeight="30" name="list" position="42,300" size="1196,330" transparent="1" zPosition="25" />
     <widget backgroundColor="KravenIBCoolbg" name="date" position="950,22" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
-    <widget source="session.VideoPicture" render="Pig" position="42,60" size="384,216" zPosition="-11" backgroundColor="transparent" />
-    <eLabel backgroundColor="#00000000" position="42,60" size="384,216" transparent="0" zPosition="-12" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,273" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="423,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,60" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,276" size="1280,444" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,60" size="42,216" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="426,60" size="854,216" transparent="0" zPosition="-10" />
+    <widget source="session.VideoPicture" render="Pig" position="42,65" size="368,207" zPosition="-11" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="42,65" size="368,207" transparent="0" zPosition="-12" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,269" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="407,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,65" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,272" size="1280,448" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,65" size="42,207" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="410,65" size="870,207" transparent="0" zPosition="-10" />
     <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBCoolbg" foregroundColor="KravenMFont1" position="1138,22" size="100,28" font="Regular;26" halign="right" transparent="1" valign="center">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
@@ -294,6 +299,7 @@
     <ePixmap backgroundColor="Kravenbg2" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="792,692" size="200,5" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- CoolTV -->
     <panel name="key_menu_ok_exit" />
     <!--<text="CoolEasyGuide - MiniTV" position="42,0" />-->
   </screen>
@@ -327,16 +333,16 @@
     <widget name="timeline5" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
     <widget alphatest="on" name="timeline_now" pixmap="KravenHD/epg/timelineCooltv.jpg" position="0,311" size="3,337" zPosition="2" />
     <widget backgroundColor="KravenIBCoolbg" name="date" position="950,22" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
-    <widget source="session.VideoPicture" render="Pig" position="42,60" size="384,216" zPosition="-11" backgroundColor="transparent" />
-    <eLabel backgroundColor="#00000000" position="42,60" size="384,216" transparent="0" zPosition="-12" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,273" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="423,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,60" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,276" size="1280,444" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,60" size="42,216" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="426,60" size="854,216" transparent="0" zPosition="-10" />
+    <widget source="session.VideoPicture" render="Pig" position="42,65" size="368,207" zPosition="-11" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="42,65" size="368,207" transparent="0" zPosition="-12" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,269" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="407,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,65" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,272" size="1280,448" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,65" size="42,207" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="410,65" size="870,207" transparent="0" zPosition="-10" />
     <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBCoolbg" foregroundColor="KravenMFont1" position="1138,22" size="100,28" font="Regular;26" halign="right" transparent="1" valign="center">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
@@ -350,6 +356,7 @@
     <ePixmap backgroundColor="Kravenbg2" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="792,692" size="200,5" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- CoolTV -->
     <panel name="key_menu_ok_exit" />
     <!--<text="CoolMultiGuide - MiniTV" position="42,0" />-->
   </screen>
@@ -394,22 +401,23 @@
     <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- CoolTV -->
     <panel name="key_menu_ok_exit" />
     <!--<text="CoolTinyGuide - MiniTV" position="42,0" />-->
   </screen>
   <!-- CoolChannelGuide -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolChannelGuide" position="0,0" size="1280,720" title="Cool Channel Guide">
     <eLabel text="Cool Channel Guide" position="42,18" size="350,40" backgroundColor="KravenIBCoolbg" font="Regular2;30" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
-    <widget source="session.VideoPicture" render="Pig" position="42,60" size="384,216" zPosition="-11" backgroundColor="transparent" />
-    <eLabel backgroundColor="#00000000" position="42,60" size="384,216" transparent="0" zPosition="-12" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,273" size="384,3" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="42,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="423,60" size="3,216" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,60" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,276" size="1280,444" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="0,60" size="42,216" transparent="0" zPosition="-10" />
-    <eLabel backgroundColor="Kravenbg2" position="426,60" size="854,216" transparent="0" zPosition="-10" />
+    <widget source="session.VideoPicture" render="Pig" position="42,65" size="368,207" zPosition="-11" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="42,65" size="368,207" transparent="0" zPosition="-12" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,269" size="368,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="42,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="407,65" size="3,207" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,65" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,272" size="1280,448" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="0,65" size="42,207" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="Kravenbg2" position="410,65" size="870,207" transparent="0" zPosition="-10" />
     <widget backgroundColor="Kravenbg2" font="Regular;22" foregroundColor="KravenFont1" halign="left" position="42,290" render="Label" size="60,30" source="Event" transparent="1">
       <convert type="KravenHDEventTime">StartTime</convert>
       <convert type="KravenHDClockToText">Format:%H:%M</convert>
@@ -446,6 +454,7 @@
     <ePixmap backgroundColor="Kravenbg2" alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="792,692" size="200,5" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
+	<!-- CoolTV -->
     <panel name="key_menu_ok_exit" />
     <!--<text="CoolChannelGuide - MiniTV" position="42,0" />-->
   </screen>

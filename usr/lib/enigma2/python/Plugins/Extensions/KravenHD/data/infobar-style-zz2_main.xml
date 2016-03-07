@@ -60,3 +60,5 @@
     <convert type="KravenHDServiceInfo">IsCrypted</convert>
     <convert type="ConditionalShowHide" />
   </widget>
+  <!--<eLabel position="0,535" size="1280,185" backgroundColor="KravenIBbg" zPosition="-9" />
+  <eLabel position="0,535" size="1280,2" backgroundColor="KravenIBLine" zPosition="-8" />-->

@@ -103,6 +103,7 @@ class KravenHDWeather_accu(Poll, Converter, object):
 	def reset(self):
 		global WEATHER_LOAD
 		WEATHER_LOAD = True
+		self.timer.stop()
 
 	def get_Data(self):
 		global WEATHER_DATA1
@@ -149,14 +150,20 @@ class KravenHDWeather_accu(Poll, Converter, object):
 
 	def getWeatherDes(self, day):
 		try:
-			weather = self.data['DailyForecasts'][day]['Day']['IconPhrase']
+			if day == 0:
+				weather = self.data2[0]['WeatherText']
+			else:
+				weather = self.data['DailyForecasts'][day]['Day']['IconPhrase']
 			return str(weather)
 		except:
 			return ''
 
 	def getWeatherIcon(self, day):
 		try:
-			weathericon = self.data['DailyForecasts'][day]['Day']['Icon']
+			if day == 0:
+				weathericon = self.data2[0]['WeatherIcon']
+			else:
+				weathericon = self.data['DailyForecasts'][day]['Day']['Icon']
 			return str(weathericon)
 		except:
 			return 'N/A'
@@ -178,7 +185,7 @@ class KravenHDWeather_accu(Poll, Converter, object):
 
 	def getCompWind(self):
 		try:
-			wind = self.data['DailyForecasts'][0]['Day']['Wind']['Direction']['Localized']
+			wind = self.data2[0]['Wind']['Direction']['Localized']
 			speed = self.getSpeed()
 			return str(speed) + _(" from ") + str(wind)
 		except:
@@ -186,7 +193,7 @@ class KravenHDWeather_accu(Poll, Converter, object):
 
 	def getSpeed(self):
 		try:
-			windspeed = self.data['DailyForecasts'][0]['Day']['Wind']['Speed']['Value']
+			windspeed = self.data2[0]['Wind']['Speed']['Metric']['Value']
 			return str(int(windspeed)) + ' km/h'
 		except:
 			return 'N/A'
@@ -202,18 +209,54 @@ class KravenHDWeather_accu(Poll, Converter, object):
 		try:
 			temp = self.data2[0]['Temperature']['Metric']['Value']
 			feels = self.data2[0]['RealFeelTemperature']['Metric']['Value']
-			return str(temp) + '°C' + _(", feels ") + str(feels) + '°C'
+			return str(int(round(temp))) + '°C' + _(", feels ") + str(int(round(feels))) + '°C'
 		except:
 			return 'N/A'
 
 	def getMeteoFont(self, day):
 		try:
-			font = self.data['DailyForecasts'][day]['Day']['Icon']
-			font_icon = '0x' + str(20 + font)
-			weather_font_icon = unichr(int(font_icon, 16)).encode('utf-8')
-			return str(weather_font_icon)
+			if day == 0:
+				font = self.data2[0]['WeatherIcon']
+			else:
+				font = self.data['DailyForecasts'][day]['Day']['Icon']
+			font = int(font)
+			if font in (1,2):
+				icon = "B" # sun
+			elif font in (3,4):
+				icon = "H" # sun + cloud
+			elif font == 5:
+				icon = "E" # mist
+			elif font in (6,7,8,38):
+				icon = "Y" # clouds
+			elif font == 11:
+				icon = "M" # fog
+			elif font in (12,13,14,39,40):
+				icon = "Q" # shower
+			elif font in (15,16,17,41,42):
+				icon = "P" # thunderstorm
+			elif font == 18:
+				icon = "R" # rain
+			elif font in (19,20,21,43):
+				icon = "U" # flurries
+			elif font in (22,23,44):
+				icon = "W" # snow
+			elif font == 24:
+				icon = "G" # ice
+			elif font in (25,26,29):
+				icon = "X" # sleet
+			elif font in (30,31):
+				icon = "'" # temperature
+			elif font == 32:
+				icon = "F" # wind
+			elif font in (33,34):
+				icon = "C" # moon
+			elif font in (35,36,37):
+				icon = "I" # moon + cloud
+			else:
+				icon = "(" # compass
+			return str(icon)
 		except:
-			return 'N/A'
+			return "(" # compass
 
 	def getRainMM(self, day):
 		try:

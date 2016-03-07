@@ -118,3 +118,5 @@
   <widget alphatest="blend" position="20,472" size="400,240" render="KravenHDXPicon" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
+  <!--<eLabel position="0,473" size="1280,247" backgroundColor="KravenIBbg" zPosition="-9" />
+  <eLabel position="0,473" size="1280,2" backgroundColor="KravenIBLine" zPosition="-8" />-->

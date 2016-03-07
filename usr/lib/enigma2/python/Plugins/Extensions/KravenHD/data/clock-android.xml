@@ -1,17 +1,17 @@
     <!--/* Clock -->
-  <widget backgroundColor="#00999999" font="Regular; 26" halign="center" position="1070,624" render="Label" size="53,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
+  <widget backgroundColor="#00999999" font="Regular; 26" halign="center" render="Label" position="1070,624" size="53,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
     <convert type="KravenHDClockToText">Format:%H</convert>
   </widget>
-  <widget backgroundColor="#00999999" font="Regular; 25" halign="center" position="1117,622" render="Label" size="53,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
+  <widget backgroundColor="#00999999" font="Regular; 25" halign="center" render="Label" position="1117,622" size="53,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
     <convert type="KravenHDClockToText">Format:%M</convert>
   </widget>
-  <widget backgroundColor="KravenIBbg" font="Regular2; 16" foregroundColor="KravenIBFont2" halign="center" position="1054,685" render="Label" size="200,30" source="global.CurrentTime" transparent="1" valign="top" zPosition="2">
+  <widget backgroundColor="KravenIBbg" font="Regular2; 16" foregroundColor="KravenIBFont2" halign="center" position="1054,685" size="200,30" render="Label" source="global.CurrentTime" transparent="1" valign="top" zPosition="2">
     <convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
   </widget>
-  <widget alphatest="blend" render="KravenHDWetterPicon" position="1054,568" size="200,122" source="session.CurrentService" path="clock" transparent="1" zPosition="1">
+  <widget alphatest="blend" render="KravenHDAndroidPicon" position="1054,568" size="200,122" source="session.CurrentService" path="clock" transparent="1" zPosition="1">
     <convert type="KravenHDWeather">Day_0,MeteoIcon </convert>
   </widget>
-  <widget noWrap="1" backgroundColor="#00666666" font="Regular; 17" foregroundColor="KravenAndroid" render="Label" position="1175,653" size="60,25" source="session.CurrentService" zPosition="2" halign="center" valign="center" transparent="1">
+  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;20" foregroundColor="KravenAndroid" render="Label" position="1130,655" size="100,25" source="session.CurrentService" zPosition="2" halign="right" valign="center" transparent="1">
     <convert type="KravenHDWeather">Day_0,DayTemp</convert>
   </widget>
     <!--Clock */-->

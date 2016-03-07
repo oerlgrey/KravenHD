@@ -124,3 +124,5 @@
     <convert  type="KravenHDFrontendInfo">SNR</convert>
   </widget>
   <!--<eLabel text="  S:"  font="Regular; 19" position="720,688" size="30,22" halign="left" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIcon" />-->
+  <!--<eLabel position="0,522" size="1280,198" backgroundColor="KravenIBbg" zPosition="-9" />
+  <eLabel position="0,522" size="1280,2" backgroundColor="KravenIBLine" zPosition="-8" />-->
