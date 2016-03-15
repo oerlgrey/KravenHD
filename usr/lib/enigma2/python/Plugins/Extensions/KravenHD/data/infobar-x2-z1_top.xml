@@ -35,27 +35,47 @@
     <convert type="ConditionalShowHide" />
   </widget>
   <ePixmap pixmap="KravenHD/infobar-icons/a_off.png" position="925,23" size="20,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/b_off.png" position="950,23" size="20,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/c_off.png" position="974,23" size="20,22" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="KravenHD/infobar-icons/d_off.png" position="999,23" size="20,22" zPosition="1" alphatest="blend" />
   <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/a_on.png" position="925,23" zPosition="2" size="20,22" alphatest="blend">
     <convert type="TunerInfo">TunerUseMask</convert>
     <convert type="ValueBitTest">1</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap pixmap="KravenHD/infobar-icons/b_off.png" position="950,23" size="20,22" zPosition="1" alphatest="blend" />
   <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/b_on.png" position="950,23" zPosition="2" size="20,22" alphatest="blend">
     <convert type="TunerInfo">TunerUseMask</convert>
     <convert type="ValueBitTest">2</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap pixmap="KravenHD/infobar-icons/c_off.png" position="974,23" size="20,22" zPosition="1" alphatest="blend" />
   <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/c_on.png" position="974,23" zPosition="2" size="20,22" alphatest="blend">
     <convert type="TunerInfo">TunerUseMask</convert>
     <convert type="ValueBitTest">4</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap pixmap="KravenHD/infobar-icons/d_off.png" position="999,23" size="20,22" zPosition="1" alphatest="blend" />
   <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/d_on.png" position="999,23" zPosition="2" size="20,22" alphatest="blend">
     <convert type="TunerInfo">TunerUseMask</convert>
     <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/a_green.png" position="925,23" zPosition="3" size="20,22" alphatest="blend">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/b_green.png" position="950,23" zPosition="3" size="20,22" alphatest="blend">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/c_green.png" position="974,23" zPosition="3" size="20,22" alphatest="blend">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/d_green.png" position="999,23" zPosition="3" size="20,22" alphatest="blend">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">3,3</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <ePixmap pixmap="KravenHD/ibaro3.png" position="0,0" size="1280,145" zPosition="-9" alphatest="blend"/>

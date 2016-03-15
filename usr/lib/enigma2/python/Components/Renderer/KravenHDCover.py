@@ -28,7 +28,7 @@ class KravenHDCover(Renderer):
 			if isinstance(self.source, ServiceEvent):
 				service = self.source.getCurrentService()
 			elif isinstance(self.source, CurrentService):
-				service = self.source.getCurrentServiceReference()
+				service = self.source.getCurrentServiceRef()
 			if service:
 				sname = service.getPath()
 			else:

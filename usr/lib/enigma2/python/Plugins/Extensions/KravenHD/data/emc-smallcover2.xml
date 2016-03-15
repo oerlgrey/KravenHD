@@ -36,7 +36,7 @@
 	<widget source="Service" render="Label" position="1143,615" size="95,25" font="Regular; 20" halign="right" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
 	  <convert type="EMCMovieInfo">FileSize</convert>
 	</widget>
-	<widget name="Cover" position="1148,70" size="100,151" zPosition="4" backgroundColor="Kravenbg" alphatest="on" transparent="0" />
+	<widget name="Cover" position="1148,70" size="100,150" zPosition="4" backgroundColor="Kravenbg" alphatest="on" transparent="0" />
 	<eLabel backgroundColor="Kravenbg" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
 	<widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenMFont1" position="1138,22" size="100,28" font="Regular;26" halign="right" transparent="1" valign="center">
 	  <convert type="KravenHDClockToText">Default</convert>

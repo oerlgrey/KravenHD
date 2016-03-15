@@ -2,26 +2,32 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieSelection" position="0,0" size="1280,720" title="">
     <widget name="waitingtext" position="0,0" size="0,0" />
 	<eLabel text="MovieSelection" position="70,12" size="708,46" backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
-    <widget name="list" position="70,110" size="708,540" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
-    <widget backgroundColor="Kravenbg" font="Regular;17" halign="right" name="freeDiskSpace" position="70,80" size="708,24" transparent="1" valign="center" />
-    <widget backgroundColor="Kravenbg" font="Regular2;30" foregroundColor="KravenFont2" position="848,55" render="Label" size="377,75" source="Service" transparent="1" zPosition="1">
-      <convert type="KravenHDEventName">Name</convert>
-    </widget>
-    <widget backgroundColor="Kravenbg" font="Regular2;17" foregroundColor="KravenFont2" halign="left" position="848,624" render="Label" size="70,24" source="Service" transparent="1" zPosition="1">
-      <convert type="ServiceTime">Duration</convert>
-      <convert type="KravenHDClockToText">AsLength</convert>
-    </widget>
-    <widget backgroundColor="Kravenbg" font="Regular2;17" foregroundColor="KravenFont2" halign="right" position="1135,624" render="Label" size="100, 24" source="Service" transparent="1" zPosition="1">
-      <convert type="MovieInfo">FileSize</convert>
-    </widget>
-    <widget backgroundColor="Kravenbg" font="Regular;19" foregroundColor="KravenFont1" position="848,140" render="Label" size="397,324" source="Service" transparent="1" valign="top">
-      <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
-    </widget>
-    <eLabel backgroundColor="Kravenbg" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
     <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenMFont1" position="1138,22" size="100,28" font="Regular;26" halign="right" transparent="1" valign="center">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
-	<widget source="Service" render="Cover" position="970,475" size="120,180" zPosition="4" backgroundColor="Kravenbg" alphatest="blend" transparent="1" />
+    <widget backgroundColor="Kravenbg" font="Regular;19" foregroundColor="KravenFont2" halign="right" name="freeDiskSpace" position="70,75" size="708,25" transparent="1" valign="center" />
+    <widget name="list" position="70,105" size="708,540" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+	<widget source="Service" render="Label" position="822,75" size="312,60" font="Regular2;24" halign="left" valign="top" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
+	  <convert type="KravenHDEventName">Name</convert>
+	</widget>
+	<widget source="Service" render="Label" position="822,140" size="312,26" font="Regular;20" noWrap="1" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1">
+	  <convert type="MovieInfo">RecordServiceName</convert>
+	</widget>
+	<widget source="Service" render="Label" position="822,170" size="312,54" font="Regular;22" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" halign="left" valign="top">
+	  <convert type="KravenHDEventName">Description</convert>
+	</widget>
+	<widget source="Service" render="KravenHDCover" position="1138,75" size="100,150" zPosition="4" backgroundColor="Kravenbg2" alphatest="blend" transparent="1" />
+	<widget source="Service" render="KravenHDRunningText" position="822,235" size="416,378" font="Regular;22" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" halign="left" valign="top">
+	  <convert type="KravenHDEventName">ExtendedDescription</convert>
+	</widget>
+    <widget backgroundColor="Kravenbg" font="Regular2;17" foregroundColor="KravenFont2" halign="left" position="822,621" render="Label" size="70,24" source="Service" transparent="1" zPosition="1">
+      <convert type="ServiceTime">Duration</convert>
+      <convert type="KravenHDClockToText">AsLength</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg" font="Regular2;17" foregroundColor="KravenFont2" halign="right" position="1122,621" render="Label" size="116,24" source="Service" transparent="1" zPosition="1">
+      <convert type="MovieInfo">FileSize</convert>
+    </widget>
+    <eLabel backgroundColor="Kravenbg" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,570" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
 	<!-- EMC -->

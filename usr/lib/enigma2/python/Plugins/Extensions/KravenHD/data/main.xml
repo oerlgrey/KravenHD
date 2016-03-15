@@ -7,20 +7,10 @@
     <!--<text="AboutReleaseNotes" position="70,0" />-->
   </screen>
  <!-- ChoiceBox -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="ChoiceBox" position="0,0" size="1280,720">
-    <eLabel backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenMFont2" text="Auswahlfenster" position="70,12" size="708,46" halign="left" valign="center" zPosition="1" transparent="1" />
-	<widget backgroundColor="Kravenbg3" font="Regular;20" foregroundColor="KravenFont1" position="70,80" size="708,27" render="Label" source="Title" halign="left" valign="center" transparent="1" />
-	<widget backgroundColor="Kravenbg3" font="Regular;20" foregroundColor="KravenFont1" position="70,107" size="708,80" halign="left" valign="center" name="text" transparent="1" />
-	<widget backgroundColor="Kravenbg3" enableWrapAround="1" itemHeight="30" name="list" scrollbarMode="showOnDemand" position="70,193" size="708,450" transparent="1" />
-    <panel name="template_menu_logo2" />
-    <panel name="key_ok_exit" />
-    <!--<text="ChoiceBox" position="70,0" />-->
-  </screen>
- <!-- ChoiceBoxExt -->
-  <screen name="ChoiceBoxExt" position="130,140" size="600,400" title="Input" flags="wfNoBorder">
-    <widget name="title" backgroundColor="Kravenbg" font="Regular;26" foregroundColor="KravenFont2" position="20,8" size="530,32" halign="left" valign="center" transparent="1" />
+  <screen name="ChoiceBox" position="130,140" size="600,400" title="Input" flags="wfNoBorder">
+    <widget source="Title" render="Label" backgroundColor="Kravenbg" font="Regular2;26" foregroundColor="KravenFont2" position="20,8" size="530,32" halign="left" valign="center" transparent="1" />
 	<widget name="text" position="20,45" size="530,27" backgroundColor="Kravenbg" font="Regular;22" foregroundColor="KravenFont1" />
-	<widget name="list" position="0,80" size="550,300" itemHeight="25" scrollbarMode="showOnDemand" transparent="1"/>
+	<widget name="list" position="0,80" size="550,360" backgroundColor="Kravenbg" itemHeight="30" scrollbarMode="showOnDemand" transparent="1"/>
 	<applet type="onLayoutFinish">
 # this should be factored out into some helper code, but currently demonstrates applets.
 from enigma import eSize, ePoint
@@ -32,9 +22,9 @@ textsize = self["text"].getSize()
 # y size still must be fixed in font stuff...
 textsize = (textsize[0] + 70, textsize[1] + 70)
 count = len(self.list)
-if count &gt; 10:
-        count = 10
-offset = 25 * count
+if count &gt; 15:
+        count = 15
+offset = 30 * count
 wsizex = textsize[0] + 30
 wsizey = textsize[1] + offset + 20
 
@@ -49,7 +39,7 @@ self.instance.resize(eSize(*wsize))
 self["text"].instance.resize(eSize(*textsize))
 
 # move list
-listsize = (wsizex - 20, 25 * count)
+listsize = (wsizex - 20, 30 * count)
 self["list"].instance.move(ePoint(10, textsize[1]))
 self["list"].instance.resize(eSize(*listsize))
 
@@ -57,12 +47,6 @@ self["list"].instance.resize(eSize(*listsize))
 newwidth = wsize[0]
 self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
 	</applet>
-  </screen>
-  <screen name="PinInputExt" position="center,center" size="500,210" title="PIN code needed" flags="wfNoBorder" zPosition="1">
-	<widget name="text" position="10,15" size="480,27" font="Regular;22" halign="center" backgroundColor="Kravenbg" foregroundColor="KravenFont1" />
-	<widget name="service" position="10,60" size="480,32" font="Regular;26" halign="center" backgroundColor="Kravenbg" foregroundColor="KravenFont2" />
-	<widget name="tries" position="10,105" size="480,27" font="Regular;22" halign="center" backgroundColor="Kravenbg" foregroundColor="KravenFont1" />
-	<widget name="input" position="10,150" size="480,40" font="Regular;26" halign="center" backgroundColor="Kravenbg" foregroundColor="KravenFont1" />
   </screen>
   <screen name="ConsoleBox" position="0,0" size="1280,720" title="Console Box" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="text" font="Regular;20" itemHeight="30" position="70,120" size="708,420" transparent="1" scrollbarMode="showOnDemand" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" />
@@ -226,20 +210,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <eLabel backgroundColor="KravenBorder" position="0,0" size="2,350" zPosition="2" />
     <eLabel backgroundColor="KravenBorder" position="713,0" size="2,350" zPosition="2" />
   </screen>
-  <screen name="VirtualKeyBoardExt" position="center,center" backgroundColor="Kravenbg" flags="wfNoBorder" size="766,468" zPosition="9999" title="VirtualKeyBoard">
-    <widget name="title" backgroundColor="Kravenbg" font="Regular2;26" foregroundColor="KravenFont2" position="10,8" size="530,32" halign="left" valign="center" transparent="1" />
-    <ePixmap pixmap="skin_default/vkey_text.png" position="10,80" zPosition="-4" size="542,52" alphatest="on" />
-    <widget name="header" position="10,50" size="500,25" font="Regular;20" transparent="1" noWrap="1" foregroundColor="KravenFont1" />
-    <widget name="text" position="12,80" size="535,52" font="Regular;40" transparent="1" noWrap="1" halign="left" foregroundColor="KravenFont1" />
-    <widget name="list" position="10,145" size="695,225" selectionDisabled="1" itemHeight="45" foregroundColor="white" backgroundColor="#00151515" transparent="1" />
-    <widget source="country" render="Pixmap" position="643,86" size="60,40" alphatest="on" borderWidth="2" borderColor="KravenBorder" zPosition="1">
-      <convert type="ValueToPixmap">LanguageCode</convert>
-    </widget>
-    <eLabel backgroundColor="KravenBorder" position="0,0" size="766,2" zPosition="2" />
-    <eLabel backgroundColor="KravenBorder" position="0,466" size="766,2" zPosition="2" />
-    <eLabel backgroundColor="KravenBorder" position="0,0" size="2,468" zPosition="2" />
-    <eLabel backgroundColor="KravenBorder" position="764,0" size="2,468" zPosition="2" />
-  </screen>
   <!-- ********** EPG ********** -->
     <!-- EPGSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection">
@@ -247,7 +217,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <widget backgroundColor="KravenIBbg2" alphatest="blend" position="820,16" render="Picon" size="67,40" source="Service" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget backgroundColor="Kravenbg" font="Regular2; 22" foregroundColor="KravenFont2" position="820,80" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="418,540" source="Event" valign="top" transparent="1" zPosition="-8">
+    <widget font="Regular2; 24" backgroundColor="Kravenbg" halign="left" noWrap="1" foregroundColor="KravenFont2" position="820,75" size="418,30" render="Label" source="Service" transparent="1" valign="center" zPosition="1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg" font="Regular; 22" foregroundColor="KravenFont1" position="820,110" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="418,513" source="Event" valign="top" transparent="1" zPosition="-8">
       <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <panel name="template_menu_full" />
@@ -730,7 +703,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
   </screen>
   <!-- MPHelp -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MPHelp" position="0,0" size="1280,720" title="Help">
-    <widget name="detailtext" position="70,80" size="708,540" scrollbarMode="showOnDemand" zPosition="10" font="Regular;22" foregroundColor="KravenFont1" transparent="1" halign="left" valign="top" />
+    <widget backgroundColor="Kravenbg3" name="detailtext" position="70,80" size="708,540" scrollbarMode="showOnDemand" zPosition="10" font="Regular;22" foregroundColor="KravenFont1" transparent="1" halign="left" valign="top" />
     <panel name="template_menu_logo" />
     <panel name="template_colorkey_text_source" />
     <panel name="key_exit" />
@@ -1673,47 +1646,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <!-- MessageBox -->
   <screen name="MessageBox" flags="wfNoBorder" position="240,177" size="800,10" zPosition="1" title="Message" backgroundColor="Kravenbg">
-    <widget backgroundColor="Kravenbg" font="Regular2;22" foregroundColor="KravenFont2" halign="left" position="7,4" render="Label" size="514,28" source="Title" transparent="1" zPosition="1" />
-    <widget name="text" position="94,49" size="680,0" font="Regular;22" foregroundColor="KravenFont1" backgroundColor="Kravenbg" />
-    <widget name="ErrorPixmap" pixmap="KravenHD/global-icons/attention.png" position="20,50" size="53,53" alphatest="blend" />
-    <widget name="QuestionPixmap" pixmap="KravenHD/global-icons/question.png" position="20,50" size="53,53" alphatest="blend" />
-    <widget name="InfoPixmap" pixmap="KravenHD/global-icons/info.png" position="20,50" size="53,53" alphatest="blend" />
-    <widget name="list" position="21,136" size="760,320" itemHeight="32" transparent="1" />
-    <applet type="onLayoutFinish">
-# this should be factored out into some helper code,but currently demonstrates applets.
-from enigma import eSize,ePoint
-orgwidth = self.instance.size().width()
-orgpos = self.instance.position()
-textsize = self["text"].getSize()
-
-textsize = (textsize[0] + 60,textsize[1] + 60)
-offset = 30
-if self.type == self.TYPE_YESNO:
-	offset = 107
-wsizex = textsize[0] + 107
-wsizey = textsize[1] + offset
-if (280 &gt; wsizex):
-	wsizex = 280
-wsize = (wsizex,wsizey)
-
-# resize
-self.instance.resize(eSize(*wsize))
-
-# resize label
-self["text"].instance.resize(eSize(*textsize))
-
-# move list
-listsize = (wsizex - 20,64)
-self["list"].instance.move(ePoint(10,textsize[1] + 27))
-self["list"].instance.resize(eSize(*listsize))
-
-# center window
-newwidth = wsize[0]
-self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
-		</applet>
-  </screen>
-  <!-- MessageBoxExt -->
-  <screen name="MessageBoxExt" flags="wfNoBorder" position="240,177" size="800,10" zPosition="1" title="Message" backgroundColor="Kravenbg">
     <widget backgroundColor="Kravenbg" font="Regular2;22" foregroundColor="KravenFont2" halign="left" position="7,4" render="Label" size="514,28" source="Title" transparent="1" zPosition="1" />
     <widget name="text" position="94,49" size="680,0" font="Regular;22" foregroundColor="KravenFont1" backgroundColor="Kravenbg" />
     <widget name="ErrorPixmap" pixmap="KravenHD/global-icons/attention.png" position="20,50" size="53,53" alphatest="blend" />

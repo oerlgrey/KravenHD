@@ -116,6 +116,46 @@
     <convert type="ValueBitTest">128</convert>
     <convert type="ConditionalShowHide" />
   </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/a_green2.png" position="627,696" zPosition="3" size="15,22" alphatest="blend">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/b_green2.png" position="647,696" zPosition="3" size="15,22" alphatest="blend">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/c_green2.png" position="667,696" zPosition="3" size="15,22" alphatest="blend">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/d_green2.png" position="687,696" zPosition="3" size="15,22" alphatest="blend">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">3,3</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/e_green2.png" position="707,696" zPosition="3" size="15,22" alphatest="blend">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">4,4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/f_green2.png" position="727,696" zPosition="3" size="15,22" alphatest="blend">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">5,5</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/g_green2.png" position="747,696" zPosition="3" size="15,22" alphatest="blend">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">6,6</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/h_green2.png" position="767,696" zPosition="3" size="15,22" alphatest="blend">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">7,7</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
   <widget backgroundColor="KravenIBbg" font="Regular; 22" foregroundColor="KravenIBFont2" halign="left" noWrap="1" position="367,656" render="Label" size="70,35" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
     <convert type="KravenHDEventTime">EndTime</convert>
     <convert type="KravenHDClockToText">Default</convert>

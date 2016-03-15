@@ -26,7 +26,7 @@
     </widget>
     <widget name="helperimage" position="847,210" size="368,207" zPosition="1" backgroundColor="Kravenbg" />
     <widget source="Canvas" render="Canvas" position="847,210" size="368,207" zPosition="-1" backgroundColor="Kravenbg" />
-    <widget source="help" render="Label" position="847,440" size="368,196" font="Regular2;20" backgroundColor="Kravenbg" foregroundColor="KravenFont2" halign="left" valign="top" transparent="1" />
+    <widget source="help" render="Label" position="847,440" size="368,196" font="Regular2;20" backgroundColor="Kravenbg" foregroundColor="KravenFont2" halign="center" valign="top" transparent="1" />
     <ePixmap pixmap="KravenHD/ibar.png" position="0,550" size="1280,310" alphatest="blend" zPosition="-9" />
     <ePixmap pixmap="KravenHD/ibaro2.png" position="0,0" size="1280,125" alphatest="blend" zPosition="-9" />
 	<!-- Menü -->
@@ -362,17 +362,17 @@
   <!-- ********** DVDPlayer ********** -->
   <!-- DVDPlayer -->
  <screen backgroundColor="transparent" flags="wfNoBorder" name="DVDPlayer" position="0,0" size="1280,720" title="InfoBar">
-    <widget backgroundColor="KravenIBbg" foregroundColor="KravenMFont2" font="Regular2; 30" noWrap="1" position="212,621" render="Label" size="619,35" source="session.CurrentService" transparent="1" valign="top" zPosition="1">
+    <widget backgroundColor="KravenIBbg" foregroundColor="KravenIBFont2" font="Regular2; 30" noWrap="1" position="212,621" render="Label" size="619,35" source="session.CurrentService" transparent="1" valign="top" zPosition="1">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget backgroundColor="KravenIBbg" foregroundColor="KravenMFont1" font="Regular; 22" halign="left" position="850,671" render="Label" size="120,40" source="session.CurrentService" transparent="1" zPosition="1">
+    <widget backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular; 22" halign="left" position="850,671" render="Label" size="120,40" source="session.CurrentService" transparent="1" zPosition="1">
       <convert type="ServicePosition">Length</convert>
     </widget>
-    <eLabel backgroundColor="KravenIBbg" foregroundColor="KravenMFont1" font="Regular; 22" halign="center" position="800,671" size="50,40" text="von" transparent="1" zPosition="1" />
-    <widget backgroundColor="KravenIBbg" foregroundColor="KravenMFont1" font="Regular; 22" halign="right" position="680,671" render="Label" size="120,40" source="session.CurrentService" transparent="1" zPosition="1">
+    <eLabel backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular; 22" halign="center" position="800,671" size="50,40" text="von" transparent="1" zPosition="1" />
+    <widget backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular; 22" halign="right" position="680,671" render="Label" size="120,40" source="session.CurrentService" transparent="1" zPosition="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
-    <widget backgroundColor="KravenIBbg" foregroundColor="KravenMFont1" font="Regular; 20" halign="right" position="948,632" render="Label" size="122,25" source="session.CurrentService" transparent="1" valign="Center" zPosition="1">
+    <widget backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular; 20" halign="right" position="948,632" render="Label" size="122,25" source="session.CurrentService" transparent="1" valign="Center" zPosition="1">
       <convert type="ServicePosition">Remaining</convert>
     </widget>
     <widget position="212,660" render="PositionGauge" size="858,7" source="session.CurrentService" transparent="1">
@@ -385,11 +385,20 @@
     <widget name="subtitleLabel" position="329,671" size="110,40" font="Regular; 18" backgroundColor="KravenIBbg" transparent="1" />
     <widget name="audioLabel" position="212,671" size="110,40" font="Regular; 18" backgroundColor="KravenIBbg" transparent="1" />
     <widget name="chapterLabel" position="447,672" size="225,40" font="Regular; 18" backgroundColor="KravenIBbg" transparent="1" />
-    <widget source="global.CurrentTime" position="976,671" size="94,40" font="Regular; 22" render="Label" halign="right" zPosition="12" backgroundColor="KravenIBbg" foregroundColor="KravenMFont1" transparent="1">
+    <widget source="global.CurrentTime" position="976,671" size="94,40" font="Regular; 22" render="Label" halign="right" zPosition="12" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" transparent="1">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
     <ePixmap pixmap="KravenHD/ibar.png" position="0,490" size="1280,310" zPosition="-9" />
   </screen>
+
+  <!-- DVD File Browser -->
+  <screen name="FileBrowser" position="0,0" size="1280,720" title="DVD File Browser" flags="wfNoBorder" backgroundColor="transparent">
+	<widget backgroundColor="Kravenbg3" name="filelist" itemHeight="30" position="70,80" size="708,510" zPosition="10" foregroundColor="KravenFont1" font="Regular;22" scrollbarMode="showOnDemand" />
+    <panel name="template_menu_logo" />
+    <panel name="template_colorkey_text_source" />
+    <!--<text="FileBrowser" position="70,0" />-->
+  </screen>
+
   <!-- ********** EcmInfo ********** -->
   <!-- EcmInfoScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EcmInfoScreen" position="600,150" size="600, 80" zPosition="1">
@@ -406,64 +415,6 @@
     <widget font="Regular2;16" foregroundColor="KravenFont1" halign="center" name="ecmInfo" noWrap="1" position="18,44" size="560,25" transparent="1" valign="center" zPosition="3" />
   </screen>
   <!-- ********** EMC ********** -->
-  <!-- EMCMediaCenter -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="EMCMediaCenter" position="0,0" size="1280,720" title="InfoBar">
-	<widget source="global.CurrentTime" position="957,677" size="110,30" font="Regular; 20" render="Label" halign="right" valign="center" zPosition="12" backgroundColor="KravenIBbg" foregroundColor="KravenMFont1" transparent="1">
-	  <convert type="KravenHDClockToText">Default</convert>
-	</widget>
-    <widget backgroundColor="KravenIBbg" font="Regular; 30" foregroundColor="KravenMFont2" noWrap="1" position="210,620" render="Label" size="708,40" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-    <widget backgroundColor="KravenIBbg" font="Regular; 18" halign="left" position="676,681" render="Label" size="80,25" source="Service" transparent="1" valign="center" zPosition="1" foregroundColor="KravenMFont1">
-      <convert type="EMCServicePosition">Length</convert>
-    </widget>
-    <eLabel backgroundColor="KravenIBbg" font="Regular; 18" halign="center" position="655,681" size="20,25" text="/" transparent="1" valign="center" zPosition="1" foregroundColor="KravenMFont1" />
-    <widget backgroundColor="KravenIBbg" font="Regular; 18" halign="right" position="536,681" render="Label" size="120,25" source="Service" transparent="1" valign="center" zPosition="1" foregroundColor="KravenMFont1">
-      <convert type="EMCServicePosition">Position</convert>
-    </widget>
-    <widget backgroundColor="KravenIBbg" font="Regular; 20" halign="right" position="926,629" render="Label" size="100,35" source="Service" transparent="1" valign="center" zPosition="1" foregroundColor="KravenMFont1">
-      <convert type="EMCServicePosition">Remaining</convert>
-    </widget>
-    <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_rec_off.png" position="360,680" size="43,22" zPosition="1" />
-    <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_rec_on.png" position="360,680" render="Pixmap" size="43,22" source="session.RecordState" zPosition="5">
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_dolby_off.png" position="210,680" size="43,22" zPosition="1" />
-    <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_dolby_on.png" position="210,680" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
-      <convert type="KravenHDServiceInfo">IsMultichannel</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_format_off.png" position="260,680" size="43,22" zPosition="1" />
-    <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_format_on.png" position="260,680" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
-      <convert type="KravenHDServiceInfo">IsWidescreen</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hd_off.png" position="310,680" size="43,22" zPosition="1" />
-    <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hd_on.png" position="310,680" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
-      <convert type="KravenHDServiceInfo">VideoWidth</convert>
-      <convert type="ValueRange">721,1980</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="KravenHD/infobar-icons/aufloesung3.png" position="410,680" size="124,22" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="411,677" size="122,30" font="Regular; 20" halign="center" backgroundColor="KravenIBbg" foregroundColor="KravenIcon" transparent="1">
-      <convert type="KravenHDExtraInfo">Resolution</convert>
-	</widget>
-    <widget position="210,666" render="EMCPositionGauge" size="858,9" source="Service" transparent="1">
-      <convert type="EMCServicePosition">Gauge</convert>
-    </widget>
-    <widget borderWidth="0" position="210,668" render="Progress" size="858,5" source="Service" transparent="1" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress858.png">
-      <convert type="EMCServicePosition">Position</convert>
-    </widget>
-    <eLabel backgroundColor="KravenIBbg" font="Regular; 20" foregroundColor="KravenMFont1" halign="right" position="1017,629" size="50,35" text="min" transparent="1" valign="center" zPosition="1" />
-    <eLabel backgroundColor="KravenLine" position="210,670" size="858,1" zPosition="-1" />
-    <widget source="session.CurrentService" render="Label" position="858,677" size="60,30" font="Regular; 20" halign="center" valign="center" backgroundColor="KravenIBbg" transparent="1" zPosition="1" text="13:45" foregroundColor="KravenMFont1">
-      <convert type="KravenHDServiceEndTime">EndTime</convert>
-    </widget>
-    <eLabel backgroundColor="KravenIBbg" font="Regular; 20" halign="left" position="918,677" size="60,30" text="Uhr" transparent="1" valign="center" zPosition="1" foregroundColor="KravenMFont1" />
-    <eLabel backgroundColor="KravenIBbg" font="Regular; 20" halign="right" position="737,677" size="120,30" text="läuft bis " transparent="1" valign="center" zPosition="1" foregroundColor="KravenMFont1" />
-    <widget name="Cover" position="1124,560" size="100,150" zPosition="1" alphatest="on" />
-    <ePixmap pixmap="KravenHD/ibar.png" position="0,490" size="1280,310" zPosition="-9" />
-  </screen>
   <!-- EnhancedMovieCenterMenu -->
   <screen name="EnhancedMovieCenterMenu" position="0,0" size="1280,720" title="EnhancedMovieCenterMenu" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="config" position="70,80" size="708,375" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Kravenbg3" transparent="1" font="Regular; 20" />
@@ -964,63 +915,6 @@
     <panel name="template_menu_logo" />
     <panel name="template_colorkey_text" />
     <!--<text="iDreamMerlin" position="70,0" />-->
-  </screen>
-  <!-- MoviePlayer -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="MoviePlayer" position="0,0" size="1280,720" title="InfoBar">
-	<widget source="global.CurrentTime" position="957,677" size="110,30" font="Regular; 20" render="Label" halign="right" valign="center" zPosition="12" backgroundColor="KravenIBbg" foregroundColor="KravenMFont1" transparent="1">
-	  <convert type="KravenHDClockToText">Default</convert>
-	</widget>
-	<widget backgroundColor="KravenIBbg" font="Regular; 30" foregroundColor="KravenMFont2" noWrap="1" position="210,620" render="Label" size="708,40" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
-	  <convert type="ServiceName">Name</convert>
-	</widget>
-	<widget backgroundColor="KravenIBbg" font="Regular; 18" halign="left" position="676,681" render="Label" size="80,25" source="session.CurrentService" transparent="1" valign="center" zPosition="1" foregroundColor="KravenMFont1">
-	  <convert type="ServicePosition">Length</convert>
-	</widget>
-	<eLabel backgroundColor="KravenIBbg" font="Regular; 18" halign="center" position="655,681" size="20,25" text="/" transparent="1" valign="center" zPosition="1" foregroundColor="KravenMFont1" />
-	<widget backgroundColor="KravenIBbg" font="Regular; 18" halign="right" position="536,681" render="Label" size="120,25" source="session.CurrentService" transparent="1" valign="center" zPosition="1" foregroundColor="KravenMFont1">
-	  <convert type="ServicePosition">Position</convert>
-	</widget>
-	<widget backgroundColor="KravenIBbg" font="Regular; 20" halign="right" position="926,629" render="Label" size="100,35" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
-	  <convert type="ServicePosition">Remaining</convert>
-	</widget>
-	<ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_rec_off.png" position="360,680" size="43,22" zPosition="1" />
-	<widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_rec_on.png" position="360,680" render="Pixmap" size="43,22" source="session.RecordState" zPosition="5">
-	  <convert type="ConditionalShowHide" />
-	</widget>
-	<ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_dolby_off.png" position="210,680" size="43,22" zPosition="1" />
-	<widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_dolby_on.png" position="210,680" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
-	  <convert type="KravenHDServiceInfo">IsMultichannel</convert>
-	  <convert type="ConditionalShowHide" />
-	</widget>
-	<ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_format_off.png" position="260,680" size="43,22" zPosition="1" />
-	<widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_format_on.png" position="260,680" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
-	  <convert type="KravenHDServiceInfo">IsWidescreen</convert>
-	  <convert type="ConditionalShowHide" />
-	</widget>
-	<ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hd_off.png" position="310,680" size="43,22" zPosition="1" />
-	<widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hd_on.png" position="310,680" render="Pixmap" size="43,22" source="session.CurrentService" zPosition="2">
-      <convert type="KravenHDServiceInfo">VideoWidth</convert>
-      <convert type="ValueRange">721,1980</convert>
-	  <convert type="ConditionalShowHide" />
-	</widget>
-    <ePixmap pixmap="KravenHD/infobar-icons/aufloesung3.png" position="410,680" size="124,22" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="411,677" size="122,30" font="Regular; 20" halign="center" backgroundColor="KravenIBbg" foregroundColor="KravenIcon" transparent="1">
-      <convert type="KravenHDExtraInfo">Resolution</convert>
-	</widget>
-	<widget position="210,666" render="PositionGauge" size="858,9" source="session.CurrentService" transparent="1">
-	  <convert type="ServicePosition">Gauge</convert>
-	</widget>
-	<widget borderWidth="0" position="210,668" render="Progress" size="858,5" source="session.CurrentService" transparent="1" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress858.png">
-	  <convert type="ServicePosition">Position</convert>
-	</widget>
-	<eLabel backgroundColor="KravenIBbg" font="Regular; 20" halign="right" position="1017,629" size="50,35" text="min" transparent="1" valign="center" zPosition="1" />
-	<eLabel backgroundColor="KravenLine" position="210,670" size="858,1" zPosition="-1" />
-	<widget source="session.CurrentService" render="Label" position="858,677" size="60,30" font="Regular; 20" halign="center" valign="center" backgroundColor="KravenIBbg" transparent="1" zPosition="1" text="13:45" foregroundColor="KravenMFont1">
-	  <convert type="KravenHDServiceEndTime">EndTime</convert>
-	</widget>
-	<eLabel backgroundColor="KravenIBbg" font="Regular; 20" halign="left" position="918,677" size="60,30" text="Uhr" transparent="1" valign="center" zPosition="1" foregroundColor="KravenMFont1" />
-	<eLabel backgroundColor="KravenIBbg" font="Regular; 20" halign="right" position="737,677" size="120,30" text="läuft bis " transparent="1" valign="center" zPosition="1" foregroundColor="KravenMFont1" />
-    <ePixmap pixmap="KravenHD/ibar.png" position="0,490" size="1280,310" zPosition="-9" />
   </screen>
   <!-- MovieEpgSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieEpgSetup" position="0,0" size="1280,720" title="MovieEpg Setup">
@@ -1682,13 +1576,13 @@
   <!-- YoutubeTVWindow -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="YoutubeTVWindow" position="0,0" size="1280,720" title="Start YouTube TV">
     <widget name="information" position="70,80" size="708,480" scrollbarMode="showOnDemand" backgroundColor="Kravenbg3" transparent="1" />
-    <panel name="template_colorkey_text" />
+    <panel name="template_colorkey_text_source" />
     <panel name="template_menu_logo" />
     <!--<text="YoutubeTVWindow" position="70,0" />-->
   </screen>
   <!-- YoutubeTVSettings -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="YoutubeTVSettings" position="0,0" size="1280,720" title="YouTube TV Settings">
-    <widget itemHeight="30" name="config" position="70,80" size="708,480" scrollbarMode="showOnDemand" transparent="1" />
+    <widget itemHeight="30" name="config" position="70,80" size="708,480" scrollbarMode="showOnDemand" backgroundColor="Kravenbg3" transparent="1" />
     <panel name="template_colorkey_text_source" />
     <panel name="template_menu_logo" />
     <!--<text="YoutubeTVSettings" position="70,0" />-->
