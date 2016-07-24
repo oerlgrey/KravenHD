@@ -2033,7 +2033,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   <screen name="doFlashImage" position="0,0" size="1280,720" title="doFlashImage" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="imageList" position="70,80" size="708,540" scrollbarMode="showOnDemand" font="Regular;21" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="Kravenbg3" />
     <panel name="template_menu_logo" />
-    <panel name="template_colorkey_text" />
+    <panel name="template_colorkey_text_source" />
     <panel name="key_exit" />
     <!--<text="doFlashImage" position="70,0" />-->
   </screen>
@@ -2042,7 +2042,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget name="info-online" position="70,80" zPosition="1" size="708,242" font="Regular;22" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="Kravenbg3" />
     <widget name="info-local" position="70,340" zPosition="1" size="708,242" font="Regular;22" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="Kravenbg3" />
     <panel name="template_menu_logo" />
-    <panel name="template_colorkey_text" />
+    <panel name="template_colorkey_text_source" />
     <panel name="key_exit" />
     <!--<text="FlashOnline" position="70,0" />-->
   </screen>
@@ -2465,7 +2465,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget name="info-hdd" position="70,80" zPosition="1" size="708,150" font="Regular;22" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="Kravenbg3" />
     <widget name="info-usb" position="70,245" zPosition="1" size="708,330" font="Regular;22" foregroundColor="KravenFont1" halign="left" valign="top" transparent="1" backgroundColor="Kravenbg3" />
     <panel name="template_menu_logo" />
-    <panel name="template_colorkey_text" />
+    <panel name="template_colorkey_text_source" />
     <panel name="key_exit" />
     <!--<text="ImageBackup" position="70,0" />-->
   </screen>
