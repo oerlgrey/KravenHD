@@ -1577,7 +1577,7 @@ textsize = self["text"].getSize()
 textsize = (textsize[0] + 60,textsize[1] + 60)
 offset = 30
 if self.type == self.TYPE_YESNO:
-	offset = 107
+	offset = 160
 wsizex = textsize[0] + 107
 wsizey = textsize[1] + offset
 if (280 &gt; wsizex):
@@ -1591,7 +1591,7 @@ self.instance.resize(eSize(*wsize))
 self["text"].instance.resize(eSize(*textsize))
 
 # move list
-listsize = (wsizex - 20,64)
+listsize = (wsizex - 20,164)
 self["list"].instance.move(ePoint(10,textsize[1] + 27))
 self["list"].instance.resize(eSize(*listsize))
 
