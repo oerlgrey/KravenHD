@@ -1,4 +1,14 @@
 #!/bin/sh
 echo "                                                           "
-echo "        The Skin KravenHD is now being removed...           "
+echo "        The Skin KravenHD is now being removed...          "
 echo "                                                           "
+if [ -e /usr/share/enigma2/KravenHD/skin.xml ]; then
+    cp /usr/share/enigma2/KravenHD/skin.xml /tmp/kravenhdskin
+fi
+if [ -d /usr/share/enigma2/KravenHD/graphics ]; then
+    mkdir /tmp/graphicshd
+    cp /usr/share/enigma2/KravenHD/graphics/* /tmp/graphicshd/
+fi
+if [ -f /usr/share/enigma2/KravenHD/skin.xml ]; then
+    rm -rf /usr/share/enigma2/KravenHD/skin.xml
+fi

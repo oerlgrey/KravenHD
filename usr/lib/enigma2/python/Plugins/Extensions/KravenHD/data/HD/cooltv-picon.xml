@@ -1,0 +1,301 @@
+
+  <!-- ********** CoolTVGuide ********** -->
+  <!-- CoolSingleGuide -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolSingleGuide" position="0,0" size="1280,720" title="Cool Single Guide">
+    <eLabel text="Cool Single Guide" position="42,11" size="350,40" backgroundColor="KravenIBCoolbg" font="Regular2;30" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
+    <widget backgroundColor="Kravenbg2" font="Regular2;28" foregroundColor="KravenFont2" halign="center" position="42,276" render="Label" size="384,36" source="Service" transparent="1" zPosition="3">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="center" position="168,315" render="Label" size="128,25" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">Remaining</convert>
+      <convert type="KravenHDRemainingToText">InMinutes</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="right" position="124,349" render="Label" size="100,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">StartTime</convert>
+      <convert type="KravenHDClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" position="232,349" render="Label" size="100,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">EndTime</convert>
+      <convert type="KravenHDClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular2;24" foregroundColor="KravenFont2" halign="center" position="42,384" render="Label" size="384,30" source="Event" transparent="1">
+      <convert type="KravenHDEventName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" position="42,428" render="KravenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=5,startdelay=5000,wrap,always=0" size="1196,210" source="Event" transparent="1" valign="top" zPosition="1">
+      <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+    </widget>
+    <widget CoolDayColor="KravenFont1" CoolDayPos="0" CoolDaySize="50" CoolEventColor="KravenFont1" CoolEventFont="Regular;22" CoolEventPos="146" CoolFont="Regular;22" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolTimeColor="KravenFont1" CoolTimePos="70" CoolTimeSize="66" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" itemHeight="30" name="list" position="438,60" size="800,360" transparent="1" zPosition="-8" />
+    <widget backgroundColor="KravenIBCoolbg" name="date" position="950,16" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
+    <widget alphatest="blend" position="124,102" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+	<constant-widget name="CoolTV"/>
+	<constant-widget name="gradient-cooltv"/>
+    <!--<text="CoolSingleGuide - Picon" position="42,0" />-->
+  </screen>
+  <!-- CoolInfoGuide -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolInfoGuide" position="0,0" size="1280,720" title="Cool Info Guide">
+    <eLabel text="Cool Info Guide" position="42,11" size="350,40" backgroundColor="KravenIBCoolbg" font="Regular2;30" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
+    <widget backgroundColor="Kravenbg2" font="Regular2;30" foregroundColor="KravenFont2" position="450,70" render="Label" size="400,40" source="Service" transparent="1" zPosition="3">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" position="450,115" render="Label" size="100,32" source="Event" transparent="1" zPosition="3">
+      <convert type="KravenHDEventTime">StartTime</convert>
+      <convert type="KravenHDClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" position="520,115" render="Label" size="100,32" source="Event" transparent="1" zPosition="3">
+      <convert type="KravenHDEventTime">EndTime</convert>
+      <convert type="KravenHDClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" position="622,115" render="Label" size="150,32" source="Event" transparent="1" zPosition="3">
+      <convert type="KravenHDEventTime">Remaining</convert>
+      <convert type="KravenHDRemainingToText">InMinutes</convert>
+    </widget>
+    <eLabel backgroundColor="Kravenbg2" font="Regular;22" foregroundColor="KravenFont1" halign="left" position="915,73" size="300,30" text="Similar broadcasts:" transparent="1" zPosition="3" />
+    <widget backgroundColor="Kravenbg2" font="Regular;22" foregroundColor="KravenFont1" halign="left" name="CoolSimilar" scrollbarWidth="5" position="915,100" size="336,180" transparent="1" zPosition="3" />
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" name="CoolShort" scrollbarWidth="5" position="450,160" size="400,130" transparent="1" zPosition="3" />
+    <widget CoolBackColorSel="KravenSelection" CoolDayColor="orange" CoolDayPos="5" CoolDaySize="60" CoolDurationColor="blue" CoolDurationPos="1065" CoolDurationSize="115" CoolEventColor="orange" CoolEventPos="265" CoolFont="Regular;26" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolTimeColor="#3B98C9" CoolTimePos="65" CoolTimeSize="200" CoolTunerCol="#606060" backgroundColor="Kravenbg2" itemHeight="32" name="CoolEvent" position="42,295" size="1196,35" transparent="1" zPosition="5" />
+    <widget backgroundColor="Kravenbg2" font="Regular;28" foregroundColor="KravenFont1" name="CoolDescription" scrollbarWidth="5" position="42,340" size="1196,296" transparent="1" zPosition="5" />
+    <widget backgroundColor="KravenIBCoolbg" name="date" position="950,16" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
+    <widget alphatest="blend" position="124,102" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+	<constant-widget name="CoolTV"/>
+	<constant-widget name="gradient-cooltv"/>
+    <!--<text="CoolInfoGuide - Picon" position="42,0" />-->
+  </screen>
+  <!-- CoolTVGuide -->
+  <screen backgroundColor="transparent" name="CoolTVGuide" position="0,0" size="1280,720" flags="wfNoBorder" title="Cool TV Guide">
+    <eLabel text="Cool TV Guide" position="42,11" size="350,40" backgroundColor="KravenIBCoolbg" font="Regular2;30" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
+    <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;22" foregroundColor="KravenMFont2" position="367,17" size="547,27" halign="center" transparent="1" zPosition="3" />
+    <widget backgroundColor="Kravenbg2" name="timeline_text" position="5,70" size="1230,30" transparent="1" />
+    <widget CoolRecAlarmCol="blue" CoolBackColorSel="KravenSelection" CoolCurrentColSel="KravenSelection" CoolFontColSel="KravenSelFont" CoolNowColSel="KravenSelection" CoolNowFontColSel="KravenSelFont" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="list" position="42,95" scrollbarMode="showNever" size="1196,420" transparent="1" />
+    <widget name="timeline0" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
+    <widget name="timeline1" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
+    <widget name="timeline2" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
+    <widget name="timeline3" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
+    <widget name="timeline4" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
+    <widget name="timeline5" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
+    <widget alphatest="on" name="timeline_now" pixmap="KravenHD/epg/timelineCooltv.jpg" position="0,95" size="3,420" zPosition="2" />
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" position="42,524" render="Label" size="80,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">StartTime</convert>
+      <convert type="KravenHDClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" position="110,524" render="Label" size="100,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">EndTime</convert>
+      <convert type="KravenHDClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular2;24" foregroundColor="KravenFont2" halign="left" position="222,524" render="Label" size="1016,30" source="Event" transparent="1">
+      <convert type="KravenHDEventName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" position="42,560" render="KravenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=5,startdelay=5000,wrap,always=0" size="1196,89" source="Event" transparent="1" zPosition="1">
+      <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+    </widget>
+    <widget backgroundColor="KravenIBCoolbg" name="date" position="950,16" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
+	<constant-widget name="CoolTV"/>
+	<constant-widget name="gradient-cooltv"/>
+    <!--<text="CoolTVGuide - Picon" position="42,0" />-->
+  </screen>
+  <!-- CoolNiceGuide -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolNiceGuide" position="0,0" size="1280,720" title="Cool Nice Guide">
+    <eLabel text="Cool Nice Guide" position="42,11" size="350,40" backgroundColor="KravenIBCoolbg" font="Regular2;30" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
+    <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;22" foregroundColor="KravenMFont2" position="450,17" size="547,27" halign="center" transparent="1" zPosition="3" />
+    <widget backgroundColor="Kravenbg2" font="Regular2;24" foregroundColor="KravenFont2" position="450,71" render="Label" size="400,30" source="Service" halign="left" valign="center" transparent="1" zPosition="3">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" valign="top" position="450,100" render="Label" size="80,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">StartTime</convert>
+      <convert type="KravenHDClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" valign="top" position="522,100" render="Label" size="100,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">EndTime</convert>
+      <convert type="KravenHDClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular2;24" foregroundColor="KravenFont2" halign="left" valign="top" position="632,100" render="Label" size="600,30" source="Event" transparent="1">
+      <convert type="KravenHDEventName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;22" foregroundColor="KravenFont1" position="450,133" render="KravenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=5,startdelay=5000,wrap,always=0" size="790,135" source="Event" transparent="1" halign="left" valign="center" zPosition="1">
+      <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="timeline_text" position="5,285" size="1230,30" transparent="1" />
+    <widget CoolRecAlarmCol="blue" CoolBackColorSel="KravenSelection" CoolCurrentColSel="KravenSelection" CoolFontColSel="KravenSelFont" CoolNowColSel="KravenSelection" CoolNowFontColSel="KravenSelFont" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="list" position="42,313" scrollbarMode="showNever" size="1196,335" transparent="1" />
+    <widget name="timeline0" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
+    <widget name="timeline1" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
+    <widget name="timeline2" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
+    <widget name="timeline3" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
+    <widget name="timeline4" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
+    <widget name="timeline5" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
+    <widget alphatest="on" name="timeline_now" pixmap="KravenHD/epg/timelineCooltv.jpg" position="0,313" size="3,335" zPosition="2" />
+    <widget backgroundColor="KravenIBCoolbg" name="date" position="950,16" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
+    <widget alphatest="blend" position="124,102" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+	<constant-widget name="CoolTV"/>
+	<constant-widget name="gradient-cooltv"/>
+    <!--<text="CoolNiceGuide - Picon" position="42,0" />-->
+  </screen>
+  <!-- CoolSearch -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolSearch" position="0,0" size="1280,720" title="Cool Search">
+    <eLabel text="Cool Search" position="42,11" size="350,40" backgroundColor="KravenIBCoolbg" font="Regular2;30" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
+    <widget backgroundColor="Kravenbg2" font="Regular2;24" foregroundColor="KravenFont2" position="450,69" render="Label" size="400,30" source="Service" halign="left" valign="center" transparent="1" zPosition="3">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" valign="top" position="450,98" render="Label" size="80,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">StartTime</convert>
+      <convert type="KravenHDClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" valign="top" position="522,98" render="Label" size="100,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">EndTime</convert>
+      <convert type="KravenHDClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular2;24" foregroundColor="KravenFont2" halign="left" valign="top" position="632,98" render="Label" size="600,30" source="Event" transparent="1">
+      <convert type="KravenHDEventName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;23" foregroundColor="KravenFont1" position="450,129" render="KravenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=5,startdelay=5000,wrap,always=0" size="790,145" source="Event" transparent="1" halign="left" valign="center" zPosition="1">
+      <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+    </widget>
+    <widget CoolFontColSel="KravenSelFont" CoolDateColor="KravenFont1" CoolDateHPos="0" CoolDatePos="70" CoolDateSize="70" CoolDayColor="KravenFont1" CoolDayHPos="0" CoolDayPos="0" CoolDaySize="50" CoolEventColor="KravenFont1" CoolEventFont="Regular;24" CoolEventHPos="0" CoolEventPos="500" CoolEventSize="706" CoolFont="Regular;24" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolRecEventBackColor="Kravenbg2" CoolServiceColor="KravenFont1" CoolServiceFont="Regular;24" CoolServiceHPos="0" CoolServicePos="230" CoolServiceSize="280" CoolTimeColor="KravenFont1" CoolTimeHPos="0" CoolTimePos="150" CoolTimeSize="70" backgroundColor="Kravenbg2" itemHeight="32" name="list" position="42,300" size="1196,320" transparent="1" zPosition="3" />
+    <widget alphatest="blend" position="124,102" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+	<constant-widget name="CoolTV"/>
+	<constant-widget name="gradient-cooltv"/>
+    <!--<text="CoolSearch - Picon" position="42,0" />-->
+  </screen>
+  <!-- CoolEasyGuide -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolEasyGuide" position="0,0" size="1280,720" title="Cool Easy Guide">
+    <eLabel text="Cool Easy Guide" position="42,11" size="350,40" backgroundColor="KravenIBCoolbg" font="Regular2;30" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
+    <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;22" foregroundColor="KravenMFont2" position="450,17" size="547,27" halign="center" transparent="1" zPosition="3" />
+    <widget backgroundColor="Kravenbg2" font="Regular2;24" foregroundColor="KravenFont2" position="450,69" render="Label" size="400,30" source="Service" halign="left" valign="center" transparent="1" zPosition="3">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" valign="top" position="450,98" render="Label" size="80,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">StartTime</convert>
+      <convert type="KravenHDClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" valign="top" position="522,98" render="Label" size="100,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">EndTime</convert>
+      <convert type="KravenHDClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular2;24" foregroundColor="KravenFont2" halign="left" valign="top" position="632,98" render="Label" size="600,30" source="Event" transparent="1">
+      <convert type="KravenHDEventName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;23" foregroundColor="KravenFont1" position="450,129" render="KravenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=5,startdelay=5000,wrap,always=0" size="790,145" source="Event" transparent="1" halign="left" valign="center" zPosition="1">
+      <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+    </widget>
+    <widget CoolBackColorSel="KravenSelection" CoolCurrentCol="KravenSelFont" CoolBarColor="KravenFont1" CoolBarHPos="7" CoolBarHigh="17" CoolBarPos="270" CoolBarSize="150" CoolDurationPos="1081" CoolDurationColor="KravenFont1" CoolDurationSize="105" CoolEventColor="KravenFont1" CoolEventFont="Regular;24" CoolEventHPos="0" CoolEventPos="435" CoolEventSize="626" CoolFont="Regular;24" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="KravenFont1" CoolServiceFont="Regular;24" CoolServiceHPos="0" CoolServicePos="0" CoolServiceSize="235" CoolTimeHPos="0" CoolTimePos="260" CoolTimeSize="150" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" itemHeight="30" name="list" position="42,300" size="1196,330" transparent="1" zPosition="25" />
+    <widget backgroundColor="KravenIBCoolbg" name="date" position="950,16" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
+    <widget alphatest="blend" position="124,102" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+	<constant-widget name="CoolTV"/>
+	<constant-widget name="gradient-cooltv"/>
+    <!--<text="CoolEasyGuide - Picon" position="42,0" />-->
+  </screen>
+  <!-- CoolMultiGuide -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolMultiGuide" position="0,0" size="1280,720" title="Cool Multi Guide">
+    <eLabel text="Cool Multi Guide" position="42,11" size="350,40" backgroundColor="KravenIBCoolbg" font="Regular2;30" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
+    <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;22" foregroundColor="KravenMFont2" position="450,17" size="547,27" halign="center" transparent="1" zPosition="3" />
+    <widget backgroundColor="Kravenbg2" font="Regular2;24" foregroundColor="KravenFont2" position="450,69" render="Label" size="400,30" source="Service" halign="left" valign="center" transparent="1" zPosition="3">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" valign="top" position="450,98" render="Label" size="80,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">StartTime</convert>
+      <convert type="KravenHDClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" valign="top" position="522,98" render="Label" size="100,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">EndTime</convert>
+      <convert type="KravenHDClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular2;24" foregroundColor="KravenFont2" halign="left" valign="top" position="632,98" render="Label" size="600,30" source="Event" transparent="1">
+      <convert type="KravenHDEventName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;23" foregroundColor="KravenFont1" position="450,129" render="KravenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=5,startdelay=5000,wrap,always=0" size="790,145" source="Event" transparent="1" halign="left" valign="center" zPosition="1">
+      <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" name="timeline_text" position="5,282" size="1230,30" transparent="1" />
+    <widget CoolRecAlarmCol="blue" CoolBackColorSel="KravenSelection" CoolCurrentColSel="KravenSelection" CoolFontColSel="KravenSelFont" CoolNowColSel="KravenSelection" CoolNowFontColSel="KravenSelFont" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="list" position="42,310" scrollbarMode="showNever" size="1196,337" transparent="1" />
+    <widget name="timeline0" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
+    <widget name="timeline1" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
+    <widget name="timeline2" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
+    <widget name="timeline3" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
+    <widget name="timeline4" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
+    <widget name="timeline5" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
+    <widget alphatest="on" name="timeline_now" pixmap="KravenHD/epg/timelineCooltv.jpg" position="0,311" size="3,337" zPosition="2" />
+    <widget backgroundColor="KravenIBCoolbg" name="date" position="950,16" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
+    <widget alphatest="blend" position="124,102" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+	<constant-widget name="CoolTV"/>
+	<constant-widget name="gradient-cooltv"/>
+    <!--<text="CoolMultiGuide - Picon" position="42,0" />-->
+  </screen>
+  <!-- CoolTinyGuide -->
+  <screen backgroundColor="transparent" name="CoolTinyGuide" position="0,0" size="1280,720" flags="wfNoBorder" title="Cool Tiny Guide">
+    <eLabel text="Cool Tiny Guide" position="42,11" size="350,40" backgroundColor="KravenIBCoolbg" font="Regular2;30" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
+    <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;22" foregroundColor="KravenMFont2" position="367,17" size="547,27" halign="center" transparent="1" zPosition="3" />
+    <widget backgroundColor="Kravenbg2" name="timeline_text" position="5,70" size="1230,30" transparent="1" />
+    <widget name="list" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" CoolRecAlarmCol="blue" CoolFontColSel="KravenSelFont" CoolNowFontColSel="KravenSelFont" CoolNowColSel="KravenSelection" CoolBackColorSel="KravenSelection" CoolCurrentColSel="KravenSelection" CoolRecColSel="KravenSelection" position="42,95" size="1196,420" scrollbarMode="showNever" transparent="1" />
+    <widget name="timeline0" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
+    <widget name="timeline1" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
+    <widget name="timeline2" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
+    <widget name="timeline3" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
+    <widget name="timeline4" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
+    <widget name="timeline5" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
+    <widget alphatest="on" name="timeline_now" pixmap="KravenHD/epg/timelineCooltv.jpg" position="0,95" size="3,420" zPosition="2" />
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" position="42,524" render="Label" size="80,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">StartTime</convert>
+      <convert type="KravenHDClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" halign="left" position="120,524" render="Label" size="100,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">EndTime</convert>
+      <convert type="KravenHDClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular2;24" foregroundColor="KravenFont2" halign="left" position="222,524" render="Label" size="1016,30" source="Event" transparent="1">
+      <convert type="KravenHDEventName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;24" foregroundColor="KravenFont1" position="42,560" render="KravenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=5,startdelay=5000,wrap,always=0" size="1196,89" source="Event" transparent="1" zPosition="1">
+      <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+    </widget>
+    <widget backgroundColor="KravenIBCoolbg" name="date" position="950,16" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
+	<constant-widget name="CoolTV"/>
+	<constant-widget name="gradient-cooltv"/>
+    <!--<text="CoolTinyGuide - Picon" position="42,0" />-->
+  </screen>
+  <!-- CoolChannelGuide -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolChannelGuide" position="0,0" size="1280,720" title="Cool Channel Guide">
+    <eLabel text="Cool Channel Guide" position="42,11" size="350,40" backgroundColor="KravenIBCoolbg" font="Regular2;30" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="top" />
+    <widget backgroundColor="KravenIBCoolbg" source="Title" render="Label" font="Regular;22" foregroundColor="KravenMFont2" position="488,17" size="547,27" halign="center" transparent="1" zPosition="3" />
+    <widget alphatest="blend" position="124,102" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;22" foregroundColor="KravenFont1" halign="left" position="42,290" render="Label" size="60,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">StartTime</convert>
+      <convert type="KravenHDClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget foregroundColor="KravenProgress" position="110,303" render="Progress" size="248,5" source="Event" transparent="1" zPosition="2" backgroundColor="Kravenbg2" pixmap="KravenHD/progress/progress248.png">
+      <convert type="KravenHDEventTime">Progress</convert>
+    </widget>
+    <eLabel backgroundColor="KravenLine" position="110,305" size="248,1" zPosition="1" />
+    <widget backgroundColor="Kravenbg2" font="Regular;22" foregroundColor="KravenFont1" halign="right" position="366,290" render="Label" size="60,30" source="Event" transparent="1">
+      <convert type="KravenHDEventTime">EndTime</convert>
+      <convert type="KravenHDClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular2;24" foregroundColor="KravenFont2" halign="left" position="42,330" render="Label" size="384,30" source="Event" transparent="1">
+      <convert type="KravenHDEventName">Name</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;20" foregroundColor="KravenFont1" halign="left" position="42,370" size="384,156" source="Event" render="KravenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=5,startdelay=5000,wrap,always=0" transparent="1" zPosition="1">
+      <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+    </widget>
+    <widget CoolBar="0" CoolBarColor="KravenFont1" CoolCurrentCol="KravenSelFont" CoolDurationColor="KravenFont1" CoolDurationPos="666" CoolDurationSize="70" CoolEventColor="KravenFont1" CoolEventFont="Regular;22" CoolEventHPos="3" CoolEventPos="240" CoolEventSize="350" CoolFont="Regular;25" CoolMarkerHPos="1" CoolMarkerPicHPos="2" CoolMarkerPicPos="2" CoolMarkerPos="140" CoolPico="28" CoolPicoHPos="1" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="KravenFont1" CoolServiceFont="Regular;24" CoolServiceHPos="0" CoolServicePos="2" CoolServiceSize="210" CoolTime="1" CoolTimeHPos="3" CoolTimePos="600" CoolTimeSize="130" CoolTunerCol="KravenFont1" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" itemHeight="32" name="list" position="488,60" size="750,576" transparent="1" zPosition="25" />
+    <widget source="Service" render="Label" backgroundColor="Kravenbg2" font="Regular;20" foregroundColor="KravenFont2" halign="left" position="42,540" size="384,25" transparent="1" valign="center">
+      <convert type="KravenHDTextTranslator">coming</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg2" font="Regular;19" foregroundColor="KravenFont2" position="42,570" render="CoolNextEvent" size="384,80" source="Service" transparent="1">
+    </widget>
+    <widget backgroundColor="KravenIBCoolbg" name="date" position="950,16" font="Regular2;22" foregroundColor="KravenMFont2" halign="right" size="180,30" transparent="1" />
+	<constant-widget name="CoolTV"/>
+	<constant-widget name="gradient-cooltv"/>
+    <!--<text="CoolChannelGuide - MiniTV" position="42,0" />-->
+  </screen>
+  <!-- CoolTVGuide */-->

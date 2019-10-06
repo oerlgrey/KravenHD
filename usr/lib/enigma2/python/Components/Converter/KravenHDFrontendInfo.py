@@ -1,7 +1,25 @@
+# -*- coding: utf-8 -*-
+
+#  Front End Info Converter
+#
+#  Coded/Modified/Adapted by örlgrey
+#  Based on VTi and/or OpenATV image source code
+#
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
+#
+#  If you think this license infringes any rights,
+#  please contact me at ochzoetna@gmail.com
+
 from Components.Converter.Converter import Converter
 from Components.Element import cached
+from Poll import Poll
 
-class KravenHDFrontendInfo(Converter, object):
+class KravenHDFrontendInfo(Poll, Converter, object):
 	BER = 0
 	SNR = 1
 	AGC = 2
@@ -11,7 +29,10 @@ class KravenHDFrontendInfo(Converter, object):
 	TUNER_TYPE = 6
 
 	def __init__(self, type):
+		Poll.__init__(self)
 		Converter.__init__(self, type)
+		self.poll_interval = 1000
+		self.poll_enabled = True
 		if type == "BER":
 			self.type = self.BER
 		elif type == "SNR":
@@ -54,20 +75,19 @@ class KravenHDFrontendInfo(Converter, object):
 
 	@cached
 	def getBool(self):
-		assert self.type in (self.LOCK, self.BER), "the boolean output of FrontendInfo can only be used for lock or BER info"
+		assert self.type in (self.LOCK, self.BER), "the boolean output of FrontendInfo can only be used for lock or BER info or Tuner-Rec"
 		if self.type == self.LOCK:
 			lock = self.source.lock
 			if lock is None:
 				lock = False
 			return lock
-		else:
+		elif self.type == self.BER:
 			ber = self.source.ber
 			if ber is None:
 				ber = 0
 			return ber > 0
 
 	text = property(getText)
-
 	boolean = property(getBool)
 
 	@cached

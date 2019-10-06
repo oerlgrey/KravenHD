@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
+
+#  Version Info Converter
 #
-#  Version Converter
-#
-#  Coded by tomele and tbx for Kraven Skins
+#  Coded/Modified/Adapted by örlgrey
+#  Based on VTi and/or OpenATV image source code
 #
 #  This code is licensed under the Creative Commons 
 #  Attribution-NonCommercial-ShareAlike 3.0 Unported 
@@ -10,10 +12,11 @@
 #  or send a letter to Creative Commons, 559 Nathan 
 #  Abbott Way, Stanford, California 94305, USA.
 #
+#  If you think this license infringes any rights,
+#  please contact me at ochzoetna@gmail.com
 
 from Components.Converter.Converter import Converter
 from Components.Element import cached
-import os
 
 class KravenHDVersInfo(Converter, object):
 	def __init__(self, type):
@@ -22,7 +25,10 @@ class KravenHDVersInfo(Converter, object):
 	
 	@cached
 	def getText(self):
-		version = os.popen("opkg status enigma2-plugin-skins-kravenhd | grep -e 'Version' | cut -d '+' -f1").read()
-		return version.rstrip()
+		versFile = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/version"
+		pFile = open(versFile,"r")
+		for line in pFile:
+			return line.rstrip()
+		pFile.close()
 	
 	text = property(getText)

@@ -1,0 +1,25 @@
+  <!-- /* ChannelSelection - X-Picons -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+    <widget font="Regular;30" foregroundColor="KravenFont2" position="42,70" halign="left" render="RunningTextEmptyEpg2" size="416,40" source="ServiceEvent" backgroundColor="Kravenbg4" transparent="1">
+      <convert type="KravenHDEventName">Name</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="42,114" size="60,24" font="Regular;19" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" transparent="1" halign="left">
+      <convert type="KravenHDEventTime">StartTime</convert>
+      <convert type="KravenHDClockToText">
+      </convert>
+    </widget>
+    <widget position="102,124" size="296,5" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress300.png">
+      <convert type="KravenHDEventTime">Progress</convert>
+    </widget>
+    <eLabel position="102,126" size="296,1" backgroundColor="KravenLine" />
+    <widget source="ServiceEvent" render="Label" position="398,114" size="60,24" font="Regular;19" foregroundColor="KravenFont1" backgroundColor="Kravenbg4" transparent="1" halign="right">
+      <convert type="KravenHDEventTime">EndTime</convert>
+      <convert type="KravenHDClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg4" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" itemHeight="50" name="list" position="500,77" serviceInfoFont="Regular;23" serviceItemHeight="35" serviceNameFont="Regular;25" serviceNumberFont="Regular;25" size="738,560" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" progressBarWidth="52" progressPercentWidth="80" progressbarHeight="10" transparent="1" />
+    <!-- channelbg */-->
+    <constant-widget name="ChannelSelection-template"/>
+    <constant-widget name="gradient-cs"/>
+    <constant-widget name="channelselection-style-xpicon-small"/>
+    <!--<text="ChannelSelection - X-Picons" position="42,0" />-->
+  </screen>

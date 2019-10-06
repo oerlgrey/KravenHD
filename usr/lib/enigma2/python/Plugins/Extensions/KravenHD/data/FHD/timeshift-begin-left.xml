@@ -1,0 +1,20 @@
+    <ePixmap pixmap="KravenHD/graphics/shift.png" position="-15,7" size="1357,255" zPosition="-9" alphatest="blend"/>
+    <widget name="state" position="82,112" size="165,36" font="Regular;42" foregroundColor="KravenIBFont1" halign="center" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="center" />
+    <widget source="session.CurrentService" render="Label" position="1000,105" size="150,45" font="Regular;36" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
+      <convert type="ServicePosition">Remaining</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="870,105" size="150,45" font="Regular;36" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1">
+      <convert type="KravenHDTextTranslator">untillive</convert>
+    </widget>
+    <eLabel text="min" position="1161,105" size="90,45" font="Regular;36" foregroundColor="KravenIBFont1" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" />
+    <widget source="session.CurrentService" render="Label" position="250,105" size="150,45" font="Regular;36" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
+      <convert type="ServicePosition">Length</convert>
+    </widget>
+    <eLabel text="min" position="412,105" size="90,45" font="Regular;36" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1" />
+    <widget source="session.CurrentService" render="Label" position="507,105" size="345,48" font="Regular;42" backgroundColor="KravenIBbg" transparent="1" zPosition="10" valign="center" foregroundColor="red" halign="center">
+      <convert type="KravenHDTextTranslator">timeshiftactive</convert>
+    </widget>
+    <widget position="102,154" render="Progress" backgroundColor="KravenIBbg" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress749.png" transparent="1" size="1123,7" source="session.CurrentService" zPosition="17">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+    <eLabel backgroundColor="KravenLine" position="102,157" size="1123,1" zPosition="16" />

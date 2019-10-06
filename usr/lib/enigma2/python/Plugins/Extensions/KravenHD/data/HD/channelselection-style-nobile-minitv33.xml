@@ -1,0 +1,44 @@
+  <!-- /* ChannelSelection - Nobile Extended Preview -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+    <widget backgroundColor="Kravenbg4" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" name="list" position="17,300" serviceInfoFont="Regular;20" serviceItemHeight="29" serviceNameFont="Regular;20" serviceNumberFont="Regular;20" size="439,348" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" progressBarWidth="52" progressPercentWidth="80" progressbarHeight="10" transparent="1" />
+    <widget source="ServiceEvent" render="KravenHDPig4" position="55,70" size="384,216" backgroundColor="transparent" zPosition="3" />
+    <eLabel backgroundColor="#00000000" position="55,70" size="384,216" transparent="0" zPosition="2" />
+    <eLabel backgroundColor="KravenBorder2" position="55,70" size="384,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="55,286" size="384,3" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="55,70" size="3,216" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="436,70" size="3,216" transparent="0" zPosition="4" />
+    <widget source="ServiceEvent" render="Label" position="475,67" size="446,27" font="Regular;22" halign="left" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont2">
+      <convert type="KravenHDEventName">Name</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="474,100" size="60,25" font="Regular;20" halign="left" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont1">
+      <convert type="KravenHDEventTime">StartTime</convert>
+      <convert type="KravenHDClockToText">
+      </convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="860,100" size="60,25" font="Regular;20" halign="right" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont1">
+      <convert type="KravenHDEventTime">EndTime</convert>
+      <convert type="KravenHDClockToText">
+      </convert>
+    </widget>
+    <widget position="536,111" size="324,5" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress328.png">
+      <convert type="KravenHDEventTime">Progress</convert>
+    </widget>
+    <eLabel position="536,113" size="324,1" backgroundColor="KravenLine" />
+    <widget source="ServiceEvent" render="Label" position="474,387" size="180,27" font="Regular;22" halign="left" foregroundColor="KravenFont2" backgroundColor="Kravenbg4" transparent="1" zPosition="2">
+      <convert type="KravenHDTextTranslator">itfollows</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="474,419" zPosition="1" size="446,25" font="Regular;20" halign="left" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont2">
+      <convert type="KravenHDServiceNameEventNobile">NextEvent</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="846,387" zPosition="1" size="75,27" font="Regular;22" halign="right" backgroundColor="Kravenbg4" transparent="1" foregroundColor="KravenFont2">
+      <convert type="KravenHDServiceNameEventNobile">StartTime</convert>
+    </widget>
+    <eLabel position="474,380" size="446,1" backgroundColor="KravenLine" />
+    <eLabel position="465,70" size="1,578" backgroundColor="KravenLine" />
+    <eLabel position="928,70" size="1,578" backgroundColor="KravenLine" />
+    <!-- channelbg */-->
+    <constant-widget name="ChannelSelection-template"/>
+    <constant-widget name="gradient-cs"/>
+    <constant-widget name="channelselection-style-nobile-minitv33-small"/>
+    <!--<text="ChannelSelection - Nobile Extended Preview" position="42,0" />-->
+  </screen>

@@ -1,4 +1,20 @@
-# shamelessly copied from pliExpertInfo and edit by (aslan2006)
+# -*- coding: utf-8 -*-
+
+#  Extra Info Converter
+#
+#  Coded/Modified/Adapted by örlgrey
+#  Based on VTi and/or OpenATV image source code
+#  Based on PLI Expert Info and edit by aslan2006
+#
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
+#
+#  If you think this license infringes any rights,
+#  please contact me at ochzoetna@gmail.com
 
 from enigma import iServiceInformation, iPlayableService
 from Components.Converter.Converter import Converter
@@ -6,6 +22,32 @@ from Components.Element import cached
 from Components.config import config
 from Tools.Transponder import ConvertToHumanReadable
 from Poll import Poll
+
+stream_codec_atv = {
+	-1: "N/A",
+	0: "MPEG2",
+	1: "AVC",
+	2: "H263",
+	3: "VC1",
+	4: "MPEG4-VC",
+	5: "VC1-SM",
+	6: "MPEG1",
+	7: "HEVC",
+	8: "VP8",
+	9: "VP9",
+	10: "XVID",
+	11: "N/A 11",
+	12: "N/A 12",
+	13: "DIVX 3.11",
+	14: "DIVX 4",
+	15: "DIVX 5",
+	16: "AVS",
+	17: "N/A 17",
+	18: "VP6",
+	19: "N/A 19",
+	20: "N/A 20",
+	21: "SPARK"
+}
 
 def addspace(text):
 	if text:
@@ -43,7 +85,6 @@ class KravenHDExtraInfo(Poll, Converter, object):
 		mode = ("i", "p", "")[info.getInfo(iServiceInformation.sProgressive)]
 		fps  = str((info.getInfo(iServiceInformation.sFrameRate) + 500) / 1000)
 		return str(xres) + "x" + str(yres) + mode + " " + fps + "fps"
-# + ("MPEG2", "MPEG4", "MPEG1", "MPEG4-II", "VC1", "VC1-SM", "")[info.getInfo(iServiceInformation.sVideoType)]
 
 	def createResolution(self,info):
 		xres = info.getInfo(iServiceInformation.sVideoWidth)
@@ -58,7 +99,7 @@ class KravenHDExtraInfo(Poll, Converter, object):
 		return str(fps)
 
 	def createVideoCodec(self,info):
-		return ("MPEG2", "MPEG4", "MPEG1", "MPEG4-II", "VC1", "VC1-SM", "")[info.getInfo(iServiceInformation.sVideoType)]
+		return stream_codec_atv.get(info.getInfo(iServiceInformation.sVideoType), "N/A")
 
 	def createAudioCodec(self,info):
 		service = self.source.service
@@ -79,13 +120,23 @@ class KravenHDExtraInfo(Poll, Converter, object):
 	def createFrequency(self,fedata):
 		frequency = fedata.get("frequency")
 		if frequency:
-			return frequency
+			try:
+				from boxbranding import getImageDistro
+				if getImageDistro() == "openatv":
+					return frequency[0:5]
+			except ImportError:
+				return str(frequency / 1000)
 		return ""
 
 	def createSymbolRate(self,fedata):
 		symbolrate = fedata.get("symbol_rate")
 		if symbolrate:
-			return str(symbolrate)
+			try:
+				from boxbranding import getImageDistro
+				if getImageDistro() == "openatv":
+					return str(symbolrate)
+			except ImportError:
+				return str(symbolrate / 1000)
 		return ""
 
 	def createPolarization(self,fedata):
@@ -186,7 +237,7 @@ class KravenHDExtraInfo(Poll, Converter, object):
 			+ addspace(self.createVideoCodec(info)) + self.createResolutionString(info)
 
 		if self.type == "TunerInfo":
-			return self.createTunerSystem(fedata) + ", " + self.createFrequency(fedata)
+			return self.createTunerSystem(fedata) + ", " + self.createFrequency(fedata) + " MHz"
 			
 		if self.type == "SignalInfo":
 			return "SR " + self.createSymbolRate(fedata) + ", FEC " + self.createFEC(fedata) + ", " + self.createModulation(fedata)
@@ -239,4 +290,3 @@ class KravenHDExtraInfo(Poll, Converter, object):
 		elif what[0] == self.CHANGED_POLL and self.updateFEdata is not None:
 			self.updateFEdata = False
 			Converter.changed(self, what)
-

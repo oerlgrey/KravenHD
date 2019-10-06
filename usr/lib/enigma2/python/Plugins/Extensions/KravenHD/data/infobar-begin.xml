@@ -1,4 +1,0 @@
-<!--/* InfoBar -->
-<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1280,720" title="InfoBar">
-  <ePixmap pixmap="KravenHD/backg.png" position="0,0" size="1280,720" zPosition="-9" />
-  <ePixmap pixmap="KravenHD/ibar.png" position="0,470" size="1280,310" zPosition="-9" alphatest="blend" />

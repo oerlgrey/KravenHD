@@ -1,7 +1,24 @@
+# -*- coding: utf-8 -*-
+
+#  Clock To Text Converter
+#
+#  Coded/Modified/Adapted by örlgrey
+#  Based on VTi and/or OpenATV image source code
+#  Based on Clock To Text by Diamondear and plnick
+#
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
+#
+#  If you think this license infringes any rights,
+#  please contact me at ochzoetna@gmail.com
+
 from Converter import Converter
 from time import localtime, strftime
 from Components.Element import cached
-from Components.config import config
 
 class KravenHDClockToText(Converter, object):
 	DEFAULT = 0
@@ -11,110 +28,108 @@ class KravenHDClockToText(Converter, object):
 	FORMAT = 4
 	AS_LENGTH = 5
 	TIMESTAMP = 6
-	FULL = 7
-	SHORT_DATE = 8
-	LONG_DATE = 9
-	VFD = 10
-	AS_LENGTHHOURS = 11
-	AS_LENGTHSECONDS = 12
-	FULL_DATE = 13
-    
+	ANALOG_SEC = 7
+	ANALOG_MIN = 8
+	ANALOG_HOUR = 9
+	
+	# add: date, date as string, weekday, ... 
+	# (whatever you need!)
+	
 	def __init__(self, type):
 		Converter.__init__(self, type)
-		self.fix = ''
-		if ';' in type:
-			(type, self.fix,) = type.split(';')
-		if type == 'WithSeconds':
+		if type == "WithSeconds":
 			self.type = self.WITH_SECONDS
-		elif type == 'InMinutes':
+		elif type == "InMinutes":
 			self.type = self.IN_MINUTES
-		elif type == 'Date':
+		elif type == "Date":
 			self.type = self.DATE
-		elif type == 'AsLength':
+		elif type == "AsLength":
 			self.type = self.AS_LENGTH
-		elif type == 'AsLengthHours':
-			self.type = self.AS_LENGTHHOURS
-		elif type == 'AsLengthSeconds':
-			self.type = self.AS_LENGTHSECONDS
-		elif type == 'Timestamp':
+		elif type == "Timestamp":
 			self.type = self.TIMESTAMP
-		elif type == 'Full':
-			self.type = self.FULL
-		elif type == 'ShortDate':
-			self.type = self.SHORT_DATE
-		elif type == 'LongDate':
-			self.type = self.LONG_DATE
-		elif type == 'VFD':
-			self.type = self.VFD
-		elif type == 'FullDate':
-			self.type = self.FULL_DATE
-		elif 'Format' in type:
+		elif str(type).find("Format") != -1:
 			self.type = self.FORMAT
 			self.fmt_string = type[7:]
+		elif type == "AnalogSeconds":
+			self.type = self.ANALOG_SEC
+		elif type == "AnalogMinutes":
+			self.type = self.ANALOG_MIN
+		elif type == "AnalogHours":
+			self.type = self.ANALOG_HOUR
 		else:
 			self.type = self.DEFAULT
 
-
-
 	@cached
 	def getText(self):
-        	time = self.source.time
-        	if time is None:
-            		return ''
-        
-		def fix_space(string):
-			if 'Proportional' in self.fix and t.tm_hour < 10:
-				return ' ' + string
-			if 'NoSpace' in self.fix:
-				return string.lstrip(' ')
-			return string
-        
+		time = self.source.time
+		if time is None:
+			return ""
+
+		# handle durations
 		if self.type == self.IN_MINUTES:
-			return ngettext('%d Min', '%d Mins', time / 60) % (time / 60)
-		if self.type == self.AS_LENGTH:
-			if time < 0:
-				return ''
-			return '%d:%02d' % (time / 60, time % 60)
-		if self.type == self.AS_LENGTHHOURS:
-			if time < 0:
-				return ''
-			return '%d:%02d' % (time / 3600, time / 60 % 60)
-		if self.type == self.AS_LENGTHSECONDS:
-			if time < 0:
-				return ''
-			return '%d:%02d:%02d' % (time / 3600, time / 60 % 60, time % 60)
-		if self.type == self.TIMESTAMP:
+			return "%d min" % (time / 60)
+		elif self.type == self.AS_LENGTH:
+			return "%d:%02d" % (time / 3600, (time / 60) - ((time / 3600) * 60))
+		elif self.type == self.TIMESTAMP:
 			return str(time)
+		
 		t = localtime(time)
+		
 		if self.type == self.WITH_SECONDS:
-			return _('%02d:%02d:%02d') % (t.tm_hour, t.tm_min, t.tm_sec)
-		if self.type == self.DEFAULT:
-			return _('%02d:%02d') % (t.tm_hour, t.tm_min)
-		if self.type == self.DATE:
-			d = _('%A %e %B %Y')
-		elif self.type == self.FULL:
-			d = _('%a %e/%m  %-H:%M')
-		elif self.type == self.SHORT_DATE:
-			d = _('%a %e/%m')
-		elif self.type == self.LONG_DATE:
-			d = _('%A %e %B')
-		elif self.type == self.FULL_DATE:
-			d = _('%a %e %B %Y')
-		elif self.type == self.VFD:
-			d = _('%k:%M %e/%m')
+			return "%2d:%02d:%02d" % (t.tm_hour, t.tm_min, t.tm_sec)
+		elif self.type == self.DEFAULT:
+			return "%02d:%02d" % (t.tm_hour, t.tm_min)
+		elif self.type == self.DATE:
+			return_str = strftime("%A %B %d, %Y", t)
+			weekday_long = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+			month_long = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+			str_fmt_values = {
+						"%B" : month_long,
+						"%A" : weekday_long,
+					}
+			
+			for key in str_fmt_values:
+				for value in str_fmt_values[key]:
+					r_value = _(value)
+					if return_str.find(value) != -1:
+						return_str = return_str.replace(value, r_value)
+						break
+			
+			return return_str
+		
 		elif self.type == self.FORMAT:
-			d = self.fmt_string
+			weekday_long = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+			weekday_short = ("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+			month_long = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+			month_short = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+			str_fmt_values = {
+						"%B" : month_long,
+						"%b" : month_short,
+						"%A" : weekday_long,
+						"%a" : weekday_short,
+					}
+			
+			return_str = strftime(self.fmt_string, t)
+			
+			for key in str_fmt_values:
+				if self.fmt_string.find(key) != -1:
+					for value in str_fmt_values[key]:
+						if key == "%b" and value == "May":
+							r_value = _(value)[:3]
+						else:
+							r_value = _(value)
+						if return_str.find(value) != -1:
+							return_str = return_str.replace(value, r_value)
+							break
+			return return_str
+		elif self.type == self.ANALOG_SEC:
+			return "%02d" % t.tm_sec
+		elif self.type == self.ANALOG_MIN:
+			return "%02d" % t.tm_min
+		elif self.type == self.ANALOG_HOUR:
+			ret = (t.tm_hour*5)+(t.tm_min/12);
+			return "%02d" % ret
 		else:
-			return '???'
-		if config.osd.language.value == 'de_DE':
-			t1 = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'][t.tm_wday]
-			t2 = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'][t.tm_wday]
-			m1 = ['Jan', 'Feb', 'Mrz', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'][(t.tm_mon - 1)]
-			m2 = ['Januar', 'Februar', u'M\xe4rz', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'][(t.tm_mon - 1)]			
-			d = d.replace('%a', t1)
-			d = d.replace('%A', t2)
-			d = d.replace('%b', m1)
-			d = d.replace('%B', m2)
-		return strftime(d, t)
-    
+			return "???"
+
 	text = property(getText)

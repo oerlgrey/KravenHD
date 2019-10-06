@@ -1,0 +1,42 @@
+  <!-- /* EMC NoCover -->
+  <screen name="EMCSelection" position="0,0" size="1920,1080" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
+	<eLabel text="Enhanced Movie Center" position="63,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+	<widget name="list" position="736,153" size="1120,816" itemHeight="48" CoolIconPos="6" CoolIconHPos="9" CoolIconSize="30,30" CoolFont="Regular;34" CoolSelectFont="Regular;34" CoolSelNumTxtWidth="45" CoolDateFont="Regular;32" CoolProgressPos="665" CoolBarPos="665" CoolBarHPos="14" CoolBarSize="75,15" CoolBarSizeSa="165,24" CoolPiconPos="52" CoolPiconHPos="6" CoolPiconWidth="60" CoolPiconHeight="36" CoolMoviePiconPos="130" CoolMoviePiconSize="512" CoolMoviePos="60" CoolMovieSize="582" CoolFolderSize="825" CoolDateHPos="1" CoolDatePos="830" CoolDateWidth="280" CoolTitleColor="1" CoolDateColor="1" CoolHighlightColor="0" DefaultColor="KravenFont1" UnwatchedColor="unwatched" WatchingColor="watching" FinishedColor="finished" RecordingColor="red" BackColorSel="KravenEMCSelection" FrontColorSel="KravenEMCSelFont" backgroundColorSelected="KravenEMCSelection" foregroundColorSelected="KravenEMCSelFont" backgroundColor="Kravenbg" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+	<widget source="Service" render="Label" position="745,105" size="666,40" font="Regular;33" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
+	  <convert type="KravenHDDiskSpace">path</convert>
+	</widget>
+	<widget source="Service" render="Label" position="1419,105" size="438,40" font="Regular;33" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" halign="right">
+	  <convert type="KravenHDDiskSpace">both</convert>
+	</widget>
+	<widget source="Service" render="Label" position="63,97" size="648,93" font="Regular;36" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
+	  <convert type="EMCEventName">Name</convert>
+	</widget>
+	<widget source="Service" render="Label" position="63,252" size="648,40" font="Regular;33" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1">
+	  <convert type="EMCMovieInfo">RecordServiceName</convert>
+	</widget>
+	<widget source="Service" render="Label" position="63,199" size="648,45" font="Regular;31" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1">
+	  <convert type="EMCServiceTime">StartTime</convert>
+	  <convert type="EMCClockToText">Date</convert>
+	</widget>
+	<widget source="Service" render="Label" position="63,922" size="82,37" font="Regular;30" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
+	  <convert type="EMCServiceTime">StartTime</convert>
+	  <convert type="EMCClockToText">Format:%H:%M </convert>
+	</widget>
+	<widget source="Service" render="Label" position="150,922" size="120,37" font="Regular;30" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
+	  <convert type="EMCServiceTime">EndTime</convert>
+	  <convert type="EMCClockToText">Format:- %H:%M </convert>
+	</widget>
+	<widget source="Service" render="Label" position="405,922" size="150,37" font="Regular;30" halign="right" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont2">
+	  <convert type="EMCServiceTime">Duration</convert>
+	  <convert type="EMCClockToText">InMinutes</convert>
+	</widget>
+	<widget source="Service" render="Label" position="561,922" size="142,37" font="Regular;30" halign="right" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
+	  <convert type="EMCMovieInfo">FileSize</convert>
+	</widget>
+	<!-- globalbg */-->
+	<constant-widget name="emc-nocover-small"/>
+	<constant-widget name="EMCSelection-template"/>
+    <constant-widget name="gradient-emc"/>
+	<!--<text="EMCSelection - no Cover" position="63,0" />-->
+  </screen>
+  <!-- EMC NoCover */-->

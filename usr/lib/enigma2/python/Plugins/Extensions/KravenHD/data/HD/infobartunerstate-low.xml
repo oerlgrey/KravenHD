@@ -1,0 +1,38 @@
+  <!-- InfoBarTunerState -->
+  <screen name="TunerState" title="Tuner State" flags="wfNoBorder" position="0,325" size="1280,32" zPosition="5" padding="20" spacing="15" backgroundColor="transparent">
+    <eLabel backgroundColor="KravenIBbg" position="0,0" size="1280,32" zPosition="-2" />
+    <widget name="Type" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/record.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/stream.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/finished.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/info.png" position="0,0" size="32,32" zPosition="1" backgroundColor="KravenIBbg" transparent="1" alphatest="on"/>
+    <widget name="Progress" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/progress.png" position="0,0" size="80,10" zPosition="1" borderWidth="2" borderColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1"/>
+    <widget name="Field0" font="Regular;24" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field1" font="Regular;24" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field2" font="Regular;24" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field3" font="Regular;24" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field4" font="Regular;24" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field5" font="Regular;24" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field6" font="Regular;24" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field7" font="Regular;24" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field8" font="Regular;24" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+    <widget name="Field9" font="Regular;24" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+  </screen>
+  <screen name="TunerState_v2" title="Tuner State" flags="wfNoBorder" position="0,325" size="1280,32" zPosition="5" padding="20" spacing="15" backgroundColor="transparent">
+    <eLabel backgroundColor="KravenIBbg" position="0,0" size="1280,32" zPosition="-2" />
+	<widget name="picon" size="42,25" alphatest="on"/>
+    <widget name="Type" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons/record.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons/stream.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons/finished.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons/info.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons/live.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons/unknown.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons/clock.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons/pip.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons/record_finished.png" size="25,25" alphatest="on"/>
+    <widget name="Progress" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons/progress.png" size="80,10" borderWidth="2" borderColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1"/>
+	<widget name="Field0" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field1" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field2" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field3" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field4" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field5" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field6" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field7" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field8" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+	<widget name="Field9" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
+  </screen>
+  <!-- AutoResolution -->
+  <screen name="ResolutionLabel" backgroundColor="transparent" position="0,305" size="520,28" flags="wfNoBorder">
+    <eLabel backgroundColor="KravenIBbg" position="0,0" size="520,28" transparent="0" zPosition="-2" />
+    <widget name="content" position="20,2" size="250,22" font="Regular;16" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="left" valign="center" transparent="1" zPosition="-1" />
+    <widget name="restxt" position="270,2" size="250,22" font="Regular;16" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="left" valign="center" transparent="1" zPosition="-1" />
+  </screen>

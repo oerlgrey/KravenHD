@@ -1,12 +1,10 @@
+# -*- coding: utf-8 -*-
+
+#  Events Info Converter
 #
-#  EVENTS INFO Converter
-#
-#  Based on Converter NextEvents
-#  by m0rphU & LN
-#
-#  Modified by tomele for Kraven Skins:
-#  Added support for current event
-#  Added descriptions as output
+#  Coded/Modified/Adapted by örlgrey
+#  Based on VTi and/or OpenATV image source code
+#  Based on Next Events by m0rphU & LN
 #
 #  This code is licensed under the Creative Commons 
 #  Attribution-NonCommercial-ShareAlike 3.0 Unported 
@@ -15,6 +13,8 @@
 #  or send a letter to Creative Commons, 559 Nathan 
 #  Abbott Way, Stanford, California 94305, USA.
 #
+#  If you think this license infringes any rights,
+#  please contact me at ochzoetna@gmail.com
 
 from Components.Converter.Converter import Converter
 from Components.Element import cached
@@ -31,13 +31,12 @@ class KravenHDEventsInfo(Converter, object):
 	Event3 = 2
 	PrimeTime = 3
 	Event0 = 4
-	
-	noDuration = 10
-	onlyDuration = 11
-	withDuration = 12
-	showDuration = 12
-	shortDescription = 13
-	longDescription = 14
+	noDuration = 5
+	onlyDuration = 6
+	withDuration = 7
+	showDuration = 8
+	shortDescription = 9
+	longDescription = 10
 
 	def __init__(self, type):
 		Converter.__init__(self, type)

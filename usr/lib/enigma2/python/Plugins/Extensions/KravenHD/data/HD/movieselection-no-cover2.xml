@@ -1,0 +1,30 @@
+    <!-- MovieSelection -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieSelection" position="0,0" size="1280,720" title="">
+    <widget name="waitingtext" position="0,0" size="0,0" />
+	<eLabel text="MovieSelection" position="42,12" size="708,46" backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+    <widget name="list" position="491,102" size="747,540" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+	<widget source="Service" render="Label" position="497,70" size="444,27" font="Regular;22" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
+	  <convert type="KravenHDDiskSpace">path</convert>
+	</widget>
+	<widget source="Service" render="Label" position="946,70" size="292,27" font="Regular;22" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" halign="right">
+	  <convert type="KravenHDDiskSpace">both</convert>
+	</widget>
+	<widget source="Service" render="Label" position="42,65" size="432,60" font="Regular;24" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
+	  <convert type="EventName">Name</convert>
+	</widget>
+	<widget source="Service" render="Label" position="42,135" size="432,27" font="Regular;22" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" noWrap="1" transparent="1" zPosition="1">
+	  <convert type="MovieInfo">RecordServiceName</convert>
+	</widget>
+	<widget source="Service" render="Label" position="42,615" size="100,25" font="Regular;20" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1" zPosition="1">
+	  <convert type="ServiceTime">Duration</convert>
+	  <convert type="ClockToText">AsLength</convert>
+	</widget>
+	<widget source="Service" render="Label" position="307,615" size="162,25" font="Regular;20" halign="right" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1" zPosition="1">
+	  <convert type="MovieInfo">FileSize</convert>
+	</widget>
+	<!-- globalbg */-->
+	<constant-widget name="movieselection-no-cover2-small"/>
+	<constant-widget name="EMCSelection-template"/>
+    <constant-widget name="gradient-emc"/>
+	<!--<text="MovieSelection - no Cover2" position="42,0" />-->
+  </screen>

@@ -1,20 +1,19 @@
+# -*- coding: utf-8 -*-
+
+#  Menu Picture In Graphics Renderer
 #
-#  Menu MiniTV Renderer
-#  Based on OpenATV Picture in Graphics Renderer
-#  Modified by tomele for Kraven Skins
+#  Coded/Modified/Adapted by örlgrey
+#  Based on VTi and/or OpenATV image source code
 #
-#  This plugin is licensed under the Creative Commons
-#  Attribution-NonCommercial-ShareAlike 3.0 Unported
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
 #  License. To view a copy of this license, visit
-#  http://creativecommons.org/licenses/by-nc-sa/3.0/
-#  or send a letter to Creative Commons, 559 Nathan
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
 #  Abbott Way, Stanford, California 94305, USA.
 #
-#  This plugin is NOT free software. It is open source,
-#  you are allowed to modify it (if you keep the license),
-#  but it may not be commercially distributed other than
-#  under the conditions noted above.
-#
+#  If you think this license infringes any rights,
+#  please contact me at ochzoetna@gmail.com
 
 from Renderer import Renderer
 from enigma import eVideoWidget, getDesktop, eTimer
@@ -31,9 +30,9 @@ class KravenHDMenuPig(Renderer):
 
 	GUI_WIDGET = eVideoWidget
 
-	def debug(self,what):
-		f=open('/tmp/kraven_debug.txt','a+')
-		f.write(str(what)+'\n')
+	def debug(self, what):
+		f = open('/tmp/kraven_debug.txt', 'a+')
+		f.write(str(what) + '\n')
 		f.close()
 		
 	def postWidgetCreate(self, instance):
@@ -43,8 +42,8 @@ class KravenHDMenuPig(Renderer):
 
 	def applySkin(self, desktop, parent):
 		attribs = self.skinAttributes[:]
-		for attrib, value in self.skinAttributes:
-			if attrib == 'hidePip':
+		for (attrib, value) in self.skinAttributes:
+			if attrib == "hidePip":
 				self.hidePip = value == 1
 				attribs.remove((attrib, value))
 
@@ -57,7 +56,7 @@ class KravenHDMenuPig(Renderer):
 
 	def onShow(self):
 		if self.instance:
-			config.plugins.KravenHD.PigMenuActive.value=True
+			config.plugins.KravenHD.PigMenuActive.value = True
 			config.plugins.KravenHD.PigMenuActive.save()
 			if self.Size:
 				self.instance.resize(self.Size)
@@ -69,5 +68,5 @@ class KravenHDMenuPig(Renderer):
 		if self.instance:
 			self.preWidgetRemove(self.instance)
 			self.hidePip and PipPigMode(False)
-			config.plugins.KravenHD.PigMenuActive.value=False
+			config.plugins.KravenHD.PigMenuActive.value = False
 			config.plugins.KravenHD.PigMenuActive.save()

@@ -1,0 +1,43 @@
+  <!-- /* EMC SmallCover -->
+  <screen name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
+	<eLabel text="Enhanced Movie Center" position="42,12" size="708,46" backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
+    <widget name="list" position="42,102" size="755,544" itemHeight="32" CoolIconPos="4" CoolIconHPos="6" CoolIconSize="20,20" CoolFont="Regular;23" CoolSelectFont="Regular;23" CoolSelNumTxtWidth="30" CoolDateFont="Regular;23" CoolProgressPos="452" CoolBarPos="452" CoolBarHPos="9" CoolBarSize="50,10" CoolBarSizeSa="110,16" CoolPiconPos="35" CoolPiconHPos="4" CoolPiconWidth="40" CoolPiconHeight="24" CoolMoviePiconPos="86" CoolMoviePiconSize="351" CoolMoviePos="41" CoolMovieSize="396" CoolFolderSize="550" CoolDatePos="562" CoolDateWidth="187" CoolTitleColor="1" CoolDateColor="1" CoolHighlightColor="0" DefaultColor="KravenFont1" UnwatchedColor="unwatched" WatchingColor="watching" FinishedColor="finished" RecordingColor="red" BackColorSel="KravenEMCSelection" FrontColorSel="KravenEMCSelFont" backgroundColorSelected="KravenEMCSelection" foregroundColorSelected="KravenEMCSelFont" backgroundColor="Kravenbg" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+	<widget source="Service" render="Label" position="48,70" size="452,27" font="Regular; 22" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
+	  <convert type="KravenHDDiskSpace">path</convert>
+	</widget>
+	<widget source="Service" render="Label" position="505,70" size="292,27" font="Regular; 22" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" halign="right">
+	  <convert type="KravenHDDiskSpace">both</convert>
+	</widget>
+	<widget source="Service" render="Label" position="816,67" size="320,58" font="Regular; 24" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
+	  <convert type="EMCEventName">Name</convert>
+	</widget>
+	<widget source="Service" render="Label" position="816,184" size="320,27" font="Regular; 22" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1">
+	  <convert type="EMCMovieInfo">RecordServiceName</convert>
+	</widget>
+	<widget source="Service" render="Label" position="816,142" size="320,30" font="Regular; 21" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont1" transparent="1">
+	  <convert type="EMCServiceTime">StartTime</convert>
+	  <convert type="EMCClockToText">Date</convert>
+	</widget>
+	<widget source="Service" render="Label" position="816,615" size="55,25" font="Regular; 20" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
+	  <convert type="EMCServiceTime">StartTime</convert>
+	  <convert type="EMCClockToText">Format:%H:%M </convert>
+	</widget>
+	<widget source="Service" render="Label" position="874,615" size="80,25" font="Regular; 20" halign="left" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
+	  <convert type="EMCServiceTime">EndTime</convert>
+	  <convert type="EMCClockToText">Format:- %H:%M </convert>
+	</widget>
+	<widget source="Service" render="Label" position="1039,615" size="100,25" font="Regular; 20" halign="right" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont2">
+	  <convert type="EMCServiceTime">Duration</convert>
+	  <convert type="EMCClockToText">InMinutes</convert>
+	</widget>
+	<widget source="Service" render="Label" position="1143,615" size="95,25" font="Regular; 20" halign="right" backgroundColor="Kravenbg" foregroundColor="KravenFont2" transparent="1">
+	  <convert type="EMCMovieInfo">FileSize</convert>
+	</widget>
+	<widget name="Cover" position="1148,70" size="100,151" zPosition="4" backgroundColor="Kravenbg" alphatest="on" transparent="0" />
+	<!-- globalbg */-->
+	<constant-widget name="emc-smallcover2-small"/>
+	<constant-widget name="EMCSelection-template"/>
+    <constant-widget name="gradient-emc"/>
+	<!--<text="EMCSelection - small Cover2" position="42,0" />-->
+  </screen>
+  <!-- EMC SmallCover */-->

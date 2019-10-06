@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
+
+#  Weather ACCU Converter
 #
-#  Accuweather Weather Info
+#  Coded/Modified/Adapted by örlgrey
+#  Based on VTi and/or OpenATV image source code
 #
-#  Coded by TBX for Kraven Skins (c) 2015
-#
-#  This plugin is licensed under the Creative Commons
-#  Attribution-NonCommercial-ShareAlike 3.0 Unported
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
 #  License. To view a copy of this license, visit
-#  http://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative
-#  Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
 #
-#  This plugin is NOT free software. It is open source, you are allowed to
-#  modify it (if you keep the license), but it may not be commercially
-#  distributed other than under the conditions noted above.
-#
+#  If you think this license infringes any rights,
+#  please contact me at ochzoetna@gmail.com
 
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from Components.Converter.Converter import Converter
@@ -23,6 +23,7 @@ from Components.config import config
 from enigma import eTimer
 import requests, time, os, gettext
 from Poll import Poll
+from Plugins.Extensions.KravenHD import ping
 
 lang = language.getLanguage()
 os.environ["LANGUAGE"] = lang[:2]
@@ -36,8 +37,8 @@ def _(txt):
 		t = gettext.gettext(txt)
 	return t
 
-URL = 'http://api.accuweather.com/forecasts/v1/daily/5day/' + str(config.plugins.KravenHD.weather_accu_id.value) + '?apikey=srRLeAmTroxPinDG8Aus3Ikl6tLGJd94&metric=true&details=true&language=' + str(config.plugins.KravenHD.weather_language.value)
-URL2 = 'http://api.accuweather.com/currentconditions/v1/' + str(config.plugins.KravenHD.weather_accu_id.value) + '?apikey=srRLeAmTroxPinDG8Aus3Ikl6tLGJd94&metric=true&details=true&language=' + str(config.plugins.KravenHD.weather_language.value)
+URL = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/' + str(config.plugins.KravenHD.weather_accu_id.value) + '?apikey=' + str(config.plugins.KravenHD.weather_accu_apikey.value) + '&language=' + str(config.plugins.KravenHD.weather_language.value + '&details=true&metric=true')
+URL2 = 'http://dataservice.accuweather.com/currentconditions/v1/' + str(config.plugins.KravenHD.weather_accu_id.value) + '?apikey=' + str(config.plugins.KravenHD.weather_accu_apikey.value) + '&language=' + str(config.plugins.KravenHD.weather_language.value + '&details=true')
 
 WEATHER_DATA1 = None
 WEATHER_DATA2 = None
@@ -111,17 +112,19 @@ class KravenHDWeather_accu(Poll, Converter, object):
 		global WEATHER_LOAD
 		if WEATHER_LOAD == True:
 			try:
-				print "KravenWeather: Weather download from AccuWeather"
-				res = requests.request('get', URL)
-				self.data = res.json()
-				WEATHER_DATA1 = self.data
-				res2 = requests.request('get', URL2)
-				self.data2 = res2.json()
-				WEATHER_DATA2 = self.data2
-				WEATHER_LOAD = False
+				r = ping.doOne("8.8.8.8",1.5)
+				if r != None and r <= 1.5:
+					print "KravenWeather: Weather download from AccuWeather"
+					res = requests.get(URL, timeout=1.5)
+					self.data = res.json()
+					WEATHER_DATA1 = self.data
+					res2 = requests.get(URL2, timeout=1.5)
+					self.data2 = res2.json()
+					WEATHER_DATA2 = self.data2
+					WEATHER_LOAD = False
 			except:
 				pass
-			timeout = int(config.plugins.KravenHD.refreshInterval.value) * 1000.0 * 60.0
+			timeout = max(15,int(config.plugins.KravenHD.refreshInterval.value)) * 1000.0 * 60.0
 			self.timer.start(int(timeout), True)
 		else:
 			self.data = WEATHER_DATA1

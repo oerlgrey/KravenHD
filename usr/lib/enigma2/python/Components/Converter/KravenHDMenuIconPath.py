@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-#
 #  Menu Icon Path Converter
 #
-#  Coded by tomele for Kraven Skins
+#  Coded/Modified/Adapted by örlgrey
+#  Based on VTi and/or OpenATV image source code
 #
 #  This code is licensed under the Creative Commons 
 #  Attribution-NonCommercial-ShareAlike 3.0 Unported 
@@ -12,6 +12,8 @@
 #  or send a letter to Creative Commons, 559 Nathan 
 #  Abbott Way, Stanford, California 94305, USA.
 #
+#  If you think this license infringes any rights,
+#  please contact me at ochzoetna@gmail.com
 
 from Components.Converter.Converter import Converter
 from Components.Element import cached
@@ -22,7 +24,7 @@ class KravenHDMenuIconPath(Poll,Converter,object):
 	def __init__(self, type):
 		Poll.__init__(self)
 		Converter.__init__(self, type)
-		self.poll_interval = 1000
+		self.poll_interval = 100
 		self.poll_enabled = True
 		self.type = str(type)
 		self.path = "/usr/share/enigma2/Kraven-menu-icons/"
@@ -127,6 +129,8 @@ class KravenHDMenuIconPath(Poll,Converter,object):
 		("moviebrowser","plugin.png"),
 		("multi_quick","remotecontrol.png"), #ATV
 		("multi_quick","mqb.png"),
+		("multi_quick","keyb.png"),
+		("multi_quick","plugin.png"),
 		("netafp_setup","net.png"),
 		("netftp_setup","net.png"),
 		("netmounts_setup","net.png"),
@@ -184,6 +188,8 @@ class KravenHDMenuIconPath(Poll,Converter,object):
 		("saveepgcache","movie_list.png"),
 		("scart_switch","scart.png"), #ATV
 		("scart_switch","setup.png"),
+		("select_menu","movie.png"),
+		("select_menu","plugin.png"),
 		("service_info_screen","info.png"), #ATV
 		("service_info_screen","service_info.png"),
 		("service_searching_selection","tuner.png"),
@@ -285,6 +291,7 @@ class KravenHDMenuIconPath(Poll,Converter,object):
 				name=self.path+"plugin.png"
 				if fileExists(name):
 					return name
+			return self.logo
 		except:
 			try: # is it a menu? then we handle it according to current selection
 				cur = self.source.current
@@ -299,13 +306,12 @@ class KravenHDMenuIconPath(Poll,Converter,object):
 					name=""
 					for pair in self.names:
 						if pair[0] == selection.lower():
-							break
-					name=self.userpath+pair[1]
-					if name != "" and fileExists(name):
-						return name
-					name=self.path+pair[1]
-					if name != "" and fileExists(name):
-						return name
+							name=self.userpath+pair[1]
+							if name != "" and fileExists(name):
+								return name
+							name=self.path+pair[1]
+							if name != "" and fileExists(name):
+								return name
 			except:
 				pass
 		name=self.userpath+"setup.png"

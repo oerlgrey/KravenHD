@@ -1,0 +1,130 @@
+  <!-- MSNWeatherPlugin -->
+  <screen name="MSNWeatherPlugin" position="0,0" size="1280,720" title="Weather Plugin" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="Kravenbg" font="Regular2;22" foregroundColor="KravenFont2" position="85,25" render="Label" size="220,27" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
+    <widget source="global.CurrentTime" render="Label" backgroundColor="Kravenbg" foregroundColor="KravenFont1" position="1095,25" size="100,27" font="Regular;22" halign="right" transparent="1" valign="center">
+      <convert type="KravenHDClockToText">Default</convert>
+    </widget>
+	<widget render="Label" source="caption" font="Regular2;22" foregroundColor="KravenFont2" position="570,25" size="410,27" backgroundColor="Kravenbg" zPosition="3" transparent="1" halign="center" valign="center" noWrap="1" />
+	<widget render="Label" source="observationpoint" font="Regular;18" foregroundColor="KravenFont1" position="590,80" size="370,55" backgroundColor="Kravenbg" zPosition="3" transparent="1" halign="center" valign="top" />
+	<!--day1-->
+	<widget source="session.MSNWeather" render="Label" font="Regular;28" foregroundColor="white" position="288,15" size="180,45" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">weekshortday,current</convert>
+	</widget>
+	<widget source="session.MSNWeather" render="Label" font="Regular;28" foregroundColor="white" position="360,15" size="180,45" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">date,current</convert>
+	</widget>
+	<widget render="Label" source="observationtime" font="Regular;22" foregroundColor="white" position="310,50" size="240,40" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center" />
+	<widget render="Label" source="currentTemp" font="Regular;50" foregroundColor="white" position="230,170" size="400,120" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center" />
+	<widget render="Label" source="feelsliketemp" font="Regular;22" foregroundColor="white" position="310,258" size="240,40" backgroundColor="#00666666" zPosition="3" transparent="1" valign="center" halign="center" />
+	<widget render="Label" source="condition" font="Regular;24" foregroundColor="white" position="310,294" size="240,45" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center" />
+	<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="310,19" size="240,320" zPosition="1" transparent="1" alphatest="blend">
+	  <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/KravenHD/msn_weather_icons/,png</convert>
+	</widget>
+	<ePixmap pixmap="KravenHD/msn_weather_icons/temp_high_low.png" position="815,137" size="28,70" zPosition="3" transparent="1" alphatest="blend" />
+	<widget source="session.MSNWeather" render="Label" font="Regular;30" foregroundColor="KravenFont2" position="625,135" size="300,35" backgroundColor="Kravenbg" zPosition="3" transparent="1" valign="center" halign="center">
+	  <convert type="MSNWeather">temperature_high,current</convert>
+	</widget>
+	<widget source="session.MSNWeather" render="Label" font="Regular;30" foregroundColor="KravenFont2" position="625,170" size="300,35" backgroundColor="Kravenbg" zPosition="3" transparent="1" valign="center" halign="center">
+	  <convert type="MSNWeather">temperature_low,current</convert>
+	</widget>
+	<widget source="session.MSNWeather" render="Label" font="Regular;24" foregroundColor="KravenFont1" position="625,213" size="300,40" backgroundColor="Kravenbg" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">temperature_text,day1</convert>
+	</widget>
+	<ePixmap pixmap="KravenHD/msn_weather_icons/wind.png" position="610,258" size="60,60" zPosition="3" transparent="1" alphatest="blend" />
+	<widget render="Label" source="wind_condition" font="Regular;24" foregroundColor="KravenFont1" position="628,260" size="300,30" backgroundColor="Kravenbg" zPosition="3" transparent="1" valign="center" halign="center" />
+	<ePixmap pixmap="KravenHD/msn_weather_icons/umbrella.png" position="907,280" size="50,54" zPosition="3" transparent="1" alphatest="blend" />
+	<widget render="Label" source="humidity" font="Regular;24" foregroundColor="KravenFont1" position="628,297" size="300,35" backgroundColor="Kravenbg" zPosition="3" transparent="1" valign="center" halign="center" />
+	<!--day2 -->
+	<widget source="session.MSNWeather" render="Label" font="Regular;28" foregroundColor="white" position="65,376" size="180,45" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">weekshortday,day2</convert>
+	</widget>
+	<widget source="session.MSNWeather" render="Label" font="Regular;28" foregroundColor="white" position="137,376" size="180,45" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">date,day2</convert>
+	</widget>
+	<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="85,380" size="240,320" zPosition="1" transparent="1" alphatest="blend">
+	  <convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/KravenHD/msn_weather_icons/,png</convert>
+	</widget>
+	<widget render="Label" source="weekday2_temp" font="Regular;34" foregroundColor="white" position="84,605" size="240,40" backgroundColor="#00666666" zPosition="1" transparent="1" halign="center" valign="center" />
+	<widget source="session.MSNWeather" render="Label" font="Regular;24" foregroundColor="white" position="85,655" size="240,40" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">temperature_text,day2</convert>
+	</widget>
+	<!-- day3 -->
+	<widget source="session.MSNWeather" render="Label" font="Regular;28" foregroundColor="white" position="355,376" size="180,45" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">weekshortday,day3</convert>
+	</widget>
+	<widget source="session.MSNWeather" render="Label" font="Regular;28" foregroundColor="white" position="427,376" size="180,45" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">date,day3</convert>
+	</widget>
+	<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="375,380" size="240,320" zPosition="1" transparent="1" alphatest="blend">
+	  <convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/KravenHD/msn_weather_icons/,png</convert>
+	</widget>
+	<widget render="Label" source="weekday3_temp" font="Regular;34" foregroundColor="white" position="375,605" size="240,40" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center" />
+	<widget source="session.MSNWeather" render="Label" font="Regular;24" foregroundColor="white" position="375,655" size="240,40" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">temperature_text,day3</convert>
+	</widget>
+	<!--day4-->
+	<widget source="session.MSNWeather" render="Label" font="Regular;28" foregroundColor="white" position="645,376" size="180,45" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">weekshortday,day4</convert>
+	</widget>
+	<widget source="session.MSNWeather" render="Label" font="Regular;28" foregroundColor="white" position="717,376" size="180,45" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">date,day4</convert>
+	</widget>
+	<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="665,380" size="240,320" zPosition="1" transparent="1" alphatest="blend">
+	  <convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/KravenHD/msn_weather_icons/,png</convert>
+	</widget>
+	<widget render="Label" source="weekday4_temp" font="Regular;34" foregroundColor="white" position="665,605" size="240,40" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center" />
+	<widget source="session.MSNWeather" render="Label" font="Regular;24" foregroundColor="white" position="666,655" size="240,40" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">temperature_text,day4</convert>
+	</widget>
+	<!--day5-->
+	<widget source="session.MSNWeather" render="Label" font="Regular;28" foregroundColor="white" position="935,376" size="180,45" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">weekshortday,day5</convert>
+	</widget>
+	<widget source="session.MSNWeather" render="Label" font="Regular;28" foregroundColor="white" position="1007,376" size="180,45" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">date,day5</convert>
+	</widget>
+	<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="955,380" size="240,320" zPosition="1" transparent="1" alphatest="blend">
+	  <convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/KravenHD/msn_weather_icons/,png</convert>
+	</widget>
+	<widget render="Label" source="weekday5_temp" font="Regular;34" foregroundColor="white" position="955,605" size="240,40" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center" />
+	<widget source="session.MSNWeather" render="Label" font="Regular;24" foregroundColor="white" position="955,655" size="240,40" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+	  <convert type="MSNWeather">temperature_text,day5</convert>
+	</widget>
+    <eLabel backgroundColor="Kravenbg5" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
+    <!--<text="MSNWeatherPlugin" position="70,0" />-->
+  </screen>
+  <!-- MSNWeatherPluginEntriesListConfigScreen -->
+  <screen name="MSNWeatherPluginEntriesListConfigScreen" position="0,0" size="1280,720" title="WeatherPlugin: List of Entries" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="Kravenbg3" name="entrylist" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="70,146" size="708,450" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+    <widget source="city" render="Label" position="70,105" size="220,28" font="Regular2; 20" halign="left" valign="center" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
+    <widget source="text" render="Label" position="297,105" size="480,28" font="Regular2; 22" halign="left" valign="center" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
+    <widget name="HelpWindow" position="900,346" size="261,262" zPosition="98" transparent="1" alphatest="blend" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+	<constant-widget name="gradient-menu"/>
+    <constant-widget name="Colorbuttons"/>
+	<constant-widget name="SourceRedGreenYellowBlue"/>
+    <!--<text="MSNWeatherPluginEntriesListConfigScreen" position="70,0" />-->
+  </screen>
+  <!-- MSNWeatherPluginEntryConfigScreen -->
+  <screen name="MSNWeatherPluginEntryConfigScreen" position="0,0" size="1280,720" title="WeatherPlugin: Edit Entry" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="70,80" size="708,540" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+    <widget name="HelpWindow" position="900,346" size="261,262" zPosition="98" transparent="1" alphatest="blend" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+	<constant-widget name="gradient-menu"/>
+    <constant-widget name="Colorbuttons"/>
+	<constant-widget name="SourceRedGreenYellowBlue"/>
+    <!--<text="MSNWeatherPluginEntryConfigScreen" position="70,0" />-->
+  </screen>
+  <!-- MSNWeatherPluginSearch -->
+  <screen name="MSNWeatherPluginSearch" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="Kravenbg3" name="entrylist" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="70,80" size="708,540" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+    <widget name="HelpWindow" position="900,346" size="261,262" zPosition="98" transparent="1" alphatest="blend" />
+    <constant-widget name="Title-big"/>
+	<!-- Logo -->
+	<constant-widget name="gradient-menu"/>
+    <constant-widget name="Colorbuttons"/>
+	<constant-widget name="SourceRedGreenYellowBlue"/>
+    <!--<text="MSNWeatherPluginSearch" position="70,0" />-->
+  </screen>
