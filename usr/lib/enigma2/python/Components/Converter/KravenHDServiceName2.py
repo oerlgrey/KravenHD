@@ -31,13 +31,13 @@ class KravenHDServiceName2(Converter, object):
 	NAME = 0
 	NUMBER = 1
 	BOUQUET = 2
-	REFERENCE = 3
-	ORBPOS = 4
-	TPRDATA = 5
-	SATELLITE = 6
-	ALLREF = 7
-	FORMAT = 8
-	
+	PROVIDER = 3
+	REFERENCE = 4
+	ORBPOS = 5
+	TPRDATA = 6
+	SATELLITE = 7
+	ALLREF = 8
+	FORMAT = 9
 
 	def __init__(self, type):
 		Converter.__init__(self, type)
@@ -47,11 +47,13 @@ class KravenHDServiceName2(Converter, object):
 			self.type = self.NUMBER
 		elif type == "Bouquet":
 			self.type = self.BOUQUET
+		elif type == "Provider":
+			self.type = self.PROVIDER
 		elif type == "Reference":
 			self.type = self.REFERENCE
 		elif type == "OrbitalPos":
 			self.type = self.ORBPOS
-		elif type == "TransponderInfo":
+		elif type == "TpansponderInfo":
 			self.type = self.TPRDATA
 		elif type == "Satellite":
 			self.type = self.SATELLITE
@@ -85,7 +87,7 @@ class KravenHDServiceName2(Converter, object):
 								istype = True
 								return istype
 						else:
-							if "%3a//" in s.toString().lower(): 
+							if '%3a//' in s.toString().lower(): 
 								istype = True
 								return istype
 			return istype
@@ -127,6 +129,8 @@ class KravenHDServiceName2(Converter, object):
 			isRadioService = ref.getData(0) in (2,10)
 			lastpath = isRadioService and config.radio.lastroot.value or config.tv.lastroot.value
 			if 'FROM BOUQUET' not in lastpath:
+				if 'FROM PROVIDERS' in lastpath:
+					return 'P', 'Provider'
 				if 'FROM SATELLITES' in lastpath:
 					return 'S', 'Satellites'
 				if ') ORDER BY name' in lastpath:
@@ -165,49 +169,37 @@ class KravenHDServiceName2(Converter, object):
 				return number, name
 		return 0, ''
 
+	def getProviderName(self, ref):
+		if isinstance(ref, eServiceReference):
+			from Screens.ChannelSelection import service_types_radio, service_types_tv
+			typestr = ref.getData(0) in (2,10) and service_types_radio or service_types_tv
+			pos = typestr.rfind(':')
+			rootstr = '%s (channelID == %08x%04x%04x) && %s FROM PROVIDERS ORDER BY name' %(typestr[:pos+1],ref.getUnsignedData(4),ref.getUnsignedData(2),ref.getUnsignedData(3),typestr[pos+1:])
+			provider_root = eServiceReference(rootstr)
+			serviceHandler = eServiceCenter.getInstance()
+			providerlist = serviceHandler.list(provider_root)
+			if not providerlist is None:
+				while True:
+					provider = providerlist.getNext()
+					if not provider.valid(): break
+					if provider.flags & eServiceReference.isDirectory:
+						servicelist = serviceHandler.list(provider)
+						if not servicelist is None:
+							while True:
+								service = servicelist.getNext()
+								if not service.valid(): break
+								if service == ref:
+									info = serviceHandler.info(provider)
+									return info and info.getName(provider) or "Unknown"
+		return ""
+
 	def getTransponderInfo(self, info, ref, fmt):
 		result = ""
 		if self.tpdata is None:
 			if ref:
 				self.tpdata = ref and info.getInfoObject(ref, iServiceInformation.sTransponderData)
-				orbital = 0
-				if self.tpdata is not None:
-					if isinstance(self.tpdata, float):
-						return ""
-					if self.tpdata.has_key("tuner_type"):
-						if (self.tpdata["tuner_type"] == "DVB-S") or (self.tpdata["tuner_type"] == "DVB-S2"):
-							orbital = self.tpdata["orbital_position"]
-							orbital = int(orbital)
-							if orbital > 1800:
-								orbital = str((float(3600 - orbital))/10.0) + "W"
-							else:
-								orbital = str((float(orbital))/10.0) + "E"
-							return orbital
-						elif (self.tpdata["tuner_type"] == "DVB-T") or (self.tpdata["tuner_type"] == "DVB-T2"):
-							return "DVB-T"
-						elif (self.tpdata["tuner_type"] == "DVB-C"):
-							return "DVB-C"
-				return ""
 			else:
 				self.tpdata = info.getInfoObject(iServiceInformation.sTransponderData)
-				orbital = 0
-				if self.tpdata is not None:
-					if isinstance(self.tpdata, float):
-						return ""
-					if self.tpdata.has_key("tuner_type"):
-						if (self.tpdata["tuner_type"] == "DVB-S") or (self.tpdata["tuner_type"] == "DVB-S2"):
-							orbital = self.tpdata["orbital_position"]
-							orbital = int(orbital)
-							if orbital > 1800:
-								orbital = str((float(3600 - orbital))/10.0) + "W"
-							else:
-								orbital = str((float(orbital))/10.0) + "E"
-							return orbital
-						elif (self.tpdata["tuner_type"] == "DVB-T") or (self.tpdata["tuner_type"] == "DVB-T2"):
-							return "DVB-T"
-						elif (self.tpdata["tuner_type"] == "DVB-C"):
-							return "DVB-C"
-				return ""
 			if not isinstance(self.tpdata, dict):
 				self.tpdata = None
 				return result
@@ -236,22 +228,25 @@ class KravenHDServiceName2(Converter, object):
 					result += _("Cable")
 				elif type == 'DVB-T':
 					result += _("Terrestrial")
-				elif type == 'DVB-T2':
-					result += _("T2")
 				elif type == 'IP-TV':
-					result += _('Stream-tv')
+					result += _("Stream-tv")
 				else:
 					result += 'N/A'
 			elif f == 's':	# %s - system (dvb-s/s2/c/t)
 				if type == 'DVB-S':
 					x = self.tpdata.get('system', 0)
 					result += x in range(2) and {0:'DVB-S',1:'DVB-S2'}[x] or ''
+				elif type == 'DVB-C':
+					x = self.tpdata.get('system', 0)
+					result += x in range(2) and {0:'DVB-C',1:'DVB-C2'}[x] or ''
+				elif type == 'DVB-T':
+					x = self.tpdata.get('system', 0)
+					result += x in range(2) and {0:'DVB-T',1:'DVB-T2'}[x] or ''
 				else:
 					result += type
 			elif f == 'F':	# %F - frequency (dvb-s/s2/c/t) in KHz
 				if type in ('DVB-S','DVB-C','DVB-T'):
 					result += '%d'% round(self.tpdata.get('frequency', 0) / 1000.0)
-					
 			elif f == 'f':	# %f - fec_inner (dvb-s/s2/c/t)
 				if type in ('DVB-S','DVB-C'):
 					x = self.tpdata.get('fec_inner', 15)
@@ -268,7 +263,8 @@ class KravenHDServiceName2(Converter, object):
 					x = self.tpdata.get('orbital_position', 0)
 					result += x > 1800 and "%d.%d°W"%((3600-x)/10, (3600-x)%10) or "%d.%d°E"%(x/10, x%10)
 				elif type == 'DVB-T':
-					result += 'DVB-T'
+					x = self.tpdata.get('system', 0)
+					result += x in range(2) and {0:'DVB-T',1:'DVB-T2'}[x] or ''
 				elif type == 'DVB-C':
 					result += 'DVB-C'
 				elif type == 'Iptv':
@@ -333,7 +329,24 @@ class KravenHDServiceName2(Converter, object):
 			if orbpos == 0xFFFF: #Cable
 				return _("Cable")
 			elif orbpos == 0xEEEE: #Terrestrial
-				return _("Terrestrial")
+#				return _("Terrestrial")
+				try:
+					nimfile = open('/proc/bus/nim_sockets')
+				except IOError:
+					return
+				current_slot = None
+				for line in nimfile:
+					if not line:
+						break
+					line = line.strip()
+					if line.startswith('NIM Socket'):
+						parts = line.split(' ')
+						current_slot = int(parts[2][:-1])
+				try:
+					from Components.NimManager import nimmanager
+					return str(nimmanager.getTerrestrialDescription(current_slot))
+				except:
+					return _("Terrestrial")
 			else: #Satellite
 				orbpos = ref.getData(4) >> 16
 				if orbpos < 0: orbpos += 3600
@@ -344,14 +357,25 @@ class KravenHDServiceName2(Converter, object):
 					dir = ref.flags & (eServiceReference.isDirectory|eServiceReference.isMarker)
 					if not dir:
 						refString = ref.toString().lower()
-						if refString.startswith("-1"):
+						if refString.startswith('-1'):
 							return ''
-						elif refString.startswith("1:134:"):
+						elif refString.startswith('1:134:'):
 							return _("Alternative")
-						elif refString.startswith("4097:"):
+						elif refString.startswith('4097:'):
 							return _("Internet")
 						else:
 							return orbpos > 1800 and "%d.%d°W"%((3600-orbpos)/10, (3600-orbpos)%10) or "%d.%d°E"%(orbpos/10, orbpos%10)
+		return ""
+
+	def getIPTVProvider(self, refstr):
+		iptv_prov = '/etc/enigma2/iptvprov.list'
+		if os.path.isfile(iptv_prov):
+			with open(iptv_prov, "r") as f:
+				for d in f.readlines():
+					if d.split(',')[0] in refstr:
+						return d.split(',')[1].strip()
+		elif '4097' in refstr or '5001' in refstr or '5002' in refstr:
+			return "StreamTV"
 		return ""
 
 	def getPlayingref(self, ref):
@@ -375,7 +399,7 @@ class KravenHDServiceName2(Converter, object):
 				if playref:
 					refstr = playref.toString() or ''
 					prefix = ''
-					if refstr.startswith("4097:"):
+					if refstr.startswith('4097:'):
 						prefix += "GStreamer "
 					if '%3a//' in refstr:
 						sref = ' '.join(refstr.split(':')[10:])
@@ -389,15 +413,17 @@ class KravenHDServiceName2(Converter, object):
 				if refstr.startswith("1:7:"):
 					if 'FROM BOUQUET' in refstr:
 						prefix += "Bouquet "
+					elif '(provider == ' in refstr:
+						prefix += "Provider "
 					elif '(satellitePosition == ' in refstr:
 						prefix += "Satellit "
 					elif '(channelID == ' in refstr:
 						prefix += "Current tr "
-				elif refstr.startswith("1:134:"):
+				elif refstr.startswith('1:134:'):
 					prefix += "Alter "
-				elif refstr.startswith("1:64:"):
+				elif refstr.startswith('1:64:'):
 					prefix += "Marker "
-				elif refstr.startswith("4097:"):
+				elif refstr.startswith('4097:'):
 					prefix += "GStreamer "
 				if self.isStream:
 					if self.refstr:
@@ -426,6 +452,7 @@ class KravenHDServiceName2(Converter, object):
 			info = service and self.source.info
 			ref = service
 		if not info: return ""
+		refname = 'ServiceName2.ref'
 		searchpath = ['/etc/enigma2/', '/usr/lib/enigma2/python/Components/Converter/']
 		if ref:
 			refstr = ref.toString()
@@ -434,7 +461,7 @@ class KravenHDServiceName2(Converter, object):
 		if refstr is None:
 			refstr = ''
 		if self.AlternativeControl: 
-			if ref and refstr.startswith("1:134:") and self.ref is None:
+			if ref and refstr.startswith('1:134:') and self.ref is None:
 				nref = self.resolveAlternate(ref)
 				if nref:
 					self.ref = nref
@@ -442,7 +469,7 @@ class KravenHDServiceName2(Converter, object):
 					self.refstr = self.ref.toString()
 					if not self.info: return ""
 		if self.IPTVcontrol:
-			if '%3a//' in refstr or (self.refstr and '%3a//' in self.refstr) or refstr.startswith("4097:"):
+			if '%3a//' in refstr or (self.refstr and '%3a//' in self.refstr) or refstr.startswith('4097:'):
 				self.isStream = True
 		if self.type == self.NAME:
 			name = ref and (info.getName(ref) or 'N/A') or (info.getName() or 'N/A')
@@ -465,27 +492,58 @@ class KravenHDServiceName2(Converter, object):
 		elif self.type == self.BOUQUET:
 			num, bouq = self.getServiceNumber(ref or eServiceReference(info.getInfoString(iServiceInformation.sServiceref)))
 			return bouq
+		elif self.type == self.PROVIDER:
+			tmpprov = tmpref = refpath = ''
+			if self.isStream:
+				if self.refstr:
+					tmpprov = self.getIPTVProvider(self.refstr)
+				tmpprov = self.getIPTVProvider(refstr)
+			else:
+				if self.ref:
+					tmpprov = self.getProviderName(self.ref)
+				if ref:
+					tmpprov = self.getProviderName(ref)
+				else: 
+					tmpprov = info.getInfoString(iServiceInformation.sProvider) or ''
+			if '' is tmpprov or 'Unknown' in tmpprov:
+				if self.refstr:
+					tmpref = self.refstr
+				else:
+					tmpref = refstr
+				for i in range(len(searchpath)):
+					if os.path.isfile('%s%s' % (searchpath[i], refname)):
+						refpath = '%s%s' % (searchpath[i], refname)
+				if not '' is refpath:
+					tmpref = ':'.join(tmpref.split(':')[:10])
+					reffile = open(refpath, 'r').read()
+					if not reffile.endswith('\r\n\r\n'):
+						reffile = '%s\r\n' % reffile
+					for line in reffile.splitlines(True):
+						if line.startswith(tmpref):
+							tmpprov = line.strip('\r').strip('\n').split(':')[-1].strip()
+				return tmpprov
+			return tmpprov
 		elif self.type == self.REFERENCE:
 			if self.refstr:
 				return self.refstr
 			return refstr
 		elif self.type == self.ORBPOS:
 			if self.isStream:
-				return "IPTV"
+				return "Stream"
 			else:
 				if self.ref and self.info:
 					return self.getTransponderInfo(self.info, self.ref, 'O')
 				return self.getTransponderInfo(info, ref, 'O')
 		elif self.type == self.TPRDATA:
 			if self.isStream:
-				return _("Streaming")
+				return "Streaming"
 			else:
 				if self.ref and self.info:
 					return self.getTransponderInfo(self.info, self.ref, 'T')
 				return self.getTransponderInfo(info, ref, 'T')
 		elif self.type == self.SATELLITE:
 			if self.isStream:
-				return _("Internet")
+				return "Internet"
 			else:
 				if self.ref:
 					return self.getSatelliteName(self.ref)
@@ -493,7 +551,7 @@ class KravenHDServiceName2(Converter, object):
 				return self.getSatelliteName(ref or eServiceReference(info.getInfoString(iServiceInformation.sServiceref)))
 		elif self.type == self.ALLREF:
 			tmpref = self.getReferenceType(refstr, ref)
-			if 'Bouquet' in tmpref or 'Satellit' in tmpref:
+			if 'Bouquet' in tmpref or 'Satellit' in tmpref or 'Provider' in tmpref:
 				return ' '
 			elif '%3a' in tmpref:
 				return ':'.join(refstr.split(':')[:10])
@@ -529,6 +587,36 @@ class KravenHDServiceName2(Converter, object):
 				elif f == 'B':	# %B - Bouquet
 					num, bouq = self.getServiceNumber(ref or eServiceReference(info.getInfoString(iServiceInformation.sServiceref)))
 					ret += bouq
+				elif f == 'P':	# %P - Provider
+					tmpprov = tmpref = refpath = ''
+					if self.isStream:
+						if self.refstr:
+							tmpprov = self.getIPTVProvider(self.refstr)
+						tmpprov = self.getIPTVProvider(refstr)
+					else:
+						if self.ref:
+							tmpprov = self.getProviderName(self.ref)
+						if ref:
+							tmpprov = self.getProviderName(ref)
+						else: 
+							tmpprov = info.getInfoString(iServiceInformation.sProvider) or ''
+					if '' is tmpprov or 'Unknown' in tmpprov:
+						if self.refstr:
+							tmpref = self.refstr
+						else:
+							tmpref = refstr
+						for i in range(len(searchpath)):
+							if os.path.isfile('%s%s' % (searchpath[i], refname)):
+								refpath = '%s%s' % (searchpath[i], refname)
+						if not '' is refpath:
+							tmpref = ':'.join(tmpref.split(':')[:10])
+							reffile = open(refpath, 'r').read()
+							if not reffile.endswith('\r\n\r\n'):
+								reffile = '%s\r\n' % reffile
+							for line in reffile.splitlines(True):
+								if line.startswith(tmpref):
+									tmpprov = line.strip('\r').strip('\n').split(':')[-1].strip()
+					ret += tmpprov
 				elif f == 'R':	# %R - Reference
 					if self.refstr:
 						ret += self.refstr
@@ -536,7 +624,7 @@ class KravenHDServiceName2(Converter, object):
 						ret += refstr
 				elif f == 'S':	# %S - Satellite
 					if self.isStream:
-						ret += _("Internet")
+						ret += "Internet"
 					else:
 						if self.ref:
 							ret += self.getSatelliteName(self.ref)
@@ -544,7 +632,7 @@ class KravenHDServiceName2(Converter, object):
 							ret += self.getSatelliteName(ref or eServiceReference(info.getInfoString(iServiceInformation.sServiceref)))
 				elif f == 'A':	# %A - AllRef
 					tmpref = self.getReferenceType(refstr, ref)
-					if 'Bouquet' in tmpref or 'Satellit' in tmpref:
+					if 'Bouquet' in tmpref or 'Satellit' in tmpref or 'Provider' in tmpref:
 						ret += ' '
 					elif '%3a' in tmpref:
 						ret += ':'.join(refstr.split(':')[:10])
@@ -579,4 +667,4 @@ class KravenHDServiceName2(Converter, object):
 				self.what = what
 				self.Timer.start(200, True)
 			else:
-				Converter.changed(self, what)
+					Converter.changed(self, what)

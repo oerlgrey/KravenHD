@@ -37,7 +37,7 @@
       <convert type="KravenHDTextTranslator">video</convert>
 	</widget>
 	<widget source="session.CurrentService" render="Label" font="Regular;16" position="535,16" size="250,20" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" noWrap="1" foregroundColor="KravenSIBFont1">
-      <convert type="KravenHDExtraInfo">VideoInfo</convert>
+	  <convert type="KravenHDServiceInfoEX">VideoInfo</convert>
 	</widget>
 	<widget source="session.CurrentService" render="Label" position="796,16" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenSIBbg2" transparent="1" foregroundColor="KravenSIBFont2">
       <convert type="KravenHDTextTranslator">sys</convert>

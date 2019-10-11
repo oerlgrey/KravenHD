@@ -1976,13 +1976,13 @@
 		<convert type="KravenHDTextTranslator">ecm</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1010,215" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
-		<convert type="KravenHDExtraInfo">TunerInfo</convert>
+		<convert type="KravenHDServiceName2">%s, %F MHZ</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1010,235" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
-		<convert type="KravenHDExtraInfo">SignalInfo</convert>
+		<convert type="KravenHDServiceName2">%p %Y, %f, %M</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1010,255" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
-		<convert type="KravenHDExtraInfo">VideoInfo</convert>
+		<convert type="KravenHDServiceInfoEX">VideoInfo</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1010,275" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDECMLine">SatInfo,freetoair</convert>
@@ -2063,13 +2063,13 @@
 		<convert type="KravenHDTextTranslator">ecm</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1050,215" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
-		<convert type="KravenHDExtraInfo">TunerInfo</convert>
+		<convert type="KravenHDServiceName2">%s, %F MHZ</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1050,235" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
-		<convert type="KravenHDExtraInfo">SignalInfo</convert>
+		<convert type="KravenHDServiceName2">%p %Y, %f, %M</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1050,255" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
-		<convert type="KravenHDExtraInfo">VideoInfo</convert>
+		<convert type="KravenHDServiceInfoEX">VideoInfo</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1050,275" size="220,20" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDECMLine">SatInfo,freetoair</convert>

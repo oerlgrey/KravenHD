@@ -24,7 +24,7 @@
     <parameter name="ChoicelistIcon" value="7,0,40,30" />
     <parameter name="ChoicelistDash" value="0,24,1147,20" />
     <!-- PiconManagerList -->
-    <parameter name="PiconManagerList" value="7,4,1117,27" />
+    <parameter name="PiconManagerList" value="7,1,1117,27" />
     <parameter name="PiconManagerListFont" value="Regular;22" />
     <parameter name="PiconManagerListItemHeight" value="30" />
     <!-- FileList -->

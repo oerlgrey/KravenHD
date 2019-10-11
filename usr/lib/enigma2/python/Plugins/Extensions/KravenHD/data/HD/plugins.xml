@@ -488,27 +488,27 @@
   </screen>
   <!-- FritzMenu -->
   <screen name="FritzMenu" position="0,0" size="1280,720" flags="wfNoBorder" title="Fritz Menu" backgroundColor="transparent">
-    <widget name="FBFRufuml" position="130,440" size="760,25" font="Regular;20" backgroundColor="Kravenbg" transparent="1" />
-    <widget name="FBFInternet" position="130,259" size="760,80" font="Regular;20" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont1" />
-    <widget name="FBFDsl" position="130,360" size="760,25" font="Regular;20" backgroundColor="Kravenbg" transparent="1" />
-    <widget name="FBFInfo" position="130,160" size="760,80" font="Regular;20" backgroundColor="Kravenbg" transparent="1" halign="left" />
-    <widget name="FBFWlan" position="130,400" size="760,25" font="Regular;20" backgroundColor="Kravenbg" transparent="1" />
-    <widget name="internet_inactive" pixmap="KravenHD/buttons/grey.png" position="98,260" size="24,24" alphatest="blend" />
+    <widget name="FBFInfo" position="130,160" size="760,81" font="Regular;22" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont1" />
     <widget name="internet_active" pixmap="KravenHD/buttons/green.png" position="98,260" size="24,24" alphatest="blend" />
-    <widget name="FBFGast" position="130,559" size="760,25" font="Regular;20" backgroundColor="Kravenbg" transparent="1" />
-    <widget name="FBFDect" position="130,520" size="760,25" font="Regular;20" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont1" />
-    <widget name="wlan_active" pixmap="KravenHD/buttons/green.png" position="98,402" size="24,24" alphatest="blend" />
-    <widget name="fax_active" pixmap="KravenHD/buttons/green.png" position="98,482" size="24,24" alphatest="blend" />
-    <widget name="dect_active" pixmap="KravenHD/buttons/green.png" position="98,521" size="24,24" alphatest="blend" />
-    <widget name="gast_active" pixmap="KravenHD/buttons/green.png" position="97,560" size="24,24" alphatest="blend" />
-    <widget name="FBFFax" position="130,480" size="760,25" font="Regular;20" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont1" />
+    <widget name="internet_inactive" pixmap="KravenHD/buttons/grey.png" position="98,260" size="24,24" alphatest="blend" />
+    <widget name="FBFInternet" position="130,259" size="760,81" font="Regular;22" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont1" />
     <widget name="dsl_active" pixmap="KravenHD/buttons/green.png" position="98,360" size="24,24" alphatest="blend" />
     <widget name="dsl_inactive" pixmap="KravenHD/buttons/grey.png" position="98,360" size="24,24" alphatest="blend" />
-    <widget name="wlan_inactive" pixmap="KravenHD/buttons/grey.png" position="98,402" size="24,24" alphatest="blend" />
-    <widget name="dect_inactive" pixmap="KravenHD/buttons/grey.png" position="98,521" size="24,24" alphatest="blend" />
-    <widget name="fax_inactive" pixmap="KravenHD/buttons/grey.png" position="98,482" size="24,24" alphatest="blend" />
-    <widget name="rufuml_inactive" pixmap="KravenHD/buttons/grey.png" position="98,441" size="24,24" alphatest="blend" />
+    <widget name="FBFDsl" position="130,359" size="760,27" font="Regular;22" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont1" />
+    <widget name="wlan_active" pixmap="KravenHD/buttons/green.png" position="98,400" size="24,24" alphatest="blend" />
+    <widget name="wlan_inactive" pixmap="KravenHD/buttons/grey.png" position="98,400" size="24,24" alphatest="blend" />
+    <widget name="FBFWlan" position="130,399" size="760,27" font="Regular;22" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont1" />
+    <widget name="rufuml_inactive" pixmap="KravenHD/buttons/grey.png" position="98,440" size="24,24" alphatest="blend" />
+    <widget name="FBFRufuml" position="130,439" size="760,27" font="Regular;22" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont1" />
+    <widget name="fax_active" pixmap="KravenHD/buttons/green.png" position="98,480" size="24,24" alphatest="blend" />
+    <widget name="fax_inactive" pixmap="KravenHD/buttons/grey.png" position="98,480" size="24,24" alphatest="blend" />
+    <widget name="FBFFax" position="130,479" size="760,27" font="Regular;22" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont1" />
+    <widget name="dect_active" pixmap="KravenHD/buttons/green.png" position="98,520" size="24,24" alphatest="blend" />
+    <widget name="dect_inactive" pixmap="KravenHD/buttons/grey.png" position="98,520" size="24,24" alphatest="blend" />
+    <widget name="FBFDect" position="130,519" size="760,27" font="Regular;22" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont1" />
+    <widget name="gast_active" pixmap="KravenHD/buttons/green.png" position="97,560" size="24,24" alphatest="blend" />
     <widget name="gast_inactive" pixmap="KravenHD/buttons/grey.png" position="97,560" size="24,24" alphatest="blend" />
+    <widget name="FBFGast" position="130,559" size="760,27" font="Regular;22" backgroundColor="Kravenbg" transparent="1" foregroundColor="KravenFont1" />
     <constant-widget name="Title-big2"/>
     <constant-widget name="Colorbuttons"/>
     <constant-widget name="Background"/>
