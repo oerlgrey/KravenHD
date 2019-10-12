@@ -9,6 +9,12 @@ if [ -d /usr/share/enigma2/KravenHD/graphics ]; then
     mkdir /tmp/graphicshd
     cp /usr/share/enigma2/KravenHD/graphics/* /tmp/graphicshd/
 fi
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/data/HD/skin-user.xml ]; then
+    cp /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/data/HD/skin-user.xml /tmp/skin-user-hd.xml
+fi
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/data/FHD/skin-user.xml ]; then
+    cp /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/data/FHD/skin-user.xml /tmp/skin-user-fhd.xml
+fi
 if [ -f /usr/share/enigma2/KravenHD/skin.xml ]; then
     rm -rf /usr/share/enigma2/KravenHD/skin.xml
 fi

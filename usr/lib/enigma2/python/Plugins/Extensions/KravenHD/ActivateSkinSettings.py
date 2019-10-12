@@ -2619,6 +2619,12 @@ class ActivateSkinSettings:
 		if config.plugins.KravenHD.SerienRecorder.value == "serienrecorder":
 			self.appendSkinFile(self.daten + config.plugins.KravenHD.SerienRecorder.value + ".xml")
 
+		### skin-user
+		try:
+			self.appendSkinFile(self.daten + "skin-user.xml")
+		except:
+			pass
+
 		### skin-end
 		self.appendSkinFile(self.daten + "skin-end.xml")
 
