@@ -1,34 +1,35 @@
-  <!-- TimeshiftState -->
+
   <screen name="TimeshiftState" position="center,187" size="1177,93" backgroundColor="transparent" flags="wfNoBorder">
-    <widget name="state" position="7,22" size="165,36" font="Regular;42" foregroundColor="KravenIBFont1" halign="center" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="center" />
+    <widget name="state" position="7,15" size="165,36" font="Regular;42" foregroundColor="KravenIBFont1" halign="center" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="center" />
     <widget source="session.CurrentService" render="Label" position="927,15" size="150,45" font="Regular;36" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
       <convert type="ServicePosition">Remaining</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="796,15" size="150,45" font="Regular;36" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1">
       <convert type="KravenHDTextTranslator">untillive</convert>
     </widget>
-    <eLabel text="min" position="1087,15" size="75,45" font="Regular;36" foregroundColor="KravenIBFont1" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" />
+    <eLabel text="min " position="1087,15" size="75,45" font="Regular;36" foregroundColor="KravenIBFont1" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" />
     <widget source="session.CurrentService" render="Label" position="175,15" size="150,45" font="Regular;36" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
       <convert type="ServicePosition">Length</convert>
     </widget>
-    <eLabel text="min" position="337,15" size="90,45" font="Regular;36" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1" />
-    <widget source="session.CurrentService" render="Label" position="432,15" size="345,48" font="Regular;42" backgroundColor="KravenIBbg" transparent="1" zPosition="10" valign="center" foregroundColor="red" halign="center">
+    <eLabel text="min " position="337,15" size="90,45" font="Regular;36" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1" />
+    <widget source="session.CurrentService" render="Label" position="432,11" size="345,48" font="Regular;42" backgroundColor="KravenIBbg" transparent="1" zPosition="10" valign="center" foregroundColor="red" halign="center">
       <convert type="KravenHDTextTranslator">timeshiftactive</convert>
     </widget>
-    <widget position="27,64" render="Progress" backgroundColor="KravenIBbg" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress749.png" transparent="1" size="1123,7" source="session.CurrentService" zPosition="17">
+	<IBProgressBackground pixmap="KravenHD/graphics/progress_bg_ts.png" position="12,57" size="1153,31" zPosition="1" alphatest="IBProgressBackground" />
+    <eLabel position="27,72" size="1123,1" backgroundColor="KravenIBProgressBorderLine" zPosition="2" />
+    <widget position="27,69" render="Progress" size="1123,7" source="session.CurrentService" foregroundColor="KravenIBProgress" pixmap="KravenHD/progress/progress749.png" borderColor="KravenIBProgressBorderLine" borderWidth="1" zPosition="3" transparent="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
-    <eLabel backgroundColor="KravenLine" position="27,67" size="1123,1" zPosition="16" />
     <eLabel backgroundColor="KravenIBLine" position="0,0" size="1177,3" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="0,90" size="1177,3" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="0,3" size="3,87" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="1174,3" size="3,87" zPosition="-8" />
-    <constant-widget name="timeshift-bg"/>
+    <panel name="timeshift-bg"/>
   </screen>
-  <!-- InfoBarTunerState -->
+
   <screen name="TunerState" title="Tuner State" flags="wfNoBorder" position="0,294" size="1920,48" zPosition="5" padding="20" spacing="15" backgroundColor="transparent">
 	<widget name="Background" backgroundColor="KravenIBbg" borderWidth="2" borderColor="KravenIBLine" position="0,0" size="1920,48" zPosition="-1" transparent="1" />
-    <constant-widget name="ibts-bg"/>
+    <panel name="ibts-bg"/>
 	<widget name="Type" pixmaps="KravenHD/InfoBarTunerState/record.png,KravenHD/InfoBarTunerState/stream.png,KravenHD/InfoBarTunerState/finished.png,KravenHD/InfoBarTunerState/info.png" position="0,0" size="48,48" zPosition="1" backgroundColor="KravenIBbg" transparent="1" alphatest="on"/>
 	<widget name="Progress" pixmap="KravenHD/InfoBarTunerState/progress.png" position="0,0" size="120,15" zPosition="1" borderWidth="2" borderColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1"/>
 	<widget name="Field0" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
@@ -42,9 +43,10 @@
 	<widget name="Field8" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
 	<widget name="Field9" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
   </screen>
+
   <screen name="TunerState_v2" title="Tuner State" flags="wfNoBorder" position="0,270" size="1920,48" zPosition="5" padding="10" spacing="15" backgroundColor="transparent">
 	<widget name="Background" backgroundColor="KravenIBbg" position="0,0" size="1920,48" zPosition="-1" transparent="1" />
-    <constant-widget name="ibts-bg"/>
+    <panel name="ibts-bg"/>
 	<widget name="picon" size="50,30" alphatest="on"/>
 	<widget name="Type" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons_fullhd/record.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons_fullhd/stream.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons_fullhd/finished.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons_fullhd/info.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons_fullhd/live.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons_fullhd/unknown.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons_fullhd/clock.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons_fullhd/pip.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons_fullhd/record_finished.png" size="35,35" alphatest="on"/>
     <widget name="Progress" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/icons_fullhd/progress.png" size="80,10" borderWidth="2" borderColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1"/>
@@ -59,12 +61,12 @@
     <widget name="Field8" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
     <widget name="Field9" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
   </screen>
-  <!-- AutoResolution -->
+
   <screen name="ResolutionLabel" backgroundColor="transparent" position="0,187" size="378,93" flags="wfNoBorder">
 	<widget name="content" position="15,16" size="357,30" font="Regular;23" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" noWrap="1" halign="left" valign="center" transparent="1" zPosition="-1" />
 	<widget name="restxt" position="15,47" size="357,30" font="Regular;23" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" noWrap="1" halign="left" valign="center" transparent="1" zPosition="-1" />
     <eLabel backgroundColor="KravenIBLine" position="0,0" size="378,3" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="0,90" size="378,3" zPosition="-8" />
     <eLabel backgroundColor="KravenIBLine" position="375,3" size="3,87" zPosition="-8" />
-    <constant-widget name="autoresolution-bg"/>
+    <panel name="autoresolution-bg"/>
   </screen>

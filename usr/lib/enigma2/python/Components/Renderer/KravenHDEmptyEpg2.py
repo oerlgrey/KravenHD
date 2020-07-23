@@ -48,7 +48,7 @@ class KravenHDEmptyEpg2(VariableText, Renderer):
 		self.EmptyText = ""
 		self.backText = ""
 		self.testSizeLabel = None
-    		
+
 	def applySkin(self, desktop, parent):
 		attribs = [ ]
 		for (attrib, value) in self.skinAttributes:
@@ -69,13 +69,13 @@ class KravenHDEmptyEpg2(VariableText, Renderer):
 		self.testSizeLabel.setHAlign(eLabel.alignLeft)
 		self.testSizeLabel.setNoWrap(1)
 		return Renderer.applySkin(self, desktop, parent)
-		
+
 	GUI_WIDGET = eLabel
 
 	def connect(self, source):
 		Renderer.connect(self, source)
 		self.changed((self.CHANGED_DEFAULT,))
-		
+
 	def changed(self, what):
 		if what[0] == self.CHANGED_CLEAR:
 			self.text = ""
@@ -96,14 +96,14 @@ class KravenHDEmptyEpg2(VariableText, Renderer):
 					if pos != -1:
 						tmp = tmp[:pos].rstrip(' ') + "..."
 					self.text = tmp
-					
+
 	def __fillText(self):
 		self.posIdx += 1
 		if self.posIdx <= self.endPoint:
 			self.text = self.backText[:self.posIdx] + "_"
 		else:
-			self.text = self.backText 					
-					
+			self.text = self.backText
+
 	def preWidgetRemove(self, instance):
 		self.testSizeLabel = None
 

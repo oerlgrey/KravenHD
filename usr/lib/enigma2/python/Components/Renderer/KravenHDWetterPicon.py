@@ -17,7 +17,6 @@
 
 from Renderer import Renderer 
 from enigma import ePixmap
-from Components.config import config
 from Tools.Directories import fileExists, SCOPE_CURRENT_SKIN, resolveFilename 
 
 class KravenHDWetterPicon(Renderer):
@@ -28,39 +27,13 @@ class KravenHDWetterPicon(Renderer):
 		self.pngname = ''
 		self.userpath = "/usr/share/enigma2/Kraven-user-icons/"
 		self.usericons = [
-		("01d","32"),
-		("01n","31"),
-		("02d","30"),
-		("02n","29"),
-		("03d","28"),
-		("03n","27"),
-		("04d","26"),
-		("04n","26"),
-		("09d","11"),
-		("09n","12"),
-		("10d","10"),
-		("10n","9"),
-		("11d","4"),
-		("11n","4"),
-		("13d","16"),
-		("13n","16"),
-		("50d","20"),
-		("50n","20"),
-		("01","32"),
 		("1","32"),
-		("02","34"),
 		("2","34"),
-		("03","30"),
 		("3","30"),
-		("04","30"),
 		("4","30"),
-		("05","21"),
 		("5","21"),
-		("06","28"),
 		("6","28"),
-		("07","26"),
 		("7","26"),
-		("08","26"),
 		("8","26"),
 		("11","20"),
 		("12","40"),

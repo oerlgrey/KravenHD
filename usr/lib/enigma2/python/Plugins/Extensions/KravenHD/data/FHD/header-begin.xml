@@ -20,19 +20,21 @@
     <color name="Kravenbg3" value="#00000000" />
     <color name="Kravenbg4" value="#00000000" />
     <color name="Kravenbg5" value="#00000000" />
+    <color name="Kravenbg6" value="#00000000" />
     <color name="background" value="#00000000" />
     <color name="KravenIBbg" value="#001B1775" />
     <color name="KravenIBbg2" value="#00000000" />
     <color name="KravenIBbg3" value="#00000000" />
     <color name="KravenIBbg4" value="#00000000" />
-    <color name="KravenSIBbg" value="#00000000" />
-    <color name="KravenIBCoolbg" value="#00000000" />
+    <color name="KravenIBbg5" value="#00000000" />
     <color name="KravenFont1" value="#00ffffff" />
     <color name="KravenFont2" value="#00F0A30A" />
     <color name="KravenPermanentClock" value="#00ffffff" />
     <color name="foreground" value="#00dddddd" />
     <color name="KravenIBFont1" value="#00ffffff" />
     <color name="KravenIBFont2" value="#00F0A30A" />
+    <color name="KravenIBGFont1" value="#00ffffff" />
+    <color name="KravenIBGFont2" value="#00F0A30A" />
     <color name="KravenName" value="#00ffffff" />
     <color name="KravenNamebg" value="#7F7F7F7F" />
     <color name="KravenECMbg" value="#F1325698" />
@@ -64,6 +66,9 @@
 	<color name="KravenNotAvailable" value="#00FFEA04" />
     <color name="KravenPrime" value="#0070AD11" />
     <color name="KravenMeteo" value="#00fff0e0" />
+    <color name="KravenIBProgress" value="#00000000" />
+    <color name="KravenIBProgressBorderLine" value="#00000000" />
+    <color name="KravenMainmenuHorTitleFont" value="#00999999" />
     <color name="selectedFG" value="#00ffffff" />
     <color name="orange" value="#00dc5221" />
     <color name="rds_text_bg" value="#00003258" />
@@ -161,21 +166,20 @@
     <font filename="lcd.ttf" name="LCD" scale="100" />
     <font filename="ae_AlMateen.ttf" name="Replacement" replacement="1" scale="100" />
     <font filename="tuxtxt.ttf" name="Console" scale="100" />
-    <font filename="KravenHD/fonts/nmsbd2.ttf" name="Arial" scale="100" />
-    <font filename="KravenHD/fonts/OpenSans-Regular.ttf" name="Fixed" scale="95" />
-    <font filename="KravenHD/fonts/OpenSans-Regular.ttf" name="Regular" scale="95" />
-    <font filename="KravenHD/fonts/OpenSans-Semibold.ttf" name="Regular2" scale="95" />
-    <font filename="KravenHD/fonts/meteocons.ttf" name="Meteo" scale="100" />
-	<font filename="KravenHD/fonts/owfont-regular.ttf" name="Meteo2" scale="100" />
+    <font filename="/usr/share/enigma2/KravenHD/fonts/OpenSans-Regular.ttf" name="Regular" scale="95" />
+    <font filename="/usr/share/enigma2/KravenHD/fonts/OpenSans-Semibold.ttf" name="Regular2" scale="95" />
+    <font filename="/usr/share/enigma2/KravenHD/fonts/OpenSans-Regular.ttf" name="Fixed" scale="95" />
+    <font filename="/usr/share/enigma2/KravenHD/fonts/OpenSans-Semibold.ttf" name="Arial" scale="95" />
+    <font filename="/usr/share/enigma2/KravenHD/fonts/meteocons.ttf" name="Meteo" scale="100" />
   </fonts>
   <subtitles>
-    <sub font="Regular;45" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="3,3" />
-    <sub font="Regular;45" foregroundColor="grey" name="Subtitle_Regular" shadowColor="shadow" shadowOffset="3,3" />
-    <sub font="Replacement;45" foregroundColor="grey" name="Subtitle_Bold" shadowColor="shadow" shadowOffset="3,3" />
-    <sub font="Regular;45" foregroundColor="orange" name="Subtitle_Italic" shadowColor="shadow" shadowOffset="3,3" />
+    <sub font="Regular;44" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="4,4" />
+    <sub font="Regular;44" foregroundColor="grey" name="Subtitle_Regular" shadowColor="shadow" shadowOffset="4,4" />
+    <sub font="Replacement;44" foregroundColor="grey" name="Subtitle_Bold" shadowColor="shadow" shadowOffset="4,4" />
+    <sub font="Regular;44" foregroundColor="orange" name="Subtitle_Italic" shadowColor="shadow" shadowOffset="4,4" />
   </subtitles>
   <windowstyle id="0" type="skinned">
-    <title font="Regular;36" offset="20,5" />
+    <title font="Regular2;40" offset="60,37" />
     <color color="Kravenbg" name="Background" />
     <color color="KravenFont1" name="LabelForeground" />
     <color color="Kravenbg" name="ListboxBackground" />
@@ -186,15 +190,15 @@
     <color color="KravenMarked" name="ListboxMarkedForeground" />
     <color color="KravenSelection" name="ListboxMarkedAndSelectedBackground" />
     <color color="KravenMarked" name="ListboxMarkedAndSelectedForeground" />
-    <color color="white" name="WindowTitleForeground" />
-    <color color="black" name="WindowTitleBackground" />
+    <color color="KravenFont2" name="WindowTitleForeground" />
+    <color color="Kravenbg6" name="WindowTitleBackground" />
     <borderset name="bsWindow">
-      <pixmap filename="KravenHD/bsWindow/bs_tl.png" pos="bpTopLeft" />
-      <pixmap filename="KravenHD/bsWindow/bs_t.png" pos="bpTop" />
-      <pixmap filename="KravenHD/bsWindow/bs_tr.png" pos="bpTopRight" />
-      <pixmap filename="KravenHD/bsWindow/bs_l.png" pos="bpLeft" />
-      <pixmap filename="KravenHD/bsWindow/bs_r.png" pos="bpRight" />
-      <pixmap filename="KravenHD/bsWindow/bs_bl.png" pos="bpBottomLeft" />
-      <pixmap filename="KravenHD/bsWindow/bs_b.png" pos="bpBottom" />
-      <pixmap filename="KravenHD/bsWindow/bs_br.png" pos="bpBottomRight" />
+      <pixmap filename="KravenHD/graphics/bs_tl.png" pos="bpTopLeft" />
+      <pixmap filename="KravenHD/graphics/bs_t.png" pos="bpTop" />
+      <pixmap filename="KravenHD/graphics/bs_tr.png" pos="bpTopRight" />
+      <pixmap filename="KravenHD/graphics/bs_l.png" pos="bpLeft" />
+      <pixmap filename="KravenHD/graphics/bs_r.png" pos="bpRight" />
+      <pixmap filename="KravenHD/graphics/bs_bl.png" pos="bpBottomLeft" />
+      <pixmap filename="KravenHD/graphics/bs_b.png" pos="bpBottom" />
+      <pixmap filename="KravenHD/graphics/bs_br.png" pos="bpBottomRight" />
     </borderset>

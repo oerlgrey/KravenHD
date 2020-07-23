@@ -1,4 +1,4 @@
-  <!-- InfoBarTunerState -->
+
   <screen name="TunerState" title="Tuner State" flags="wfNoBorder" position="0,397" size="1920,48" zPosition="5" padding="20" spacing="15" backgroundColor="transparent">
     <eLabel backgroundColor="KravenIBbg" position="0,0" size="1920,48" zPosition="-2" />
     <widget name="Type" pixmaps="KravenHD/InfoBarTunerState/record.png,KravenHD/InfoBarTunerState/stream.png,KravenHD/InfoBarTunerState/finished.png,KravenHD/InfoBarTunerState/info.png" position="0,0" size="48,48" zPosition="1" backgroundColor="KravenIBbg" transparent="1" alphatest="on"/>
@@ -14,6 +14,7 @@
     <widget name="Field8" font="Regular;36" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
     <widget name="Field9" font="Regular;36" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
   </screen>
+
   <screen name="TunerState_v2" title="Tuner State" flags="wfNoBorder" position="0,397" size="1920,48" zPosition="5" padding="10" spacing="15" backgroundColor="transparent">
     <eLabel backgroundColor="KravenIBbg" position="0,0" size="1920,48" zPosition="-2" />
 	<widget name="picon" size="50,30" alphatest="on"/>
@@ -30,7 +31,7 @@
     <widget name="Field8" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
     <widget name="Field9" font="Regular;33" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
   </screen>
-  <!-- AutoResolution -->
+
   <screen name="ResolutionLabel" backgroundColor="transparent" position="0,367" size="780,42" flags="wfNoBorder">
     <eLabel backgroundColor="KravenIBbg" position="0,0" size="780,42" transparent="0" zPosition="-2" />
     <widget name="content" position="30,3" size="375,33" font="Regular;24" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="left" valign="center" transparent="1" zPosition="-1" />

@@ -1,19 +1,23 @@
-    <!-- MovieSelection -->
+
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieSelection" position="0,0" size="1920,1080" title="">
+	<!--*MovieSelection*-->
     <widget name="waitingtext" position="0,0" size="0,0" />
-	<eLabel text="MovieSelection" position="105,18" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;51" foregroundColor="KravenMFont2" halign="left" valign="center" transparent="1" />
-    <widget source="Service" render="Label" position="105,112" size="650,37" font="Regular;28" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
+	<eLabel text="MovieSelection" position="63,10" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;50" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
+    <widget source="Service" render="Label" position="63,112" size="692,37" font="Regular;28" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
 	  <convert type="KravenHDDiskSpace">path</convert>
     </widget>
     <widget source="Service" render="Label" position="767,112" size="400,37" font="Regular;28" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" halign="right">
 	  <convert type="KravenHDDiskSpace">both</convert>
     </widget>
-    <widget name="list" position="105,157" size="1062,810" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+    <widget backgroundColor="Kravenbg" name="list" position="63,157" size="1104,810" selectionPixmap="KravenHD/graphics/sel_MS.png" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="Kravenbg" font="Regular2;36" foregroundColor="KravenFont2" noWrap="1" position="1233,112" render="Label" size="624,45" source="Service" transparent="1" zPosition="1">
       <convert type="KravenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" noWrap="1" halign="left" position="1233,168" render="Label" size="627,40" source="Service" transparent="1" zPosition="1">
+    <widget backgroundColor="Kravenbg" font="Regular;33" foregroundColor="KravenFont1" noWrap="1" halign="left" position="1233,168" render="Label" size="624,42" source="Service" transparent="1" zPosition="1">
       <convert type="MovieInfo">RecordServiceName</convert>
+    </widget>
+    <widget backgroundColor="Kravenbg" font="Regular;35" foregroundColor="KravenFont1" position="1233,224" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="624,675" source="Service" transparent="1" valign="top">
+      <convert type="EventName">FullDescription</convert>
     </widget>
     <widget backgroundColor="Kravenbg" font="Regular2;28" foregroundColor="KravenFont2" halign="left" position="1233,926" render="Label" size="105,36" source="Service" transparent="1" zPosition="1">
       <convert type="ServiceTime">Duration</convert>
@@ -22,9 +26,6 @@
     <widget backgroundColor="Kravenbg" font="Regular2;28" foregroundColor="KravenFont2" halign="right" position="1683,926" render="Label" size="174,36" source="Service" transparent="1" zPosition="1">
       <convert type="MovieInfo">FileSize</convert>
     </widget>
-    <!-- globalbg */-->
-	<constant-widget name="movieselection-no-cover-small"/>
-	<constant-widget name="EMCSelection-template"/>
-    <constant-widget name="gradient-emc"/>
-    <!--<text="MovieSelection - no Cover" position="105,0" />-->
+	<panel name="EMCSelection-template"/>
+    <panel name="gradient-emc"/>
   </screen>

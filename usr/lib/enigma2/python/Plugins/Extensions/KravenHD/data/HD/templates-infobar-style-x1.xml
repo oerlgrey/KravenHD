@@ -1,23 +1,24 @@
-	<constant-widget name="infobar-style-x1-gradient">
+
+	<screen name="infobar-style-x1-gradient">
       <ePixmap pixmap="KravenHD/graphics/ibar.png" position="0,440" size="1280,310" zPosition="-9" alphatest="blend" />
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-box">
+	<screen name="infobar-style-x1-box">
 	  <eLabel position="0,555" size="1280,165" backgroundColor="KravenIBbg" zPosition="-9" />
       <eLabel position="0,555" size="1280,2" backgroundColor="KravenIBLine" zPosition="-8" />
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-box2">
+	<screen name="infobar-style-x1-box2">
       <ePixmap pixmap="KravenHD/graphics/ibar.png" position="0,555" size="1280,165" zPosition="-9" alphatest="blend" />
       <eLabel position="0,555" size="1280,2" backgroundColor="KravenIBLine" zPosition="-8" />
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-texture">
+	<screen name="infobar-style-x1-texture">
       <ePixmap pixmap="KravenHD/graphics/ibtexture.png" position="0,555" size="1280,165" zPosition="-9" alphatest="blend" />
       <eLabel position="0,555" size="1280,2" backgroundColor="KravenIBLine" zPosition="-8" />
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1">
+	<screen name="infobar-style-x1">
 	  <widget alphatest="blend" position="20,580" size="220,132" render="Picon" source="session.CurrentService" transparent="1" zPosition="4">
 		<convert type="ServiceName">Reference</convert>
 	  </widget>
@@ -44,10 +45,11 @@
 		<convert type="KravenHDEventTime">Duration</convert>
 		<convert type="KravenHDClockToText">InMinutes</convert>
 	  </widget>
-	  <widget position="273,602" render="Progress" size="747,5" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress749.png">
+	  <IBProgressBackground pixmap="KravenHD/graphics/progress_bg_ts.png" position="262,594" size="769,21" zPosition="1" alphatest="IBProgressBackground" />
+	  <eLabel position="272,604" size="749,1" backgroundColor="KravenIBProgressBorderLine" zPosition="2" />
+	  <widget position="272,602" render="Progress" size="749,5" source="session.Event_Now" foregroundColor="KravenIBProgress" pixmap="KravenHD/progress/progress749.png" borderColor="KravenIBProgressBorderLine" borderWidth="1" zPosition="3" transparent="1">
 		<convert type="KravenHDEventTime">Progress</convert>
 	  </widget>
-	  <eLabel position="273,604" size="747,1" backgroundColor="KravenLine" />
 	  <widget alphatest="blend" path="infobar-icons" position="677,620" render="KravenHDServiceIcon" options="HasHBBTV" size="43,22" source="session.CurrentService" zPosition="1">
 		<convert type="KravenHDServiceInfoEX">HasHBBTV</convert>
 	  </widget>
@@ -90,9 +92,9 @@
         <convert type="KravenHDServiceInfoEX">Resolution</convert>
       </widget>
 	  <ePixmap pixmap="KravenHD/infobar-icons/infobox.png" position="904,692" size="116,22" zPosition="1" alphatest="blend" />
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-1-tuner">
+	<screen name="infobar-style-x1-1-tuner">
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_off.png" position="621,692" size="66,22" zPosition="1" alphatest="blend">
 		<convert type="KravenHDTunerState">IsAvailable_0,ShowUnused</convert>
 		<convert type="ConditionalShowHide" />
@@ -115,9 +117,9 @@
 	  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="KravenHDTunerColor" text="Stream" font="Regular2;18" foregroundColor="KravenIcon" position="704,692" name="KravenIconVPosition" size="70,22" halign="center" valign="center" zPosition="5" transparent="1">
 		<convert type="KravenHDTunerState">StreamText,ShowUnused</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-2-tuner">
+	<screen name="infobar-style-x1-2-tuner">
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty_off.png" position="621,692" size="43,22" zPosition="1" alphatest="blend">
 		<convert type="KravenHDTunerState">IsAvailable_0,ShowUnused,RightAlign2</convert>
 		<convert type="ConditionalShowHide" />
@@ -151,9 +153,9 @@
 	  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="KravenHDTunerColor" text="Stream" font="Regular2;18" foregroundColor="KravenIcon" position="735,692" name="KravenIconVPosition" size="39,22" halign="center" valign="center" zPosition="5" transparent="1">
 		<convert type="KravenHDTunerState">StreamText,ShowUnused,RightAlign2</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-4-tuner">
+	<screen name="infobar-style-x1-4-tuner">
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty2_off.png" position="621,692" size="27,22" zPosition="1" alphatest="blend">
 		<convert type="KravenHDTunerState">IsAvailable_0,ShowUnused,StreamAsTuner,RightAlign4</convert>
 		<convert type="ConditionalShowHide" />
@@ -198,9 +200,9 @@
 	  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="KravenHDTunerColor" text="D" font="Regular2;18" foregroundColor="KravenIcon" position="752,692" name="KravenIconVPosition" size="23,22" halign="center" valign="center" zPosition="5" transparent="1">
 		<convert type="KravenHDTunerState">Danpfnudel_3,ShowUnused,StreamAsTuner,RightAlign4</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-8-tuner">
+	<screen name="infobar-style-x1-8-tuner">
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3_off.png" position="621,692" size="15,22" zPosition="1" alphatest="blend">
 		<convert type="KravenHDTunerState">IsAvailable_0,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
@@ -289,36 +291,36 @@
 	  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="KravenHDTunerColor" text="H" font="Regular2;18" foregroundColor="KravenIcon" position="763,692" name="KravenIconVPosition" size="11,22" halign="center" valign="center" zPosition="5" transparent="1">
 		<convert type="KravenHDTunerState">Danpfnudel_7,ShowUnused,StreamAsTuner,RightAlign8</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-infobox-sat">
+	<screen name="infobar-style-x1-infobox-sat">
 	  <widget backgroundColor="KravenIBbg" font="Regular;18" position="907,692" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="54,22" render="Label" source="session.CurrentService" transparent="1">
 		<convert type="KravenHDServiceName2">OrbitalPos</convert>
 	  </widget>
 	  <widget render="Label" font="Regular;18" size="67,22" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="950,692" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" source="session.FrontendStatus">
 		<convert type="KravenHDFrontendInfo">SNR</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-infobox-db">
+	<screen name="infobar-style-x1-infobox-db">
 	  <widget backgroundColor="KravenIBbg" font="Regular;18" position="907,692" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="54,22" render="Label" source="session.CurrentService" transparent="1">
 		<convert type="KravenHDServiceName2">OrbitalPos</convert>
 	  </widget>
 	  <widget render="Label" font="Regular;18" size="67,22" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="950,692" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" source="session.FrontendStatus">
 		<convert type="KravenHDFrontendInfo">SNRdb</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-infobox-tunerinfo">
+	<screen name="infobar-style-x1-infobox-tunerinfo">
 	  <widget backgroundColor="KravenIBbg" font="Regular;18" position="907,692" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="54,22" render="Label" source="session.CurrentService" transparent="1">
 		<convert type="KravenHDServiceName2">OrbitalPos</convert>
 	  </widget>
 	  <widget render="Label" font="Regular;18" size="67,22" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="950,692" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" source="session.CurrentService">
 		<convert type="KravenHDTunerType">tunertype</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-infobox-cpu">
+	<screen name="infobar-style-x1-infobox-cpu">
 	  <widget backgroundColor="KravenIBbg" font="Regular;18" position="907,692" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="54,22" render="Label" source="session.CurrentService" transparent="1">
 		<convert type="KravenHDCpuUsage">$0</convert>
 	  </widget>
@@ -326,9 +328,9 @@
 	  <widget render="Label" font="Regular;18" size="67,22" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="950,692" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon"  source="session.CurrentService">
 		<convert type="KravenHDLayoutInfo">LoadAvg</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-infobox-temp">
+	<screen name="infobar-style-x1-infobox-temp">
 	  <widget backgroundColor="KravenIBbg" font="Regular;18" position="907,692" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="54,22" render="Label" source="session.CurrentService" transparent="1">
 		<convert type="KravenHDTempFanInfo">TempInfo</convert>
 	  </widget>
@@ -336,15 +338,15 @@
 	  <widget render="Label" font="Regular;18" size="67,22" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="950,692" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" source="session.CurrentService">
 		<convert type="KravenHDTempFanInfo">FanInfo</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-ecminfo">
+	<screen name="infobar-style-x1-ecminfo">
 	  <widget source="session.CurrentService" render="Label" position="273,693" size="343,22" foregroundColor="KravenECM" font="Regular;16" halign="left" valign="top" backgroundColor="KravenIBbg" transparent="1" zPosition="5">
 	    <convert type="KravenHDECMLine">ShortReader,FTAVisible</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-clock-classic">
+	<screen name="infobar-style-x1-clock-classic">
 	  <widget backgroundColor="KravenIBbg" font="Regular;43" foregroundColor="KravenIBFont1" halign="center" position="1058,587" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 	    <convert type="KravenHDClockToText">Format:%H</convert>
 	  </widget>
@@ -362,9 +364,9 @@
 	  <widget backgroundColor="KravenIBbg" font="Regular;18" foregroundColor="KravenIBFont2" halign="center" position="1049,646" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="KravenHDClockToText">Format:%A</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-clock-color">
+	<screen name="infobar-style-x1-clock-color">
 	  <widget backgroundColor="KravenIBbg" font="Regular;43" foregroundColor="KravenIBFont2" halign="center" position="1058,587" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="KravenHDClockToText">Format:%H</convert>
 	  </widget>
@@ -382,9 +384,9 @@
 	  <widget backgroundColor="KravenIBbg" font="Regular;18" foregroundColor="KravenIBFont2" halign="center" position="1049,646" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="KravenHDClockToText">Format:%A</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-clock-classic-big">
+	<screen name="infobar-style-x1-clock-classic-big">
 	  <widget backgroundColor="KravenIBbg" font="Regular;43" foregroundColor="KravenIBFont1" halign="center" position="1058,613" render="Label" size="65,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="KravenHDClockToText">Format:%H</convert>
 	  </widget>
@@ -402,9 +404,9 @@
 	  <widget backgroundColor="KravenIBbg" font="Regular;28" foregroundColor="KravenIBFont2" halign="center" position="1049,570" render="Label" size="203,34" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
 		<convert type="KravenHDClockToText">Format:%A</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-clock-flip">
+	<screen name="infobar-style-x1-clock-flip">
 	  <widget source="global.CurrentTime" position="1080,679" size="149,27" font="Regular2;22" render="Label" halign="center" valign="top" zPosition="12" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont2" transparent="1">
 	    <convert type="KravenHDClockToText">Format:%d.%m.%Y</convert>
 	  </widget>
@@ -421,9 +423,9 @@
 	  <widget source="global.CurrentTime" render="KravenHDFlipClock" position="1195,606" zPosition="4" size="25,47" alphatest="blend" transparent="1">
 	    <convert type="KravenHDClockToText">Format:M2 %M</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-clock-weather">
+	<screen name="infobar-style-x1-clock-weather">
 	  <widget alphatest="blend" render="KravenHDWetterPicon" position="1066,598" size="96,96" source="Title" path="WetterIcons" transparent="1" zPosition="1">
 		<convert type="KravenHDWeather">Day_0,MeteoIcon </convert>
 	  </widget>
@@ -436,13 +438,13 @@
 	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1173,671" size="90,21" font="Regular;17" halign="center" valign="center" zPosition="2" transparent="1">
 		<convert type="KravenHDClockToText">Format:%d.%m.%Y</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-clock-analog">
+	<screen name="infobar-style-x1-clock-analog">
 	  <widget backgroundColor="KravenIBbg" font="Regular2;18" foregroundColor="KravenIBFont2" halign="center" position="1058,684" render="Label" size="220,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2">
 		<convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
 	  </widget>
-	  <ePixmap alphatest="blend" pixmap="KravenHD/clock/analog.png" position="1091,558" size="149,125" zPosition="1" />
+	  <ePixmap alphatest="blend" pixmap="KravenHD/graphics/analogclock.png" position="1091,558" size="149,125" zPosition="1" />
 	  <widget source="global.CurrentTime" render="KravenHDWatches" position="1143,595" foregroundColor="KravenIBFont1" zPosition="4" size="49,49" alphatest="blend">
 		<convert type="KravenHDExtraNumText">hourHand</convert>
 	  </widget>
@@ -452,9 +454,9 @@
 	  <widget source="global.CurrentTime" render="KravenHDWatches" position="1138,589" foregroundColor="KravenIBFont2" zPosition="6" size="59,59" alphatest="blend">
 		<convert type="KravenHDExtraNumText">secHand</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-clock-android">
+	<screen name="infobar-style-x1-clock-android">
 	  <widget backgroundColor="#00999999" font="Regular;26" halign="center" render="Label" position="1070,624" size="53,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
 		<convert type="KravenHDClockToText">Format:%H</convert>
 	  </widget>
@@ -470,30 +472,28 @@
 	  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;20" foregroundColor="KravenAndroid" render="Label" position="1130,655" size="100,25" source="Title" zPosition="2" halign="right" valign="center" transparent="1">
 		<convert type="KravenHDWeather">Day_0,DayTemp</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-infobar-channelname">
+	<screen name="infobar-style-x1-infobar-channelname">
 	  <widget font="Regular;76" halign="left" noWrap="1" backgroundColor="KravenNamebg" foregroundColor="KravenName" position="20,450" render="Label" size="1240,120" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
 		<convert type="ServiceName">Name</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-infobar-channelname-number">
+	<screen name="infobar-style-x1-infobar-channelname-number">
 	  <widget font="Regular;76" halign="left" noWrap="1" backgroundColor="KravenNamebg" foregroundColor="KravenName" position="20,450" render="Label" size="1240,120" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
 		<convert type="KravenHDServiceName2">%n - %N</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-infobar-channelname-small">
+	<screen name="infobar-style-x1-infobar-channelname-small">
 	  <widget font="Regular;40" halign="left" noWrap="1" backgroundColor="KravenNamebg" foregroundColor="KravenName" position="20,500" size="1240,60" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
 		<convert type="ServiceName">Name</convert>
 	  </widget>
-	</constant-widget>
+	</screen>
 	
-	<constant-widget name="infobar-style-x1-infobar-channelname-number-small">
+	<screen name="infobar-style-x1-infobar-channelname-number-small">
 	  <widget font="Regular;40" halign="left" noWrap="1" backgroundColor="KravenNamebg" foregroundColor="KravenName" position="20,500" size="1240,60" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
 		<convert type="KravenHDServiceName2">%n - %N</convert>
 	  </widget>
-	</constant-widget>
-	
-  </constant-widgets>
+	</screen>

@@ -17,7 +17,6 @@
 
 from Renderer import Renderer 
 from enigma import ePixmap
-from Components.config import config
 from Tools.Directories import fileExists, SCOPE_CURRENT_SKIN, resolveFilename 
 
 class KravenHDAndroidPicon(Renderer):

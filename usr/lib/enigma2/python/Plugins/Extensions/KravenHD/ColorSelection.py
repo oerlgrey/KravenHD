@@ -68,8 +68,8 @@ class KravenHDColorSelection(ConfigListScreen, Screen):
   <widget backgroundColor="#00000000" source="preview" render="Canvas" position="0,0" size="1280,720" zPosition="-2" />
   <widget backgroundColor="#00000000" source="key_red" render="Label" font="Regular;20" foregroundColor="#00ffffff" position="286,415" size="220,26" valign="center" transparent="1" zPosition="1" />
   <widget backgroundColor="#00000000" source="key_green" render="Label" font="Regular;20" foregroundColor="#00ffffff" position="536,415" size="220,26" valign="center" transparent="1" zPosition="1" />
-  <ePixmap backgroundColor="#00000000" pixmap="KravenHD/buttons/key_red1.png" position="281,442" size="200,5" alphatest="blend" />
-  <ePixmap backgroundColor="#00000000" pixmap="KravenHD/buttons/key_green1.png" position="531,442" size="200,5" alphatest="blend" />
+  <eLabel backgroundColor="#00E61805" position="281,442" size="150,5" />
+  <eLabel backgroundColor="#005FE500" position="531,442" size="150,5" />
   <eLabel backgroundColor="#00000000" position="266,250" size="748,220" transparent="0" zPosition="-1" />
 </screen>
 """

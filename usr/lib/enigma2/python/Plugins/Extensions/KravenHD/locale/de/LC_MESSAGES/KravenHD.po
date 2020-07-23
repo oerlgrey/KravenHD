@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2019-10-05 00:12+0200\n"
+"PO-Revision-Date: 2020-07-22 13:08+0200\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: KravenHDWeather.py
@@ -671,24 +671,24 @@ msgid "Weather-ID"
 msgstr "Wetter-ID"
 
 #: KravenHD.py
-msgid "GLOBAL COLORS _____________________________________________________________"
-msgstr "GLOBALE FARBEN ____________________________________________________________"
+msgid "GLOBAL COLORS ________________________________________________________________________________"
+msgstr "GLOBALE FARBEN ________________________________________________________________________________"
 
 #: KravenHD.py
-msgid "VIEWS _____________________________________________________________________"
-msgstr "ANSICHTEN _________________________________________________________________"
+msgid "VIEWS ________________________________________________________________________________"
+msgstr "ANSICHTEN ________________________________________________________________________________"
 
 #: KravenHD.py
-msgid "CHANNELLIST _______________________________________________________________"
-msgstr "KANALLISTE ________________________________________________________________"
+msgid "CHANNELLIST ________________________________________________________________________________"
+msgstr "KANALLISTE ________________________________________________________________________________"
 
 #: KravenHD.py
-msgid "WEATHER ___________________________________________________________________"
-msgstr "WETTER ____________________________________________________________________"
+msgid "WEATHER ________________________________________________________________________________"
+msgstr "WETTER ________________________________________________________________________________"
 
 #: KravenHD.py
-msgid "PROFILES __________________________________________________________________"
-msgstr "PROFILE ___________________________________________________________________"
+msgid "PROFILES ________________________________________________________________________________"
+msgstr "PROFILE ________________________________________________________________________________"
 
 #: KravenHD.py
 msgid "Refresh interval (in minutes)"
@@ -743,16 +743,40 @@ msgid "Background"
 msgstr "Hintergrund"
 
 #: KravenHD.py
-msgid "Progress-Border"
-msgstr "Fortschrittsbalken-Rahmen"
+msgid "Border"
+msgstr "Rahmen"
 
 #: KravenHD.py
-msgid "Listselection"
-msgstr "Auswahlbalken"
+msgid "Listselection-Style"
+msgstr "Auswahlbalken-Stil"
 
 #: KravenHD.py
-msgid "Listselection-Border"
-msgstr "Auswahlbalken-Rahmen"
+msgid "          Border"
+msgstr "          Rahmen"
+
+#: KravenHD.py
+msgid "          Color"
+msgstr "          Farbe"
+
+#: KravenHD.py
+msgid "solid color"
+msgstr "einfarbig"
+
+#: KravenHD.py
+msgid "two-colored"
+msgstr "zweifarbig"
+
+#: KravenHD.py
+msgid "Choose from different options to display selection bars."
+msgstr "Wählen Sie eine von verschiedenen Varianten für die Darstellung der Auswahlbalken."
+
+#: KravenHD.py
+msgid "Choose the primary background color of selection bars. Press OK to define your own RGB color."
+msgstr "Wählen Sie die primäre Hintergrund-Farbe für die Auswahlbalken. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenHD.py
+msgid "Choose the secondary background color of selection bars. Press OK to define your own RGB color."
+msgstr "Wählen Sie die sekundäre Hintergrund-Farbe für die Auswahlbalken. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenHD.py
 msgid "Progress-/Volumebar"
@@ -1057,12 +1081,12 @@ msgid "Choose from different options to display the system menus. Press red butt
 msgstr "Wählen Sie eine von verschiedenen Varianten für die Darstellung der Systemmenüs. Drücken Sie die rote Taste für die FAQs mit Details zur Installation von Menü-Symbolen."
 
 #: KravenHD.py
-msgid "Choose the background for all screens. You can choose from a list of predefined colors or textures, create your own color using RGB sliders or define a color gradient."
-msgstr "Wählen Sie den Hintergrund für alle Seiten. Sie können aus einer Liste von vordefinierten Farben oder Texturen wählen, Ihre eigene Farbe mit RGB-Reglern erzeugen oder einen Farbverlauf definieren."
+msgid "Choose the background for all screens. You can choose from a list of predefined colors or textures, create your own color using RGB sliders or define a color gradient. Also read the FAQs regarding your own textures."
+msgstr "Wählen Sie den Hintergrund für alle Seiten. Sie können aus einer Liste von vordefinierten Farben oder Texturen wählen, Ihre eigene Farbe mit RGB-Reglern erzeugen oder einen Farbverlauf definieren. Lesen Sie auch die FAQs bzgl. Ihren eigenen Texturen."
 
 #: KravenHD.py
-msgid "Choose the degree of background transparency for all screens except system menus and channellists."
-msgstr "Wählen Sie den Grad der Hintergrundtransparenz für alle Seiten außer Systemmenüs und Kanallisten."
+msgid "Choose the degree of background transparency for all screens except channellists."
+msgstr "Wählen Sie den Grad der Hintergrundtransparenz für alle Seiten außer Kanallisten."
 
 #: KravenHD.py
 msgid "Choose the background color of selection bars. Press OK to define your own RGB color."
@@ -1077,8 +1101,8 @@ msgid "Choose the color of progress bars. Press OK to define your own RGB color.
 msgstr "Wählen Sie die Farbe der Fortschrittsbalken. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenHD.py
-msgid "Choose the border color of progress bars. Press OK to define your own RGB color."
-msgstr "Wählen Sie die Rahmenfarbe der Fortschrittsbalken. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+msgid "Choose the global border color. Press OK to define your own RGB color."
+msgstr "Wählen Sie die globale Rahmenfarbe. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenHD.py
 msgid "Choose the color of all lines. This affects dividers as well as the line in the center of some progress bars. Press OK to define your own RGB color."
@@ -1233,8 +1257,12 @@ msgid "Choose whether you want to customize the selection-colors for EnhancedMov
 msgstr "Wählen Sie, ob Sie die Auswahl-Farben für EnhancedMovieCenter anpassen möchten."
 
 #: KravenHD.py
-msgid "Custom EMC-Selection-Colors"
-msgstr "Eigene EMC-Auswahl-Farben"
+msgid "EMC-Selection-Colors"
+msgstr "EMC-Auswahl-Farben"
+
+#: KravenHD.py
+msgid "define new colors"
+msgstr "neue Farben definieren"
 
 #: KravenHD.py
 msgid "EMC-Listselection"
@@ -1381,14 +1409,6 @@ msgid "Choose between direct zapping (1xOK) and zapping after preview (2xOK)."
 msgstr "Wählen Sie zwischen direktem Umschalten (1xOK) und Umschalten nach Vorschau (2xOK)."
 
 #: KravenHD.py
-msgid "Choose the degree of background transparency for system menu screens."
-msgstr "Wählen Sie den Grad der Hintergrund-Transparenz für Systemmenüs."
-
-#: KravenHD.py
-msgid "Menu-Transparency"
-msgstr "Menü-Transparenz"
-
-#: KravenHD.py
 msgid "Primary-Infobar-Font"
 msgstr "Primäre Infoleisten-Schrift"
 
@@ -1405,20 +1425,20 @@ msgid "Choose the color of the secondary infobar font. Press OK to define your o
 msgstr "Wählen Sie die Farbe der sekundären Infoleisten-Schrift. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenHD.py
-msgid "ANTIALIASING BRIGHTNESS ________________________________________________________________"
-msgstr "KANTENGLÄTTUNGS-HELLIGKEIT ________________________________________________________________"
+msgid "ANTIALIASING BRIGHTNESS ________________________________________________________________________________"
+msgstr "KANTENGLÄTTUNGS-HELLIGKEIT ________________________________________________________________________________"
 
 #: KravenHD.py
-msgid "INFOBAR-LOOK _________________________________________________________________"
-msgstr "INFOLEISTEN-AUSSEHEN ____________________________________________________________"
+msgid "INFOBAR-LOOK ________________________________________________________________________________"
+msgstr "INFOLEISTEN-AUSSEHEN ________________________________________________________________________________"
 
 #: KravenHD.py
-msgid "INFOBAR-CONTENTS _____________________________________________________________"
-msgstr "INFOLEISTEN-INHALTE _____________________________________________________________"
+msgid "INFOBAR-CONTENTS ________________________________________________________________________________"
+msgstr "INFOLEISTEN-INHALTE ________________________________________________________________________________"
 
 #: KravenHD.py
-msgid "VARIOUS SETTINGS ________________________________________________________________"
-msgstr "SONSTIGE EINSTELLUNGEN ________________________________________________________________"
+msgid "VARIOUS SETTINGS ________________________________________________________________________________"
+msgstr "SONSTIGE EINSTELLUNGEN ________________________________________________________________________________"
 
 #: KravenHD.py
 msgid "Infobar"
@@ -1608,11 +1628,15 @@ msgstr "Accuweather API-Schlüssel"
 msgid ""
 "Press OK to enter your API Key.\n"
 "You will receive the key at\n"
-"https://developer.accuweather.com/."
+"\"https://developer.accuweather.com/\"."
 msgstr ""
 "Drücken Sie OK, um Ihren API-Schlüssel einzugeben.\n"
 "Sie erhalten den Schlüssel unter\n"
-"https://developer.accuweather.com/."
+"\"https://developer.accuweather.com/\"."
+
+#: KravenHD.py
+msgid "Enter your API Key:"
+msgstr "Geben Sie Ihren API-Schlüssel ein:"
 
 #: KravenHD.py
 msgid "API authorization failed"
@@ -1655,8 +1679,8 @@ msgid "Infobar-Box-Line"
 msgstr "Infoleisten-Box-Linien"
 
 #: KravenHD.py
-msgid "CLOCK _____________________________________________________________________"
-msgstr "UHR _______________________________________________________________________"
+msgid "CLOCK ________________________________________________________________________________"
+msgstr "UHR ________________________________________________________________________________"
 
 #: KravenHD.py
 msgid "Choose from different infobar background styles."
@@ -1673,10 +1697,6 @@ msgstr "EPG Schriftgröße"
 #: KravenHD.py
 msgid "Choose the font size of event description, EPG list and primetime."
 msgstr "Wählen Sie die Schriftgrösse für die Sendungsbeschreibung, EPG-Liste und Primetime."
-
-#: KravenHD.py
-msgid "MovieSelection-Style"
-msgstr "MovieSelection-Stil"
 
 #: KravenHD.py
 msgid "Choose the font size of event description."
@@ -1895,10 +1915,6 @@ msgid "This sections offers all settings for skinned plugins."
 msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu geskinnten Plugins."
 
 #: KravenHD.py
-msgid "This sections offers all settings for MovieSelection."
-msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu MovieSelection."
-
-#: KravenHD.py
 msgid "This sections offers all channellist settings."
 msgstr "In diesem Abschnitt finden Sie alle Kanallisten-Einstellungen."
 
@@ -1965,14 +1981,6 @@ msgstr "keine Aufnahmeanzeige für Tuner"
 #: KravenHD.py
 msgid "Record-State"
 msgstr "Aufnahmezustand"
-
-#: KravenHD.py
-msgid "Unskinned Colors"
-msgstr "Ungeskinnte Farben"
-
-#: KravenHD.py
-msgid "Choose whether some foreground and background colors of unskinned screens are changed or not."
-msgstr "Wählen Sie, ob einige Schrift- und Hintergrundfarben von ungeskinnten Screens geändert werden oder nicht."
 
 #: KravenHD.py
 msgid "Unwatched Color"
@@ -2115,10 +2123,6 @@ msgid "Choose the alternate color for the infobars. It should match the texture 
 msgstr "Wählen Sie die Ersatz-Farbe für die Infoleisten. Diese sollte der Textur bestmöglich entsprechen. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
 
 #: KravenHD.py
-msgid "This sections offers all settings for PermanentClock."
-msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu PermanentClock."
-
-#: KravenHD.py
 msgid "This sections offers all settings for NumberZap."
 msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu NumberZap."
 
@@ -2159,8 +2163,8 @@ msgid "Event Description Fontsize"
 msgstr "Sendungsbeschreibung Schriftgrösse"
 
 #: KravenHD.py
-msgid "GRAPHICALEPG _____________________________________________________________"
-msgstr "GRAFISCHES EPG ___________________________________________________________"
+msgid "GRAPHICALEPG ________________________________________________________________________________"
+msgstr "GRAFISCHES EPG ________________________________________________________________________________"
 
 #: KravenHD.py
 msgid "This sections offers all settings for GraphicalEPG."
@@ -2255,24 +2259,20 @@ msgid "big font with EPG Info"
 msgstr "grosse Schrift mit EPG Info"
 
 #: KravenHD.py
-msgid "This sections offers all settings for SecondInfobar."
-msgstr "In diesem Abschnitt finden Sie alle Einstellungen zu SecondInfobar."
+msgid ""
+"Choose from different styles for SecondInfobar. \n"
+"Activate the SecondInfobar in the \n"
+"OSD settings. \n"
+"2nd infobar -> 2nd Infobar INFO"
+msgstr ""
+"Wählen Sie eine von verschiedenen Darstellungs-Varianten für \"SecondInfobar\". \n"
+"Aktivieren Sie die \"SecondInfobar\" in den \n"
+"OSD-Einstellungen. \n"
+"Zweite Infoleiste -> Zweite Infoleiste INFO"
 
 #: KravenHD.py
-msgid "SecondInfobar-Style"
-msgstr "SecondInfobar-Stil"
-
-#: KravenHD.py
-msgid "Choose from different styles for SecondInfobar."
-msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für \"SecondInfobar\"."
-
-#: KravenHD.py
-msgid "SecondInfobar Fontsize"
-msgstr "SecondInfobar Schriftgrösse"
-
-#: KravenHD.py
-msgid "Choose the font size of SecondInfobar."
-msgstr "Wählen Sie die Schriftgrösse für SecondInfobar."
+msgid "MiniTV/weather"
+msgstr "MiniTV/Wetter"
 
 #: KravenHD.py
 msgid "show Picons in channellist"
@@ -2315,12 +2315,28 @@ msgid "You have no internet connection. This function is disabled."
 msgstr "Sie haben keine Internetverbindung. Diese Funktion ist deaktiviert."
 
 #: KravenHD.py
-msgid "Mainmenu Fontsize"
-msgstr "Hauptmenü Schriftgrösse"
+msgid "Mainmenu Fontsize ('Standard' Style)"
+msgstr "Hauptmenü Schriftgrösse ('Standard' Ansicht)"
 
 #: KravenHD.py
-msgid "Choose the font size of mainmenus."
-msgstr "Wählen Sie die Schriftgrösse für die Hauptmenüs."
+msgid "Choose the font size for 'Standard' mainmenus."
+msgstr "Wählen Sie die Schriftgrösse für 'Standard' Hauptmenüs."
+
+#: KravenHD.py
+msgid "Mainmenu Title Color ('Horizontal' Styles)"
+msgstr "Hauptmenü Überschriftfarbe ('Horizontal' Ansichten)"
+
+#: KravenHD.py
+msgid "Choose the title font color for 'Horizontal' and 'Horizontal-Icons' mainmenus."
+msgstr "Wählen Sie die Überschriftfarbe für 'Horizontal' und 'Horizontal-Icons' Hauptmenüs."
+
+#: KravenHD.py
+msgid "Mainmenu Icons Gradient Color ('Horizontal-Icons' Style)"
+msgstr "Hauptmenü Icons Verlaufs-Farbe ('Horizontal-Icons' Ansicht)"
+
+#: KravenHD.py
+msgid "Choose the gradient color of the icons for 'Horizontal-Icons' mainmenus."
+msgstr "Wählen Sie die Verlaufs-Farbe der Icons für 'Horizontal-Icons' Hauptmenüs."
 
 #: KravenHDTextTranslator.py
 msgid "Move/Copy"
@@ -2504,4 +2520,124 @@ msgstr "Skin Auflösung"
 
 #: KravenHD.py
 msgid "Choose the resolution of the skin."
-msgstr "Wählen Sie die Auflösung des Skins"
+msgstr "Wählen Sie die Auflösung des Skins."
+
+#: KravenHD.py
+msgid "gradient transparent"
+msgstr "Verlauf mit Transparenz"
+
+#: KravenHD.py
+msgid "box transparent"
+msgstr "Box mit Transparenz"
+
+#: KravenHD.py
+msgid "Choose from different styles to display popups like 'MessageBox', 'ChoiceBox', 'ExtensionsList', 'VirtualKeyboard' and more."
+msgstr "Wählen Sie eine von verschiedenen Darstellungs-Varianten für Popups wie 'MessageBox', 'ChoiceBox', 'ExtensionsList', 'VirtualKeyboard' und mehr."
+
+#: KravenHD.py
+msgid ""
+"gradient-style \n"
+"without transparency \n"
+"global background"
+msgstr ""
+"Verlauf-Stil \n"
+"ohne Transparenz \n"
+"globaler Hintergrund"
+
+#: KravenHD.py
+msgid ""
+"gradient-style \n"
+"with transparency \n"
+"global background"
+msgstr ""
+"Verlauf-Stil \n"
+"mit Transparenz \n"
+"globaler Hintergrund"
+
+#: KravenHD.py
+msgid ""
+"box-style \n"
+"without transparency \n"
+"global background \n"
+"global border"
+msgstr ""
+"Box-Stil \n"
+"ohne Transparenz \n"
+"globaler Hintergrund \n"
+"globaler Rahmen"
+
+#: KravenHD.py
+msgid ""
+"box-style \n"
+"with transparency \n"
+"global background \n"
+"global border"
+msgstr ""
+"Box-Stil \n"
+"mit Transparenz \n"
+"globaler Hintergrund \n"
+"globaler Rahmen"
+
+#: KravenHD.py
+msgid "Progress-Bar"
+msgstr "Fortschrittsbalken"
+
+#: KravenHD.py
+msgid "Choose the color of progress bar. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe des Fortschrittsbalkens. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenHD.py
+msgid "border"
+msgstr "Rahmen"
+
+#: KravenHD.py
+msgid "line"
+msgstr "Linie"
+
+#: KravenHD.py
+msgid "Progress-Background"
+msgstr "Fortschrittsbalken-Hintergrund"
+
+#: KravenHD.py
+msgid "Progress-Border/Line"
+msgstr "Fortschrittsbalken-Rahmen/Linie"
+
+#: KravenHD.py
+msgid "Progress-Border Color"
+msgstr "Fortschrittsbalken-Rahmenfarbe"
+
+#: KravenHD.py
+msgid "Progress-Line Color"
+msgstr "Fortschrittsbalken-Liniefarbe"
+
+#: KravenHD.py
+msgid "Choose the color of progress bar background or deactivate it completely. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Farbe des Fortschrittsbalken-Hintergrunds oder deaktivieren Sie diesen komplett. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenHD.py
+msgid "Choose whether progress bar displayed with border or line or without them."
+msgstr "Wählen Sie, ob der Fortschrittsbalken mit Rahmen oder Linie angezeigt wird oder ohne diese."
+
+#: KravenHD.py
+msgid "Choose the border color of progress bar. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Rahmenfarbe des Fortschrittsbalkens. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenHD.py
+msgid "Choose the line color of progress bar. Press OK to define your own RGB color."
+msgstr "Wählen Sie die Liniefarbe des Fortschrittsbalkens. Drücken Sie OK, um Ihre eigene RGB-Farbe festzulegen."
+
+#: KravenHD.py
+msgid ""
+"border \n"
+"choose the color below"
+msgstr ""
+"Rahmen \n"
+"Farbauswahl unterhalb"
+
+#: KravenHD.py
+msgid ""
+"line \n"
+"choose the color below"
+msgstr ""
+"Linie \n"
+"Farbauswahl unterhalb"

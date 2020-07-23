@@ -1,6 +1,6 @@
-  <!-- FileCommanderScreen - horizontal -->
+
   <screen backgroundColor="transparent" name="FileCommanderScreen" position="0,0" size="1280,720" flags="wfNoBorder">
-	<widget source="Title" render="Label" position="42,12" size="1000,46" backgroundColor="KravenIBbg2" font="Regular2;36" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="center" />
+	<!--*FileCommanderScreen*-->
 	<widget backgroundColor="Kravenbg" name="list_left_head1" foregroundColor="KravenFont2" position="42,80" size="580,54" font="Regular;22" transparent="1" />
 	<widget backgroundColor="Kravenbg" source="list_left_head2" render="Listbox" foregroundColor="KravenFont2" position="40,142" size="582,27" selectionDisabled="1" transparent="1" >
 	  <convert type="TemplatedMultiContent">
@@ -29,20 +29,20 @@
 					}
 	  </convert>
 	</widget>
-	<widget backgroundColor="Kravenbg" name="list_left" foregroundColor="KravenFont1" position="42,184" size="580,390" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="list_right" foregroundColor="KravenFont1" position="658,184" size="580,390" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="list_left" foregroundColor="KravenFont1" position="42,184" size="580,390" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="list_right" foregroundColor="KravenFont1" position="658,184" size="580,390" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<widget backgroundColor="Kravenbg" name="sort_left" position="42,588" size="580,27" font="Regular;22" foregroundColor="KravenFont2" halign="center" transparent="1" />
 	<widget backgroundColor="Kravenbg" name="sort_right" position="658,588" size="580,27" font="Regular;22" foregroundColor="KravenFont2" halign="center" transparent="1" />
-	<constant-widget name="Background"/>
-	<constant-widget name="gradient-menu"/>
-	<constant-widget name="Colorbuttons"/>
-    <constant-widget name="NameRedGreenYellowBlue"/>
-	<constant-widget name="MenuOKExit"/>
-    <!--<text="FileCommanderScreen - horizontal" position="70,0" />-->
+    <panel name="Title-big2"/>
+	<panel name="Background"/>
+	<panel name="gradient-menu"/>
+	<panel name="Colorbuttons"/>
+    <panel name="NameRedGreenYellowBlue2"/>
+	<panel name="MenuOKExit"/>
   </screen>
-  <!-- FileCommanderScreenFileSelect - horizontal -->
+
   <screen backgroundColor="transparent" name="FileCommanderScreenFileSelect" position="0,0" size="1280,720" flags="wfNoBorder">
-	<widget source="Title" render="Label" position="42,12" size="1000,46" backgroundColor="KravenIBbg2" font="Regular2;36" foregroundColor="KravenMFont2" transparent="1" halign="left" valign="center" />
+	<!--*FileCommanderScreenFileSelect*-->
 	<widget backgroundColor="Kravenbg" name="list_left_head1" foregroundColor="KravenFont2" position="42,80" size="580,54" font="Regular;22" transparent="1" />
 	<widget backgroundColor="Kravenbg" source="list_left_head2" render="Listbox" foregroundColor="KravenFont2" position="40,142" size="582,27" selectionDisabled="1" transparent="1" >
 	  <convert type="TemplatedMultiContent">
@@ -71,14 +71,14 @@
 					}
 	  </convert>
 	</widget>
-	<widget backgroundColor="Kravenbg" name="list_left" foregroundColor="KravenFont1" position="42,184" size="580,390" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="list_right" foregroundColor="KravenFont1" position="658,184" size="580,390" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="list_left" foregroundColor="KravenFont1" position="42,184" size="580,390" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="list_right" foregroundColor="KravenFont1" position="658,184" size="580,390" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<widget backgroundColor="Kravenbg" name="sort_left" position="42,588" size="580,27" font="Regular;22" foregroundColor="KravenFont2" halign="center" transparent="1" />
 	<widget backgroundColor="Kravenbg" name="sort_right" position="658,588" size="580,27" font="Regular;22" foregroundColor="KravenFont2" halign="center" transparent="1" />
-	<constant-widget name="Background"/>
-	<constant-widget name="gradient-menu"/>
-	<constant-widget name="Colorbuttons"/>
-    <constant-widget name="NameRedGreenYellowBlue"/>
-	<constant-widget name="MenuOKExit"/>
-    <!--<text="FileCommanderScreenFileSelect - horizontal" position="70,0" />-->
+    <panel name="Title-big2"/>
+	<panel name="Background"/>
+	<panel name="gradient-menu"/>
+	<panel name="Colorbuttons"/>
+    <panel name="NameRedGreenYellowBlue2"/>
+	<panel name="MenuOKExit"/>
   </screen>

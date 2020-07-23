@@ -1,4 +1,4 @@
-  <!-- TimeshiftState -->
+
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimeshiftState" position="0,0" size="1280,720" title="TimeshiftState">
 	<ePixmap pixmap="KravenHD/backg.png" position="0,0" size="1280,720" zPosition="-9" />
 	<!-- Infobar mainstyles -->

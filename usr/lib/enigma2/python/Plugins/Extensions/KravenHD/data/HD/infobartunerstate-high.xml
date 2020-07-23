@@ -1,4 +1,4 @@
-  <!-- InfoBarTunerState -->
+
   <screen name="TunerState" title="Tuner State" flags="wfNoBorder" position="0,180" size="1280,32" zPosition="5" padding="20" spacing="15" backgroundColor="transparent">
     <eLabel backgroundColor="KravenIBbg" position="0,0" size="1280,32" zPosition="-2" />
     <widget name="Type" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/record.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/stream.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/finished.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/info.png" position="0,0" size="32,32" zPosition="1" backgroundColor="KravenIBbg" transparent="1" alphatest="on"/>
@@ -14,6 +14,7 @@
     <widget name="Field8" font="Regular;24" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
     <widget name="Field9" font="Regular;24" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
   </screen>
+
   <screen name="TunerState_v2" title="Tuner State" flags="wfNoBorder" position="0,180" size="1280,32" zPosition="5" padding="20" spacing="15" backgroundColor="transparent">
     <eLabel backgroundColor="KravenIBbg" position="0,0" size="1280,32" zPosition="-2" />
 	<widget name="picon" size="42,25" alphatest="on"/>
@@ -30,7 +31,7 @@
 	<widget name="Field8" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
 	<widget name="Field9" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="1"/>
   </screen>
-  <!-- AutoResolution -->
+
   <screen name="ResolutionLabel" backgroundColor="transparent" position="0,160" size="520,28" flags="wfNoBorder">
     <eLabel backgroundColor="KravenIBbg" position="0,0" size="520,28" transparent="0" zPosition="-2" />
     <widget name="content" position="20,2" size="250,22" font="Regular;16" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" halign="left" valign="center" transparent="1" zPosition="-1" />

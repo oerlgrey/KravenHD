@@ -1,4 +1,4 @@
-  <!--/* NetatmoBar V1-->
+
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NetatmoBar_V1" position="0,0" size="798,84" title="NetatmoBar">
     <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" halign="center" position="7,1" render="Label" size="120,37" source="session.CurrentService" transparent="1" zPosition="10">
       <convert type="Netatmo">station.name</convert>
@@ -33,10 +33,9 @@
     </widget>
     <widget alphatest="blend" pixmaps="battery_unknown.png,battery_verylow.png,battery_low.png,battery_medium.png,battery_high.png,battery_full.png" pixtype="battery_vp" plugin_pixmaps="images" position="723,31" render="NetatmoPixmap" size="75,45" source="session.CurrentService" zPosition="10">
     </widget>
-    <constant-widget name="infobar-style-x2-z1-netatmobar-gradient"/>
+    <panel name="infobar-style-x2-z1-netatmobar-gradient"/>
   </screen>
-  <!--/* NetatmoBar V1-->
-  <!--/* NetatmoBar V5-->
+
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NetatmoBar_V5" position="0,0" size="798,84" title="NetatmoBar">
     <widget backgroundColor="KravenIBbg" font="Regular;25" foregroundColor="KravenIBFont1" halign="center" position="7,1" render="Label" size="120,37" source="session.CurrentService" transparent="1" zPosition="10">
       <convert type="Netatmo">station.name</convert>
@@ -71,6 +70,5 @@
     </widget>
     <widget alphatest="blend" pixmaps="battery_unknown.png,battery_verylow.png,battery_low.png,battery_medium.png,battery_high.png,battery_full.png" pixtype="battery_vp" plugin_pixmaps="images" position="723,31" render="NetatmoPixmap" size="75,45" source="session.CurrentService" zPosition="10">
     </widget>
-    <constant-widget name="infobar-style-x2-z1-netatmobar-gradient"/>
+    <panel name="infobar-style-x2-z1-netatmobar-gradient"/>
   </screen>
-  <!--/* NetatmoBar V5-->

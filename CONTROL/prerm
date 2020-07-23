@@ -15,6 +15,15 @@ fi
 if [ -f /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/data/FHD/skin-user.xml ]; then
     cp /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/data/FHD/skin-user.xml /tmp/skin-user-fhd.xml
 fi
+if [ -f /usr/share/enigma2/KravenHD/buttons/icon1.png ]; then
+    cp /usr/share/enigma2/KravenHD/buttons/icon1.png /tmp/icon1.png
+fi
 if [ -f /usr/share/enigma2/KravenHD/skin.xml ]; then
     rm -rf /usr/share/enigma2/KravenHD/skin.xml
+fi
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_720/KravenHD/MP_skin.xml ]; then
+    rm -rf /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_720/KravenHD
+fi
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenHD/MP_skin.xml ]; then
+    rm -rf /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenHD
 fi

@@ -92,4 +92,3 @@ class KravenHDTempFanInfo(Poll, Converter, object):
 		if faninfo <> "N/A":
 			faninfo = faninfo[:-4]
 		return faninfo
-

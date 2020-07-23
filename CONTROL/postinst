@@ -6,10 +6,13 @@ if [ -d /tmp/graphicshd ]; then
     mv -f /tmp/graphicshd/* /usr/share/enigma2/KravenHD/graphics/
 fi
 if [ -f /tmp/skin-user-hd.xml ]; then
-    mv -f /tmp/skin-user-hd.xml /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/HD/skin-user.xml
+    mv -f /tmp/skin-user-hd.xml /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/data/HD/skin-user.xml
 fi
 if [ -f /tmp/skin-user-fhd.xml ]; then
-    mv -f /tmp/skin-user-fhd.xml /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD/data/FHD/skin-user.xml
+    mv -f /tmp/skin-user-fhd.xml /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/data/FHD/skin-user.xml
+fi
+if [ -f /tmp/icon1.png ]; then
+    mv -f /tmp/icon1.png /usr/share/enigma2/KravenHD/buttons/icon1.png
 fi
 if [ -f /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/plugin.py* ]; then
     wget -q -O /dev/null 'http://127.0.0.1/web/message?type=1&text=KravenHD%20wurde%20erfolgreich%20installiert.%0A%0AZur%20Nutzung%20rufen%20Sie%20das%20Plugin%20auf,%20speichern%20Ihre%20Einstellungen%0Aund%20starten%20die%20Oberfl%C3%A4che%20neu.&timeout=13' || true

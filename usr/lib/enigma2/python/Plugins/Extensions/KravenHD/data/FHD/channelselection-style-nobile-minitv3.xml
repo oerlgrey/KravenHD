@@ -1,6 +1,7 @@
-  <!-- /* ChannelSelection - Nobile Preview -->
+
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection">
-    <widget backgroundColor="Kravenbg2" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" name="list" position="25,449" serviceInfoFont="Regular;30" serviceItemHeight="43" serviceNameFont="Regular;30" serviceNumberFont="Regular;30" size="658,516" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" progressBarWidth="78" progressPercentWidth="80" progressbarHeight="15" transparent="1" />
+    <!--*ChannelSelection*-->
+    <widget backgroundColor="Kravenbg2" scrollbarMode="showOnDemand" picServiceEventProgressbar="KravenHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" name="list" position="25,449" serviceInfoFont="Regular;30" serviceItemHeight="43" selectionPixmap="KravenHD/graphics/sel_CS.png" serviceNameFont="Regular;30" serviceNumberFont="Regular;30" size="658,516" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" progressBarWidth="78" progressbarHeight="15" transparent="1" />
     <widget source="ServiceEvent" render="KravenHDPig4" position="90,104" size="576,324" backgroundColor="transparent" zPosition="3" />
     <eLabel backgroundColor="#00000000" position="90,104" size="576,324" transparent="0" zPosition="2" />
     <eLabel backgroundColor="KravenBorder2" position="90,104" size="576,4" transparent="0" zPosition="4" />
@@ -36,9 +37,7 @@
     <eLabel position="711,570" size="669,1" backgroundColor="KravenLine" />
     <eLabel position="697,105" size="1,860" backgroundColor="KravenLine" />
     <eLabel position="1392,105" size="1,860" backgroundColor="KravenLine" />
-    <!-- nontransbg */-->
-    <constant-widget name="ChannelSelection-template"/>
-    <constant-widget name="gradient-cs"/>
-    <constant-widget name="channelselection-style-nobile-minitv-small"/>
-    <!--<text="ChannelSelection - Nobile Preview" position="63,0" />-->
+    <panel name="ChannelSelection-nontransbg-template"/>
+    <panel name="gradient-cs"/>
+    <panel name="channelselection-style-nobile-minitv-small"/>
   </screen>

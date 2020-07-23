@@ -1,20 +1,21 @@
     <ePixmap pixmap="KravenHD/graphics/shift.png" position="-10,150" size="905,170" zPosition="-9" alphatest="blend"/>
-    <widget name="state" position="55,220" size="110,24" font="Regular;28" foregroundColor="KravenIBFont1" halign="center" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="center" />
+    <widget name="state" position="55,215" size="110,24" font="Regular;28" foregroundColor="KravenIBFont1" halign="center" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="center" />
     <widget source="session.CurrentService" render="Label" position="667,215" size="100,30" font="Regular;24" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
       <convert type="ServicePosition">Remaining</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="580,215" size="100,30" font="Regular;24" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1">
       <convert type="KravenHDTextTranslator">untillive</convert>
     </widget>
-    <eLabel text="min" position="774,215" size="60,30" font="Regular;24" foregroundColor="KravenIBFont1" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" />
+    <eLabel text="min " position="774,215" size="60,30" font="Regular;24" foregroundColor="KravenIBFont1" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" />
     <widget source="session.CurrentService" render="Label" position="167,215" size="100,30" font="Regular; 24" halign="right" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top">
       <convert type="ServicePosition">Length</convert>
     </widget>
-    <eLabel text="min" position="275,215" size="60,30" font="Regular;24" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1" />
-    <widget source="session.CurrentService" render="Label" position="338,215" size="230,32" font="Regular;28" backgroundColor="KravenIBbg" transparent="1" zPosition="10" valign="center" foregroundColor="red" halign="center">
+    <eLabel text="min " position="275,215" size="60,30" font="Regular;24" halign="left" backgroundColor="KravenIBbg" transparent="1" zPosition="15" valign="top" foregroundColor="KravenIBFont1" />
+    <widget source="session.CurrentService" render="Label" position="338,212" size="230,32" font="Regular;28" backgroundColor="KravenIBbg" transparent="1" zPosition="10" valign="center" foregroundColor="red" halign="center">
       <convert type="KravenHDTextTranslator">timeshiftactive</convert>
     </widget>
-    <widget position="68,248" render="Progress" backgroundColor="KravenIBbg" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress749.png" transparent="1" size="749,5" source="session.CurrentService" zPosition="17">
+	<IBProgressBackground pixmap="KravenHD/graphics/progress_bg_ts.png" position="58,243" size="769,21" zPosition="1" alphatest="IBProgressBackground" />
+	<eLabel position="68,253" size="749,1" backgroundColor="KravenIBProgressBorderLine" zPosition="2" />
+    <widget position="68,251" render="Progress" size="749,5" source="session.CurrentService" foregroundColor="KravenIBProgress" pixmap="KravenHD/progress/progress749.png" borderColor="KravenIBProgressBorderLine" borderWidth="1" zPosition="3" transparent="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
-    <eLabel backgroundColor="KravenLine" position="68,250" size="749,1" zPosition="16" />

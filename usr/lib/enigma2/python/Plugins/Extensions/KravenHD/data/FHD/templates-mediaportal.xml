@@ -1,0 +1,146 @@
+	
+	<screen name="template-mp">
+	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg5" foregroundColor="KravenIBGFont1" position="1707,25" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
+	    <convert type="ClockToText">Default</convert>
+	  </widget>
+	  <!-- nontransbg */-->
+      <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="63,1045" size="300,7" />
+      <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="436,1045" size="300,7" />
+      <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="813,1045" size="300,7" />
+      <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="1188,1045" size="300,7" />
+	</screen>
+	
+	<screen name="nonib-mp">
+	  <!-- nonibbg */-->
+	</screen>
+	
+	<screen name="gradient-mp">
+	  <ePixmap pixmap="KravenHD/graphics/ibar.png" position="0,825" size="1920,600" alphatest="blend" zPosition="-9" />
+	  <ePixmap pixmap="KravenHD/graphics/ibaro2.png" position="0,0" size="1920,247" alphatest="blend" zPosition="-9" />
+	</screen>
+	
+	<screen name="box-mp">
+	  <eLabel position="0,960" size="1920,120" backgroundColor="KravenIBbg" zPosition="-9" />
+	  <eLabel position="0,960" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	  <eLabel position="0,0" size="1920,88" backgroundColor="KravenIBbg" zPosition="-9" />
+	  <eLabel position="0,87" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</screen>
+	
+	<screen name="box2-mp">
+	  <ePixmap pixmap="KravenHD/graphics/ibar4.png" position="0,960" size="1920,120" zPosition="-9" alphatest="blend" />
+	  <eLabel position="0,960" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	  <ePixmap pixmap="KravenHD/graphics/ibaro.png" position="0,0" size="1920,88" zPosition="-9" alphatest="blend" />
+	  <eLabel position="0,87" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</screen>
+	
+	<screen name="texture-mp">
+	  <ePixmap pixmap="KravenHD/graphics/ibtexture.png" position="0,960" size="1920,120" zPosition="-9" alphatest="blend" />
+	  <eLabel position="0,960" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	  <ePixmap pixmap="KravenHD/graphics/ibtexture.png" position="0,0" size="1920,88" zPosition="-9" alphatest="blend" />
+	  <eLabel position="0,87" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</screen>
+	
+	<screen name="gradient-mpplayer">
+	  <ePixmap pixmap="KravenHD/graphics/ibar.png" position="0,735" size="1920,600" zPosition="-9" />
+	</screen>
+	
+	<screen name="box-mpplayer">
+	  <eLabel position="0,915" size="1920,165" backgroundColor="KravenIBbg" zPosition="-9" />
+	  <eLabel position="0,915" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</screen>
+	
+	<screen name="box2-mpplayer">
+	  <ePixmap pixmap="KravenHD/graphics/ibar5.png" position="0,915" size="1920,165" zPosition="-9" />
+	  <eLabel position="0,915" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</screen>
+	
+	<screen name="texture-mpplayer">
+	  <ePixmap pixmap="KravenHD/graphics/ibtexture.png" position="0,915" size="1920,165" zPosition="-9" />
+	  <eLabel position="0,915" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	</screen>
+	
+	<screen name="icons-mpplayer">
+	  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_rec_off.png" position="540,1020" size="65,33" zPosition="1" />
+	  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_rec_on.png" position="540,1020" render="Pixmap" size="65,33" source="session.RecordState" zPosition="5">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <ePixmap pixmap="KravenHD/infobar-icons/ico_dolby_off.png" alphatest="blend" position="315,1020" size="65,33" zPosition="1" />
+	  <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/infobar-icons/ico_dolby_on.png" alphatest="blend" position="315,1020" size="65,33" zPosition="2">
+		<convert type="ServiceInfo">IsMultichannel</convert>
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <ePixmap alphatest="blend" pixmap="KravenHD/infobar-icons/ico_format_off.png" position="390,1020" size="65,33" zPosition="1" />
+	  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_format_on.png" position="390,1020" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="2">
+		<convert type="ServiceInfo">IsWidescreen</convert>
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_sd.png" position="465,1020" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+		<convert type="ServiceInfo">VideoHeight</convert>
+		<convert type="ValueRange">0,719</convert>
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_hd_on.png" position="465,1020" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+		<convert type="ServiceInfo">VideoHeight</convert>
+		<convert type="ValueRange">720,1080</convert>
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget alphatest="blend" pixmap="KravenHD/infobar-icons/ico_uhd.png" position="465,1020" render="Pixmap" size="65,33" source="session.CurrentService" zPosition="1">
+		<convert type="ServiceInfo">VideoHeight</convert>
+		<convert type="ValueRange">1081,5000</convert>
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <ePixmap pixmap="KravenHD/infobar-icons/resolution.png" position="615,1020" size="168,33" zPosition="1" alphatest="blend" />
+      <widget source="session.CurrentService" render="Label" size="162,33" font="Regular;27" halign="center" backgroundColor="KravenIBbg" position="618,1020" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" transparent="1">
+        <convert type="KravenHDServiceInfoEX">Resolution</convert>
+      </widget>
+	  <IBProgressBackground pixmap="KravenHD/graphics/progress_bg_pl.png" position="300,984" size="1317,31" zPosition="1" alphatest="IBProgressBackground" />
+	  <eLabel position="315,999" size="1287,1" backgroundColor="KravenIBProgressBorderLine" zPosition="2" />
+	  <widget position="315,996" render="Progress" size="1287,7" source="session.CurrentService" foregroundColor="KravenIBProgress" pixmap="KravenHD/progress/progress858.png" borderColor="KravenIBProgressBorderLine" borderWidth="1" zPosition="3" transparent="1">
+        <convert type="MPServicePosition">Position</convert>
+      </widget>
+	</screen>
+	
+	<screen name="title-mp">
+	  <eLabel text="MediaPortal" position="63,10" size="300,69" zPosition="1" noWrap="1" transparent="1" font="Regular2;50" valign="center" halign="left" backgroundColor="KravenIBbg5" foregroundColor="KravenIBGFont2" />
+	</screen>
+	
+	<screen name="title2-mp">
+	  <eLabel text="MediaPortal" position="63,10" size="300,69" zPosition="1" noWrap="1" transparent="1" font="Regular2;50" valign="center" halign="left" backgroundColor="KravenIBbg5" foregroundColor="KravenIBGFont2" />
+	  <widget name="version" position="420,10" size="1020,69" zPosition="1" noWrap="1" transparent="1" font="Regular2;50" valign="center" halign="left" backgroundColor="KravenIBbg5" foregroundColor="KravenIBGFont2" />
+	</screen>
+	
+	<screen name="title3-mp">
+	  <widget name="title" position="63,10" size="1377,69" zPosition="1" noWrap="1" transparent="1" font="Regular2;50" valign="center" halign="left" backgroundColor="KravenIBbg5" foregroundColor="KravenIBGFont2" />
+	</screen>
+	
+	<screen name="title4-mp">
+	  <widget name="searchinfo" position="63,10" size="1377,69" zPosition="1" noWrap="1" transparent="1" font="Regular2;50" valign="center" halign="left" backgroundColor="KravenIBbg5" foregroundColor="KravenIBGFont2" />
+	</screen>
+	
+	<screen name="title5-mp">
+	  <eLabel text="MediaPortal Update" position="63,10" size="1542,69" backgroundColor="KravenIBbg5" font="Regular2;50" foregroundColor="KravenIBGFont2" transparent="1" halign="left" valign="center" />
+	</screen>
+	
+	<screen name="Colorbutton-text">
+	  <widget name="F1" position="71,1004" size="345,39" noWrap="1" transparent="1" font="Regular;30" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" valign="center" halign="left" zPosition="6" />
+	  <widget name="F2" position="446,1004" size="345,39" noWrap="1" transparent="1" font="Regular;30" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" valign="center" halign="left" zPosition="6" />
+	  <widget name="F3" position="821,1004" size="345,39" noWrap="1" transparent="1" font="Regular;30" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" valign="center" halign="left" zPosition="6" />
+	  <widget name="F4" position="1196,1004" size="345,39" noWrap="1" transparent="1" font="Regular;30" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" valign="center" halign="left" zPosition="6" />
+	</screen>
+	
+	<screen name="MenuOKExit-mp">
+      <ePixmap pixmap="KravenHD/infobar-global-icons/key_menu.png" position="1642,1012" size="65,33" alphatest="blend" />
+      <ePixmap pixmap="KravenHD/infobar-global-icons/key_ok.png" position="1717,1012" size="65,33" alphatest="blend" />
+      <ePixmap pixmap="KravenHD/infobar-global-icons/key_exit.png" position="1792,1012" size="65,33" alphatest="blend" />
+	</screen>
+	
+	<screen name="OKExit-mp">
+	  <ePixmap pixmap="KravenHD/infobar-global-icons/key_ok.png" position="1717,1012" size="65,33" alphatest="blend" />
+	  <ePixmap pixmap="KravenHD/infobar-global-icons/key_exit.png" position="1792,1012" size="65,33" alphatest="blend" />
+	</screen>
+	
+	<screen name="message-mp">
+      <widget name="ErrorPixmap" pixmap="KravenHD/global-icons/messages-fhd/attention.png" position="15,24" size="79,79" alphatest="blend" />
+      <widget name="QuestionPixmap" pixmap="KravenHD/global-icons/messages-fhd/question.png" position="15,24" size="79,79" alphatest="blend" />
+      <widget name="InfoPixmap" pixmap="KravenHD/global-icons/messages-fhd/info.png" position="15,24" size="79,79" alphatest="blend" />
+	</screen>

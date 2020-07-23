@@ -14,7 +14,11 @@
     <color color="black" name="WindowTitleBackground" />
     <color color="white" name="WindowTitleForeground" />
   </windowstyle>
-  <!-- Skinparamter -->
+  <switchpixmap>
+    <pixmap name="menu_on" filename="KravenHD/icons/menu_on.png" />
+    <pixmap name="menu_off" filename="KravenHD/icons/menu_off.png" />
+  </switchpixmap>
+  <!-- Skinparameter -->
   <parameters>
     <!-- Choicelist -->
     <parameter name="ChoicelistItemHeight" value="45" />
@@ -31,7 +35,7 @@
     <parameter name="ECMSelectionFontSize" value="34" />
     <parameter name="ECMSelectionListFont" value="34" />
     <!-- MediaplayerPlaylist -->
-    <parameter name="MediaPlayerPlayList" value="35,1,700,35" />
+    <parameter name="MediaPlayerPlayList" value="35,1,1150,35" />
     <parameter name="MediaPlayerPlayListFont" value="Regular;30" />
     <!-- VirtualKeyboard -->
 	<parameter name="VirtualKeyBoard" value="67,67"/>
@@ -45,18 +49,12 @@
     <parameter name="PluginListFont1" value="Regular;30" />
     <parameter name="PluginListFont2" value="Regular;25" />
     <parameter name="PluginListItemHeight" value="80" />
-    <parameter name="PluginListName" value="180,2,867,37" />
-    <parameter name="PluginListDescription" value="180,40,867,32" />
+    <parameter name="PluginListName" value="180,2,909,37" />
+    <parameter name="PluginListDescription" value="180,40,909,32" />
     <parameter name="PluginListIcon" value="30,18,100,40" />
     <parameter name="PluginListCategoryIcon" value="10,8,150,60" />
-    <!-- MultiQuickButtonList -->
-    <parameter name="MultiQuickButtonList" value="45,4,800,38" />
-    <parameter name="MultiQuickButtonListPic1" value="10,8,790,25" />
-    <parameter name="MultiQuickButtonListPic2" value="5,8,35,25" />
-    <parameter name="MultiQuickButtonListFont" value="Regular;30" />
-    <parameter name="MultiQuickButtonListItemHeight" value="45" />
     <!-- PiconManagerList -->
-    <parameter name="PiconManagerList" value="10,5,1675,40" />
+    <parameter name="PiconManagerList" value="10,2,1818,41" />
     <parameter name="PiconManagerListFont" value="Regular;32" />
     <parameter name="PiconManagerListItemHeight" value="45" />
     <!-- Channellist ServicelistService -->
@@ -93,11 +91,11 @@
     <parameter name="ConfigListSliderSeparation" value="300" />
     <!-- TMDb -->
     <parameter name="TMDbListFont" value="Regular;32" />
-    <parameter name="TMDbListName" value="15,1,1032,44" />
+    <parameter name="TMDbListName" value="15,1,1074,44" />
     <!-- FileList -->
-    <parameter name="FileListName" value="50,0,1000,45" />
+    <parameter name="FileListName" value="50,0,1042,45" />
     <parameter name="FileListIcon" value="5,8,30,30" />
-    <parameter name="FileListMultiName" value="95,0,950,45" />
+    <parameter name="FileListMultiName" value="95,0,992,45" />
     <parameter name="FileListMultiIcon" value="50,8,30,30" />
     <parameter name="FileListMultiLock" value="5,8,30,30" />
     <parameter name="FileListFont" value="Regular;32" />
@@ -105,7 +103,7 @@
 	<!-- PluginBrowser -->
 	<parameter name="PluginBrowserName" value="180,3,45"/>
 	<parameter name="PluginBrowserDescr" value="180,42,39"/>
-	<parameter name="PluginBrowserIcon" value="2,0,160,70"/>
+	<parameter name="PluginBrowserIcon" value="4,7,150,60"/>
 	<parameter name="PluginBrowserDownloadName" value="125,3,45"/>
 	<parameter name="PluginBrowserDownloadDescr" value="125,42,39"/>
 	<parameter name="PluginBrowserDownloadIcon" value="2,0,120,75"/>
@@ -114,33 +112,29 @@
     <parameter name="ServiceInfoLeft" value="0,0,450,45" />
     <parameter name="ServiceInfoRight" value="450,0,1000,45" />
 	<!-- SelectionList -->
-    <parameter name="SelectionListDescr" value="55,2,1000,41" />
+    <parameter name="SelectionListDescr" value="55,2,1042,41" />
     <parameter name="SelectionListLock" value="5,8,30,30" />
 	<parameter name="SelectionListLockOff" value="5,8,30,30" />
 	<!-- ConfigList -->
     <parameter name="ConfigListSeperator" value="600" />
 	<!-- Dreamexplorer -->
-    <parameter name="DreamexplorerName" value="55,2,1000,41" />
+    <parameter name="DreamexplorerName" value="55,2,1042,41" />
     <parameter name="DreamexplorerIcon" value="5,8,30,30" />
 	<!-- Programmlisten_Updater -->
     <parameter name="ProgrammlistenUpdaterListFont" value="Regular;32" />
-    <parameter name="ProgrammlistenUpdaterList" value="15,2,675,357,45" />
+    <parameter name="ProgrammlistenUpdaterList" value="15,2,717,357,45" />
 	<!-- PlayList -->
-    <parameter name="PlayListName" value="50,2,1000,38" />
+    <parameter name="PlayListName" value="50,2,1042,38" />
     <parameter name="PlayListIcon" value="5,6,30,30" />
-	<!-- CoverFind -->
-    <parameter name="CoverFindListFont" value="Regular;32" />
-    <parameter name="CoverFindListIcon" value="6,10,25,25" />
-    <parameter name="CoverFindListName" value="37,2,1019,41" />
-    <parameter name="CoverFindItemHeight" value="45" />
-    <parameter name="CoverFindCover" value="0,0,120,180" />
-    <parameter name="CoverFindName" value="132,2,926,41" />
-  </parameters>
 	<!-- HelpMenu -->
-  <parameters>
-    <parameter name="HelpMenuListHlp" value="3,2,900,42" />
+    <parameter name="HelpMenuListHlp" value="3,2,900,41" />
     <parameter name="HelpMenuListExtHlp0" value="3,1,900,39" />
     <parameter name="HelpMenuListExtHlp1" value="3,42,900,30" />
+	<!-- EpgList -->
+	<parameter name="EpgListIcon" value="2,10,25,25,4"/>
+	<parameter name="EpgListMulti" value="240,150,120,15"/>
+	<parameter name="EpgListMultiProgressBar" value="105,15,1"/>
+	<parameter name="EpgListSingle" value="88,220"/>
   </parameters>
   <fonts>
 	<alias name="FileList" font="Regular" size="32" height="45" />

@@ -17,7 +17,6 @@
 
 from Renderer import Renderer
 from enigma import ePixmap, eTimer, eDVBVolumecontrol
-from Components.config import config
 
 class KravenHDFlipClock(Renderer):
 

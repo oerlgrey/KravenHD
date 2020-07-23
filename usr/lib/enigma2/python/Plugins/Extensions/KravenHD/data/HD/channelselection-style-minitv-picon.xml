@@ -1,5 +1,6 @@
-  <!-- /* ChannelSelection - MiniTV Picon -->
+
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+    <!--*ChannelSelection*-->
     <widget alphatest="blend" position="42,78" render="Picon" size="74,44" source="ServiceEvent" transparent="1" zPosition="4">
       <convert type="KravenHDRefString">ServicelistRef</convert>
     </widget>
@@ -37,10 +38,8 @@
     <widget source="session.Event_Now" render="Label" position="857,160" size="381,60" font="Regular;24" foregroundColor="KravenFont2" backgroundColor="Kravenbg2" transparent="1" halign="left" valign="top">
       <convert type="KravenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="Kravenbg2" scrollbarMode="showOnDemand" scrollbarWidth="5" picServiceEventProgressbar="KravenHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" name="list" position="545,234" serviceInfoFont="Regular;23" serviceItemHeight="33" serviceNameFont="Regular;25" serviceNumberFont="Regular;25" size="693,396" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" progressBarWidth="52" progressPercentWidth="80" progressbarHeight="10" transparent="1" />
-    <!-- nontransbg */-->
-    <constant-widget name="CSMTP-small"/>
-    <constant-widget name="ChannelSelection-template"/>
-    <constant-widget name="channelselection-style-minitv-picon-cs"/>
-    <!--<text="ChannelSelection - MiniTV Picon" position="42,0" />-->
+    <widget backgroundColor="Kravenbg2" scrollbarMode="showOnDemand" picServiceEventProgressbar="KravenHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" name="list" position="545,234" serviceInfoFont="Regular;23" serviceItemHeight="33" selectionPixmap="KravenHD/graphics/sel_CS.png" serviceNameFont="Regular;25" serviceNumberFont="Regular;25" size="693,396" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" progressBarWidth="52" progressbarHeight="10" transparent="1" />
+    <panel name="CSMTP-small"/>
+    <panel name="ChannelSelection-nontransbg-template"/>
+    <panel name="channelselection-style-minitv-picon-cs"/>
   </screen>
