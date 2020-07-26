@@ -114,7 +114,7 @@ class KravenHDWeather(Poll, Converter, object):
 		global WEATHER_LOAD
 		if WEATHER_LOAD == True:
 			try:
-				r = ping.doOne("8.8.8.8",1.5)
+				r = ping.doOne("8.8.8.8", 1.5)
 				if r != None and r <= 1.5:
 					print ("KravenWeather: Weather download from AccuWeather")
 					res = requests.get(URL, timeout=1.5)
@@ -126,7 +126,7 @@ class KravenHDWeather(Poll, Converter, object):
 					WEATHER_LOAD = False
 			except:
 				pass
-			timeout = max(15,int(config.plugins.KravenHD.refreshInterval.value)) * 1000.0 * 60.0
+			timeout = max(15, int(config.plugins.KravenHD.refreshInterval.value)) * 1000.0 * 60.0
 			self.timer.start(int(timeout), True)
 		else:
 			self.data = WEATHER_DATA1
@@ -225,37 +225,37 @@ class KravenHDWeather(Poll, Converter, object):
 			else:
 				font = self.data['DailyForecasts'][day]['Day']['Icon']
 			font = int(font)
-			if font in (1,2):
+			if font in (1, 2):
 				icon = "B" # sun
-			elif font in (3,4):
+			elif font in (3, 4):
 				icon = "H" # sun + cloud
 			elif font == 5:
 				icon = "E" # mist
-			elif font in (6,7,8,38):
+			elif font in (6, 7, 8, 38):
 				icon = "Y" # clouds
 			elif font == 11:
 				icon = "M" # fog
-			elif font in (12,13,14,39,40):
+			elif font in (12, 13, 14, 39, 40):
 				icon = "Q" # shower
-			elif font in (15,16,17,41,42):
+			elif font in (15, 16, 17, 41, 42):
 				icon = "P" # thunderstorm
 			elif font == 18:
 				icon = "R" # rain
-			elif font in (19,20,21,43):
+			elif font in (19, 20, 21, 43):
 				icon = "U" # flurries
-			elif font in (22,23,44):
+			elif font in (22, 23, 44):
 				icon = "W" # snow
 			elif font == 24:
 				icon = "G" # ice
-			elif font in (25,26,29):
+			elif font in (25, 26, 29):
 				icon = "X" # sleet
-			elif font in (30,31):
+			elif font in (30, 31):
 				icon = "'" # temperature
 			elif font == 32:
 				icon = "F" # wind
-			elif font in (33,34):
+			elif font in (33, 34):
 				icon = "C" # moon
-			elif font in (35,36,37):
+			elif font in (35, 36, 37):
 				icon = "I" # moon + cloud
 			else:
 				icon = "(" # compass

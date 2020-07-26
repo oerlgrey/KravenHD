@@ -26,7 +26,7 @@ class KravenHDVersInfo(Converter, object):
 	@cached
 	def getText(self):
 		versFile = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/version"
-		pFile = open(versFile,"r")
+		pFile = open(versFile, "r")
 		for line in pFile:
 			return line.rstrip()
 		pFile.close()

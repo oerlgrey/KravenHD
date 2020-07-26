@@ -15,13 +15,14 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
+from __future__ import absolute_import
 from Plugins.Plugin import PluginDescriptor
 from enigma import getDesktop
 from Components.Language import language
 from os import environ
 import gettext
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
-import KravenHD
+from . import KravenHD
 
 lang = language.getLanguage()
 environ["LANGUAGE"] = lang[:2]

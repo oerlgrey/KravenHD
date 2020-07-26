@@ -138,7 +138,7 @@ class KravenHDPig(Renderer):
 			else:
 				fbtool.setFBSize(['00000001', '00000001', '00000000', '00000000'], self.decoder)
 
-	def changed(self,what):
+	def changed(self, what):
 		if InfoBar.instance:
 			current = self.source.getCurrentService()
 			service = current and current.toString()

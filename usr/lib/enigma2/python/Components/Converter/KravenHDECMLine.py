@@ -111,7 +111,7 @@ class KravenHDECMLine(Poll, Converter, object):
 					if len(r) > 1 :
 						camInfo[r[0].strip('\n\r\t ')] = r[1].strip('\n\r\t ')
 
-				caid = camInfo.get('caid','')
+				caid = camInfo.get('caid', '')
 				caid = caid.lstrip('0x')
 				caid = caid.upper()
 				caid = caid.zfill(4)
@@ -139,26 +139,26 @@ class KravenHDECMLine(Poll, Converter, object):
 
 				caid = 'CAID: ' + str(caid)
 
-				prov = camInfo.get('prov','')
+				prov = camInfo.get('prov', '')
 				prov = prov.lstrip("0x")
 				prov = prov.upper()
 				prov = prov.zfill(6)
 				prov = 'Provider: ' + prov
 
-				ecmtime = camInfo.get('ecm time','')
+				ecmtime = camInfo.get('ecm time', '')
 				if ecmtime:
 					if "msec" in ecmtime:
 						ecmtime = 'ECM: ' + ecmtime
 					else:
 						ecmtime = 'ECM: ' + ecmtime + ' s'
 
-				hops = 'Hops: ' + str(camInfo.get('hops',''))
-				address = 'Server: ' + str(camInfo.get('address',''))
-				reader = 'Reader: ' + str(camInfo.get('reader',''))
-				source = 'Source: ' + str(camInfo.get('source',''))
-				decode =  'Decode: ' + str(camInfo.get('decode',''))
+				hops = 'Hops: ' + str(camInfo.get('hops', ''))
+				address = 'Server: ' + str(camInfo.get('address', ''))
+				reader = 'Reader: ' + str(camInfo.get('reader', ''))
+				source = 'Source: ' + str(camInfo.get('source', ''))
+				decode =  'Decode: ' + str(camInfo.get('decode', ''))
 
-				using = str(camInfo.get('using',''))
+				using = str(camInfo.get('using', ''))
 
 				active = ''
 
@@ -168,7 +168,7 @@ class KravenHDECMLine(Poll, Converter, object):
 
 				elif using == 'emu':
 					active = 'EMU'
-					if self.type in (self.SATINFO,self.VERYSHORTCAID,self.VERYSHORTREADER):
+					if self.type in (self.SATINFO, self.VERYSHORTCAID, self.VERYSHORTREADER):
 						ecmline = caid + ', ' + ecmtime
 					else:
 						ecmline = active + ' - ' + caid + ' - ' + ecmtime

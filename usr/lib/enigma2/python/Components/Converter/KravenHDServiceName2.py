@@ -126,7 +126,7 @@ class KravenHDServiceName2(Converter, object):
 			return None, num
 
 		if isinstance(ref, eServiceReference):
-			isRadioService = ref.getData(0) in (2,10)
+			isRadioService = ref.getData(0) in (2, 10)
 			lastpath = isRadioService and config.radio.lastroot.value or config.tv.lastroot.value
 			if 'FROM BOUQUET' not in lastpath:
 				if 'FROM PROVIDERS' in lastpath:
@@ -172,9 +172,9 @@ class KravenHDServiceName2(Converter, object):
 	def getProviderName(self, ref):
 		if isinstance(ref, eServiceReference):
 			from Screens.ChannelSelection import service_types_radio, service_types_tv
-			typestr = ref.getData(0) in (2,10) and service_types_radio or service_types_tv
+			typestr = ref.getData(0) in (2, 10) and service_types_radio or service_types_tv
 			pos = typestr.rfind(':')
-			rootstr = '%s (channelID == %08x%04x%04x) && %s FROM PROVIDERS ORDER BY name' %(typestr[:pos+1],ref.getUnsignedData(4),ref.getUnsignedData(2),ref.getUnsignedData(3),typestr[pos+1:])
+			rootstr = '%s (channelID == %08x%04x%04x) && %s FROM PROVIDERS ORDER BY name' %(typestr[:pos+1], ref.getUnsignedData(4), ref.getUnsignedData(2), ref.getUnsignedData(3), typestr[pos+1:])
 			provider_root = eServiceReference(rootstr)
 			serviceHandler = eServiceCenter.getInstance()
 			providerlist = serviceHandler.list(provider_root)
@@ -209,16 +209,16 @@ class KravenHDServiceName2(Converter, object):
 			type = self.tpdata.get('tuner_type', '')
 		if not fmt or fmt == 'T':
 			if type == 'DVB-C':
-				fmt = ["t ","F ","Y ","i ","f ","M"]	#(type frequency symbol_rate inversion fec modulation)
+				fmt = ["t ", "F ", "Y ", "i ", "f ", "M"]	#(type frequency symbol_rate inversion fec modulation)
 			elif type == 'DVB-T':
 				if ref:
-					fmt = ["O ","F ","h ","m ","g ","c"]	#(orbital_position code_rate_hp transmission_mode guard_interval constellation)
+					fmt = ["O ", "F ", "h ", "m ", "g ", "c"]	#(orbital_position code_rate_hp transmission_mode guard_interval constellation)
 				else:
-					fmt = ["t ","F ","h ","m ","g ","c"]	#(type frequency code_rate_hp transmission_mode guard_interval constellation)
+					fmt = ["t ", "F ", "h ", "m ", "g ", "c"]	#(type frequency code_rate_hp transmission_mode guard_interval constellation)
 			elif type == 'IP-TV':
 				return _("Streaming")
 			else:
-				fmt = ["O ","F","p ","Y ","f"]		#(orbital_position frequency polarization symbol_rate fec)
+				fmt = ["O ", "F", "p ", "Y ", "f"]		#(orbital_position frequency polarization symbol_rate fec)
 		for line in fmt:
 			f = line[:1]
 			if f == 't':	# %t - tuner_type (dvb-s/s2/c/t)
@@ -245,17 +245,17 @@ class KravenHDServiceName2(Converter, object):
 				else:
 					result += type
 			elif f == 'F':	# %F - frequency (dvb-s/s2/c/t) in KHz
-				if type in ('DVB-S','DVB-C','DVB-T'):
+				if type in ('DVB-S', 'DVB-C', 'DVB-T'):
 					result += '%d'% round(self.tpdata.get('frequency', 0) / 1000.0)
 			elif f == 'f':	# %f - fec_inner (dvb-s/s2/c/t)
-				if type in ('DVB-S','DVB-C'):
+				if type in ('DVB-S', 'DVB-C'):
 					x = self.tpdata.get('fec_inner', 15)
 					result += x in range(10)+[15] and {0:'Auto',1:'1/2',2:'2/3',3:'3/4',4:'5/6',5:'7/8',6:'8/9',7:'3/5',8:'4/5',9:'9/10',15:'None'}[x] or ''
 				elif type == 'DVB-T':
 					x = self.tpdata.get('code_rate_lp', 5)
 					result += x in range(6) and {0:'1/2',1:'2/3',2:'3/4',3:'5/6',4:'7/8',5:'Auto'}[x] or ''
 			elif f == 'i':	# %i - inversion (dvb-s/s2/c/t)
-				if type in ('DVB-S','DVB-C','DVB-T'):
+				if type in ('DVB-S', 'DVB-C', 'DVB-T'):
 					x = self.tpdata.get('inversion', 2)
 					result += x in range(3) and {0:'On',1:'Off',2:'Auto'}[x] or ''
 			elif f == 'O':	# %O - orbital_position (dvb-s/s2)
@@ -280,7 +280,7 @@ class KravenHDServiceName2(Converter, object):
 					x = self.tpdata.get('polarization', 0)
 					result += x in range(4) and {0:'H',1:'V',2:'L',3:'R'}[x] or '?'
 			elif f == 'Y':	# %Y - symbol_rate (dvb-s/s2/c)
-				if type in ('DVB-S','DVB-C'):
+				if type in ('DVB-S', 'DVB-C'):
 					result += '%d'%(self.tpdata.get('symbol_rate', 0) / 1000)
 			elif f == 'r':	# %r - rolloff (dvb-s2)
 				if not self.isStream:
@@ -505,7 +505,7 @@ class KravenHDServiceName2(Converter, object):
 					tmpprov = self.getProviderName(ref)
 				else: 
 					tmpprov = info.getInfoString(iServiceInformation.sProvider) or ''
-			if '' is tmpprov or 'Unknown' in tmpprov:
+			if '' == tmpprov or 'Unknown' == tmpprov:
 				if self.refstr:
 					tmpref = self.refstr
 				else:
@@ -513,7 +513,7 @@ class KravenHDServiceName2(Converter, object):
 				for i in range(len(searchpath)):
 					if os.path.isfile('%s%s' % (searchpath[i], refname)):
 						refpath = '%s%s' % (searchpath[i], refname)
-				if not '' is refpath:
+				if '' != refpath:
 					tmpref = ':'.join(tmpref.split(':')[:10])
 					reffile = open(refpath, 'r').read()
 					if not reffile.endswith('\r\n\r\n'):
@@ -600,7 +600,7 @@ class KravenHDServiceName2(Converter, object):
 							tmpprov = self.getProviderName(ref)
 						else: 
 							tmpprov = info.getInfoString(iServiceInformation.sProvider) or ''
-					if '' is tmpprov or 'Unknown' in tmpprov:
+					if '' == tmpprov or 'Unknown' == tmpprov:
 						if self.refstr:
 							tmpref = self.refstr
 						else:
@@ -608,7 +608,7 @@ class KravenHDServiceName2(Converter, object):
 						for i in range(len(searchpath)):
 							if os.path.isfile('%s%s' % (searchpath[i], refname)):
 								refpath = '%s%s' % (searchpath[i], refname)
-						if not '' is refpath:
+						if '' != refpath:
 							tmpref = ':'.join(tmpref.split(':')[:10])
 							reffile = open(refpath, 'r').read()
 							if not reffile.endswith('\r\n\r\n'):
@@ -662,7 +662,7 @@ class KravenHDServiceName2(Converter, object):
 	def changed(self, what):
 		if what[0] != self.CHANGED_SPECIFIC or what[1] in (iPlayableService.evStart,):
 			self.refstr = self.isStream = self.ref = self.info = self.tpdata = None
-			if self.type in (self.NUMBER,self.BOUQUET) or \
+			if self.type in (self.NUMBER, self.BOUQUET) or \
 				(self.type == self.FORMAT and ('%n' in self.sfmt or '%B' in self.sfmt)):
 				self.what = what
 				self.Timer.start(200, True)

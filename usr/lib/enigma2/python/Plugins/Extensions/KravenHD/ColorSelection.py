@@ -174,13 +174,13 @@ class KravenHDColorSelection(ConfigListScreen, Screen):
 		self.close(None)
 		return
 
-	def showColor(self,actcolor):
+	def showColor(self, actcolor):
 		c = self["preview"]
 		if DESKTOP_WIDTH <= 1280:
-			c.fill(0,0,1280,720,actcolor)
+			c.fill(0, 0, 1280, 720, actcolor)
 		else:
-			c.fill(0,0,1920,1080,actcolor)
+			c.fill(0, 0, 1920, 1080, actcolor)
 		c.flush()
 
-	def RGB(self,r,g,b):
+	def RGB(self, r, g, b):
 		return (r<<16)|(g<<8)|b

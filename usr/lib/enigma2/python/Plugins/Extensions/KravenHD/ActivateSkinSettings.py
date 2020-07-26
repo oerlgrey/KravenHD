@@ -16,6 +16,7 @@
 #  please contact me at ochzoetna@gmail.com
 
 from __future__ import print_function
+from __future__ import absolute_import
 
 from copy import deepcopy
 from Components.config import config, configfile, getConfigListEntry, ConfigYesNo, ConfigSubsection, ConfigSelection, ConfigText, ConfigClock, ConfigSlider
@@ -114,14 +115,14 @@ BackgroundList = [
 
 TextureList = []
 
-for i in range(1,50):
+for i in range(1, 50):
 	n=str(i)
 	if fileExists("/usr/share/enigma2/Kraven-user-icons/usertexture"+n+".png") or fileExists("/usr/share/enigma2/Kraven-user-icons/usertexture"+n+".jpg"):
-		TextureList.append(("usertexture"+n,_("user texture")+" "+n))
-for i in range(1,50):
+		TextureList.append(("usertexture"+n, _("user texture")+" "+n))
+for i in range(1, 50):
 	n=str(i)
 	if fileExists("/usr/share/enigma2/KravenHD/textures/texture"+n+".png") or fileExists("/usr/share/enigma2/KravenHD/textures/texture"+n+".jpg"):
-		TextureList.append(("texture"+n,_("texture")+" "+n))
+		TextureList.append(("texture"+n, _("texture")+" "+n))
 
 BorderSelfList = deepcopy(ColorSelfList)
 BorderSelfList.append(("none", _("off")))
@@ -212,12 +213,12 @@ ProgressList = [
 
 config.plugins.KravenHD = ConfigSubsection()
 config.plugins.KravenHD.Primetime = ConfigClock(default=time.mktime((0, 0, 0, 20, 15, 0, 0, 0, 0)))
-config.plugins.KravenHD.InfobarAntialias = ConfigSlider(default=10, increment=1, limits=(0,20))
-config.plugins.KravenHD.ECMLineAntialias = ConfigSlider(default=10, increment=1, limits=(0,20))
-config.plugins.KravenHD.ScreensAntialias = ConfigSlider(default=10, increment=1, limits=(0,20))
-config.plugins.KravenHD.SelfColorR = ConfigSlider(default=0, increment=5, limits=(0,255))
-config.plugins.KravenHD.SelfColorG = ConfigSlider(default=0, increment=5, limits=(0,255))
-config.plugins.KravenHD.SelfColorB = ConfigSlider(default=75, increment=5, limits=(0,255))
+config.plugins.KravenHD.InfobarAntialias = ConfigSlider(default=10, increment=1, limits=(0, 20))
+config.plugins.KravenHD.ECMLineAntialias = ConfigSlider(default=10, increment=1, limits=(0, 20))
+config.plugins.KravenHD.ScreensAntialias = ConfigSlider(default=10, increment=1, limits=(0, 20))
+config.plugins.KravenHD.SelfColorR = ConfigSlider(default=0, increment=5, limits=(0, 255))
+config.plugins.KravenHD.SelfColorG = ConfigSlider(default=0, increment=5, limits=(0, 255))
+config.plugins.KravenHD.SelfColorB = ConfigSlider(default=75, increment=5, limits=(0, 255))
 
 config.plugins.KravenHD.customProfile = ConfigSelection(default="1", choices = [
 				("1", _("1")),
@@ -228,7 +229,7 @@ config.plugins.KravenHD.customProfile = ConfigSelection(default="1", choices = [
 				])
 
 profList = [("default", _("0 (hardcoded)"))]
-for i in range(1,21):
+for i in range(1, 21):
 	n = name = str(i)
 	if fileExists("/etc/enigma2/kravenhd_default_" + n):
 		if i == 1:
@@ -1048,12 +1049,12 @@ config.plugins.KravenHD.IBProgressBorderLineColorList = ConfigSelection(default=
 config.plugins.KravenHD.IBProgressBorderLineColorSelf = ConfigText(default="ffffff")
 config.plugins.KravenHD.IBProgressBorderLineColor = ConfigText(default="ffffff")
 
-config.plugins.KravenHD.InfobarSelfColorR = ConfigSlider(default=0, increment=5, limits=(0,255))
-config.plugins.KravenHD.InfobarSelfColorG = ConfigSlider(default=0, increment=5, limits=(0,255))
-config.plugins.KravenHD.InfobarSelfColorB = ConfigSlider(default=0, increment=5, limits=(0,255))
-config.plugins.KravenHD.BackgroundSelfColorR = ConfigSlider(default=0, increment=5, limits=(0,255))
-config.plugins.KravenHD.BackgroundSelfColorG = ConfigSlider(default=0, increment=5, limits=(0,255))
-config.plugins.KravenHD.BackgroundSelfColorB = ConfigSlider(default=75, increment=5, limits=(0,255))
+config.plugins.KravenHD.InfobarSelfColorR = ConfigSlider(default=0, increment=5, limits=(0, 255))
+config.plugins.KravenHD.InfobarSelfColorG = ConfigSlider(default=0, increment=5, limits=(0, 255))
+config.plugins.KravenHD.InfobarSelfColorB = ConfigSlider(default=0, increment=5, limits=(0, 255))
+config.plugins.KravenHD.BackgroundSelfColorR = ConfigSlider(default=0, increment=5, limits=(0, 255))
+config.plugins.KravenHD.BackgroundSelfColorG = ConfigSlider(default=0, increment=5, limits=(0, 255))
+config.plugins.KravenHD.BackgroundSelfColorB = ConfigSlider(default=75, increment=5, limits=(0, 255))
 
 class ActivateSkinSettings:
 
@@ -1135,9 +1136,9 @@ class ActivateSkinSettings:
 		#weather
 		self.actWeatherstyle="none"
 		if self.InternetAvailable:
-			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x3","infobar-style-z2","infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1"):
+			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1", "infobar-style-x3", "infobar-style-z2", "infobar-style-zz1", "infobar-style-zz2", "infobar-style-zz3", "infobar-style-zzz1"):
 				self.actWeatherstyle=config.plugins.KravenHD.WeatherStyle.value
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-z1"):
 				if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/plugin.py"):
 					self.actWeatherstyle=config.plugins.KravenHD.WeatherStyle3.value
 				else:
@@ -1145,7 +1146,7 @@ class ActivateSkinSettings:
 
 		#channelselection
 		self.actChannelselectionstyle="none"
-		if SystemInfo.get("NumVideoDecoders",1) > 1:
+		if SystemInfo.get("NumVideoDecoders", 1) > 1:
 			self.actChannelselectionstyle=config.plugins.KravenHD.ChannelSelectionStyle2.value
 		else:
 			self.actChannelselectionstyle=config.plugins.KravenHD.ChannelSelectionStyle.value
@@ -1171,7 +1172,7 @@ class ActivateSkinSettings:
 		self.skinSearchAndReplace.append(['name="background" value="#00000000', 'name="background" value="#00' + self.skincolorbackgroundcolor])
 
 		### Background3 (Menus Transparency)
-		if self.actMenustyle in ("logo","metrix-icons"):
+		if self.actMenustyle in ("logo", "metrix-icons"):
 			self.skinSearchAndReplace.append(['name="Kravenbg3" value="#00000000', 'name="Kravenbg3" value="#' + config.plugins.KravenHD.BackgroundColorTrans.value + self.skincolorbackgroundcolor])
 		else:
 			self.skinSearchAndReplace.append(['name="Kravenbg3" value="#00000000', 'name="Kravenbg3" value="#00' + self.skincolorbackgroundcolor])
@@ -1183,14 +1184,14 @@ class ActivateSkinSettings:
 		self.skinSearchAndReplace.append(['name="Kravenbg5" value="#00000000', 'name="Kravenbg5" value="#' + "80" + self.skincolorbackgroundcolor])
 
 		### Background6 (Popups, bsWindow)
-		if config.plugins.KravenHD.PopupStyle.value in ("popup-grad-trans","popup-box-trans"):
+		if config.plugins.KravenHD.PopupStyle.value in ("popup-grad-trans", "popup-box-trans"):
 			self.skinSearchAndReplace.append(['name="Kravenbg6" value="#00000000', 'name="Kravenbg6" value="#' + "3F" + self.skincolorbackgroundcolor])
 		else:
 			self.skinSearchAndReplace.append(['name="Kravenbg6" value="#00000000', 'name="Kravenbg6" value="#' + "00" + self.skincolorbackgroundcolor])
 
 		### Background graphics
 		if config.plugins.KravenHD.SkinResolution.value == "hd":
-			if config.plugins.KravenHD.BackgroundColor.value in ("gradient","texture"):
+			if config.plugins.KravenHD.BackgroundColor.value in ("gradient", "texture"):
 				self.skinSearchAndReplace.append(['<!-- globalbg */-->', '<ePixmap pixmap="KravenHD/graphics/globalbg.png" position="0,0" size="1280,720" zPosition="-10" alphatest="blend" />'])
 				self.skinSearchAndReplace.append(['<!-- nontransbg */-->', '<ePixmap pixmap="KravenHD/graphics/nontransbg.png" position="0,0" size="1280,720" zPosition="-10" />'])
 				self.skinSearchAndReplace.append(['<!-- channelbg */-->', '<ePixmap pixmap="KravenHD/graphics/channelbg.png" position="0,0" size="1280,720" zPosition="-10" alphatest="blend" />'])
@@ -1199,7 +1200,7 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(['<!-- nontransbg */-->', '<eLabel backgroundColor="Kravenbg2" position="0,0" size="1280,720" transparent="0" zPosition="-10" />'])
 				self.skinSearchAndReplace.append(['<!-- channelbg */-->', '<eLabel backgroundColor="Kravenbg4" position="0,0" size="1280,720" transparent="0" zPosition="-10" />'])
 		else:
-			if config.plugins.KravenHD.BackgroundColor.value in ("gradient","texture"):
+			if config.plugins.KravenHD.BackgroundColor.value in ("gradient", "texture"):
 				self.skinSearchAndReplace.append(['<!-- globalbg */-->', '<ePixmap pixmap="KravenHD/graphics/globalbg.png" position="0,0" size="1920,1080" zPosition="-10" alphatest="blend" />'])
 				self.skinSearchAndReplace.append(['<!-- nontransbg */-->', '<ePixmap pixmap="KravenHD/graphics/nontransbg.png" position="0,0" size="1920,1080" zPosition="-10" />'])
 				self.skinSearchAndReplace.append(['<!-- channelbg */-->', '<ePixmap pixmap="KravenHD/graphics/channelbg.png" position="0,0" size="1920,1080" zPosition="-10" alphatest="blend" />'])
@@ -1210,7 +1211,7 @@ class ActivateSkinSettings:
 
 		### ECM. Transparency of infobar, color of text
 		if config.plugins.KravenHD.IBStyle.value == "grad":
-			self.skinSearchAndReplace.append(['name="KravenECMbg" value="#F1325698', 'name="KravenECMbg" value="#' + config.plugins.KravenHD.InfobarColorTrans.value + self.calcBrightness(self.skincolorinfobarcolor,config.plugins.KravenHD.ECMLineAntialias.value)])
+			self.skinSearchAndReplace.append(['name="KravenECMbg" value="#F1325698', 'name="KravenECMbg" value="#' + config.plugins.KravenHD.InfobarColorTrans.value + self.calcBrightness(self.skincolorinfobarcolor, config.plugins.KravenHD.ECMLineAntialias.value)])
 		else:
 			self.skinSearchAndReplace.append(['name="KravenECMbg" value="#F1325698', 'name="KravenECMbg" value="#' + config.plugins.KravenHD.InfobarColorTrans.value + self.skincolorinfobarcolor])
 
@@ -1220,13 +1221,13 @@ class ActivateSkinSettings:
 		### Screens. Lower Transparency of infobar and background, color of infobar or color of background, if ibar invisible
 		if config.plugins.KravenHD.IBColor.value == "all-screens":
 			if config.plugins.KravenHD.IBStyle.value == "grad":
-				self.skinSearchAndReplace.append(['name="KravenIBbg2" value="#00000000', 'name="KravenIBbg2" value="#' + self.calcTransparency(config.plugins.KravenHD.InfobarColorTrans.value,config.plugins.KravenHD.BackgroundColorTrans.value) + self.calcBrightness(self.skincolorinfobarcolor,config.plugins.KravenHD.ScreensAntialias.value)])
-				self.skinSearchAndReplace.append(['name="KravenIBbg3" value="#00000000', 'name="KravenIBbg3" value="#' + self.calcTransparency(config.plugins.KravenHD.InfobarColorTrans.value,config.plugins.KravenHD.BackgroundColorTrans.value) + self.calcBrightness(self.skincolorinfobarcolor,config.plugins.KravenHD.ScreensAntialias.value)])
-				self.skinSearchAndReplace.append(['name="KravenIBbg4" value="#00000000', 'name="KravenIBbg4" value="#' + self.calcTransparency(config.plugins.KravenHD.InfobarColorTrans.value,config.plugins.KravenHD.ChannelSelectionTrans.value) + self.calcBrightness(self.skincolorinfobarcolor,config.plugins.KravenHD.ScreensAntialias.value)])
+				self.skinSearchAndReplace.append(['name="KravenIBbg2" value="#00000000', 'name="KravenIBbg2" value="#' + self.calcTransparency(config.plugins.KravenHD.InfobarColorTrans.value, config.plugins.KravenHD.BackgroundColorTrans.value) + self.calcBrightness(self.skincolorinfobarcolor, config.plugins.KravenHD.ScreensAntialias.value)])
+				self.skinSearchAndReplace.append(['name="KravenIBbg3" value="#00000000', 'name="KravenIBbg3" value="#' + self.calcTransparency(config.plugins.KravenHD.InfobarColorTrans.value, config.plugins.KravenHD.BackgroundColorTrans.value) + self.calcBrightness(self.skincolorinfobarcolor, config.plugins.KravenHD.ScreensAntialias.value)])
+				self.skinSearchAndReplace.append(['name="KravenIBbg4" value="#00000000', 'name="KravenIBbg4" value="#' + self.calcTransparency(config.plugins.KravenHD.InfobarColorTrans.value, config.plugins.KravenHD.ChannelSelectionTrans.value) + self.calcBrightness(self.skincolorinfobarcolor, config.plugins.KravenHD.ScreensAntialias.value)])
 			else:
 				self.skinSearchAndReplace.append(['name="KravenIBbg2" value="#00000000', 'name="KravenIBbg2" value="#' + config.plugins.KravenHD.BackgroundColorTrans.value + self.skincolorinfobarcolor])
 				self.skinSearchAndReplace.append(['name="KravenIBbg4" value="#00000000', 'name="KravenIBbg4" value="#' + config.plugins.KravenHD.ChannelSelectionTrans.value + self.skincolorinfobarcolor])
-				if self.actMenustyle in ("logo","metrix-icons"):
+				if self.actMenustyle in ("logo", "metrix-icons"):
 					self.skinSearchAndReplace.append(['name="KravenIBbg3" value="#00000000', 'name="KravenIBbg3" value="#' + config.plugins.KravenHD.BackgroundColorTrans.value + self.skincolorinfobarcolor])
 				else:
 					self.skinSearchAndReplace.append(['name="KravenIBbg3" value="#00000000', 'name="KravenIBbg3" value="#00' + self.skincolorinfobarcolor])
@@ -1234,14 +1235,14 @@ class ActivateSkinSettings:
 		else:
 			self.skinSearchAndReplace.append(['name="KravenIBbg2" value="#00000000', 'name="KravenIBbg2" value="#' + config.plugins.KravenHD.BackgroundColorTrans.value + self.skincolorbackgroundcolor])
 			self.skinSearchAndReplace.append(['name="KravenIBbg4" value="#00000000', 'name="KravenIBbg4" value="#' + config.plugins.KravenHD.ChannelSelectionTrans.value + self.skincolorbackgroundcolor])
-			if self.actMenustyle in ("logo","metrix-icons"):
+			if self.actMenustyle in ("logo", "metrix-icons"):
 				self.skinSearchAndReplace.append(['name="KravenIBbg3" value="#00000000', 'name="KravenIBbg3" value="#' + config.plugins.KravenHD.BackgroundColorTrans.value + self.skincolorbackgroundcolor])
 			else:
 				self.skinSearchAndReplace.append(['name="KravenIBbg3" value="#00000000', 'name="KravenIBbg3" value="#00' + self.skincolorbackgroundcolor])
 			self.skinSearchAndReplace.append(['name="KravenIBbg5" value="#00000000', 'name="KravenIBbg5" value="#00' + self.skincolorbackgroundcolor])
 
 		### Menu
-		if not self.actChannelselectionstyle in ("channelselection-style-minitv2","channelselection-style-minitv22","channelselection-style-minitv33","channelselection-style-nobile-minitv33","channelselection-style-minitv3","channelselection-style-nobile-minitv3"):
+		if not self.actChannelselectionstyle in ("channelselection-style-minitv2", "channelselection-style-minitv22", "channelselection-style-minitv33", "channelselection-style-nobile-minitv33", "channelselection-style-minitv3", "channelselection-style-nobile-minitv3"):
 			self.skinSearchAndReplace.append(['render="KravenHDMenuPig"', 'render="Pig"'])
 
 		if self.actMenustyle == "minitv":
@@ -1293,42 +1294,42 @@ class ActivateSkinSettings:
 
 			### Infobar
 			if config.plugins.KravenHD.InfobarBoxColor.value == "gradient":
-				if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+				if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-z1"):
 					self.skinSearchAndReplace.append(['<!-- Infobar topbarbackground -->', '<panel name="infobar-style-x2-z1-topbar-box2"/>'])
 
-				if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3"):
+				if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3"):
 					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="infobar-style-x2-x3-box2"/>'])
-				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-z1","infobar-style-z2"):
+				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-z1", "infobar-style-z2"):
 					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="infobar-style-z1-z2-box2"/>'])
-				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zzz1"):
+				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1", "infobar-style-zz1", "infobar-style-zzz1"):
 					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-box2"/>'])
-				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
+				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
 					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="infobar-style-zz2-zz3-box2"/>'])
 
 			elif config.plugins.KravenHD.InfobarBoxColor.value == "texture":
-				if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+				if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-z1"):
 					self.skinSearchAndReplace.append(['<!-- Infobar topbarbackground -->', '<panel name="infobar-style-x2-z1-topbar-texture"/>'])
 
-				if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3"):
+				if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3"):
 					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="infobar-style-x2-x3-texture"/>'])
-				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-z1","infobar-style-z2"):
+				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-z1", "infobar-style-z2"):
 					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="infobar-style-z1-z2-texture"/>'])
-				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zzz1"):
+				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1", "infobar-style-zz1", "infobar-style-zzz1"):
 					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-texture"/>'])
-				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
+				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
 					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="infobar-style-zz2-zz3-texture"/>'])
 
 			else:
-				if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+				if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-z1"):
 					self.skinSearchAndReplace.append(['<!-- Infobar topbarbackground -->', '<panel name="infobar-style-x2-z1-topbar-box"/>'])
 
-				if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3"):
+				if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3"):
 					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="infobar-style-x2-x3-box"/>'])
-				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-z1","infobar-style-z2"):
+				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-z1", "infobar-style-z2"):
 					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="infobar-style-z1-z2-box"/>'])
-				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zzz1"):
+				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1", "infobar-style-zz1", "infobar-style-zzz1"):
 					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-box"/>'])
-				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
+				elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
 					self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="infobar-style-zz2-zz3-box"/>'])
 
 			### NetatmoBar - Background
@@ -1348,7 +1349,7 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(['<panel name="gradient-sib"/>', '<panel name="box-sib"/>'])
 
 			### clock-android - ibar-Position
-			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2") and self.actClockstyle == "clock-android":
+			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2") and self.actClockstyle == "clock-android":
 				if config.plugins.KravenHD.SkinResolution.value == "hd":
 					self.skinSearchAndReplace.append(['position="0,576" size="1280,144"', 'position="0,566" size="1280,154"'])
 					self.skinSearchAndReplace.append(['position="0,576" size="1280,2"', 'position="0,566" size="1280,2"'])
@@ -1419,16 +1420,16 @@ class ActivateSkinSettings:
 
 		else:
 			### Infobar
-			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-z1"):
 				self.skinSearchAndReplace.append(['<!-- Infobar topbarbackground -->', '<panel name="infobar-style-x2-z1-topbar-gradient"/>'])
 
-			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3"):
+			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3"):
 				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="infobar-style-x2-x3-gradient"/>'])
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-z1","infobar-style-z2"):
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-z1", "infobar-style-z2"):
 				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="infobar-style-z1-z2-gradient"/>'])
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-zz1","infobar-style-zzz1"):
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1", "infobar-style-zz1", "infobar-style-zzz1"):
 				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-gradient"/>'])
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
 				self.skinSearchAndReplace.append(['<!-- Infobar ibar -->', '<panel name="infobar-style-zz2-zz3-gradient"/>'])
 
 			### MediaPortal-Player
@@ -1533,7 +1534,7 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(['<panel name="channelselection-style-nobile-minitv-small"/>', '<panel name="channelselection-style-nobile-minitv-big"/>'])
 			elif config.plugins.KravenHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenHD.ChannelSelectionEPGSize1.value == "small":
 				self.skinSearchAndReplace.append(['<panel name="channelselection-style-nobile-minitv-small"/>', '<panel name="channelselection-style-nobile-minitv-small-prime"/>'])
-		elif self.actChannelselectionstyle in ("channelselection-style-nobile","channelselection-style-nobile2","channelselection-style-nobile-minitv","channelselection-style-nobile-minitv3","channelselection-style-nobile-minitv33"):
+		elif self.actChannelselectionstyle in ("channelselection-style-nobile", "channelselection-style-nobile2", "channelselection-style-nobile-minitv", "channelselection-style-nobile-minitv3", "channelselection-style-nobile-minitv33"):
 			if config.plugins.KravenHD.Primetimeavailable.value == "primetime-on" and config.plugins.KravenHD.ChannelSelectionEPGSize1.value == "big":
 				self.skinSearchAndReplace.append(['<panel name="' + self.actChannelselectionstyle + '-small"/>', '<panel name="' + self.actChannelselectionstyle + '-big-prime"/>'])
 			elif config.plugins.KravenHD.Primetimeavailable.value == "none" and config.plugins.KravenHD.ChannelSelectionEPGSize1.value == "big":
@@ -1624,135 +1625,135 @@ class ActivateSkinSettings:
 
 		### Selection Style
 		if config.plugins.KravenHD.EMCSelectionColors.value == "custom":
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_28.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_32.png"'," "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_28.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_32.png"', " "])
 		if config.plugins.KravenHD.SelectionStyle.value == "color":
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_CS.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_MS.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_ES.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_ESM.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_30.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_36.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_40.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_45.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_50.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_53.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_60.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_70.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_75.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_90.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_110.png"'," "])
-			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_135.png"'," "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_CS.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_MS.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_ES.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_ESM.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_30.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_36.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_40.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_45.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_50.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_53.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_60.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_70.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_75.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_90.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_110.png"', " "])
+			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_135.png"', " "])
 			if config.plugins.KravenHD.EMCSelectionColors.value == "global":
-				self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_28.png"'," "])
-				self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_32.png"'," "])
+				self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_28.png"', " "])
+				self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_32.png"', " "])
 		else:
 			if not self.silent:
 				# ChannelSelection
 				CSitems = config.usage.serviceitems_per_page.value
-				if self.actChannelselectionstyle in ("channelselection-style-nobile-minitv","channelselection-style-nobile-minitv3","channelselection-style-nobile-minitv33"):
+				if self.actChannelselectionstyle in ("channelselection-style-nobile-minitv", "channelselection-style-nobile-minitv3", "channelselection-style-nobile-minitv33"):
 					if (CSitems <= 9):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_45.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_45.png'])
 					if (10 <= CSitems <= 11):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_36.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_36.png'])
 					if (12 <= CSitems):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_30.png'])
-				elif self.actChannelselectionstyle in ("channelselection-style-nobile","channelselection-style-nobile2"):
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_30.png'])
+				elif self.actChannelselectionstyle in ("channelselection-style-nobile", "channelselection-style-nobile2"):
 					if (CSitems <= 11):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_70.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_70.png'])
 					if (12 <= CSitems <= 14):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_50.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_50.png'])
 					if (15 <= CSitems <= 16):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_40.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_40.png'])
 					if (17 <= CSitems <= 19):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_36.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_36.png'])
 					if (20 <= CSitems):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_30.png'])
-				elif self.actChannelselectionstyle in ("channelselection-style-minitv2","channelselection-style-minitv-picon"):
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_30.png'])
+				elif self.actChannelselectionstyle in ("channelselection-style-minitv2", "channelselection-style-minitv-picon"):
 					if (CSitems <= 11):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_50.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_50.png'])
 					if (12 <= CSitems <= 13):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_36.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_36.png'])
 					if (14 <= CSitems):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_30.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_30.png'])
 				else:
 					if (CSitems <= 11):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_70.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_70.png'])
 					if (12 <= CSitems <= 13):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_50.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_50.png'])
 					if (14 <= CSitems <= 15):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_40.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_40.png'])
 					if (16 <= CSitems <= 18):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_36.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_36.png'])
 					if (19 <= CSitems):
-						self.skinSearchAndReplace.append(['sel_CS.png','sel_30.png'])
+						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_30.png'])
 
 				# MovieSelection
 				MSitems = config.movielist.itemsperpage.value
 				if (MSitems <= 8):
-					self.skinSearchAndReplace.append(['sel_MS.png','sel_90.png'])
+					self.skinSearchAndReplace.append(['sel_MS.png', 'sel_90.png'])
 				if (9 <= MSitems <= 11):
-					self.skinSearchAndReplace.append(['sel_MS.png','sel_60.png'])
+					self.skinSearchAndReplace.append(['sel_MS.png', 'sel_60.png'])
 				if (12 <= MSitems <= 14):
-					self.skinSearchAndReplace.append(['sel_MS.png','sel_45.png'])
+					self.skinSearchAndReplace.append(['sel_MS.png', 'sel_45.png'])
 				if (15 <= MSitems <= 17):
-					self.skinSearchAndReplace.append(['sel_MS.png','sel_36.png'])
+					self.skinSearchAndReplace.append(['sel_MS.png', 'sel_36.png'])
 				if (18 <= MSitems):
-					self.skinSearchAndReplace.append(['sel_MS.png','sel_30.png'])
+					self.skinSearchAndReplace.append(['sel_MS.png', 'sel_30.png'])
 
 				# EPGSelection
 				ESitems = config.epgselection.enhanced_itemsperpage.value
 				if (ESitems <= 10):
-					self.skinSearchAndReplace.append(['sel_ES.png','sel_70.png'])
+					self.skinSearchAndReplace.append(['sel_ES.png', 'sel_70.png'])
 				if (11 <= ESitems <= 13):
-					self.skinSearchAndReplace.append(['sel_ES.png','sel_45.png'])
+					self.skinSearchAndReplace.append(['sel_ES.png', 'sel_45.png'])
 				if (14 <= ESitems <= 16):
-					self.skinSearchAndReplace.append(['sel_ES.png','sel_36.png'])
+					self.skinSearchAndReplace.append(['sel_ES.png', 'sel_36.png'])
 				if (17 <= ESitems):
-					self.skinSearchAndReplace.append(['sel_ES.png','sel_30.png'])
+					self.skinSearchAndReplace.append(['sel_ES.png', 'sel_30.png'])
 
 				# EPGSelectionMulti
 				ESMitems = config.epgselection.multi_itemsperpage.value
 				if (ESMitems <= 10):
-					self.skinSearchAndReplace.append(['sel_ESM.png','sel_70.png'])
+					self.skinSearchAndReplace.append(['sel_ESM.png', 'sel_70.png'])
 				if (11 <= ESMitems <= 13):
-					self.skinSearchAndReplace.append(['sel_ESM.png','sel_45.png'])
+					self.skinSearchAndReplace.append(['sel_ESM.png', 'sel_45.png'])
 				if (14 <= ESMitems <= 16):
-					self.skinSearchAndReplace.append(['sel_ESM.png','sel_36.png'])
+					self.skinSearchAndReplace.append(['sel_ESM.png', 'sel_36.png'])
 				if (17 <= ESMitems):
-					self.skinSearchAndReplace.append(['sel_ESM.png','sel_30.png'])
+					self.skinSearchAndReplace.append(['sel_ESM.png', 'sel_30.png'])
 
 			else: # if self.silent:
-				self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_CS.png"'," "])
-				self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_MS.png"'," "])
-				self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_ES.png"'," "])
-				self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_ESM.png"'," "])
+				self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_CS.png"', " "])
+				self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_MS.png"', " "])
+				self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_ES.png"', " "])
+				self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_ESM.png"', " "])
 
 		### Progress
 		if not config.plugins.KravenHD.Progress.value == "progress":
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress18.png"'," "])
-			self.skinSearchAndReplace.append([' picServiceEventProgressbar="KravenHD/progress/progress52.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress170.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress248.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress270.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress300.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress328.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress380.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress410.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress480.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress657.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress736.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress990.png"'," "])
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress1265.png"'," "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress18.png"', " "])
+			self.skinSearchAndReplace.append([' picServiceEventProgressbar="KravenHD/progress/progress52.png"', " "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress170.png"', " "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress248.png"', " "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress270.png"', " "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress300.png"', " "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress328.png"', " "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress380.png"', " "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress410.png"', " "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress480.png"', " "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress657.png"', " "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress736.png"', " "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress990.png"', " "])
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress1265.png"', " "])
 			self.skinSearchAndReplace.append(['name="KravenProgress" value="#00C3461B', 'name="KravenProgress" value="#00' + config.plugins.KravenHD.Progress.value])
 
 		### Infobar Progress
 		if not config.plugins.KravenHD.IBProgress.value == "progress":
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress581.png"'," "]) # zz2, zz3
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress657_2.png"'," "]) # zz1, zzz1
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress749.png"'," "]) # x1, x2, x3, z1, z2, timeshift
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress858.png"'," "]) # player
-			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress977.png"'," "]) # nopicon
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress581.png"', " "]) # zz2, zz3
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress657_2.png"', " "]) # zz1, zzz1
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress749.png"', " "]) # x1, x2, x3, z1, z2, timeshift
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress858.png"', " "]) # player
+			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress977.png"', " "]) # nopicon
 			self.skinSearchAndReplace.append(['name="KravenIBProgress" value="#00000000', 'name="KravenIBProgress" value="#00' + config.plugins.KravenHD.IBProgress.value])
 
 		### Infobar Progress Background
@@ -1762,14 +1763,14 @@ class ActivateSkinSettings:
 		else:
 			self.skinSearchAndReplace.append(['<IBProgressBackground', '<ePixmap'])
 			self.skinSearchAndReplace.append(['"IBProgressBackground" />', '"blend" />'])
-			self.makeProgressBackground(878,config.plugins.KravenHD.IBProgressBackground.value,"progress_bg_pl") # player
-			self.makeProgressBackground(769,config.plugins.KravenHD.IBProgressBackground.value,"progress_bg_ts") # x1, x2, x3, z1, z2, timeshift
+			self.makeProgressBackground(878, config.plugins.KravenHD.IBProgressBackground.value, "progress_bg_pl") # player
+			self.makeProgressBackground(769, config.plugins.KravenHD.IBProgressBackground.value, "progress_bg_ts") # x1, x2, x3, z1, z2, timeshift
 			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-nopicon":
-				self.makeProgressBackground(997,config.plugins.KravenHD.IBProgressBackground.value,"progress_bg_np") # nopicon
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zzz1"):
-				self.makeProgressBackground(677,config.plugins.KravenHD.IBProgressBackground.value,"progress_bg_zz1") # zz1, zzz1
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
-				self.makeProgressBackground(601,config.plugins.KravenHD.IBProgressBackground.value,"progress_bg_zz2") # zz2, zz3
+				self.makeProgressBackground(997, config.plugins.KravenHD.IBProgressBackground.value, "progress_bg_np") # nopicon
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1", "infobar-style-zzz1"):
+				self.makeProgressBackground(677, config.plugins.KravenHD.IBProgressBackground.value, "progress_bg_zz1") # zz1, zzz1
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
+				self.makeProgressBackground(601, config.plugins.KravenHD.IBProgressBackground.value, "progress_bg_zz2") # zz2, zz3
 
 		### Infobar Progress Border/line
 		if config.plugins.KravenHD.IBProgressBorderLine.value == "ib-progress-border":
@@ -1879,7 +1880,7 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(['<screen name="nonib-mp">', '<screen name="ib-mp">'])
 
 		### Tuner
-		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x2","infobar-style-z1","infobar-style-zz1","infobar-style-zzz1"):
+		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1", "infobar-style-x2", "infobar-style-z1", "infobar-style-zz1", "infobar-style-zzz1"):
 
 			### Tuner Colors
 			self.skinSearchAndReplace.append(['name="KravenTunerBusy" value="#00CCCC00', 'name="KravenTunerBusy" value="#00' + config.plugins.KravenHD.TunerBusy.value])
@@ -1907,9 +1908,9 @@ class ActivateSkinSettings:
 
 		for i in HSize_list:
 			HSize_old = str(i)
-			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1"):
+			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1"):
 				HSize_new = str(i - EventNowLineHeight)
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz2","infobar-style-zz3"):
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1", "infobar-style-zz2", "infobar-style-zz3"):
 				HSize_new = str(i - (EventNowLineHeight * 2))
 			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
 				HSize_new = str(i - (EventNowLineHeight * 4))
@@ -1920,10 +1921,10 @@ class ActivateSkinSettings:
 
 		### Clock Analog Color
 		if self.actClockstyle == "clock-analog":
-			self.changeColor("analogclock","analogclock",config.plugins.KravenHD.AnalogColor.value,None)
+			self.changeColor("analogclock", "analogclock", config.plugins.KravenHD.AnalogColor.value, None)
 
 		### Horizontal Menu Icon
-		self.makeHorMenupng(config.plugins.KravenHD.MainmenuHorIconColor.value,self.skincolorbackgroundcolor)
+		self.makeHorMenupng(config.plugins.KravenHD.MainmenuHorIconColor.value, self.skincolorbackgroundcolor)
 
 		### Screennames
 		if config.plugins.KravenHD.DebugNames.value == "screennames-on":
@@ -1966,7 +1967,7 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append([',' + VPos_old + '" name="KravenIconVPosition"', ',' + VPos_new + '"'])
 
 		### delete Font-Shadow if Channelname is inside the box
-		if config.plugins.KravenHD.IBStyle.value == "box" and config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1"):
+		if config.plugins.KravenHD.IBStyle.value == "box" and config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3", "infobar-style-zzz1"):
 			self.skinSearchAndReplace.append(['backgroundColor="KravenNamebg"', 'backgroundColor="KravenIBbg"'])
 
 		### Infobar - ecm-info
@@ -1975,9 +1976,9 @@ class ActivateSkinSettings:
 
 		if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
 			self.skinSearchAndReplace.append(['<convert type="KravenHDECMLine">ShortReader', '<convert type="KravenHDECMLine">' + config.plugins.KravenHD.ECMLine1.value])
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2"):
 			self.skinSearchAndReplace.append(['<convert type="KravenHDECMLine">ShortReader', '<convert type="KravenHDECMLine">' + config.plugins.KravenHD.ECMLine2.value])
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1"):
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1", "infobar-style-zz2", "infobar-style-zz3", "infobar-style-zzz1"):
 			self.skinSearchAndReplace.append(['<convert type="KravenHDECMLine">ShortReader', '<convert type="KravenHDECMLine">' + config.plugins.KravenHD.ECMLine3.value])
 
 		### Infobar typewriter effect
@@ -2004,13 +2005,13 @@ class ActivateSkinSettings:
 		self.appendSkinFile(self.data + 'templates-main.xml')
 		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/plugin.py") and config.plugins.KravenHD.MediaPortal.value == "mediaportal":
 			self.appendSkinFile(self.data + 'templates-mediaportal.xml')
-		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1"):
+		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1"):
 			self.appendSkinFile(self.data + 'templates-' + config.plugins.KravenHD.InfobarStyle.value + '.xml')
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2"):
 			self.appendSkinFile(self.data + 'templates-infobar-style-x2-x3-z1-z2.xml')
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zzz1"):
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1", "infobar-style-zzz1"):
 			self.appendSkinFile(self.data + 'templates-infobar-style-zz1-zzz1.xml')
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
 			self.appendSkinFile(self.data + 'templates-infobar-style-zz2-zz3.xml')
 
 		### ChannelSelection - horizontal RunningText
@@ -2040,19 +2041,19 @@ class ActivateSkinSettings:
 		if not self.silent:
 			config.usage.servicelist_mode.value = "standard"
 			config.usage.servicelist_mode.save()
-		if not self.silent and (self.actChannelselectionstyle in ("channelselection-style-nopicon","channelselection-style-nopicon2","channelselection-style-xpicon","channelselection-style-zpicon","channelselection-style-zzpicon","channelselection-style-zzzpicon","channelselection-style-minitv3","channelselection-style-nobile-minitv3") or config.plugins.KravenHD.ChannelSelectionMode.value == "zap"):
+		if not self.silent and (self.actChannelselectionstyle in ("channelselection-style-nopicon", "channelselection-style-nopicon2", "channelselection-style-xpicon", "channelselection-style-zpicon", "channelselection-style-zzpicon", "channelselection-style-zzzpicon", "channelselection-style-minitv3", "channelselection-style-nobile-minitv3") or config.plugins.KravenHD.ChannelSelectionMode.value == "zap"):
 			config.usage.servicelistpreview_mode.value = False
 		elif not self.silent:
 			config.usage.servicelistpreview_mode.value = True
 		if not self.silent:
 			config.usage.servicelistpreview_mode.save()
-		if self.actChannelselectionstyle in ("channelselection-style-minitv2","channelselection-style-minitv22"): #DualTV
+		if self.actChannelselectionstyle in ("channelselection-style-minitv2", "channelselection-style-minitv22"): #DualTV
 			config.plugins.KravenHD.PigStyle.value = "DualTV"
 			config.plugins.KravenHD.PigStyle.save()
-		elif self.actChannelselectionstyle in ("channelselection-style-minitv33","channelselection-style-nobile-minitv33"): #ExtPreview
+		elif self.actChannelselectionstyle in ("channelselection-style-minitv33", "channelselection-style-nobile-minitv33"): #ExtPreview
 			config.plugins.KravenHD.PigStyle.value = "ExtPreview"
 			config.plugins.KravenHD.PigStyle.save()
-		elif self.actChannelselectionstyle in ("channelselection-style-minitv3","channelselection-style-nobile-minitv3"): #Preview
+		elif self.actChannelselectionstyle in ("channelselection-style-minitv3", "channelselection-style-nobile-minitv3"): #Preview
 			config.plugins.KravenHD.PigStyle.value = "Preview"
 			config.plugins.KravenHD.PigStyle.save()
 		else:
@@ -2060,54 +2061,54 @@ class ActivateSkinSettings:
 		self.appendSkinFile(self.data + self.actChannelselectionstyle + ".xml")
 
 		### Infobar Clock
-		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1"):
-			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-' + self.actClockstyle + '"/>'])
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
-			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<panel name="infobar-style-x2-x3-z1-z2-' + self.actClockstyle + '"/>'])
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
-			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<panel name="infobar-style-zz2-zz3-' + self.actClockstyle + '"/>'])
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zzz1"):
-			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->','<panel name="infobar-style-zz1-zzz1-' + self.actClockstyle + '"/>'])
+		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1"):
+			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-' + self.actClockstyle + '"/>'])
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2"):
+			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="infobar-style-x2-x3-z1-z2-' + self.actClockstyle + '"/>'])
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
+			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="infobar-style-zz2-zz3-' + self.actClockstyle + '"/>'])
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1", "infobar-style-zzz1"):
+			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="infobar-style-zz1-zzz1-' + self.actClockstyle + '"/>'])
 
 		### Infobar Channelname
 		if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-nopicon" and not config.plugins.KravenHD.InfobarChannelName.value == "none":
-			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<panel name="infobar-style-nopicon-' + config.plugins.KravenHD.InfobarChannelName.value + '"/>'])
+			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->', '<panel name="infobar-style-nopicon-' + config.plugins.KravenHD.InfobarChannelName.value + '"/>'])
 		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1" and not config.plugins.KravenHD.InfobarChannelName.value == "none":
-			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<panel name="infobar-style-x1-' + config.plugins.KravenHD.InfobarChannelName.value + '"/>'])
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2") and not config.plugins.KravenHD.InfobarChannelName.value == "none":
-			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<panel name="infobar-style-x2-x3-z1-z2-' + config.plugins.KravenHD.InfobarChannelName.value + '"/>'])
+			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->', '<panel name="infobar-style-x1-' + config.plugins.KravenHD.InfobarChannelName.value + '"/>'])
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2") and not config.plugins.KravenHD.InfobarChannelName.value == "none":
+			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->', '<panel name="infobar-style-x2-x3-z1-z2-' + config.plugins.KravenHD.InfobarChannelName.value + '"/>'])
 		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1" and not config.plugins.KravenHD.InfobarChannelName.value == "none":
-			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-' + config.plugins.KravenHD.InfobarChannelName.value + '"/>'])
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3") and not config.plugins.KravenHD.InfobarChannelName2.value == "none":
-			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<panel name="infobar-style-zz2-zz3-' + config.plugins.KravenHD.InfobarChannelName2.value + '"/>'])
+			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-' + config.plugins.KravenHD.InfobarChannelName.value + '"/>'])
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3") and not config.plugins.KravenHD.InfobarChannelName2.value == "none":
+			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->', '<panel name="infobar-style-zz2-zz3-' + config.plugins.KravenHD.InfobarChannelName2.value + '"/>'])
 		elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1" and not config.plugins.KravenHD.InfobarChannelName2.value == "none":
-			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->','<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-' + config.plugins.KravenHD.InfobarChannelName2.value + '"/>'])
+			self.skinSearchAndReplace.append(['<!-- Infobar channelname -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-' + config.plugins.KravenHD.InfobarChannelName2.value + '"/>'])
 
 		### Infobar/SIB - ecm-info
-		if config.plugins.KravenHD.ECMVisible.value in ("ib","ib+sib"):
+		if config.plugins.KravenHD.ECMVisible.value in ("ib", "ib+sib"):
 			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
-				self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->','<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-ecminfo"/>'])
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
-				self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->','<panel name="infobar-style-x2-x3-z1-z2-ecminfo"/>'])
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
-				self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->','<panel name="infobar-style-zz2-zz3-ecminfo"/>'])
+				self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-ecminfo"/>'])
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2"):
+				self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->', '<panel name="infobar-style-x2-x3-z1-z2-ecminfo"/>'])
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
+				self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->', '<panel name="infobar-style-zz2-zz3-ecminfo"/>'])
 			else:
-				self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->','<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-ecminfo"/>'])
+				self.skinSearchAndReplace.append(['<!-- Infobar ecminfo -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-ecminfo"/>'])
 
-		if config.plugins.KravenHD.ECMVisible.value in ("sib","ib+sib"):
+		if config.plugins.KravenHD.ECMVisible.value in ("sib", "ib+sib"):
 			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
-				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->','<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-ecminfo"/>'])
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
-				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->','<panel name="infobar-style-x2-x3-z1-z2-ecminfo"/>'])
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2","infobar-style-zz3"):
-				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->','<panel name="infobar-style-zz2-zz3-ecminfo"/>'])
+				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-ecminfo"/>'])
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2"):
+				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->', '<panel name="infobar-style-x2-x3-z1-z2-ecminfo"/>'])
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
+				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->', '<panel name="infobar-style-zz2-zz3-ecminfo"/>'])
 			else:
-				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->','<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-ecminfo"/>'])
+				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-ecminfo"/>'])
 
 		### Infobar weather-style
-		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x3","infobar-style-z2","infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1"):
+		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1", "infobar-style-x3", "infobar-style-z2", "infobar-style-zz1", "infobar-style-zz2", "infobar-style-zz3", "infobar-style-zzz1"):
 			self.actWeatherstyle = config.plugins.KravenHD.WeatherStyle.value
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-z1"):
 			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/plugin.py"):
 				self.actWeatherstyle = config.plugins.KravenHD.WeatherStyle3.value
 			else:
@@ -2149,9 +2150,9 @@ class ActivateSkinSettings:
 		if not config.plugins.KravenHD.SystemInfo.value == "none":
 			if config.plugins.KravenHD.IBStyle.value == "box":
 				if config.plugins.KravenHD.InfobarBoxColor.value == "gradient":
-					self.skinSearchAndReplace.append(['<!-- Infobar systeminfobackground -->','<panel name="box2-' + config.plugins.KravenHD.SystemInfo.value + '"/>'])
+					self.skinSearchAndReplace.append(['<!-- Infobar systeminfobackground -->', '<panel name="box2-' + config.plugins.KravenHD.SystemInfo.value + '"/>'])
 				elif config.plugins.KravenHD.InfobarBoxColor.value == "texture":
-					self.skinSearchAndReplace.append(['<!-- Infobar systeminfobackground -->','<panel name="texture-' + config.plugins.KravenHD.SystemInfo.value + '"/>'])
+					self.skinSearchAndReplace.append(['<!-- Infobar systeminfobackground -->', '<panel name="texture-' + config.plugins.KravenHD.SystemInfo.value + '"/>'])
 				else:
 					self.skinSearchAndReplace.append(['<!-- Infobar systeminfobackground -->', '<panel name="box-' + config.plugins.KravenHD.SystemInfo.value + '"/>'])
 				self.skinSearchAndReplace.append(['<!-- Infobar systeminfo -->', '<panel name="' + config.plugins.KravenHD.SystemInfo.value + '2"/>'])
@@ -2161,17 +2162,17 @@ class ActivateSkinSettings:
 
 		### Infobar
 		# mainstyles
-		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3","infobar-style-z1","infobar-style-z2"):
+		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2"):
 			self.skinSearchAndReplace.append(['<!-- Infobar mainstyles -->', '<panel name="infobar-style-x2-x3-z1-z2"/>'])
 		else:
 			self.skinSearchAndReplace.append(['<!-- Infobar mainstyles -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '"/>'])
 
 		# picon
-		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3"):
+		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3"):
 			self.skinSearchAndReplace.append(['<!-- Infobar picon -->', '<panel name="infobar-style-x2-x3-picon"/>'])
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-z1","infobar-style-z2"):
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-z1", "infobar-style-z2"):
 			self.skinSearchAndReplace.append(['<!-- Infobar picon -->', '<panel name="infobar-style-z1-z2-picon"/>'])
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zzz1"):
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1", "infobar-style-zzz1"):
 			if config.plugins.KravenHD.ShowAgcSnr.value == "on":
 				self.skinSearchAndReplace.append(['<!-- Infobar picon -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-agc-snr"/>'])
 			else:
@@ -2187,12 +2188,12 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append(['<!-- Infobar tuners -->', '<panel name="infobar-style-x1-' + self.Tuners + '"/>'])
 			self.skinSearchAndReplace.append(['<!-- Infobar infobox -->', '<panel name="infobar-style-x1-infobox-' + config.plugins.KravenHD.Infobox.value + '"/>'])
 
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-z1"):
 			self.skinSearchAndReplace.append(['<!-- Infobar topbaricons -->', '<panel name="infobar-style-x2-z1-icons"/>'])
 			self.skinSearchAndReplace.append(['<!-- Infobar topbartuners -->', '<panel name="infobar-style-x2-z1-' + self.Tuners + '"/>'])
 			self.skinSearchAndReplace.append(['<!-- Infobar topbarinfobox -->', '<panel name="infobar-style-x2-z1-infobox-' + config.plugins.KravenHD.Infobox.value + '"/>'])
 
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1","infobar-style-zzz1"):
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1", "infobar-style-zzz1"):
 			self.skinSearchAndReplace.append(['<!-- Infobar icons -->', '<panel name="infobar-style-zz1-zzz1-icons"/>'])
 			self.skinSearchAndReplace.append(['<!-- Infobar tuners -->', '<panel name="infobar-style-zz1-zzz1-' + self.Tuners + '"/>'])
 			self.actInfobox = ''
@@ -2203,40 +2204,40 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append(['<!-- Infobar infobox -->', '<panel name="infobar-style-zz1-zzz1-infobox-' + self.actInfobox + '"/>'])
 
 		### SecondInfobar
-		self.skinSearchAndReplace.append(['<!-- SIB style -->','<panel name="' + config.plugins.KravenHD.SIB.value + '"/>'])
+		self.skinSearchAndReplace.append(['<!-- SIB style -->', '<panel name="' + config.plugins.KravenHD.SIB.value + '"/>'])
 
 		### Players clockstyle
-		self.skinSearchAndReplace.append(['<!-- Player clockstyle -->','<panel name="' + config.plugins.KravenHD.PlayerClock.value + '"/>'])
+		self.skinSearchAndReplace.append(['<!-- Player clockstyle -->', '<panel name="' + config.plugins.KravenHD.PlayerClock.value + '"/>'])
 
 		### Volume
-		self.skinSearchAndReplace.append(['<!-- Volume style -->','<panel name="' + config.plugins.KravenHD.Volume.value + '"/>'])
+		self.skinSearchAndReplace.append(['<!-- Volume style -->', '<panel name="' + config.plugins.KravenHD.Volume.value + '"/>'])
 		if config.plugins.KravenHD.SkinResolution.value == "hd":
 			if config.plugins.KravenHD.Volume.value == "volume-left":
-				self.skinSearchAndReplace.append(['screen name="Volume" position="47,38" size="330,80"','screen name="Volume" position="10,130" size="28,360"'])
+				self.skinSearchAndReplace.append(['screen name="Volume" position="47,38" size="330,80"', 'screen name="Volume" position="10,130" size="28,360"'])
 			elif config.plugins.KravenHD.Volume.value == "volume-right":
-				self.skinSearchAndReplace.append(['screen name="Volume" position="47,38" size="330,80"','screen name="Volume" position="1240,130" size="28,360"'])
+				self.skinSearchAndReplace.append(['screen name="Volume" position="47,38" size="330,80"', 'screen name="Volume" position="1240,130" size="28,360"'])
 			elif config.plugins.KravenHD.Volume.value == "volume-top":
-				self.skinSearchAndReplace.append(['screen name="Volume" position="47,38" size="330,80"','screen name="Volume" position="center,25" size="400,28"'])
+				self.skinSearchAndReplace.append(['screen name="Volume" position="47,38" size="330,80"', 'screen name="Volume" position="center,25" size="400,28"'])
 			elif config.plugins.KravenHD.Volume.value == "volume-center":
-				self.skinSearchAndReplace.append(['screen name="Volume" position="47,38" size="330,80"','screen name="Volume" position="548,286" size="184,184"'])
+				self.skinSearchAndReplace.append(['screen name="Volume" position="47,38" size="330,80"', 'screen name="Volume" position="548,286" size="184,184"'])
 		else:
 			if config.plugins.KravenHD.Volume.value == "volume-left":
-				self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"','screen name="Volume" position="15,195" size="42,540"'])
+				self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"', 'screen name="Volume" position="15,195" size="42,540"'])
 			elif config.plugins.KravenHD.Volume.value == "volume-right":
-				self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"','screen name="Volume" position="1860,195" size="42,540"'])
+				self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"', 'screen name="Volume" position="1860,195" size="42,540"'])
 			elif config.plugins.KravenHD.Volume.value == "volume-top":
-				self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"','screen name="Volume" position="center,37" size="600,42"'])
+				self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"', 'screen name="Volume" position="center,37" size="600,42"'])
 			elif config.plugins.KravenHD.Volume.value == "volume-center":
-				self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"','screen name="Volume" position="868,448" size="184,184"'])
+				self.skinSearchAndReplace.append(['screen name="Volume" position="70,57" size="495,120"', 'screen name="Volume" position="868,448" size="184,184"'])
 
 		### PVRState
 		if config.plugins.KravenHD.IBStyle.value == "box":
-			if config.plugins.KravenHD.InfobarBoxColor.value in ("gradient","texture") and not config.plugins.KravenHD.PVRState.value == "pvrstate-off":
+			if config.plugins.KravenHD.InfobarBoxColor.value in ("gradient", "texture") and not config.plugins.KravenHD.PVRState.value == "pvrstate-off":
 				if config.plugins.KravenHD.PVRState.value == "pvrstate-center-big":
 					self.skinSearchAndReplace.append(['<!-- PVRState background -->', '<panel name="pvrstate-box-' + config.plugins.KravenHD.InfobarBoxColor.value + '"/>'])
 				else:
 					self.skinSearchAndReplace.append(['<!-- PVRState background -->', '<panel name="pvrstate2-box-' + config.plugins.KravenHD.InfobarBoxColor.value + '"/>'])
-			if not config.plugins.KravenHD.InfobarBoxColor.value in ("gradient","texture") and not config.plugins.KravenHD.PVRState.value == "pvrstate-off":
+			if not config.plugins.KravenHD.InfobarBoxColor.value in ("gradient", "texture") and not config.plugins.KravenHD.PVRState.value == "pvrstate-off":
 				if config.plugins.KravenHD.PVRState.value == "pvrstate-center-big":
 					self.skinSearchAndReplace.append(['<!-- PVRState background -->', '<panel name="pvrstate-bg"/>'])
 				else:
@@ -2272,7 +2273,7 @@ class ActivateSkinSettings:
 			### Timeshift_begin
 			self.appendSkinFile(self.data + "timeshift-begin.xml")
 
-			if self.actWeatherstyle in ("weather-big","weather-left"):
+			if self.actWeatherstyle in ("weather-big", "weather-left"):
 				if config.plugins.KravenHD.SystemInfo.value == "systeminfo-bigsat":
 					self.appendSkinFile(self.data + "timeshift-begin-leftlow.xml")
 				else:
@@ -2286,7 +2287,7 @@ class ActivateSkinSettings:
 			self.appendSkinFile(self.data + "timeshift-end.xml")
 
 			### InfobarTunerState
-			if self.actWeatherstyle in ("weather-big","weather-left","netatmobar"):
+			if self.actWeatherstyle in ("weather-big", "weather-left", "netatmobar"):
 				if config.plugins.KravenHD.SystemInfo.value == "systeminfo-bigsat":
 					self.appendSkinFile(self.data + "infobartunerstate-low.xml")
 				else:
@@ -2344,10 +2345,10 @@ class ActivateSkinSettings:
 
 		### MSNWeather
 		if fileExists("/usr/lib/enigma2/python/Components/Converter/MSNWeather.pyo"):
-			if config.plugins.KravenHD.IBStyle.value == "grad" or config.plugins.KravenHD.PopupStyle.value in ("popup-grad","popup-grad-trans"):
-				self.changeColor("msnbg_gr","msnbg",self.skincolorbackgroundcolor,None)
+			if config.plugins.KravenHD.IBStyle.value == "grad" or config.plugins.KravenHD.PopupStyle.value in ("popup-grad", "popup-grad-trans"):
+				self.changeColor("msnbg_gr", "msnbg", self.skincolorbackgroundcolor, None)
 			else:
-				self.changeColor("msnbg","msnbg",self.skincolorbackgroundcolor,None)
+				self.changeColor("msnbg", "msnbg", self.skincolorbackgroundcolor, None)
 			self.appendSkinFile(self.data + "weatherplugin.xml")
 			if self.InternetAvailable and not fileExists("/usr/share/enigma2/KravenHD/msn_weather_icons/1.png"):
 				system("wget -q http://picons.mynonpublic.com/msn-icon.tar.gz -O /tmp/msn-icon.tar.gz; tar xf /tmp/msn-icon.tar.gz -C /usr/share/enigma2/KravenHD/")
@@ -2356,7 +2357,7 @@ class ActivateSkinSettings:
 
 		### NetatmoBar
 		if self.InternetAvailable:
-			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-z1"):
 				if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/plugin.py"):
 					if self.actWeatherstyle == "netatmobar":
 						self.appendSkinFile(self.data + "netatmobar.xml")
@@ -2422,7 +2423,7 @@ class ActivateSkinSettings:
 		### SerienRecorder
 		if config.plugins.KravenHD.SerienRecorder.value == "serienrecorder":
 			self.appendSkinFile(self.data + config.plugins.KravenHD.SerienRecorder.value + ".xml")
-			self.changeColor("popup_bg","popup_bg",self.skincolorbackgroundcolor,config.plugins.KravenHD.Border.value)
+			self.changeColor("popup_bg", "popup_bg", self.skincolorbackgroundcolor, config.plugins.KravenHD.Border.value)
 
 		### MediaPortal
 		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/plugin.py"):
@@ -2457,7 +2458,7 @@ class ActivateSkinSettings:
 
 		### Menu icons download - we do it here to give it some time
 		if self.InternetAvailable:
-			if config.plugins.KravenHD.Logo.value in ("metrix-icons","minitv-metrix-icons"):
+			if config.plugins.KravenHD.Logo.value in ("metrix-icons", "minitv-metrix-icons"):
 				self.installIcons(config.plugins.KravenHD.MenuIcons.value)
 
 		# make global background graphics
@@ -2534,9 +2535,9 @@ class ActivateSkinSettings:
 		from Components.Sources.TunerInfo import TunerInfo
 		tinfo = TunerInfo()
 		tuners = tinfo.getTunerAmount()
-		if tuners is 1:
+		if tuners == 1:
 			return "1-tuner"
-		elif tuners is 2:
+		elif tuners == 2:
 			return "2-tuner"
 		elif (3 <= tuners <= 4):
 			return "4-tuner"
@@ -2546,14 +2547,14 @@ class ActivateSkinSettings:
 			return "1-tuner"
 
 	def getInternetAvailable(self):
-		import ping
-		r = ping.doOne("8.8.8.8",1.5)
+		from . import ping
+		r = ping.doOne("8.8.8.8", 1.5)
 		if r != None and r <= 1.5:
 			return True
 		else:
 			return False
 
-	def installIcons(self,author):
+	def installIcons(self, author):
 
 		if self.InternetAvailable == False: 
 			return
@@ -2565,7 +2566,7 @@ class ActivateSkinSettings:
 		# Read iconpack version on box
 		packinstalled = "not installed"
 		if fileExists(instname):
-			pFile=open(instname,"r")
+			pFile=open(instname, "r")
 			for line in pFile:
 				packinstalled=line.strip('\n')
 			pFile.close()
@@ -2574,10 +2575,10 @@ class ActivateSkinSettings:
 		# Read iconpack version on server
 		packonserver = "unknown"
 		fullversname=pathname+versname
-		sub=subprocess.Popen("wget -q "+fullversname+" -O /tmp/"+versname,shell=True)
+		sub=subprocess.Popen("wget -q "+fullversname+" -O /tmp/"+versname, shell=True)
 		sub.wait()
 		if fileExists("/tmp/"+versname):
-			pFile=open("/tmp/"+versname,"r")
+			pFile=open("/tmp/"+versname, "r")
 			for line in pFile:
 				packonserver=line.strip('\n')
 			pFile.close()
@@ -2588,7 +2589,7 @@ class ActivateSkinSettings:
 			if packinstalled != packonserver:
 				packname=packonserver
 				fullpackname=pathname+packname
-				sub=subprocess.Popen("rm -rf /usr/share/enigma2/Kraven-menu-icons/*.*; rm -rf /usr/share/enigma2/Kraven-menu-icons; wget -q "+fullpackname+" -O /tmp/"+packname+"; tar xf /tmp/"+packname+" -C /usr/share/enigma2/",shell=True)
+				sub=subprocess.Popen("rm -rf /usr/share/enigma2/Kraven-menu-icons/*.*; rm -rf /usr/share/enigma2/Kraven-menu-icons; wget -q "+fullpackname+" -O /tmp/"+packname+"; tar xf /tmp/"+packname+" -C /usr/share/enigma2/", shell=True)
 				sub.wait()
 				popen("rm /tmp/"+packname)
 				print ("KravenPlugin: Installed iconpack "+fullpackname)
@@ -2596,7 +2597,7 @@ class ActivateSkinSettings:
 				print ("KravenPlugin: No need to install other iconpack")
 
 	def makeIBGradTexturepng(self):
-		self.makeIbarTextureGradientpng(config.plugins.KravenHD.InfobarTexture.value,config.plugins.KravenHD.InfobarColorTrans.value) # ibars
+		self.makeIbarTextureGradientpng(config.plugins.KravenHD.InfobarTexture.value, config.plugins.KravenHD.InfobarColorTrans.value) # ibars
 		self.makeRectTexturepng(config.plugins.KravenHD.InfobarTexture.value, config.plugins.KravenHD.InfobarColorTrans.value, 906, 170, "shift") # timeshift bar
 		self.makeRectTexturepng(config.plugins.KravenHD.InfobarTexture.value, config.plugins.KravenHD.InfobarColorTrans.value, 400, 200, "wsmall") # weather small
 		if config.plugins.KravenHD.SystemInfo.value == "systeminfo-small":
@@ -2632,49 +2633,49 @@ class ActivateSkinSettings:
 		ibaro3height = int(145 * self.factor) # height of ibaro3
 		ibaro3gradientstart = int(45 * self.factor) # start of ibaro3 gradient (from top)
 		ibaro3gradientsize = int(100 * self.factor) # size of ibaro3 gradient
-		trans = (255-int(newtrans,16))/255.0
+		trans = (255-int(newtrans, 16))/255.0
 
 		newcolor = newcolor[-6:]
 		r = int(newcolor[0:2], 16)
 		g = int(newcolor[2:4], 16)
 		b = int(newcolor[4:6], 16)
 
-		img = Image.new("RGBA",(width,ibarheight),(r,g,b,0))
-		gradient = Image.new("L",(1,ibarheight),int(255*trans))
-		for pos in range(0,ibargradientstart):
-			gradient.putpixel((0,pos),0)
-		for pos in range(0,ibargradientsize):
-			gradient.putpixel((0,ibargradientstart+pos),int(self.dexpGradient(ibargradientsize,gradientspeed,pos)*trans))
+		img = Image.new("RGBA", (width, ibarheight), (r, g, b, 0))
+		gradient = Image.new("L", (1, ibarheight), int(255*trans))
+		for pos in range(0, ibargradientstart):
+			gradient.putpixel((0, pos), 0)
+		for pos in range(0, ibargradientsize):
+			gradient.putpixel((0, ibargradientstart+pos), int(self.dexpGradient(ibargradientsize, gradientspeed, pos)*trans))
 		alpha = gradient.resize(img.size)
 		img.putalpha(alpha)
 		img.save(self.graphics + "ibar.png")
 
-		img = Image.new("RGBA",(width,ibaroheight),(r,g,b,0))
-		gradient = Image.new("L",(1,ibaroheight),0)
-		for pos in range(0,ibarogradientstart):
-			gradient.putpixel((0,pos),int(255*trans))
-		for pos in range(0,ibarogradientsize):
-			gradient.putpixel((0,ibarogradientstart+ibarogradientsize-pos-1),int(self.dexpGradient(ibarogradientsize,gradientspeed,pos)*trans))
+		img = Image.new("RGBA", (width, ibaroheight), (r, g, b, 0))
+		gradient = Image.new("L", (1, ibaroheight), 0)
+		for pos in range(0, ibarogradientstart):
+			gradient.putpixel((0, pos), int(255*trans))
+		for pos in range(0, ibarogradientsize):
+			gradient.putpixel((0, ibarogradientstart+ibarogradientsize-pos-1), int(self.dexpGradient(ibarogradientsize, gradientspeed, pos)*trans))
 		alpha = gradient.resize(img.size)
 		img.putalpha(alpha)
 		img.save(self.graphics + "ibaro.png")
 
-		img = Image.new("RGBA",(width,ibaro2height),(r,g,b,0))
-		gradient = Image.new("L",(1,ibaro2height),0)
-		for pos in range(0,ibaro2gradientstart):
-			gradient.putpixel((0,pos),int(255*trans))
-		for pos in range(0,ibaro2gradientsize):
-			gradient.putpixel((0,ibaro2gradientstart+ibaro2gradientsize-pos-1),int(self.dexpGradient(ibaro2gradientsize,gradientspeed,pos)*trans))
+		img = Image.new("RGBA", (width, ibaro2height), (r, g, b, 0))
+		gradient = Image.new("L", (1, ibaro2height), 0)
+		for pos in range(0, ibaro2gradientstart):
+			gradient.putpixel((0, pos), int(255*trans))
+		for pos in range(0, ibaro2gradientsize):
+			gradient.putpixel((0, ibaro2gradientstart+ibaro2gradientsize-pos-1), int(self.dexpGradient(ibaro2gradientsize, gradientspeed, pos)*trans))
 		alpha = gradient.resize(img.size)
 		img.putalpha(alpha)
 		img.save(self.graphics + "ibaro2.png")
 
-		img = Image.new("RGBA",(width,ibaro3height),(r,g,b,0))
-		gradient = Image.new("L",(1,ibaro3height),0)
-		for pos in range(0,ibaro3gradientstart):
-			gradient.putpixel((0,pos),int(255*trans))
-		for pos in range(0,ibaro3gradientsize):
-			gradient.putpixel((0,ibaro3gradientstart+ibaro3gradientsize-pos-1),int(self.dexpGradient(ibaro3gradientsize,gradientspeed,pos)*trans))
+		img = Image.new("RGBA", (width, ibaro3height), (r, g, b, 0))
+		gradient = Image.new("L", (1, ibaro3height), 0)
+		for pos in range(0, ibaro3gradientstart):
+			gradient.putpixel((0, pos), int(255*trans))
+		for pos in range(0, ibaro3gradientsize):
+			gradient.putpixel((0, ibaro3gradientstart+ibaro3gradientsize-pos-1), int(self.dexpGradient(ibaro3gradientsize, gradientspeed, pos)*trans))
 		alpha = gradient.resize(img.size)
 		img.putalpha(alpha)
 		img.save(self.graphics + "ibaro3.png")
@@ -2694,7 +2695,7 @@ class ActivateSkinSettings:
 		ibaro3height = int(145 * self.factor) # height of ibaro3
 		ibaro3gradientstart = int(45 * self.factor) # start of ibaro3 gradient (from top)
 		ibaro3gradientsize = int(100 * self.factor) # size of ibaro3 gradient
-		trans = (255-int(trans,16))/255.0
+		trans = (255-int(trans, 16))/255.0
 
 		inpath = "/usr/share/enigma2/KravenHD/textures/"
 		usrpath = "/usr/share/enigma2/Kraven-user-icons/"
@@ -2709,54 +2710,54 @@ class ActivateSkinSettings:
 			bg = Image.open(inpath + style + ".jpg")
 		bg_w, bg_h = bg.size
 
-		img = Image.new("RGBA",(width,ibarheight),(0,0,0,0))
-		for i in xrange(0,width,bg_w):
-			for j in xrange(0,ibarheight,bg_h):
-				img.paste(bg,(i,j))
-		gradient = Image.new("L",(1,ibarheight),int(255*trans))
-		for pos in range(0,ibargradientstart):
-			gradient.putpixel((0,pos),0)
-		for pos in range(0,ibargradientsize):
-			gradient.putpixel((0,ibargradientstart+pos),int(self.dexpGradient(ibargradientsize,gradientspeed,pos)*trans))
+		img = Image.new("RGBA", (width, ibarheight), (0, 0, 0, 0))
+		for i in xrange(0, width, bg_w):
+			for j in xrange(0, ibarheight, bg_h):
+				img.paste(bg, (i, j))
+		gradient = Image.new("L", (1, ibarheight), int(255*trans))
+		for pos in range(0, ibargradientstart):
+			gradient.putpixel((0, pos), 0)
+		for pos in range(0, ibargradientsize):
+			gradient.putpixel((0, ibargradientstart+pos), int(self.dexpGradient(ibargradientsize, gradientspeed, pos)*trans))
 		alpha = gradient.resize(img.size)
 		img.putalpha(alpha)
 		img.save(self.graphics + "ibar.png")
 
-		img = Image.new("RGBA",(width,ibaroheight),(0,0,0,0))
-		for i in xrange(0,width,bg_w):
-			for j in xrange(0,ibaroheight,bg_h):
-				img.paste(bg,(i,j))
-		gradient = Image.new("L",(1,ibaroheight),0)
-		for pos in range(0,ibarogradientstart):
-			gradient.putpixel((0,pos),int(255*trans))
-		for pos in range(0,ibarogradientsize):
-			gradient.putpixel((0,ibarogradientstart+ibarogradientsize-pos-1),int(self.dexpGradient(ibarogradientsize,gradientspeed,pos)*trans))
+		img = Image.new("RGBA", (width, ibaroheight), (0, 0, 0, 0))
+		for i in xrange(0, width, bg_w):
+			for j in xrange(0, ibaroheight, bg_h):
+				img.paste(bg, (i, j))
+		gradient = Image.new("L", (1, ibaroheight), 0)
+		for pos in range(0, ibarogradientstart):
+			gradient.putpixel((0, pos), int(255*trans))
+		for pos in range(0, ibarogradientsize):
+			gradient.putpixel((0, ibarogradientstart+ibarogradientsize-pos-1), int(self.dexpGradient(ibarogradientsize, gradientspeed, pos)*trans))
 		alpha = gradient.resize(img.size)
 		img.putalpha(alpha)
 		img.save(self.graphics + "ibaro.png")
 
-		img = Image.new("RGBA",(width,ibaro2height),(0,0,0,0))
-		for i in xrange(0,width,bg_w):
-			for j in xrange(0,ibaroheight,bg_h):
-				img.paste(bg,(i,j))
-		gradient = Image.new("L",(1,ibaro2height),0)
-		for pos in range(0,ibaro2gradientstart):
-			gradient.putpixel((0,pos),int(255*trans))
-		for pos in range(0,ibaro2gradientsize):
-			gradient.putpixel((0,ibaro2gradientstart+ibaro2gradientsize-pos-1),int(self.dexpGradient(ibaro2gradientsize,gradientspeed,pos)*trans))
+		img = Image.new("RGBA", (width, ibaro2height), (0, 0, 0, 0))
+		for i in xrange(0, width, bg_w):
+			for j in xrange(0, ibaroheight, bg_h):
+				img.paste(bg, (i, j))
+		gradient = Image.new("L", (1, ibaro2height), 0)
+		for pos in range(0, ibaro2gradientstart):
+			gradient.putpixel((0, pos), int(255*trans))
+		for pos in range(0, ibaro2gradientsize):
+			gradient.putpixel((0, ibaro2gradientstart+ibaro2gradientsize-pos-1), int(self.dexpGradient(ibaro2gradientsize, gradientspeed, pos)*trans))
 		alpha = gradient.resize(img.size)
 		img.putalpha(alpha)
 		img.save(self.graphics + "ibaro2.png")
 
-		img = Image.new("RGBA",(width,ibaro3height),(0,0,0,0))
-		for i in xrange(0,width,bg_w):
-			for j in xrange(0,ibaroheight,bg_h):
-				img.paste(bg,(i,j))
-		gradient = Image.new("L",(1,ibaro3height),0)
-		for pos in range(0,ibaro3gradientstart):
-			gradient.putpixel((0,pos),int(255*trans))
-		for pos in range(0,ibaro3gradientsize):
-			gradient.putpixel((0,ibaro3gradientstart+ibaro3gradientsize-pos-1),int(self.dexpGradient(ibaro3gradientsize,gradientspeed,pos)*trans))
+		img = Image.new("RGBA", (width, ibaro3height), (0, 0, 0, 0))
+		for i in xrange(0, width, bg_w):
+			for j in xrange(0, ibaroheight, bg_h):
+				img.paste(bg, (i, j))
+		gradient = Image.new("L", (1, ibaro3height), 0)
+		for pos in range(0, ibaro3gradientstart):
+			gradient.putpixel((0, pos), int(255*trans))
+		for pos in range(0, ibaro3gradientsize):
+			gradient.putpixel((0, ibaro3gradientstart+ibaro3gradientsize-pos-1), int(self.dexpGradient(ibaro3gradientsize, gradientspeed, pos)*trans))
 		alpha = gradient.resize(img.size)
 		img.putalpha(alpha)
 		img.save(self.graphics + "ibaro3.png")
@@ -2766,42 +2767,42 @@ class ActivateSkinSettings:
 		gradientsize = int(80 * self.factor) # size of gradient
 		width = int(width * self.factor)
 		height = int(height * self.factor)
-		trans = (255-int(newtrans,16))/255.0
+		trans = (255-int(newtrans, 16))/255.0
 
 		newcolor = newcolor[-6:]
 		r = int(newcolor[0:2], 16)
 		g = int(newcolor[2:4], 16)
 		b = int(newcolor[4:6], 16)
 
-		img = Image.new("RGBA",(width,height),(r,g,b,int(255*trans)))
-		gradient = Image.new("RGBA",(1,gradientsize),(r,g,b,0))
-		for pos in range(0,gradientsize):
-			gradient.putpixel((0,pos),(r,g,b,int((self.dexpGradient(gradientsize,gradientspeed,pos))*trans)))
+		img = Image.new("RGBA", (width, height), (r, g, b, int(255*trans)))
+		gradient = Image.new("RGBA", (1, gradientsize), (r, g, b, 0))
+		for pos in range(0, gradientsize):
+			gradient.putpixel((0, pos), (r, g, b, int((self.dexpGradient(gradientsize, gradientspeed, pos))*trans)))
 
 		hgradient = gradient.resize((width-2*gradientsize, gradientsize))
-		img.paste(hgradient, (gradientsize,0,width-gradientsize,gradientsize))
+		img.paste(hgradient, (gradientsize, 0, width-gradientsize, gradientsize))
 		hgradient = hgradient.transpose(Image.ROTATE_180)
-		img.paste(hgradient, (gradientsize,height-gradientsize,width-gradientsize,height))
+		img.paste(hgradient, (gradientsize, height-gradientsize, width-gradientsize, height))
 
 		vgradient = gradient.transpose(Image.ROTATE_90)
-		vgradient = vgradient.resize((gradientsize,height-2*gradientsize))
-		img.paste(vgradient, (0,gradientsize,gradientsize,height-gradientsize))
+		vgradient = vgradient.resize((gradientsize, height-2*gradientsize))
+		img.paste(vgradient, (0, gradientsize, gradientsize, height-gradientsize))
 		vgradient = vgradient.transpose(Image.ROTATE_180)
-		img.paste(vgradient, (width-gradientsize,gradientsize,width,height-gradientsize))
+		img.paste(vgradient, (width-gradientsize, gradientsize, width, height-gradientsize))
 
-		corner = Image.new("RGBA",(gradientsize,gradientsize),(r,g,b,0))
-		for xpos in range(0,gradientsize):
-			for ypos in range(0,gradientsize):
+		corner = Image.new("RGBA", (gradientsize, gradientsize), (r, g, b, 0))
+		for xpos in range(0, gradientsize):
+			for ypos in range(0, gradientsize):
 				dist = int(round((xpos**2+ypos**2)**0.503))
-				corner.putpixel((xpos,ypos),(r,g,b,int((self.dexpGradient(gradientsize,gradientspeed,gradientsize-dist-1))*trans)))
+				corner.putpixel((xpos, ypos), (r, g, b, int((self.dexpGradient(gradientsize, gradientspeed, gradientsize-dist-1))*trans)))
 		corner = corner.filter(ImageFilter.BLUR)
-		img.paste(corner, (width-gradientsize,height-gradientsize,width,height))
+		img.paste(corner, (width-gradientsize, height-gradientsize, width, height))
 		corner = corner.transpose(Image.ROTATE_90)
-		img.paste(corner, (width-gradientsize,0,width,gradientsize))
+		img.paste(corner, (width-gradientsize, 0, width, gradientsize))
 		corner = corner.transpose(Image.ROTATE_90)
-		img.paste(corner, (0,0,gradientsize,gradientsize))
+		img.paste(corner, (0, 0, gradientsize, gradientsize))
 		corner = corner.transpose(Image.ROTATE_90)
-		img.paste(corner, (0,height-gradientsize,gradientsize,height))
+		img.paste(corner, (0, height-gradientsize, gradientsize, height))
 		img.save(self.graphics + pngname + ".png")
 
 	def makeRectTexturepng(self, style, trans, width, height, pngname):
@@ -2828,8 +2829,8 @@ class ActivateSkinSettings:
 			for j in xrange(0, height, bg_h):
 				img.paste(bg, (i, j))
 
-		mask = Image.new("L",(width, height), 255 * trans)
-		gradient = Image.new("L",(1,gradientsize),0)
+		mask = Image.new("L", (width, height), 255 * trans)
+		gradient = Image.new("L", (1, gradientsize), 0)
 		for pos in range(0, gradientsize):
 			gradient.putpixel((0, pos), int((self.dexpGradient(gradientsize, gradientspeed, pos)) * trans))
 
@@ -2848,7 +2849,7 @@ class ActivateSkinSettings:
 		for xpos in range(0, gradientsize):
 			for ypos in range(0, gradientsize):
 				dist = int(round((xpos **2 + ypos **2) **0.503))
-				corner.putpixel((xpos, ypos),int((self.dexpGradient(gradientsize, gradientspeed, gradientsize - dist - 1)) * trans))
+				corner.putpixel((xpos, ypos), int((self.dexpGradient(gradientsize, gradientspeed, gradientsize - dist - 1)) * trans))
 		corner = corner.filter(ImageFilter.BLUR)
 		mask.paste(corner, (width - gradientsize, height - gradientsize, width, height))
 		corner = corner.transpose(Image.ROTATE_90)
@@ -2861,49 +2862,49 @@ class ActivateSkinSettings:
 		img.save(self.graphics + pngname + ".png")
 
 	def makeBGGradientpng(self):
-		self.makeGradientpng("globalbg",1280,720,config.plugins.KravenHD.BackgroundGradientColorPrimary.value,config.plugins.KravenHD.BackgroundGradientColorSecondary.value,config.plugins.KravenHD.BackgroundColorTrans.value)
-		self.makeGradientpng("nontransbg",1280,720,config.plugins.KravenHD.BackgroundGradientColorPrimary.value,config.plugins.KravenHD.BackgroundGradientColorSecondary.value,"00")
-		self.makeGradientpng("channelbg",1280,720,config.plugins.KravenHD.BackgroundGradientColorPrimary.value,config.plugins.KravenHD.BackgroundGradientColorSecondary.value,config.plugins.KravenHD.ChannelSelectionTrans.value)
+		self.makeGradientpng("globalbg", 1280, 720, config.plugins.KravenHD.BackgroundGradientColorPrimary.value, config.plugins.KravenHD.BackgroundGradientColorSecondary.value, config.plugins.KravenHD.BackgroundColorTrans.value)
+		self.makeGradientpng("nontransbg", 1280, 720, config.plugins.KravenHD.BackgroundGradientColorPrimary.value, config.plugins.KravenHD.BackgroundGradientColorSecondary.value, "00")
+		self.makeGradientpng("channelbg", 1280, 720, config.plugins.KravenHD.BackgroundGradientColorPrimary.value, config.plugins.KravenHD.BackgroundGradientColorSecondary.value, config.plugins.KravenHD.ChannelSelectionTrans.value)
 
 	def makeIBGradientpng(self):
 		width = 1280
 		#Ibar
 		ibarheights=[
-			("infobar-style-nopicon",166),
-			("infobar-style-x1",166),
-			("infobar-style-zz1",198),
-			("infobar-style-zz2",186),
-			("infobar-style-zz3",186),
-			("infobar-style-zzz1",248)
+			("infobar-style-nopicon", 166),
+			("infobar-style-x1", 166),
+			("infobar-style-zz1", 198),
+			("infobar-style-zz2", 186),
+			("infobar-style-zz3", 186),
+			("infobar-style-zzz1", 248)
 			]
 		for pair in ibarheights:
 			if config.plugins.KravenHD.InfobarStyle.value == pair[0]:
-				self.makeGradientpng("ibar",width,pair[1],config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarColorTrans.value)
-		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-x3"):
+				self.makeGradientpng("ibar", width, pair[1], config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarColorTrans.value)
+		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3"):
 			if self.actClockstyle == "clock-android":
-				self.makeGradientpng("ibar",width,154,config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarColorTrans.value)
+				self.makeGradientpng("ibar", width, 154, config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarColorTrans.value)
 			else:
-				self.makeGradientpng("ibar",width,144,config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarColorTrans.value)
-		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-z1","infobar-style-z2"):
+				self.makeGradientpng("ibar", width, 144, config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarColorTrans.value)
+		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-z1", "infobar-style-z2"):
 			if self.actClockstyle == "clock-android":
-				self.makeGradientpng("ibar",width,154,config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarColorTrans.value)
+				self.makeGradientpng("ibar", width, 154, config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarColorTrans.value)
 			else:
-				self.makeGradientpng("ibar",width,140,config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarColorTrans.value)
-		self.makeGradientpng("ibar2",width,64,config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarColorTrans.value)
-		self.makeGradientpng("ibar3",width,70,config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarColorTrans.value)
-		self.makeGradientpng("ibar4",width,80,config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarColorTrans.value)
-		self.makeGradientpng("ibar5",width,110,config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarColorTrans.value)
-		self.makeGradientpng("ibar6",width,206,config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarColorTrans.value)
-		self.makeGradientpng("ibar7",width,285,config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarColorTrans.value)
+				self.makeGradientpng("ibar", width, 140, config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarColorTrans.value)
+		self.makeGradientpng("ibar2", width, 64, config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarColorTrans.value)
+		self.makeGradientpng("ibar3", width, 70, config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarColorTrans.value)
+		self.makeGradientpng("ibar4", width, 80, config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarColorTrans.value)
+		self.makeGradientpng("ibar5", width, 110, config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarColorTrans.value)
+		self.makeGradientpng("ibar6", width, 206, config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarColorTrans.value)
+		self.makeGradientpng("ibar7", width, 285, config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarColorTrans.value)
 		#Ibaro
 		ibaroheights=[
-			("ibaro",59),
-			("ibaro2",70),
-			("ibaro3",116),
-			("ibaro4",150)
+			("ibaro", 59),
+			("ibaro2", 70),
+			("ibaro3", 116),
+			("ibaro4", 150)
 			]
 		for pair in ibaroheights:
-			self.makeGradientpng(pair[0],width,pair[1],config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarColorTrans.value)
+			self.makeGradientpng(pair[0], width, pair[1], config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarColorTrans.value)
 
 		#Sysinfo
 		if config.plugins.KravenHD.InfoStyle.value == "primary":
@@ -2916,51 +2917,51 @@ class ActivateSkinSettings:
 			FirstColor=config.plugins.KravenHD.InfobarGradientColorPrimary.value
 			SecondColor=config.plugins.KravenHD.InfobarGradientColorSecondary.value
 		if config.plugins.KravenHD.SystemInfo.value == "systeminfo-small":
-			self.makeGradientpng("info",300,80,FirstColor,SecondColor,config.plugins.KravenHD.InfobarColorTrans.value)
+			self.makeGradientpng("info", 300, 80, FirstColor, SecondColor, config.plugins.KravenHD.InfobarColorTrans.value)
 		elif config.plugins.KravenHD.SystemInfo.value == "systeminfo-big":
-			self.makeGradientpng("info",300,170,FirstColor,SecondColor,config.plugins.KravenHD.InfobarColorTrans.value)
+			self.makeGradientpng("info", 300, 170, FirstColor, SecondColor, config.plugins.KravenHD.InfobarColorTrans.value)
 		elif config.plugins.KravenHD.SystemInfo.value == "systeminfo-bigsat":
-			self.makeGradientpng("info",300,260,FirstColor,SecondColor,config.plugins.KravenHD.InfobarColorTrans.value)
+			self.makeGradientpng("info", 300, 260, FirstColor, SecondColor, config.plugins.KravenHD.InfobarColorTrans.value)
 
 		#Timeshift
-		self.makeGradientpng("shift",785,62,FirstColor,SecondColor,config.plugins.KravenHD.InfobarColorTrans.value)
+		self.makeGradientpng("shift", 785, 62, FirstColor, SecondColor, config.plugins.KravenHD.InfobarColorTrans.value)
 
 		#InfobarTunerState
-		self.makeGradientpng("ibts",1280,32,FirstColor,SecondColor,config.plugins.KravenHD.InfobarColorTrans.value)
+		self.makeGradientpng("ibts", 1280, 32, FirstColor, SecondColor, config.plugins.KravenHD.InfobarColorTrans.value)
 
 		#AutoResolution
-		self.makeGradientpng("autoresolution",252,62,FirstColor,SecondColor,config.plugins.KravenHD.InfobarColorTrans.value)
+		self.makeGradientpng("autoresolution", 252, 62, FirstColor, SecondColor, config.plugins.KravenHD.InfobarColorTrans.value)
 
 		#PVRState
 		if config.plugins.KravenHD.PVRState.value == "pvrstate-center-big":
-			self.makeGradientpng("pvrstate",220,90,FirstColor,SecondColor,config.plugins.KravenHD.InfobarColorTrans.value)
-		elif config.plugins.KravenHD.PVRState.value in ("pvrstate-center-small","pvrstate-left-small"):
-			self.makeGradientpng("pvrstate",110,45,FirstColor,SecondColor,config.plugins.KravenHD.InfobarColorTrans.value)
+			self.makeGradientpng("pvrstate", 220, 90, FirstColor, SecondColor, config.plugins.KravenHD.InfobarColorTrans.value)
+		elif config.plugins.KravenHD.PVRState.value in ("pvrstate-center-small", "pvrstate-left-small"):
+			self.makeGradientpng("pvrstate", 110, 45, FirstColor, SecondColor, config.plugins.KravenHD.InfobarColorTrans.value)
 
 		#Weather-small
 		if self.actWeatherstyle == "weather-small":
-			self.makeGradientpng("wsmall",300,120,config.plugins.KravenHD.InfobarGradientColorSecondary.value,config.plugins.KravenHD.InfobarGradientColorPrimary.value,config.plugins.KravenHD.InfobarColorTrans.value)
+			self.makeGradientpng("wsmall", 300, 120, config.plugins.KravenHD.InfobarGradientColorSecondary.value, config.plugins.KravenHD.InfobarGradientColorPrimary.value, config.plugins.KravenHD.InfobarColorTrans.value)
 
 	def makeSELGradientpng(self):
-		self.makeGradientpng("sel_30",1220,30,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
-		self.makeGradientpng("sel_36",1196,36,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
-		self.makeGradientpng("sel_40",870,40,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
-		self.makeGradientpng("sel_45",747,45,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
-		self.makeGradientpng("sel_50",765,50,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
-		self.makeGradientpng("sel_53",736,54,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
-		self.makeGradientpng("sel_60",747,60,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
-		self.makeGradientpng("sel_70",765,70,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
-		self.makeGradientpng("sel_75",736,75,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
-		self.makeGradientpng("sel_90",870,90,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
-		self.makeGradientpng("sel_110",736,110,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
-		self.makeGradientpng("sel_135",736,136,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
+		self.makeGradientpng("sel_30", 1220, 30, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_36", 1196, 36, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_40", 870, 40, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_45", 747, 45, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_50", 765, 50, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_53", 736, 54, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_60", 747, 60, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_70", 765, 70, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_75", 736, 75, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_90", 870, 90, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_110", 736, 110, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_135", 736, 136, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
 		if config.plugins.KravenHD.EMCSelectionColors.value == "global":
-			if config.plugins.KravenHD.EMCStyle.value in ("emc-verybigcover","emc-verybigcover2"):
-				self.makeGradientpng("sel_28",777,28,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
+			if config.plugins.KravenHD.EMCStyle.value in ("emc-verybigcover", "emc-verybigcover2"):
+				self.makeGradientpng("sel_28", 777, 28, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
 			else:
-				self.makeGradientpng("sel_32",1196,32,config.plugins.KravenHD.SelectionBackground.value,config.plugins.KravenHD.SelectionBackground2.value,"00")
+				self.makeGradientpng("sel_32", 1196, 32, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
 
-	def makeGradientpng(self,name,width,height,color1,color2,trans):
+	def makeGradientpng(self, name, width, height, color1, color2, trans):
 		width = int(width * self.factor)
 		height = int(height * self.factor)
 		trans = 255 - int(trans, 16)
@@ -2985,14 +2986,14 @@ class ActivateSkinSettings:
 		gradient.save(self.graphics + name + ".png")
 
 	def makeBGTexturepng(self):
-		self.makeTexturepng("globalbg",1280,720,config.plugins.KravenHD.BackgroundTexture.value,config.plugins.KravenHD.BackgroundColorTrans.value)
-		self.makeTexturepng("nontransbg",1280,720,config.plugins.KravenHD.BackgroundTexture.value,"00")
-		self.makeTexturepng("channelbg",1280,720,config.plugins.KravenHD.BackgroundTexture.value,config.plugins.KravenHD.ChannelSelectionTrans.value)
+		self.makeTexturepng("globalbg", 1280, 720, config.plugins.KravenHD.BackgroundTexture.value, config.plugins.KravenHD.BackgroundColorTrans.value)
+		self.makeTexturepng("nontransbg", 1280, 720, config.plugins.KravenHD.BackgroundTexture.value, "00")
+		self.makeTexturepng("channelbg", 1280, 720, config.plugins.KravenHD.BackgroundTexture.value, config.plugins.KravenHD.ChannelSelectionTrans.value)
 
 	def makeIBTexturepng(self):
-		self.makeTexturepng("ibtexture",1280,720,config.plugins.KravenHD.InfobarTexture.value,config.plugins.KravenHD.InfobarColorTrans.value)
+		self.makeTexturepng("ibtexture", 1280, 720, config.plugins.KravenHD.InfobarTexture.value, config.plugins.KravenHD.InfobarColorTrans.value)
 
-	def makeTexturepng(self,name,width,height,style,trans):
+	def makeTexturepng(self, name, width, height, style, trans):
 		width = int(width * self.factor)
 		height = int(height * self.factor)
 		trans = 255 - int(trans, 16)
@@ -3009,7 +3010,7 @@ class ActivateSkinSettings:
 		elif fileExists(path + style + ".jpg"):
 			bg = Image.open(path + style + ".jpg")
 		bg_w, bg_h = bg.size
-		image = Image.new("RGBA", (width, height),(0, 0, 0, 0))
+		image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
 		for i in xrange(0, width, bg_w):
 			for j in xrange(0, height, bg_h):
 				image.paste(bg, (i, j))
@@ -3033,16 +3034,16 @@ class ActivateSkinSettings:
 			addition = "_bx"
 			border = config.plugins.KravenHD.Border.value
 
-		self.changeColor("bs_b" + addition,"bs_b",self.skincolorbackgroundcolor,border)
-		self.changeColor("bs_bl" + addition,"bs_bl",self.skincolorbackgroundcolor,border)
-		self.changeColor("bs_br" + addition,"bs_br",self.skincolorbackgroundcolor,border)
-		self.changeColor("bs_l" + addition,"bs_l",self.skincolorbackgroundcolor,border)
-		self.changeColor("bs_r" + addition,"bs_r",self.skincolorbackgroundcolor,border)
-		self.changeColor("bs_t" + addition,"bs_t",self.skincolorbackgroundcolor,border)
-		self.changeColor("bs_tl" + addition,"bs_tl",self.skincolorbackgroundcolor,border)
-		self.changeColor("bs_tr" + addition,"bs_tr",self.skincolorbackgroundcolor,border)
+		self.changeColor("bs_b" + addition, "bs_b", self.skincolorbackgroundcolor, border)
+		self.changeColor("bs_bl" + addition, "bs_bl", self.skincolorbackgroundcolor, border)
+		self.changeColor("bs_br" + addition, "bs_br", self.skincolorbackgroundcolor, border)
+		self.changeColor("bs_l" + addition, "bs_l", self.skincolorbackgroundcolor, border)
+		self.changeColor("bs_r" + addition, "bs_r", self.skincolorbackgroundcolor, border)
+		self.changeColor("bs_t" + addition, "bs_t", self.skincolorbackgroundcolor, border)
+		self.changeColor("bs_tl" + addition, "bs_tl", self.skincolorbackgroundcolor, border)
+		self.changeColor("bs_tr" + addition, "bs_tr", self.skincolorbackgroundcolor, border)
 
-	def makeHorMenupng(self,color1,color2):
+	def makeHorMenupng(self, color1, color2):
 		width = int(192 * self.factor)
 		height = int(92 * self.factor)
 		radius = int(10 * self.factor)
@@ -3082,7 +3083,7 @@ class ActivateSkinSettings:
 		img.putalpha(mask)
 		img.save("/usr/share/enigma2/KravenHD/buttons/icon1.png")
 
-	def makeProgressBackground(self,width,color,output):
+	def makeProgressBackground(self, width, color, output):
 		height = int(21 * self.factor)
 		width = int(width * self.factor)
 
@@ -3105,7 +3106,7 @@ class ActivateSkinSettings:
 					pixels[x, y] = (r1, g1, b1, a)
 		img.save(self.graphics + output + ".png")
 
-	def changeColor(self,input,output,color1,color2):
+	def changeColor(self, input, output, color1, color2):
 		img = Image.open(self.templates + input + ".png")
 
 		color1 = color1[-6:]
@@ -3128,16 +3129,16 @@ class ActivateSkinSettings:
 						pixels[x, y] = (r2, g2, b2, a)
 		img.save(self.graphics + output + ".png")
 
-	def makeborsetpng(self,color):
+	def makeborsetpng(self, color):
 		color = color[-6:]
 		r = int(color[0:2], 16)
 		g = int(color[2:4], 16)
 		b = int(color[4:6], 16)
 
-		img = Image.new("RGBA", (2, 2),(r, g, b, 255))
+		img = Image.new("RGBA", (2, 2), (r, g, b, 255))
 		img.save(self.graphics + "borset.png")
 
-	def dexpGradient(self,len,spd,pos):
+	def dexpGradient(self, len, spd, pos):
 		if pos < 0:
 			pos = 0
 		if pos > len-1:
@@ -3150,12 +3151,12 @@ class ActivateSkinSettings:
 		e = int((f/a)*255)
 		return e
 
-	def calcBrightness(self,color,factor):
+	def calcBrightness(self, color, factor):
 		f = int(int(factor)*25.5-255)
 		color = color[-6:]
-		r = int(color[0:2],16)+f
-		g = int(color[2:4],16)+f
-		b = int(color[4:6],16)+f
+		r = int(color[0:2], 16)+f
+		g = int(color[2:4], 16)+f
+		b = int(color[4:6], 16)+f
 		if r<0:
 			r=0
 		if g<0:
@@ -3170,7 +3171,7 @@ class ActivateSkinSettings:
 			b=255
 		return str(hex(r)[2:4]).zfill(2)+str(hex(g)[2:4]).zfill(2)+str(hex(b)[2:4]).zfill(2)
 
-	def calcTransparency(self,trans1,trans2):
-		t1 = int(trans1,16)
-		t2 = int(trans2,16)
-		return str(hex(min(t1,t2))[2:4]).zfill(2)
+	def calcTransparency(self, trans1, trans2):
+		t1 = int(trans1, 16)
+		t2 = int(trans2, 16)
+		return str(hex(min(t1, t2))[2:4]).zfill(2)

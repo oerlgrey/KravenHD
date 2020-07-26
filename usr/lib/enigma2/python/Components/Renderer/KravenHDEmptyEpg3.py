@@ -55,14 +55,14 @@ class KravenHDEmptyEpg3(VariableText, Renderer):
 			if attrib == "size":
 				self.sizeX = int(value.strip().split(",")[0])
 				self.sizeY = int(value.strip().split(",")[1])
-				attribs.append((attrib,value))
+				attribs.append((attrib, value))
 			elif attrib == "emptyText":
 				self.EmptyText = value
 			elif attrib == "font":
-				self.used_font = parseFont(value, ((1,1),(1,1)))
-				attribs.append((attrib,value))
+				self.used_font = parseFont(value, ((1, 1), (1, 1)))
+				attribs.append((attrib, value))
 			else:
-				attribs.append((attrib,value))
+				attribs.append((attrib, value))
 		self.skinAttributes = attribs
 		self.testSizeLabel.setFont(self.used_font)
 		self.testSizeLabel.resize(eSize(self.sizeX, self.sizeY))

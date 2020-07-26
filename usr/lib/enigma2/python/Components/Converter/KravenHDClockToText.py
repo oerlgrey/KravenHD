@@ -84,8 +84,8 @@ class KravenHDClockToText(Converter, object):
 			weekday_long = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 			month_long = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 			str_fmt_values = {
-						"%B" : month_long,
-						"%A" : weekday_long,
+						"%B": month_long,
+						"%A": weekday_long,
 					}
 			
 			for key in str_fmt_values:
@@ -103,10 +103,10 @@ class KravenHDClockToText(Converter, object):
 			month_long = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 			month_short = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 			str_fmt_values = {
-						"%B" : month_long,
-						"%b" : month_short,
-						"%A" : weekday_long,
-						"%a" : weekday_short,
+						"%B": month_long,
+						"%b": month_short,
+						"%A": weekday_long,
+						"%a": weekday_short,
 					}
 			
 			return_str = strftime(self.fmt_string, t)

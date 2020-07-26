@@ -195,5 +195,5 @@ class KravenHDTunerState(Poll, Converter, object):
 			else:
 				self.box -= (self.boxcount - self.activetuners)
 			
-	def intFirst(self,elem):
+	def intFirst(self, elem):
 		return int(elem.split("_")[0])
