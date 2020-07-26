@@ -28,6 +28,9 @@ from os import remove, system, popen, path
 import time, subprocess
 from Tools.Directories import fileExists
 
+from six.moves import range
+
+
 ColorSelfList = [
 	("F0A30A", _("amber")),
 	("B27708", _("amber dark")),
@@ -2711,8 +2714,8 @@ class ActivateSkinSettings:
 		bg_w, bg_h = bg.size
 
 		img = Image.new("RGBA", (width, ibarheight), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, ibarheight, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, ibarheight, bg_h):
 				img.paste(bg, (i, j))
 		gradient = Image.new("L", (1, ibarheight), int(255*trans))
 		for pos in range(0, ibargradientstart):
@@ -2724,8 +2727,8 @@ class ActivateSkinSettings:
 		img.save(self.graphics + "ibar.png")
 
 		img = Image.new("RGBA", (width, ibaroheight), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, ibaroheight, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, ibaroheight, bg_h):
 				img.paste(bg, (i, j))
 		gradient = Image.new("L", (1, ibaroheight), 0)
 		for pos in range(0, ibarogradientstart):
@@ -2737,8 +2740,8 @@ class ActivateSkinSettings:
 		img.save(self.graphics + "ibaro.png")
 
 		img = Image.new("RGBA", (width, ibaro2height), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, ibaroheight, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, ibaroheight, bg_h):
 				img.paste(bg, (i, j))
 		gradient = Image.new("L", (1, ibaro2height), 0)
 		for pos in range(0, ibaro2gradientstart):
@@ -2750,8 +2753,8 @@ class ActivateSkinSettings:
 		img.save(self.graphics + "ibaro2.png")
 
 		img = Image.new("RGBA", (width, ibaro3height), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, ibaroheight, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, ibaroheight, bg_h):
 				img.paste(bg, (i, j))
 		gradient = Image.new("L", (1, ibaro3height), 0)
 		for pos in range(0, ibaro3gradientstart):
@@ -2825,8 +2828,8 @@ class ActivateSkinSettings:
 			bg = Image.open(inpath + style + ".jpg")
 		bg_w, bg_h = bg.size
 		img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, height, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, height, bg_h):
 				img.paste(bg, (i, j))
 
 		mask = Image.new("L", (width, height), 255 * trans)
@@ -3011,8 +3014,8 @@ class ActivateSkinSettings:
 			bg = Image.open(path + style + ".jpg")
 		bg_w, bg_h = bg.size
 		image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, height, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, height, bg_h):
 				image.paste(bg, (i, j))
 		alpha = Image.new("L", (width, height), trans)
 		image.putalpha(alpha)

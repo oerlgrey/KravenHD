@@ -42,6 +42,9 @@ import gettext, time, subprocess, requests
 from enigma import ePicLoad, getDesktop, eConsoleAppContainer, eTimer
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 
+from six.moves import range
+
+
 DESKTOP_WIDTH = getDesktop(0).size().width()
 
 lang = language.getLanguage()
@@ -4298,8 +4301,8 @@ class KravenHD(ConfigListScreen, Screen):
 			bg = Image.open(inpath + style + ".jpg")
 		bg_w, bg_h = bg.size
 		image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, height, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, height, bg_h):
 				image.paste(bg, (i, j))
 		image.save(outpath + "preview.jpg")
 		
@@ -4320,8 +4323,8 @@ class KravenHD(ConfigListScreen, Screen):
 			bg = Image.open(inpath + style + ".jpg")
 		bg_w, bg_h = bg.size
 		image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, height, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, height, bg_h):
 				image.paste(bg, (i, j))
 		color=color[-6:]
 		r=int(color[0:2], 16)
@@ -4352,8 +4355,8 @@ class KravenHD(ConfigListScreen, Screen):
 				bg = Image.open(inpath + style + ".jpg")
 			bg_w, bg_h = bg.size
 			img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-			for i in xrange(0, width, bg_w):
-				for j in xrange(0, height, bg_h):
+			for i in range(0, width, bg_w):
+				for j in range(0, height, bg_h):
 					img.paste(bg, (i, j))
 		elif config.plugins.KravenHD.BackgroundColor.value == "gradient":
 			c1=config.plugins.KravenHD.BackgroundGradientColorPrimary.value
@@ -4399,8 +4402,8 @@ class KravenHD(ConfigListScreen, Screen):
 					bg = Image.open(inpath + style + ".jpg")
 				bg_w, bg_h = bg.size
 				ib = Image.new("RGBA", (width, gradbarheight), (0, 0, 0, 0))
-				for i in xrange(0, width, bg_w):
-					for j in xrange(0, gradbarheight, bg_h):
+				for i in range(0, width, bg_w):
+					for j in range(0, gradbarheight, bg_h):
 						ib.paste(bg, (i, j))
 			else:
 				c=self.skincolorinfobarcolor
@@ -4431,8 +4434,8 @@ class KravenHD(ConfigListScreen, Screen):
 					bg = Image.open(inpath + style + ".jpg")
 				bg_w, bg_h = bg.size
 				ib = Image.new("RGBA", (width, boxbarheight), (0, 0, 0, 0))
-				for i in xrange(0, width, bg_w):
-					for j in xrange(0, boxbarheight, bg_h):
+				for i in range(0, width, bg_w):
+					for j in range(0, boxbarheight, bg_h):
 						ib.paste(bg, (i, j))
 				img.paste(ib, (0, 0))
 				img.paste(ib, (0, height-boxbarheight))
@@ -4597,8 +4600,8 @@ class KravenHD(ConfigListScreen, Screen):
 		bg_w, bg_h = bg.size
 
 		img = Image.new("RGBA", (width, ibarheight), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, ibarheight, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, ibarheight, bg_h):
 				img.paste(bg, (i, j))
 		gradient = Image.new("L", (1, ibarheight), int(255*trans))
 		for pos in range(0, ibargradientstart):
@@ -4610,8 +4613,8 @@ class KravenHD(ConfigListScreen, Screen):
 		img.save(self.graphics + "ibar.png")
 
 		img = Image.new("RGBA", (width, ibaroheight), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, ibaroheight, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, ibaroheight, bg_h):
 				img.paste(bg, (i, j))
 		gradient = Image.new("L", (1, ibaroheight), 0)
 		for pos in range(0, ibarogradientstart):
@@ -4623,8 +4626,8 @@ class KravenHD(ConfigListScreen, Screen):
 		img.save(self.graphics + "ibaro.png")
 
 		img = Image.new("RGBA", (width, ibaro2height), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, ibaroheight, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, ibaroheight, bg_h):
 				img.paste(bg, (i, j))
 		gradient = Image.new("L", (1, ibaro2height), 0)
 		for pos in range(0, ibaro2gradientstart):
@@ -4636,8 +4639,8 @@ class KravenHD(ConfigListScreen, Screen):
 		img.save(self.graphics + "ibaro2.png")
 
 		img = Image.new("RGBA", (width, ibaro3height), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, ibaroheight, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, ibaroheight, bg_h):
 				img.paste(bg, (i, j))
 		gradient = Image.new("L", (1, ibaro3height), 0)
 		for pos in range(0, ibaro3gradientstart):
@@ -4711,8 +4714,8 @@ class KravenHD(ConfigListScreen, Screen):
 			bg = Image.open(inpath + style + ".jpg")
 		bg_w, bg_h = bg.size
 		img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, height, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, height, bg_h):
 				img.paste(bg, (i, j))
 
 		mask = Image.new("L", (width, height), 255 * trans)
@@ -4897,8 +4900,8 @@ class KravenHD(ConfigListScreen, Screen):
 			bg = Image.open(path + style + ".jpg")
 		bg_w, bg_h = bg.size
 		image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-		for i in xrange(0, width, bg_w):
-			for j in xrange(0, height, bg_h):
+		for i in range(0, width, bg_w):
+			for j in range(0, height, bg_h):
 				image.paste(bg, (i, j))
 		alpha = Image.new("L", (width, height), trans)
 		image.putalpha(alpha)

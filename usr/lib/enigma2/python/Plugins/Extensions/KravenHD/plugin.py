@@ -24,6 +24,9 @@ import gettext
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from . import KravenHD
 
+from six.moves import reload_module
+
+
 lang = language.getLanguage()
 environ["LANGUAGE"] = lang[:2]
 gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
@@ -37,7 +40,7 @@ def _(txt):
 	return t
 
 def main(session, **kwargs):
-	reload(KravenHD)
+	reload_module(KravenHD)
 	try:
 		session.open(KravenHD.KravenHD)
 	except:
