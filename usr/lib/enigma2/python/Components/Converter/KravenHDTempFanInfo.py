@@ -19,7 +19,7 @@ from Components.config import config
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from enigma import iServiceInformation, iPlayableService
-from Poll import Poll
+from Components.Converter.Poll import Poll
 from os import path
 
 class KravenHDTempFanInfo(Poll, Converter, object):

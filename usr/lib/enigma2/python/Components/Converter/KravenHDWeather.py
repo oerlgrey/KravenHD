@@ -24,7 +24,7 @@ from Components.Element import cached
 from Components.config import config
 from enigma import eTimer
 import requests, time, os, gettext
-from Poll import Poll
+from Components.Converter.Poll import Poll
 from Plugins.Extensions.KravenHD import ping
 
 lang = language.getLanguage()

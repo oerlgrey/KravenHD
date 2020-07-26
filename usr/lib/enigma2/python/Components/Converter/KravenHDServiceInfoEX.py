@@ -24,7 +24,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-from Poll import Poll
+from Components.Converter.Poll import Poll
 from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService
 from Components.config import config

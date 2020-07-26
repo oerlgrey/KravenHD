@@ -18,7 +18,7 @@
 from Components.Converter.Converter import Converter
 from os import statvfs, environ
 from Components.Element import cached, ElementError
-from Poll import Poll
+from Components.Converter.Poll import Poll
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from Components.Language import language
 import gettext

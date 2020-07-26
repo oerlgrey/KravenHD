@@ -18,7 +18,7 @@
 from enigma import iServiceInformation, iPlayableService
 from Components.Converter.Converter import Converter
 from Components.Element import cached
-from Poll import Poll
+from Components.Converter.Poll import Poll
 import os, gettext
 from Tools.Directories import fileExists
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
