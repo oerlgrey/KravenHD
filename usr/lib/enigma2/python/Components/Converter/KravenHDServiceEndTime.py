@@ -35,7 +35,7 @@ class KravenHDServiceEndTime(Poll, Converter, object):
 
 		self.poll_enabled = True
   
-        def getSeek(self):
+	def getSeek(self):
 		s = self.source.service
 		return s and s.seek()
 
@@ -49,32 +49,32 @@ class KravenHDServiceEndTime(Poll, Converter, object):
 			return 0
 		return pos[1]
         
-        @cached
+	@cached
 	def getLength(self):
 		seek = self.getSeek()
 		if seek is None:
 			return None
 		length = seek.getLength()
-                if length[0]:
+		if length[0]:
 			return 0
 		return length[1]
 
 		
-        @cached
+	@cached
 	def getText(self):
-                seek = self.getSeek()
+		seek = self.getSeek()
 		if seek is None:
 			return ""
 		else:
 			if self.type == self.TYPE_ENDTIME:
 				e = (self.length / 90000)        
-                                s = self.position / 90000
-                                return strftime("%H:%M", localtime(time() + (self.length / 90000 - self.position / 90000)))   
+				s = self.position / 90000
+				return strftime("%H:%M", localtime(time() + (self.length / 90000 - self.position / 90000)))
         
 	range = 10000
 
 	position = property(getPosition)
-        length = property(getLength)
+	length = property(getLength)
 	text = property(getText)
 
 	def changed(self, what):
