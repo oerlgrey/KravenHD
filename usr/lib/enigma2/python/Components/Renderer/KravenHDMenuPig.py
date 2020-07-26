@@ -15,7 +15,7 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from enigma import eVideoWidget, getDesktop, eTimer
 from Screens.PictureInPicture import PipPigMode
 from Components.config import config

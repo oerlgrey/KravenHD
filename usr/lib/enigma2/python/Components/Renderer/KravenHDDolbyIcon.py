@@ -15,7 +15,7 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from Renderer import Renderer 
+from Components.Renderer.Renderer import Renderer 
 from enigma import ePixmap
 from Tools.Directories import fileExists
 

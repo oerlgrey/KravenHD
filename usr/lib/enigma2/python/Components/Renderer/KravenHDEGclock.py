@@ -16,7 +16,7 @@
 #  please contact me at ochzoetna@gmail.com
 
 from Components.VariableValue import VariableValue
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from enigma import eGauge
 
 class KravenHDEGclock(VariableValue, Renderer):

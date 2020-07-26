@@ -15,7 +15,7 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from enigma import eVideoWidget, getDesktop, eServiceCenter, iServiceInformation
 from Screens.InfoBar import InfoBar
 from Plugins.Extensions.KravenHD.tool import KravenTool
