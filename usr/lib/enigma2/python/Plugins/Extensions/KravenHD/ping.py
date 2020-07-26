@@ -33,6 +33,8 @@
 # Changed the struct.pack() calls to pack the checksum and ID as
 # unsigned. My thanks to Jerome Poincheval for the fix.
 
+from __future__ import print_function
+
 import os
 from socket import *
 import struct
@@ -76,7 +78,7 @@ def receiveOnePing(mySocket,ID,timeout):
     whatReady=select.select([mySocket],[],[],timeLeft)
     howLongInSelect=(time.time()-startedSelect)
     if whatReady[0]==[]: # Timeout
-#      print "Ping whatReady"
+#      print ("Ping whatReady")
       return None
     timeReceived=time.time()
     recPacket,addr=mySocket.recvfrom(1024)
@@ -88,7 +90,7 @@ def receiveOnePing(mySocket,ID,timeout):
       return timeReceived-timeSent
     timeLeft=timeLeft-howLongInSelect
     if timeLeft<=0:
-#      print "Ping timeLeft"
+#      print ("Ping timeLeft")
       return None
 
 def sendOnePing(mySocket,destAddr,ID):
@@ -127,12 +129,12 @@ def doOne(destAddr,timeout=10):
 
 def main():
   if len(sys.argv)<2:
-    print "Usage: %s hostname" % os.path.basename(sys.argv[0])
+    print ("Usage: %s hostname" % os.path.basename(sys.argv[0]))
     sys.exit(1)
 
   dest=gethostbyname(sys.argv[1])
   delay=doOne(dest)
-  print delay
+  print (delay)
   return None
 
 if __name__=='__main__':

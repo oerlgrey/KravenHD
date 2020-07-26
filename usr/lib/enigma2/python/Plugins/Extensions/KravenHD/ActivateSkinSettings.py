@@ -15,6 +15,8 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
+from __future__ import print_function
+
 from copy import deepcopy
 from Components.config import config, configfile, getConfigListEntry, ConfigYesNo, ConfigSubsection, ConfigSelection, ConfigText, ConfigClock, ConfigSlider
 from Components.SystemInfo import SystemInfo
@@ -1084,7 +1086,7 @@ class ActivateSkinSettings:
 
 		if self.silent:
 			if config.skin.primary_skin.value != "KravenHD/skin.xml":
-				print 'KravenHD is not the primary skin. No restore action needed!'
+				print ('KravenHD is not the primary skin. No restore action needed!')
 				return 0
 			self.E2settings = open("/etc/enigma2/settings", "r").read()
 		return self.save()

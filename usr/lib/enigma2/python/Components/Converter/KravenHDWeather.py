@@ -15,6 +15,8 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
+from __future__ import print_function
+
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from Components.Converter.Converter import Converter
 from Components.Language import language
@@ -114,7 +116,7 @@ class KravenHDWeather(Poll, Converter, object):
 			try:
 				r = ping.doOne("8.8.8.8",1.5)
 				if r != None and r <= 1.5:
-					print "KravenWeather: Weather download from AccuWeather"
+					print ("KravenWeather: Weather download from AccuWeather")
 					res = requests.get(URL, timeout=1.5)
 					self.data = res.json()
 					WEATHER_DATA1 = self.data
