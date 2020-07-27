@@ -41,6 +41,7 @@ import struct
 import select
 import time
 import sys
+import six
 
 # From /usr/include/linux/icmp.h; your milage may vary.
 ICMP_ECHO_REQUEST=8 # Seems to be the same on Solaris.
@@ -52,7 +53,10 @@ def checksum(str):
   countTo=(len(str)/2)*2
   count=0
   while count<countTo:
-    thisVal=ord(str[count+1])*256+ord(str[count])
+    if six.PY2:
+      thisVal=ord(str[count+1])*256+ord(str[count])
+    else:
+      thisVal=str[count+1]*256+str[count]
     sum=sum+thisVal
     sum=sum & 0xffffffff # Necessary?
     count=count+2
