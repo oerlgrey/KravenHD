@@ -100,6 +100,8 @@ def sendOnePing(mySocket, destAddr, ID):
   header=struct.pack("bbHHh", ICMP_ECHO_REQUEST, 0, myChecksum, ID, 1)
   bytesInDouble=struct.calcsize("d")
   data=(192-bytesInDouble) * "Q"
+  if (type(data) is str):
+    data = data.encode()
   data=struct.pack("d", time.time())+data
   # Calculate the checksum on the data and the dummy header.
   myChecksum=checksum(header+data)
