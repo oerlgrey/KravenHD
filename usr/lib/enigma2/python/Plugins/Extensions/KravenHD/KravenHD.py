@@ -42,7 +42,7 @@ import gettext, time, subprocess, requests
 from enigma import ePicLoad, getDesktop, eConsoleAppContainer, eTimer
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 
-from six.moves import range
+import six
 
 
 DESKTOP_WIDTH = getDesktop(0).size().width()
@@ -4959,18 +4959,27 @@ class KravenHD(ConfigListScreen, Screen):
 		mask.paste(corner.transpose(Image.ROTATE_180), (width - radius, height - radius))
 		mask.paste(corner.transpose(Image.FLIP_TOP_BOTTOM), (0, height - radius))
 
-		gradient = Image.new("RGBA", (1, height / 2), (r2, g2, b2, trans))
+		if six.PY2:
+			gradient = Image.new("RGBA", (1, height / 2), (r2, g2, b2, trans))
+		else:
+			gradient = Image.new("RGBA", (1, int(height / 2)), (r2, g2, b2, trans))
 		for pos in range(0, gradientsize):
 			p = pos / float(gradientsize)
 			r = r2 * p + r1 * (1 - p)
 			g = g2 * p + g1 * (1 - p)
 			b = b2 * p + b1 * (1 - p)
 			gradient.putpixel((0, pos), (int(r), int(g), int(b), trans))
-		gradient = gradient.resize((width, height / 2))
+		if six.PY2:
+			gradient = gradient.resize((width, height / 2))
+		else:
+			gradient = gradient.resize((width, int(height / 2)))
 
 		img = Image.new('RGBA', (width, height), (0, 0, 0, 0))
 		img.paste(gradient, (0, 0))
-		img.paste(gradient.transpose(Image.FLIP_TOP_BOTTOM), (0, height / 2))
+		if six.PY2:
+			img.paste(gradient.transpose(Image.FLIP_TOP_BOTTOM), (0, height / 2))
+		else:
+			img.paste(gradient.transpose(Image.FLIP_TOP_BOTTOM), (0, int(height / 2)))
 		img.putalpha(mask)
 		img.save("/usr/share/enigma2/KravenHD/buttons/icon1.png")
 
