@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2020-07-22 13:08+0200\n"
+"PO-Revision-Date: 2020-07-28 18:48+0200\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -2433,6 +2433,10 @@ msgstr "Klima:"
 #: KravenHDTextTranslator.py
 msgid "city:"
 msgstr "Ort:"
+
+#: KravenHDTextTranslator.py
+msgid "Current Weather"
+msgstr "Aktuelles Wetter"
 
 #: KravenHD.py
 msgid "Icon-Font vertical position"
