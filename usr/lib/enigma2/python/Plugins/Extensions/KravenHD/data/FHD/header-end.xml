@@ -135,6 +135,15 @@
 	<parameter name="EpgListMulti" value="240,150,120,15"/>
 	<parameter name="EpgListMultiProgressBar" value="105,15,1"/>
 	<parameter name="EpgListSingle" value="88,220"/>
+	<!-- WeatherPlugin -->
+	<parameter name="WeatherPluginEntryListFont1" value="Regular;32"/>
+	<parameter name="WeatherPluginEntryListFont2" value="Regular;30"/>
+	<parameter name="WeatherPluginCity" value="15,2,892,41"/>
+	<parameter name="WeatherPluginDegreetype" value="909,2,180,41"/>
+	<parameter name="WeatherPluginSearchResultListFont1" value="Regular;32"/>
+	<parameter name="WeatherPluginSearchResultListFont2" value="Regular;32"/>
+	<parameter name="WeatherPluginSearchlocation" value="15,2,1074,41"/>
+	<parameter name="WeatherPluginSearchresult" value="15,47,1074,41"/>
   </parameters>
   <fonts>
 	<alias name="FileList" font="Regular" size="32" height="45" />

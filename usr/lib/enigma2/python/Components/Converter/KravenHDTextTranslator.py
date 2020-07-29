@@ -74,6 +74,7 @@ class KravenHDTextTranslator(Converter, object):
 	brsettings = 36
 	brpath = 37
 	verticalepg = 38
+	currentweather = 39
 
 	def __init__(self, type):
 		Converter.__init__(self, type)
@@ -156,6 +157,8 @@ class KravenHDTextTranslator(Converter, object):
 			self.type = self.brpath
 		elif type == "verticalepg":
 			self.type = self.verticalepg
+		elif type == "currentweather":
+			self.type = self.currentweather
 
 	@cached
 	def getText(self):
@@ -237,5 +240,7 @@ class KravenHDTextTranslator(Converter, object):
 			return _('Select a path for the birthday file')
 		elif self.type == self.verticalepg:
 			return _('VerticalEPG')
+		elif self.type == self.currentweather:
+			return _('Current Weather')
 
 	text = property(getText)

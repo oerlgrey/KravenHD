@@ -485,21 +485,6 @@ config.plugins.KravenHD.ChannelSelectionStyle2 = ConfigSelection(default="channe
 				("channelselection-style-minitv-picon", _("MiniTV Picon"))
 				])
 
-config.plugins.KravenHD.ChannelSelectionStyle3 = ConfigSelection(default="channelselection-style-minitv", choices = [
-				("channelselection-style-nopicon", _("no Picon")),
-				("channelselection-style-nopicon2", _("no Picon2")),
-				("channelselection-style-xpicon", _("X-Picons")),
-				("channelselection-style-zpicon", _("Z-Picons")),
-				("channelselection-style-zzpicon", _("ZZ-Picons")),
-				("channelselection-style-zzzpicon", _("ZZZ-Picons")),
-				("channelselection-style-minitv", _("MiniTV left")),
-				("channelselection-style-minitv4", _("MiniTV right")),
-				("channelselection-style-nobile", _("Nobile")),
-				("channelselection-style-nobile2", _("Nobile 2")),
-				("channelselection-style-nobile-minitv", _("Nobile MiniTV")),
-				("channelselection-style-minitv-picon", _("MiniTV Picon"))
-				])
-
 config.plugins.KravenHD.ChannelSelectionMode = ConfigSelection(default="zap", choices = [
 				("zap", _("Zap (1xOK)")),
 				("preview", _("Preview (2xOK)"))

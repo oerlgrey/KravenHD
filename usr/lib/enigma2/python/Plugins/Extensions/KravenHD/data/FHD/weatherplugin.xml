@@ -19,12 +19,9 @@
 	<ePixmap pixmap="KravenHD/msn_weather_icons/umbrella.png" position="1387,419" size="50,54" zPosition="3" transparent="1" alphatest="blend" />
 	<ePixmap pixmap="KravenHD/graphics/msnbg.png" position="851,27" size="654,507" zPosition="1" transparent="1" />
 	<!-- day1 -->
-	<widget source="session.MSNWeather" render="Label" font="Regular;42" foregroundColor="white" position="396,34" size="270,67" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
-	  <convert type="MSNWeather">weekshortday,current</convert>
-	</widget>
-	<widget source="session.MSNWeather" render="Label" font="Regular;42" foregroundColor="white" position="504,34" size="270,67" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
-	  <convert type="MSNWeather">date,current</convert>
-	</widget>
+    <widget source="session.CurrentService" render="Label" font="Regular;38" foregroundColor="white" position="429,45" size="360,49" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center">
+      <convert type="KravenHDTextTranslator">currentweather</convert>
+    </widget>
 	<widget render="Label" source="observationtime" font="Regular;33" foregroundColor="white" position="429,87" size="360,60" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center" />
 	<widget render="Label" source="currentTemp" font="Regular;75" foregroundColor="white" position="309,267" size="600,180" backgroundColor="#00666666" zPosition="3" transparent="1" halign="center" valign="center" />
 	<widget render="Label" source="feelsliketemp" font="Regular;33" foregroundColor="white" position="429,399" size="360,60" backgroundColor="#00666666" zPosition="3" transparent="1" valign="center" halign="center" />
