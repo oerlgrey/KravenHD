@@ -2666,7 +2666,8 @@ class KravenHD(ConfigListScreen, Screen):
 			self.reset()
 
 	def faq(self):
-		from Plugins.SystemPlugins.MPHelp import PluginHelp, XMLHelpReader
+		from Plugins.SystemPlugins.MPHelp.plugin import PluginHelp
+		from Plugins.SystemPlugins.MPHelp.XMLHelp import XMLHelpReader
 		reader = XMLHelpReader(resolveFilename(SCOPE_PLUGINS, "Extensions/KravenHD/faq.xml"))
 		KravenHDFaq = PluginHelp(*reader)
 		KravenHDFaq.open(self.session)
