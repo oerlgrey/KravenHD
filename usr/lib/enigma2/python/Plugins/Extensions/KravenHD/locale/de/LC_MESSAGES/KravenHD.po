@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2020-07-28 18:48+0200\n"
+"PO-Revision-Date: 2020-07-31 21:59+0200\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -2504,11 +2504,11 @@ msgstr "Wählen Sie die Farbe für den derzeit anzeigenden Tuner, wenn er aufnim
 
 #: KravenHD.py
 msgid "Show unused Tuners"
-msgstr "Zeige unbenutze Tuner"
+msgstr "Zeige unbenutzte Tuner"
 
 #: KravenHD.py
 msgid "Choose whether unused tuners are displayed or not."
-msgstr "Wählen Sie, ob unbenutze Tuner angezeigt werden oder nicht."
+msgstr "Wählen Sie, ob unbenutzte Tuner angezeigt werden oder nicht."
 
 #: KravenHD.py
 msgid "Show AGC/SNR"

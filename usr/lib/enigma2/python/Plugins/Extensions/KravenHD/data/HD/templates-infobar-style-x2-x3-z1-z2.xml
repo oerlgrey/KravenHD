@@ -263,92 +263,92 @@
 	
 	<screen name="infobar-style-x2-z1-8-tuner">
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3_off.png" position="1108,23" size="15,22" zPosition="1" alphatest="blend">
-		<convert type="KravenHDTunerState">IsAvailable_0,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsAvailable_0,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3.png" position="1108,23" size="15,22" zPosition="2" alphatest="blend">
-		<convert type="KravenHDTunerState">IsActive_0,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsActive_0,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="KravenHDTunerColor" text="A" font="Regular2;18" foregroundColor="KravenIcon" position="1110,23" name="KravenIconVPosition" size="11,22" halign="center" valign="center" zPosition="5" transparent="1">
-		<convert type="KravenHDTunerState">Danpfnudel_0,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">Danpfnudel_0,ShowUnused,StreamAsTuner,RightAlign8</convert>
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3_off.png" position="1128,23" size="15,22" zPosition="1" alphatest="blend">
-		<convert type="KravenHDTunerState">IsAvailable_1,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsAvailable_1,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3.png" position="1128,23" size="15,22" zPosition="2" alphatest="blend">
-		<convert type="KravenHDTunerState">IsActive_1,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsActive_1,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="KravenHDTunerColor" text="B" font="Regular2;18" foregroundColor="KravenIcon" position="1130,23" name="KravenIconVPosition" size="11,22" halign="center" valign="center" zPosition="5" transparent="1">
-		<convert type="KravenHDTunerState">Danpfnudel_1,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">Danpfnudel_1,ShowUnused,StreamAsTuner,RightAlign8</convert>
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3_off.png" position="1148,23" size="15,22" zPosition="1" alphatest="blend">
-		<convert type="KravenHDTunerState">IsAvailable_2,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsAvailable_2,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3.png" position="1148,23" size="15,22" zPosition="2" alphatest="blend">
-		<convert type="KravenHDTunerState">IsActive_2,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsActive_2,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="KravenHDTunerColor" text="C" font="Regular2;18" foregroundColor="KravenIcon" position="1150,23" name="KravenIconVPosition" size="11,22" halign="center" valign="center" zPosition="5" transparent="1">
-		<convert type="KravenHDTunerState">Danpfnudel_2,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">Danpfnudel_2,ShowUnused,StreamAsTuner,RightAlign8</convert>
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3_off.png" position="1168,23" size="15,22" zPosition="1" alphatest="blend">
-		<convert type="KravenHDTunerState">IsAvailable_3,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsAvailable_3,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3.png" position="1168,23" size="15,22" zPosition="2" alphatest="blend">
-		<convert type="KravenHDTunerState">IsActive_3,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsActive_3,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="KravenHDTunerColor" text="D" font="Regular2;18" foregroundColor="KravenIcon" position="1170,23" name="KravenIconVPosition" size="11,22" halign="center" valign="center" zPosition="5" transparent="1">
-		<convert type="KravenHDTunerState">Danpfnudel_3,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">Danpfnudel_3,ShowUnused,StreamAsTuner,RightAlign8</convert>
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3_off.png" position="1188,23" size="15,22" zPosition="1" alphatest="blend">
-		<convert type="KravenHDTunerState">IsAvailable_4,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsAvailable_4,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3.png" position="1188,23" size="15,22" zPosition="2" alphatest="blend">
-		<convert type="KravenHDTunerState">IsActive_4,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsActive_4,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="KravenHDTunerColor" text="E" font="Regular2;18" foregroundColor="KravenIcon" position="1190,23" name="KravenIconVPosition" size="11,22" halign="center" valign="center" zPosition="5" transparent="1">
-		<convert type="KravenHDTunerState">Danpfnudel_4,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">Danpfnudel_4,ShowUnused,StreamAsTuner,RightAlign8</convert>
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3_off.png" position="1208,23" size="15,22" zPosition="1" alphatest="blend">
-		<convert type="KravenHDTunerState">IsAvailable_5,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsAvailable_5,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3.png" position="1208,23" size="15,22" zPosition="2" alphatest="blend">
-		<convert type="KravenHDTunerState">IsActive_5,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsActive_5,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="KravenHDTunerColor" text="F" font="Regular2;18" foregroundColor="KravenIcon" position="1210,23" name="KravenIconVPosition" size="11,22" halign="center" valign="center" zPosition="5" transparent="1">
-		<convert type="KravenHDTunerState">Danpfnudel_5,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">Danpfnudel_5,ShowUnused,StreamAsTuner,RightAlign8</convert>
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3_off.png" position="1228,23" size="15,22" zPosition="1" alphatest="blend">
-		<convert type="KravenHDTunerState">IsAvailable_6,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsAvailable_6,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3.png" position="1228,23" size="15,22" zPosition="2" alphatest="blend">
-		<convert type="KravenHDTunerState">IsActive_6,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsActive_6,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="KravenHDTunerColor" text="G" font="Regular2;18" foregroundColor="KravenIcon" position="1230,23" name="KravenIconVPosition" size="11,22" halign="center" valign="center" zPosition="5" transparent="1">
-		<convert type="KravenHDTunerState">Danpfnudel_6,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">Danpfnudel_6,ShowUnused,StreamAsTuner,RightAlign8</convert>
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3_off.png" position="1248,23" size="15,22" zPosition="1" alphatest="blend">
-		<convert type="KravenHDTunerState">IsAvailable_7,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsAvailable_7,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget source="session.TunerInfo" render="Pixmap" pixmap="KravenHD/infobar-icons/tuner_empty3.png" position="1248,23" size="15,22" zPosition="2" alphatest="blend">
-		<convert type="KravenHDTunerState">IsActive_7,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">IsActive_7,ShowUnused,StreamAsTuner,RightAlign8</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.TunerInfo" render="KravenHDTunerColor" text="H" font="Regular2;18" foregroundColor="KravenIcon" position="1250,23" name="KravenIconVPosition" size="11,22" halign="center" valign="center" zPosition="5" transparent="1">
-		<convert type="KravenHDTunerState">Danpfnudel_7,ShowUnusedTuner</convert>
+		<convert type="KravenHDTunerState">Danpfnudel_7,ShowUnused,StreamAsTuner,RightAlign8</convert>
 	  </widget>
 	</screen>
 	
