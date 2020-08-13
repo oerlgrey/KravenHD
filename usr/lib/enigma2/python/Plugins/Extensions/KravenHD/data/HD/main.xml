@@ -25,13 +25,13 @@
 	<widget source="session.CurrentService" render="Label" position="40,16" size="50,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
       <convert type="KravenHDTextTranslator">flash</convert>
 	</widget>
-	<widget source="Title" render="Label" font="Regular;16" position="82,16" size="180,20" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	<widget source="session.CurrentService" render="Label" font="Regular;16" position="82,16" size="180,20" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
       <convert type="KravenHDLayoutInfo">FlashInfo,Free</convert>
 	</widget>
 	<widget source="session.CurrentService" render="Label" position="270,16" size="50,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
       <convert type="KravenHDTextTranslator">hdd</convert>
 	</widget>
-	<widget source="Title" render="Label" font="Regular;16" position="308,16" size="170,20" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	<widget source="session.CurrentService" render="Label" font="Regular;16" position="308,16" size="170,20" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
       <convert type="KravenHDLayoutInfo">HddInfo,Free</convert>
 	</widget>
 	<widget source="session.CurrentService" render="Label" position="490,16" size="50,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
@@ -43,25 +43,25 @@
 	<widget source="session.CurrentService" render="Label" position="786,16" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
       <convert type="KravenHDTextTranslator">sys</convert>
 	</widget>
-	<widget source="Title" render="Label" font="Regular;16" position="814,16" size="35,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	<widget source="session.CurrentService" render="Label" font="Regular;16" position="814,16" size="35,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
       <convert type="KravenHDTempFanInfo">TempInfo</convert>   
 	</widget>
 	<widget source="session.CurrentService" render="Label" position="859,16" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
       <convert type="KravenHDTextTranslator">rm</convert>
 	</widget>
-	<widget source="Title" render="Label" font="Regular;16" position="895,16" size="35,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	<widget source="session.CurrentService" render="Label" font="Regular;16" position="895,16" size="35,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
       <convert type="KravenHDTempFanInfo">FanInfo</convert>
 	</widget>
 	<widget source="session.CurrentService" render="Label" position="940,16" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
       <convert type="KravenHDTextTranslator">cpu</convert>
 	</widget>
-	<widget source="Title" render="Label" font="Regular;16" position="970,16" size="35,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	<widget source="session.CurrentService" render="Label" font="Regular;16" position="970,16" size="35,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
       <convert type="KravenHDCpuUsage">$0</convert>   
 	</widget>
 	<widget source="session.CurrentService" render="Label" position="1016,16" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
       <convert type="KravenHDTextTranslator">load</convert>
 	</widget>
-	<widget source="Title" render="Label" font="Regular;16" position="1045,16" size="35,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	<widget source="session.CurrentService" render="Label" font="Regular;16" position="1045,16" size="35,20" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
       <convert type="KravenHDLayoutInfo">LoadAvg</convert>
 	</widget>
 	<widget source="session.CurrentService" render="Label" position="1090,16" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
@@ -1338,12 +1338,12 @@
     <widget backgroundColor="Kravenbg3" name="list" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="206,120" size="400,210" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;20" foregroundColor="KravenFont2" name="snr_db" position="140,405" size="200,25" halign="center" valign="center" transparent="1" />
     <eLabel backgroundColor="Kravenbg3" font="Regular2;20" foregroundColor="KravenFont2" text="SNR:" position="42,440" size="80,25" transparent="1" />
-    <widget borderWidth="1" name="snr_bar" position="140,490" size="200,25" transparent="1" />
+    <widget borderWidth="1" name="snr_bar" position="140,440" size="200,25" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;20" foregroundColor="KravenFont2" name="snr_percentage" position="356,440" size="80,25" transparent="1" />
     <eLabel backgroundColor="Kravenbg3" font="Regular2;20" foregroundColor="KravenFont2" text="Frequency:" position="480,440" size="150,25" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;20" foregroundColor="KravenFont2" name="frequency_value" position="650,440" size="150,25" transparent="1" />
     <eLabel backgroundColor="Kravenbg3" font="Regular2;20" foregroundColor="KravenFont2" text="BER:" position="42,475" size="80,25" transparent="1" />
-    <widget borderWidth="1" name="ber_bar" position="140,525" size="200,25" transparent="1" />
+    <widget borderWidth="1" name="ber_bar" position="140,475" size="200,25" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;20" foregroundColor="KravenFont2" name="ber_value" position="356,475" size="80,25" transparent="1" />
     <eLabel backgroundColor="Kravenbg3" font="Regular2;20" foregroundColor="KravenFont2" text="Symbolrate:" position="480,475" size="150,25" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;20" foregroundColor="KravenFont2" name="symbolrate_value" position="650,475" size="150,25" transparent="1" />
@@ -3444,6 +3444,18 @@
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
     <panel name="Colorbuttons"/>
+  </screen>
+
+  <!--*StreamingClientsInfo*-->
+  <screen name="StreamingClientsInfo" title="Streaming clients info" position="0,0" size="1280,200" flags="wfNoBorder" backgroundColor="transparent">
+	<widget backgroundColor="Kravenbg3" name="ScrollLabel" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,360" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="ScrollLabel2" position="42,470" size="736,108" font="Regular2;22" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="Colorbuttons"/>
+    <panel name="SourceRedGreenYellow"/>
+    <panel name="OKExit"/>
   </screen>
 
   <screen name="InfoBarEventView" position="0,0" size="1280,200" backgroundColor="transparent" flags="wfNoBorder">

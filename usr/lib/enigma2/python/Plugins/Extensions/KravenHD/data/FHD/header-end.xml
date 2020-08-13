@@ -144,6 +144,8 @@
 	<parameter name="WeatherPluginSearchResultListFont2" value="Regular;32"/>
 	<parameter name="WeatherPluginSearchlocation" value="15,2,1074,41"/>
 	<parameter name="WeatherPluginSearchresult" value="15,47,1074,41"/>
+	<!-- Time settings -->
+	<parameter name="AllowUserDatesAndTimes" value="1,1"/>
   </parameters>
   <fonts>
 	<alias name="FileList" font="Regular" size="32" height="45" />
