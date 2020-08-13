@@ -1778,34 +1778,34 @@
 	</screen>
 	
 	<screen name="systeminfo-small">
-	  <widget source="Title" render="Label" position="1440,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">temperature</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">cpuload</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,547" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,547" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">satellite</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1657,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1657,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">fanspeed</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1657,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1657,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">avgload</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1657,547" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1657,547" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">signal</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDTempFanInfo">TempInfo</convert>   
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1770,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1770,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDTempFanInfo">FanInfo</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,517" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,517" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDCpuUsage">$0</convert>   
 	  </widget>
-	    <widget source="Title" render="Label" font="Regular;24" position="1770,517" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	    <widget source="session.CurrentService" render="Label" font="Regular;24" position="1770,517" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">LoadAvg</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1560,547" size="75,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
@@ -1817,34 +1817,34 @@
 	</screen>
 	
 	<screen name="systeminfo-small2">
-	  <widget source="Title" render="Label" position="1500,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">temperature</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">cpuload</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,547" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,547" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">satellite</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1717,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1717,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">fanspeed</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1717,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1717,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">avgload</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1717,547" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1717,547" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">signal</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1635,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1635,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDTempFanInfo">TempInfo</convert>   
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1830,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1830,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDTempFanInfo">FanInfo</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1635,517" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1635,517" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDCpuUsage">$0</convert>   
 	  </widget>
-	    <widget source="Title" render="Label" font="Regular;24" position="1830,517" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	    <widget source="session.CurrentService" render="Label" font="Regular;24" position="1830,517" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">LoadAvg</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1620,547" size="75,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
@@ -1881,34 +1881,34 @@
 	</screen>
 	
 	<screen name="systeminfo-big">
-	  <widget source="Title" render="Label" position="1440,412" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,412" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">temperature</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,442" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,442" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">cpuload</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,472" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,472" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">satellite</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1657,412" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1657,412" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">fanspeed</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1657,442" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1657,442" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">avgload</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1657,472" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1657,472" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">signal</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,412" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,412" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDTempFanInfo">TempInfo</convert>   
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1770,412" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1770,412" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDTempFanInfo">FanInfo</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,442" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,442" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDCpuUsage">$0</convert>   
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1770,442" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1770,442" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">LoadAvg</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1560,472" size="75,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
@@ -1917,61 +1917,61 @@
 	  <widget source="session.FrontendStatus" render="Label" font="Regular;24" position="1770,472" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDFrontendInfo">SNR</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">flash</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,547" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,547" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">ram</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,577" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,577" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">hdd</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,607" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,607" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">usb</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1515,517" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1515,517" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">FlashInfo,Free</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1515,547" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1515,547" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">MemTotal,Free</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1515,577" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1515,577" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">HddInfo,Free</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1515,607" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1515,607" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">UsbInfo,Free</convert>
 	  </widget>
 	</screen>
 	
 	<screen name="systeminfo-big2">
-	  <widget source="Title" render="Label" position="1500,412" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,412" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">temperature</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,442" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,442" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">cpuload</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,472" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,472" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">satellite</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1717,412" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1717,412" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">fanspeed</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1717,442" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1717,442" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">avgload</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1717,472" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1717,472" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">signal</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1635,412" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1635,412" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDTempFanInfo">TempInfo</convert>   
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1830,412" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1830,412" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDTempFanInfo">FanInfo</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1635,442" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1635,442" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDCpuUsage">$0</convert>   
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1830,442" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1830,442" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">LoadAvg</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1620,472" size="75,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
@@ -1980,28 +1980,28 @@
 	  <widget source="session.FrontendStatus" render="Label" font="Regular;24" position="1830,472" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDFrontendInfo">SNR</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">flash</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,547" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,547" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">ram</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,577" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,577" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">hdd</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,607" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,607" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">usb</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,517" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,517" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">FlashInfo,Free</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,547" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,547" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">MemTotal,Free</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,577" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,577" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">HddInfo,Free</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,607" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,607" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">UsbInfo,Free</convert>
 	  </widget>
 	</screen>
@@ -2032,16 +2032,16 @@
 	</screen>
 	
 	<screen name="systeminfo-bigsat">
-	  <widget source="Title" render="Label" position="1440,322" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,322" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">tuner</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,352" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,352" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">signal</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,382" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,382" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">video</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,412" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,412" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">ecm</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1515,322" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
@@ -2056,34 +2056,34 @@
 	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1515,412" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDECMLine">SatInfo,freetoair</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,457" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,457" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">temperature</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">cpuload</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">satellite</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1657,457" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1657,457" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">fanspeed</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1657,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1657,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">avgload</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1657,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1657,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">signal</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,457" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,457" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDTempFanInfo">TempInfo</convert>   
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1770,457" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1770,457" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDTempFanInfo">FanInfo</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDCpuUsage">$0</convert>   
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1770,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1770,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">LoadAvg</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1560,517" size="75,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
@@ -2092,43 +2092,43 @@
 	  <widget source="session.FrontendStatus" render="Label" font="Regular;24" position="1770,517" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDFrontendInfo">SNR</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,562" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,562" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">flash</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,592" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,592" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">ram</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,622" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,622" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">hdd</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1440,652" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1440,652" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">usb</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1515,562" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1515,562" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">FlashInfo,Free</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1515,592" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1515,592" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">MemTotal,Free</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1515,622" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1515,622" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">HddInfo,Free</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1515,652" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1515,652" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">UsbInfo,Free</convert>
 	  </widget>
 	</screen>
 	
 	<screen name="systeminfo-bigsat2">
-	  <widget source="Title" render="Label" position="1500,322" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,322" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">tuner</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,352" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,352" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">signal</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,382" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,382" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">video</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,412" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,412" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">ecm</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,322" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
@@ -2143,34 +2143,34 @@
 	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,412" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDECMLine">SatInfo,freetoair</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,457" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,457" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">temperature</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">cpuload</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">satellite</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1717,457" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1717,457" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">fanspeed</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1717,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1717,487" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">avgload</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1717,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1717,517" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">signal</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1635,457" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1635,457" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDTempFanInfo">TempInfo</convert>   
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1830,457" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1830,457" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDTempFanInfo">FanInfo</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1635,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1635,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDCpuUsage">$0</convert>   
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1830,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1830,487" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">LoadAvg</convert>
 	  </widget>
 	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1620,517" size="75,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
@@ -2179,28 +2179,28 @@
 	  <widget source="session.FrontendStatus" render="Label" font="Regular;24" position="1830,517" size="60,30" halign="right" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDFrontendInfo">SNR</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,562" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,562" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">flash</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,592" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,592" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">ram</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,622" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,622" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">hdd</convert>
 	  </widget>
-	  <widget source="Title" render="Label" position="1500,652" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+	  <widget source="session.CurrentService" render="Label" position="1500,652" size="150,30" font="Regular;24" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
 		<convert type="KravenHDTextTranslator">usb</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,562" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,562" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">FlashInfo,Free</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,592" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,592" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">MemTotal,Free</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,622" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,622" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">HddInfo,Free</convert>
 	  </widget>
-	  <widget source="Title" render="Label" font="Regular;24" position="1575,652" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
+	  <widget source="session.CurrentService" render="Label" font="Regular;24" position="1575,652" size="330,30" halign="left" valign="bottom" backgroundColor="KravenIBbg" transparent="1" noWrap="1" foregroundColor="KravenIBFont1">
 		<convert type="KravenHDLayoutInfo">UsbInfo,Free</convert>
 	  </widget>
 	</screen>
