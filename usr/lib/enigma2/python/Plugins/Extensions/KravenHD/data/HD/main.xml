@@ -2450,10 +2450,9 @@
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HdmiCECSetupScreen" position="0,0" size="1280,720" title="HDMI CEC setup">
 	<!--*HdmiCECSetupScreen*-->
-    <widget backgroundColor="Kravenbg3" name="config" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,330" scrollbarMode="showOnDemand" transparent="1" />
-    <widget backgroundColor="Kravenbg3" source="current_address" render="Label" font="Regular2;22" foregroundColor="KravenFont2" position="42,420" size="736,27" halign="center" valign="center" transparent="1" />
-    <widget backgroundColor="Kravenbg3" source="fixed_address" render="Label" font="Regular2;22" foregroundColor="KravenFont2" position="42,460" size="736,27" halign="center" valign="center" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="description" font="Regular2;22" foregroundColor="KravenFont2" position="42,500" size="736,108" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,450" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget source="current_address" render="Label" position="42,545" size="736,27" zPosition="10" font="Regular2;22" halign="center" valign="center" backgroundColor="Kravenbg3" transparent="1" foregroundColor="KravenFont2" />
+    <widget source="fixed_address" render="Label" position="42,580" size="736,27" zPosition="10" font="Regular2;22" halign="center" valign="center" backgroundColor="Kravenbg3" transparent="1" foregroundColor="KravenFont2" />
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -3709,15 +3708,19 @@
     <panel name="OKExit"/>
   </screen>
 
-  <screen name="VirtualKeyBoard" position="center,196" backgroundColor="Kravenbg6" title="Virtual KeyBoard" flags="wfBorder" size="650,366" zPosition="99">
-    <widget backgroundColor="Kravenbg6" name="prompt" conditional="prompt" position="10,8" size="630,27" font="Regular;22" foregroundColor="KravenFont2" transparent="1" noWrap="1" />
-    <eLabel backgroundColor="KravenBorder" position="10,45" size="630,2" zPosition="-1" />
-    <eLabel backgroundColor="KravenBorder" position="10,83" size="630,2" zPosition="-1" />
-    <eLabel backgroundColor="KravenBorder" position="10,45" size="2,40" zPosition="-1" />
-    <eLabel backgroundColor="KravenBorder" position="638,45" size="2,40" zPosition="-1" />
-    <widget backgroundColor="Kravenbg6" name="text" position="12,47" size="626,35" font="Regular;28" foregroundColor="KravenFont1" valign="center" noWrap="1" transparent="1" />
-    <widget backgroundColor="#001E1E1E" name="list" position="10,94" size="630,225" selectionDisabled="1" foregroundColor="white" transparent="1" />
-    <widget backgroundColor="Kravenbg6" name="locale" conditional="locale" position="10,334" size="630,27" font="Regular;22" foregroundColor="KravenFont1" transparent="1" noWrap="1" />
+  <screen name="VirtualKeyBoard" position="0,0" backgroundColor="transparent" title="Virtual KeyBoard" flags="wfNoBorder" size="1280,720" zPosition="99">
+	<!--*VirtualKeyBoard*-->
+	<ePixmap pixmap="KravenHD/backg.png" position="0,0" size="1280,720" zPosition="-10" />
+	<ePixmap pixmap="KravenHD/graphics/virtualkeyboard.png" position="285,128" size="710,464" zPosition="-9" alphatest="blend" />
+	<widget backgroundColor="Kravenbg6" source="Title" render="Label" position="325,152" size="630,34" font="Regular2;27" foregroundColor="KravenFont2" transparent="1" noWrap="1" />
+    <widget backgroundColor="Kravenbg6" name="prompt" conditional="prompt" position="325,204" size="630,27" font="Regular;22" foregroundColor="KravenFont2" transparent="1" noWrap="1" />
+    <eLabel backgroundColor="KravenBorder" position="325,241" size="630,2" zPosition="-1" />
+    <eLabel backgroundColor="KravenBorder" position="325,279" size="630,2" zPosition="-1" />
+    <eLabel backgroundColor="KravenBorder" position="325,241" size="2,40" zPosition="-1" />
+    <eLabel backgroundColor="KravenBorder" position="953,241" size="2,40" zPosition="-1" />
+    <widget backgroundColor="Kravenbg6" name="text" position="327,243" size="626,35" font="Regular;28" foregroundColor="KravenFont1" valign="center" noWrap="1" transparent="1" />
+    <widget backgroundColor="#001E1E1E" name="list" position="325,290" size="630,225" selectionDisabled="1" foregroundColor="white" transparent="1" />
+    <widget backgroundColor="Kravenbg6" name="locale" conditional="locale" position="325,530" size="630,27" font="Regular;22" foregroundColor="KravenFont1" transparent="1" noWrap="1" />
   </screen>
 
   <screen name="InputBox" position="center,333" size="520,92" title="Input" flags="wfBorder" zPosition="1" backgroundColor="Kravenbg6">

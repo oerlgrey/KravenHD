@@ -353,7 +353,7 @@
 	</screen>
 	
 	<screen name="infobar-style-x2-z1-infobox-sat">
-	  <widget backgroundColor="KravenIBbg" font="Regular;27" position="853,34" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="80,33" render="Label" source="session.CurrentService" transparent="1">
+	  <widget backgroundColor="KravenIBbg" font="Regular;27" position="853,34" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="91,33" render="Label" source="session.CurrentService" transparent="1">
 		<convert type="KravenHDServiceName2">OrbitalPos</convert>
 	  </widget>
 	  <widget render="Label" font="Regular;27" size="100,33" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="918,34" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" source="session.FrontendStatus">
@@ -362,7 +362,7 @@
 	</screen>
 	
 	<screen name="infobar-style-x2-z1-infobox-db">
-	  <widget backgroundColor="KravenIBbg" font="Regular;27" position="853,34" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="80,33" render="Label" source="session.CurrentService" transparent="1">
+	  <widget backgroundColor="KravenIBbg" font="Regular;27" position="853,34" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="91,33" render="Label" source="session.CurrentService" transparent="1">
 		<convert type="KravenHDServiceName2">OrbitalPos</convert>
 	  </widget>
 	  <widget render="Label" font="Regular;27" size="100,33" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="918,34" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" source="session.FrontendStatus">

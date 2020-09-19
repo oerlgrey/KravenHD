@@ -2408,6 +2408,16 @@ class ActivateSkinSettings:
 		### bsWindow
 		self.makebsWindowpng()
 
+		### VirtualKeyBoard
+		if config.plugins.KravenHD.PopupStyle.value == "popup-grad-trans":
+			self.changeColor("virtualkeyboard_gr_tr","virtualkeyboard",self.skincolorbackgroundcolor,None)
+		elif config.plugins.KravenHD.PopupStyle.value == "popup-grad":
+			self.changeColor("virtualkeyboard_gr","virtualkeyboard",self.skincolorbackgroundcolor,None)
+		elif config.plugins.KravenHD.PopupStyle.value == "popup-box-trans":
+			self.changeColor("virtualkeyboard_bx_tr","virtualkeyboard",self.skincolorbackgroundcolor,config.plugins.KravenHD.Border.value)
+		elif config.plugins.KravenHD.PopupStyle.value == "popup-box":
+			self.changeColor("virtualkeyboard_bx","virtualkeyboard",self.skincolorbackgroundcolor,config.plugins.KravenHD.Border.value)
+
 		### SerienRecorder
 		if config.plugins.KravenHD.SerienRecorder.value == "serienrecorder":
 			self.appendSkinFile(self.data + config.plugins.KravenHD.SerienRecorder.value + ".xml")
