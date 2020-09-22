@@ -576,15 +576,15 @@
 	</screen>
 	
 	<screen name="channelselection-style-minitv-small">
-	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="63,545" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
+	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="63,584" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenHDSingleEpgList" position="63,791" size="624,164" transparent="1" noWrap="1">
+      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenHDSingleEpgList" position="63,834" size="624,123" transparent="1" noWrap="1">
       </widget>
 	</screen>
 	
 	<screen name="channelselection-style-minitv-big">
-	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="63,543" size="624,276" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
+	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="63,584" size="624,230" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
       </widget>
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenHDSingleEpgList" position="63,819" size="624,138" transparent="1" noWrap="1">
@@ -592,18 +592,18 @@
 	</screen>
 	
 	<screen name="channelselection-style-minitv-small-prime">
-	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="63,545" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
+	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="63,584" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenHDSingleEpgList" position="63,791" size="624,123" transparent="1" noWrap="1">
+      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenHDSingleEpgList" position="63,834" size="624,82" transparent="1" noWrap="1">
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,914" size="624,41" transparent="1" noWrap="1">
+      <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="63,916" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenHDEventsInfo">PrimeTime,noDuration</convert>
       </widget>
 	</screen>
 	
 	<screen name="channelselection-style-minitv-big-prime">
-	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="63,543" size="624,276" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
+	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="63,584" size="624,230" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
       </widget>
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenHDSingleEpgList" position="63,819" size="624,92" transparent="1" noWrap="1">
@@ -614,15 +614,15 @@
 	</screen>
 	
 	<screen name="channelselection-style-minitv4-small">
-	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="1233,545" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
+	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="1233,584" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenHDSingleEpgList" position="1233,791" size="624,164" transparent="1" noWrap="1">
+      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenHDSingleEpgList" position="1233,834" size="624,123" transparent="1" noWrap="1">
       </widget>
 	</screen>
 	
 	<screen name="channelselection-style-minitv4-big">
-	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="1233,543" size="624,276" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
+	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="1233,584" size="624,230" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
       </widget>
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenHDSingleEpgList" position="1233,819" size="624,138" transparent="1" noWrap="1">
@@ -630,10 +630,10 @@
 	</screen>
 	
 	<screen name="channelselection-style-minitv4-small-prime">
-	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="1233,545" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
+	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;32" position="1233,584" size="624,246" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
       </widget>
-      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenHDSingleEpgList" position="1233,791" size="624,123" transparent="1" noWrap="1">
+      <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;32" source="ServiceEvent" render="KravenHDSingleEpgList" position="1233,834" size="624,82" transparent="1" noWrap="1">
       </widget>
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenPrime" font="Regular;32" source="ServiceEvent" render="Label" position="1233,914" size="624,41" transparent="1" noWrap="1">
         <convert type="KravenHDEventsInfo">PrimeTime,noDuration</convert>
@@ -641,7 +641,7 @@
 	</screen>
 	
 	<screen name="channelselection-style-minitv4-big-prime">
-	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="1233,543" size="624,276" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
+	  <widget foregroundColor="KravenFont1" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=5,oneshot=1" font="Regular;36" position="1233,584" size="624,230" source="ServiceEvent" valign="top" backgroundColor="Kravenbg2" transparent="1" >
         <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
       </widget>
       <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont2" font="Regular;36" source="ServiceEvent" render="KravenHDSingleEpgList" position="1233,819" size="624,92" transparent="1" noWrap="1">

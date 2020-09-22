@@ -317,8 +317,8 @@
   <screen name="FritzCallSetup" position="0,0" size="1920,1080" flags="wfNoBorder" title="FritzCallSetup" backgroundColor="transparent">
 	<!--*FritzCallSetup*-->
 	<eLabel text="FritzCall Setup" position="63,10" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;50" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="consideration" position="63,120" size="1104,135" font="Regular2;30" transparent="1" foregroundColor="KravenFont2" />
-    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,285" size="1104,675" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,630" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="consideration" position="204,753" size="822,202" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
     <panel name="Colorbuttons"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -951,8 +951,8 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerFilterEditor" position="0,0" size="1920,1080" title="Edit AutoTimer Filters">
 	<!--*AutoTimerFilterEditor*-->
     <panel name="Title-big"/>
-	<widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,810" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
-	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
+	<widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,630" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+	<widget name="HelpWindow" position="204,753" size="822,202" zPosition="98" transparent="1" alphatest="blend" />
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
     <panel name="Colorbuttons"/>
@@ -2378,8 +2378,8 @@
 
   <screen name="MSNWeatherPluginEntryConfigScreen" position="0,0" size="1920,1080" title="WeatherPlugin: Edit Entry" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*MSNWeatherPluginEntryConfigScreen*-->
-    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,810" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
-	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,630" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+	<widget name="HelpWindow" position="204,753" size="822,202" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -2390,7 +2390,7 @@
 
   <screen name="MSNWeatherPluginSearch" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*MSNWeatherPluginSearch*-->
-    <widget backgroundColor="Kravenbg3" name="entrylist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="90" selectionPixmap="KravenHD/graphics/sel_60.png" position="63,120" size="1104,810" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="entrylist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="90" selectionPixmap="KravenHD/graphics/sel_60.png" position="63,120" size="1104,630" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
