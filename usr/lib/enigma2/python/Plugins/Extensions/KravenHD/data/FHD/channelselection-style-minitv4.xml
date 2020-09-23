@@ -2,28 +2,28 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection">
     <!--*ChannelSelection*-->
     <widget backgroundColor="Kravenbg2" scrollbarMode="showOnDemand" picServiceEventProgressbar="KravenHD/progress/progress52.png" colorEventProgressbar="KravenProgress" colorEventProgressbarSelected="KravenProgress" foregroundColorMarkedSelected="green" foregroundColor="KravenFont1" colorEventProgressbarBorder="KravenBorder" colorEventProgressbarBorderSelected="KravenSelFont" colorServiceDescription="KravenFont2" colorServiceDescriptionSelected="KravenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="KravenNotAvailable" name="list" position="63,115" serviceInfoFont="Regular;34" serviceItemHeight="52" selectionPixmap="KravenHD/graphics/sel_CS.png" serviceNameFont="Regular;37" serviceNumberFont="Regular;37" size="1107,832" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" progressBarWidth="78" progressbarHeight="15" transparent="1"  />
-    <widget font="Regular;45" foregroundColor="KravenFont2" position="1233,105" halign="left" render="RunningTextEmptyEpg2" size="624,60" source="ServiceEvent" backgroundColor="Kravenbg2" transparent="1" >
+    <widget font="Regular;38" foregroundColor="KravenFont2" position="1233,105" halign="left" render="Label" size="624,98" source="ServiceEvent" backgroundColor="Kravenbg2" valign="top" transparent="1" >
       <convert type="KravenHDEventName">Name</convert>
     </widget>
-    <widget source="ServiceEvent" render="Label" position="1233,170" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" transparent="1" halign="left">
+    <widget source="ServiceEvent" render="Label" position="1233,209" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" transparent="1" halign="left">
       <convert type="KravenHDEventTime">StartTime</convert>
       <convert type="KravenHDClockToText">
       </convert>
     </widget>
-    <widget position="1335,185" size="372,7" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress248.png">
+    <widget position="1335,224" size="372,7" render="Progress" source="ServiceEvent" transparent="1" zPosition="7" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress248.png">
       <convert type="KravenHDEventTime">Progress</convert>
     </widget>
-    <eLabel position="1335,188" size="372,1" backgroundColor="KravenLine" />
-    <widget source="ServiceEvent" render="Label" position="1719,170" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" transparent="1" halign="right">
+    <eLabel position="1335,227" size="372,1" backgroundColor="KravenLine" />
+    <widget source="ServiceEvent" render="Label" position="1719,209" size="90,36" font="Regular;28" foregroundColor="KravenFont1" backgroundColor="Kravenbg2" transparent="1" halign="right">
       <convert type="KravenHDEventTime">EndTime</convert>
       <convert type="KravenHDClockToText">Format:%H:%M</convert>
     </widget>
-    <widget source="session.VideoPicture" render="Pig" position="1233,216" size="576,324" zPosition="3" backgroundColor="transparent" />
-    <eLabel backgroundColor="#00000000" position="1233,216" size="576,324" transparent="0" zPosition="2" />
-    <eLabel backgroundColor="KravenBorder2" position="1233,216" size="576,4" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="1233,536" size="576,4" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="1233,216" size="4,324" transparent="0" zPosition="4" />
-    <eLabel backgroundColor="KravenBorder2" position="1805,216" size="4,324" transparent="0" zPosition="4" />
+    <widget source="session.VideoPicture" render="Pig" position="1233,255" size="576,324" zPosition="3" backgroundColor="transparent" />
+    <eLabel backgroundColor="#00000000" position="1233,255" size="576,324" transparent="0" zPosition="2" />
+    <eLabel backgroundColor="KravenBorder2" position="1233,255" size="576,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="1233,575" size="576,4" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="1233,255" size="4,324" transparent="0" zPosition="4" />
+    <eLabel backgroundColor="KravenBorder2" position="1805,255" size="4,324" transparent="0" zPosition="4" />
     <panel name="ChannelSelection-nontransbg-template"/>
     <panel name="gradient-cs"/>
     <panel name="channelselection-style-minitv4-small"/>
