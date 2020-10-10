@@ -165,7 +165,8 @@ LanguageList = [
 	("zh_cn", _("Chinese Simplified (zh_cn)")),
 	("tr", _("Turkish")),
 	("hr", _("Croatian")),
-	("ca", _("Catalan"))
+	("ca", _("Catalan")),
+	("sk", _("Slovak"))
 	]
 
 TransList = [
