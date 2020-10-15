@@ -1,9 +1,9 @@
 Package: enigma2-plugin-skins-kravenhd
-Version: 7.7.7
+Version: 7.8.0
 Section: misc
 Priority: optional
 Architecture: all
-Depends: python-imaging, python-subprocess, python-requests, enigma2-plugin-systemplugins-mphelp
+Depends: python-imaging, python-subprocess, python-requests, python-lxml, enigma2-plugin-systemplugins-mphelp
 Maintainer: Team Kraven
 Description: Skin for Enigma2
 Source:
