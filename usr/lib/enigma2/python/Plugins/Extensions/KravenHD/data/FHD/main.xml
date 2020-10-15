@@ -278,8 +278,8 @@
 	<!--*Ipkg*-->
 	<eLabel text="Installing Software..." position="63,10" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;50" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
     <widget name="activityslider" borderColor="KravenBorder" borderWidth="3" position="63,120" size="1104,22" transparent="1" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress736.png" />
-    <widget backgroundColor="Kravenbg3" font="Regular;30" foregroundColor="KravenFont1" name="package" position="63,165" size="1104,37" transparent="1" />
-    <widget backgroundColor="Kravenbg3" font="Regular;30" foregroundColor="KravenFont1" name="status" position="63,225" size="1104,75" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular;32" foregroundColor="KravenFont1" name="package" position="63,165" size="1104,41" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular;32" foregroundColor="KravenFont1" name="status" position="63,225" size="1104,82" transparent="1" />
     <widget name="slider" borderColor="KravenBorder" borderWidth="3" position="63,360" size="1104,22" transparent="1" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress736.png" />
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -1517,8 +1517,8 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UpdatePlugin" position="0,0" size="1920,1080" title="Software Update...">
 	<!--*UpdatePlugin*-->
     <widget name="activityslider" borderColor="KravenBorder" borderWidth="3" position="63,120" size="1104,22" transparent="1" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress736.png" />
-    <widget backgroundColor="Kravenbg3" font="Regular;30" foregroundColor="KravenFont1" position="78,165" render="Label" size="1074,37" source="package" transparent="1" />
-    <widget backgroundColor="Kravenbg3" font="Regular;30" foregroundColor="KravenFont1" position="78,225" render="Label" size="1074,75" source="status" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular;32" foregroundColor="KravenFont1" position="63,165" render="Label" size="1104,41" source="package" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular;32" foregroundColor="KravenFont1" position="63,225" render="Label" size="1104,82" source="status" transparent="1" />
     <widget name="slider" borderColor="KravenBorder" borderWidth="3" position="63,360" size="1104,22" transparent="1" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress736.png" />
     <panel name="Title-big"/>
 	<!-- Logo -->

@@ -142,33 +142,6 @@ BackgroundSelfTextureList.append(("texture", _("texture")))
 BackgroundSelfGradientTextureList = deepcopy(BackgroundSelfGradientList)
 BackgroundSelfGradientTextureList.append(("texture", _("texture")))
 
-LanguageList = [
-	("de", _("Deutsch")),
-	("en", _("English")),
-	("ru", _("Russian")),
-	("it", _("Italian")),
-	("es", _("Spanish (es)")),
-	("sp", _("Spanish (sp)")),
-	("uk", _("Ukrainian (uk)")),
-	("ua", _("Ukrainian (ua)")),
-	("pt", _("Portuguese")),
-	("ro", _("Romanian")),
-	("pl", _("Polish")),
-	("fi", _("Finnish")),
-	("nl", _("Dutch")),
-	("fr", _("French")),
-	("bg", _("Bulgarian")),
-	("sv", _("Swedish (sv)")),
-	("se", _("Swedish (se)")),
-	("zh_tw", _("Chinese Traditional")),
-	("zh", _("Chinese Simplified (zh)")),
-	("zh_cn", _("Chinese Simplified (zh_cn)")),
-	("tr", _("Turkish")),
-	("hr", _("Croatian")),
-	("ca", _("Catalan")),
-	("sk", _("Slovak"))
-	]
-
 TransList = [
 	("00", "0%"),
 	("0C", "5%"),
@@ -888,19 +861,40 @@ config.plugins.KravenHD.FileCommander = ConfigSelection(default="filecommander-h
 				("filecommander-hor", _("horizontal")),
 				("filecommander-ver", _("vertical"))
 				])
-
-config.plugins.KravenHD.weather_cityname = ConfigText(default = "")
-config.plugins.KravenHD.weather_language = ConfigSelection(default="de", choices = LanguageList)
-
-config.plugins.KravenHD.weather_search_over = ConfigSelection(default="ip", choices = [
-				("ip", _("Auto (IP)")),
-				("name", _("Search String"))
 				])
 
-config.plugins.KravenHD.weather_accu_latlon = ConfigText(default = "")
-config.plugins.KravenHD.weather_accu_apikey = ConfigText(default = "")
-config.plugins.KravenHD.weather_accu_id = ConfigText(default = "")
-config.plugins.KravenHD.weather_foundcity = ConfigText(default = "")
+config.plugins.KravenHD.msn_language = ConfigSelection(default="de-DE", choices = [
+				("de-DE", _("Deutsch")),
+				("en-US", _("English")),
+				("ru-RU", _("Russian")),
+				("it-IT", _("Italian")),
+				("es-ES", _("Spanish")),
+				("uk-UA", _("Ukrainian")),
+				("pt-PT", _("Portuguese")),
+				("ro-RO", _("Romanian")),
+				("pl-PL", _("Polish")),
+				("fi-FI", _("Finnish")),
+				("nl-NL", _("Dutch")),
+				("fr-FR", _("French")),
+				("bg-BG", _("Bulgarian")),
+				("sv-SE", _("Swedish")),
+				("tr-TR", _("Turkish")),
+				("hr-HR", _("Croatian")),
+				("ca-AD", _("Catalan")),
+				("sk-SK", _("Slovak"))
+				])
+
+config.plugins.KravenHD.msn_searchby = ConfigSelection(default="auto-ip", choices = [
+				("auto-ip", _("IP")),
+				("location", _("Enter location manually"))
+				])
+
+SearchResultList = []
+config.plugins.KravenHD.msn_list = ConfigSelection(default = "", choices = SearchResultList)
+
+config.plugins.KravenHD.msn_cityfound = ConfigText(default = "")
+config.plugins.KravenHD.msn_cityname = ConfigText(default = "")
+config.plugins.KravenHD.msn_code = ConfigText(default = "")
 
 config.plugins.KravenHD.PlayerClock = ConfigSelection(default="player-classic", choices = [
 				("player-classic", _("standard")),
@@ -1125,9 +1119,9 @@ class ActivateSkinSettings:
 		#weather
 		self.actWeatherstyle="none"
 		if self.InternetAvailable:
-			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1", "infobar-style-x3", "infobar-style-z2", "infobar-style-zz1", "infobar-style-zz2", "infobar-style-zz3", "infobar-style-zzz1"):
+			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x3","infobar-style-z2","infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1"):
 				self.actWeatherstyle=config.plugins.KravenHD.WeatherStyle.value
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-z1"):
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
 				if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/plugin.py"):
 					self.actWeatherstyle=config.plugins.KravenHD.WeatherStyle3.value
 				else:
@@ -1599,14 +1593,14 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['size="70,70" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 60" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['size="100,100" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="100,100" render="Label" font="Meteo; 1000" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['MeteoIcon</convert>', 'MeteoFont</convert>'])
+				self.skinSearchAndReplace.append(['"KravenHDWeather">icon', '"KravenHDWeather">meteo'])
 		else:
 			if config.plugins.KravenHD.WeatherView.value == "meteo":
 				self.skinSearchAndReplace.append(['size="75,75" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="75,75" render="Label" font="Meteo;60" halign="right" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['size="75,75" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend"', 'size="75,75" render="Label" font="Meteo;67" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['size="105,105" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="105,105" render="Label" font="Meteo;90" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['size="150,150" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="150,150" render="Label" font="Meteo;1500" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['MeteoIcon</convert>', 'MeteoFont</convert>'])
+				self.skinSearchAndReplace.append(['"KravenHDWeather">icon', '"KravenHDWeather">meteo'])
 
 		### Meteo-Font
 		if config.plugins.KravenHD.MeteoColor.value == "meteo-dark":
@@ -2095,9 +2089,9 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-ecminfo"/>'])
 
 		### Infobar weather-style
-		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1", "infobar-style-x3", "infobar-style-z2", "infobar-style-zz1", "infobar-style-zz2", "infobar-style-zz3", "infobar-style-zzz1"):
+		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x3","infobar-style-z2","infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1"):
 			self.actWeatherstyle = config.plugins.KravenHD.WeatherStyle.value
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-z1"):
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
 			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/plugin.py"):
 				self.actWeatherstyle = config.plugins.KravenHD.WeatherStyle3.value
 			else:
@@ -2262,7 +2256,7 @@ class ActivateSkinSettings:
 			### Timeshift_begin
 			self.appendSkinFile(self.data + "timeshift-begin.xml")
 
-			if self.actWeatherstyle in ("weather-big", "weather-left"):
+			if self.actWeatherstyle in ("weather-big","weather-left"):
 				if config.plugins.KravenHD.SystemInfo.value == "systeminfo-bigsat":
 					self.appendSkinFile(self.data + "timeshift-begin-leftlow.xml")
 				else:
@@ -2276,7 +2270,7 @@ class ActivateSkinSettings:
 			self.appendSkinFile(self.data + "timeshift-end.xml")
 
 			### InfobarTunerState
-			if self.actWeatherstyle in ("weather-big", "weather-left", "netatmobar"):
+			if self.actWeatherstyle in ("weather-big","weather-left","netatmobar"):
 				if config.plugins.KravenHD.SystemInfo.value == "systeminfo-bigsat":
 					self.appendSkinFile(self.data + "infobartunerstate-low.xml")
 				else:
