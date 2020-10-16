@@ -861,7 +861,6 @@ config.plugins.KravenHD.FileCommander = ConfigSelection(default="filecommander-h
 				("filecommander-hor", _("horizontal")),
 				("filecommander-ver", _("vertical"))
 				])
-				])
 
 config.plugins.KravenHD.msn_language = ConfigSelection(default="de-DE", choices = [
 				("de-DE", _("Deutsch")),
