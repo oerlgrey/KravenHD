@@ -3,36 +3,14 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2020-08-08 20:24+0200\n"
+"PO-Revision-Date: 2020-10-16 17:43+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
-"X-Generator: Poedit 2.3\n"
-
-msgid ""
-"\n"
-"\n"
-"No data for GM code,\n"
-"fallback to IP"
-msgstr ""
-"\n"
-"\n"
-"Brak danych dla kodu GM,\n"
-"Korzystanie z IP"
-
-msgid ""
-"\n"
-"\n"
-"No data for search string,\n"
-"fallback to IP"
-msgstr ""
-"\n"
-"\n"
-"Brak danych dla wyszukiwanego kodu,\n"
-"Korzystanie z IP"
+"X-Generator: Poedit 2.4.1\n"
 
 msgid "   "
 msgstr "zegar"
@@ -62,28 +40,19 @@ msgid "          red"
 msgstr "          Czerwony"
 
 msgid " could not be saved!"
-msgstr "nie można zapisać"
-
-msgid " from "
-msgstr " z "
+msgstr "nie można zapisać"
 
 msgid " saved successfully."
 msgstr " Zapisano pomyślnie."
 
-msgid "% humidity"
-msgstr "% Wilgotność"
-
 msgid "'Not available'-Font"
 msgstr "\"Niedostępny\" - czcionka"
-
-msgid ", feels "
-msgstr ", odczuwalna"
 
 msgid "0 (hardcoded)"
 msgstr "0 (zakodowane)"
 
 msgid "ANTIALIASING BRIGHTNESS ________________________________________________________________"
-msgstr "JASNOŚĆ WYGŁADZENIA ________________________________________________________________"
+msgstr "JASNOŚĆ WYGŁADZENIA ________________________________________________________________"
 
 msgid "AVG load:"
 msgstr "Obciążenie systemu:"
@@ -124,11 +93,6 @@ msgstr "Urodziny"
 msgid "Birthday Reminder Settings"
 msgstr "Ustawienia przypomnienia o urodzinach"
 
-msgid ""
-"Blowing\n"
-" snow"
-msgstr "Śnieżyca"
-
 msgid "Blustery"
 msgstr "Wietrznie"
 
@@ -139,10 +103,10 @@ msgid "CAM/Card unsupported"
 msgstr "CAM/Card nieobsługiwane"
 
 msgid "CHANNELLIST _______________________________________________________________"
-msgstr "LISTA KANAłóW ________________________________________________________________"
+msgstr "LISTA KANAłÓW ____________________________________________________________"
 
 msgid "CLOCK _____________________________________________________________________"
-msgstr "ZEGAR _______________________________________________________________________"
+msgstr "ZEGAR ____________________________________________________________________"
 
 msgid "CPU + Load"
 msgstr "CPU + obciążenie systemu"
@@ -231,14 +195,8 @@ msgstr "Wybierz spośród różnych opcji, aby pokazać zegar w odtwarzaczu."
 msgid "Choose from different options to show the weather in the infobar."
 msgstr "Wybierz jedną z różnych opcji, aby pokazać pogodę w pasku informacyjnym."
 
-msgid "Choose from different options to specify your location."
-msgstr "Wybierz spośród różnych opcji, aby określić swoją lokalizację."
-
 msgid "Choose from different options where to display the ECM informations."
 msgstr "Wybierz spośród różnych opcji wyświetlania informacji systemowych."
-
-msgid "Choose from different servers for the weather data."
-msgstr "Wybierz serwer danych pogodowych."
 
 msgid "Choose from different styles for CoolTVGuide."
 msgstr "Wybierz styl dla CoolTVGuide."
@@ -522,9 +480,6 @@ msgstr "Zegar"
 msgid "Clock-Style"
 msgstr "Styl zegara"
 
-msgid "Cloudy"
-msgstr "Pochmurno"
-
 msgid "Cold"
 msgstr "Zimno"
 
@@ -555,26 +510,11 @@ msgstr "Czy na pewno chcesz teraz ponownie uruchomić ?"
 msgid "Do you really want to reset all values to the selected default profile?"
 msgstr "Czy na pewno chcesz zresetować wszystkie wartości do wybranego domyślnego profilu?"
 
-msgid "Drizzle"
-msgstr "Mżawka"
-
 msgid "Dual TV"
 msgstr "Podwójny-TV"
 
 msgid "Dual TV 2"
 msgstr "Podwójny-TV 2"
-
-msgid "Dust"
-msgstr "Kurz"
-
-msgid "E"
-msgstr "W"
-
-msgid "E-NE"
-msgstr "W-PW"
-
-msgid "E-SE"
-msgstr "W-PoW"
 
 msgid "ECM Infos"
 msgstr "Informacje ECM"
@@ -620,12 +560,6 @@ msgstr "Rozmiar czcionki listy EPG"
 msgid "EPGSelection-Style"
 msgstr "Wybór stylu EPG"
 
-msgid "Enter the GM code for your location:"
-msgstr "Wpisz kod GM swojej lokalizacji:"
-
-msgid "Enter the search string for your location:"
-msgstr "Wpisz wyszukany kod dla swojej lokalizacji:"
-
 msgid "Error creating Skin!"
 msgstr "Błąd podczas tworzenia Skórki!"
 
@@ -641,35 +575,14 @@ msgstr "Tytuł programu Efekt"
 msgid "Extended Preview"
 msgstr "Rozszerzony podgląd"
 
-msgid "Fair"
-msgstr "Tagi"
-
 msgid "Finished Color"
 msgstr "Kolor obejrzanych filmów"
-
-msgid "Foggy"
-msgstr "Mglisto"
 
 msgid "Free"
 msgstr "Darmowy"
 
-msgid ""
-"Freezing\n"
-" drizzle"
-msgstr ""
-"Marznąca\n"
-" mżawka"
-
-msgid ""
-"Freezing\n"
-" rain"
-msgstr "Marznący deszcz"
-
-msgid "Fri"
-msgstr "Pią."
-
 msgid "GLOBAL COLORS _____________________________________________________________"
-msgstr "GLOBALNE KOLORY ____________________________________________________________"
+msgstr "GLOBALNE KOLORY __________________________________________________________"
 
 msgid "GRAPHICALEPG _____________________________________________________________"
 msgstr "GRAFICZNE EPG ___________________________________________________________"
@@ -693,20 +606,14 @@ msgstr "Grad"
 msgid "Haze"
 msgstr "Mgła"
 
-msgid "Heavy snow"
-msgstr "Śnieżyca"
-
 msgid "Hot"
 msgstr "Gorąco"
 
-msgid "Hurricane"
-msgstr "Huragan"
-
 msgid "INFOBAR-CONTENTS _____________________________________________________________"
-msgstr "ZAWARTOŚĆ PASKA INFO_____________________________________________________________"
+msgstr "ZAWARTOŚĆ PASKA INFO_________________________________________________________"
 
 msgid "INFOBAR-LOOK _________________________________________________________________"
-msgstr "WYGLĄD PASKA INFO ____________________________________________________________"
+msgstr "WYGLĄD PASKA INFO ___________________________________________________________"
 
 msgid "Icon-Font V-Position"
 msgstr "Pozycja V czcionki ikony"
@@ -749,28 +656,11 @@ msgstr "Pasek informacyjny-Przezroczystość"
 msgid "Infobox-Contents"
 msgstr "Zawartość Infobox"
 
-msgid ""
-"Isolated\n"
-" thundershowers"
-msgstr "Przelotne opady deszczu"
-
-msgid ""
-"Isolated\n"
-" thunderstorms"
-msgstr "Przelotne burze"
-
 msgid "Kraven dark"
 msgstr "Kraven ciemny"
 
 msgid "Kraven very dark"
 msgstr "Kraven bardzo ciemny"
-
-msgid ""
-"Light\n"
-" snow showers"
-msgstr ""
-"Słabe\n"
-" opady śniegu"
 
 msgid "Lines"
 msgstr "Linie"
@@ -832,46 +722,8 @@ msgstr "MiniTV z prawej"
 msgid "MiniTV-Border"
 msgstr "MiniTV-Ramka"
 
-msgid ""
-"Mixed rain\n"
-" and hail"
-msgstr "Deszcz i grad"
-
-msgid ""
-"Mixed rain\n"
-" and sleet"
-msgstr "Deszcz i deszcz ze śniegiem"
-
-msgid ""
-"Mixed rain\n"
-" and snow"
-msgstr "Deszcz i śnieg"
-
-msgid ""
-"Mixed snow\n"
-" and sleet"
-msgstr ""
-"Śnieg\n"
-"  i deszcz ze śniegiem"
-
-msgid "Mon"
-msgstr "Pon."
-
-msgid ""
-"Mostly\n"
-" cloudy"
-msgstr ""
-"Przeważnie\n"
-" pochmurno"
-
 msgid "Move/Copy"
 msgstr "przesuń / kopiuj"
-
-msgid "N-NE"
-msgstr "P-PW"
-
-msgid "NE"
-msgstr "PW"
 
 msgid "Name & Number"
 msgstr "Nazwa & Numer"
@@ -888,12 +740,6 @@ msgstr "Nazwa duża"
 msgid "Name small"
 msgstr "Nazwa mała"
 
-msgid "No Accu ID found"
-msgstr "Nie znaleziono identyfikatora Accu ID"
-
-msgid "No data for IP"
-msgstr "Brak danych dla IP"
-
 msgid "Nobile Extended Preview"
 msgstr "Rozszerzony podgląd nobile"
 
@@ -903,28 +749,14 @@ msgstr "Podgląd nobile"
 msgid "Nobile Preview (2x OK)"
 msgstr "Podgląd nobile (2x OK)"
 
-msgid ""
-"Not\n"
-" available"
-msgstr ""
-"Nie\n"
-"  dostępny"
-
 msgid "NumberZap-Style"
 msgstr "Styl NumberZap"
 
 msgid "PROFILES __________________________________________________________________"
-msgstr "PROFILE ___________________________________________________________________"
+msgstr "PROFILE __________________________________________________________________"
 
 msgid "PVRState"
 msgstr "Stan PVR"
-
-msgid ""
-"Partly\n"
-" cloudy"
-msgstr ""
-"Częściowe\n"
-" zachmurzenie"
 
 msgid "PermanentClock-Color"
 msgstr "Stały kolor zegara"
@@ -965,9 +797,6 @@ msgstr "Pasek postępu / głośność"
 msgid "Border"
 msgstr "Ramka"
 
-msgid "Rain"
-msgstr "Deszcz"
-
 msgid "Record-State"
 msgstr "Stan nagrywania"
 
@@ -1001,17 +830,8 @@ msgstr "Kolor Czcionki Uruchomionego Wydarzenia"
 msgid "Running Event Background"
 msgstr "Kolor Tła Wydrzenia"
 
-msgid "S-SE"
-msgstr "Po-Pow"
-
-msgid "SE"
-msgstr "PoW"
-
-msgid "SU"
-msgstr "SO"
-
-msgid "Sat"
-msgstr "Sat"
+msgid "Skin Resolution"
+msgstr "Rozdzielczość skórki"
 
 msgid "Save Color"
 msgstr "Zapisz kolor"
@@ -1022,38 +842,11 @@ msgstr "Zapisz profil"
 msgid "Save skin"
 msgstr "Zapisz skin"
 
-msgid ""
-"Scattered\n"
-" showers"
-msgstr ""
-"Przelotne\n"
-" opady"
-
-msgid ""
-"Scattered\n"
-" snow showers"
-msgstr ""
-"Przelotne\n"
-" opady śniegu"
-
-msgid ""
-"Scattered\n"
-" thunderstorms"
-msgstr ""
-"Przelotne\n"
-" burze"
-
 msgid "Screennames"
 msgstr "Nazwa ekranu"
 
 msgid "Scrollbars"
 msgstr "Pasek przewijania"
-
-msgid "Search String"
-msgstr "Szukana fraza"
-
-msgid "Search by"
-msgstr "Wyszukaj według"
 
 msgid "Secondary-Font"
 msgstr "Drugi pasek info-czcionka"
@@ -1085,13 +878,6 @@ msgstr "Rozmiar czcionki dla numeru kanału/-nazwy"
 msgid "Set the intensity of this basic color with the slider."
 msgstr "Ustaw intensywność tego podstawowego koloru za pomocą suwaka."
 
-msgid ""
-"Severe\n"
-" thunderstorms"
-msgstr ""
-"Silne\n"
-" burze"
-
 msgid "Show 'free to air'"
 msgstr "Pokaż \"Kanał bezpłatny\""
 
@@ -1101,60 +887,17 @@ msgstr "Pokaż informacje ECM"
 msgid "Show Infobar-Background"
 msgstr "Pokaż tło paska informacji"
 
-msgid "Showers"
-msgstr "Deszcz"
-
-msgid "Sleet"
-msgstr "Śnieg z deszczem"
-
-msgid "Smoky"
-msgstr "Dymny"
-
-msgid "Snow"
-msgstr "Śnieg"
-
-msgid ""
-"Snow\n"
-" flurries"
-msgstr ""
-"Śnieg\n"
-" śnieżyca"
-
-msgid "Snow showers"
-msgstr "Opady śniegu"
-
-msgid "Specify any search string for your location (zip/city/district/state single or combined). Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
-msgstr "Określ tryb wyszukiwania swojej lokalizacji (zip kod / miasto / dzielnica ). Naciśnij OK, aby użyć wirtualnej klawiatury. Wejdź w górę lub w dół menu, aby rozpocząć wyszukiwanie."
-
-msgid "Specify any search string for your location (zip(unprecise!)/city/district/state single or comma-separated). Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
-msgstr "Podaj dowolny ciąg wyszukiwania dla swojej lokalizacji (zip (nieprecyzyjne!) / Miasto / dzielnica / stan pojedynczy lub oddzielony przecinkami). Naciśnij OK, aby użyć wirtualnej klawiatury. Przejdź w górę lub w dół menu, aby rozpocząć wyszukiwanie."
-
-msgid "Specify the GM code for your location. You can find it at https://weather.codes. Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
-msgstr "Określ kod GM swojej lokalizacji. Możesz go znaleźć na https://weather.codes. Naciśnij OK, aby użyć wirtualnej klawiatury. Wejdź w górę lub w dół menu, aby rozpocząć wyszukiwanie."
-
 msgid "Specify the language for the weather output."
 msgstr "Wybierz język dla danych pogodowych."
 
 msgid "Specify the time for your primetime."
 msgstr "Określ czas na swój czas główny."
 
-msgid "Sun"
-msgstr "Nie."
-
-msgid "Sunny"
-msgstr "Słonecznie"
-
 msgid "System-Infos"
 msgstr "System-Info"
 
 msgid "System: unknown"
 msgstr "System: nieznany"
-
-msgid "TH"
-msgstr "Czw."
-
-msgid "TU"
-msgstr "Wto."
 
 msgid "Temperature + Fan"
 msgstr "Temperatura + wentylator"
@@ -1225,30 +968,11 @@ msgstr "Ta sekcja oferuje wszystkie ustawienia pogody."
 msgid "This sections offers offers all basic color settings."
 msgstr "Ta sekcja oferuje wszystkie podstawowe ustawienia kolorów."
 
-msgid "Thu"
-msgstr "Czw"
-
-msgid "Thundershowers"
-msgstr "Burze"
-
-msgid "Thunderstorms"
-msgstr "Burze"
-
 msgid "TimerEdit-Style"
 msgstr "Edytor timera-Styl"
 
 msgid "TimerList-Style"
 msgstr "Lista timera-Styl"
-
-msgid ""
-"Tropical\n"
-" storm"
-msgstr ""
-"Burza\n"
-" Tropikalna"
-
-msgid "Tue"
-msgstr "Wto"
 
 msgid "Tuner number"
 msgstr "Tunery"
@@ -1280,9 +1004,6 @@ msgstr "Pionowe-EPG-styl"
 msgid "Volume"
 msgstr "Głośność"
 
-msgid "WE"
-msgstr "Śro."
-
 msgid "WEATHER ___________________________________________________________________"
 msgstr "POGODA ____________________________________________________________________"
 
@@ -1292,9 +1013,6 @@ msgstr "Kolor częściowo obejrzanych filmów"
 msgid "Weather"
 msgstr "Pogoda"
 
-msgid "Weather-ID"
-msgstr "Pogoda-ID"
-
 msgid "Weather-Icon-Size"
 msgstr "Pogoda-Ikona-Wielkość"
 
@@ -1303,9 +1021,6 @@ msgstr "Pogoda-Styl"
 
 msgid "Weather2"
 msgstr "Pogoda 2"
-
-msgid "Wed"
-msgstr "Śro"
 
 msgid "Windy"
 msgstr "Wietrznie"
@@ -1610,9 +1325,6 @@ msgstr "brak dostępnych informacji"
 msgid "no record tuner"
 msgstr "brak wskaźnika nagrywania dla tunerów"
 
-msgid "not available"
-msgstr "niedostępne"
-
 msgid "not available for openATV"
 msgstr "niedostępne dla openATV"
 
@@ -1905,18 +1617,6 @@ msgid "Choose whether AGC/SNR are displayed or not."
 msgstr "Wybierz, czy mają być wyświetlane AGC/SNR."
 
 msgid ""
-"Press OK to enter your API Key.\n"
-"You will receive the key at\n"
-"\"https://developer.accuweather.com/\"."
-msgstr ""
-"Naciśnij OK, aby wprowadzić klucz API.\n"
-"Klucz otrzymasz na\n"
-"\"https://developer.accuweather.com/\"."
-
-msgid "Enter your API Key:"
-msgstr "Wprowadź swój klucz API:"
-
-msgid ""
 "Choose from different styles for SecondInfobar. \n"
 "Activate the SecondInfobar in the \n"
 "OSD settings. \n"
@@ -1995,7 +1695,7 @@ msgid "Progress-Background"
 msgstr "Tło postępu"
 
 msgid "Progress-Border/Line"
-msgstr "Progress-Border / Line"
+msgstr "Postęp-Linia graniczna"
 
 msgid "Progress-Border Color"
 msgstr "Postęp Kolor Ramki"
@@ -2035,3 +1735,61 @@ msgstr "Scenariusz:"
 #: KravenHDTextTranslator.py
 msgid "Current Weather"
 msgstr "Obecna Pogoda"
+
+msgid ""
+"Enter your location.\n"
+"Press OK to use the virtual keyboard.\n"
+"Press the red button to search for the weather code."
+msgstr ""
+"Podaj swoją lokalizację.\n"
+"Naciśnij OK, aby użyć wirtualnej klawiatury.\n"
+"Naciśnij czerwony przycisk, aby wyszukać kod pogody."
+
+msgid "Enter your location:"
+msgstr "Podaj swoją lokalizację:"
+
+msgid "Enter location manually"
+msgstr "Wprowadź lokalizację ręcznie"
+
+msgid "No valid location found."
+msgstr "Nie znaleziono prawidłowej lokalizacji."
+
+msgid "Weather-Code found:\n"
+msgstr "Znaleziono kod pogody:\n"
+
+msgid "No valid Weather-Code found."
+msgstr "Nie znaleziono prawidłowego kodu pogody."
+
+msgid "Choose your location:"
+msgstr "Wybierz swoją lokalizację:"
+
+msgid "Search Code"
+msgstr "Kod wyszukiwania"
+
+msgid "Search option"
+msgstr "Opcja wyszukiwania"
+
+msgid "Location "
+msgstr "Lokalizacja"
+
+msgid "% humidity"
+msgstr "% Wilgotność"
+
+msgid ", feels "
+msgstr ", odczuwalna "
+
+msgid "Weather-Code:\n"
+msgstr "Kod Pogody:\n"
+
+msgid ""
+"Choose from different options to enter your settings.\n"
+"Press the red button to search for the weather code."
+msgstr ""
+"Wybierz jedną z różnych opcji, aby wprowadzić ustawienia.\n"
+"Naciśnij czerwony przycisk, aby wyszukać kod pogody."
+
+msgid "Mainmenu Fontsize ('Standard' Style)"
+msgstr "Rozmiar czcionki menu głównego (styl „Standardowy”)"
+
+msgid "Mainmenu Icons Gradient Color ('Horizontal-Icons' Style)"
+msgstr "Kolor gradientu ikon w menu głównym (styl ikon poziomych)"
