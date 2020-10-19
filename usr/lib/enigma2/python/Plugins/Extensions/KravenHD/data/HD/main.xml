@@ -2197,8 +2197,7 @@
 
   <screen name="QuickMenuDevices" position="0,0" size="1280,720" title="Devices" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*QuickmenuDevices*-->
-    <widget backgroundColor="Kravenbg3" name="lab1" position="111,148" size="618,50" font="Regular2;20" transparent="1" halign="center" foregroundColor="KravenFont2" />
-    <widget backgroundColor="Kravenbg3" source="devicelist" render="Listbox" position="42,127" size="736,450" scrollbarMode="showOnDemand" selectionPixmap="KravenHD/graphics/sel_90.png" zPosition="3" transparent="1">
+    <widget backgroundColor="Kravenbg3" source="devicelist" render="Listbox" position="42,80" size="736,510" scrollbarMode="showOnDemand" selectionPixmap="KravenHD/graphics/sel_90.png" zPosition="3" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 				 MultiContentEntryText(pos = (90, 0), size = (628, 30), font=0, text = 0),
@@ -2210,6 +2209,7 @@
 				}
 	  </convert>
     </widget>
+    <widget backgroundColor="Kravenbg3" name="lab1" position="42,81" size="736,27" font="Regular2;22" foregroundColor="KravenFont1" transparent="1" />
     <panel name="Title-big"/>
   	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -3457,8 +3457,8 @@
     <panel name="Colorbuttons"/>
   </screen>
 
-  <!--*StreamingClientsInfo*-->
-  <screen name="StreamingClientsInfo" title="Streaming clients info" position="0,0" size="1280,200" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="StreamingClientsInfo" title="Streaming clients info" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*StreamingClientsInfo*-->
 	<widget backgroundColor="Kravenbg3" name="ScrollLabel" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,360" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="Kravenbg3" name="ScrollLabel2" position="42,470" size="736,108" font="Regular2;22" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
     <panel name="Title-big"/>
