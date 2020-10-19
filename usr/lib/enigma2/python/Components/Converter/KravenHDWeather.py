@@ -59,6 +59,8 @@ class KravenHDWeather(Poll, Converter, object):
 
 	@cached
 	def getText(self):
+		global WEATHER_DATA
+		self.data = WEATHER_DATA
 		if self.type == "temp_cur":
 			return self.getTemperature_current()
 		elif self.type == "feels_like":
