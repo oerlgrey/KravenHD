@@ -2197,8 +2197,7 @@
 
   <screen name="QuickMenuDevices" position="0,0" size="1920,1080" title="Devices" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*QuickmenuDevices*-->
-    <widget backgroundColor="Kravenbg3" name="lab1" position="187,222" size="927,75" font="Regular2;30" transparent="1" halign="center" foregroundColor="KravenFont2" />
-    <widget backgroundColor="Kravenbg3" source="devicelist" render="Listbox" position="63,190" size="1104,635" scrollbarMode="showOnDemand" selectionPixmap="KravenHD/graphics/sel_90.png" zPosition="3" transparent="1">
+    <widget backgroundColor="Kravenbg3" source="devicelist" render="Listbox" position="63,120" size="1104,762" scrollbarMode="showOnDemand" selectionPixmap="KravenHD/graphics/sel_90.png" zPosition="3" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 				 MultiContentEntryText(pos = (135, 0), size = (900, 45), font=0, text = 0),
@@ -2210,6 +2209,7 @@
 				}
 	  </convert>
     </widget>
+    <widget backgroundColor="Kravenbg3" name="lab1" position="63,121" size="1104,41" font="Regular2;32" foregroundColor="KravenFont1" transparent="1" />
     <panel name="Title-big"/>
   	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -3457,8 +3457,8 @@
     <panel name="Colorbuttons"/>
   </screen>
 
-  <!--*StreamingClientsInfo*-->
   <screen name="StreamingClientsInfo" title="Streaming clients info" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*StreamingClientsInfo*-->
 	<widget backgroundColor="Kravenbg3" name="ScrollLabel" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,540" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="Kravenbg3" name="ScrollLabel2" position="63,705" size="1104,164" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
     <panel name="Title-big"/>
