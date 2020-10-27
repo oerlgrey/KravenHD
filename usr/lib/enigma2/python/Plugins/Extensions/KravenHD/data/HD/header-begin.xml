@@ -179,7 +179,7 @@
     <sub font="Regular;30" foregroundColor="orange" name="Subtitle_Italic" shadowColor="shadow" shadowOffset="3,3" />
   </subtitles>
   <windowstyle id="0" type="skinned">
-    <title font="Regular2;27" offset="40,24" />
+    <title font="Regular2;24" offset="40,26" />
     <color color="Kravenbg" name="Background" />
     <color color="KravenFont1" name="LabelForeground" />
     <color color="Kravenbg" name="ListboxBackground" />

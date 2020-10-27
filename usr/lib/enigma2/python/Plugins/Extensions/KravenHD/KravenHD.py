@@ -2482,7 +2482,7 @@ class KravenHD(ConfigListScreen, Screen):
 				cityip = self.getCityByIP()
 				iplist = []
 				try:
-					res_gc = requests.get('http://weather.service.msn.com/find.aspx?src=windows&outputview=search&weasearchstr=%s&culture=de-DE' % str(cityip), timeout=1)
+					res_gc = requests.get('http://weather.service.msn.com/find.aspx?src=windows&outputview=search&weasearchstr=' + str(cityip) + '&culture=' + str(config.plugins.KravenHD.msn_language.value), timeout=1)
 					data_gc = fromstring(res_gc.text)
 
 					for weather in data_gc.findall("./weather"):
@@ -2507,7 +2507,7 @@ class KravenHD(ConfigListScreen, Screen):
 			if option.value == "location" or option == config.plugins.KravenHD.msn_cityname:
 				citylist = []
 				try:
-					res_gc = requests.get('http://weather.service.msn.com/find.aspx?src=windows&outputview=search&weasearchstr=%s&culture=de-DE' % str(config.plugins.KravenHD.msn_cityname.value), timeout=1)
+					res_gc = requests.get('http://weather.service.msn.com/find.aspx?src=windows&outputview=search&weasearchstr=' + str(config.plugins.KravenHD.msn_cityname.value) + '&culture=' + str(config.plugins.KravenHD.msn_language.value), timeout=1)
 					data_gc = fromstring(res_gc.text)
 
 					for weather in data_gc.findall("./weather"):

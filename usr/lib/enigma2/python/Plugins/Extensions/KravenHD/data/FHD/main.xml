@@ -1016,8 +1016,8 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CiSelection" position="0,0" size="1920,1080" title="Common Interface">
 	<!--*CiSelection*-->
 	<eLabel text="Common Interface" position="63,10" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;50" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
-    <widget backgroundColor="Kravenbg3" font="Regular2;36" foregroundColor="KravenFont2" name="text" position="63,120" size="1104,42" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="entries" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" position="63,195" size="1104,675" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;35" foregroundColor="KravenFont2" name="text" position="63,120" size="1104,45" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="entries" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" position="63,180" size="1104,765" transparent="1" />
     <panel name="Colorbuttons"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -1026,8 +1026,8 @@
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MMIDialog" position="0,0" size="1920,1080" title="Common Interface">
 	<!--*MMIDialog*-->
-    <widget backgroundColor="Kravenbg3" font="Regular2;36" foregroundColor="KravenFont2" name="title" position="63,120" size="1104,42" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="entries" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" position="63,196" size="1104,675" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;35" foregroundColor="KravenFont2" name="title" position="63,120" size="1104,45" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="entries" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" position="63,180" size="1104,675" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;32" foregroundColor="KravenFont2" halign="center" name="bottom" position="63,877" size="1104,41" transparent="1" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
@@ -1283,6 +1283,7 @@
 				}
 			</convert>
     </widget>
+    <panel name="Colorbuttons"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
     <panel name="MenuOKExit"/>
@@ -1317,6 +1318,7 @@
 				}
 			</convert>
     </widget>
+    <panel name="Colorbuttons"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
     <panel name="OKExit"/>
