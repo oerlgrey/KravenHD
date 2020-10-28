@@ -1118,9 +1118,9 @@ class ActivateSkinSettings:
 		#weather
 		self.actWeatherstyle="none"
 		if self.InternetAvailable:
-			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x3","infobar-style-z2","infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1"):
+			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1", "infobar-style-x3", "infobar-style-z2", "infobar-style-zz1", "infobar-style-zz2", "infobar-style-zz3", "infobar-style-zzz1"):
 				self.actWeatherstyle=config.plugins.KravenHD.WeatherStyle.value
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-z1"):
 				if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/plugin.py"):
 					self.actWeatherstyle=config.plugins.KravenHD.WeatherStyle3.value
 				else:
@@ -1633,42 +1633,24 @@ class ActivateSkinSettings:
 			if not self.silent:
 				# ChannelSelection
 				CSitems = config.usage.serviceitems_per_page.value
-				if self.actChannelselectionstyle in ("channelselection-style-nobile-minitv", "channelselection-style-nobile-minitv3", "channelselection-style-nobile-minitv33"):
-					if (CSitems <= 9):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_45.png'])
-					if (10 <= CSitems <= 11):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_36.png'])
-					if (12 <= CSitems):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_30.png'])
-				elif self.actChannelselectionstyle in ("channelselection-style-nobile", "channelselection-style-nobile2"):
-					if (CSitems <= 11):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_70.png'])
-					if (12 <= CSitems <= 14):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_50.png'])
-					if (15 <= CSitems <= 16):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_40.png'])
-					if (17 <= CSitems <= 19):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_36.png'])
-					if (20 <= CSitems):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_30.png'])
-				elif self.actChannelselectionstyle in ("channelselection-style-minitv2", "channelselection-style-minitv-picon"):
-					if (CSitems <= 11):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_50.png'])
-					if (12 <= CSitems <= 13):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_36.png'])
-					if (14 <= CSitems):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_30.png'])
+				CSheight = ""
+				CSlines = ""
+				self.actCSItemHeight = ""
+				if config.usage.servicelist_twolines.value == True:
+					CSlines = 2
 				else:
-					if (CSitems <= 11):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_70.png'])
-					if (12 <= CSitems <= 13):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_50.png'])
-					if (14 <= CSitems <= 15):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_40.png'])
-					if (16 <= CSitems <= 18):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_36.png'])
-					if (19 <= CSitems):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_30.png'])
+					CSlines = 1
+				if self.actChannelselectionstyle in ("channelselection-style-nobile-minitv", "channelselection-style-nobile-minitv3", "channelselection-style-nobile-minitv33"):
+					CSheight = 348
+				elif self.actChannelselectionstyle in ("channelselection-style-nobile", "channelselection-style-nobile2"):
+					CSheight = 580
+				elif self.actChannelselectionstyle == "channelselection-style-minitv2":
+					CSheight = 420
+				elif self.actChannelselectionstyle == "channelselection-style-minitv-picon":
+					CSheight = 396
+				else:
+					CSheight = 560
+				self.actCSItemHeight = int(((CSheight / CSitems) * CSlines) +1)
 
 				# MovieSelection
 				MSitems = config.movielist.itemsperpage.value
@@ -2088,9 +2070,9 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(['<!-- SIB ecminfo -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-ecminfo"/>'])
 
 		### Infobar weather-style
-		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon","infobar-style-x1","infobar-style-x3","infobar-style-z2","infobar-style-zz1","infobar-style-zz2","infobar-style-zz3","infobar-style-zzz1"):
+		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1", "infobar-style-x3", "infobar-style-z2", "infobar-style-zz1", "infobar-style-zz2", "infobar-style-zz3", "infobar-style-zzz1"):
 			self.actWeatherstyle = config.plugins.KravenHD.WeatherStyle.value
-		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2","infobar-style-z1"):
+		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-z1"):
 			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/plugin.py"):
 				self.actWeatherstyle = config.plugins.KravenHD.WeatherStyle3.value
 			else:
@@ -2255,7 +2237,7 @@ class ActivateSkinSettings:
 			### Timeshift_begin
 			self.appendSkinFile(self.data + "timeshift-begin.xml")
 
-			if self.actWeatherstyle in ("weather-big","weather-left"):
+			if self.actWeatherstyle in ("weather-big", "weather-left"):
 				if config.plugins.KravenHD.SystemInfo.value == "systeminfo-bigsat":
 					self.appendSkinFile(self.data + "timeshift-begin-leftlow.xml")
 				else:
@@ -2269,7 +2251,7 @@ class ActivateSkinSettings:
 			self.appendSkinFile(self.data + "timeshift-end.xml")
 
 			### InfobarTunerState
-			if self.actWeatherstyle in ("weather-big","weather-left","netatmobar"):
+			if self.actWeatherstyle in ("weather-big", "weather-left", "netatmobar"):
 				if config.plugins.KravenHD.SystemInfo.value == "systeminfo-bigsat":
 					self.appendSkinFile(self.data + "infobartunerstate-low.xml")
 				else:
@@ -2947,6 +2929,7 @@ class ActivateSkinSettings:
 		self.makeGradientpng("sel_90", 870, 90, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
 		self.makeGradientpng("sel_110", 736, 110, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
 		self.makeGradientpng("sel_135", 736, 136, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_CS", 765, self.actCSItemHeight, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
 		if config.plugins.KravenHD.EMCSelectionColors.value == "global":
 			if config.plugins.KravenHD.EMCStyle.value in ("emc-verybigcover", "emc-verybigcover2"):
 				self.makeGradientpng("sel_28", 777, 28, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
