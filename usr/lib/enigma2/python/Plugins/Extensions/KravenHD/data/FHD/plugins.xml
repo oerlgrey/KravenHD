@@ -952,7 +952,7 @@
 	<!--*AutoTimerFilterEditor*-->
     <panel name="Title-big"/>
 	<widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,630" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
-	<widget name="HelpWindow" position="204,753" size="822,202" zPosition="98" transparent="1" alphatest="blend" />
+	<widget name="HelpWindow" position="63,753" size="1104,202" zPosition="98" transparent="1" alphatest="blend" />
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
     <panel name="Colorbuttons"/>
@@ -2379,7 +2379,7 @@
   <screen name="MSNWeatherPluginEntryConfigScreen" position="0,0" size="1920,1080" title="WeatherPlugin: Edit Entry" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*MSNWeatherPluginEntryConfigScreen*-->
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,630" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
-	<widget name="HelpWindow" position="204,753" size="822,202" zPosition="98" transparent="1" alphatest="blend" />
+	<widget name="HelpWindow" position="63,753" size="1104,202" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>

@@ -264,7 +264,7 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CoolChannelGuide" position="0,0" size="1280,720" title="Cool Channel Guide">
 	<!--*CoolChannelGuide*-->
     <eLabel text="Cool Channel Guide" position="42,7" size="400,46" backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenIBGFont2" transparent="1" halign="left" />
-    <widget backgroundColor="KravenIBbg2" source="Title" render="Label" font="Regular;22" foregroundColor="KravenIBGFont2" position="488,16" size="450,27" noWrap="1" transparent="1" zPosition="3" />
+    <widget backgroundColor="KravenIBbg2" source="Title" render="Label" font="Regular;22" foregroundColor="KravenIBGFont2" position="454,16" size="480,27" noWrap="1" transparent="1" zPosition="3" />
     <widget alphatest="blend" position="124,109" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
@@ -286,8 +286,8 @@
     <widget backgroundColor="Kravenbg" font="Regular;20" foregroundColor="KravenFont1" halign="left" position="42,370" size="384,156" source="Event" render="KravenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=5,startdelay=5000,wrap,always=0" transparent="1" zPosition="1">
       <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
-    <widget CoolBar="0" CoolBarColor="KravenFont1" CoolCurrentCol="KravenSelFont" CoolDurationColor="KravenFont1" CoolDurationPos="714" CoolDurationSize="70" CoolEventColor="KravenFont1" CoolEventFont="Regular;22" CoolEventHPos="3" CoolEventPos="317" CoolEventSize="340" CoolFont="Regular;24" CoolMarkerHPos="1" CoolMarkerPicHPos="2" CoolMarkerPicPos="2" CoolMarkerPos="140" CoolPico="28" CoolPicoHPos="1" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="KravenFont1" CoolServiceFont="Regular;24" CoolServiceHPos="0" CoolServicePos="2" CoolServiceSize="300" CoolTime="1" CoolTimeHPos="3" CoolTimePos="666" CoolTimeSize="120" CoolTunerCol="KravenFont1" backgroundColor="Kravenbg" foregroundColor="KravenFont1" itemHeight="32" selectionPixmap="KravenHD/graphics/sel_36.png" name="list" position="468,72" size="770,576" transparent="1" zPosition="25" />
-    <widget source="Service" render="Label" backgroundColor="Kravenbg" font="Regular;20" foregroundColor="KravenFont2" halign="left" position="42,540" size="384,25" transparent="1" valign="center">
+    <widget CoolBar="0" CoolBarColor="KravenFont1" CoolCurrentCol="KravenSelFont" CoolDurationColor="KravenFont1" CoolDurationPos="714" CoolDurationSize="70" CoolEventColor="KravenFont1" CoolEventFont="Regular;22" CoolEventHPos="2" CoolEventPos="317" CoolEventSize="340" CoolFont="Regular;24" CoolMarkerHPos="1" CoolMarkerPicHPos="2" CoolMarkerPicPos="2" CoolMarkerPos="140" CoolPico="28" CoolPicoHPos="1" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="KravenFont1" CoolServiceFont="Regular;24" CoolServiceHPos="0" CoolServicePos="2" CoolServiceSize="300" CoolTime="1" CoolTimeHPos="2" CoolTimePos="666" CoolTimeSize="120" CoolTunerCol="KravenFont1" backgroundColor="Kravenbg" foregroundColor="KravenFont1" itemHeight="32" selectionPixmap="KravenHD/graphics/sel_36.png" name="list" position="452,72" size="786,576" transparent="1" zPosition="25" />
+    <widget source="Service" render="Label" backgroundColor="Kravenbg" font="Regular;20" foregroundColor="KravenFont2" halign="left" position="42,540" size="384,26" transparent="1" valign="center">
       <convert type="KravenHDTextTranslator">coming</convert>
     </widget>
     <widget backgroundColor="Kravenbg" font="Regular;19" foregroundColor="KravenFont2" position="42,570" render="CoolNextEvent" size="384,80" source="Service" transparent="1">
