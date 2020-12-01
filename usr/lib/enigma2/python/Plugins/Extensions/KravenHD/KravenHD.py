@@ -4250,7 +4250,7 @@ class KravenHD(ConfigListScreen, Screen):
 					line=line.split("|")
 					name=line[0]
 					value=line[1]
-					type=line[2].strip('\n')
+					valuetype=line[2].strip('\n')
 					if not (name in ("customProfile", "DebugNames", "msn_language", "msn_searchby", "msn_list", "msn_cityname", "msn_code") or (loadDefault and name == "defaultProfile")):
 						# fix for changed value "gradient"/"grad"
 						if name=="IBStyle" and value=="gradient":
@@ -4258,11 +4258,11 @@ class KravenHD(ConfigListScreen, Screen):
 						# fix for changed name "InfobarColor"/"InfobarGradientColor"
 						if name=="InfobarColor":
 							config.plugins.KravenHD.InfobarGradientColor.value=value
-						if type == "<type 'int'>":
+						if valuetype == "<class 'int'>":
 							getattr(config.plugins.KravenHD, name).value=int(value)
-						elif type == "<type 'hex'>":
+						elif valuetype == "<class 'hex'>":
 							getattr(config.plugins.KravenHD, name).value=hex(value)
-						elif type == "<type 'list'>":
+						elif valuetype == "<class 'list'>":
 							getattr(config.plugins.KravenHD, name).value=eval(value)
 						else:
 							getattr(config.plugins.KravenHD, name).value=str(value)
