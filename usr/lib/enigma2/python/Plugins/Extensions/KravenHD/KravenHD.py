@@ -2489,8 +2489,8 @@ class KravenHD(ConfigListScreen, Screen):
 					data_gc = fromstring(res_gc.text)
 
 					for weather in data_gc.findall("./weather"):
-						ipcity = weather.get('weatherlocationname').encode("utf-8", 'ignore')
-						weathercode = weather.get('weatherlocationcode').split('wc:')[1]
+						ipcity = weather.get('weatherlocationname')
+						weathercode = weather.get('weatherlocationcode')
 						iplist.append((ipcity, weathercode + "//" + ipcity))
 
 					def WeatherCodeCallBack(callback):
@@ -2514,8 +2514,8 @@ class KravenHD(ConfigListScreen, Screen):
 					data_gc = fromstring(res_gc.text)
 
 					for weather in data_gc.findall("./weather"):
-						city = weather.get('weatherlocationname').encode("utf-8", 'ignore')
-						code = weather.get('weatherlocationcode').split('wc:')[1]
+						city = weather.get('weatherlocationname')
+						code = weather.get('weatherlocationcode')
 						citylist.append((city, code + "//" + city))
 
 					def LocationCallBack(callback):
