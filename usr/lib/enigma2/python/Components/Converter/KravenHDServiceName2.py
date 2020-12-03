@@ -53,7 +53,7 @@ class KravenHDServiceName2(Converter, object):
 			self.type = self.REFERENCE
 		elif type == "OrbitalPos":
 			self.type = self.ORBPOS
-		elif type == "TpansponderInfo":
+		elif type == "TransponderInfo":
 			self.type = self.TPRDATA
 		elif type == "Satellite":
 			self.type = self.SATELLITE
