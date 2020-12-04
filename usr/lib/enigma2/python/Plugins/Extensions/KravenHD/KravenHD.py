@@ -4748,7 +4748,7 @@ class KravenHD(ConfigListScreen, Screen):
 		gradientsize = int(80 * self.factor) # size of gradient
 		width = int(width * self.factor)
 		height = int(height * self.factor)
-		trans = (255 - int(trans, 16)) / 255.0
+		trans = (255 - int(trans, 16)) // 255
 
 		inpath = "/usr/share/enigma2/KravenHD/textures/"
 		usrpath = "/usr/share/enigma2/Kraven-user-icons/"
