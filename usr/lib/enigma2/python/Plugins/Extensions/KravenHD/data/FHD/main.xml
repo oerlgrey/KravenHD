@@ -2823,6 +2823,21 @@
     <panel name="Exit"/>
   </screen>
 
+  <screen name="NetworkSATPI" title="SATPI Setup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*NetworkSATPI*-->
+    <widget name="lab1" position="63,120" size="246,45" font="Regular;32" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
+    <widget name="labactive" position="459,120" size="279,45" font="Regular;32" valign="center" halign="center" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" zPosition="2" />
+    <widget name="lab2" position="63,210" size="246,45" font="Regular;32" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
+    <widget name="labstop" position="459,210" size="279,45" font="Regular;32" valign="center" halign="center" backgroundColor="red" foregroundColor="white" zPosition="1" />
+    <widget name="labrun" position="459,210" size="279,45" font="Regular;32" valign="center" halign="center" backgroundColor="green" foregroundColor="white" zPosition="2" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="Colorbuttons"/>
+    <panel name="SourceRedGreenYellowBlue"/>
+    <panel name="Exit"/>
+  </screen>
+
   <screen name="NetworkSABnzbd" title="SABnzbd Setup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*NetworkSABnzbd*-->
     <widget name="lab1" position="63,120" size="246,45" font="Regular;32" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />

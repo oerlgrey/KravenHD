@@ -2838,6 +2838,21 @@
     <panel name="Exit"/>
   </screen>
 
+  <screen name="NetworkSATPI" title="SATPI Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*NetworkSATPI*-->
+    <widget name="lab1" position="42,80" size="164,30" font="Regular;22" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
+    <widget name="labactive" position="306,80" size="186,30" font="Regular;22" valign="center" halign="center" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" zPosition="2" />
+    <widget name="lab2" position="42,140" size="164,30" font="Regular;22" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
+    <widget name="labstop" position="306,140" size="186,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" foregroundColor="white" zPosition="1" />
+    <widget name="labrun" position="306,140" size="186,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" foregroundColor="white" zPosition="2" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="Colorbuttons"/>
+    <panel name="SourceRedGreenYellowBlue"/>
+    <panel name="Exit"/>
+  </screen>
+
   <screen name="NetworkSamba" title="Samba Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*NetworkSamba*-->
     <widget name="lab1" position="42,80" size="164,30" font="Regular;22" valign="center" halign="left" backgroundColor="Kravenbg3" foregroundColor="KravenFont1" transparent="1" />
