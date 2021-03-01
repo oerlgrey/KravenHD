@@ -180,7 +180,7 @@
   </subtitles>
   <windowstyle id="0" type="skinned">
     <title font="Regular2;35" offset="60,40" />
-    <color color="Kravenbg" name="Background" />
+    <color color="Kravenbg6" name="Background" />
     <color color="KravenFont1" name="LabelForeground" />
     <color color="Kravenbg" name="ListboxBackground" />
     <color color="KravenFont1" name="ListboxForeground" />

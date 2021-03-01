@@ -62,18 +62,18 @@
 	  <ePixmap pixmap="KravenHD/infobar-icons/empty_big.png" position="40,687" size="163,22" zPosition="1" alphatest="blend" />
 	  <eLabel backgroundColor="KravenIBbg" font="Regular;18" foregroundColor="KravenIcon" text="AGC:" position="44,687" name="KravenIconVPosition" size="40,22" halign="left" transparent="1" zPosition="1" />
 	  <widget source="session.FrontendStatus" render="Progress" position="86,694" size="64,8" pixmap="KravenHD/progress/progress64.png" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">AGC</convert>
+		<convert type="FrontendInfo">AGC</convert>
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.FrontendStatus" render="Label" font="Regular;18" foregroundColor="KravenIcon" position="153,687" name="KravenIconVPosition" size="46,22" halign="right" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">AGC</convert>
+		<convert type="FrontendInfo">AGC</convert>
 	  </widget>
 	  <ePixmap pixmap="KravenHD/infobar-icons/empty_big.png" position="209,687" size="163,22" zPosition="1" alphatest="blend" />
 	  <eLabel backgroundColor="KravenIBbg" font="Regular;18" foregroundColor="KravenIcon" text="SNR:" position="213,687" name="KravenIconVPosition" size="40,22" halign="left" transparent="1" zPosition="1" />
 	  <widget source="session.FrontendStatus" render="Progress" position="255,694" size="64,8" pixmap="KravenHD/progress/progress64.png" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.FrontendStatus" render="Label" font="Regular;18" foregroundColor="KravenIcon" position="322,687" name="KravenIconVPosition" size="46,22" halign="right" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	  <ePixmap pixmap="KravenHD/infobar-icons/infobox.png" position="378,687" size="116,22" zPosition="1" alphatest="blend" />
 	  <ePixmap pixmap="KravenHD/infobar-icons/resolution.png" position="500,687" size="112,22" zPosition="1" alphatest="blend" />
