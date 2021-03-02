@@ -107,7 +107,7 @@
     <widget backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular;33" halign="right" position="1020,1006" render="Label" size="180,60" source="session.CurrentService" transparent="1" zPosition="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
-    <widget backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular;30" halign="right" position="1422,948" render="Label" size="183,37" source="session.CurrentService" transparent="1" valign="Center" zPosition="1">
+    <widget backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular;30" halign="right" position="1422,948" render="Label" size="183,37" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
       <convert type="ServicePosition">Remaining</convert>
     </widget>
     <widget position="318,990" render="PositionGauge" size="1287,10" source="session.CurrentService" transparent="1">
@@ -119,7 +119,7 @@
     <eLabel backgroundColor="KravenLine" position="318,996" size="1287,1" zPosition="-1" />
     <widget name="subtitleLabel" position="493,1006" size="165,60" font="Regular;27" backgroundColor="KravenIBbg" transparent="1" />
     <widget name="audioLabel" position="318,1006" size="165,60" font="Regular;27" backgroundColor="KravenIBbg" transparent="1" />
-    <widget name="chapterLabel" position="670,1008" size="337,60" font="Regular;27" backgroundColor="KravenIBbg" transparent="1" />
+    <widget name="chapterLabel" position="670,1006" size="337,60" font="Regular;27" backgroundColor="KravenIBbg" transparent="1" />
     <widget source="global.CurrentTime" position="1464,1006" size="141,60" font="Regular;33" render="Label" halign="right" zPosition="12" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" transparent="1">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>

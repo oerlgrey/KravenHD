@@ -173,18 +173,18 @@
 	  <ePixmap pixmap="KravenHD/infobar-icons/empty_big.png" position="30,1035" size="244,33" zPosition="1" alphatest="blend" />
 	  <eLabel backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIcon" text="AGC:" position="36,1035" name="KravenIconVPosition" size="60,33" halign="left" transparent="1" zPosition="1" />
 	  <widget source="session.FrontendStatus" render="Progress" position="99,1045" size="96,12" pixmap="KravenHD/progress/progress64.png" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">AGC</convert>
+		<convert type="FrontendInfo">AGC</convert>
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.FrontendStatus" render="Label" font="Regular;27" foregroundColor="KravenIcon" position="202,1035" name="KravenIconVPosition" size="69,33" halign="right" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">AGC</convert>
+		<convert type="FrontendInfo">AGC</convert>
 	  </widget>
 	  <ePixmap pixmap="KravenHD/infobar-icons/empty_big.png" position="306,1035" size="244,33" zPosition="1" alphatest="blend" />
 	  <eLabel backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIcon" text="SNR:" position="312,1035" name="KravenIconVPosition" size="60,33" halign="left" transparent="1" zPosition="1" />
 	  <widget source="session.FrontendStatus" render="Progress" position="375,1045" size="96,12" pixmap="KravenHD/progress/progress64.png" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.FrontendStatus" render="Label" font="Regular;27" foregroundColor="KravenIcon" position="476,1035" name="KravenIconVPosition" size="69,33" halign="right" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	</screen>
 	
@@ -201,18 +201,18 @@
 	  <ePixmap pixmap="KravenHD/infobar-icons/empty_big.png" position="30,1035" size="244,33" zPosition="1" alphatest="blend" />
 	  <eLabel backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIcon" text="AGC:" position="36,1035" name="KravenIconVPosition" size="60,33" halign="left" transparent="1" zPosition="1" />
 	  <widget source="session.FrontendStatus" render="Progress" position="99,1045" size="96,12" pixmap="KravenHD/progress/progress64.png" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">AGC</convert>
+		<convert type="FrontendInfo">AGC</convert>
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.FrontendStatus" render="Label" font="Regular;27" foregroundColor="KravenIcon" position="200,1035" name="KravenIconVPosition" size="69,33" halign="right" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">AGC</convert>
+		<convert type="FrontendInfo">AGC</convert>
 	  </widget>
 	  <ePixmap pixmap="KravenHD/infobar-icons/empty_big.png" position="306,1035" size="244,33" zPosition="1" alphatest="blend" />
 	  <eLabel backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIcon" text="SNR:" position="312,1035" name="KravenIconVPosition" size="60,33" halign="left" transparent="1" zPosition="1" />
 	  <widget source="session.FrontendStatus" render="Progress" position="375,1045" size="96,12" pixmap="KravenHD/progress/progress64.png" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.FrontendStatus" render="Label" font="Regular;27" foregroundColor="KravenIcon" position="476,1035" name="KravenIconVPosition" size="69,33" halign="right" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	</screen>
 	
@@ -420,16 +420,7 @@
 		<convert type="KravenHDServiceName2">OrbitalPos</convert>
 	  </widget>
 	  <widget render="Label" font="Regular;27" size="100,33" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="652,1035" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" source="session.FrontendStatus">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
-	  </widget>
-	</screen>
-	
-	<screen name="infobar-style-zz1-zzz1-infobox-db">
-	  <widget backgroundColor="KravenIBbg" font="Regular;27" position="586,1035" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="91,33" render="Label" source="session.CurrentService" transparent="1">
-		<convert type="KravenHDServiceName2">OrbitalPos</convert>
-	  </widget>
-	  <widget render="Label" font="Regular;27" size="100,33" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="652,1035" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" source="session.FrontendStatus">
-		<convert type="KravenHDFrontendInfo">SNRdB</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	</screen>
 	

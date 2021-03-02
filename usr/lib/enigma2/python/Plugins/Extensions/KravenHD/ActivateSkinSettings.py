@@ -749,7 +749,6 @@ config.plugins.KravenHD.ShowAgcSnr = ConfigSelection(default="none", choices = [
 				
 config.plugins.KravenHD.Infobox = ConfigSelection(default="sat", choices = [
 				("sat", _("Tuner/Satellite + SNR")),
-				("db", _("Tuner/Satellite + dB")),
 				("tunerinfo", _("Tunerinfo")),
 				("cpu", _("CPU + Load")),
 				("temp", _("Temperature + Fan"))

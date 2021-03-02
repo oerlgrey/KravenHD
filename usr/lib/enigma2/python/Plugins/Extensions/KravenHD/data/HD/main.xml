@@ -264,7 +264,7 @@
 
   <screen name="FUFilebrowser" position="center,center" size="1280,720" title="File Browser" backgroundColor="transparent">
 	<!--*FUFilebrowser*-->
-	<eLabel text="Firmware Upgrade" position="42,7" size="1000,46" backgroundColor="KravenIBbg3" font="Regular2;34" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
+	<eLabel text="File Browser" position="42,7" size="1000,46" backgroundColor="KravenIBbg3" font="Regular2;34" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
     <widget backgroundColor="Kravenbg3" name="file_list" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,450" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<widget source="status" render="Label" position="42,565" zPosition="1" size="736,56" font="Regular2;22" foregroundColor="KravenFont2" halign="center" valign="center" backgroundColor="Kravenbg3" transparent="1" />
     <panel name="Colorbuttons"/>
