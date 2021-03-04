@@ -726,7 +726,7 @@
     <eLabel backgroundColor="KravenLine" position="63,757" size="1104,3" />
     <widget backgroundColor="Kravenbg3" font="Regular2;32" foregroundColors="grey,grey,#ffffff" halign="center" name="EditSettings_Text" position="717,795" size="450,52" transparent="1" valign="center" zPosition="2" />
     <widget alphatest="blend" name="EditSettingsButton" pixmaps="KravenHD/menu/lan-seloff.png,KravenHD/menu/lan-sel300.png" position="717,795" size="450,52" zPosition="2" />
-    <widget backgroundColor="Kravenbg3" font="Regular2;32" foregroundColor="KravenFont2" halign="center" name="InfoText" position="63,120" size="1104,855" valign="center" zPosition="25" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;32" foregroundColor="KravenFont2" halign="center" name="InfoText" position="63,115" size="1104,820" valign="center" zPosition="25" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<!-- Logo -->
@@ -1342,21 +1342,21 @@
     <eLabel backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" text="SNR:" position="63,660" size="120,37" transparent="1" />
     <widget borderWidth="1" name="snr_bar" position="210,660" size="300,37" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="snr_percentage" position="534,660" size="120,37" transparent="1" />
-    <eLabel backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" text="Frequency:" position="720,660" size="225,37" transparent="1" />
-    <widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="frequency_value" position="975,660" size="225,37" transparent="1" />
+    <eLabel backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" text="Frequency:" position="687,660" size="225,37" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="frequency_value" position="942,660" size="225,37" transparent="1" />
     <eLabel backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" text="BER:" position="63,712" size="120,37" transparent="1" />
     <widget borderWidth="1" name="ber_bar" position="210,712" size="300,37" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="ber_value" position="534,712" size="120,37" transparent="1" />
-    <eLabel backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" text="Symbolrate:" position="720,712" size="225,37" transparent="1" />
-    <widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="symbolrate_value" position="975,712" size="225,37" transparent="1" />
+    <eLabel backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" text="Symbolrate:" position="687,712" size="225,37" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="symbolrate_value" position="942,712" size="225,37" transparent="1" />
     <eLabel backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" text="Lock:" position="63,764" size="120,37" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="lock_state" position="210,764" size="300,37" transparent="1" />
-    <eLabel backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" text="FEC:" position="720,764" size="225,37" transparent="1" />
-    <widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="fec_value" position="975,764" size="225,37" transparent="1" />
+    <eLabel backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" text="FEC:" position="687,764" size="225,37" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="fec_value" position="942,764" size="225,37" transparent="1" />
 	<eLabel backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" text="Status:" position="63,816" size="120,37" transparent="1" />
 	<widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="status_bar" position="210,816" size="300,37" transparent="1" />
-	<eLabel backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" text="Polarisation:" position="720,816" size="225,37" transparent="1" />
-	<widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="polarisation" position="975,816" size="225,37" transparent="1" />
+	<eLabel backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" text="Polarisation:" position="687,816" size="225,37" transparent="1" />
+	<widget backgroundColor="Kravenbg3" font="Regular2;30" foregroundColor="KravenFont2" name="polarisation" position="942,816" size="225,37" transparent="1" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<!-- Logo -->
@@ -1645,7 +1645,7 @@
   <screen flags="wfNoBorder" name="ExeManagerFile" position="0,0" backgroundColor="transparent" size="1920,1080" title="Select file to execute">
 	<!--*ExeManagerFile*-->
     <widget backgroundColor="Kravenbg3" font="Regular2;33" foregroundColor="KravenFont2" name="executable" position="63,112" size="1104,42" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="filelist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,165" size="1104,810" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
+    <widget backgroundColor="Kravenbg3" name="filelist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,165" size="1104,765" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
     <panel name="title-small"/>
     <panel name="Colorbuttons"/>
 	<!-- Logo -->

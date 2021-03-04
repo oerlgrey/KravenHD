@@ -1258,8 +1258,8 @@
     <widget backgroundColor="KravenIBbg3" name="title" font="Regular2;50" foregroundColor="KravenIBGFont2" position="63,10" size="1500,69" transparent="1" halign="left" valign="center" noWrap="1" />
 	<widget backgroundColor="Kravenbg3" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<widget backgroundColor="Kravenbg3" name="uphops" font="Regular;32" foregroundColor="KravenFont1" position="63,705" size="500,41" />
-	<widget backgroundColor="Kravenbg3" name="cards" font="Regular;32" foregroundColor="KravenFont1" position="667,750" size="500,41" halign="right" />
-	<widget backgroundColor="Kravenbg3" name="providers" font="Regular;32" foregroundColor="KravenFont1" position="63,705" size="500,41" />
+	<widget backgroundColor="Kravenbg3" name="cards" font="Regular;32" foregroundColor="KravenFont1" position="667,705" size="500,41" halign="right" />
+	<widget backgroundColor="Kravenbg3" name="providers" font="Regular;32" foregroundColor="KravenFont1" position="63,750" size="500,41" />
 	<widget backgroundColor="Kravenbg3" name="reshare" font="Regular;32" foregroundColor="KravenFont1" position="667,750" size="500,41" halign="right" />
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
