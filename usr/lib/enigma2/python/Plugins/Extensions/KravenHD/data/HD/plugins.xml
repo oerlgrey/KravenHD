@@ -2118,21 +2118,21 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="BirthdayReminder" position="0,0" size="1280,720" title=" " >
 	<!--*BirthdayReminder*-->
     <eLabel backgroundColor="KravenIBbg3" text="Birthday Reminder" font="Regular2;34" foregroundColor="KravenIBGFont2" position="42,7" size="1000,46" transparent="1" halign="left" valign="center" />
-    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="48,80" size="300,27" font="Regular;22" foregroundColor="KravenFont2" halign="left" valign="center" transparent="1">
+    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="58,80" size="414,27" font="Regular2;22" foregroundColor="KravenFont2" halign="left" valign="center" transparent="1">
       <convert type="KravenHDTextTranslator">name</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="382,80" size="260,27" font="Regular;22" foregroundColor="KravenFont2" halign="left" valign="center" transparent="1">
+    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="492,80" size="184,27" font="Regular2;22" foregroundColor="KravenFont2" halign="left" valign="center" transparent="1">
       <convert type="KravenHDTextTranslator">birthday</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="676,80" size="96,27" font="Regular;22" foregroundColor="KravenFont2" halign="right" valign="center" transparent="1">
+    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="682,80" size="90,27" font="Regular2;22" foregroundColor="KravenFont2" halign="right" valign="center" transparent="1">
       <convert type="KravenHDTextTranslator">age</convert>
     </widget>
 	<widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="42,110" size="736,510" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 	  <convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos = (6, 1),   size = (314, 27), font=0, flags = RT_HALIGN_LEFT, text = 0),
-					MultiContentEntryText(pos = (340, 1), size = (288, 27), font=0, flags = RT_HALIGN_LEFT, text = 1),
-					MultiContentEntryText(pos = (634, 1), size = (96, 27), font=0, flags = RT_HALIGN_RIGHT, text = 2),
+					MultiContentEntryText(pos = (16, 1),   size = (414, 27), font=0, flags = RT_HALIGN_LEFT, text = 0),
+					MultiContentEntryText(pos = (450, 1), size = (184, 27), font=0, flags = RT_HALIGN_LEFT, text = 1),
+					MultiContentEntryText(pos = (640, 1), size = (80, 27), font=0, flags = RT_HALIGN_RIGHT, text = 2),
 					],
 					"fonts": [gFont("Regular", 22)],
 					"itemHeight": 30

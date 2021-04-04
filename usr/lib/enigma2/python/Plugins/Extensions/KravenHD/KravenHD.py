@@ -2497,7 +2497,7 @@ class KravenHD(ConfigListScreen, Screen):
 							config.plugins.KravenHD.msn_code.save()
 							config.plugins.KravenHD.msn_cityfound.value = str(callback.split("//")[1].split(",")[0])
 							config.plugins.KravenHD.msn_cityfound.save()
-							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.KravenHD.msn_code.value), MessageBox.TYPE_INFO, timeout = 10)
+							self.session.open(MessageBox, _("Weather-Code found:\n") + str(callback.split("//")[0]), MessageBox.TYPE_INFO, timeout = 10)
 						self.showPreview()
 					self.session.openWithCallback(WeatherCodeCallBack, ChoiceBox, title = _("Choose your location:"), list = iplist)
 
@@ -2522,7 +2522,7 @@ class KravenHD(ConfigListScreen, Screen):
 							config.plugins.KravenHD.msn_code.save()
 							config.plugins.KravenHD.msn_cityfound.value = str(callback.split("//")[1].split(",")[0])
 							config.plugins.KravenHD.msn_cityfound.save()
-							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.KravenHD.msn_code.value), MessageBox.TYPE_INFO, timeout = 10)
+							self.session.open(MessageBox, _("Weather-Code found:\n") + str(callback.split("//")[0]), MessageBox.TYPE_INFO, timeout = 10)
 						self.showPreview()
 					self.session.openWithCallback(LocationCallBack, ChoiceBox, title = _("Choose your location:"), list = citylist)
 
