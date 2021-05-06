@@ -30,19 +30,16 @@ from copy import deepcopy
 from Components.config import config, configfile, getConfigListEntry, ConfigYesNo, ConfigSubsection, ConfigSelection, ConfigText, ConfigClock, ConfigSlider
 from Components.ConfigList import ConfigListScreen
 from Components.Sources.StaticText import StaticText
-from Components.Label import Label
 from Components.Language import language
 from os import environ, listdir, system, popen, path
 from shutil import move
 from Components.Pixmap import Pixmap
-from Components.Label import Label
 from Components.Sources.CanvasSource import CanvasSource
 from Components.SystemInfo import SystemInfo
 from PIL import Image, ImageFilter, ImageDraw
 import gettext, time, subprocess, requests
 from enigma import ePicLoad, getDesktop, eConsoleAppContainer, eTimer
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
-from lxml import etree
 from xml.etree.cElementTree import fromstring
 
 import six
@@ -927,11 +924,11 @@ config.plugins.KravenHD.msn_searchby = ConfigSelection(default="auto-ip", choice
 				])
 
 SearchResultList = []
-config.plugins.KravenHD.msn_list = ConfigSelection(default = "", choices = SearchResultList)
+config.plugins.KravenHD.msn_list = ConfigSelection(default="", choices=SearchResultList)
 
-config.plugins.KravenHD.msn_cityfound = ConfigText(default = "")
-config.plugins.KravenHD.msn_cityname = ConfigText(default = "")
-config.plugins.KravenHD.msn_code = ConfigText(default = "")
+config.plugins.KravenHD.msn_cityfound = ConfigText(default="")
+config.plugins.KravenHD.msn_cityname = ConfigText(default="", fixed_size=False)
+config.plugins.KravenHD.msn_code = ConfigText(default="")
 
 config.plugins.KravenHD.PlayerClock = ConfigSelection(default="player-classic", choices = [
 				("player-classic", _("standard")),
@@ -1168,7 +1165,7 @@ class KravenHD(ConfigListScreen, Screen):
 			"cancel": self.exit,
 			"pageup": self.pageUp,
 			"papedown": self.pageDown,
-			"ok": self.OK
+			"ok": self.keyOK
 		}, -1)
 
 		self["key_red"] = StaticText()
@@ -2549,7 +2546,7 @@ class KravenHD(ConfigListScreen, Screen):
 		except:
 			pass
 
-	def OK(self):
+	def keyOK(self):
 		option = self["config"].getCurrent()[1]
 		optionislistcolor=False
 
