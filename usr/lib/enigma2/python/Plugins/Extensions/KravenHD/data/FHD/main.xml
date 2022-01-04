@@ -2216,34 +2216,41 @@
 	<panel name="Exit"/>
   </screen>
 
-  <screen name="SoftwarePanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
-	<!--*SoftwarePanel*-->
-    <widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="63,120" size="1104,624" scrollbarMode="showOnDemand" selectionPixmap="KravenHD/graphics/sel_53.png" transparent="1">
-      <convert type="TemplatedMultiContent">
+  <screen name="SoftwareUpdate" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+  <eLabel backgroundColor="KravenIBbg" font="Regular;22" foregroundColor="white" text="Software Update " position="63,0" size="750,27" halign="left" valign="center" transparent="1" zPosition="9" />
+  <eLabel position="0,0" size="1920,27" backgroundColor="KravenIBbg" zPosition="8" />
+  <widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="63,120" size="1104,624" scrollbarMode="showOnDemand" selectionPixmap="KravenHD/graphics/sel_53.png" transparent="1">
+    <convert type="TemplatedMultiContent">
 			{"template": [
 					MultiContentEntryText(pos = (9, 3), size = (852, 41), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 					MultiContentEntryText(pos = (9, 42), size = (852, 30), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-					MultiContentEntryPixmapAlphaTest(pos = (1002, 15), size = (48, 48), png = 4), # index 4 is the status pixmap
-					MultiContentEntryPixmapAlphaTest(pos = (7, 75), size = (915, 3), png = 5), # index 4 is the div pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (1002, 15), size = (48, 48), png = 4), # index 4 is the status pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (7, 75), size = (915, 3), png = 5), # index 4 is the div pixmap
 				],
 			"fonts": [gFont("Regular", 32),gFont("Regular", 21)],
 			"itemHeight": 78
 			}
 	  </convert>
-    </widget>
-    <widget name="packagetext" position="63,780" size="375,40" zPosition="1" font="Regular2;33" halign="left" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
-    <widget name="packagenr" position="63,825" size="375,40" zPosition="1" font="Regular2;33" halign="left" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
-    <widget name="a_off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" position="675,765" zPosition="1" size="54,145" alphatest="on" />
-    <widget name="a_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" position="675,765" zPosition="1" size="54,145" alphatest="on" />
-    <widget name="a_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" position="675,765" zPosition="1" size="54,145" alphatest="on" />
-    <widget name="a_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" position="675,765" zPosition="1" size="54,145" alphatest="on" />
-    <panel name="Title-big"/>
-  	<!-- Logo -->
-	<panel name="gradient-menu"/>
-  	<panel name="Colorbuttons"/>
-	<panel name="SourceRedGreenYellowBlue"/>
-	<panel name="Exit"/>
-  </screen>
+  </widget>
+  <widget name="package_text" position="63,780" size="375,40" zPosition="1" font="Regular2;33" halign="left" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
+  <widget name="package_count" position="63,825" size="375,40" zPosition="1" font="Regular2;33" halign="left" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
+  <widget name="feedmessage" position="824,776" size="310,50" font="Regular;20" transparent="1" />
+  <widget name="activity" position="451,797" size="370,10" />
+  <widget name="a_off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" position="1267,216" zPosition="1" size="54,145" alphatest="on" />
+  <widget name="a_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" position="1275,316" zPosition="1" size="54,145" alphatest="on" />
+  <widget name="a_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" position="1267,271" zPosition="1" size="54,145" alphatest="on" />
+  <widget name="a_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" position="1274,371" zPosition="1" size="54,145" alphatest="on" />
+  <widget name="feedstatus_off" position="1399,218" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="KravenFont2" backgroundColor="Kravenbg3" transparent="1" />
+  <widget name="feedstatus_red" position="1398,270" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="KravenFont2" backgroundColor="Kravenbg3" transparent="1" />
+  <widget name="feedstatus_yellow" position="1399,316" size="234,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="KravenFont2" backgroundColor="Kravenbg3" transparent="1" />
+  <widget name="feedstatus_greed" position="1399,366" size="236,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="KravenFont2" backgroundColor="Kravenbg3" transparent="1" /> 
+  <ePixmap pixmap="KravenHD/graphics/nontransbg.png" position="0,0" size="1920,1080" zPosition="-10" />
+  <panel name="Title-big" />
+  <panel name="gradient-menu" />
+  <panel name="Colorbuttons" />
+  <panel name="SourceRedGreenYellowBlue" />
+  <panel name="Exit" />
+</screen>
 
   <screen name="SoftcamSetup" position="0,0" size="1920,1080" title="SoftcamSetup" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*SoftcamSetup*-->
