@@ -2541,7 +2541,7 @@
     <panel name="GE-small"/>
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+    <panel name="SourceRedGreenYellowBlue"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
   </screen>
@@ -2581,7 +2581,7 @@
     </widget>
 	<panel name="gradient-menu"/>
     <panel name="Colorbuttons"/>
-    <panel name="NameRedGreenYellowBlue"/>
+    <panel name="SourceRedGreenYellowBlue"/>
     <panel name="MenuOKExit"/>
   </screen>
 
@@ -3827,6 +3827,6 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big" />
     <panel name="gradient-menu" />
     <panel name="Colorbuttons" />
-    <panel name="TemplateAllColorButtons_Kraven" />
+    <panel name="SourceRedGreenYellowBlue" />
     <panel name="Exit" />
   </screen>
