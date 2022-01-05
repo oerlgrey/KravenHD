@@ -274,7 +274,7 @@
     <panel name="OKExit"/>
   </screen>
 
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="Ipkg" position="0,0" size="1920,1080" title="Installing Software...">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="Opkg" position="0,0" size="1920,1080" title="Installing Software...">
 	<!--*Ipkg*-->
 	<eLabel text="Installing Software..." position="63,10" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;50" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
     <widget name="activityslider" borderColor="KravenBorder" borderWidth="3" position="63,120" size="1104,22" transparent="1" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress736.png" />
@@ -2555,7 +2555,7 @@
     <panel name="GE-small"/>
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+    <panel name="SourceRedGreenYellowBlue"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
   </screen>
@@ -2595,7 +2595,7 @@
     </widget>
 	<panel name="gradient-menu"/>
     <panel name="Colorbuttons"/>
-    <panel name="NameRedGreenYellowBlue"/>
+    <panel name="SourceRedGreenYellowBlue"/>
     <panel name="MenuOKExit"/>
   </screen>
 
@@ -3872,6 +3872,6 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
     <panel name="Title-big" />
     <panel name="gradient-menu" />
     <panel name="Colorbuttons" />
-    <panel name="TemplateAllColorButtons_Kraven" />
+    <panel name="SourceRedGreenYellowBlue" />
     <panel name="Exit" />
   </screen>

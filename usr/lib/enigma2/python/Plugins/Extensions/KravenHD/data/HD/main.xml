@@ -1,4 +1,4 @@
-﻿
+
   <screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1280,720" title="InfoBar">
 	<ePixmap pixmap="KravenHD/backg.png" position="0,0" size="1280,720" zPosition="-9" />
 	<!-- Infobar mainstyles -->
@@ -167,6 +167,7 @@
     <panel name="Colorbuttons"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
+	<panel name="SourceRedGreenYellowBlue"/>
     <panel name="OKExit"/>
   </screen>
 
@@ -274,7 +275,7 @@
     <panel name="OKExit"/>
   </screen>
 
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="Ipkg" position="0,0" size="1280,720" title="Installing Software...">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="Opkg" position="0,0" size="1280,720" title="Installing Software...">
 	<!--*Ipkg*-->
 	<eLabel text="Installing Software..." position="42,7" size="1000,46" backgroundColor="KravenIBbg3" font="Regular2;34" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
     <widget name="activityslider" borderColor="KravenBorder" borderWidth="2" position="42,80" size="736,15" transparent="1" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress736.png" />
@@ -2238,8 +2239,8 @@
 			{"template": [
 					MultiContentEntryText(pos = (6, 2), size = (568, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 					MultiContentEntryText(pos = (6, 28), size = (568, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-					MultiContentEntryPixmapAlphaTest(pos = (661, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
-					MultiContentEntryPixmapAlphaTest(pos = (5, 50), size = (610, 2), png = 5), # index 4 is the div pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (661, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (5, 50), size = (610, 2), png = 5), # index 4 is the div pixmap
 				],
 			"fonts": [gFont("Regular", 22),gFont("Regular", 14)],
 			"itemHeight": 52
@@ -2259,11 +2260,44 @@
 	<panel name="SourceRedGreenYellowBlue"/>
 	<panel name="Exit"/>
   </screen>
+  
+    <screen name="SoftwareUpdate" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*SoftwareUpdate*-->
+    <widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="42,80" size="736,416" scrollbarMode="showOnDemand" selectionPixmap="KravenHD/graphics/sel_53.png" transparent="1">
+      <convert type="TemplatedMultiContent">
+			{"template": [
+					MultiContentEntryText(pos = (6, 2), size = (568, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					MultiContentEntryText(pos = (6, 28), size = (568, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+					MultiContentEntryPixmapAlphaBlend(pos = (661, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (5, 50), size = (610, 2), png = 5), # index 4 is the div pixmap
+				],
+			"fonts": [gFont("Regular", 22),gFont("Regular", 14)],
+			"itemHeight": 52
+			}
+	  </convert>
+    </widget>
+    <widget name="package_text" position="42,520" size="250,27" zPosition="1" font="Regular2;22" halign="left" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
+    <widget name="package_count" position="42,550" size="250,27" zPosition="1" font="Regular2;22" halign="left" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
+    <widget name="feedmessage" position="605,397" size="644,510" font="Regular;20" transparent="1" />
+    <widget name="activity" position="451,797" size="370,10" />
+	<widget name="a_off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" position="450,510" zPosition="1" size="36,97" alphatest="on" />
+    <widget name="a_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" position="450,510" zPosition="1" size="36,97" alphatest="on" />
+    <widget name="a_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" position="450,510" zPosition="1" size="36,97" alphatest="on" />
+    <widget name="a_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" position="450,510" zPosition="1" size="36,97" alphatest="on" />
+    <panel name="Title-big"/>
+  	<!-- Logo -->
+	<panel name="gradient-menu"/>
+  	<panel name="Colorbuttons"/>
+	<panel name="SourceRedGreenYellowBlue"/>
+	<panel name="Exit"/>
+  </screen>
 
   <screen name="SoftcamSetup" position="0,0" size="1280,720" title="SoftcamSetup" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*SoftcamSetup*-->
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,180" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular2;22" name="info" position="58,280" size="704,297" foregroundColor="KravenFont2" transparent="1" />
+	<widget name="description" position="321,392" size="644,510" font="Regular;20" foregroundColor="white" transparent="1" halign="center" backgroundColor="background" />
+    <widget name="footnote" position="10,940" size="1170,40" font="Regular; 36" halign="right" valign="center" backgroundColor="background" foregroundColor="white" transparent="1" />
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -2545,7 +2579,7 @@
     <panel name="GE-small"/>
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+    <panel name="SourceRedGreenYellowBlue"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
   </screen>
@@ -2585,7 +2619,7 @@
     </widget>
 	<panel name="gradient-menu"/>
     <panel name="Colorbuttons"/>
-    <panel name="NameRedGreenYellowBlue"/>
+    <panel name="SourceRedGreenYellowBlue"/>
     <panel name="MenuOKExit"/>
   </screen>
 
@@ -2620,6 +2654,7 @@
     <ePixmap pixmap="KravenHD/infobar-icons/key_ok.png" position="1145,340" size="43,22" alphatest="blend" />
     <ePixmap pixmap="KravenHD/infobar-icons/key_exit.png" position="1195,340" size="43,22" alphatest="blend" />
     <panel name="gradient-ibepg"/>
+	<panel name="SourceRedGreenYellowBlue"/>
   </screen>
 
   <screen name="QuickEPG" flags="wfNoBorder" position="0,335" size="1280,385" title="InfoBar" backgroundColor="transparent">
@@ -2653,6 +2688,7 @@
     <ePixmap pixmap="KravenHD/infobar-icons/key_ok.png" position="1145,340" size="43,22" alphatest="blend" />
     <ePixmap pixmap="KravenHD/infobar-icons/key_exit.png" position="1195,340" size="43,22" alphatest="blend" />
     <panel name="gradient-ibepg"/>
+	<panel name="SourceRedGreenYellowBlue"/>
   </screen>
 
   <screen name="NetworkMountsMenu" position="0,0" size="1280,720" title="Mounts Setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -3498,6 +3534,7 @@
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <panel name="gradient-ibev"/>
+	<panel name="SourceRedGreenYellowBlue"/>
   </screen>
 
   <screen backgroundColor="KravenIBbg" flags="wfNoBorder" name="QuickSubtitlesConfigMenu" position="0,0" size="735,187" title="Subtitle settings" >
@@ -3551,7 +3588,7 @@
 	<eLabel backgroundColor="KravenBorder" position="1238,77" size="1,545" zPosition="4" />
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+    <panel name="SourceRedGreenYellowBlue"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
   </screen>
@@ -3599,7 +3636,7 @@
     </widget>
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+    <panel name="SourceRedGreenYellowBlue"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
   </screen>
@@ -3831,3 +3868,34 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<ePixmap pixmap="KravenHD/global-icons/messages-hd/question.png" position="10,16" size="53,53" alphatest="blend" />
     <panel name="messagebox-template"/>
   </screen>
+  
+<screen name="LocaleSelection" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
+  <eLabel name="vertikalline" position="1251,120" size="2,840" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" />
+  <widget name="icons" position="0,0" size="34,24" pixmaps="icons/finished.png,icons/menu_off.png,icons/menu_on.png" alphatest="blend" />
+  <widget source="locales" render="Listbox" position="35,112" size="1100,428" zPosition="3" backgroundColor="background" foregroundColor="white" scrollbarSliderBorderWidth="1" scrollbarWidth="12" scrollbarSliderForegroundColor="white" scrollbarSliderBorderColor="bluelabel" scrollbarMode="showOnDemand" transparent="1">
+    <convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos = (8, 5), size = (84, 42), flags = BT_SCALE, png = 0),  # Flag.
+					MultiContentEntryText(pos = (120, 0), size = (500, 51), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Language name (Native).
+					MultiContentEntryText(pos = (600, 0), size = (350, 51), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Lanuage name (English).
+					# MultiContentEntryText(pos = (580, 0), size = (75, 34), font = 0, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 3),  # Locale name.
+					MultiContentEntryText(pos = (955, 0), size = (113, 51), font = 0, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 4),  # Package name.
+					MultiContentEntryPixmapAlphaBlend(pos = (1070, 6), size = (44, 44), flags = BT_SCALE, png = 5)  # Status icon.
+					],
+				"fonts": [gFont("Regular",30)],
+				"itemHeight": 51
+				}
+			</convert>
+  </widget>
+  <widget source="description" render="Label" position="253,468" size="633,310" font="Regular;20" halign="center" valign="center" transparent="1" />
+  <ePixmap pixmap="KravenHD/graphics/nontransbg.png" position="0,0" size="1280,720" zPosition="-10" />
+  <eLabel name="vertikalline" position="1251,120" size="2,840" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" />
+  <ePixmap pixmap="buttons/key_menu.png" position="1634,1004" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <panel name="Title-big" />
+  <panel name="gradient-menu" />
+  <panel name="Colorbuttons" />
+  <panel name="SourceRedGreenYellowBlue" />
+  <panel name="Exit" />
+</screen>
