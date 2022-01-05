@@ -353,20 +353,11 @@
 	</screen>
 	
 	<screen name="infobar-style-x2-z1-infobox-sat">
-	  <widget backgroundColor="KravenIBbg" font="Regular;27" position="853,34" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="80,33" render="Label" source="session.CurrentService" transparent="1">
+	  <widget backgroundColor="KravenIBbg" font="Regular;27" position="853,34" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="91,33" render="Label" source="session.CurrentService" transparent="1">
 		<convert type="KravenHDServiceName2">OrbitalPos</convert>
 	  </widget>
 	  <widget render="Label" font="Regular;27" size="100,33" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="918,34" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" source="session.FrontendStatus">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
-	  </widget>
-	</screen>
-	
-	<screen name="infobar-style-x2-z1-infobox-db">
-	  <widget backgroundColor="KravenIBbg" font="Regular;27" position="853,34" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="80,33" render="Label" source="session.CurrentService" transparent="1">
-		<convert type="KravenHDServiceName2">OrbitalPos</convert>
-	  </widget>
-	  <widget render="Label" font="Regular;27" size="100,33" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="918,34" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" source="session.FrontendStatus">
-		<convert type="KravenHDFrontendInfo">SNRdB</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	</screen>
 	
@@ -485,11 +476,11 @@
 	</screen>
 	
 	<screen name="infobar-style-x2-x3-z1-z2-clock-weather">
-	  <widget alphatest="blend" render="KravenHDWetterPicon" position="1599,912" size="144,144" source="Title" path="WetterIcons" transparent="1" zPosition="1">
-		<convert type="KravenHDWeather">Day_0,MeteoIcon </convert>
+	  <widget alphatest="blend" render="KravenHDWetterPicon" position="1599,912" size="144,144" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="1">
+		<convert type="KravenHDWeather"> icon_cur</convert>
 	  </widget>
-	  <widget source="Title" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont2" position="1759,922" size="135,40" font="Regular2;36" noWrap="1" halign="center" valign="center" zPosition="2" transparent="1">
-		<convert type="KravenHDWeather">Day_0,DayTemp</convert>
+	  <widget source="session.CurrentService" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont2" position="1759,922" size="135,40" font="Regular2;36" noWrap="1" halign="center" valign="center" zPosition="2" transparent="1">
+		<convert type="KravenHDWeather">temp_cur</convert>
 	  </widget>
 	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1759,972" size="135,45" font="Regular;39" halign="center" valign="center" zPosition="2" transparent="1">
 		<convert type="KravenHDClockToText">Default</convert>
@@ -525,11 +516,11 @@
 	  <widget backgroundColor="KravenIBbg" font="Regular2;24" foregroundColor="KravenIBFont2" halign="center" position="1581,1027" size="300,45" render="Label" source="global.CurrentTime" transparent="1" valign="top" zPosition="2">
 		<convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
 	  </widget>
-	  <widget alphatest="blend" render="KravenHDAndroidPicon" position="1581,852" size="300,183" source="Title" path="clock" transparent="1" zPosition="1">
-		<convert type="KravenHDWeather">Day_0,MeteoIcon </convert>
+	  <widget alphatest="blend" render="KravenHDAndroidPicon" position="1581,852" size="300,183" source="session.CurrentService" path="clock" transparent="1" zPosition="1">
+		<convert type="KravenHDWeather"> icon_cur</convert>
 	  </widget>
-	  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;30" foregroundColor="KravenAndroid" render="Label" position="1695,982" size="150,37" source="Title" zPosition="2" halign="right" valign="center" transparent="1">
-		<convert type="KravenHDWeather">Day_0,DayTemp</convert>
+	  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;30" foregroundColor="KravenAndroid" render="Label" position="1695,982" size="150,37" source="session.CurrentService" zPosition="2" halign="right" valign="center" transparent="1">
+		<convert type="KravenHDWeather">temp_cur</convert>
 	  </widget>
 	</screen>
 	

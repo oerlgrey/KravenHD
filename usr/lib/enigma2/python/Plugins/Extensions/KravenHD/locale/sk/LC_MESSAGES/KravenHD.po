@@ -1,0 +1,2674 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# örlgrey <ochzoetna@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KravenHD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-06 23:16+0200\n"
+"PO-Revision-Date: 2020-08-19 10:27+0200\n"
+"Last-Translator: dym1 <dusantvrdy1@gmail.com>\n"
+"Language-Team: dym1\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: KravenHDWeather.py
+msgid "N-NE"
+msgstr "S-SV"
+
+#: KravenHDWeather.py
+msgid "NE"
+msgstr "NE"
+
+#: KravenHDWeather.py
+msgid "E-NE"
+msgstr "V-SV"
+
+#: KravenHDWeather.py
+msgid "E"
+msgstr "V"
+
+#: KravenHDWeather.py
+msgid "E-SE"
+msgstr "V-JV"
+
+#: KravenHDWeather.py
+msgid "SE"
+msgstr "JV"
+
+#: KravenHDWeather.py
+msgid "S-SE"
+msgstr "J-JV"
+
+#: KravenHDWeather.py
+msgid "Mon"
+msgstr "Po"
+
+#: KravenHDWeather.py
+msgid "Tue"
+msgstr "Ut"
+
+#: KravenHDWeather.py
+msgid "Wed"
+msgstr "St"
+
+#: KravenHDWeather.py
+msgid "Thu"
+msgstr "Št"
+
+#: KravenHDWeather.py
+msgid "Fri"
+msgstr "Pia"
+
+#: KravenHDWeather.py
+msgid "Sat"
+msgstr "So"
+
+#: KravenHDWeather.py
+msgid "Sun"
+msgstr "Ne"
+
+#: KravenHDWeather.py
+msgid ""
+"Tropical\n"
+" storm"
+msgstr ""
+"Tropická\n"
+" búrka"
+
+#: KravenHDWeather.py
+msgid "Hurricane"
+msgstr "Hurikán"
+
+#: KravenHDWeather.py
+msgid ""
+"Severe\n"
+" thunderstorms"
+msgstr ""
+"Silná\n"
+" búrka"
+
+#: KravenHDWeather.py
+msgid "Thunderstorms"
+msgstr "Búrky"
+
+#: KravenHDWeather.py
+msgid ""
+"Mixed rain\n"
+" and snow"
+msgstr ""
+"Dážď\n"
+" so snehom"
+
+#: KravenHDWeather.py
+msgid ""
+"Mixed rain\n"
+" and sleet"
+msgstr ""
+"Dážď\n"
+" a čľapkanica"
+
+#: KravenHDWeather.py
+msgid ""
+"Mixed snow\n"
+" and sleet"
+msgstr ""
+"Sneženie\n"
+" a dážď so snehom"
+
+#: KravenHDWeather.py
+msgid ""
+"Freezing\n"
+" drizzle"
+msgstr ""
+"Mrznúce\n"
+" mrholenie"
+
+#: KravenHDWeather.py
+msgid "Drizzle"
+msgstr "Mrholenie"
+
+#: KravenHDWeather.py
+msgid ""
+"Freezing\n"
+" rain"
+msgstr "Mrznúci dážď"
+
+#: KravenHDWeather.py
+msgid "Showers"
+msgstr "Sneženie"
+
+#: KravenHDWeather.py
+msgid "Rain"
+msgstr "Dážď"
+
+#: KravenHDWeather.py
+msgid ""
+"Snow\n"
+" flurries"
+msgstr "Snehové prehánky"
+
+#: KravenHDWeather.py
+msgid ""
+"Light\n"
+" snow showers"
+msgstr ""
+"Slabé\n"
+"Snehové prehánky"
+
+#: KravenHDWeather.py
+msgid ""
+"Blowing\n"
+" snow"
+msgstr "Zvírený sneh"
+
+#: KravenHDWeather.py
+msgid "Snow"
+msgstr "Sneh"
+
+#: KravenHDWeather.py
+msgid "Hail"
+msgstr "Krupobitie"
+
+#: KravenHDWeather.py
+msgid "Sleet"
+msgstr "Pľušť"
+
+#: KravenHDWeather.py
+msgid "Dust"
+msgstr "Prach"
+
+#: KravenHDWeather.py
+msgid "Foggy"
+msgstr "Hmlisto"
+
+#: KravenHDWeather.py
+msgid "Haze"
+msgstr "Opar"
+
+#: KravenHDWeather.py
+msgid "Smoky"
+msgstr "Smog"
+
+#: KravenHDWeather.py
+msgid "Blustery"
+msgstr "Búrlivo"
+
+#: KravenHDWeather.py
+msgid "Windy"
+msgstr "Veterno"
+
+#: KravenHDWeather.py
+msgid "Cold"
+msgstr "Chladno"
+
+#: KravenHDWeather.py
+msgid "Cloudy"
+msgstr "Zamračené"
+
+#: KravenHDWeather.py
+msgid ""
+"Mostly\n"
+" cloudy"
+msgstr ""
+"Väčšinou\n"
+" zamračené"
+
+#: KravenHDWeather.py
+msgid ""
+"Partly\n"
+" cloudy"
+msgstr ""
+"Čiastočne\n"
+" zamračené"
+
+#: KravenHDWeather.py
+msgid "Clear"
+msgstr "Jasno"
+
+#: KravenHDWeather.py
+msgid "Sunny"
+msgstr "Slnečno"
+
+#: KravenHDWeather.py
+msgid "Fair"
+msgstr "Jasno"
+
+#: KravenHDWeather.py
+msgid ""
+"Mixed rain\n"
+" and hail"
+msgstr ""
+"Dážď\n"
+" a krúpy"
+
+#: KravenHDWeather.py
+msgid "Hot"
+msgstr "Horúco"
+
+#: KravenHDWeather.py
+msgid ""
+"Isolated\n"
+" thunderstorms"
+msgstr ""
+"Lokálne\n"
+" búrky"
+
+#: KravenHDWeather.py
+msgid ""
+"Scattered\n"
+" thunderstorms"
+msgstr ""
+"Ojedinelé\n"
+" búrky"
+
+#: KravenHDWeather.py
+msgid ""
+"Scattered\n"
+" showers"
+msgstr ""
+"Ojedinelé\n"
+" prehánky"
+
+#: KravenHDWeather.py
+msgid "Heavy snow"
+msgstr ""
+"Silné \n"
+" sneženie"
+
+#: KravenHDWeather.py
+msgid ""
+"Scattered\n"
+" snow showers"
+msgstr ""
+"Ojedinelé\n"
+" sneženie"
+
+#: KravenHDWeather.py
+msgid "Thundershowers"
+msgstr "Búrky"
+
+#: KravenHDWeather.py
+msgid "Snow showers"
+msgstr "Snehové prehánky"
+
+#: KravenHDWeather.py
+msgid ""
+"Isolated\n"
+" thundershowers"
+msgstr ""
+"Lokálne\n"
+" prehánky"
+
+#: KravenHDWeather.py
+msgid ""
+"Not\n"
+" available"
+msgstr ""
+"Nie je\n"
+" k dispozícii"
+
+#: KravenHDWeather.py
+msgid " from "
+msgstr " z "
+
+#: KravenHDWeather.py
+msgid "% humidity"
+msgstr "% vlhkosť"
+
+#: KravenHDWeather.py
+msgid ", feels "
+msgstr ",pocitová "
+
+#: KravenHDECMLine.py
+msgid "not available"
+msgstr "Nie je k dispozícii"
+
+#: KravenHDECMLine.py
+msgid "free to air"
+msgstr "voľné vysielanie"
+
+#: KravenHDECMLine.py
+msgid "CAM/Card unsupported"
+msgstr "CAM/Karta nie je podporovaná"
+
+#: KravenHDECMLine.py
+msgid "unknown"
+msgstr "neznáme"
+
+#: KravenHDECMLine.py
+msgid "System: unknown"
+msgstr "System: neznáme"
+
+#: KravenHDECMLine.py
+msgid "Unknown"
+msgstr "Neznáme"
+
+#: KravenHDECMLine.py
+msgid "waiting for information ..."
+msgstr "Čakanie na informácie ..."
+
+#: KravenHDECMLine.py
+msgid "no information available"
+msgstr "K dispozícii nie sú žiadne informácie"
+
+#: KravenHD.py
+msgid "with Border"
+msgstr "s rámom"
+
+#: KravenHD.py
+msgid "left"
+msgstr "vľavo"
+
+#: KravenHD.py
+msgid "right"
+msgstr "vpravo"
+
+#: KravenHD.py
+msgid "bottom"
+msgstr "dole"
+
+#: KravenHD.py
+msgid "top"
+msgstr "hore"
+
+#: KravenHD.py
+msgid "center"
+msgstr "v strede"
+
+#: KravenHD.py
+msgid "amber"
+msgstr "jantárová"
+
+#: KravenHD.py
+msgid "amber dark"
+msgstr "tmavo jantárová"
+
+#: KravenHD.py
+msgid "amber very dark"
+msgstr "jantarová veľmi tmavá"
+
+#: KravenHD.py
+msgid "black"
+msgstr "čierna"
+
+#: KravenHD.py
+msgid "blue"
+msgstr "modrá"
+
+#: KravenHD.py
+msgid "blue dark"
+msgstr "tmavo modrá"
+
+#: KravenHD.py
+msgid "blue very dark"
+msgstr "modrá veľmi tmavá"
+
+#: KravenHD.py
+msgid "brown"
+msgstr "hnedá"
+
+#: KravenHD.py
+msgid "brown dark"
+msgstr "tmavo hnedá"
+
+#: KravenHD.py
+msgid "brown very dark"
+msgstr "hnedá veľmi tmavá"
+
+#: KravenHD.py
+msgid "cobalt"
+msgstr "kobaltová"
+
+#: KravenHD.py
+msgid "cobalt dark"
+msgstr "tmavo kobaltová"
+
+#: KravenHD.py
+msgid "cobalt very dark"
+msgstr "kobaltová veľmi tmavá"
+
+#: KravenHD.py
+msgid "cyan"
+msgstr "azúrová"
+
+#: KravenHD.py
+msgid "cyan dark"
+msgstr "tmavo azúrová"
+
+#: KravenHD.py
+msgid "cyan very dark"
+msgstr "azúrová veľmi tmavá"
+
+#: KravenHD.py
+msgid "grey"
+msgstr "šedá"
+
+#: KravenHD.py
+msgid "grey dark"
+msgstr "tmavo šedá"
+
+#: KravenHD.py
+msgid "grey very dark"
+msgstr "šedá veľmi tmavá"
+
+#: KravenHD.py
+msgid "green"
+msgstr "zelená"
+
+#: KravenHD.py
+msgid "green dark"
+msgstr "tmavo zelená"
+
+#: KravenHD.py
+msgid "green very dark"
+msgstr "zelená veľmi tmavá"
+
+#: KravenHD.py
+msgid "emerald"
+msgstr "smaragdovo zelená"
+
+#: KravenHD.py
+msgid "Kraven dark"
+msgstr "Kraven tmavá"
+
+#: KravenHD.py
+msgid "Kraven very dark"
+msgstr "Kraven veľmi tmavá"
+
+#: KravenHD.py
+msgid "olive"
+msgstr "olivová"
+
+#: KravenHD.py
+msgid "olive dark"
+msgstr "tmavo olivová"
+
+#: KravenHD.py
+msgid "olive very dark"
+msgstr "olivová veľmi tmavá"
+
+#: KravenHD.py
+msgid "orange"
+msgstr "oranžová"
+
+#: KravenHD.py
+msgid "orange dark"
+msgstr "tmavo oranžová"
+
+#: KravenHD.py
+msgid "orange very dark"
+msgstr "oranžová veľmi tmavá"
+
+#: KravenHD.py
+msgid "pink"
+msgstr "ružová"
+
+#: KravenHD.py
+msgid "pink dark"
+msgstr "tmavo ružová"
+
+#: KravenHD.py
+msgid "pink very dark"
+msgstr "ružová veľmi tmavá"
+
+#: KravenHD.py
+msgid "red"
+msgstr "červená"
+
+#: KravenHD.py
+msgid "red dark"
+msgstr "tmavo červená"
+
+#: KravenHD.py
+msgid "red very dark"
+msgstr "červená veľmi tmavá"
+
+#: KravenHD.py
+msgid "steel"
+msgstr "oceľová"
+
+#: KravenHD.py
+msgid "steel dark"
+msgstr "tmavo oceľová"
+
+#: KravenHD.py
+msgid "steel very dark"
+msgstr "oceľová veľmi tmavá"
+
+#: KravenHD.py
+msgid "violet"
+msgstr "fialová"
+
+#: KravenHD.py
+msgid "violet dark"
+msgstr "tmavo fialová"
+
+#: KravenHD.py
+msgid "violet very dark"
+msgstr "fialová veľmi tmavá"
+
+#: KravenHD.py
+msgid "white"
+msgstr "biela"
+
+#: KravenHD.py
+msgid "yellow"
+msgstr "žltá"
+
+#: KravenHD.py
+msgid "off"
+msgstr "vypnúť"
+
+#: KravenHD.py
+msgid "no Cover"
+msgstr "žiadna snímka"
+
+#: KravenHD.py
+msgid "no Cover2"
+msgstr "žiadna snímka2"
+
+#: KravenHD.py
+msgid "small Cover"
+msgstr "malá snímka"
+
+#: KravenHD.py
+msgid "small Cover2"
+msgstr "malá snímka2"
+
+#: KravenHD.py
+msgid "big Cover"
+msgstr "veľká snímka"
+
+#: KravenHD.py
+msgid "big Cover2"
+msgstr "veľká snímka2"
+
+#: KravenHD.py
+msgid "very big Cover"
+msgstr "veľmi veľká snímka"
+
+#: KravenHD.py
+msgid "very big Cover2"
+msgstr "veľmi veľká snímka2"
+
+#: KravenHD.py
+msgid "on"
+msgstr "zapnúť"
+
+#: KravenHD.py
+msgid "Weather"
+msgstr "Počasie"
+
+#: KravenHD.py
+msgid "Weather2"
+msgstr "Počasie2"
+
+#: KravenHD.py
+msgid "standard"
+msgstr "štandard"
+
+#: KravenHD.py
+msgid "standard big"
+msgstr "štandardné veľké"
+
+#: KravenHD.py
+msgid "analog"
+msgstr "analog"
+
+#: KravenHD.py
+msgid "android"
+msgstr "android"
+
+#: KravenHD.py
+msgid "flip"
+msgstr "flip"
+
+#: KravenHD.py
+msgid "colored"
+msgstr "farebné"
+
+#: KravenHD.py
+msgid "colorfull"
+msgstr "pestré"
+
+#: KravenHD.py
+msgid "colorfull2"
+msgstr "farebné2"
+
+#: KravenHD.py
+msgid "big"
+msgstr "veľké"
+
+#: KravenHD.py
+msgid "small"
+msgstr "malé"
+
+#: KravenHD.py
+msgid "big + Sat"
+msgstr "veľké + Sat"
+
+#: KravenHD.py
+msgid "Running Text (Delay)"
+msgstr "Rolovanie textu (oneskorenie)"
+
+#: KravenHD.py
+msgid "Running Text (Speed)"
+msgstr "Rolovanie textu (rýchlosť)"
+
+#: KravenHD.py
+msgid "Background-Transparency"
+msgstr "Pozadie - priehľadnosť"
+
+#: KravenHD.py
+msgid "Weather-ID"
+msgstr "ID - Počasia"
+
+#: KravenHD.py
+msgid "GLOBAL COLORS ________________________________________________________________________________"
+msgstr "FARBY VŠEOBECNE ________________________________________________________________________________"
+
+#: KravenHD.py
+msgid "VIEWS ________________________________________________________________________________"
+msgstr "NÁHĽADY ________________________________________________________________________________"
+
+#: KravenHD.py
+msgid "CHANNELLIST ________________________________________________________________________________"
+msgstr "ZOZNAM PROGRAMOV ________________________________________________________________________________"
+
+#: KravenHD.py
+msgid "WEATHER ________________________________________________________________________________"
+msgstr "POČASIE________________________________________________________________________________"
+
+#: KravenHD.py
+msgid "PROFILES ________________________________________________________________________________"
+msgstr "PROFILY ________________________________________________________________________________"
+
+#: KravenHD.py
+msgid "ECM INFOS ________________________________________________________________________________"
+msgstr "ECM INFO _________________________________________________________________________________"
+
+#: KravenHD.py
+msgid "PLAYER ________________________________________________________________________________"
+msgstr "PREHRÁVAČ ____________________________________________________________________________"
+
+#: KravenHD.py
+msgid "Refresh interval (in minutes)"
+msgstr "Interval aktualizácie (v minútach)"
+
+#: KravenHD.py
+msgid "Screennames"
+msgstr "Názov screenu"
+
+#: KravenHD.py
+msgid "Menus"
+msgstr "Menu"
+
+#: KravenHD.py
+msgid "Weather-Style"
+msgstr "Počasie - Štýl"
+
+#: KravenHD.py
+msgid "Meteo-Color"
+msgstr "Meteo - Farba"
+
+#: KravenHD.py
+msgid "Channellist-Style"
+msgstr "Zoznam programov - Štýl"
+
+#: KravenHD.py
+msgid "Channellist-Transparenz"
+msgstr "Zoznam programov - Priehľadnosť"
+
+#: KravenHD.py
+msgid "Choose the degree of background transparency for the channellists."
+msgstr "Vyberte stupeň priehľadnosti pozadia pre zoznam programov."
+
+#: KravenHD.py
+msgid "Primetime"
+msgstr "Nasleduje"
+
+#: KravenHD.py
+msgid "Primetime-Time"
+msgstr "Nasleduje - Čas"
+
+#: KravenHD.py
+msgid "Primetime-Font"
+msgstr "Nasleduje - farba písma"
+
+#: KravenHD.py
+msgid "Lines"
+msgstr "Čiary"
+
+#: KravenHD.py
+msgid "Background"
+msgstr "Pozadie"
+
+#: KravenHD.py
+msgid "Border"
+msgstr "Rámik"
+
+#: KravenHD.py
+msgid "Listselection-Style"
+msgstr "Lišta pri listovaní - Štýl"
+
+#: KravenHD.py
+msgid "          Border"
+msgstr "          Rámik"
+
+#: KravenHD.py
+msgid "          Color"
+msgstr "          Farba"
+
+#: KravenHD.py
+msgid "solid color"
+msgstr "jednofarebná"
+
+#: KravenHD.py
+msgid "two-colored"
+msgstr "dvojfarebná"
+
+#: KravenHD.py
+msgid "Choose from different options to display selection bars."
+msgstr "Vyberte jednu z rôznych variantov pre zobrazenie lišty výberu."
+
+#: KravenHD.py
+msgid "Choose the primary background color of selection bars. Press OK to define your own RGB color."
+msgstr "Vyberte základnú farbu pozadia pre výberové lišty. Stlačením tlačidla OK nastavíte vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the secondary background color of selection bars. Press OK to define your own RGB color."
+msgstr "Vyberte druhú farbu pozadia pre výberové lišty. Stlačením tlačidla OK nastavíte vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Progress-/Volumebar"
+msgstr "Indikátor - Hlasitosť"
+
+#: KravenHD.py
+msgid "Primary-Font"
+msgstr "Primárna - Farba"
+
+#: KravenHD.py
+msgid "Secondary-Font"
+msgstr "Sekundárna - Farba"
+
+#: KravenHD.py
+msgid "Listselection-Font"
+msgstr "Výber - Farba"
+
+#: KravenHD.py
+msgid "Marking-Font"
+msgstr "Značka - Farba"
+
+#: KravenHD.py
+msgid "ECM-Font"
+msgstr "ECM - Farba"
+
+#: KravenHD.py
+msgid "Colorbutton-Font"
+msgstr "Farebné tlačidlá - Farba písma"
+
+#: KravenHD.py
+msgid "Clock-Style"
+msgstr "Hodiny - Štýl"
+
+#: KravenHD.py
+msgid "Analog-Clock-Color"
+msgstr "Analógové hodiny - Farba"
+
+#: KravenHD.py
+msgid "System-Infos"
+msgstr "System Info"
+
+#: KravenHD.py
+msgid "ECM Infos"
+msgstr "ECM Info"
+
+#: KravenHD.py
+msgid "ECM-Contents"
+msgstr "ECM Obsah"
+
+#: KravenHD.py
+msgid "Show 'free to air'"
+msgstr "Zobraziť 'voľné vysielanie'"
+
+#: KravenHD.py
+msgid "short with CAID"
+msgstr "caid a čas"
+
+#: KravenHD.py
+msgid "short with source"
+msgstr "čítačka a čas"
+
+#: KravenHD.py
+msgid "compact"
+msgstr "kompaktné"
+
+#: KravenHD.py
+msgid "balanced"
+msgstr "vyvážené"
+
+#: KravenHD.py
+msgid "extensive"
+msgstr "podrobné"
+
+#: KravenHD.py
+msgid "complete"
+msgstr "kompletné"
+
+#: KravenHD.py
+msgid "Channellist"
+msgstr "Zoznam programov"
+
+#: KravenHD.py
+msgid "Volume"
+msgstr "Hlasitosť"
+
+#: KravenHD.py
+msgid "Do you really want to reboot now?"
+msgstr "Naozaj chcete teraz reštartovať?"
+
+#: KravenHD.py
+msgid "Do you really want to reset all values to the selected default profile?"
+msgstr "Naozaj chcete resetovať všetky hodnoty predvoleného profilu?"
+
+#: KravenHD.py
+msgid "Do you really want to exit without saving?"
+msgstr "Naozaj chcete ukončiť bez uloženia?"
+
+#: KravenHD.py
+msgid "Restart GUI"
+msgstr "Reštart E2"
+
+#: KravenHD.py
+msgid "Error creating Skin!"
+msgstr "Chyba pri vytváraní Skinu!"
+
+#: KravenHD.py
+msgid ""
+"GUI needs a restart to apply a new skin.\n"
+"Do you want to Restart the GUI now?"
+msgstr ""
+"Enigma2 sa musí reštartovať, aby sa prejavili nastavenia.\n"
+"Chcete reštartovať E2 teraz?"
+
+msgid "Configuration tool for KravenHD"
+msgstr "Konfiguračný nástroj pre KravenHD"
+
+#: KravenHD.py
+msgid "no Picon"
+msgstr "bez Picon"
+
+#: KravenHD.py
+msgid "no Picon2"
+msgstr "bez Picon2"
+
+#: KravenHD.py
+msgid "Name small"
+msgstr "Malý názov"
+
+#: KravenHD.py
+msgid "Name & Number small"
+msgstr "Malý názov a číslo"
+
+#: KravenHD.py
+msgid "Name big"
+msgstr "Veľký názov"
+
+#: KravenHD.py
+msgid "Name & Number big"
+msgstr "Veľký názov a číslo"
+
+#: KravenHD.py
+msgid "Name & Number"
+msgstr "Názov a Číslo"
+
+#: KravenHD.py
+msgid "Channelname/-number-Font"
+msgstr "Farba názvu stanice/čísla"
+
+#: KravenHD.py
+msgid "Channelname/-number"
+msgstr "Názov stanice/číslo"
+
+#: KravenHD.py
+msgid "Infobox-Contents"
+msgstr "Infobox - Obsah"
+
+#: KravenHD.py
+msgid "top/bottom"
+msgstr "hore/dole"
+
+#: KravenHD.py
+msgid "left/right"
+msgstr "vľavo / vpravo"
+
+#: KravenHD.py
+msgid "single"
+msgstr "jednoduché"
+
+#: KravenHD.py
+msgid "MiniTV left"
+msgstr "MiniTV vľavo"
+
+#: KravenHD.py
+msgid "MiniTV right"
+msgstr "MiniTV vpravo"
+
+#: KravenHD.py
+msgid "Preview"
+msgstr "Náhľad"
+
+#: KravenHD.py
+msgid "Preview (2x OK)"
+msgstr "Náhľad (2x OK)"
+
+#: KravenHD.py
+msgid "Extended Preview"
+msgstr "Rozšíreny Náhľad"
+
+#: KravenHD.py
+msgid "Nobile Preview"
+msgstr "Nobile Náhľad"
+
+#: KravenHD.py
+msgid "Nobile Preview (2x OK)"
+msgstr "Nobile Náhľad (2x OK)"
+
+#: KravenHD.py
+msgid "Nobile Extended Preview"
+msgstr "Nobile Rozšíreny Náhľad"
+
+#: KravenHD.py
+msgid "Tuner number"
+msgstr "Číslo tunera"
+
+#: KravenHD.py
+msgid "Infobar-Icons"
+msgstr "Infobar - Ikony"
+
+#: KravenHD.py
+msgid "Icons (except Infobar)"
+msgstr "Ikony (okrem Infobaru)"
+
+#: KravenHD.py
+msgid "Infobar-Background"
+msgstr "Infobar - Pozadie"
+
+#: KravenHD.py
+msgid "Infobar-Transparency"
+msgstr "Infobar - Priehľadnosť"
+
+#: KravenHD.py
+msgid "Show Infobar-Background"
+msgstr "Zobraziť Infobar - Pozadie"
+
+#: KravenHD.py
+msgid "in all Screens"
+msgstr "vo všetkých Screenoch"
+
+#: KravenHD.py
+msgid "only Infobar, SecondInfobar & Players"
+msgstr "iba Infobar, Rozšírený infobar a Prehrávač"
+
+#: KravenHD.py
+msgid "light"
+msgstr "svetlé"
+
+#: KravenHD.py
+msgid "dark"
+msgstr "tmavé"
+
+#: KravenHD.py
+msgid "thin"
+msgstr "úzka"
+
+#: KravenHD.py
+msgid "middle"
+msgstr "stredné"
+
+#: KravenHD.py
+msgid "wide"
+msgstr "široké"
+
+#: KravenHD.py
+msgid "Infobar-Style"
+msgstr "Infobar - Štýl"
+
+#: KravenHD.py
+msgid "Scrollbars"
+msgstr "Posuvník"
+
+#: KravenHD.py
+msgid "Tuner/Satellite + SNR"
+msgstr "Tuner/Satelit + SNR"
+
+#: KravenHD.py
+msgid "Tuner/Satellite + dB"
+msgstr "Tuner/Satelit + dB"
+
+#: KravenHD.py
+msgid "CPU + Load"
+msgstr "CPU + Zaťaženie"
+
+#: KravenHD.py
+msgid "Temperature + Fan"
+msgstr "Teplota + Ventilátor"
+
+#: KravenHD.py
+msgid "The KravenHD skin will be generated by this plugin according to your preferences. Make your settings and watch the changes in the preview window above. When finished, save your skin by pressing the green button and restart the GUI."
+msgstr "Skin Kraven HD bude generovaný týmto pluginom podľa vašich preferencií. Urobte si svoje nastavenie a môžete sledovať zmeny v okne náhľadu vyššie. Po dokončení stlačte zelené tlačidlo pre uloženie zmien a reštartujte E2."
+
+#: KravenHD.py
+msgid "Choose between light and dark icons in system screens. The icons in the infobars are not affected."
+msgstr "Zloľte si medzi svetlými a tmavými ikonami. Ikony v infobare nebudú ovplyvnené."
+
+#: KravenHD.py
+msgid "Choose the start delay for running text."
+msgstr "Vyberte oneskorenie spustenia pre rolovanie textu."
+
+#: KravenHD.py
+msgid "Choose the speed for running text."
+msgstr "Vyberte rýchlosť pre rolovanie textu."
+
+#: KravenHD.py
+msgid "Choose the width of scrollbars in lists or deactivate scrollbars completely."
+msgstr "Vyberte šírku posuvníkov v zoznamoch alebo úplne deaktivujte posuvníky."
+
+#: KravenHD.py
+msgid "Choose from different options to display the system menus. Press red button for the FAQs with details on installing menu icons."
+msgstr "Vyberte jednu z niekoľkých variant pre zobrazenie v menu systému. Stlačte červené tlačidlo FAQs pre časté otázky s podrobnosťami o inštalácii Ikon do menu."
+
+#: KravenHD.py
+msgid "Choose the background for all screens. You can choose from a list of predefined colors or textures, create your own color using RGB sliders or define a color gradient. Also read the FAQs regarding your own textures."
+msgstr "Zloľte si farbu pozadia vo všetkých screenoch. Môžete si vybrať zo zoznamu preddefinovaných farieb alebo vytvoriť vlastnú farbu pomocou RGB posuvníkov. Prečítajte si aj FAQs týkajúce sa vašich vlastných textúr."
+
+#: KravenHD.py
+msgid "Choose the degree of background transparency for all screens except channellists."
+msgstr "Zvoľte stupeň priehľadnosti pozadia na všetkých screenoch okrem menu a zoznamu programov."
+
+#: KravenHD.py
+msgid "Choose the background color of selection bars. Press OK to define your own RGB color."
+msgstr "Zvoľte farbu pozadia lišty pri listovaní. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the border color of selection bars or deactivate borders completely. Press OK to define your own RGB color."
+msgstr "Zvoľte si farbu orámovania lišty pri listovaní alebo ju nechajte vypnutú. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the color of progress bars. Press OK to define your own RGB color."
+msgstr "Zvoľte farbu indikátora hlasitosti. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the global border color. Press OK to define your own RGB color."
+msgstr "Zvoľte farbu orámovania indikátora hlasitosti. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the color of all lines. This affects dividers as well as the line in the center of some progress bars. Press OK to define your own RGB color."
+msgstr "Zvoľte si farbu pre všetky čiary. To sa týka deliacich čiar a čiar uprostred nejakého progress-baru, napriklad v infobare, v zozname programov atď. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the color of the primary font. The primary font is used for list items, textboxes and other important information. Press OK to define your own RGB color."
+msgstr "Zvoľte farbu primárneho písma. Primárne písmo sa používa pre položky zoznamu, textové polia a ďalšie dôležité informácie. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the color of the secondary font. The secondary font is used for headers, labels and other additional information. Press OK to define your own RGB color."
+msgstr "Zvoľte farbu sekundárneho písma. Sekundárne písmo sa používa pre hlavičky, štítky a ďalšie doplňujúce informácie. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the color of the font in selection bars. Press OK to define your own RGB color."
+msgstr "Zvoľte farbu písma v lište pri listovaní. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the font color of marked list items. Press OK to define your own RGB color."
+msgstr "Zvoľte farbu písma označených položiek zoznamu. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the font color of the color button labels. Press OK to define your own RGB color."
+msgstr "Zvoľte farbu písma štítkov farebných tlačidiel. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the frequency of loading weather data from the internet."
+msgstr "Zvoľte frekvenciu načítania údajov o počasí z internetu."
+
+#: KravenHD.py
+msgid "Choose between graphical weather symbols and Meteo symbols."
+msgstr "Zvoľte si medzi grafickými symbolmi počasia a Meteo - symbolmi."
+
+#: KravenHD.py
+msgid "Choose between light and dark Meteo symbols."
+msgstr "Zvoľte si medzi svetlými a tmavými Meteo - symbolmi."
+
+#: KravenHD.py
+msgid "Choose from different infobar styles. Please note that not every style provides every feature. Therefore some features might be unavailable for the chosen style."
+msgstr "Zvoľte si z rôznych štýlov infobaru. Upozorňujeme, že nie každý štýl poskytuje všetky funkcie. Preto niektoré funkcie nemusia byť k dispozícii pre zvolený štýl."
+
+#: KravenHD.py
+msgid "Choose the background for the infobars. You can choose from a list of predefined colors or textures or create your own color using RGB sliders."
+msgstr "Zvoľte si pozadie pre infobary. Môžete si vybrať zo zoznamu preddefinovaných farieb alebo textúr alebo si vytvoriť vlastnú farbu pomocou jazdcov RGB."
+
+#: KravenHD.py
+msgid "Choose the background for the infobars. You can choose from a list of predefined colors or textures, create your own color using RGB sliders or define a color gradient."
+msgstr "Zloľte si farbu pozadia pre infobar. Môžete si vybrať zo zoznamu preddefinovaných farieb alebo vytvoriť vlastnú farbu pomocou RGB posuvníkov."
+
+#: KravenHD.py
+msgid "Choose the degree of background transparency for the infobars."
+msgstr "Zvoľte stupeň priehľadnosti pozadia pre infobar."
+
+#: KravenHD.py
+msgid "Choose whether you want to see the infobar background in all screens (bicolored background)."
+msgstr "Zvoľte, či chcete zobraziť infobar pozadie vo všetkých screenoch (dvojfarebné pozadie)."
+
+#: KravenHD.py
+msgid "Choose between light and dark infobar icons."
+msgstr "Zvoľte si medzi svetlými a tmavými ikonami informačného panela."
+
+#: KravenHD.py
+msgid "Choose from different options to display recording state."
+msgstr "Zvoľte jednu z niekoľkých možností na zobrazenie stavu nahrávania."
+
+#: KravenHD.py
+msgid "Choose from different options to display tuner."
+msgstr "Na zobrazenie tunerov zvoľte jednu z niekoľkých možností."
+
+#: KravenHD.py
+msgid "Choose which informations will be shown in the info box."
+msgstr "Zvoľte, ktoré informácie sa majú zobraziť v informačnom poli."
+
+#: KravenHD.py
+msgid "Choose from different options to show the weather in the infobar."
+msgstr "Vyberte jednu z niekoľkých možností na zobrazenie počasia v informačnom paneli."
+
+#: KravenHD.py
+msgid "Activate or deactivate displaying the weather in the infobar."
+msgstr "Aktivácia alebo deaktivácia zobrazovania počasia v infobare."
+
+#: KravenHD.py
+msgid "Choose from different options to show the channel name and number in the infobar."
+msgstr "Ak chcete zobraziť názov a číslo kanála v informačnom paneli, vyberte si z rôznych možností."
+
+#: KravenHD.py
+msgid "Choose the font color of channel name and number. Press OK to define your own RGB color."
+msgstr "Vyberte farbu písma názvu stanice a čísla. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose from different options to show the clock in the infobar."
+msgstr "Vyberte si z rôznych možností, ako zobraziť hodiny v infobare."
+
+#: KravenHD.py
+msgid "Choose from different colors for the analog type clock in the infobar."
+msgstr "Vyberte si z rôznych farieb pre hodiny analógového typu v infobare."
+
+#: KravenHD.py
+msgid "Choose from different additional windows with system informations or deactivate them completely."
+msgstr "Vyberte si z rôznych ďalších okien so systémovými informáciami alebo ich úplne deaktivujte."
+
+#: KravenHD.py
+msgid "Activate or deactivate an additional window with satellite informations."
+msgstr "Aktivujte alebo deaktivujte ďalšie okno so satelitnými informáciami."
+
+#: KravenHD.py
+msgid "Activate or deactivate ECM informations in the infobar."
+msgstr "Aktivujte alebo deaktivujte informácie ECM v infobare."
+
+#: KravenHD.py
+msgid "Choose from different options to display the ECM informations."
+msgstr "Vyberte si z rôznych možností na zobrazenie informácií ECM."
+
+#: KravenHD.py
+msgid "Choose whether 'free to air' is displayed or not for unencrypted channels."
+msgstr "Vyberte, či sa pri nekódovaných kanáloch má alebo nemá zobraziť možnosť 'voľné vysielanie'."
+
+#: KravenHD.py
+msgid "Choose the font color of the ECM information. Press OK to define your own RGB color."
+msgstr "Vyberte farbu písma informácií ECM. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose from different styles for the channel selection screen."
+msgstr "Vyberte jeden z rôznych variantov zobrazenia pre zoznam staníc."
+
+#: KravenHD.py
+msgid "Choose whether primetime program information is displayed or not."
+msgstr "Vyberte, či sa majú alebo nemajú zobrazovať informácie o programoch."
+
+#: KravenHD.py
+msgid "Specify the time for your primetime."
+msgstr "Zadajte čas svojho hlavného času."
+
+#: KravenHD.py
+msgid "Choose the font color of the primetime information. Press OK to define your own RGB color."
+msgstr "Vyberte farbu písma pre informácie o čase. Stlačením tlačidla OK nastavíte vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose from different styles for the volume display."
+msgstr "Vyberte si z rôznych štýlov zobrazenia hlasitosti."
+
+#: KravenHD.py
+msgid "Choose from different styles for CoolTVGuide."
+msgstr "Vyberte si z rôznych štýlov pre 'CoolTVGuide'."
+
+#: KravenHD.py
+msgid "EMC-Style"
+msgstr "EMC Štyl"
+
+#: KravenHD.py
+msgid "Choose whether you want to customize the selection-colors for EnhancedMovieCenter."
+msgstr "Vyberte, či chcete upraviť farby výberu pre 'EnhancedMovieCenter'."
+
+#: KravenHD.py
+msgid "EMC-Selection-Colors"
+msgstr "EMC Výber farieb"
+
+#: KravenHD.py
+msgid "define new colors"
+msgstr "definovať nové farby"
+
+#: KravenHD.py
+msgid "EMC-Listselection"
+msgstr "EMC Lišta Výberu"
+
+#: KravenHD.py
+msgid "Choose the background color of selection bars for EnhancedMovieCenter. Press OK to define your own RGB color."
+msgstr "Vyberte farbu pozadia výberových pruhov pre 'EnhancedMovieCenter'. Stlačením tlačidla OK nastavíte vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "EMC-Selection-Font"
+msgstr "EMC Výber Fontu"
+
+#: KravenHD.py
+msgid "Choose the color of the font in selection bars for EnhancedMovieCenter. Press OK to define your own RGB color."
+msgstr "Vyberte farbu písma na paneli výberu pre 'EnhancedMovieCenter'. Stlačením tlačidla OK nastavíte vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose from different styles for EnhancedMovieCenter."
+msgstr "Vyberte jednu z rôznych variantov zobrazenia pre 'EnhancedMovieCenter'."
+
+#: KravenHD.py
+msgid "Servicenumber/-name Fontsize"
+msgstr "Číslo stanice /-veľkosť písma názvu"
+
+#: KravenHD.py
+msgid "Serviceinfo Fontsize"
+msgstr "Stanica informácie veľkosť písma"
+
+#: KravenHD.py
+msgid "Choose the font size of channelnumber and channelname."
+msgstr "Vyberte veľkosť písma pre číslo stanice a názvu stanice."
+
+#: KravenHD.py
+msgid "Choose the font size of serviceinformation."
+msgstr "Vyberte veľkosť písma pre informácie o stanici."
+
+#: KravenHD.py
+msgid "Choose from different styles for MovieSelection."
+msgstr "Vyberte si z rôznych štýlov pre 'MovieSelection'."
+
+#: KravenHD.py
+msgid "Choose from different styles for NumberZap."
+msgstr "Vyberte si z rôznych štýlov pre 'NumberZap'."
+
+#: KravenHD.py
+msgid "Activate or deactivate small screen names for debugging purposes."
+msgstr "Aktivujte alebo deaktivujte malú obrazovku pre účely ladenia."
+
+#: KravenHD.py
+msgid "self"
+msgstr "vlastná RGB - farba"
+
+#: KravenHD.py
+msgid "          red"
+msgstr "          červená"
+
+#: KravenHD.py
+msgid "          green"
+msgstr "          zelená"
+
+#: KravenHD.py
+msgid "          blue"
+msgstr "          modrá"
+
+#: KravenHD.py
+msgid "Set the intensity of this basic color with the slider."
+msgstr "Nastavte intenzitu tejto základnej farby."
+
+#: KravenHDLayoutInfo.py
+msgid "free"
+msgstr "voľné"
+
+#: KravenHDLayoutInfo.py
+msgid "used"
+msgstr "použité"
+
+#: KravenHDLayoutInfo.py
+msgid "Free"
+msgstr "Voľné"
+
+#: KravenHDLayoutInfo.py
+msgid "Used"
+msgstr "Použité"
+
+#: KravenHD.py
+msgid "Active Profile / Save"
+msgstr "Aktuálny Profil / Uložiť"
+
+#: KravenHD.py
+msgid "Save profile"
+msgstr "Uložený Profil"
+
+#: KravenHD.py
+msgid "Select the profile you want to work with. Profiles are saved automatically on switching them or by pressing the OK button. New profiles will be generated based on the actual one. Profiles are interchangeable between boxes."
+msgstr "Vyberte profil s ktorým chcete pracovať. Profily sa automaticky ukladajú pri prepnutí alebo stlačením tlačidla OK. Nové profily sú vytvárané na základe aktuálneho nastavenia. Profily sú zameniteľné medzi prijímačmi."
+
+#: KravenHD.py
+msgid "Profile "
+msgstr "Profil "
+
+#: KravenHD.py
+msgid " saved successfully."
+msgstr " úspešne uložený."
+
+#: KravenHD.py
+msgid " could not be saved!"
+msgstr " nemožno uložiť!"
+
+#: KravenHD.py
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: KravenHD.py
+msgid "Save skin"
+msgstr "Uložiť Skin"
+
+#: KravenHD.py
+msgid "Reset profile"
+msgstr "Resetovať Profil"
+
+#: KravenHD.py
+msgid "Zap (1xOK)"
+msgstr "Zap (1xOK)"
+
+#: KravenHD.py
+msgid "Dual TV"
+msgstr "Dual TV"
+
+#: KravenHD.py
+msgid "Dual TV 2"
+msgstr "Dual TV 2"
+
+#: KravenHD.py
+msgid "Preview (2xOK)"
+msgstr "Náhľad (2xOK)"
+
+#: KravenHD.py
+msgid "Channellist-Mode"
+msgstr "Zoznam programov-Režim"
+
+#: KravenHD.py
+msgid "Choose between direct zapping (1xOK) and zapping after preview (2xOK)."
+msgstr "Zvoľte si medzi priamym prepnutím (1xOK) a prepínaním v náhľade (2xOK)."
+
+#: KravenHD.py
+msgid "Primary-Infobar-Font"
+msgstr "Primárny Infobar - Font"
+
+#: KravenHD.py
+msgid "Secondary-Infobar-Font"
+msgstr "Sekundárny Infobar - Font"
+
+#: KravenHD.py
+msgid "Choose the color of the primary infobar font. Press OK to define your own RGB color."
+msgstr "Zvoľte farbu primárneho písma infobar. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the color of the secondary infobar font. Press OK to define your own RGB color."
+msgstr "Zvoľte farbu sekundárneho písma infobar. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "ANTIALIASING BRIGHTNESS ________________________________________________________________________________"
+msgstr "DOLADENIE JASU _________________________________________________________________________________________"
+
+#: KravenHD.py
+msgid "INFOBAR-LOOK ________________________________________________________________________________"
+msgstr "INFOBAR________________________________________________________________________________"
+
+#: KravenHD.py
+msgid "INFOBAR-CONTENTS ________________________________________________________________________________"
+msgstr "INFOBAR - OBSAH ________________________________________________________________________________"
+
+#: KravenHD.py
+msgid "VARIOUS SETTINGS ________________________________________________________________________________"
+msgstr "RÔZNE NASTAVENIA ________________________________________________________________________________"
+
+#: KravenHD.py
+msgid "This sections offers various settings."
+msgstr "Táto časť ponúka rôzne nastavenia."
+
+#: KravenHD.py
+msgid "Infobar"
+msgstr "Infobar"
+
+#: KravenHD.py
+msgid "Reduce distortions (faint/blurry) or color frames around fonts in the infobar and widgets by adjusting the antialiasing brightness."
+msgstr "Zníženie skreslenia (nezreteľné / rozmazané) alebo farebné rámčeky okolo fontov v informačnom paneli a v informačných oknách úpravou potlačenia jasu."
+
+#: KravenHD.py
+msgid "Reduce distortions (faint/blurry) or color frames around the ECM information in the infobar by adjusting the antialiasing brightness."
+msgstr "Zníženie skreslenia (nezreteľné / rozmazané) alebo farebné rámčeky okolo informácií ECM v infobare úpravou potlačenia jasu."
+
+#: KravenHD.py
+msgid "Reduce distortions (faint/blurry) or color frames around fonts at top and bottom of screens by adjusting the antialiasing brightness."
+msgstr "Zníženie skreslenia (nezreteľné / rozmazané) alebo farebné rámčeky okolo fontov v hornej a dolnej časti obrazovky úpravou potlačenia jasu."
+
+#: KravenHD.py
+msgid "Default Profile / Reset"
+msgstr "Vlastný Profil / Načítať"
+
+#: KravenHD.py
+msgid "Select the default profile you want to use when resetting the active profile (OK button). You can add your own default profiles under /etc/enigma2/kravenhd_default_n (n<=20)."
+msgstr "Zloľte si vlastný profil, ktorý chcete použiť pri resete aktuálneho profilu (tlačidlo OK). Môžete pridať svoj vlastný profil do /etc/enigma2/kravenhd_default_n (n = číslo vašho uloženeho profilu napr.1)."
+
+#: KravenHD.py
+msgid "hardcoded"
+msgstr "pevné"
+
+#: KravenHD.py
+msgid "0 (hardcoded)"
+msgstr "0 (pevné)"
+
+#: KravenHD.py
+msgid "Choose whether you want the Kraven skin to be applied to 'Serienrecorder' or not. Activation of this option prohibits the skin selection in the SR-plugin."
+msgstr "Zvoľte, či má byť Kraven Skin aplikovaný na 'Serienrecorder'. Aktivácia tejto možnosti zakáže výber Skinu v doplnku SR - plugin."
+
+#: KravenHD.py
+msgid "Icons"
+msgstr "Ikony"
+
+#: KravenHD.py
+msgid "MiniTV + Icons"
+msgstr "MiniTV + Ikony"
+
+#: KravenHD.py
+msgid "Choose from different icon sets for the menu screens. Many thanks to rennmaus and kleiner.teufel for their icon set."
+msgstr "Zvoľte si z rôznych sád ikon pre menu. Po uložení skinu a reštarte E2 budú zobrazené v menu. Ďakujeme rennmaus a kleiner.teufel za ich sadu ikon."
+
+#: KravenHD.py
+msgid "MiniTV-Border"
+msgstr "MiniTV - Rámik"
+
+#: KravenHD.py
+msgid "Choose the border color of MiniTV's. Press OK to define your own RGB color."
+msgstr "Zvoľte farbu orámovania pre  MiniTV's. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB"
+
+#: KravenHD.py
+msgid "Choose whether you want the Kraven skin to be applied to 'MediaPortal' or not. To remove it again, you must deactivate it here and activate another skin in 'MediaPortal'."
+msgstr "Zvoľte, či má byť Kraven Skin aplikovaný na 'MediaPortal'. Ak ju chcete znova odstrániť, musíte ju deaktivovať a aktivovať ďalší vzhľad v priečinku 'MediaPortal'."
+
+#: KravenHD.py
+msgid "MediaPortal not installed"
+msgstr "MediaPortal nie je nainštalovaný"
+
+#: KravenHD.py
+msgid "This option is not available because 'MediaPortal' is not installed."
+msgstr "Táto možnosť nie je k dispozícii, pretože nie je nainštalovaný 'MediaPortal'."
+
+#: KravenHD.py
+msgid "'Not available'-Font"
+msgstr "Font -  'Nie je k dispozícii'"
+
+#: KravenHD.py
+msgid "Choose the font color of channels that are unavailable at the moment. Press OK to define your own RGB color."
+msgstr "Zvoľte farbu písma kanálov, ktoré momentálne nie sú k dispozícii. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose from different options to display the PVR state."
+msgstr "Zvoľte si z rôznych možností na zobrazenie stavu PVR."
+
+#: KravenHD.py
+msgid "center big"
+msgstr "veľké v strede"
+
+#: KravenHD.py
+msgid "center small"
+msgstr "malé v strede"
+
+#: KravenHD.py
+msgid "left small"
+msgstr "malé vľavo"
+
+#: KravenHD.py
+msgid "Search by"
+msgstr "Hľadať podľa"
+
+#: KravenHD.py
+msgid "Search String"
+msgstr "Hľadaný výraz"
+
+#: KravenHD.py
+msgid "Choose from different servers for the weather data."
+msgstr "Zvoľte si z rôznych serverov pre údaje o počasí."
+
+#: KravenHD.py
+msgid "Choose from different options to specify your location."
+msgstr "Zvoľte  jednu z niekoľkých možností na určenie vašej polohy."
+
+#: KravenHD.py
+msgid "Specify any search string for your location (zip/city/district/state single or combined). Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
+msgstr "Zadajte ľubovoľný vyhľadávací reťazec pre svoju polohu (samostatné alebo kombinované PSČ, mesto / okres / štát). Stlačením tlačidla OK použijete virtuálnu klávesnicu. Ak chcete spustiť vyhľadávanie, prejdite v ponuke nahor alebo nadol."
+
+#: KravenHD.py
+msgid "Specify any search string for your location (zip(unprecise!)/city/district/state single or comma-separated). Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
+msgstr "Zadajte ľubovoľný vyhľadávací reťazec pre svoju polohu (PSČ (nepresné!) / mesto / okres / štát samostatne alebo oddelené čiarkou). Stlačením tlačidla OK použijete virtuálnu klávesnicu. Ak chcete spustiť vyhľadávanie, prejdite v ponuke nahor alebo nadol."
+
+#: KravenHD.py
+msgid "Specify the GM code for your location. You can find it at https://weather.codes. Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
+msgstr "Zadajte GM - kód pre svoju polohu. Nájdete ho na stránke https://weather.codes. Stlačením tlačidla OK použijete virtuálnu klávesnicu. Ak chcete spustiť vyhľadávanie, prejdite v ponuke nahor alebo nadol."
+
+#: KravenHD.py
+msgid "Specify the language for the weather output."
+msgstr "Zvoľte jazyk pre zobrazenie počasia."
+
+#: KravenHD.py
+msgid "Enter the search string for your location:"
+msgstr "Zadajte hľadaný reťazec pre svoju polohu:"
+
+#: KravenHD.py
+msgid "Enter the GM code for your location:"
+msgstr "Zadajte kód GM pre svoju polohu:"
+
+#: KravenHDWeather.py
+msgid "TU"
+msgstr "UT"
+
+#: KravenHDWeather.py
+msgid "WE"
+msgstr "ST"
+
+#: KravenHDWeather.py
+msgid "TH"
+msgstr "ŠT"
+
+#: KravenHDWeather.py
+msgid "SU"
+msgstr "NE"
+
+#: KravenHDWeather.py
+msgid "No data for IP"
+msgstr "Žiadne údaje pre IP"
+
+#: KravenHDWeather.py
+msgid ""
+"\n"
+"\n"
+"No data for search string,\n"
+"fallback to IP"
+msgstr ""
+"\n"
+"\n"
+"Žiadne údaje pre hľadaný reťazec,\n"
+"Zlyhanie IP"
+
+#: KravenHDWeather.py
+msgid ""
+"\n"
+"\n"
+"No data for GM code,\n"
+"fallback to IP"
+msgstr ""
+"\n"
+"\n"
+"Žiadne údaje pre GM kód,\n"
+"Zlyhanie IP"
+
+#: KravenHD.py
+msgid "No Accu ID found"
+msgstr "Nenašli sa žiadne Accu ID"
+
+#: KravenHD.py
+msgid "Accuweather API Key"
+msgstr "Zadať API - Key"
+
+#: KravenHD.py
+msgid ""
+"Press OK to enter your API Key.\n"
+"You will receive the key at\n"
+"\"https://developer.accuweather.com/\"."
+msgstr ""
+"Stlačením tlačidla OK zadajte svoj API Key.\n"
+"Key získate na stránke\n"
+"\"https://developer.accuweather.com/\n"
+"Je nutné sa registrovať."
+
+#: KravenHD.py
+msgid "Enter your API Key:"
+msgstr "Vložte Vaš API Key:"
+
+#: KravenHD.py
+msgid "API authorization failed"
+msgstr "API - Skončilo chybou"
+
+#: KravenHD.py
+msgid "API requests exceeded"
+msgstr "API - Počet žiadostí bol prekročený"
+
+#: KravenHD.py
+msgid "Choose the font color of android-clock temperature. Press OK to define your own RGB color."
+msgstr "Vyberte farbu písma pre zobrazenie teploty na hodinách Android. Stlačením tlačidla OK nastavíte vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Android-Temp-Color"
+msgstr "Android-Teplota-Farba"
+
+#: KravenHD.py
+msgid "PVRState"
+msgstr "PVR - Stav"
+
+#: KravenHD.py
+msgid "Menu-Icons"
+msgstr "Menu - Ikony"
+
+#: KravenHD.py
+msgid "gradient"
+msgstr "vzostupne"
+
+#: KravenHD.py
+msgid "box"
+msgstr "box"
+
+#: KravenHD.py
+msgid "Infobar-Background-Style"
+msgstr "Infobar - Štýl - Pozadia"
+
+#: KravenHD.py
+msgid "Infobar-Box-Line"
+msgstr "Infobar - Box - Riadok"
+
+#: KravenHD.py
+msgid "CLOCK ________________________________________________________________________________"
+msgstr "HODINY ________________________________________________________________________________"
+
+#: KravenHD.py
+msgid "Choose from different infobar background styles."
+msgstr "Vyberte si z rôznych štýlov pozadia infobaru."
+
+#: KravenHD.py
+msgid "Choose the color of the infobar box lines. Press OK to define your own RGB color."
+msgstr "Vyberte farbu riadkov informačného poľa. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "EPG Fontsize"
+msgstr "EPG Veľkosť písma"
+
+#: KravenHD.py
+msgid "Choose the font size of event description, EPG list and primetime."
+msgstr "Vyberte veľkosť písma pre popis udalosti, zoznam EPG a hlavný vysielací čas."
+
+#: KravenHD.py
+msgid "Choose the font size of event description."
+msgstr "Vyberte veľkosť písma popisu udalosti."
+
+#: KravenHD.py
+msgid "Choose the font size of EPG list and primetime."
+msgstr "Vyberte veľkosť písma zoznamu EPG a hlavný vysielací čas."
+
+#: KravenHD.py
+msgid ""
+"description - 19 Pixel \n"
+"EPG list - 18 Pixel \n"
+"primetime - 18 Pixel"
+msgstr ""
+"Popis - 19 Pixel \n"
+"EPG zoznam - 18 Pixel \n"
+"Hlavný vysielací čas - 18 Pixel"
+
+#: KravenHD.py
+msgid ""
+"description - 22 Pixel \n"
+"EPG list - 20 Pixel \n"
+"primetime - 20 Pixel"
+msgstr ""
+"Popis - 22 Pixel \n"
+"EPG zoznam - 20 Pixel \n"
+"Hlavný vysielací čas - 20 Pixel"
+
+#: KravenHD.py
+msgid ""
+"EPG list - 22 Pixel \n"
+"primetime - 22 Pixel"
+msgstr ""
+"EPG zoznam - 22 Pixel \n"
+"Hlavný vysielací čas - 22 Pixel"
+
+#: KravenHD.py
+msgid ""
+"EPG list - 24 Pixel \n"
+"primetime - 24 Pixel"
+msgstr ""
+"EPG zoznam - 24 Pixel \n"
+"Hlavný vysielací čas - 24 Pixel"
+
+#: KravenHD.py
+msgid ""
+"description - 22 Pixel \n"
+"EPG list - 22 Pixel \n"
+"primetime - 22 Pixel"
+msgstr ""
+"Popis - 22 Pixel \n"
+"EPG zoznam - 22 Pixel \n"
+"Hlavný vysielací čas - 22 Pixel"
+
+#: KravenHD.py
+msgid ""
+"description - 24 Pixel \n"
+"EPG list - 24 Pixel \n"
+"primetime - 24 Pixel"
+msgstr ""
+"Popis - 24 Pixel \n"
+"EPG zoznam - 24 Pixel \n"
+"Hlavný vysielací čas - 24 Pixel"
+
+#: KravenHD.py
+msgid "weather icon"
+msgstr "Počasie-Ikony"
+
+#: KravenHD.py
+msgid "Weather-Icon-Size"
+msgstr "Počasie-Ikony-Veľkosť"
+
+#: KravenHD.py
+msgid "Choose the size of the icon for 'weather icon' clock."
+msgstr "Vyberte veľkosť ikony pre  'ikona počasia' hodiny."
+
+#: KravenHD.py
+msgid "with description"
+msgstr "s popisom"
+
+#: KravenHD.py
+msgid "without description"
+msgstr "bez popisu"
+
+#: KravenHD.py
+msgid "Choose from different styles to display FileCommander."
+msgstr "Vyberte si z rôznych štýlov na zobrazenie 'FileCommander'."
+
+#: KravenHD.py
+msgid "Choose from different styles to display EPGSelection."
+msgstr "Vyberte si z rôznych štýlov na zobrazenie voľby EPG."
+
+#: KravenHD.py
+msgid "about"
+msgstr "O prijímači"
+
+#: KravenHD.py
+msgid "profiles"
+msgstr "Profily"
+
+#: KravenHD.py
+msgid "system"
+msgstr "System"
+
+#: KravenHD.py
+msgid "global colors"
+msgstr "Farby-všeobecne"
+
+#: KravenHD.py
+msgid "infobar-look"
+msgstr "Infobar"
+
+#: KravenHD.py
+msgid "infobar-contents"
+msgstr "Infobar - obsah"
+
+#: KravenHD.py
+msgid "weather"
+msgstr "Počasie"
+
+#: KravenHD.py
+msgid "clock"
+msgstr "Hodiny"
+
+#: KravenHD.py
+msgid "ECM infos"
+msgstr "ECM-Info"
+
+#: KravenHD.py
+msgid "views"
+msgstr "Náhľady"
+
+#: KravenHD.py
+msgid "channellist"
+msgstr "Zoznam programov"
+
+#: KravenHD.py
+msgid "player"
+msgstr "Prehrávač"
+
+#: KravenHD.py
+msgid "antialiasing"
+msgstr "Doladenie"
+
+#: KravenHD.py
+msgid "various"
+msgstr "Rôzne"
+
+#: KravenHD.py
+msgid "Show ECM Infos"
+msgstr "Zobraziť ECM Info"
+
+#: KravenHD.py
+msgid ""
+"Infobar & \n"
+"SecondInfobar"
+msgstr ""
+"Infobar & \n"
+"Rozšírený infobar"
+
+#: KravenHD.py
+msgid "Infobar & SecondInfobar"
+msgstr "Infobar a Druhý info - panel"
+
+#: KravenHD.py
+msgid "Clock"
+msgstr "Hodiny"
+
+#: KravenHD.py
+msgid "Choose from different options to show the clock in the players."
+msgstr "Vyberte si z rôznych možností zobrazovania hodín v prehrávačoch."
+
+#: KravenHD.py
+msgid "Choose whether cover is displayed or not in the players."
+msgstr "Vyberte, či sa obal zobrazí v prehrávači alebo nie."
+
+#: KravenHD.py
+msgid "Choose from different options where to display the ECM informations."
+msgstr "Vyberte si z rôznych možností, kde sa majú zobraziť informácie ECM."
+
+#: KravenHD.py
+msgid "This sections offers all profile settings. Different settings can be saved, modified, shared and cloned. Read the FAQs."
+msgstr "Táto časť ponúka všetky nastavenia profilu. Rôzne nastavenia je možné uložiť a upravené zdieľať a klonovať. Prečítajte si najčastejšie otázky v FAQs."
+
+#: KravenHD.py
+msgid "This sections offers all basic settings."
+msgstr "Táto časť ponúka všetky základné nastavenia."
+
+#: KravenHD.py
+msgid "This sections offers offers all basic color settings."
+msgstr "Táto časť ponúka všetky základné nastavenia farieb."
+
+#: KravenHD.py
+msgid "This sections offers all settings for the infobar-look."
+msgstr "Táto časť ponúka všetky nastavenia pre infobar."
+
+#: KravenHD.py
+msgid "This sections offers all settings for infobar-contents."
+msgstr "Táto časť ponúka všetky nastavenia pre obsah infobaru."
+
+#: KravenHD.py
+msgid "This sections offers all weather settings."
+msgstr "Táto časť ponúka všetky parametrenastavenia pre počasie."
+
+#: KravenHD.py
+msgid "This sections offers all settings for the different clocks."
+msgstr "Táto časť ponúka všetky nastavenia pre rôzne hodiny."
+
+#: KravenHD.py
+msgid "This sections offers all settings for showing the decryption infos."
+msgstr "Táto časť ponúka všetky nastavenia pre zobrazovanie informácii o dešifrovaní."
+
+#: KravenHD.py
+msgid "This sections offers all settings for skinned plugins."
+msgstr "Táto časť ponúka všetky nastavenia pre stiahnuté pluginy."
+
+#: KravenHD.py
+msgid "This sections offers all channellist settings."
+msgstr "Táto časť ponúka všetky nastavenia zoznamu programov."
+
+#: KravenHD.py
+msgid "This sections offers all settings for EMC ('EnhancedMovieCenter')."
+msgstr "Táto časť ponúka všetky nastavenia pre EMC ('EnhancedMovieCenter')."
+
+#: KravenHD.py
+msgid "This sections offers all settings for the movie players."
+msgstr "Táto časť ponúka všetky nastavenia pre prehrávač nahratých filmov."
+
+#: KravenHD.py
+msgid "This sections offers all antialiasing settings. Distortions or color frames around fonts can be reduced by this settings."
+msgstr "Táto časť ponúka všetky funkcie nastavenia doladenia priehľadnosti. Skreslenia alebo farebné rámčeky okolo písma možno zmeniť týmto nastavením."
+
+#: KravenHD.py
+msgid "This sections offers all debug settings."
+msgstr "Táto časť ponúka všetky nastavenia pre debug."
+
+#: KravenHD.py
+msgid "record blink"
+msgstr "nahrávanie bliká"
+
+#: KravenHD.py
+msgid "record shine"
+msgstr "nahrávanie svieti"
+
+#: KravenHD.py
+msgid "tuner blink"
+msgstr "tuner bliká"
+
+#: KravenHD.py
+msgid "tuner shine"
+msgstr "tuner svieti"
+
+#: KravenHD.py
+msgid "record & tuner blink"
+msgstr "nahrávanie a tuner bliká"
+
+#: KravenHD.py
+msgid "record & tuner shine"
+msgstr "nahrávanie a tuner svieti"
+
+#: KravenHD.py
+msgid "record blink, tuner shine"
+msgstr "nahrávanie bliká, tuner svieti"
+
+#: KravenHD.py
+msgid "record shine, tuner blink"
+msgstr "nahrávanie svieti, tuner bliká"
+
+#: KravenHD.py
+msgid "record blink, no record tuner"
+msgstr "tuner bliká, žiadny tuner pre nahrávanie"
+
+#: KravenHD.py
+msgid "record shine, no record tuner"
+msgstr "nahrávanie svieti, žiadny tuner pre nahrávanie"
+
+#: KravenHD.py
+msgid "no record tuner"
+msgstr "žiadny tuner pre nahrávanie"
+
+#: KravenHD.py
+msgid "Record-State"
+msgstr "Stav nahrávania"
+
+#: KravenHD.py
+msgid "Unwatched Color"
+msgstr "Farba nevidených filmov"
+
+#: KravenHD.py
+msgid "Watching Color"
+msgstr "Farba čiastočne videných filmov"
+
+#: KravenHD.py
+msgid "Finished Color"
+msgstr "Farba videných filmov"
+
+#: KravenHD.py
+msgid "Choose the font color of unwatched movies. Press OK to define your own RGB color."
+msgstr "Vyberte farbu písma pre filmy, ktoré ste ešte nevideli. Stlačením tlačidla OK nastavíte vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the font color of watching movies. Press OK to define your own RGB color."
+msgstr "Vyberte farbu písma pre čiastočne videné filmy. Stlačením tlačidla OK nastavíte vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the font color of watched movies. Press OK to define your own RGB color."
+msgstr "Vyberte farbu písma pre videné filmy. Stlačením tlačidla OK nastavíte vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "infobar colors big"
+msgstr "farba veľký pruh infobaru"
+
+#: KravenHD.py
+msgid "infobar colors small"
+msgstr "farba malý pruh infobaru"
+
+#: KravenHD.py
+msgid "global colors big"
+msgstr "všeobecné farby veľké"
+
+#: KravenHD.py
+msgid "global colors small"
+msgstr "všeobecné farby malé"
+
+#: KravenHD.py
+msgid "transparent big"
+msgstr "transparentné veľké"
+
+#: KravenHD.py
+msgid "transparent small"
+msgstr "transparentné malé"
+
+#: KravenHD.py
+msgid "PermanentClock-Color"
+msgstr "PermanentClock - Farba"
+
+#: KravenHD.py
+msgid "Choose the colors of PermanentClock."
+msgstr "Vyberte farbu pre 'PermanentClock'."
+
+#: KravenHD.py
+msgid "PermanentClock-Font"
+msgstr "PermanentClock - Písmo"
+
+#: KravenHD.py
+msgid "Choose the font color of PermanentClock. Press OK to define your own RGB color."
+msgstr "Vyberte farbu písma pre 'PermanentClock'. Stlačením tlačidla OK nastavíte vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "          Primary Color"
+msgstr "          Základná farba"
+
+#: KravenHD.py
+msgid "          Secondary Color"
+msgstr "          Sekundárna farba"
+
+#: KravenHD.py
+msgid "Choose the primary color for the background gradient. Press OK to define your own RGB color."
+msgstr "Vyberte základnú farbu pre pozadia prechod farby vzostupne. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the secondary color for the background gradient. Press OK to define your own RGB color."
+msgstr "Vyberte sekundárnu farbu pre pozadia prechod farby vzostupne. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the primary color for the infobar gradient. Press OK to define your own RGB color."
+msgstr "Vyberte základnú farbu pre infobar prechod farby vzostupne. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the secondary color for the infobar gradient. Press OK to define your own RGB color."
+msgstr "Vyberte  sekundárnu farbu pre infobar prechod farby vzostupne. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "          Info Panels"
+msgstr "          Info Panel"
+
+#: KravenHD.py
+msgid "Choose gradient or color for the info panels (Sysinfos, Timeshiftbar etc.)."
+msgstr "Vyberte prechod farby alebo farbu pre info panely (Sysinfos, Timeshiftbar atď.)."
+
+#: KravenHD.py
+msgid "This sections offers all settings for EPGSelection."
+msgstr "Táto časť ponúka všetky nastavenia pre Výber EPG."
+
+#: KravenHD.py
+msgid "EPGSelection-Style"
+msgstr "EPGSelection - Štýl"
+
+#: KravenHD.py
+msgid "EPG-List Fontsize"
+msgstr "EPG-List veľkosť písm"
+
+#: KravenHD.py
+msgid "Choose the font size of EPG-List."
+msgstr "Vyberte veľkosť písma EPG - Listu."
+
+#: KravenHD.py
+msgid "texture"
+msgstr "textúra"
+
+#: KravenHD.py
+msgid "user texture"
+msgstr "textúra používateľa"
+
+#: KravenHD.py
+msgid "          Texture"
+msgstr "          Textúra"
+
+#: KravenHD.py
+msgid "          Alternate Color"
+msgstr "          Alternatívna farba"
+
+#: KravenHD.py
+msgid "Choose the texture for the background."
+msgstr "Vyberte textúru pozadia."
+
+#: KravenHD.py
+msgid "Choose the alternate color for the background. It should match the texture at the best. Press OK to define your own RGB color."
+msgstr "Vyberte alternatívnu farbu pozadia. Textúra by sa mala čo najlepšie zhodovať s textúrou. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the texture for the infobars."
+msgstr "Vyberte štruktúru infobarov."
+
+#: KravenHD.py
+msgid "Choose the alternate color for the infobars. It should match the texture at the best. Press OK to define your own RGB color."
+msgstr "Vyberte alternatívnu farbu pre infobary. Textúra by sa mala čo najlepšie zhodovať s textúrou. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "This sections offers all settings for NumberZap."
+msgstr "Táto sekcia ponúka všetky nastavenia pre NumberZap."
+
+#: KravenHD.py
+msgid "NumberZap-Style"
+msgstr "NumberZap - Štýl"
+
+#: KravenHD.py
+msgid "Choose the border color for NumberZap. Press OK to define your own RGB color."
+msgstr "Vyberte farbu rámčeka pre NumberZap. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Border Color"
+msgstr "Rámček Farba"
+
+#: KravenHD.py
+msgid "no MiniTV"
+msgstr "bez MiniTV"
+
+#: KravenHD.py
+msgid "Selected Event Fontcolor"
+msgstr "Vybratá farba písma udalosti"
+
+#: KravenHD.py
+msgid "Selected Event Background"
+msgstr "Vybrané pozadie udalosti"
+
+#: KravenHD.py
+msgid "Running Event Fontcolor"
+msgstr "Farba písma spustenej udalosti"
+
+#: KravenHD.py
+msgid "Running Event Background"
+msgstr "Pozadie spustenej udalosti"
+
+#: KravenHD.py
+msgid "Event Description Fontsize"
+msgstr "Udalosť popis Veľkosť písma"
+
+#: KravenHD.py
+msgid "GRAPHICALEPG ________________________________________________________________________________"
+msgstr "GRAFICKÉ EPG ________________________________________________________________________________"
+
+#: KravenHD.py
+msgid "This sections offers all settings for GraphicalEPG."
+msgstr "Táto časť ponúka všetky nastavenia pre Grafické EPG."
+
+#: KravenHD.py
+msgid "GraphicalEPG-Style"
+msgstr "Grafické EPG Štýl"
+
+#: KravenHD.py
+msgid "Choose from different styles for GraphicalEPG."
+msgstr "Vyberte si z rôznych štýlov pre Grafické EPG."
+
+#: KravenHD.py
+msgid "Choose the border color for GraphicalEPG. Press OK to define your own RGB color."
+msgstr "Vyberte farbu orámovania pre Grafické EPG. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the font color of selected event for GraphicalEPG. Press OK to define your own RGB color."
+msgstr "Vyberte farbu písma zvolenej udalosti pre Grafické EPG. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the font color of selected events for GraphicalEPG. Press OK to define your own RGB color."
+msgstr "Vyberte farbu písma zvolených udalostí pre Grafické EPG. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB.."
+
+#: KravenHD.py
+msgid "Choose the background color of selected events for GraphicalEPG. Press OK to define your own RGB color."
+msgstr "Vyberte farbu pozadia zvolených udalostí pre Grafické EPG. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the background color of selected event for GraphicalEPG. Press OK to define your own RGB color."
+msgstr "Vyberte farbu pozadia zvolenej udalosti pre Grafické EPG. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the font color of running events for GraphicalEPG. Press OK to define your own RGB color."
+msgstr "Vyberte farbu písma spustených udalostí pre Grafické EPG. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the background color of running events for GraphicalEPG. Press OK to define your own RGB color."
+msgstr "Vyberte farbu pozadia spustených udalostí pre Grafické EPG. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "global selection fontcolor"
+msgstr "farba písma všeobecného výberu"
+
+#: KravenHD.py
+msgid "global selection background"
+msgstr "pozadie všeobecného výberu"
+
+#: KravenHD.py
+msgid "Text with MiniTV"
+msgstr "Text s MiniTV"
+
+#: KravenHD.py
+msgid "graphical"
+msgstr "grafické"
+
+#: KravenHD.py
+msgid "graphical with MiniTV"
+msgstr "grafické s MiniTV"
+
+#: KravenHD.py
+msgid "Choose from different styles for VerticalEPG."
+msgstr "Vyberte si z rôznych štýlov pre vertikálne RPG."
+
+#: KravenHD.py
+msgid "VerticalEPG-Style"
+msgstr "Vertikálne - EPG - Štyl"
+
+#: KravenHD.py
+msgid "VerticalEPG"
+msgstr "Vertikálne EPG"
+
+#: KravenHD.py
+msgid "description"
+msgstr "popis"
+
+#: KravenHD.py
+msgid "full"
+msgstr "plný"
+
+#: KravenHD.py
+msgid "Eventname Fontsize"
+msgstr "Názov udalosti - Veľkosť písma"
+
+#: KravenHD.py
+msgid "Choose the font size of eventname."
+msgstr "Vyberte veľkosť písma názvu udalosti."
+
+#: KravenHD.py
+msgid "standard layout"
+msgstr "štandardné rozloženie"
+
+#: KravenHD.py
+msgid "medium font with EPG Info"
+msgstr "stredné písmo s informáciou EPG"
+
+#: KravenHD.py
+msgid "big font with EPG Info"
+msgstr "veľké písmo s informáciou EPG"
+
+#: KravenHD.py
+msgid "SecondInfobar"
+msgstr "Druhý info - panel"
+
+#: KravenHD.py
+msgid ""
+"Choose from different styles for SecondInfobar. \n"
+"Activate the SecondInfobar in the \n"
+"OSD settings. \n"
+"2nd infobar -> 2nd Infobar INFO"
+msgstr ""
+"Vyberte si z rôznych štýlov pre druhý info - panel. \n"
+"Druhý info - panel aktivujete v \n"
+"Menu / Nastavenie /  \n"
+"Používanie a GUI / Nastavenia... \n"
+"2. info - panel -> 2. info - panel INFO"
+
+#: KravenHD.py
+msgid "MiniTV/weather"
+msgstr "MiniTV / Počasie"
+
+#: KravenHD.py
+msgid "show Picons in channellist"
+msgstr "zobraziť pikony v zozname kanálov"
+
+#: KravenHD.py
+msgid "Choose whether picons are shown in channellist or not."
+msgstr "Vyberte, či sa pikony budú zobrazovať v zozname kanálov alebo nie."
+
+#: KravenHD.py
+msgid "Eventname effect"
+msgstr "Názov udalosti Efekt"
+
+#: KravenHD.py
+msgid "Choose from different effects to display eventname."
+msgstr "Vyberte si z rôznych efektov zobrazovania názvu udalosti."
+
+#: KravenHD.py
+msgid "runningtext"
+msgstr "rolovať"
+
+#: KravenHD.py
+msgid "typewriter"
+msgstr "písací stroj"
+
+#: KravenHD.py
+msgid "Choose whether scrollbars should be shown."
+msgstr "Zvoľte, či bude posuvník zobrazený."
+
+#: ColorSelection.py
+msgid "Color Selection"
+msgstr "Výber farieb"
+
+#: ColorSelection.py
+msgid "Save Color"
+msgstr "Uložiť farbu"
+
+#: KravenHD.py
+msgid "You have no internet connection. This function is disabled."
+msgstr "Nemáte pripojenie na internet. Táto funkcia je vypnutá."
+
+#: KravenHD.py
+msgid "Mainmenu Fontsize ('Standard' Style)"
+msgstr "Veľkosť písma v hlavnom menu"
+
+#: KravenHD.py
+msgid "Choose the font size for 'Standard' mainmenus."
+msgstr "Vyberte veľkosť písma pre hlavné menu."
+
+#: KravenHD.py
+msgid "Mainmenu Title Color ('Horizontal' Styles)"
+msgstr "Farba názvov hlavného menu"
+
+#: KravenHD.py
+msgid "Choose the title font color for 'Horizontal' and 'Horizontal-Icons' mainmenus."
+msgstr "Vyberte si farbu názvov v hornej časti hlavného menu."
+
+#: KravenHD.py
+msgid "Mainmenu Icons Gradient Color ('Horizontal-Icons' Style)"
+msgstr "Farba ikon hlavnej ponuky ('Horizontálne-Ikony' Štýl)"
+
+#: KravenHD.py
+msgid "Choose the gradient color of the icons for 'Horizontal-Icons' mainmenus."
+msgstr "Vyberte farbu prechodu ikon v hlavných ponukách 'Horizontálne-Ilony'."
+
+#: KravenHDTextTranslator.py
+msgid "Move/Copy"
+msgstr "presunúť / kopírovať"
+
+#: KravenHDTextTranslator.py
+msgid "currently running:"
+msgstr "momentálne beží:"
+
+#: KravenHDTextTranslator.py
+msgid "it follows:"
+msgstr "nasleduje:"
+
+#: KravenHDTextTranslator.py
+msgid "coming:"
+msgstr "čoskoro:"
+
+#: KravenHDTextTranslator.py
+msgid "running since"
+msgstr "spustené"
+
+#: KravenHDTextTranslator.py
+msgid "preview"
+msgstr "Náhľad"
+
+#: KravenHDTextTranslator.py
+msgid "runs until"
+msgstr "zostáva "
+
+#: KravenHDTextTranslator.py
+msgid "   "
+msgstr "Hodiny"
+
+#: KravenHDTextTranslator.py
+msgid "timeshift active"
+msgstr "timeshift aktívny"
+
+#: KravenHDTextTranslator.py
+msgid "until live:"
+msgstr "na živo:"
+
+#: KravenHDTextTranslator.py
+msgid "temperature"
+msgstr "Teplota"
+
+#: KravenHDTextTranslator.py
+msgid "CPU load:"
+msgstr "CPU - Zaťaženie:"
+
+#: KravenHDTextTranslator.py
+msgid "satellite"
+msgstr "Satelit"
+
+#: KravenHDTextTranslator.py
+msgid "fanspeed:"
+msgstr "Ventilátor:"
+
+#: KravenHDTextTranslator.py
+msgid "AVG load:"
+msgstr "Zaťaženie:"
+
+#: KravenHDTextTranslator.py
+msgid "signal"
+msgstr "Signál"
+
+#: KravenHDTextTranslator.py
+msgid "tuner"
+msgstr "Tuner"
+
+#: KravenHDTextTranslator.py
+msgid "video"
+msgstr "Video"
+
+#: KravenHDTextTranslator.py
+msgid "r/m:"
+msgstr "U/m:"
+
+#: KravenHDTextTranslator.py
+msgid "load"
+msgstr "načitavam"
+
+#: KravenHDTextTranslator.py
+msgid "temp:"
+msgstr "Teplo:"
+
+#: KravenHDTextTranslator.py
+msgid "wind:"
+msgstr "Vietor:"
+
+#: KravenHDTextTranslator.py
+msgid "clime:"
+msgstr "Klíma:"
+
+#: KravenHDTextTranslator.py
+msgid "city:"
+msgstr "Mesto:"
+
+#: KravenHDTextTranslator.py
+msgid "Current Weather"
+msgstr "Aktuálne počasie"
+
+#: KravenHD.py
+msgid "Icon-Font vertical position"
+msgstr "Vertikálna poloha písma symbolu"
+
+#: KravenHD.py
+msgid "Correct the vertical font position within some icons for the infobars and players."
+msgstr "Opravte zvislú polohu písma v rámci niektorých ikon pre infobary a prehrávače."
+
+#: KravenHDTextTranslator.py
+msgid "Birthday"
+msgstr "Narodeniny"
+
+#: KravenHDTextTranslator.py
+msgid "Age"
+msgstr "Vek"
+
+#: KravenHDTextTranslator.py
+msgid "Birthday Reminder Settings"
+msgstr "Nastavenia pripomenutia narodenín"
+
+#: KravenHDTextTranslator.py
+msgid "Select a path for the birthday file"
+msgstr "Vyberte cestu k súboru s narodeninami"
+
+#: KravenHD.py
+msgid "not available with selected Infobar-Style"
+msgstr "nie je k dispozícii s vybranými Infobar - Štýlmi"
+
+#: KravenHD.py
+msgid "remaining: "
+msgstr "zostáva:"
+
+#: KravenHD.py
+msgid "Busy color"
+msgstr "Obsadený tuner - Farba"
+
+#: KravenHD.py
+msgid "Choose the color for engaged tuners. Press OK to define your own RGB color."
+msgstr "Vyberte farbu pre obsadené (zaneprázdnené) tunery. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Active color"
+msgstr "Aktívny tuner - Farba"
+
+#: KravenHD.py
+msgid "Choose the color for the current live tuner. Press OK to define your own RGB color."
+msgstr "Vyberte farbu aktuálne použitého tunera. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Record color"
+msgstr "Tuner nahráva - Farba"
+
+#: KravenHD.py
+msgid "Choose the color for recording tuners. Press OK to define your own RGB color."
+msgstr "Vyberte farbu pre tunery s ktorých sa prave nahráva. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Active record color"
+msgstr "Aktívny - Nahráva - Farba"
+
+#: KravenHD.py
+msgid "Choose the color for the current live tuner when also recording. Press OK to define your own RGB color."
+msgstr "Vyberte farbu aktuálne použitého tunera, ktorý prave nahráva. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB.."
+
+#: KravenHD.py
+msgid "Show unused Tuners"
+msgstr "Zobraziť nepoužívané tunery"
+
+#: KravenHD.py
+msgid "Choose whether unused tuners are displayed or not."
+msgstr "Vyberte, či sa nepoužívané tunery majú alebo nemajú zobrazovať v infobare."
+
+#: KravenHD.py
+msgid "Show AGC/SNR"
+msgstr "Zobraziť AGC/SNR"
+
+#: KravenHD.py
+msgid "Choose whether AGC/SNR are displayed or not."
+msgstr "Vyberte, či sa AGC/SNR majú alebo nemajú zobrazovať v infobare."
+
+#: KravenHD.py
+msgid "Skin Resolution"
+msgstr "Rozlíšenie Skinu"
+
+#: KravenHD.py
+msgid "Choose the resolution of the skin."
+msgstr "Zvoľte rozlíšenie pre Skin."
+
+#: KravenHD.py
+msgid "gradient transparent"
+msgstr "vzostupne prehľadný"
+
+#: KravenHD.py
+msgid "box transparent"
+msgstr "box prehľadný"
+
+#: KravenHD.py
+msgid "Choose from different styles to display popups like 'MessageBox', 'ChoiceBox', 'ExtensionsList', 'VirtualKeyboard' and more."
+msgstr "Vyberte si z rôznych štýlov na zobrazenie automaticky otváraných okien, napríklad 'MessageBox', 'ChoiceBox', 'ExtensionsList', 'VirtualKeyboard' a ďalších."
+
+#: KravenHD.py
+msgid ""
+"gradient-style \n"
+"without transparency \n"
+"global background"
+msgstr ""
+"vzostupný - štýl \n"
+"bez transparentnosti \n"
+"všeobecné pozadie"
+
+#: KravenHD.py
+msgid ""
+"gradient-style \n"
+"with transparency \n"
+"global background"
+msgstr ""
+"vzostupný - štýl  \n"
+"bez transparentnosti \n"
+"všeobecné pozadie"
+
+#: KravenHD.py
+msgid ""
+"box-style \n"
+"without transparency \n"
+"global background \n"
+"global border"
+msgstr ""
+"box - štýl \n"
+"bez transparentnosti \n"
+"všeobecné pozadie \n"
+"všeobecný rámček"
+
+#: KravenHD.py
+msgid ""
+"box-style \n"
+"with transparency \n"
+"global background \n"
+"global border"
+msgstr ""
+"box - štýl \n"
+"bez transparentnosti \n"
+"všeobecné pozadie \n"
+"všeobecný rámček"
+
+#: KravenHD.py
+msgid "Progress-Bar"
+msgstr "Ukazateľ postupu"
+
+#: KravenHD.py
+msgid "Choose the color of progress bar. Press OK to define your own RGB color."
+msgstr "Vyberte farbu ukazateľa postupu. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "border"
+msgstr "rámček"
+
+#: KravenHD.py
+msgid "line"
+msgstr "čiara"
+
+#: KravenHD.py
+msgid "Progress-Background"
+msgstr "Pozadie ukazateľa postupu"
+
+#: KravenHD.py
+msgid "Progress-Border/Line"
+msgstr "Ukazateľ postupu Rámček / Čiara"
+
+#: KravenHD.py
+msgid "Progress-Border Color"
+msgstr "Ukazateľ postupu Rámček / Farba"
+
+#: KravenHD.py
+msgid "Progress-Line Color"
+msgstr "Ukazateľ postupu Čiara / Farba"
+
+#: KravenHD.py
+msgid "Choose the color of progress bar background or deactivate it completely. Press OK to define your own RGB color."
+msgstr "Vyberte farbu pozadia na lište postupu alebo ju úplne deaktivujte. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose whether progress bar displayed with border or line or without them."
+msgstr "Vyberte, či sa lišta postupu bude zobrazovať s ohraničením alebo čiarou alebo bez nich."
+
+#: KravenHD.py
+msgid "Choose the border color of progress bar. Press OK to define your own RGB color."
+msgstr "Vyberte farbu okraja ukazovateľa priebehu. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid "Choose the line color of progress bar. Press OK to define your own RGB color."
+msgstr "Vyberte farbu čiary priebehu. Stlačením tlačidla OK definujte svoju vlastnú farbu RGB."
+
+#: KravenHD.py
+msgid ""
+"border \n"
+"choose the color below"
+msgstr ""
+"rámček \n"
+"vyberte farbu nižšie"
+
+#: KravenHD.py
+msgid ""
+"line \n"
+"choose the color below"
+msgstr ""
+"čiara \n"
+"vyberte farbu nižšie"

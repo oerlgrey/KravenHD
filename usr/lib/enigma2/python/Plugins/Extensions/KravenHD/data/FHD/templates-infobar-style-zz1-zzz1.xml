@@ -173,18 +173,18 @@
 	  <ePixmap pixmap="KravenHD/infobar-icons/empty_big.png" position="30,1035" size="244,33" zPosition="1" alphatest="blend" />
 	  <eLabel backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIcon" text="AGC:" position="36,1035" name="KravenIconVPosition" size="60,33" halign="left" transparent="1" zPosition="1" />
 	  <widget source="session.FrontendStatus" render="Progress" position="99,1045" size="96,12" pixmap="KravenHD/progress/progress64.png" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">AGC</convert>
+		<convert type="FrontendInfo">AGC</convert>
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.FrontendStatus" render="Label" font="Regular;27" foregroundColor="KravenIcon" position="202,1035" name="KravenIconVPosition" size="69,33" halign="right" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">AGC</convert>
+		<convert type="FrontendInfo">AGC</convert>
 	  </widget>
 	  <ePixmap pixmap="KravenHD/infobar-icons/empty_big.png" position="306,1035" size="244,33" zPosition="1" alphatest="blend" />
 	  <eLabel backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIcon" text="SNR:" position="312,1035" name="KravenIconVPosition" size="60,33" halign="left" transparent="1" zPosition="1" />
 	  <widget source="session.FrontendStatus" render="Progress" position="375,1045" size="96,12" pixmap="KravenHD/progress/progress64.png" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.FrontendStatus" render="Label" font="Regular;27" foregroundColor="KravenIcon" position="476,1035" name="KravenIconVPosition" size="69,33" halign="right" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	</screen>
 	
@@ -201,18 +201,18 @@
 	  <ePixmap pixmap="KravenHD/infobar-icons/empty_big.png" position="30,1035" size="244,33" zPosition="1" alphatest="blend" />
 	  <eLabel backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIcon" text="AGC:" position="36,1035" name="KravenIconVPosition" size="60,33" halign="left" transparent="1" zPosition="1" />
 	  <widget source="session.FrontendStatus" render="Progress" position="99,1045" size="96,12" pixmap="KravenHD/progress/progress64.png" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">AGC</convert>
+		<convert type="FrontendInfo">AGC</convert>
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.FrontendStatus" render="Label" font="Regular;27" foregroundColor="KravenIcon" position="200,1035" name="KravenIconVPosition" size="69,33" halign="right" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">AGC</convert>
+		<convert type="FrontendInfo">AGC</convert>
 	  </widget>
 	  <ePixmap pixmap="KravenHD/infobar-icons/empty_big.png" position="306,1035" size="244,33" zPosition="1" alphatest="blend" />
 	  <eLabel backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIcon" text="SNR:" position="312,1035" name="KravenIconVPosition" size="60,33" halign="left" transparent="1" zPosition="1" />
 	  <widget source="session.FrontendStatus" render="Progress" position="375,1045" size="96,12" pixmap="KravenHD/progress/progress64.png" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	  <widget backgroundColor="KravenIBbg" source="session.FrontendStatus" render="Label" font="Regular;27" foregroundColor="KravenIcon" position="476,1035" name="KravenIconVPosition" size="69,33" halign="right" transparent="1" zPosition="1">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	</screen>
 	
@@ -416,20 +416,11 @@
 	</screen>
 	
 	<screen name="infobar-style-zz1-zzz1-infobox-sat">
-	  <widget backgroundColor="KravenIBbg" font="Regular;27" position="586,1035" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="80,33" render="Label" source="session.CurrentService" transparent="1">
+	  <widget backgroundColor="KravenIBbg" font="Regular;27" position="586,1035" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="91,33" render="Label" source="session.CurrentService" transparent="1">
 		<convert type="KravenHDServiceName2">OrbitalPos</convert>
 	  </widget>
 	  <widget render="Label" font="Regular;27" size="100,33" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="652,1035" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" source="session.FrontendStatus">
-		<convert type="KravenHDFrontendInfo">SNR</convert>
-	  </widget>
-	</screen>
-	
-	<screen name="infobar-style-zz1-zzz1-infobox-db">
-	  <widget backgroundColor="KravenIBbg" font="Regular;27" position="586,1035" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" halign="left" size="80,33" render="Label" source="session.CurrentService" transparent="1">
-		<convert type="KravenHDServiceName2">OrbitalPos</convert>
-	  </widget>
-	  <widget render="Label" font="Regular;27" size="100,33" halign="right" backgroundColor="KravenIBbg" transparent="1" noWrap="1" position="652,1035" name="KravenIconVPosition" valign="center" foregroundColor="KravenIcon" source="session.FrontendStatus">
-		<convert type="KravenHDFrontendInfo">SNRdB</convert>
+		<convert type="FrontendInfo">SNR</convert>
 	  </widget>
 	</screen>
 	
@@ -554,11 +545,11 @@
 	</screen>
 	
 	<screen name="infobar-style-zz1-zzz1-clock-weather">
-	  <widget alphatest="blend" render="KravenHDWetterPicon" position="1599,844" size="144,144" source="Title" path="WetterIcons" transparent="1" zPosition="1">
-		<convert type="KravenHDWeather">Day_0,MeteoIcon </convert>
+	  <widget alphatest="blend" render="KravenHDWetterPicon" position="1599,844" size="144,144" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="1">
+		<convert type="KravenHDWeather"> icon_cur</convert>
 	  </widget>
-	  <widget source="Title" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont2" position="1759,855" size="135,40" font="Regular2;36" noWrap="1" halign="center" valign="center" zPosition="2" transparent="1">
-		<convert type="KravenHDWeather">Day_0,DayTemp</convert>
+	  <widget source="session.CurrentService" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont2" position="1759,855" size="135,40" font="Regular2;36" noWrap="1" halign="center" valign="center" zPosition="2" transparent="1">
+		<convert type="KravenHDWeather">temp_cur</convert>
 	  </widget>
 	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1759,904" size="135,45" font="Regular;39" halign="center" valign="center" zPosition="2" transparent="1">
 		<convert type="KravenHDClockToText">Default</convert>
@@ -594,11 +585,11 @@
 	  <widget backgroundColor="KravenIBbg" font="Regular2;24" foregroundColor="KravenIBFont2" halign="center" position="1591,976" size="300,45" render="Label" source="global.CurrentTime" transparent="1" valign="top" zPosition="2">
 		<convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
 	  </widget>
-	  <widget alphatest="blend" render="KravenHDAndroidPicon" position="1591,801" size="300,183" source="Title" path="clock" transparent="1" zPosition="1">
-		<convert type="KravenHDWeather">Day_0,MeteoIcon </convert>
+	  <widget alphatest="blend" render="KravenHDAndroidPicon" position="1591,801" size="300,183" source="session.CurrentService" path="clock" transparent="1" zPosition="1">
+		<convert type="KravenHDWeather"> icon_cur</convert>
 	  </widget>
-	  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;30" foregroundColor="KravenAndroid" render="Label" position="1705,931" size="150,37" source="Title" zPosition="2" halign="right" valign="center" transparent="1">
-		<convert type="KravenHDWeather">Day_0,DayTemp</convert>
+	  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;30" foregroundColor="KravenAndroid" render="Label" position="1705,931" size="150,37" source="session.CurrentService" zPosition="2" halign="right" valign="center" transparent="1">
+		<convert type="KravenHDWeather">temp_cur</convert>
 	  </widget>
 	</screen>
 	

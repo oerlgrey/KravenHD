@@ -142,32 +142,6 @@ BackgroundSelfTextureList.append(("texture", _("texture")))
 BackgroundSelfGradientTextureList = deepcopy(BackgroundSelfGradientList)
 BackgroundSelfGradientTextureList.append(("texture", _("texture")))
 
-LanguageList = [
-	("de", _("Deutsch")),
-	("en", _("English")),
-	("ru", _("Russian")),
-	("it", _("Italian")),
-	("es", _("Spanish (es)")),
-	("sp", _("Spanish (sp)")),
-	("uk", _("Ukrainian (uk)")),
-	("ua", _("Ukrainian (ua)")),
-	("pt", _("Portuguese")),
-	("ro", _("Romanian")),
-	("pl", _("Polish")),
-	("fi", _("Finnish")),
-	("nl", _("Dutch")),
-	("fr", _("French")),
-	("bg", _("Bulgarian")),
-	("sv", _("Swedish (sv)")),
-	("se", _("Swedish (se)")),
-	("zh_tw", _("Chinese Traditional")),
-	("zh", _("Chinese Simplified (zh)")),
-	("zh_cn", _("Chinese Simplified (zh_cn)")),
-	("tr", _("Turkish")),
-	("hr", _("Croatian")),
-	("ca", _("Catalan"))
-	]
-
 TransList = [
 	("00", "0%"),
 	("0C", "5%"),
@@ -775,7 +749,6 @@ config.plugins.KravenHD.ShowAgcSnr = ConfigSelection(default="none", choices = [
 				
 config.plugins.KravenHD.Infobox = ConfigSelection(default="sat", choices = [
 				("sat", _("Tuner/Satellite + SNR")),
-				("db", _("Tuner/Satellite + dB")),
 				("tunerinfo", _("Tunerinfo")),
 				("cpu", _("CPU + Load")),
 				("temp", _("Temperature + Fan"))
@@ -888,18 +861,38 @@ config.plugins.KravenHD.FileCommander = ConfigSelection(default="filecommander-h
 				("filecommander-ver", _("vertical"))
 				])
 
-config.plugins.KravenHD.weather_cityname = ConfigText(default = "")
-config.plugins.KravenHD.weather_language = ConfigSelection(default="de", choices = LanguageList)
-
-config.plugins.KravenHD.weather_search_over = ConfigSelection(default="ip", choices = [
-				("ip", _("Auto (IP)")),
-				("name", _("Search String"))
+config.plugins.KravenHD.msn_language = ConfigSelection(default="de-DE", choices = [
+				("de-DE", _("Deutsch")),
+				("en-US", _("English")),
+				("ru-RU", _("Russian")),
+				("it-IT", _("Italian")),
+				("es-ES", _("Spanish")),
+				("uk-UA", _("Ukrainian")),
+				("pt-PT", _("Portuguese")),
+				("ro-RO", _("Romanian")),
+				("pl-PL", _("Polish")),
+				("fi-FI", _("Finnish")),
+				("nl-NL", _("Dutch")),
+				("fr-FR", _("French")),
+				("bg-BG", _("Bulgarian")),
+				("sv-SE", _("Swedish")),
+				("tr-TR", _("Turkish")),
+				("hr-HR", _("Croatian")),
+				("ca-AD", _("Catalan")),
+				("sk-SK", _("Slovak"))
 				])
 
-config.plugins.KravenHD.weather_accu_latlon = ConfigText(default = "")
-config.plugins.KravenHD.weather_accu_apikey = ConfigText(default = "")
-config.plugins.KravenHD.weather_accu_id = ConfigText(default = "")
-config.plugins.KravenHD.weather_foundcity = ConfigText(default = "")
+config.plugins.KravenHD.msn_searchby = ConfigSelection(default="auto-ip", choices = [
+				("auto-ip", _("IP")),
+				("location", _("Enter location manually"))
+				])
+
+SearchResultList = []
+config.plugins.KravenHD.msn_list = ConfigSelection(default = "", choices = SearchResultList)
+
+config.plugins.KravenHD.msn_cityfound = ConfigText(default = "")
+config.plugins.KravenHD.msn_cityname = ConfigText(default = "")
+config.plugins.KravenHD.msn_code = ConfigText(default = "")
 
 config.plugins.KravenHD.PlayerClock = ConfigSelection(default="player-classic", choices = [
 				("player-classic", _("standard")),
@@ -1480,7 +1473,7 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(['font="Regular;30" position="199,584" size="708,38"', 'font="Regular;26" position="199,587" size="708,33"']) # no picon now
 				self.skinSearchAndReplace.append(['font="Regular;30" position="199,636" size="708,38"', 'font="Regular;26" position="199,639" size="708,33"']) # no picon next
 		else:
-			if config.plugins.KravenHD.IBFontSize.value == "size-33":
+			if config.plugins.KravenHD.IBFontSize.value == "small":
 				self.skinSearchAndReplace.append(['font="Regular;45" position="817,830" size="750,55"', 'font="Regular;33" position="817,839" size="750,42"']) # ZZ1 now
 				self.skinSearchAndReplace.append(['font="Regular;45" position="817,965" size="589,55"', 'font="Regular;33" position="817,974" size="589,42"']) # ZZ1 next
 				self.skinSearchAndReplace.append(['font="Regular;45" position="817,790" size="750,55"', 'font="Regular;33" position="817,799" size="750,42"']) # ZZZ1 now
@@ -1493,7 +1486,7 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(['font="Regular;45" position="644,972" size="722,55"', 'font="Regular;33" position="644,981" size="722,42"']) # X1 next
 				self.skinSearchAndReplace.append(['font="Regular;45" position="298,876" size="1061,55"', 'font="Regular;33" position="298,885" size="1061,42"']) # no picon now
 				self.skinSearchAndReplace.append(['font="Regular;45" position="298,954" size="1061,55"', 'font="Regular;33" position="298,963" size="1061,42"']) # no picon next
-			elif config.plugins.KravenHD.IBFontSize.value == "size-39":
+			elif config.plugins.KravenHD.IBFontSize.value == "middle":
 				self.skinSearchAndReplace.append(['font="Regular;45" position="817,830" size="750,55"', 'font="Regular;39" position="817,833" size="750,49"']) # ZZ1 now
 				self.skinSearchAndReplace.append(['font="Regular;45" position="817,965" size="589,55"', 'font="Regular;39" position="817,968" size="589,49"']) # ZZ1 next
 				self.skinSearchAndReplace.append(['font="Regular;45" position="817,790" size="750,55"', 'font="Regular;39" position="817,793" size="750,49"']) # ZZZ1 now
@@ -1598,14 +1591,14 @@ class ActivateSkinSettings:
 				self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['size="70,70" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 60" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['size="100,100" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="100,100" render="Label" font="Meteo; 1000" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['MeteoIcon</convert>', 'MeteoFont</convert>'])
+				self.skinSearchAndReplace.append(['"KravenHDWeather">icon', '"KravenHDWeather">meteo'])
 		else:
 			if config.plugins.KravenHD.WeatherView.value == "meteo":
 				self.skinSearchAndReplace.append(['size="75,75" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="75,75" render="Label" font="Meteo;60" halign="right" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['size="75,75" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend"', 'size="75,75" render="Label" font="Meteo;67" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['size="105,105" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="105,105" render="Label" font="Meteo;90" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
 				self.skinSearchAndReplace.append(['size="150,150" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="150,150" render="Label" font="Meteo;1500" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['MeteoIcon</convert>', 'MeteoFont</convert>'])
+				self.skinSearchAndReplace.append(['"KravenHDWeather">icon', '"KravenHDWeather">meteo'])
 
 		### Meteo-Font
 		if config.plugins.KravenHD.MeteoColor.value == "meteo-dark":
@@ -1639,42 +1632,24 @@ class ActivateSkinSettings:
 			if not self.silent:
 				# ChannelSelection
 				CSitems = config.usage.serviceitems_per_page.value
-				if self.actChannelselectionstyle in ("channelselection-style-nobile-minitv", "channelselection-style-nobile-minitv3", "channelselection-style-nobile-minitv33"):
-					if (CSitems <= 9):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_45.png'])
-					if (10 <= CSitems <= 11):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_36.png'])
-					if (12 <= CSitems):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_30.png'])
-				elif self.actChannelselectionstyle in ("channelselection-style-nobile", "channelselection-style-nobile2"):
-					if (CSitems <= 11):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_70.png'])
-					if (12 <= CSitems <= 14):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_50.png'])
-					if (15 <= CSitems <= 16):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_40.png'])
-					if (17 <= CSitems <= 19):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_36.png'])
-					if (20 <= CSitems):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_30.png'])
-				elif self.actChannelselectionstyle in ("channelselection-style-minitv2", "channelselection-style-minitv-picon"):
-					if (CSitems <= 11):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_50.png'])
-					if (12 <= CSitems <= 13):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_36.png'])
-					if (14 <= CSitems):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_30.png'])
+				CSheight = ""
+				CSlines = ""
+				self.actCSItemHeight = ""
+				if config.usage.servicelist_twolines.value == True:
+					CSlines = 2
 				else:
-					if (CSitems <= 11):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_70.png'])
-					if (12 <= CSitems <= 13):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_50.png'])
-					if (14 <= CSitems <= 15):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_40.png'])
-					if (16 <= CSitems <= 18):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_36.png'])
-					if (19 <= CSitems):
-						self.skinSearchAndReplace.append(['sel_CS.png', 'sel_30.png'])
+					CSlines = 1
+				if self.actChannelselectionstyle in ("channelselection-style-nobile-minitv", "channelselection-style-nobile-minitv3", "channelselection-style-nobile-minitv33"):
+					CSheight = 348
+				elif self.actChannelselectionstyle in ("channelselection-style-nobile", "channelselection-style-nobile2"):
+					CSheight = 580
+				elif self.actChannelselectionstyle == "channelselection-style-minitv2":
+					CSheight = 420
+				elif self.actChannelselectionstyle == "channelselection-style-minitv-picon":
+					CSheight = 396
+				else:
+					CSheight = 560
+				self.actCSItemHeight = int(((CSheight / CSitems) * CSlines) +1)
 
 				# MovieSelection
 				MSitems = config.movielist.itemsperpage.value
@@ -2408,6 +2383,16 @@ class ActivateSkinSettings:
 		### bsWindow
 		self.makebsWindowpng()
 
+		### VirtualKeyBoard
+		if config.plugins.KravenHD.PopupStyle.value == "popup-grad-trans":
+			self.changeColor("virtualkeyboard_gr_tr","virtualkeyboard",self.skincolorbackgroundcolor,None)
+		elif config.plugins.KravenHD.PopupStyle.value == "popup-grad":
+			self.changeColor("virtualkeyboard_gr","virtualkeyboard",self.skincolorbackgroundcolor,None)
+		elif config.plugins.KravenHD.PopupStyle.value == "popup-box-trans":
+			self.changeColor("virtualkeyboard_bx_tr","virtualkeyboard",self.skincolorbackgroundcolor,config.plugins.KravenHD.Border.value)
+		elif config.plugins.KravenHD.PopupStyle.value == "popup-box":
+			self.changeColor("virtualkeyboard_bx","virtualkeyboard",self.skincolorbackgroundcolor,config.plugins.KravenHD.Border.value)
+
 		### SerienRecorder
 		if config.plugins.KravenHD.SerienRecorder.value == "serienrecorder":
 			self.appendSkinFile(self.data + config.plugins.KravenHD.SerienRecorder.value + ".xml")
@@ -2943,6 +2928,7 @@ class ActivateSkinSettings:
 		self.makeGradientpng("sel_90", 870, 90, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
 		self.makeGradientpng("sel_110", 736, 110, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
 		self.makeGradientpng("sel_135", 736, 136, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
+		self.makeGradientpng("sel_CS", 765, self.actCSItemHeight, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")
 		if config.plugins.KravenHD.EMCSelectionColors.value == "global":
 			if config.plugins.KravenHD.EMCStyle.value in ("emc-verybigcover", "emc-verybigcover2"):
 				self.makeGradientpng("sel_28", 777, 28, config.plugins.KravenHD.SelectionBackground.value, config.plugins.KravenHD.SelectionBackground2.value, "00")

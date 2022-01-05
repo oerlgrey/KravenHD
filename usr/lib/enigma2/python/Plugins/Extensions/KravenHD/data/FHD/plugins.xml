@@ -107,7 +107,7 @@
     <widget backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular;33" halign="right" position="1020,1006" render="Label" size="180,60" source="session.CurrentService" transparent="1" zPosition="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
-    <widget backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular;30" halign="right" position="1422,948" render="Label" size="183,37" source="session.CurrentService" transparent="1" valign="Center" zPosition="1">
+    <widget backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" font="Regular;30" halign="right" position="1422,948" render="Label" size="183,37" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
       <convert type="ServicePosition">Remaining</convert>
     </widget>
     <widget position="318,990" render="PositionGauge" size="1287,10" source="session.CurrentService" transparent="1">
@@ -119,7 +119,7 @@
     <eLabel backgroundColor="KravenLine" position="318,996" size="1287,1" zPosition="-1" />
     <widget name="subtitleLabel" position="493,1006" size="165,60" font="Regular;27" backgroundColor="KravenIBbg" transparent="1" />
     <widget name="audioLabel" position="318,1006" size="165,60" font="Regular;27" backgroundColor="KravenIBbg" transparent="1" />
-    <widget name="chapterLabel" position="670,1008" size="337,60" font="Regular;27" backgroundColor="KravenIBbg" transparent="1" />
+    <widget name="chapterLabel" position="670,1006" size="337,60" font="Regular;27" backgroundColor="KravenIBbg" transparent="1" />
     <widget source="global.CurrentTime" position="1464,1006" size="141,60" font="Regular;33" render="Label" halign="right" zPosition="12" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" transparent="1">
       <convert type="KravenHDClockToText">Default</convert>
     </widget>
@@ -317,8 +317,8 @@
   <screen name="FritzCallSetup" position="0,0" size="1920,1080" flags="wfNoBorder" title="FritzCallSetup" backgroundColor="transparent">
 	<!--*FritzCallSetup*-->
 	<eLabel text="FritzCall Setup" position="63,10" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;50" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="consideration" position="63,120" size="1104,135" font="Regular2;30" transparent="1" foregroundColor="KravenFont2" />
-    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,285" size="1104,675" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,630" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="consideration" position="204,753" size="822,202" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
     <panel name="Colorbuttons"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -951,8 +951,8 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerFilterEditor" position="0,0" size="1920,1080" title="Edit AutoTimer Filters">
 	<!--*AutoTimerFilterEditor*-->
     <panel name="Title-big"/>
-	<widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,810" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
-	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
+	<widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,630" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+	<widget name="HelpWindow" position="63,753" size="1104,202" zPosition="98" transparent="1" alphatest="blend" />
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
     <panel name="Colorbuttons"/>
@@ -1258,8 +1258,8 @@
     <widget backgroundColor="KravenIBbg3" name="title" font="Regular2;50" foregroundColor="KravenIBGFont2" position="63,10" size="1500,69" transparent="1" halign="left" valign="center" noWrap="1" />
 	<widget backgroundColor="Kravenbg3" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<widget backgroundColor="Kravenbg3" name="uphops" font="Regular;32" foregroundColor="KravenFont1" position="63,705" size="500,41" />
-	<widget backgroundColor="Kravenbg3" name="cards" font="Regular;32" foregroundColor="KravenFont1" position="667,750" size="500,41" halign="right" />
-	<widget backgroundColor="Kravenbg3" name="providers" font="Regular;32" foregroundColor="KravenFont1" position="63,705" size="500,41" />
+	<widget backgroundColor="Kravenbg3" name="cards" font="Regular;32" foregroundColor="KravenFont1" position="667,705" size="500,41" halign="right" />
+	<widget backgroundColor="Kravenbg3" name="providers" font="Regular;32" foregroundColor="KravenFont1" position="63,750" size="500,41" />
 	<widget backgroundColor="Kravenbg3" name="reshare" font="Regular;32" foregroundColor="KravenFont1" position="667,750" size="500,41" halign="right" />
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -2118,21 +2118,21 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="BirthdayReminder" position="0,0" size="1920,1080" title=" " >
 	<!--*BirthdayReminder*-->
     <eLabel backgroundColor="KravenIBbg3" text="Birthday Reminder" font="Regular2;50" foregroundColor="KravenIBGFont2" position="63,10" size="1500,69" transparent="1" halign="left" valign="center" />
-    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="72,120" size="450,41" font="Regular;32" foregroundColor="KravenFont2" halign="left" valign="center" transparent="1">
+    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="87,120" size="621,41" font="Regular2;32" foregroundColor="KravenFont2" halign="left" valign="center" transparent="1">
       <convert type="KravenHDTextTranslator">name</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="573,120" size="390,41" font="Regular;32" foregroundColor="KravenFont2" halign="left" valign="center" transparent="1">
+    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="738,120" size="276,41" font="Regular2;32" foregroundColor="KravenFont2" halign="left" valign="center" transparent="1">
       <convert type="KravenHDTextTranslator">birthday</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="1014,120" size="144,41" font="Regular;32" foregroundColor="KravenFont2" halign="right" valign="center" transparent="1">
+    <widget source="session.CurrentService" render="Label" backgroundColor="Kravenbg3" position="1023,120" size="135,41" font="Regular2;32" foregroundColor="KravenFont2" halign="right" valign="center" transparent="1">
       <convert type="KravenHDTextTranslator">age</convert>
     </widget>
 	<widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="63,165" size="1104,765" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 	  <convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos = (9, 2),   size = (471, 41), font=0, flags = RT_HALIGN_LEFT, text = 0),
-					MultiContentEntryText(pos = (510, 2), size = (432, 41), font=0, flags = RT_HALIGN_LEFT, text = 1),
-					MultiContentEntryText(pos = (951, 2), size = (144, 41), font=0, flags = RT_HALIGN_RIGHT, text = 2),
+					MultiContentEntryText(pos = (24, 2),   size = (621, 41), font=0, flags = RT_HALIGN_LEFT, text = 0),
+					MultiContentEntryText(pos = (675, 2), size = (276, 41), font=0, flags = RT_HALIGN_LEFT, text = 1),
+					MultiContentEntryText(pos = (960, 2), size = (120, 41), font=0, flags = RT_HALIGN_RIGHT, text = 2),
 					],
 					"fonts": [gFont("Regular", 32)],
 					"itemHeight": 45
@@ -2378,8 +2378,8 @@
 
   <screen name="MSNWeatherPluginEntryConfigScreen" position="0,0" size="1920,1080" title="WeatherPlugin: Edit Entry" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*MSNWeatherPluginEntryConfigScreen*-->
-    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,810" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
-	<widget name="HelpWindow" position="1350,520" size="392,393" zPosition="98" transparent="1" alphatest="blend" />
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,630" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+	<widget name="HelpWindow" position="63,753" size="1104,202" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -2390,7 +2390,7 @@
 
   <screen name="MSNWeatherPluginSearch" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*MSNWeatherPluginSearch*-->
-    <widget backgroundColor="Kravenbg3" name="entrylist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="90" selectionPixmap="KravenHD/graphics/sel_60.png" position="63,120" size="1104,810" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="entrylist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="90" selectionPixmap="KravenHD/graphics/sel_60.png" position="63,120" size="1104,630" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>

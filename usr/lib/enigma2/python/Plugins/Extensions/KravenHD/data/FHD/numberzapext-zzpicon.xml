@@ -16,11 +16,11 @@
 	<eLabel backgroundColor="KravenNZBorder" position="411,52" size="1,96" />
   </screen>
 
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="NumberZapWithName" position="396,279" size="1071,514" title="Kanal">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="NumberZapPicon" position="396,279" size="1071,514" title="Channel">
 	<widget alphatest="blend" position="426,135" render="Picon" backgroundColor="Kravenbg" size="600,255" source="Service" transparent="1" zPosition="1">
 	  <convert type="ServiceName">Reference</convert>
 	</widget>
-	<widget backgroundColor="Kravenbg" font="Regular;120" foregroundColor="KravenFont1" halign="center" name="servicenumber" position="97,166" size="300,180" transparent="0" zPosition="0" />
+	<widget backgroundColor="Kravenbg" font="Regular;120" foregroundColor="KravenFont1" halign="center" name="number" position="97,166" size="300,180" transparent="0" zPosition="0" />
 	<widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont1" halign="center" name="servicename" noWrap="1" position="438,423" size="580,39" transparent="0" zPosition="0" />
 	<eLabel backgroundColor="Kravenbg" position="406,48" size="640,421" zPosition="-1" />
 	<eLabel backgroundColor="KravenNZBorder" position="1041,52" size="1,412" />

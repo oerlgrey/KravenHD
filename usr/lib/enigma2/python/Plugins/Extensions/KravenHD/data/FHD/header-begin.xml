@@ -3,7 +3,7 @@
     <!-- DONT REMOVE THIS DISCLAIMER -->
     <!-- KravenHD by Team Kraven -->
     <!-- Icons and buttons by stony272 -->
-    <!-- Thanks to TBX, Mike99 -->
+    <!-- Thanks to Kraven, tomele, Turbohai, Apachi70, TBX, Mike99 -->
     <!-- You can change this skin for PERSONAL USE ONLY -->
     <!-- You are not allowed to publish our skin without our permission -->
   </copyright>
@@ -179,8 +179,8 @@
     <sub font="Regular;44" foregroundColor="orange" name="Subtitle_Italic" shadowColor="shadow" shadowOffset="4,4" />
   </subtitles>
   <windowstyle id="0" type="skinned">
-    <title font="Regular2;40" offset="60,37" />
-    <color color="Kravenbg" name="Background" />
+    <title font="Regular2;35" offset="60,40" />
+    <color color="Kravenbg6" name="Background" />
     <color color="KravenFont1" name="LabelForeground" />
     <color color="Kravenbg" name="ListboxBackground" />
     <color color="KravenFont1" name="ListboxForeground" />

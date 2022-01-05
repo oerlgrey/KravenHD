@@ -8,323 +8,15 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2020-07-31 21:59+0200\n"
+"PO-Revision-Date: 2020-10-14 17:40+0200\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: KravenHDWeather.py
-msgid "N-NE"
-msgstr "N-NO"
-
-#: KravenHDWeather.py
-msgid "NE"
-msgstr "NO"
-
-#: KravenHDWeather.py
-msgid "E-NE"
-msgstr "O-NO"
-
-#: KravenHDWeather.py
-msgid "E"
-msgstr "O"
-
-#: KravenHDWeather.py
-msgid "E-SE"
-msgstr "O-SO"
-
-#: KravenHDWeather.py
-msgid "SE"
-msgstr "SO"
-
-#: KravenHDWeather.py
-msgid "S-SE"
-msgstr "S-SO"
-
-#: KravenHDWeather.py
-msgid "Mon"
-msgstr "MO"
-
-#: KravenHDWeather.py
-msgid "Tue"
-msgstr "DI"
-
-#: KravenHDWeather.py
-msgid "Wed"
-msgstr "MI"
-
-#: KravenHDWeather.py
-msgid "Thu"
-msgstr "DO"
-
-#: KravenHDWeather.py
-msgid "Fri"
-msgstr "FR"
-
-#: KravenHDWeather.py
-msgid "Sat"
-msgstr "SA"
-
-#: KravenHDWeather.py
-msgid "Sun"
-msgstr "SO"
-
-#: KravenHDWeather.py
-msgid ""
-"Tropical\n"
-" storm"
-msgstr ""
-"Tropischer\n"
-" Sturm"
-
-#: KravenHDWeather.py
-msgid "Hurricane"
-msgstr "Hurrikan"
-
-#: KravenHDWeather.py
-msgid ""
-"Severe\n"
-" thunderstorms"
-msgstr ""
-"Schwere\n"
-" Gewitter"
-
-#: KravenHDWeather.py
-msgid "Thunderstorms"
-msgstr "Gewitter"
-
-#: KravenHDWeather.py
-msgid ""
-"Mixed rain\n"
-" and snow"
-msgstr ""
-"Regen\n"
-" und Schnee"
-
-#: KravenHDWeather.py
-msgid ""
-"Mixed rain\n"
-" and sleet"
-msgstr ""
-"Regen\n"
-" und Schneeregen"
-
-#: KravenHDWeather.py
-msgid ""
-"Mixed snow\n"
-" and sleet"
-msgstr ""
-"Schnee\n"
-" und Graupel"
-
-#: KravenHDWeather.py
-msgid ""
-"Freezing\n"
-" drizzle"
-msgstr ""
-"Frierender\n"
-" Nieselregen"
-
-#: KravenHDWeather.py
-msgid "Drizzle"
-msgstr "Nieselregen"
-
-#: KravenHDWeather.py
-msgid ""
-"Freezing\n"
-" rain"
-msgstr "Eisregen"
-
-#: KravenHDWeather.py
-msgid "Showers"
-msgstr "Regen"
-
-#: KravenHDWeather.py
-msgid "Rain"
-msgstr "Regen"
-
-#: KravenHDWeather.py
-msgid ""
-"Snow\n"
-" flurries"
-msgstr "Schneetreiben"
-
-#: KravenHDWeather.py
-msgid ""
-"Light\n"
-" snow showers"
-msgstr ""
-"Leichte\n"
-" Schneeschauer"
-
-#: KravenHDWeather.py
-msgid ""
-"Blowing\n"
-" snow"
-msgstr "Schneetreiben"
-
-#: KravenHDWeather.py
-msgid "Snow"
-msgstr "Schnee"
-
-#: KravenHDWeather.py
-msgid "Hail"
-msgstr "Hagel"
-
-#: KravenHDWeather.py
-msgid "Sleet"
-msgstr "Schneeregen"
-
-#: KravenHDWeather.py
-msgid "Dust"
-msgstr "Staub"
-
-#: KravenHDWeather.py
-msgid "Foggy"
-msgstr "Nebelig"
-
-#: KravenHDWeather.py
-msgid "Haze"
-msgstr "Nebel"
-
-#: KravenHDWeather.py
-msgid "Smoky"
-msgstr "Qualmig"
-
-#: KravenHDWeather.py
-msgid "Blustery"
-msgstr "Stürmisch"
-
-#: KravenHDWeather.py
-msgid "Windy"
-msgstr "Windig"
-
-#: KravenHDWeather.py
-msgid "Cold"
-msgstr "Kalt"
-
-#: KravenHDWeather.py
-msgid "Cloudy"
-msgstr "Wolkig"
-
-#: KravenHDWeather.py
-msgid ""
-"Mostly\n"
-" cloudy"
-msgstr ""
-"Überwiegend\n"
-" bewölkt"
-
-#: KravenHDWeather.py
-msgid ""
-"Partly\n"
-" cloudy"
-msgstr ""
-"Teilweise\n"
-" bewölkt"
-
-#: KravenHDWeather.py
-msgid "Clear"
-msgstr "Klar"
-
-#: KravenHDWeather.py
-msgid "Sunny"
-msgstr "Sonnig"
-
-#: KravenHDWeather.py
-msgid "Fair"
-msgstr "Heiter"
-
-#: KravenHDWeather.py
-msgid ""
-"Mixed rain\n"
-" and hail"
-msgstr ""
-"Regen\n"
-" und Hagel"
-
-#: KravenHDWeather.py
-msgid "Hot"
-msgstr "Heiss"
-
-#: KravenHDWeather.py
-msgid ""
-"Isolated\n"
-" thunderstorms"
-msgstr ""
-"Vereinzelte\n"
-" Gewitter"
-
-#: KravenHDWeather.py
-msgid ""
-"Scattered\n"
-" thunderstorms"
-msgstr ""
-"Vereinzelte\n"
-" Gewitter"
-
-#: KravenHDWeather.py
-msgid ""
-"Scattered\n"
-" showers"
-msgstr ""
-"Vereinzelte\n"
-" Regenschauer"
-
-#: KravenHDWeather.py
-msgid "Heavy snow"
-msgstr ""
-"Starker\n"
-" Schneefall"
-
-#: KravenHDWeather.py
-msgid ""
-"Scattered\n"
-" snow showers"
-msgstr ""
-"Vereinzelte\n"
-" Schneeschauer"
-
-#: KravenHDWeather.py
-msgid "Thundershowers"
-msgstr "Gewitter"
-
-#: KravenHDWeather.py
-msgid "Snow showers"
-msgstr "Schneeschauer"
-
-#: KravenHDWeather.py
-msgid ""
-"Isolated\n"
-" thundershowers"
-msgstr ""
-"Vereinzelt\n"
-" Gewitter"
-
-#: KravenHDWeather.py
-msgid ""
-"Not\n"
-" available"
-msgstr ""
-"Nicht\n"
-" verfügbar"
-
-#: KravenHDWeather.py
-msgid " from "
-msgstr " aus "
-
-#: KravenHDWeather.py
-msgid "% humidity"
-msgstr "% Luftfeuchte"
-
-#: KravenHDWeather.py
-msgid ", feels "
-msgstr ", gefühlt "
 
 #: KravenHDECMLine.py
 msgid "not available"
@@ -665,10 +357,6 @@ msgstr "Laufschrift (Geschwindigkeit)"
 #: KravenHD.py
 msgid "Background-Transparency"
 msgstr "Hintergrund-Transparenz"
-
-#: KravenHD.py
-msgid "Weather-ID"
-msgstr "Wetter-ID"
 
 #: KravenHD.py
 msgid "GLOBAL COLORS ________________________________________________________________________________"
@@ -1533,118 +1221,8 @@ msgid "left small"
 msgstr "links klein"
 
 #: KravenHD.py
-msgid "Search by"
-msgstr "Suchen über"
-
-#: KravenHD.py
-msgid "Search String"
-msgstr "Suchbegriff"
-
-#: KravenHD.py
-msgid "Choose from different servers for the weather data."
-msgstr "Wählen Sie einen von verschiedenen Servern für die Wetterdaten."
-
-#: KravenHD.py
-msgid "Choose from different options to specify your location."
-msgstr "Wählen Sie eine von verschiedenen Varianten, um Ihren Standort anzugeben."
-
-#: KravenHD.py
-msgid "Specify any search string for your location (zip/city/district/state single or combined). Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
-msgstr "Geben Sie einen beliebigen Suchbegriff für Ihren Standort ein (PLZ/Stadt/Ortsteil/Land einzeln oder kombiniert). Drücken Sie OK, um die virtuelle Tastatur zu nutzen. Gehen Sie im Menü hoch oder runter, um die Suche zu starten."
-
-#: KravenHD.py
-msgid "Specify any search string for your location (zip(unprecise!)/city/district/state single or comma-separated). Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
-msgstr "Geben Sie einen beliebigen Suchbegriff für Ihren Standort ein (PLZ(ungenau!)/Stadt/Ortsteil/Land einzeln oder kombiniert). Drücken Sie OK, um die virtuelle Tastatur zu nutzen. Gehen Sie im Menü hoch oder runter, um die Suche zu starten."
-
-#: KravenHD.py
-msgid "Specify the GM code for your location. You can find it at https://weather.codes. Press OK to use the virtual keyboard. Step up or down in the menu to start the search."
-msgstr "Geben Sie den GM-Code für Ihren Standort an. Sie finden diesen unter https://weather.codes. Drücken Sie OK, um die virtuelle Tastatur zu nutzen. Gehen Sie im Menü hoch oder runter, um die Suche zu starten."
-
-#: KravenHD.py
 msgid "Specify the language for the weather output."
 msgstr "Wählen Sie die Sprache für die Wetter-Anzeige."
-
-#: KravenHD.py
-msgid "Enter the search string for your location:"
-msgstr "Geben Sie den Suchbegriff für Ihren Standort ein:"
-
-#: KravenHD.py
-msgid "Enter the GM code for your location:"
-msgstr "Geben Sie den GM-Code für Ihren Standort ein:"
-
-#: KravenHDWeather.py
-msgid "TU"
-msgstr "DI"
-
-#: KravenHDWeather.py
-msgid "WE"
-msgstr "MI"
-
-#: KravenHDWeather.py
-msgid "TH"
-msgstr "DO"
-
-#: KravenHDWeather.py
-msgid "SU"
-msgstr "SO"
-
-#: KravenHDWeather.py
-msgid "No data for IP"
-msgstr "Keine Daten für IP"
-
-#: KravenHDWeather.py
-msgid ""
-"\n"
-"\n"
-"No data for search string,\n"
-"fallback to IP"
-msgstr ""
-"\n"
-"\n"
-"Keine Daten für Suchbegriff,\n"
-"Rückgriff auf IP"
-
-#: KravenHDWeather.py
-msgid ""
-"\n"
-"\n"
-"No data for GM code,\n"
-"fallback to IP"
-msgstr ""
-"\n"
-"\n"
-"Keine Daten für GM-Code,\n"
-"Rückgriff auf IP"
-
-#: KravenHD.py
-msgid "No Accu ID found"
-msgstr "Keine Accu-ID gefunden"
-
-#: KravenHD.py
-msgid "Accuweather API Key"
-msgstr "Accuweather API-Schlüssel"
-
-#: KravenHD.py
-msgid ""
-"Press OK to enter your API Key.\n"
-"You will receive the key at\n"
-"\"https://developer.accuweather.com/\"."
-msgstr ""
-"Drücken Sie OK, um Ihren API-Schlüssel einzugeben.\n"
-"Sie erhalten den Schlüssel unter\n"
-"\"https://developer.accuweather.com/\"."
-
-#: KravenHD.py
-msgid "Enter your API Key:"
-msgstr "Geben Sie Ihren API-Schlüssel ein:"
-
-#: KravenHD.py
-msgid "API authorization failed"
-msgstr "API-Autorisierung fehlgeschlagen"
-
-#: KravenHD.py
-msgid "API requests exceeded"
-msgstr "API-Anforderungen überschritten"
 
 #: KravenHD.py
 msgid "Choose the font color of android-clock temperature. Press OK to define your own RGB color."
@@ -2645,3 +2223,69 @@ msgid ""
 msgstr ""
 "Linie \n"
 "Farbauswahl unterhalb"
+
+#: KravenHD.py
+msgid ""
+"Enter your location.\n"
+"Press OK to use the virtual keyboard.\n"
+"Press the red button to search for the weather code."
+msgstr ""
+"Geben Sie Ihren Standort ein.\n"
+"Drücken Sie OK um die Virtuelle Tastatur zu verwenden.\n"
+"Drücken Sie die rote Taste um nach dem Wetter-Code zu suchen."
+
+#: KravenHD.py
+msgid "Enter your location:"
+msgstr "Geben Sie Ihren Standort ein:"
+
+#: KravenHD.py
+msgid "Enter location manually"
+msgstr "Standort manuell eingeben"
+
+#: KravenHD.py
+msgid "No valid location found."
+msgstr "Keinen gültigen Standort gefunden."
+
+#: KravenHD.py
+msgid "Weather-Code found:\n"
+msgstr "Wetter-Code gefunden:\n"
+
+#: KravenHD.py
+msgid "No valid Weather-Code found."
+msgstr "Keinen gültigen Wetter-Code gefunden."
+
+#: KravenHD.py
+msgid "Choose your location:"
+msgstr "Wählen Sie Ihren Standort:"
+
+#: KravenHD.py
+msgid "Search Code"
+msgstr "Suche Code"
+
+#: KravenHD.py
+msgid "Search option"
+msgstr "Suchoption"
+
+#: KravenHD.py
+msgid "Location "
+msgstr "Standort"
+
+#: KravenHDWeather.py
+msgid "% humidity"
+msgstr "% Luftfeuchte"
+
+#: KravenHDWeather.py
+msgid ", feels "
+msgstr ", gefühlt "
+
+#: KravenHD.py
+msgid "Weather-Code:\n"
+msgstr "Wetter-Code:\n"
+
+#: KravenHD.py
+msgid ""
+"Choose from different options to enter your settings.\n"
+"Press the red button to search for the weather code."
+msgstr ""
+"Wählen Sie aus verschiedenen Optionen um Ihre Einstellungen vorzunehmen.\n"
+"Drücken Sie die rote Taste um nach dem Wetter-Code zu suchen."

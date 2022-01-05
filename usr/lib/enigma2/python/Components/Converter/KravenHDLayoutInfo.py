@@ -171,9 +171,10 @@ class KravenHDLayoutInfo(Poll, Converter):
         textvalue = 'No info'
         info = '0'
         try:
-            out_line = popen('cat /proc/loadavg').readline()
-            info = '' + str(out_line)[:4]
+            fd = open("/proc/loadavg", "r")
+            info = fd.readline(4)
             textvalue = info
+            fd.close()
         except:
             pass
 
