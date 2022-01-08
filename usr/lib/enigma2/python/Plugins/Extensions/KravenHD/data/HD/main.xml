@@ -2260,8 +2260,8 @@
 	<panel name="SourceRedGreenYellowBlue"/>
 	<panel name="Exit"/>
   </screen>
-  
-    <screen name="SoftwareUpdate" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+
+  <screen name="SoftwareUpdate" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*SoftwareUpdate*-->
     <widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="42,80" size="736,416" scrollbarMode="showOnDemand" selectionPixmap="KravenHD/graphics/sel_53.png" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -2269,26 +2269,30 @@
 					MultiContentEntryText(pos = (6, 2), size = (568, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 					MultiContentEntryText(pos = (6, 28), size = (568, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
 					MultiContentEntryPixmapAlphaBlend(pos = (661, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
-					MultiContentEntryPixmapAlphaBlend(pos = (5, 50), size = (610, 2), png = 5), # index 4 is the div pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (5, 50), size = (726, 2), png = 5), # index 4 is the div pixmap
 				],
 			"fonts": [gFont("Regular", 22),gFont("Regular", 14)],
 			"itemHeight": 52
 			}
 	  </convert>
     </widget>
-    <widget name="package_text" position="42,520" size="250,27" zPosition="1" font="Regular2;22" halign="left" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
-    <widget name="package_count" position="42,550" size="250,27" zPosition="1" font="Regular2;22" halign="left" transparent="1" backgroundColor="Kravenbg3" foregroundColor="KravenFont2" />
-    <widget name="feedmessage" position="605,397" size="644,510" font="Regular;20" transparent="1" />
-    <widget name="activity" position="451,797" size="370,10" />
-	<widget name="a_off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" position="450,510" zPosition="1" size="36,97" alphatest="on" />
-    <widget name="a_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" position="450,510" zPosition="1" size="36,97" alphatest="on" />
-    <widget name="a_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" position="450,510" zPosition="1" size="36,97" alphatest="on" />
-    <widget name="a_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" position="450,510" zPosition="1" size="36,97" alphatest="on" />
+    <widget backgroundColor="Kravenbg3" name="package_text" font="Regular2;22" foregroundColor="KravenFont2" position="48,520" size="250,27" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="package_count" font="Regular;22" foregroundColor="KravenFont1" position="300,520" size="50,27" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="feedmessage" font="Regular2;22" foregroundColor="KravenFont2" position="48,550" size="420,54" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="activity" foregroundColor="KravenProgress" position="48,607" size="420,10" transparent="1" />
+	<widget name="traffic_off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" position="486,520" size="36,97" alphatest="on" />
+    <widget name="traffic_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" position="486,520" size="36,97" alphatest="on" />
+    <widget name="traffic_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" position="486,520" size="36,97" alphatest="on" />
+    <widget name="traffic_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" position="486,520" size="36,97" alphatest="on" />
+	<widget backgroundColor="Kravenbg3" name="feedstatus_red" font="Regular;22" foregroundColor="KravenFont1" position="536,523" size="242,27" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="feedstatus_off" font="Regular;22" foregroundColor="KravenFont1" position="536,555" size="242,27" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="feedstatus_yellow" font="Regular;22" foregroundColor="KravenFont1" position="536,555" size="242,27" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="feedstatus_green" font="Regular;22" foregroundColor="KravenFont1" position="536,588" size="242,27" transparent="1" />
     <panel name="Title-big"/>
   	<!-- Logo -->
 	<panel name="gradient-menu"/>
   	<panel name="Colorbuttons"/>
-	<panel name="SourceRedGreenYellowBlue"/>
+	<panel name="SourceRedGreen"/>
 	<panel name="Exit"/>
   </screen>
 
