@@ -3872,34 +3872,30 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<ePixmap pixmap="KravenHD/global-icons/messages-hd/question.png" position="10,16" size="53,53" alphatest="blend" />
     <panel name="messagebox-template"/>
   </screen>
-  
-<screen name="LocaleSelection" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
-  <eLabel name="vertikalline" position="1251,120" size="2,840" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" />
-  <widget name="icons" position="0,0" size="34,24" pixmaps="icons/finished.png,icons/menu_off.png,icons/menu_on.png" alphatest="blend" />
-  <widget source="locales" render="Listbox" position="35,112" size="1100,428" zPosition="3" backgroundColor="background" foregroundColor="white" scrollbarSliderBorderWidth="1" scrollbarWidth="12" scrollbarSliderForegroundColor="white" scrollbarSliderBorderColor="bluelabel" scrollbarMode="showOnDemand" transparent="1">
-    <convert type="TemplatedMultiContent">
-				{
-				"template":
-					[
-					MultiContentEntryPixmapAlphaBlend(pos = (8, 5), size = (84, 42), flags = BT_SCALE, png = 0),  # Flag.
-					MultiContentEntryText(pos = (120, 0), size = (500, 51), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Language name (Native).
-					MultiContentEntryText(pos = (600, 0), size = (350, 51), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Lanuage name (English).
-					# MultiContentEntryText(pos = (580, 0), size = (75, 34), font = 0, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 3),  # Locale name.
-					MultiContentEntryText(pos = (955, 0), size = (113, 51), font = 0, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 4),  # Package name.
-					MultiContentEntryPixmapAlphaBlend(pos = (1070, 6), size = (44, 44), flags = BT_SCALE, png = 5)  # Status icon.
-					],
-				"fonts": [gFont("Regular",30)],
-				"itemHeight": 51
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="LocaleSelection" position="0,0" size="1280,720" title="">
+	<!--*LocaleSelection*-->
+	<widget backgroundColor="Kravenbg3" render="Listbox" source="locales" position="42,80" size="736,506" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="KravenHD/graphics/sel_50.png" transparent="1" zPosition="3">
+	  <convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryPixmapAlphaBlend(pos = (4, 2), size = (84, 42), flags = BT_SCALE, png = 0),  # Flag.
+				MultiContentEntryText(pos = (98, 8), size = (254, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Language name (Native).
+				MultiContentEntryText(pos = (362, 8), size = (254, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Lanuage name (English).
+				# MultiContentEntryText(pos = (580, 8), size = (75, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # Locale name.
+				MultiContentEntryText(pos = (626, 8), size = (64, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Package name.
+				MultiContentEntryPixmapAlphaBlend(pos = (700, 13), size = (20, 20), flags = BT_SCALE, png = 5)  # Status icon.
+				],
+				"fonts": [gFont("Regular", 24)],
+				"itemHeight": 46
 				}
-			</convert>
-  </widget>
-  <widget source="description" render="Label" position="253,468" size="633,310" font="Regular;20" halign="center" valign="center" transparent="1" />
-  <ePixmap pixmap="KravenHD/graphics/nontransbg.png" position="0,0" size="1280,720" zPosition="-10" />
-  <eLabel name="vertikalline" position="1251,120" size="2,840" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" />
-  <ePixmap pixmap="buttons/key_menu.png" position="1634,1004" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <panel name="Title-big" />
-  <panel name="gradient-menu" />
-  <panel name="Colorbuttons" />
-  <panel name="SourceRedGreenYellowBlue" />
-  <panel name="Exit" />
-</screen>
+	  </convert>
+	</widget>
+	<widget name="icons" position="0,0" size="20,20" pixmaps="KravenHD/icons/lock_error.png,KravenHD/icons/lock_off.png,KravenHD/icons/lock_on.png" alphatest="blend" />
+	<widget backgroundColor="Kravenbg3" source="description" render="Label" font="Regular2;22" foregroundColor="KravenFont2" position="42,595" size="736,27" halign="center" valign="center" transparent="1" />
+	<panel name="Title-big" />
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+	<panel name="Colorbuttons" />
+	<panel name="SourceRedGreenYellow" />
+	<panel name="MenuOKExit" />
+  </screen>
