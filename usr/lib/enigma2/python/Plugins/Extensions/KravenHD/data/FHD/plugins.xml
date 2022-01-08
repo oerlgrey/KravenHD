@@ -2548,3 +2548,153 @@
     <panel name="NameRedGreenYellow"/>
     <panel name="OKExit"/>
   </screen>
+
+  <screen name="AutoBouquetsMaker_Setup" position="0,0" size="1920,1080" title="AutoBouquetsMaker Configure" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*AutoBouquetsMaker_Setup*-->
+	<widget backgroundColor="Kravenbg3" name="pleasewait" position="63,120" size="1104,41" font="Regular;32" foregroundColor="KravenFont1" valign="center" transparent="1"/>
+	<widget backgroundColor="Kravenbg3" name="config" position="63,120" size="1104,675" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="description" position="63,802" size="1104,123" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="SourceRedGreen"/>
+	<panel name="Colorbuttons"/>
+	<panel name="MenuOKExit"/>
+  </screen>
+
+  <screen name="AutoBouquetsMaker_Menu" position="0,0" size="1920,1080" title="AutoBouquetsMaker" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*AutoBouquetsMaker_Menu*-->
+	<widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="63,120" size="1104,810" selectionPixmap="KravenHD/graphics/sel_60.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+	  <convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryPixmapAlphaTest(pos = (12, 13), size = (64, 64), flags = BT_SCALE, png = 0),
+				MultiContentEntryText(pos = (104, 15), size = (988, 60), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+				],
+				"fonts": [gFont("Regular", 35)],
+				"itemHeight": 90
+			}
+	  </convert>
+	</widget>
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="SourceRedGreen"/>
+	<panel name="Colorbuttons"/>
+	<panel name="OKExit"/>
+  </screen>
+
+  <screen name="AutoBouquetsMaker_Log" position="0,0" size="1920,1080" title="AutoBouquetsMaker Log" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*AutoBouquetsMaker_Log*-->
+	<widget backgroundColor="Kravenbg3" name="list" position="63,120" size="1104,820" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="SourceRedGreen"/>
+	<panel name="Colorbuttons"/>
+	<panel name="Exit"/>
+  </screen>
+
+  <screen name="AutoBouquetsMaker_About" position="0,0" size="1920,1080" title="AutoBouquetsMaker About" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*AutoBouquetsMaker_About*-->
+	<widget backgroundColor="Kravenbg3" name="about" position="63,120" size="1104,820" font="Regular;32" foregroundColor="KravenFont1" transparent="1" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <widget font="Regular;30" halign="left" valign="center" source="key_red" position="71,1004" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<panel name="Colorbuttons"/>
+	<panel name="Exit"/>
+  </screen>
+
+  <screen name="AutoBouquetsMaker" position="0,0" size="1920,1080" title="UpdateProviders" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*AutoBouquetsMaker*-->
+	<widget backgroundColor="Kravenbg3" name="action" position="63,120" size="1104,41" font="Regular;32" foregroundColor="KravenFont1" transparent="1"/>
+	<widget backgroundColor="Kravenbg3" name="status" position="63,180" size="1104,41" font="Regular;32" foregroundColor="KravenFont1" transparent="1"/>
+	<widget source="Frontend" render="Pixmap" pixmap="KravenHD/icons/lock_on.png" position="63,246" size="30,30" alphatest="on">
+	  <convert type="FrontendInfo">LOCK</convert>
+	  <convert type="ConditionalShowHide"/>
+	</widget>
+	<widget source="Frontend" render="Pixmap" pixmap="KravenHD/icons/lock_off.png" position="63,246" size="30,30" alphatest="on">
+	  <convert type="FrontendInfo">LOCK</convert>
+	  <convert type="ConditionalShowHide">Invert</convert>
+	</widget>
+	<widget backgroundColor="Kravenbg3" name="tuner_text" position="108,240" size="60,41" font="Regular;32" foregroundColor="KravenFont1" transparent="1"/>
+	<widget source="Frontend" render="Label" position="183,240" size="150,41" font="Regular;32" foregroundColor="KravenFont1" transparent="1">
+	  <convert type="FrontendInfo">SNRdB</convert>
+	</widget>
+	<widget backgroundColor="Kravenbg3" source="progress_text" render="Label" position="348,240" size="150,41" font="Regular;32" foregroundColor="KravenFont1" transparent="1">
+	  <convert type="ProgressToText">InText</convert>
+	</widget>
+	<widget backgroundColor="Kravenbg3" source="progress_text" render="Label" position="513,240" size="150,41" font="Regular;32" foregroundColor="KravenFont1" transparent="1">
+	  <convert type="ProgressToText">InPercent</convert>
+	</widget>
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+	<panel name="Colorbuttons"/>
+	<panel name="Exit"/>
+  </screen>
+
+  <screen name="AutoBouquetsMaker_Ordering" position="0,0" size="1920,1080" title="AutoBouquetsMaker Ordering" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*AutoBouquetsMaker_Ordering*-->
+	<widget backgroundColor="Kravenbg3" name="pleasewait" position="63,120" size="1104,41" font="Regular;32" foregroundColor="KravenFont1" valign="center" transparent="1"/>
+	<widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="63,120" size="1104,810" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+	  <convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryText(pos = (15, 2), size = (1074, 41), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
+				],
+				"fonts": [gFont("Regular", 32)],
+				"itemHeight": 45
+			}
+	  </convert>
+	</widget>
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="SourceRedGreenYellowBlue"/>
+	<panel name="Colorbuttons"/>
+	<panel name="OKExit"/>
+  </screen>
+
+  <screen name="AutoBouquetsMaker_KeepBouquets" position="0,0" size="1920,1080" title="AutoBouquetsMaker KeepBouquets" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*AutoBouquetsMaker_KeepBouquets*-->
+	<widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="63,120" size="1104,810" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+	  <convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryPixmapAlphaTest(pos = (12, 8), size = (30, 30), flags = BT_SCALE, png = 0),
+				MultiContentEntryText(pos = (57, 2), size = (500, 41), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+				MultiContentEntryText(pos = (580, 2), size = (500, 41), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_TOP, text = 2),
+				],
+				"fonts": [gFont("Regular", 32)],
+				"itemHeight": 45
+			}
+	  </convert>
+	</widget>
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="SourceRedGreen"/>
+	<panel name="Colorbuttons"/>
+	<panel name="OKExit"/>
+  </screen>
+
+  <screen name="AutoBouquetsMaker_HideSections" position="0,0" size="1920,1080" title="AutoBouquetsMaker HideSections" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*AutoBouquetsMaker_HideSections*-->
+	<widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="63,120" size="1104,810" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+	  <convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryPixmapAlphaTest(pos = (12, 8), size = (30, 30), flags = BT_SCALE, png = 0),
+				MultiContentEntryText(pos = (57, 2), size = (500, 41), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+				MultiContentEntryText(pos = (580, 2), size = (500, 41), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_TOP, text = 2),
+				],
+				"fonts": [gFont("Regular", 32)],
+				"itemHeight": 45
+			}
+	  </convert>
+	</widget>
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="SourceRedGreen"/>
+	<panel name="Colorbuttons"/>
+	<panel name="OKExit"/>
+  </screen>
