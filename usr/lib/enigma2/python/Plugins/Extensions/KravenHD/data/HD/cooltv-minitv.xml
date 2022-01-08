@@ -74,7 +74,7 @@
     <eLabel text="Cool TV Guide" position="42,7" size="400,46" backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenIBGFont2" transparent="1" halign="left" />
     <widget backgroundColor="KravenIBbg2" source="Title" render="Label" font="Regular;22" foregroundColor="KravenIBGFont2" position="488,16" size="450,27" noWrap="1" transparent="1" zPosition="3" />
     <widget backgroundColor="Kravenbg" name="timeline_text" position="5,70" size="1230,30" transparent="1" />
-    <widget CoolRecAlarmCol="blue" CoolBackColorSel="KravenSelection" CoolCurrentColSel="KravenSelection" CoolFontColSel="KravenSelFont" CoolNowColSel="KravenSelection" CoolNowFontColSel="KravenSelFont" backgroundColor="Kravenbg" foregroundColor="KravenFont1" name="list" position="42,95" scrollbarMode="showNever" size="1196,420" transparent="1" />
+    <widget CoolRecAlarmCol="#707000" CoolBackColorSel="#0045AD" CoolBackColor="#1B1B1B" CoolCurrentColSel="#0045AD" CoolCurrentCol="#000061" CoolRecCol="#610000" CoolRecColSel="#610000" CoolNowCol="#006100" CoolNowColSel="#0045AD" CoolFontColSel="#FFFFFF" CoolNowFontColSel="#FFFFFF" CoolPiconFontCol="#FFFFFF" CoolPiconBackCol="#0C0C0C" CoolNoPiconBackCol="#0C0C0C" backgroundColor="Kravenbg" foregroundColor="KravenFont1" name="list" position="42,95" size="1196,420" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="timeline0" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
     <widget name="timeline1" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
     <widget name="timeline2" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
@@ -123,7 +123,7 @@
       <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="timeline_text" position="5,285" size="1230,30" transparent="1" />
-    <widget CoolRecAlarmCol="blue" CoolBackColorSel="KravenSelection" CoolCurrentColSel="KravenSelection" CoolFontColSel="KravenSelFont" CoolNowColSel="KravenSelection" CoolNowFontColSel="KravenSelFont" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="list" position="42,313" scrollbarMode="showNever" size="1196,335" transparent="1" />
+    <widget CoolRecAlarmCol="#707000" CoolBackColorSel="#0045AD" CoolBackColor="#1B1B1B" CoolCurrentColSel="#0045AD" CoolCurrentCol="#000061" CoolRecCol="#610000" CoolRecColSel="#610000" CoolNowCol="#006100" CoolNowColSel="#0045AD" CoolFontColSel="#FFFFFF" CoolNowFontColSel="#FFFFFF" CoolPiconFontCol="#FFFFFF" CoolPiconBackCol="#0C0C0C" CoolNoPiconBackCol="#0C0C0C" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="list" position="42,313" size="1196,335" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="timeline0" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
     <widget name="timeline1" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
     <widget name="timeline2" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
@@ -228,7 +228,7 @@
       <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget backgroundColor="Kravenbg2" name="timeline_text" position="5,282" size="1230,30" transparent="1" />
-    <widget CoolRecAlarmCol="blue" CoolBackColorSel="KravenSelection" CoolCurrentColSel="KravenSelection" CoolFontColSel="KravenSelFont" CoolNowColSel="KravenSelection" CoolNowFontColSel="KravenSelFont" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="list" position="42,310" scrollbarMode="showNever" size="1196,337" transparent="1" />
+    <widget CoolRecAlarmCol="#707000" CoolBackColorSel="#0045AD" CoolBackColor="#1B1B1B" CoolCurrentColSel="#0045AD" CoolCurrentCol="#000061" CoolRecCol="#610000" CoolRecColSel="#610000" CoolNowCol="#006100" CoolNowColSel="#0045AD" CoolFontColSel="#FFFFFF" CoolNowFontColSel="#FFFFFF" CoolPiconFontCol="#FFFFFF" CoolPiconBackCol="#0C0C0C" CoolNoPiconBackCol="#0C0C0C" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="list" position="42,310" size="1196,337" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="timeline0" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
     <widget name="timeline1" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
     <widget name="timeline2" pixmap="KravenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
@@ -252,7 +252,7 @@
     <eLabel text="Cool Tiny Guide" position="42,7" size="400,46" backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenIBGFont2" transparent="1" halign="left" />
     <widget backgroundColor="KravenIBbg2" source="Title" render="Label" font="Regular;22" foregroundColor="KravenIBGFont2" position="488,16" size="450,27" noWrap="1" transparent="1" zPosition="3" />
     <widget backgroundColor="Kravenbg" name="timeline_text" position="5,70" size="1230,30" transparent="1" />
-    <widget name="list" foregroundColor="KravenFont1" backgroundColor="Kravenbg" CoolRecAlarmCol="blue" CoolFontColSel="KravenSelFont" CoolNowFontColSel="KravenSelFont" CoolNowColSel="KravenSelection" CoolBackColorSel="KravenSelection" CoolCurrentColSel="KravenSelection" CoolRecColSel="KravenSelection" position="42,95" size="1196,420" scrollbarMode="showNever" transparent="1" />
+    <widget CoolRecAlarmCol="#707000" CoolBackColorSel="#0045AD" CoolBackColor="#1B1B1B" CoolCurrentColSel="#0045AD" CoolCurrentCol="#000061" CoolRecCol="#610000" CoolRecColSel="#610000" CoolNowCol="#006100" CoolNowColSel="#0045AD" CoolFontColSel="#FFFFFF" CoolNowFontColSel="#FFFFFF" CoolPiconFontCol="#FFFFFF" CoolPiconBackCol="#0C0C0C" CoolNoPiconBackCol="#0C0C0C" backgroundColor="Kravenbg" foregroundColor="KravenFont1" name="list" position="42,95" size="1196,420" scrollbarMode="showOnDemand" transparent="1" />
     <widget name="timeline0" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
     <widget name="timeline1" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
     <widget name="timeline2" pixmap="KravenHD/epg/timeline.png" position="0,140" size="0,0" zPosition="1" />
