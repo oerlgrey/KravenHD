@@ -2267,18 +2267,17 @@
   </screen>
 
   <screen name="SoftcamSetup" position="0,0" size="1920,1080" title="SoftcamSetup" flags="wfNoBorder" backgroundColor="transparent">
-    <eLabel backgroundColor="KravenIBbg" font="Regular;22" foregroundColor="white" text="SoftcamSetup " position="63,0" size="750,27" halign="left" valign="center" transparent="1" zPosition="9" />
-    <eLabel position="0,0" size="1920,27" backgroundColor="KravenIBbg" zPosition="8" />
+	<!--*SoftcamSetup*-->
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,270" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-    <widget backgroundColor="Kravenbg3" font="Regular2;32" name="info" position="80,420" size="1070,451" foregroundColor="KravenFont2" transparent="1" />
-    <widget name="description" position="1195,366" size="644,510" font="Regular;36" foregroundColor="white" transparent="1" halign="center" backgroundColor="background" />
-    <widget name="footnote" position="10,940" size="1170,40" font="Regular; 36" halign="right" valign="center" backgroundColor="background" foregroundColor="white" transparent="1" />
-    <ePixmap pixmap="KravenHD/graphics/nontransbg.png" position="0,0" size="1920,1080" zPosition="-10" />
-    <panel name="Title-big" />
-    <panel name="gradient-menu" />
-    <panel name="Colorbuttons" />
-    <panel name="SourceRedGreenYellowBlue" />
-    <panel name="Exit" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;32" name="info" position="80,408" size="1070,369" foregroundColor="KravenFont2" transparent="1" />
+	<widget backgroundColor="Kravenbg3" font="Regular2;32" name="description" position="63,802" size="1104,123" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
+    <widget name="footnote" position="0,0" size="0,0" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+	<panel name="Colorbuttons"/>
+	<panel name="SourceRedGreenYellowBlue"/>
+	<panel name="Exit"/>
   </screen>
 
   <screen name="SoftcamPanel" position="0,0" size="1920,1080" title="SoftcamPanel" flags="wfNoBorder" backgroundColor="transparent">
