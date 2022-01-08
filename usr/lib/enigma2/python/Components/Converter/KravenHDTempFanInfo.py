@@ -52,40 +52,51 @@ class KravenHDTempFanInfo(Poll, Converter, object):
 		systemp = "N/A"
 		try:
 			if path.exists('/proc/stb/sensors/temp0/value'):
-				f = open('/proc/stb/sensors/temp0/value', 'rb')
-				systemp = str(f.readline().strip())
+				f = open('/proc/stb/sensors/temp0/value', 'r')
+				systemp = f.readline()
 				f.close()
 			elif path.exists('/proc/stb/fp/temp_sensor'):
-				f = open('/proc/stb/fp/temp_sensor', 'rb')
-				systemp = str(f.readline().strip())
+				f = open('/proc/stb/fp/temp_sensor', 'r')
+				systemp = f.readline()
 				f.close()
 			elif path.exists('/proc/stb/sensors/temp/value'):
-				f = open('/proc/stb/sensors/temp/value', 'rb')
-				systemp = str(f.readline().strip())
+				f = open('/proc/stb/sensors/temp/value', 'r')
+				systemp = f.readline()
 				f.close()
 			elif path.exists('/proc/stb/fp/temp_sensor_avs'):
-				f = open('/proc/stb/fp/temp_sensor_avs', 'rb')
-				systemp = str(f.readline().strip())
+				f = open('/proc/stb/fp/temp_sensor_avs', 'r')
+				systemp = f.readline()
 				f.close()
 			elif path.exists('/sys/devices/virtual/thermal/thermal_zone0/temp'):
-				f = open('/sys/devices/virtual/thermal/thermal_zone0/temp', 'rb')
-				systemp = str(f.readline().strip())
+				f = open('/sys/devices/virtual/thermal/thermal_zone0/temp', 'r')
+				systemp = f.readline()
 				systemp = systemp[:-3]
 				f.close()
+			elif path.exists('/proc/stb/power/avs'):
+				f = open('/proc/stb/power/avs', 'r')
+				systemp = f.readline()
+				f.close()
+			elif path.exists('/proc/hisi/msp/pm_cpu'):
+				for line in open('/proc/hisi/msp/pm_cpu').readlines():
+					line = [x.strip() for x in line.strip().split(":")]
+					if line[0] in ("Tsensor"):
+						systemp = line[1].split("=")
+						systemp = line[1].split(" ")
+						systemp = systemp[2]
 		except:
 			pass
 		if systemp != "N/A":
-			if len(systemp) > 2:
+			if int(systemp.replace('\n', '')) > 2:
 				systemp = systemp[:2]
-			systemp = systemp + str('\xc2\xb0') + "C"
+			systemp = systemp.replace('\n', '').replace(' ', '') + "°C"
 		return systemp
 
 	def fanfile(self):
 		faninfo = "N/A"
 		try:
 			if path.exists('/proc/stb/fp/fan_speed'):
-				f = open('/proc/stb/fp/fan_speed', 'rb')
-				faninfo = str(f.readline().strip())
+				f = open('/proc/stb/fp/fan_speed', 'r')
+				faninfo = f.readline()
 				f.close()
 		except:
 			pass
