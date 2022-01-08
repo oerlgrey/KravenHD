@@ -192,6 +192,18 @@
 	<panel name="OKExit"/>
   </screen>
 
+  <screen name="CableScanScreen" position="0,0" size="1280,720" title="Cable Scan" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*CableScanScreen*-->
+	<widget backgroundColor="Kravenbg3" name="config" position="42,80" size="736,450" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="introduction" position="42,565" size="736,54" font="Regular2;22" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="SourceRedGreenYellowBlue"/>
+	<panel name="Colorbuttons"/>
+	<panel name="OKExit"/>
+  </screen>
+
   <screen name="UIPositionSetup" position="0,0" size="1280,720" title="Position Setup" backgroundColor="blue" flags="wfNoBorder">
 	<!--*UIPositionSetup*-->
     <eLabel backgroundColor="Kravenbg2" position="440,260" size="400,200" transparent="0" zPosition="-10" />
