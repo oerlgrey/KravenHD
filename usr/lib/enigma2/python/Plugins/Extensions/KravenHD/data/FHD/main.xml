@@ -2617,7 +2617,7 @@
     </widget>
 	<panel name="gradient-menu"/>
     <panel name="Colorbuttons"/>
-    <panel name="SourceRedGreenYellowBlue"/>
+    <panel name="SourceRedGreenYellowBlue2"/>
     <panel name="MenuOKExit"/>
   </screen>
 
@@ -2637,10 +2637,10 @@
     <widget name="timeline_text" position="15,262" size="1890,37" foregroundColor="KravenFont1" font="Regular;30" backgroundColor="Kravenbg2" transparent="0" zPosition="21" />
     <widget name="list" position="15,300" size="1890,180" backgroundColor="KravenIBbg" scrollbarMode="never" zPosition="1" EntryFontWrap="no" transparent="1" />
     <widget name="timeline_now" position="15,300" zPosition="2" size="23,180" pixmap="KravenHD/epg/timeline-ge.png" alphatest="blend" />
-    <widget name="key_red" zPosition="1" position="71,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
-    <widget name="key_green" zPosition="1" position="446,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
-    <widget name="key_yellow" zPosition="1" position="821,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
-    <widget name="key_blue" zPosition="1" position="1196,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_red" render="Label" zPosition="1" position="71,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_green" render="Label" zPosition="1" position="446,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_yellow" render="Label" zPosition="1" position="821,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_blue" render="Label" zPosition="1" position="1196,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
     <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="63,542" size="300,7" alphatest="blend" />
     <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="438,542" size="300,7" alphatest="blend" />
     <ePixmap pixmap="KravenHD/buttons/key_yellow1.png" position="813,542" size="300,7" alphatest="blend" />
@@ -2673,10 +2673,10 @@
     <widget source="Service" render="Picon" position="18,177" size="105,63" transparent="0" zPosition="2" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget name="key_red" zPosition="1" position="71,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
-    <widget name="key_green" zPosition="1" position="446,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
-    <widget name="key_yellow" zPosition="1" position="821,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
-    <widget name="key_blue" zPosition="1" position="1196,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_red" render="Label" zPosition="1" position="71,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_green" render="Label" zPosition="1" position="446,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_yellow" render="Label" zPosition="1" position="821,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_blue" render="Label" zPosition="1" position="1196,502" size="330,39" font="Regular;30" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
     <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="63,542" size="300,7" alphatest="blend" />
     <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="438,542" size="300,7" alphatest="blend" />
     <ePixmap pixmap="KravenHD/buttons/key_yellow1.png" position="813,542" size="300,7" alphatest="blend" />
@@ -3583,7 +3583,7 @@
 	<eLabel backgroundColor="KravenBorder" position="1857,116" size="1,817" zPosition="4" />
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+    <panel name="SourceRedGreenYellowBlue"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
   </screen>
@@ -3631,7 +3631,7 @@
     </widget>
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+    <panel name="SourceRedGreenYellowBlue2"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
   </screen>

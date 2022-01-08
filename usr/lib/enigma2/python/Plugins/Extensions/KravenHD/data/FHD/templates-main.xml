@@ -470,10 +470,10 @@
 		<convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
       </widget>
 	  <!-- globalbg */-->
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="top" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" source="key_red" render="Label" position="71,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="top" source="key_green" render="Label" position="446,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" source="key_yellow" render="Label" position="821,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" source="key_blue" render="Label" position="1196,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
 	</screen>
 	
 	<screen name="EPGSelection-nontransbg-template">
@@ -491,10 +491,10 @@
 		<convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
       </widget>
       <!-- nontransbg */-->
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="top" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" source="key_red" render="Label" position="71,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="top" source="key_green" render="Label" position="446,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" source="key_yellow" render="Label" position="821,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" source="key_blue" render="Label" position="1196,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
 	</screen>
 	
 	<screen name="EventView-template">
@@ -569,10 +569,10 @@
 	  <eLabel backgroundColor="KravenBorder2" position="1233,120" size="4,351" transparent="0" zPosition="4" />
 	  <eLabel backgroundColor="KravenBorder2" position="1853,120" size="4,351" transparent="0" zPosition="4" />
       <!-- nontransbg */-->
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" source="key_red" render="Label" position="71,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" source="key_green" render="Label" position="446,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" source="key_yellow" render="Label" position="821,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+      <widget font="Regular;30" halign="left" valign="center" source="key_blue" render="Label" position="1196,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
 	</screen>
 	
 	<screen name="channelselection-style-minitv-small">

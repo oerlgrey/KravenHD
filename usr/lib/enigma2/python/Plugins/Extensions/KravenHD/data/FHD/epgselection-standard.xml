@@ -34,7 +34,7 @@
 	<!--*EventView*-->
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+    <panel name="SourceRedGreenYellowBlue2"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
     <panel name="EventView-template"/>
@@ -44,7 +44,7 @@
 	<!--*EventViewSimple*-->
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+    <panel name="SourceRedGreenYellowBlue2"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
     <panel name="EventView-template"/>

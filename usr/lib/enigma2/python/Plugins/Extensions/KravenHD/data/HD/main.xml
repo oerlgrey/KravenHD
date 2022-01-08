@@ -2647,7 +2647,7 @@
     </widget>
 	<panel name="gradient-menu"/>
     <panel name="Colorbuttons"/>
-    <panel name="SourceRedGreenYellowBlue"/>
+    <panel name="SourceRedGreenYellowBlue2"/>
     <panel name="MenuOKExit"/>
   </screen>
 
@@ -2667,10 +2667,10 @@
     <widget name="timeline_text" position="10,175" size="1260,25" foregroundColor="KravenFont1" font="Regular;20" backgroundColor="Kravenbg2" transparent="0" zPosition="21" />
     <widget name="list" position="10,200" size="1260,120" backgroundColor="KravenIBbg" scrollbarMode="never" zPosition="1" EntryFontWrap="no" transparent="1" />
     <widget name="timeline_now" position="10,200" zPosition="2" size="15,120" pixmap="KravenHD/epg/timeline-ge.png" alphatest="blend" />
-    <widget name="key_red" zPosition="1" position="47,335" size="220,26" font="Regular;20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
-    <widget name="key_green" zPosition="1" position="297,335" size="220,26" font="Regular;20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
-    <widget name="key_yellow" zPosition="1" position="547,335" size="220,26" font="Regular;20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
-    <widget name="key_blue" zPosition="1" position="797,335" size="220,26" font="Regular;20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_red" render="Label" zPosition="1" position="47,335" size="220,26" font="Regular;20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_green" render="Label" zPosition="1" position="297,335" size="220,26" font="Regular;20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_yellow" render="Label" zPosition="1" position="547,335" size="220,26" font="Regular;20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_blue" render="Label" zPosition="1" position="797,335" size="220,26" font="Regular;20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
     <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="42,362" size="200,5" alphatest="blend" />
     <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="292,362" size="200,5" alphatest="blend" />
     <ePixmap pixmap="KravenHD/buttons/key_yellow1.png" position="542,362" size="200,5" alphatest="blend" />
@@ -2682,7 +2682,6 @@
     <ePixmap pixmap="KravenHD/infobar-icons/key_ok.png" position="1145,340" size="43,22" alphatest="blend" />
     <ePixmap pixmap="KravenHD/infobar-icons/key_exit.png" position="1195,340" size="43,22" alphatest="blend" />
     <panel name="gradient-ibepg"/>
-	<panel name="SourceRedGreenYellowBlue"/>
   </screen>
 
   <screen name="QuickEPG" flags="wfNoBorder" position="0,335" size="1280,385" title="InfoBar" backgroundColor="transparent">
@@ -2704,10 +2703,10 @@
     <widget source="Service" render="Picon" position="12,118" size="70,42" transparent="0" zPosition="2" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget name="key_red" zPosition="1" position="47,335" size="220,26" font="Regular; 20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
-    <widget name="key_green" zPosition="1" position="297,335" size="220,26" font="Regular; 20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
-    <widget name="key_yellow" zPosition="1" position="547,335" size="220,26" font="Regular; 20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
-    <widget name="key_blue" zPosition="1" position="797,335" size="220,26" font="Regular; 20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_red" render="Label" zPosition="1" position="47,335" size="220,26" font="Regular; 20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_green" render="Label" zPosition="1" position="297,335" size="220,26" font="Regular; 20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_yellow" render="Label" zPosition="1" position="547,335" size="220,26" font="Regular; 20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
+    <widget source="key_blue" render="Label" zPosition="1" position="797,335" size="220,26" font="Regular; 20" backgroundColor="KravenIBbg" foregroundColor="KravenButton" transparent="1" halign="left" valign="center" />
     <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="42,362" size="200,5" alphatest="blend" />
     <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="292,362" size="200,5" alphatest="blend" />
     <ePixmap pixmap="KravenHD/buttons/key_yellow1.png" position="542,362" size="200,5" alphatest="blend" />
@@ -2716,7 +2715,6 @@
     <ePixmap pixmap="KravenHD/infobar-icons/key_ok.png" position="1145,340" size="43,22" alphatest="blend" />
     <ePixmap pixmap="KravenHD/infobar-icons/key_exit.png" position="1195,340" size="43,22" alphatest="blend" />
     <panel name="gradient-ibepg"/>
-	<panel name="SourceRedGreenYellowBlue"/>
   </screen>
 
   <screen name="NetworkMountsMenu" position="0,0" size="1280,720" title="Mounts Setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -3562,7 +3560,6 @@
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <panel name="gradient-ibev"/>
-	<panel name="SourceRedGreenYellowBlue"/>
   </screen>
 
   <screen backgroundColor="KravenIBbg" flags="wfNoBorder" name="QuickSubtitlesConfigMenu" position="0,0" size="735,187" title="Subtitle settings" >
@@ -3664,7 +3661,7 @@
     </widget>
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="SourceRedGreenYellowBlue"/>
+    <panel name="SourceRedGreenYellowBlue2"/>
     <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
   </screen>
