@@ -181,6 +181,17 @@
     <panel name="OKExit"/>
   </screen>
 
+  <screen name="mySmallChannelSelection" position="0,0" size="1280,720" title="Select service to add..." flags="wfNoBorder" backgroundColor="transparent">
+	<!--*mySmallChannelSelection*-->
+	<widget backgroundColor="Kravenbg3" name="list" position="42,80" size="736,540" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="NameRedGreenYellowBlue"/>
+	<panel name="Colorbuttons"/>
+	<panel name="OKExit"/>
+  </screen>
+
   <screen name="UIPositionSetup" position="0,0" size="1280,720" title="Position Setup" backgroundColor="blue" flags="wfNoBorder">
 	<!--*UIPositionSetup*-->
     <eLabel backgroundColor="Kravenbg2" position="440,260" size="400,200" transparent="0" zPosition="-10" />
