@@ -224,9 +224,9 @@ ProgressList = [
 
 config.plugins.KravenHD = ConfigSubsection()
 currenttime = time.localtime()
-currentint = int(time.mktime(currenttime))
-config.plugins.KravenHD.PrimetimeNew = ConfigClock(default=currentint)
-config.plugins.KravenHD.PrimetimeNew.value = [20, 15]
+primetime = (currenttime[0], currenttime[1], currenttime[2], 20, 15, 0, 0, 0, 0)
+currentint = int(time.mktime(primetime))
+config.plugins.KravenHD.Primetime2 = ConfigText(default=currentint)
 config.plugins.KravenHD.InfobarAntialias = ConfigSlider(default=10, increment=1, limits=(0, 20))
 config.plugins.KravenHD.ECMLineAntialias = ConfigSlider(default=10, increment=1, limits=(0, 20))
 config.plugins.KravenHD.ScreensAntialias = ConfigSlider(default=10, increment=1, limits=(0, 20))
@@ -1201,6 +1201,11 @@ class KravenHD(ConfigListScreen, Screen):
 		self.InternetAvailable=self.getInternetAvailable()
 		self.UserMenuIconsAvailable=self.getUserMenuIconsAvailable()
 
+		# workaround primetime #1
+		cur_primetime = time.localtime(int(config.plugins.KravenHD.Primetime2.value))
+		cur_int = int(time.mktime(cur_primetime))
+		self.Primetime = ConfigClock(default=cur_int)
+
 	def mylist(self):
 		self.timer.start(100, True)
 
@@ -1500,7 +1505,7 @@ class KravenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("'Not available'-Font"), config.plugins.KravenHD.ChannelSelectionServiceNAList, _("Choose the font color of channels that are unavailable at the moment. Press OK to define your own RGB color.")))
 		list.append(getConfigListEntry(_("Primetime"), config.plugins.KravenHD.Primetimeavailable, _("Choose whether primetime program information is displayed or not.")))
 		if config.plugins.KravenHD.Primetimeavailable.value == "primetime-on":
-			list.append(getConfigListEntry(_("Primetime-Time"), config.plugins.KravenHD.PrimetimeNew, _("Specify the time for your primetime.")))
+			list.append(getConfigListEntry(_("Primetime-Time"), self.Primetime, _("Specify the time for your primetime.")))
 			list.append(getConfigListEntry(_("Primetime-Font"), config.plugins.KravenHD.PrimetimeFontList, _("Choose the font color of the primetime information. Press OK to define your own RGB color.")))
 		else:
 			emptyLines+=2
@@ -4077,6 +4082,13 @@ class KravenHD(ConfigListScreen, Screen):
 			console5.execute("cp /usr/share/enigma2/KravenHD/graphics/bs_* /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_720/KravenHD/images/")
 		if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenHD/MP_skin.xml") and config.plugins.KravenHD.MediaPortal.value == "mediaportal" and config.plugins.KravenHD.SkinResolution.value == "fhd":
 			console5.execute("cp /usr/share/enigma2/KravenHD/graphics/bs_* /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/KravenHD/images/")
+
+		# workaround primetime #2
+		new_primetime = time.localtime(int(config.plugins.KravenHD.Primetime2.value))
+		new_ptime = (new_primetime[0], new_primetime[1], new_primetime[2], int(self.Primetime.value[0]), int(self.Primetime.value[1]), 0, 0, 0, 0)
+		new_int = int(time.mktime(new_ptime))
+		config.plugins.KravenHD.Primetime2.value = str(new_int)
+		config.plugins.KravenHD.Primetime2.save()
 
 		# Thats it
 		self.restart()
