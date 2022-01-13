@@ -2426,7 +2426,7 @@
   	<!-- Logo -->
 	<panel name="gradient-menu"/>
 	<panel name="Colorbuttons"/>
-	<panel name="SourceRedGreenYellowBlue"/>
+	<widget font="Regular;20" halign="left" valign="center" source="key_red" position="47,670" size="220,26" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
 	<panel name="OKExit"/>
   </screen>
 
