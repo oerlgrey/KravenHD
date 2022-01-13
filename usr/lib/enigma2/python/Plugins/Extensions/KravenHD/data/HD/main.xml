@@ -3690,6 +3690,19 @@
     <panel name="OKExit"/>
   </screen>
 
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="MultiBootWizard" position="0,0" size="1280,720" title="MultiBoot Image Manager">
+	<!--*MultiBootWizard*-->
+    <widget backgroundColor="Kravenbg3" name="config" position="42,80" size="736,360" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget backgroundColor="Kravenbg3" source="options" render="Label" position="42,460" size="736,81" font="Regular;22" foregroundColor="KravenFont1" halign="center" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg3" source="description" render="Label" position="42,560" size="736,54" font="Regular2;22" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="Colorbuttons"/>
+    <panel name="SourceRedGreenYellow"/>
+    <panel name="OKExit"/>
+  </screen>
+
   <screen name="FileCommanderContextMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" >
 	<!--*FileCommanderContextMenu*-->
 	<widget backgroundColor="Kravenbg3" name="menu" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
