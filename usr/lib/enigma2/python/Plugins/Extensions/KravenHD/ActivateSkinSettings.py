@@ -191,8 +191,8 @@ ProgressList = [
 config.plugins.KravenHD = ConfigSubsection()
 currenttime = time.localtime()
 currentint = int(time.mktime(currenttime))
-config.plugins.KravenHD.Primetime = ConfigClock(default=currentint)
-config.plugins.KravenHD.Primetime.value = [20, 15]
+config.plugins.KravenHD.PrimetimeNew = ConfigClock(default=currentint)
+config.plugins.KravenHD.PrimetimeNew.value = [20, 15]
 config.plugins.KravenHD.InfobarAntialias = ConfigSlider(default=10, increment=1, limits=(0, 20))
 config.plugins.KravenHD.ECMLineAntialias = ConfigSlider(default=10, increment=1, limits=(0, 20))
 config.plugins.KravenHD.ScreensAntialias = ConfigSlider(default=10, increment=1, limits=(0, 20))

@@ -225,8 +225,8 @@ ProgressList = [
 config.plugins.KravenHD = ConfigSubsection()
 currenttime = time.localtime()
 currentint = int(time.mktime(currenttime))
-config.plugins.KravenHD.Primetime = ConfigClock(default=currentint)
-config.plugins.KravenHD.Primetime.value = [20, 15]
+config.plugins.KravenHD.PrimetimeNew = ConfigClock(default=currentint)
+config.plugins.KravenHD.PrimetimeNew.value = [20, 15]
 config.plugins.KravenHD.InfobarAntialias = ConfigSlider(default=10, increment=1, limits=(0, 20))
 config.plugins.KravenHD.ECMLineAntialias = ConfigSlider(default=10, increment=1, limits=(0, 20))
 config.plugins.KravenHD.ScreensAntialias = ConfigSlider(default=10, increment=1, limits=(0, 20))
@@ -1500,7 +1500,7 @@ class KravenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("'Not available'-Font"), config.plugins.KravenHD.ChannelSelectionServiceNAList, _("Choose the font color of channels that are unavailable at the moment. Press OK to define your own RGB color.")))
 		list.append(getConfigListEntry(_("Primetime"), config.plugins.KravenHD.Primetimeavailable, _("Choose whether primetime program information is displayed or not.")))
 		if config.plugins.KravenHD.Primetimeavailable.value == "primetime-on":
-			list.append(getConfigListEntry(_("Primetime-Time"), config.plugins.KravenHD.Primetime, _("Specify the time for your primetime.")))
+			list.append(getConfigListEntry(_("Primetime-Time"), config.plugins.KravenHD.PrimetimeNew, _("Specify the time for your primetime.")))
 			list.append(getConfigListEntry(_("Primetime-Font"), config.plugins.KravenHD.PrimetimeFontList, _("Choose the font color of the primetime information. Press OK to define your own RGB color.")))
 		else:
 			emptyLines+=2
