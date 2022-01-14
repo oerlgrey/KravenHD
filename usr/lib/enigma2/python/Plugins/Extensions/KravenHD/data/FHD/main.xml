@@ -3883,18 +3883,18 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	  <convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryPixmapAlphaBlend(pos = (6, 13), size = (84, 42), flags = BT_SCALE, png = 0),  # Flag.
-				MultiContentEntryText(pos = (110, 15), size = (400, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Language name (Native).
-				MultiContentEntryText(pos = (525, 15), size = (400, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Lanuage name (English).
-				# MultiContentEntryText(pos = (580, 15), size = (75, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # Locale name.
-				MultiContentEntryText(pos = (925, 15), size = (100, 38), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Package name.
-				MultiContentEntryPixmapAlphaBlend(pos = (1040, 13), size = (30, 30), flags = BT_SCALE, png = 5)  # Status icon.
+				MultiContentEntryText(pos = (99, 17), size = (402, 44), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Language name (Native).
+				MultiContentEntryText(pos = (507, 17), size = (402, 44), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Lanuage name (English).
+				# MultiContentEntryText(pos = (580, 17), size = (75, 44), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # Locale name.
+				MultiContentEntryText(pos = (915, 17), size = (99, 44), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Package name.
+				MultiContentEntryPixmapAlphaBlend(pos = (1020, 24), size = (60, 21), flags = BT_SCALE, png = 5)  # Status icon.
 				],
-				"fonts": [gFont("Regular", 30)],
+				"fonts": [gFont("Regular", 34)],
 				"itemHeight": 68
 				}
 	  </convert>
 	</widget>
-	<widget name="icons" position="0,0" size="30,30" pixmaps="KravenHD/icons/lock_error.png,KravenHD/icons/lock_off.png,KravenHD/icons/lock_on.png" alphatest="blend" />
+	<widget name="icons" position="0,0" size="60,21" pixmaps="KravenHD/icons/menu_download.png,KravenHD/icons/menu_off.png,KravenHD/icons/menu_on.png" alphatest="blend" />
 	<widget backgroundColor="Kravenbg3" source="description" render="Label" font="Regular2;32" foregroundColor="KravenFont2" position="42,887" size="1104,41" halign="center" valign="center" transparent="1" />
 	<panel name="Title-big" />
 	<!-- Logo -->

@@ -3912,19 +3912,19 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
 	<widget backgroundColor="Kravenbg3" render="Listbox" source="locales" position="42,80" size="736,506" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="KravenHD/graphics/sel_50.png" transparent="1" zPosition="3">
 	  <convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryPixmapAlphaBlend(pos = (4, 2), size = (84, 42), flags = BT_SCALE, png = 0),  # Flag.
-				MultiContentEntryText(pos = (98, 8), size = (254, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Language name (Native).
-				MultiContentEntryText(pos = (362, 8), size = (254, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Lanuage name (English).
+				MultiContentEntryPixmapAlphaBlend(pos = (4, 9), size = (56, 28), flags = BT_SCALE, png = 0),  # Flag.
+				MultiContentEntryText(pos = (66, 8), size = (268, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Language name (Native).
+				MultiContentEntryText(pos = (338, 8), size = (268, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Lanuage name (English).
 				# MultiContentEntryText(pos = (580, 8), size = (75, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # Locale name.
-				MultiContentEntryText(pos = (626, 8), size = (64, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Package name.
-				MultiContentEntryPixmapAlphaBlend(pos = (700, 13), size = (20, 20), flags = BT_SCALE, png = 5)  # Status icon.
+				MultiContentEntryText(pos = (610, 8), size = (66, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Package name.
+				MultiContentEntryPixmapAlphaBlend(pos = (680, 16), size = (40, 14), flags = BT_SCALE, png = 5)  # Status icon.
 				],
 				"fonts": [gFont("Regular", 24)],
 				"itemHeight": 46
 				}
 	  </convert>
 	</widget>
-	<widget name="icons" position="0,0" size="20,20" pixmaps="KravenHD/icons/lock_error.png,KravenHD/icons/lock_off.png,KravenHD/icons/lock_on.png" alphatest="blend" />
+	<widget name="icons" position="0,0" size="20,20" pixmaps="KravenHD/icons/menu_download.png,KravenHD/icons/menu_off.png,KravenHD/icons/menu_on.png" alphatest="blend" />
 	<widget backgroundColor="Kravenbg3" source="description" render="Label" font="Regular2;22" foregroundColor="KravenFont2" position="42,595" size="736,27" halign="center" valign="center" transparent="1" />
 	<panel name="Title-big" />
 	<!-- Logo -->
