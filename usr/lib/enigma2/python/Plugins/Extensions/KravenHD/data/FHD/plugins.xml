@@ -332,11 +332,11 @@
     <widget backgroundColor="Kravenbg3" source="entries" render="Listbox" position="63,202" size="1104,720" selectionPixmap="KravenHD/graphics/sel_60.png" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="3" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
-					 MultiContentEntryText(pos = (40,47),size = (200,41),flags = RT_HALIGN_LEFT, text = 1),# index 0 is the MenuText
-					 MultiContentEntryPixmapAlphaTest(pos = (12,37),size = (16,16),png = 2),# index 1 is direction pixmap
-					 MultiContentEntryText(pos = (40,2),size = (1042,41),flags = RT_HALIGN_LEFT, text = 3),# index 2 is remote name/number
-					 MultiContentEntryText(pos = (255,47),size = (100,41),flags = RT_HALIGN_LEFT, text = 4),# index 3 is length of call
-					 MultiContentEntryText(pos = (355,47),size = (737,41),flags = RT_HALIGN_RIGHT, text = 5),# index 4 is my number/name for number
+					 MultiContentEntryText(pos = (50,47),size = (200,41),flags = RT_HALIGN_LEFT, text = 1),# index 0 is the MenuText
+					 MultiContentEntryPixmapAlphaTest(pos = (7,37),size = (35,35),png = 2),# index 1 is direction pixmap
+					 MultiContentEntryText(pos = (50,2),size = (1047,41),flags = RT_HALIGN_LEFT, text = 3),# index 2 is remote name/number
+					 MultiContentEntryText(pos = (259,47),size = (100,41),flags = RT_HALIGN_LEFT, text = 4),# index 3 is length of call
+					 MultiContentEntryText(pos = (368,47),size = (729,41),flags = RT_HALIGN_RIGHT, text = 5),# index 4 is my number/name for number
 					],
 					 "fonts": [gFont("Regular",32)],
 					 "itemHeight": 90
@@ -364,6 +364,7 @@
 					}
 	  </convert>
     </widget>
+	<widget name="HelpWindow" position="63,753" size="1104,202" zPosition="98" transparent="1" alphatest="blend" />
     <panel name="Title-big"/>
     <panel name="Colorbuttons"/>
 	<!-- Logo -->
@@ -385,8 +386,8 @@
 
   <screen name="FritzAbout" position="0,0" size="1920,1080" flags="wfNoBorder" title="About Fritz Call" backgroundColor="transparent">
 	<!--*FritzAbout*-->
-    <widget name="url" position="63,507" size="1104,75" font="Regular2;27" backgroundColor="Kravenbg3" transparent="1" halign="center" foregroundColor="KravenFont2" />
     <widget name="text" position="63,120" size="1104,345" font="Regular;27" backgroundColor="Kravenbg3" transparent="1" foregroundColor="KravenFont1" halign="center" />
+    <widget name="url" position="63,507" size="1104,75" font="Regular2;27" backgroundColor="Kravenbg3" transparent="1" halign="center" foregroundColor="KravenFont2" />
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -423,6 +424,11 @@
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
     <panel name="OKExit"/>
+  </screen>
+
+  <screen name="MessageBoxPixmap" flags="wfBorder" backgroundColor="Kravenbg6" position="center,center" size="1500,750" title="New Call">
+	<widget name="InfoPixmap" position="15,12" size="726,726" alphatest="blend" />
+	<widget backgroundColor="Kravenbg6" name="text" font="Regular;35" foregroundColor="KravenFont1" position="756,12" size="729,726" valign="center" transparent="1" />
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MediaPlayer" position="center,center" size="1920,1080" title="MediaPlayer" transparent="0">

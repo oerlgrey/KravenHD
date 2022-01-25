@@ -3268,6 +3268,7 @@
 	<!--*ImageBackup*-->
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,480" scrollbarMode="showOnDemand" transparent="1" />
     <widget backgroundColor="Kravenbg3" source="description" render="Label" position="42,572" size="736,54" font="Regular2;22" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1" />
+    <widget source="options" render="Label" position="0,0" size="0,0" />
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -3673,8 +3674,8 @@
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
     <panel name="Colorbuttons"/>
-    <panel name="SourceRedGreenYellowBlue"/>
-    <panel name="OKExit"/>
+    <panel name="SourceRedGreen"/>
+    <panel name="Exit"/>
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MultiBootSelector" position="0,0" size="1280,720" title="Multiboot Image Selector">
