@@ -186,65 +186,188 @@
       <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="1188,1045" size="300,7" />
 	</screen>
 	
-	<screen name="NameRedGreen">
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<screen name="RGYB_Buttons">
+      <panel name="TemplateButtonRed"/>
+      <panel name="TemplateButtonGreen"/>
+      <panel name="TemplateButtonYellow"/>
+      <panel name="TemplateButtonBlue"/>
 	</screen>
 	
-	<screen name="NameRedGreen2">
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<screen name="RGYB_Buttons2">
+      <panel name="TemplateButtonRed2"/>
+      <panel name="TemplateButtonGreen2"/>
+      <panel name="TemplateButtonYellow2"/>
+      <panel name="TemplateButtonBlue2"/>
 	</screen>
 	
-	<screen name="NameRedGreenYellowBlue">
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<screen name="RGYB_Buttons4">
+      <panel name="TemplateButtonRed4"/>
+      <panel name="TemplateButtonGreen4"/>
+      <panel name="TemplateButtonYellow4"/>
+      <panel name="TemplateButtonBlue4"/>
 	</screen>
 	
-	<screen name="NameRedGreenYellowBlue2">
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<screen name="RGYB_Buttons5">
+      <panel name="TemplateButtonRed5"/>
+      <panel name="TemplateButtonGreen5"/>
+      <panel name="TemplateButtonYellow5"/>
+      <panel name="TemplateButtonBlue5"/>
 	</screen>
 	
-	<screen name="SourceRedGreen">
-      <widget font="Regular;30" halign="left" valign="center" source="key_red" position="71,1004" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_green" position="446,1004" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<screen name="TemplateButtonRed">
+	  <ePixmap pixmap="buttons/key_red1.png" position="63,1045" size="300,7" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+	  <widget source="key_red" render="Pixmap" pixmap="buttons/key_red1.png" position="63,1045" size="300,7" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_red" position="71,1004" size="360,39" backgroundColor="KravenIBbg3" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_red,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_red" render="Label" position="71,1004" size="360,39" backgroundColor="KravenIBbg3" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_red,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
 	</screen>
 	
-	<screen name="SourceRedGreenYellow">
-      <widget font="Regular;30" halign="left" valign="center" source="key_red" position="71,1004" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_green" position="446,1004" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_yellow" position="821,1004" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<screen name="TemplateButtonGreen">
+	  <ePixmap pixmap="buttons/key_green1.png" position="438,1045" size="300,7" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+	  <widget source="key_green" render="Pixmap" pixmap="buttons/key_green1.png" position="438,1045" size="300,7" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_green" position="446,1004" size="360,39" backgroundColor="KravenIBbg3" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_green,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_green" render="Label" position="446,1004" size="360,39" backgroundColor="KravenIBbg3" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_green,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
 	</screen>
 	
-	<screen name="SourceRedGreenYellowBlue">
-      <widget font="Regular;30" halign="left" valign="center" source="key_red" position="71,1004" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_green" position="446,1004" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_yellow" position="821,1004" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_blue" position="1196,1004" size="330,39" render="Label" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<screen name="TemplateButtonYellow">
+	  <ePixmap pixmap="buttons/key_yellow1.png" position="813,1045" size="300,7" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+	  <widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow1.png" position="813,1045" size="300,7" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_yellow" position="821,1004" size="360,39" backgroundColor="KravenIBbg3" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_yellow,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_yellow" render="Label" position="821,1004" size="360,39" backgroundColor="KravenIBbg3" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_yellow,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
 	</screen>
 	
-	<screen name="SourceRedGreenYellowBlue2">
-      <widget font="Regular;30" halign="left" valign="center" source="key_red" position="71,1004" size="330,39" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_green" position="446,1004" size="330,39" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_yellow" position="821,1004" size="330,39" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_blue" position="1196,1004" size="330,39" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<screen name="TemplateButtonBlue">
+	  <ePixmap pixmap="buttons/key_blue1.png" position="1188,1045" size="300,7" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+	  <widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue1.png" position="1188,1045" size="300,7" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_blue" position="1196,1004" size="360,39" backgroundColor="KravenIBbg3" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_blue,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_blue" render="Label" position="1196,1004" size="360,39" backgroundColor="KravenIBbg3" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_blue,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	</screen>
+	
+	<screen name="TemplateButtonRed2">
+	  <ePixmap pixmap="buttons/key_red1.png" position="63,1045" size="300,7" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+	  <widget source="key_red" render="Pixmap" pixmap="buttons/key_red1.png" position="63,1045" size="300,7" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_red" position="71,1004" size="360,39" backgroundColor="KravenIBbg2" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_red,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_red" render="Label" position="71,1004" size="360,39" backgroundColor="KravenIBbg2" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_red,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	</screen>
+	
+	<screen name="TemplateButtonGreen2">
+	  <ePixmap pixmap="buttons/key_green1.png" position="438,1045" size="300,7" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+	  <widget source="key_green" render="Pixmap" pixmap="buttons/key_green1.png" position="438,1045" size="300,7" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_green" position="446,1004" size="360,39" backgroundColor="KravenIBbg2" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_green,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_green" render="Label" position="446,1004" size="360,39" backgroundColor="KravenIBbg2" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_green,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	</screen>
+	
+	<screen name="TemplateButtonYellow2">
+	  <ePixmap pixmap="buttons/key_yellow1.png" position="813,1045" size="300,7" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+	  <widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow1.png" position="813,1045" size="300,7" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_yellow" position="821,1004" size="360,39" backgroundColor="KravenIBbg2" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_yellow,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_yellow" render="Label" position="821,1004" size="360,39" backgroundColor="KravenIBbg2" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_yellow,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	</screen>
+	
+	<screen name="TemplateButtonBlue2">
+	  <ePixmap pixmap="buttons/key_blue1.png" position="1188,1045" size="300,7" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+	  <widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue1.png" position="1188,1045" size="300,7" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_blue" position="1196,1004" size="360,39" backgroundColor="KravenIBbg2" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_blue,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_blue" render="Label" position="1196,1004" size="360,39" backgroundColor="KravenIBbg2" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_blue,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	</screen>
+	
+	<screen name="TemplateButtonRed4">
+	  <ePixmap pixmap="buttons/key_red1.png" position="63,1045" size="300,7" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+	  <widget source="key_red" render="Pixmap" pixmap="buttons/key_red1.png" position="63,1045" size="300,7" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_red" position="71,1004" size="360,39" backgroundColor="KravenIBbg4" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_red,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_red" render="Label" position="71,1004" size="360,39" backgroundColor="KravenIBbg4" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_red,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	</screen>
+	
+	<screen name="TemplateButtonGreen4">
+	  <ePixmap pixmap="buttons/key_green1.png" position="438,1045" size="300,7" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+	  <widget source="key_green" render="Pixmap" pixmap="buttons/key_green1.png" position="438,1045" size="300,7" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_green" position="446,1004" size="360,39" backgroundColor="KravenIBbg4" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_green,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_green" render="Label" position="446,1004" size="360,39" backgroundColor="KravenIBbg4" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_green,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	</screen>
+	
+	<screen name="TemplateButtonYellow4">
+	  <ePixmap pixmap="buttons/key_yellow1.png" position="813,1045" size="300,7" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+	  <widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow1.png" position="813,1045" size="300,7" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_yellow" position="821,1004" size="360,39" backgroundColor="KravenIBbg4" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_yellow,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_yellow" render="Label" position="821,1004" size="360,39" backgroundColor="KravenIBbg4" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_yellow,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	</screen>
+	
+	<screen name="TemplateButtonBlue4">
+	  <ePixmap pixmap="buttons/key_blue1.png" position="1188,1045" size="300,7" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+	  <widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue1.png" position="1188,1045" size="300,7" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_blue" position="1196,1004" size="360,39" backgroundColor="KravenIBbg4" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_blue,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_blue" render="Label" position="1196,1004" size="360,39" backgroundColor="KravenIBbg4" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_blue,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	</screen>
+	
+	<screen name="TemplateButtonRed5">
+	  <ePixmap pixmap="buttons/key_red1.png" position="63,1045" size="300,7" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+	  <widget source="key_red" render="Pixmap" pixmap="buttons/key_red1.png" position="63,1045" size="300,7" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_red" position="71,1004" size="360,39" backgroundColor="KravenIBbg5" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_red,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_red" render="Label" position="71,1004" size="360,39" backgroundColor="KravenIBbg5" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_red,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	</screen>
+	
+	<screen name="TemplateButtonGreen5">
+	  <ePixmap pixmap="buttons/key_green1.png" position="438,1045" size="300,7" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+	  <widget source="key_green" render="Pixmap" pixmap="buttons/key_green1.png" position="438,1045" size="300,7" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_green" position="446,1004" size="360,39" backgroundColor="KravenIBbg5" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_green,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_green" render="Label" position="446,1004" size="360,39" backgroundColor="KravenIBbg5" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_green,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	</screen>
+	
+	<screen name="TemplateButtonYellow5">
+	  <ePixmap pixmap="buttons/key_yellow1.png" position="813,1045" size="300,7" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+	  <widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow1.png" position="813,1045" size="300,7" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_yellow" position="821,1004" size="360,39" backgroundColor="KravenIBbg5" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_yellow,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_yellow" render="Label" position="821,1004" size="360,39" backgroundColor="KravenIBbg5" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_yellow,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	</screen>
+	
+	<screen name="TemplateButtonBlue5">
+	  <ePixmap pixmap="buttons/key_blue1.png" position="1188,1045" size="300,7" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+	  <widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue1.png" position="1188,1045" size="300,7" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <widget name="key_blue" position="1196,1004" size="360,39" backgroundColor="KravenIBbg5" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_blue,Button,Label" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
+	  <widget source="key_blue" render="Label" position="1196,1004" size="360,39" backgroundColor="KravenIBbg5" font="Regular;30" foregroundColor="KravenButton" objectTypes="key_blue,StaticText" transparent="1" noWrap="1" halign="left" valign="center" zPosition="1" />
 	</screen>
 	
 	<screen name="Title-big">
-      <widget backgroundColor="KravenIBbg3" font="Regular2;50" foregroundColor="KravenIBGFont2" position="63,10" render="Label" size="1500,69" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
+      <widget backgroundColor="KravenIBbg3" font="Regular2;50" foregroundColor="KravenIBGFont2" position="63,10" render="Label" size="1500,69" source="Title" transparent="1" valign="center" noWrap="1" />
 	</screen>
 	
 	<screen name="Title-big2">
-      <widget backgroundColor="KravenIBbg2" font="Regular2;50" foregroundColor="KravenIBGFont2" position="63,10" render="Label" size="1500,69" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
+      <widget backgroundColor="KravenIBbg2" font="Regular2;50" foregroundColor="KravenIBGFont2" position="63,10" render="Label" size="1500,69" source="Title" transparent="1" valign="center" noWrap="1" />
 	</screen>
 	
 	<screen name="title-small">
-      <widget backgroundColor="KravenIBbg3" font="Regular2;50" foregroundColor="KravenIBGFont2" position="63,10" render="Label" size="1500,69" source="title" transparent="1" halign="left" valign="center" noWrap="1" />
+      <widget backgroundColor="KravenIBbg3" font="Regular2;50" foregroundColor="KravenIBGFont2" position="63,10" render="Label" size="1500,69" source="title" transparent="1" valign="center" noWrap="1" />
 	</screen>
 	
 	<screen name="MenuOKExit">
@@ -330,12 +453,9 @@
 	  </widget>
       <widget backgroundColor="Kravenbg" font="Regular2;32" foregroundColor="KravenFont2" halign="center" source="playtext" render="Label" position="63,800" size="1104,164" transparent="1" valign="center" zPosition="2" />
       <widget backgroundColor="Kravenbg" font="Regular2;32" foregroundColor="KravenFont2" name="help" position="63,780" size="1104,164" transparent="1" valign="center" zPosition="3" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	  <panel name="RGYB_Buttons2" />
       <widget font="Regular;30" halign="left" valign="center" name="key_red2" position="71,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="3" />
       <widget font="Regular;30" halign="left" valign="center" name="key_green2" position="446,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="3" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
 	  <widget name="buttons_abdeck" position="821,1004" zPosition="2" size="705,39" font="Regular;30" valign="center" halign="left" foregroundColor="KravenButton" backgroundColor="KravenIBbg2" />
       <widget name="rec_pic" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/webradioFS/skin/images/rec1.png" position="1545,1002" size="60,45" zPosition="2" />
 	</screen>
@@ -345,82 +465,43 @@
       <widget backgroundColor="Kravenbg" font="Regular2;32" foregroundColor="KravenFont2" halign="center" name="rec_txt" position="63,120" size="1104,41" transparent="1" valign="center" zPosition="2" />
       <widget backgroundColor="Kravenbg" name="config" font="Regular;30" foregroundColor="KravenFont1" itemHeight="38" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,170" size="1104,608" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="0" zPosition="3" />
       <widget backgroundColor="Kravenbg" font="Regular2;32" foregroundColor="KravenFont2" halign="center" name="playtext" position="63,817" size="1104,123" transparent="1" valign="center" zPosition="2" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	  <panel name="RGYB_Buttons2" />
 	</screen>
 	
 	<screen name="EMCSelection-template">
 	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenIBGFont1" position="1707,24" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
 	    <convert type="KravenHDClockToText">Default</convert>
 	  </widget>
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" noWrap="1" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" noWrap="1" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" noWrap="1" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" noWrap="1" transparent="1" zPosition="1" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="63,1045" size="300,7" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="438,1045" size="300,7" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="813,1045" size="300,7" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="1188,1045" size="300,7" />
+	  <panel name="RGYB_Buttons2" />
       <!-- globalbg */-->
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_menu.png" position="1642,1012" size="65,33" alphatest="blend" />
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_ok.png" position="1717,1012" size="65,33" alphatest="blend" />
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_exit.png" position="1792,1012" size="65,33" alphatest="blend" />
+	  <panel name="MenuOKExit" />
 	</screen>
 	
 	<screen name="EMCSelection-nontransbg-template">
 	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg5" foregroundColor="KravenIBGFont1" position="1707,24" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
 	    <convert type="KravenHDClockToText">Default</convert>
 	  </widget>
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" noWrap="1" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" noWrap="1" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" noWrap="1" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" noWrap="1" transparent="1" zPosition="1" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="63,1045" size="300,7" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="438,1045" size="300,7" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="813,1045" size="300,7" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="1188,1045" size="300,7" />
+	  <panel name="RGYB_Buttons5" />
       <!-- nontransbg */-->
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_menu.png" position="1642,1012" size="65,33" alphatest="blend" />
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_ok.png" position="1717,1012" size="65,33" alphatest="blend" />
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_exit.png" position="1792,1012" size="65,33" alphatest="blend" />
+	  <panel name="MenuOKExit" />
 	</screen>
 	
 	<screen name="CoolTV-template">
       <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg2" foregroundColor="KravenIBGFont1" position="1707,24" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
         <convert type="KravenHDClockToText">Default</convert>
       </widget>
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="63,1045" size="300,7" />
-      <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="436,1045" size="300,7" />
-      <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="813,1045" size="300,7" />
-      <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="1188,1045" size="300,7" />
+	  <panel name="RGYB_Buttons2" />
       <!-- globalbg */-->
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_menu.png" position="1642,1012" size="65,33" alphatest="blend" />
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_ok.png" position="1717,1012" size="65,33" alphatest="blend" />
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_exit.png" position="1792,1012" size="65,33" alphatest="blend" />
+	  <panel name="MenuOKExit" />
 	</screen>
 	
 	<screen name="CoolTV-nontransbg-template">
       <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg5" foregroundColor="KravenIBGFont1" position="1707,24" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
         <convert type="KravenHDClockToText">Default</convert>
       </widget>
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="63,1045" size="300,7" />
-      <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="436,1045" size="300,7" />
-      <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="813,1045" size="300,7" />
-      <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="1188,1045" size="300,7" />
+	  <panel name="RGYB_Buttons5" />
       <!-- nontransbg */-->
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_menu.png" position="1642,1012" size="65,33" alphatest="blend" />
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_ok.png" position="1717,1012" size="65,33" alphatest="blend" />
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_exit.png" position="1792,1012" size="65,33" alphatest="blend" />
+	  <panel name="MenuOKExit" />
 	</screen>
 	
 	<screen name="ChannelSelection-template">
@@ -428,18 +509,9 @@
 	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg4" foregroundColor="KravenIBGFont1" position="1707,24" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
 	    <convert type="KravenHDClockToText">Default</convert>
 	  </widget>
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg4" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="top" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg4" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg4" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg4" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="63,1045" size="300,7" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="438,1045" size="300,7" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="813,1045" size="300,7" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="1188,1045" size="300,7" />
+	  <panel name="RGYB_Buttons4" />
 	  <!-- channelbg */-->
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_menu.png" position="1642,1012" size="65,33" alphatest="blend" />
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_ok.png" position="1717,1012" size="65,33" alphatest="blend" />
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_exit.png" position="1792,1012" size="65,33" alphatest="blend" />
+	  <panel name="MenuOKExit" />
 	</screen>
 	
 	<screen name="ChannelSelection-nontransbg-template">
@@ -447,18 +519,9 @@
 	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg5" foregroundColor="KravenIBGFont1" position="1707,24" size="150,42" font="Regular;39" halign="right" transparent="1" valign="center">
 	    <convert type="KravenHDClockToText">Default</convert>
 	  </widget>
-      <widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="top" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" name="key_blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="63,1045" size="300,7" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="438,1045" size="300,7" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="813,1045" size="300,7" />
-	  <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_blue1.png" position="1188,1045" size="300,7" />
+	  <panel name="RGYB_Buttons5" />
       <!-- nontransbg */-->
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_menu.png" position="1642,1012" size="65,33" alphatest="blend" />
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_ok.png" position="1717,1012" size="65,33" alphatest="blend" />
-      <ePixmap pixmap="KravenHD/infobar-global-icons/key_exit.png" position="1792,1012" size="65,33" alphatest="blend" />
+	  <panel name="MenuOKExit" />
 	</screen>
 	
 	<screen name="EPGSelection-template">
@@ -470,10 +533,7 @@
 		<convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
       </widget>
 	  <!-- globalbg */-->
-      <widget font="Regular;30" halign="left" valign="center" source="key_red" render="Label" position="71,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="top" source="key_green" render="Label" position="446,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_yellow" render="Label" position="821,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_blue" render="Label" position="1196,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	  <panel name="RGYB_Buttons2" />
 	</screen>
 	
 	<screen name="EPGSelection-nontransbg-template">
@@ -491,10 +551,7 @@
 		<convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
       </widget>
       <!-- nontransbg */-->
-      <widget font="Regular;30" halign="left" valign="center" source="key_red" render="Label" position="71,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="top" source="key_green" render="Label" position="446,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_yellow" render="Label" position="821,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_blue" render="Label" position="1196,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	  <panel name="RGYB_Buttons5" />
 	</screen>
 	
 	<screen name="EventView-template">
@@ -527,6 +584,7 @@
       <widget backgroundColor="Kravenbg" foregroundColor="KravenFont2" font="Regular2;52" halign="left" name="channel" position="63,127" size="1281,90" transparent="1" />
       <widget backgroundColor="Kravenbg" foregroundColor="KravenFont2" font="Regular2;45" halign="right" name="datetime" position="1392,127" size="465,90" transparent="1" valign="center" />
       <widget backgroundColor="Kravenbg" font="Regular2;36" halign="right" name="duration" position="1447,904" size="409,60" transparent="1" foregroundColor="KravenFont2" />
+	  <panel name="RGYB_Buttons2" />
 	</screen>
 	
 	<screen name="EventView-nontransbg-template">
@@ -569,10 +627,7 @@
 	  <eLabel backgroundColor="KravenBorder2" position="1233,120" size="4,351" transparent="0" zPosition="4" />
 	  <eLabel backgroundColor="KravenBorder2" position="1853,120" size="4,351" transparent="0" zPosition="4" />
       <!-- nontransbg */-->
-      <widget font="Regular;30" halign="left" valign="center" source="key_red" render="Label" position="71,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_green" render="Label" position="446,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_yellow" render="Label" position="821,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-      <widget font="Regular;30" halign="left" valign="center" source="key_blue" render="Label" position="1196,1004" size="330,39" backgroundColor="KravenIBbg5" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	  <panel name="RGYB_Buttons5" />
 	</screen>
 	
 	<screen name="channelselection-style-minitv-small">
@@ -1419,23 +1474,23 @@
 	</screen>
 	
 	<screen name="gradient-ibepg">
-      <ePixmap pixmap="KravenHD/graphics/ibar.png" position="0,112" size="1920,465" zPosition="-9" />
-      <ePixmap pixmap="KravenHD/graphics/ibar.png" position="0,0" size="1920,465" zPosition="-8" />
+      <ePixmap pixmap="KravenHD/graphics/ibar.png" position="0,615" size="1920,465" zPosition="-9" alphatest="blend" />
+      <ePixmap pixmap="KravenHD/graphics/ibar.png" position="0,503" size="1920,465" zPosition="-8" />
 	</screen>
 	
 	<screen name="box-ibepg">
-	  <eLabel position="0,150" size="1920,427" backgroundColor="KravenIBbg" zPosition="-9" />
-	  <eLabel position="0,150" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+	  <eLabel position="0,653" size="1920,427" backgroundColor="KravenIBbg" zPosition="-9" />
+	  <eLabel position="0,653" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
 	</screen>
 	
 	<screen name="box2-ibepg">
-      <ePixmap pixmap="KravenHD/graphics/ibar7.png" position="0,150" size="1920,427" zPosition="-9" />
-	  <eLabel position="0,150" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+      <ePixmap pixmap="KravenHD/graphics/ibar7.png" position="0,653" size="1920,427" zPosition="-9" alphatest="blend" />
+	  <eLabel position="0,653" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
 	</screen>
 	
 	<screen name="texture-ibepg">
-      <ePixmap pixmap="KravenHD/graphics/ibtexture.png" position="0,150" size="1920,427" zPosition="-9" />
-	  <eLabel position="0,150" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
+      <ePixmap pixmap="KravenHD/graphics/ibtexture.png" position="0,653" size="1920,427" zPosition="-9" alphatest="blend" />
+	  <eLabel position="0,653" size="1920,3" backgroundColor="KravenIBLine" zPosition="-8" />
 	</screen>
 	
 	<screen name="gradient-ibev">

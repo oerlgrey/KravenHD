@@ -37,8 +37,7 @@
 	<widget backgroundColor="Kravenbg" name="list_right" foregroundColor="KravenFont1" position="42,417" size="1196,210" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<panel name="Background"/>
 	<panel name="gradient-menu"/>
-	<panel name="Colorbuttons"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+	<panel name="RGYB_Buttons2"/>
 	<panel name="MenuOKExit"/>
   </screen>
 
@@ -80,7 +79,6 @@
 	<widget backgroundColor="Kravenbg" name="list_right" foregroundColor="KravenFont1" position="42,417" size="1196,210" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<panel name="Background"/>
 	<panel name="gradient-menu"/>
-	<panel name="Colorbuttons"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+	<panel name="RGYB_Buttons2"/>
 	<panel name="MenuOKExit"/>
   </screen>

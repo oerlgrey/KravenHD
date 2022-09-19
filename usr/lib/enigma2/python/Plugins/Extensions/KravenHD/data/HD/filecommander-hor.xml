@@ -36,8 +36,7 @@
     <panel name="Title-big2"/>
 	<panel name="Background"/>
 	<panel name="gradient-menu"/>
-	<panel name="Colorbuttons"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+	<panel name="RGYB_Buttons2"/>
 	<panel name="MenuOKExit"/>
   </screen>
 
@@ -78,7 +77,6 @@
     <panel name="Title-big2"/>
 	<panel name="Background"/>
 	<panel name="gradient-menu"/>
-	<panel name="Colorbuttons"/>
-    <panel name="NameRedGreenYellowBlue2"/>
+	<panel name="RGYB_Buttons2"/>
 	<panel name="MenuOKExit"/>
   </screen>

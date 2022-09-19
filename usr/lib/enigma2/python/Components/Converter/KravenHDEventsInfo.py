@@ -89,16 +89,15 @@ class KravenHDEventsInfo(Converter, object):
 				next = self.epgcache.getNextTimeEntry()
 				if next:
 					textvalue = self.formatEvent(next)
-		
+
 		elif self.type == self.PrimeTime:
 			curEvent = self.source.getCurrentEvent()
 			if curEvent:
 				now = localtime(time())
 				try:
-				    prime_time = localtime(int(config.plugins.KravenHD.Primetime2.value))
-				    dt = datetime(now.tm_year, now.tm_mon, now.tm_mday, prime_time[3], prime_time[4])
+					dt = datetime(now.tm_year, now.tm_mon, now.tm_mday, int(config.plugins.KravenHD.Primetime.value[0]), int(config.plugins.KravenHD.Primetime.value[1]))
 				except:
-				    dt = datetime(now.tm_year, now.tm_mon, now.tm_mday, 20, 15)
+					dt = datetime(now.tm_year, now.tm_mon, now.tm_mday, 20, 15)
 				primeTime = int(mktime(dt.timetuple()))
 				self.epgcache.startTimeQuery(eServiceReference(ref.toString()), primeTime)
 				next = self.epgcache.getNextTimeEntry()
@@ -112,7 +111,7 @@ class KravenHDEventsInfo(Converter, object):
 		return textvalue
 
 	text = property(getText)
-	
+
 	def formatEvent(self, event):
 		begin = strftime("%H:%M", localtime(event.getBeginTime()))
 		end = strftime("%H:%M", localtime(event.getBeginTime() + event.getDuration()))

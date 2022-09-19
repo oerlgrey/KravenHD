@@ -9,7 +9,6 @@
     </widget>
 	<widget backgroundColor="Kravenbg2" name="list" foregroundColor="KravenFont1" itemHeight="30" EventFontSingle="Regular;22" position="42,135" size="736,490" selectionPixmap="KravenHD/graphics/sel_ES.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
 	<panel name="gradient-menu"/>
-    <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
     <panel name="EPGSelection-nontransbg-template"/>
   </screen>
@@ -25,7 +24,6 @@
     <widget backgroundColor="Kravenbg2" font="Regular2;22" foregroundColor="KravenFont2" halign="right" name="date" position="528,80" size="250,30" valign="center" transparent="1" />
     <widget backgroundColor="Kravenbg2" name="list" foregroundColor="KravenFont1" itemHeight="30" EventFontMulti="Regular;22" position="42,135" size="736,490" selectionPixmap="KravenHD/graphics/sel_ESM.png" enableWrapAround="1" transparent="1" />
 	<panel name="gradient-menu"/>
-    <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
     <panel name="EPGSelection-nontransbg-template"/>
   </screen>
@@ -34,7 +32,6 @@
 	<!--*EventView*-->
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
     <panel name="EventView-nontransbg-template"/>
   </screen>
@@ -43,7 +40,6 @@
 	<!--*EventViewSimple*-->
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="Colorbuttons"/>
     <panel name="MenuOKExit"/>
     <panel name="EventView-nontransbg-template"/>
   </screen>
