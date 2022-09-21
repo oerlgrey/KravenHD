@@ -2177,10 +2177,10 @@
     <widget backgroundColor="Kravenbg3" name="package_count" font="Regular;32" foregroundColor="KravenFont1" position="450,780" size="75,41" transparent="1" />
     <widget backgroundColor="Kravenbg3" name="feedmessage" font="Regular2;32" foregroundColor="KravenFont2" position="72,825" size="630,82" transparent="1" />
     <widget backgroundColor="Kravenbg3" name="activity" foregroundColor="KravenProgress" position="72,910" size="630,15" transparent="1" />
-	<widget name="traffic_off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" position="729,804" size="36,97" alphatest="on" />
-    <widget name="traffic_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" position="729,804" size="36,97" alphatest="on" />
-    <widget name="traffic_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" position="729,804" size="36,97" alphatest="on" />
-    <widget name="traffic_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" position="729,804" size="36,97" alphatest="on" />
+	<widget name="traffic_off" pixmap="icons/aoff.png" position="729,804" size="36,97" alphatest="on" />
+    <widget name="traffic_red" pixmap="icons/ared.png" position="729,804" size="36,97" alphatest="on" />
+    <widget name="traffic_yellow" pixmap="icons/ayellow.png" position="729,804" size="36,97" alphatest="on" />
+    <widget name="traffic_green" pixmap="icons/agreen.png" position="729,804" size="36,97" alphatest="on" />
 	<widget backgroundColor="Kravenbg3" name="feedstatus_red" font="Regular;30" foregroundColor="KravenFont1" position="780,801" size="370,38" transparent="1" />
 	<widget backgroundColor="Kravenbg3" name="feedstatus_off" font="Regular;30" foregroundColor="KravenFont1" position="780,833" size="370,38" transparent="1" />
 	<widget backgroundColor="Kravenbg3" name="feedstatus_yellow" font="Regular;30" foregroundColor="KravenFont1" position="780,833" size="370,38" transparent="1" />
