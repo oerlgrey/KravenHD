@@ -91,7 +91,7 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Menu" position="0,0" size="1920,1080" title="Main menu">
 	<!--*Menu*-->
     <panel name="mainmenu-big"/>
-    <panel name="title-small"/>
+    <panel name="Title-big"/>
     <panel name="RGYB_Buttons"/>
 	<!-- Metrix-Icons -->
 	<panel name="gradient-menu"/>
@@ -1980,6 +1980,29 @@
     <!-- PVRState background -->
   </screen>
 
+  <screen name="DistributionInformation" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*DistributionInformation*-->
+    <eLabel backgroundColor="Kravenbg3" text="OPEN SOURCE" position="63,120" size="1104,54" font="Regular2;39" foregroundColor="KravenFont2" transparent="1" valign="center" />
+    <eLabel backgroundColor="Kravenbg3" text="https://github.com/openatv" font="Regular;32" foregroundColor="KravenFont2" position="63,190" size="531,41" transparent="1" zPosition="1" />
+    <eLabel backgroundColor="Kravenbg3" text="https://github.com/oe-alliance" font="Regular;32" foregroundColor="KravenFont2" position="63,235" size="531,41" transparent="1" zPosition="1" />
+	<widget backgroundColor="Kravenbg3" name="information" position="63,310" size="1104,629" colPosition="420" conditional="information" divideChar="|" font="Regular;29" noWrap="1" leftColAlign="left" rightColAlign="left" split="1"  transparent="1" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+	<panel name="RGYB_Buttons"/>
+	<panel name="Exit"/>
+  </screen>
+
+  <screen name="Information" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*Information*-->
+	<widget backgroundColor="Kravenbg3" name="information" position="63,115" size="1104,814" colPosition="420" conditional="information" divideChar="|" font="Regular;29" noWrap="1" leftColAlign="left" rightColAlign="left" split="1"  transparent="1" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+	<panel name="RGYB_Buttons"/>
+	<panel name="Exit"/>
+  </screen>
+
   <screen name="AboutOE" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*AboutOE*-->
     <eLabel backgroundColor="Kravenbg3" text="OPEN SOURCE" position="63,120" size="1104,54" font="Regular2;39" foregroundColor="KravenFont2" transparent="1" valign="center" />
@@ -2094,7 +2117,12 @@
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
-	<panel name="RGYB_Buttons"/>
+	<widget font="Regular;30" halign="left" valign="center" name="key_red" position="71,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<widget font="Regular;30" halign="left" valign="center" name="key_green" position="446,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<widget font="Regular;30" halign="left" valign="center" name="key_yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+	<ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="63,1045" size="300,7" />
+	<ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="438,1045" size="300,7" />
+	<ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="813,1045" size="300,7" />
 	<panel name="Exit"/>
   </screen>
 
@@ -2177,14 +2205,14 @@
     <widget backgroundColor="Kravenbg3" name="package_count" font="Regular;32" foregroundColor="KravenFont1" position="450,780" size="75,41" transparent="1" />
     <widget backgroundColor="Kravenbg3" name="feedmessage" font="Regular2;32" foregroundColor="KravenFont2" position="72,825" size="630,82" transparent="1" />
     <widget backgroundColor="Kravenbg3" name="activity" foregroundColor="KravenProgress" position="72,910" size="630,15" transparent="1" />
-	<widget name="traffic_off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" position="729,804" size="36,97" alphatest="on" />
-    <widget name="traffic_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" position="729,804" size="36,97" alphatest="on" />
-    <widget name="traffic_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" position="729,804" size="36,97" alphatest="on" />
-    <widget name="traffic_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" position="729,804" size="36,97" alphatest="on" />
-	<widget backgroundColor="Kravenbg3" name="feedstatus_red" font="Regular;30" foregroundColor="KravenFont1" position="780,801" size="370,38" transparent="1" />
-	<widget backgroundColor="Kravenbg3" name="feedstatus_off" font="Regular;30" foregroundColor="KravenFont1" position="780,833" size="370,38" transparent="1" />
-	<widget backgroundColor="Kravenbg3" name="feedstatus_yellow" font="Regular;30" foregroundColor="KravenFont1" position="780,833" size="370,38" transparent="1" />
-	<widget backgroundColor="Kravenbg3" name="feedstatus_green" font="Regular;30" foregroundColor="KravenFont1" position="780,866" size="370,38" transparent="1" />
+	<widget name="traffic_off" pixmap="icons/aoff.png" position="729,780" size="54,146" alphatest="on" />
+    <widget name="traffic_red" pixmap="icons/ared.png" position="729,780" size="54,146" alphatest="on" />
+    <widget name="traffic_yellow" pixmap="icons/ayellow.png" position="729,780" size="54,146" alphatest="on" />
+    <widget name="traffic_green" pixmap="icons/agreen.png" position="729,780" size="54,146" alphatest="on" />
+	<widget backgroundColor="Kravenbg3" name="feedstatus_red" font="Regular;32" foregroundColor="KravenFont1" position="780,804" size="363,41" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="feedstatus_off" font="Regular;32" foregroundColor="KravenFont1" position="780,832" size="363,41" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="feedstatus_yellow" font="Regular;32" foregroundColor="KravenFont1" position="780,832" size="363,41" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="feedstatus_green" font="Regular;32" foregroundColor="KravenFont1" position="780,882" size="363,41" transparent="1" />
     <panel name="Title-big"/>
   	<!-- Logo -->
 	<panel name="gradient-menu"/>

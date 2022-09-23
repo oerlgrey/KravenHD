@@ -24,17 +24,17 @@ class KravenHDMenuIconPath(Poll, Converter, object):
 	def __init__(self, type):
 		Poll.__init__(self)
 		Converter.__init__(self, type)
-		self.poll_interval = 100
+		self.poll_interval = 300
 		self.poll_enabled = True
 		self.type = str(type)
 		self.path = "/usr/share/enigma2/Kraven-menu-icons/"
 		self.userpath = "/usr/share/enigma2/Kraven-user-icons/"
 		if fileExists("/usr/share/enigma2/Kraven-menu-icons/kravenhd_logo.png"):
-			self.logo="/usr/share/enigma2/Kraven-menu-icons/kravenhd_logo.png"
+			self.logo = "/usr/share/enigma2/Kraven-menu-icons/kravenhd_logo.png"
 		else:
 			self.logo = "/usr/share/enigma2/KravenHD/logo.png"
-		
-		self.names=[
+
+		self.names = [
 		("about_screen", "about.png"), #ATV
 		("about_screen", "info.png"),
 		("animation_setup", "usage_setup.png"), #ATV
@@ -69,6 +69,7 @@ class KravenHDMenuIconPath(Poll, Converter, object):
 		("device_setup", "setup.png"),
 		("display_selection", "look.png"),
 		("display_setup", "look.png"),
+		("distribution_info_screen", "info.png"), #ATV 7.x
 		("dns_setup", "net.png"),
 		("dreamplex", "plex.png"), #ATV
 		("dreamplex", "plugin.png"),
@@ -101,6 +102,7 @@ class KravenHDMenuIconPath(Poll, Converter, object):
 		("inadyn_setup", "setup.png"),
 		("info_screen", "info.png"),
 		("infopanel", "info.png"),
+		("information", "info.png"), #ATV 7.x
 		("input_device_setup", "keyb.png"),
 		("ipbox_client_start", "streamconvert.png"), #ATV
 		("ipbox_client_start", "webb.png"),
@@ -223,6 +225,7 @@ class KravenHDMenuIconPath(Poll, Converter, object):
 		("timer_edit", "timers.png"), #ATV
 		("timer_edit", "timer.png"),
 		("timer_menu", "timer.png"),
+		("timermenu", "timer.png"), #ATV 7.x
 		("timezone_setup", "timezone.png"), #ATV
 		("timezone_setup", "webb.png"),
 		("timshift_setup", "movie_list.png"),
@@ -277,49 +280,50 @@ class KravenHDMenuIconPath(Poll, Converter, object):
 		("youtube_tv", "youtube.png"), #ATV
 		("youtube_tv", "plugin.png")
 		]
-	
+
 	@cached
 	def getText(self):
 		try: # is it a screen? then we handle it according to title
-			text=self.source.text
+			text = self.source.text
 			if text in ("zapHistory", "Senderhistorie", "SkinSelector", "Skinauswahl", "LCD-Skinauswahl"):
 				return self.logo
 			if text in ("PluginBrowser", "Erweiterungsmenü"):
-				name=self.userpath+"plugin.png"
+				name = self.userpath + "plugin.png"
 				if fileExists(name):
 					return name
-				name=self.path+"plugin.png"
+				name = self.path + "plugin.png"
 				if fileExists(name):
 					return name
 			return self.logo
 		except:
 			try: # is it a menu? then we handle it according to current selection
 				cur = self.source.current
-				if cur and len(cur) > 2:
-					selection = cur[2]
-					name = self.userpath+selection+".png"
+				# print("[KravenHD] " + str(cur))
+				if cur and len(cur) > 5: #ATV 7.x
+					selection = cur[5] #ATV 7.x
+					name = self.userpath + selection + ".png"
 					if fileExists(name):
 						return name
-					name = self.path+selection+".png"
+					name = self.path + selection + ".png"
 					if fileExists(name):
 						return name
-					name=""
+					name = ""
 					for pair in self.names:
 						if pair[0] == selection.lower():
-							name=self.userpath+pair[1]
+							name = self.userpath + pair[1]
 							if name != "" and fileExists(name):
 								return name
-							name=self.path+pair[1]
+							name = self.path + pair[1]
 							if name != "" and fileExists(name):
 								return name
 			except:
 				pass
-		name=self.userpath+"setup.png"
+		name = self.userpath + "setup.png"
 		if fileExists(name):
 			return name
-		name=self.path+"setup.png"
+		name = self.path + "setup.png"
 		if fileExists(name):
 			return name
 		return self.logo
-	
+
 	text = property(getText)

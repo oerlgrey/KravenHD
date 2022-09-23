@@ -153,13 +153,13 @@ BackgroundList = [
 TextureList = []
 
 for i in range(1, 50):
-	n=str(i)
-	if fileExists("/usr/share/enigma2/Kraven-user-icons/usertexture"+n+".png") or fileExists("/usr/share/enigma2/Kraven-user-icons/usertexture"+n+".jpg"):
-		TextureList.append(("usertexture"+n, _("user texture")+" "+n))
+	n = str(i)
+	if fileExists("/usr/share/enigma2/Kraven-user-icons/usertexture" + n + ".png") or fileExists("/usr/share/enigma2/Kraven-user-icons/usertexture" + n + ".jpg"):
+		TextureList.append(("usertexture" + n, _("user texture") + " " + n))
 for i in range(1, 50):
-	n=str(i)
-	if fileExists("/usr/share/enigma2/KravenHD/textures/texture"+n+".png") or fileExists("/usr/share/enigma2/KravenHD/textures/texture"+n+".jpg"):
-		TextureList.append(("texture"+n, _("texture")+" "+n))
+	n = str(i)
+	if fileExists("/usr/share/enigma2/KravenHD/textures/texture" + n + ".png") or fileExists("/usr/share/enigma2/KravenHD/textures/texture" + n + ".jpg"):
+		TextureList.append(("texture" + n, _("texture") + " " + n))
 
 BorderSelfList = deepcopy(ColorSelfList)
 BorderSelfList.append(("none", _("off")))
@@ -2250,34 +2250,34 @@ class KravenHD(ConfigListScreen, Screen):
 			returnValue = self["config"].getCurrent()[1].value
 			if optionValue == config.plugins.KravenHD.BackgroundListColor and config.plugins.KravenHD.BackgroundListColor.value == "texture":
 				self.makeTexturePreview(config.plugins.KravenHD.BackgroundTexture.value)
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.jpg"
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png"
 			elif optionValue == config.plugins.KravenHD.BackgroundTexture:
 				self.makeTexturePreview(returnValue)
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.jpg"
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png"
 			elif optionValue == config.plugins.KravenHD.InfobarTexture:
 				self.makePreview()
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.jpg"
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png"
 			elif optionValue == config.plugins.KravenHD.BackgroundAlternateListColor:
 				self.makeAlternatePreview(config.plugins.KravenHD.BackgroundTexture.value, config.plugins.KravenHD.BackgroundAlternateColor.value)
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.jpg"
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png"
 			elif optionValue == config.plugins.KravenHD.InfobarAlternateListColor:
 				self.makeAlternatePreview(config.plugins.KravenHD.InfobarTexture.value, config.plugins.KravenHD.InfobarAlternateColor.value)
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.jpg"
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png"
 			elif optionValue == config.plugins.KravenHD.IBStyle:
 				self.makePreview()
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.jpg"
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png"
 			elif optionValue == config.plugins.KravenHD.IBLineList:
 				self.makePreview()
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.jpg"
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png"
 			elif optionValue == config.plugins.KravenHD.InfobarGradientListColor:
 				self.makePreview()
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.jpg"
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png"
 			elif optionValue == config.plugins.KravenHD.InfobarBoxListColor:
 				self.makePreview()
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.jpg"
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png"
 			elif optionValue in (config.plugins.KravenHD.InfobarGradientListColorPrimary, config.plugins.KravenHD.InfobarGradientListColorSecondary):
 				self.makePreview()
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.jpg"
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png"
 			elif returnValue in ("about", "about2"):
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/about.png"
 			elif returnValue == ("meteo-light"):
@@ -3918,7 +3918,7 @@ class KravenHD(ConfigListScreen, Screen):
 		self.appendSkinFile(self.data + "plugins.xml")
 
 		### MSNWeather
-		if fileExists("/usr/lib/enigma2/python/Components/Converter/MSNWeather.pyo"):
+		if fileExists("/usr/lib/enigma2/python/Components/Converter/MSNWeather.pyc"):
 			if config.plugins.KravenHD.IBStyle.value == "grad" or config.plugins.KravenHD.PopupStyle.value in ("popup-grad", "popup-grad-trans"):
 				self.changeColor("msnbg_gr", "msnbg", self.skincolorbackgroundcolor, None)
 			else:
@@ -4329,7 +4329,7 @@ class KravenHD(ConfigListScreen, Screen):
 	def makeTexturePreview(self, style):
 		width = 368
 		height = 207
-		inpath = "/usr/share/enigma2/KravenHD/textures/"
+		inpath = "/usr/share/enigma2/KravenHD/texture_previews/"
 		usrpath = "/usr/share/enigma2/Kraven-user-icons/"
 		outpath = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/"
 
@@ -4339,19 +4339,17 @@ class KravenHD(ConfigListScreen, Screen):
 			bg = Image.open(usrpath + style + ".jpg")
 		elif fileExists(inpath + style + ".png"):
 			bg = Image.open(inpath + style + ".png")
-		elif fileExists(inpath + style + ".jpg"):
-			bg = Image.open(inpath + style + ".jpg")
 		bg_w, bg_h = bg.size
 		image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
 		for i in range(0, width, bg_w):
 			for j in range(0, height, bg_h):
 				image.paste(bg, (i, j))
-		image.save(outpath + "preview.jpg")
+		image.save("/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png")
 		
 	def makeAlternatePreview(self, style, color):
 		width = 368
 		height = 207
-		inpath = "/usr/share/enigma2/KravenHD/textures/"
+		inpath = "/usr/share/enigma2/KravenHD/texture_previews/"
 		usrpath = "/usr/share/enigma2/Kraven-user-icons/"
 		outpath = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/"
 
@@ -4373,7 +4371,7 @@ class KravenHD(ConfigListScreen, Screen):
 		g=int(color[2:4], 16)
 		b=int(color[4:6], 16)
 		image.paste((int(r), int(g), int(b), 255), (0, int(height/2), width, height))
-		image.save(outpath + "preview.jpg")
+		image.save(outpath + "preview.png")
 		
 	def makePreview(self):
 		width = 368
@@ -4381,7 +4379,7 @@ class KravenHD(ConfigListScreen, Screen):
 		lineheight = 3
 		boxbarheight = 40
 		gradbarheight = 80
-		inpath = "/usr/share/enigma2/KravenHD/textures/"
+		inpath = "/usr/share/enigma2/KravenHD/texture_previews/"
 		usrpath = "/usr/share/enigma2/Kraven-user-icons/"
 			
 		# background
@@ -4525,7 +4523,7 @@ class KravenHD(ConfigListScreen, Screen):
 			img.paste((int(r), int(g), int(b), 255), (0, boxbarheight, width, boxbarheight+lineheight))
 			img.paste((int(r), int(g), int(b), 255), (0, height-boxbarheight-lineheight, width, height-boxbarheight))
 				
-		img.save("/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.jpg")
+		img.save("/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png")
 
 	def makeIBGradTexturepng(self):
 		self.makeIbarTextureGradientpng(config.plugins.KravenHD.InfobarTexture.value, config.plugins.KravenHD.InfobarColorTrans.value) # ibars

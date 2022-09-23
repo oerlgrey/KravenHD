@@ -2306,7 +2306,7 @@ class ActivateSkinSettings:
 		self.appendSkinFile(self.data + "plugins.xml")
 
 		### MSNWeather
-		if fileExists("/usr/lib/enigma2/python/Components/Converter/MSNWeather.pyo"):
+		if fileExists("/usr/lib/enigma2/python/Components/Converter/MSNWeather.pyc"):
 			if config.plugins.KravenHD.IBStyle.value == "grad" or config.plugins.KravenHD.PopupStyle.value in ("popup-grad", "popup-grad-trans"):
 				self.changeColor("msnbg_gr", "msnbg", self.skincolorbackgroundcolor, None)
 			else:
