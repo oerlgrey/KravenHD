@@ -146,6 +146,10 @@
 	<parameter name="WeatherPluginSearchresult" value="15,47,1074,41"/>
 	<!-- Time settings -->
 	<parameter name="AllowUserDatesAndTimes" value="1,1"/>
+	<!-- HDFRadio -->
+	<parameter name="HDFRadioDirFont" value="Regular;32" />
+	<parameter name="HDFRadioDirPixmap" value="5,8,30,30" />
+	<parameter name="HDFRadioDirectory" value="50,0,741,45" />
   </parameters>
   <fonts>
 	<alias name="FileList" font="Regular" size="32" height="45" />
