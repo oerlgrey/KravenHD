@@ -1829,10 +1829,7 @@
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;21" secondfont="Regular;19" position="42,80" size="736,540" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
-    <panel name="Colorbuttons"/>
-    <widget font="Regular;20" halign="left" valign="center" name="buttonred" position="47,670" size="220,26" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttongreen" position="297,670" size="220,26" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="buttonyellow" position="547,670" size="220,26" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <panel name="RGYB_Buttons"/>
     <panel name="OKExit"/>
   </screen>
 
@@ -2577,4 +2574,170 @@
 	<panel name="gradient-menu"/>
     <panel name="RGYB_Buttons"/>
 	<panel name="OKExit"/>
+  </screen>
+
+  <screen name="HDFRadio" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*HDFRadio*-->
+	<widget backgroundColor="KravenIBbg2" name="record" font="Regular2;24" foregroundColor="KravenIBGFont2" position="687,15" size="400,30" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg2" source="station" render="Label" font="Regular2;30" foregroundColor="KravenFont2" position="42,75" size="609,38" halign="center" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg2" source="songtitle" render="Label" font="Regular;30" foregroundColor="KravenFont1" position="42,120" size="609,76" halign="center" valign="top" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="cover" position="146,220" size="400,400" zPosition="1" />
+	<widget backgroundColor="Kravenbg2" source="listversion" render="Label" font="Regular2;24" foregroundColor="KravenFont2" position="687,84" size="551,32" valign="top" noWrap="1" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="stations" font="Regular;22" foregroundColor="KravenFont1" position="680,133" size="558,480" selectionPixmap="KravenHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="favorites" font="Regular;22" foregroundColor="KravenFont1" position="680,133" size="558,480" selectionPixmap="KravenHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="quickmenu" font="Regular;22" foregroundColor="KravenFont1" position="680,133" size="558,480" selectionPixmap="KravenHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+    <panel name="Title-big2"/>
+    <panel name="Background"/>
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+	<ePixmap pixmap="KravenHD/infobar-global-icons/key_menu.png" position="1045,675" size="43,22" alphatest="blend" />
+	<ePixmap pixmap="KravenHD/infobar-global-icons/ico_txt_on.png" position="1095,675" size="43,22" alphatest="blend" />
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen name="HDFRadioConfig" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*HDFRadioConfig*-->
+	<widget backgroundColor="KravenIBbg2" source="version" render="Label" font="Regular;24" foregroundColor="KravenIBGFont1" position="822,15" size="300,30" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="config" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,360" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="service_app" font="Regular2;22" foregroundColor="KravenFont2" position="42,452" size="736,81" halign="center" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg2" source="instruction" render="Label" font="Regular2;22" foregroundColor="KravenFont2" position="42,545" size="736,81" halign="center" valign="center" transparent="1" />
+    <panel name="Title-big2"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen name="HDFRadioBrowser" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*HDFRadioBrowser*-->
+	<widget backgroundColor="KravenIBbg2" source="version" render="Label" font="Regular;24" foregroundColor="KravenIBGFont1" position="822,15" size="300,30" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg2" source="info" render="Label" position="50,75" size="728,32" font="Regular2;24" foregroundColor="KravenFont2" noWrap="1" valign="center" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="list" font="Regular;22" foregroundColor="KravenFont1" position="42,120" size="736,420" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" source="instruction" render="Label" font="Regular2;22" foregroundColor="KravenFont2" position="42,545" size="736,81" halign="center" valign="center" transparent="1" />
+    <panel name="Title-big2"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen name="HDFRadioScreenSaver" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="#ff000000">
+	<!--*HDFRadioScreenSaver*-->
+	<widget backgroundColor="#0A000000" source="recording" render="Label" font="Regular;24" foregroundColor="#00ff0000" position="40,24" size="1200,30" halign="center" valign="center" transparent="1" />
+	<widget backgroundColor="#0A000000" source="songtitle" render="Label" font="Regular;30" foregroundColor="#00ffffff" position="40,650" size="1200,50" noWrap="1" halign="center" valign="center" transparent="1" />
+	<widget backgroundColor="#0A000000" name="cover" position="146,80" size="300,300" zPosition="1" />
+	<widget backgroundColor="Kravenbg2" name="background" position="670,80" size="594,560" zPosition="2" transparent="0" />
+	<widget backgroundColor="Kravenbg2" name="favorites" font="Regular;22" foregroundColor="KravenFont1" position="680,90" size="574,540" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="3" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="stations" font="Regular;22" foregroundColor="KravenFont1" position="680,90" size="574,540" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="3" transparent="1"/>
+	<widget backgroundColor="#0A000000" name="saverbg" position="0,0" size="1280,720" zPosition="-1" />
+	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/HDFRadio/graphics/background.jpg" position="0,0" size="1280,720" zPosition="-2" />
+  </screen>
+
+  <screen name="HDFRadioFavorites" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*HDFRadioFavorites*-->
+	<widget backgroundColor="Kravenbg2" name="mainlistname" font="Regular2;27" foregroundColor="KravenFont2" position="42,72" size="581,36" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="stations" font="Regular;22" foregroundColor="KravenFont1" position="42,114" size="581,390" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="favoritesname" font="Regular2;27" foregroundColor="KravenFont2" position="665,72" size="573,36" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="favorites" font="Regular;22" foregroundColor="KravenFont1" position="665,114" size="573,510" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" source="instruction" render="Label" font="Regular2;21" foregroundColor="KravenFont2" position="42,518" size="581,104" halign="center" valign="center" transparent="1" />
+    <panel name="Title-big2"/>
+    <panel name="Background"/>
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen name="HDFRadioLyrics" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*HDFRadioLyrics*-->
+	<widget backgroundColor="KravenIBbg2" name="record" font="Regular2;24" foregroundColor="KravenIBGFont2" position="687,15" size="400,30" transparent="1" />
+	<widget backgroundColor="Kravenbg2" source="songtitle" render="Label" font="Regular2;30" foregroundColor="KravenFont2" position="42,80" size="1196,38" noWrap="1" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg2" source="lyrics" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" font="Regular;24" foregroundColor="KravenFont1" position="42,130" size="960,480" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="lyrics2" render="Label" font="Regular;24" foregroundColor="KravenFont1" position="42,130" size="960,480" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="cover" position="1026,130" size="200,200" zPosition="1" />
+    <panel name="Title-big2"/>
+    <panel name="Background"/>
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+    <panel name="Exit"/>
+  </screen>
+
+  <screen name="HDFRadioLyricsBrowser" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*HDFRadioLyricsBrowser*-->
+	<widget backgroundColor="KravenIBbg2" name="record" font="Regular2;24" foregroundColor="KravenIBGFont2" position="687,15" size="400,30" transparent="1" />
+	<widget backgroundColor="Kravenbg2" source="song" render="Label" font="Regular2;30" foregroundColor="KravenFont2" position="42,80" size="1196,38" noWrap="1" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="list" font="Regular;22" foregroundColor="KravenFont1" position="42,130" size="360,480" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="lyrics" render="Label" font="Regular;24" foregroundColor="KravenFont1" position="438,130" size="800,480" transparent="1" />
+	<widget backgroundColor="Kravenbg2" source="running" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" font="Regular;24" foregroundColor="KravenFont1" position="438,130" size="800,480" transparent="1" />
+    <panel name="Title-big2"/>
+    <panel name="Background"/>
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+    <panel name="Exit"/>
+  </screen>
+
+  <screen name="HDFRadioPlayer" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*HDFRadioPlayer*-->
+	<widget backgroundColor="KravenIBbg2" name="playermode" font="Regular2;24" foregroundColor="KravenIBGFont2" position="700,15" size="430,30" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="statepixmap" pixmaps="KravenHD/graphics/stop.png,KravenHD/graphics/play.png,KravenHD/graphics/pause.png" position="42,75" size="40,30" alphatest="blend" />
+	<widget backgroundColor="Kravenbg2" name="shuffle" pixmaps="KravenHD/graphics/sorted.png,KravenHD/graphics/shuffle.png" position="96,75" size="40,30" alphatest="blend" />
+	<eLabel backgroundColor="#3f3f3f" position="158,80" size="620,20" zPosition="1" />
+	<widget source="session.CurrentService" render="Progress" foregroundColor="KravenProgress" position="158,80" size="620,20" zPosition="2" transparent="1">
+	  <convert type="ServicePosition">Position</convert>
+	</widget>
+	<widget backgroundColor="Kravenbg2" source="session.CurrentService" render="Label" font="Regular;24" foregroundColor="KravenFont1" position="780,75" size="80,30" halign="right" valign="center" transparent="1">
+	  <convert type="ServicePosition">Remaining</convert>
+	</widget>
+	<eLabel backgroundColor="Kravenbg2" text="/" font="Regular;24" foregroundColor="KravenFont1" position="868,75" size="10,30" halign="center" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg2" source="session.CurrentService" render="Label" font="Regular;24" foregroundColor="KravenFont1" position="886,75" size="70,30" valign="center" transparent="1">
+	  <convert type="ServicePosition">Length</convert>
+	</widget>
+	<widget backgroundColor="Kravenbg2" source="artist" render="Label" font="Regular2;33" foregroundColor="KravenFont2" position="42,118" size="880,42" noWrap="1" valign="top" transparent="1" />
+	<widget backgroundColor="Kravenbg2" source="songtitle" render="Label" font="Regular;30" foregroundColor="KravenFont1" position="42,168" size="880,38" noWrap="1" valign="top" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="albumname" font="Regular2;24" foregroundColor="KravenFont2" position="42,224" size="134,30" noWrap="1" valign="top" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="album" font="Regular;24" foregroundColor="KravenFont1" position="182,224" size="740,30" noWrap="1" valign="top" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="genrename" font="Regular2;24" foregroundColor="KravenFont2" position="42,266" size="134,30" noWrap="1" valign="top" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="genre" font="Regular;24" foregroundColor="KravenFont1" position="182,266" size="740,30" noWrap="1" valign="top" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="yearname" font="Regular2;24" foregroundColor="KravenFont2" position="42,308" size="134,30" noWrap="1" valign="top" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="year" font="Regular;24" foregroundColor="KravenFont1" position="182,308" size="740,30" noWrap="1" valign="top" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="playlistname" font="Regular2;24" foregroundColor="KravenFont2" position="42,220" size="622,30" valign="center" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="playlist" font="Regular;22" foregroundColor="KravenFont1" position="42,254" size="622,360" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="quickmenu" font="Regular;22" foregroundColor="KravenFont1" position="42,224" size="622,390" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="cover" position="958,80" size="280,280" />
+	<widget backgroundColor="Kravenbg2" name="directoriesname" font="Regular2;24" foregroundColor="KravenFont2" position="700,370" size="210,30" valign="center" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="recorddirs" font="Regular;22" foregroundColor="KravenFont1" position="700,405" size="538,210" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="localdirs" font="Regular;22" foregroundColor="KravenFont1" position="700,405" size="538,210" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="ownlist" font="Regular;22" foregroundColor="KravenFont1" position="700,405" size="538,210" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+    <panel name="Title-big2"/>
+    <panel name="Background"/>
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+	<ePixmap pixmap="KravenHD/infobar-global-icons/key_menu.png" position="1045,675" size="43,22" alphatest="blend" />
+	<ePixmap pixmap="KravenHD/infobar-global-icons/ico_txt_on.png" position="1095,675" size="43,22" alphatest="blend" />
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen name="HDFRadioEditPlaylist" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*HDFRadioEditPlaylist*-->
+	<widget backgroundColor="Kravenbg2" name="directoriesname" font="Regular2;27" foregroundColor="KravenFont2" position="42,72" size="581,36" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="ownlist" font="Regular;22" foregroundColor="KravenFont1" position="42,114" size="581,390" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="playlistname" font="Regular2;27" foregroundColor="KravenFont2" position="665,72" size="573,36" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="playlist" font="Regular;22" foregroundColor="KravenFont1" position="665,114" size="573,510" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" source="instruction" render="Label" font="Regular2;21" foregroundColor="KravenFont2" position="42,518" size="581,104" halign="center" valign="center" transparent="1" />
+    <panel name="Title-big2"/>
+    <panel name="Background"/>
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen name="HDFRadioSearch" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*HDFRadioSearch*-->
+	<widget backgroundColor="KravenIBbg2" source="version" render="Label" font="Regular;24" foregroundColor="KravenIBGFont1" position="822,15" size="300,30" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="resultlist" foregroundColor="KravenFont1" itemHeight="60" selectionPixmap="KravenHD/graphics/sel_60.png" position="42,80" size="736,480" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+	<widget backgroundColor="Kravenbg2" source="instruction" render="Label" font="Regular2;22" foregroundColor="KravenFont2" position="42,572" size="736,54" halign="center" valign="center" transparent="1" />
+    <panel name="Title-big2"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+    <panel name="OKExit"/>
   </screen>

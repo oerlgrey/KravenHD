@@ -1885,6 +1885,13 @@ class ActivateSkinSettings:
 		if self.actClockstyle == "clock-analog":
 			self.changeColor("analogclock", "analogclock", config.plugins.KravenHD.AnalogColor.value, None)
 
+		### HDF-Radio Icon Color
+		self.changeColor("play", "play", config.plugins.KravenHD.Font1.value, None)
+		self.changeColor("pause", "pause", config.plugins.KravenHD.Font1.value, None)
+		self.changeColor("stop", "stop", config.plugins.KravenHD.Font1.value, None)
+		self.changeColor("sorted", "sorted", config.plugins.KravenHD.Font1.value, None)
+		self.changeColor("shuffle", "shuffle", config.plugins.KravenHD.Font1.value, None)
+
 		### Horizontal Menu Icon
 		self.makeHorMenupng(config.plugins.KravenHD.MainmenuHorIconColor.value, self.skincolorbackgroundcolor)
 

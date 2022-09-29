@@ -2003,6 +2003,17 @@
 	<panel name="Exit"/>
   </screen>
 
+  <screen name="PictureInformation" position="0,0" size="1920,1080" title="Picture Information" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*PictureInformation*-->
+	<widget backgroundColor="Kravenbg3" name="name" position="63,120" size="1104,45" font="Regular2;35" foregroundColor="KravenFont1" halign="center" valign="center" transparent="1" />
+	<widget name="picture" position="63,180" size="1104,750" alphatest="blend" scaleFlags="scaleCenter" transparent="1" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+	<panel name="RGYB_Buttons"/>
+	<panel name="Exit"/>
+  </screen>
+
   <screen name="AboutOE" position="0,0" size="1920,1080" title="About" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*AboutOE*-->
     <eLabel backgroundColor="Kravenbg3" text="OPEN SOURCE" position="63,120" size="1104,54" font="Regular2;39" foregroundColor="KravenFont2" transparent="1" valign="center" />
