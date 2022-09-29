@@ -945,7 +945,7 @@
 	<!--*LocationBox*-->
     <widget backgroundColor="Kravenbg3" font="Regular;24" foregroundColor="KravenFont1" name="text" position="42,80" size="736,30" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular;24" foregroundColor="KravenFont1" name="target" position="42,115" size="736,30" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="filelist" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="42,160" selectionDisabled="1" size="736,150" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="filelist" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,160" selectionDisabled="1" size="736,150" transparent="1" />
     <widget backgroundColor="Kravenbg3" font="Regular;24" foregroundColor="KravenFont1" name="textbook" position="42,380" size="736,30" transparent="1" />
     <widget backgroundColor="Kravenbg3" name="booklist" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,425" size="736,150" transparent="1" />
     <panel name="Title-big"/>
