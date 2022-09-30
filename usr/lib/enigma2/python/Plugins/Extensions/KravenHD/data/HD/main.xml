@@ -2231,6 +2231,16 @@
 	<panel name="Exit"/>
   </screen>
 
+  <screen name="RunSoftwareUpdate" position="0,0" size="1280,720" title="Software Update" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*RunSoftwareUpdate*-->
+	<widget backgroundColor="Kravenbg3" name="update" position="42,80" size="736,520" font="Regular;20" foregroundColor="KravenFont1" halign="center" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="activity" foregroundColor="KravenProgress" position="42,614" size="736,10" transparent="1" />
+    <panel name="Title-big"/>
+  	<!-- Logo -->
+	<panel name="gradient-menu"/>
+	<panel name="Exit"/>
+  </screen>
+
   <screen name="SoftcamSetup" position="0,0" size="1280,720" title="SoftcamSetup" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*SoftcamSetup*-->
     <widget backgroundColor="Kravenbg3" name="config" font="Regular;21" secondfont="Regular;19" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,180" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
