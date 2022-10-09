@@ -27,6 +27,7 @@
     <parameter name="ChoicelistName" value="70,1,1720,42" />
     <parameter name="ChoicelistIcon" value="10,0,60,45" />
     <parameter name="ChoicelistDash" value="0,36,1720,30" />
+    <parameter name="ChoicelistNameSingle" value="9,1,1086,42" />
     <!-- EnhancedMovieCenterList -->
     <parameter name="EnhancedMovieCenterItemHeight" value="48" />
     <parameter name="EnhancedMovieCenterFontSize" value="34" />

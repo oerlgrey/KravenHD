@@ -27,6 +27,7 @@
     <parameter name="ChoicelistName" value="47,1,1147,28" />
     <parameter name="ChoicelistIcon" value="7,0,40,30" />
     <parameter name="ChoicelistDash" value="0,24,1147,20" />
+    <parameter name="ChoicelistNameSingle" value="6,1,724,28" />
     <!-- PiconManagerList -->
     <parameter name="PiconManagerList" value="7,1,1212,27" />
     <parameter name="PiconManagerListFont" value="Regular;22" />
