@@ -18,6 +18,36 @@
       <eLabel position="0,555" size="1280,2" backgroundColor="KravenIBLine" zPosition="-8" />
 	</screen>
 	
+	<screen name="infobar-style-nopicon-poster">
+	  <widget render="KravenHDpstrRndr" source="session.Event_Now" path="poster" position="42,220" size="200,300" backgroundColor="transparent" zPosition="1" transparent="0">
+        <convert type="KravenHDpstrCnvrt">POSTER</convert>
+	  </widget>
+	</screen>
+	
+	<screen name="infobar-style-nopicon-poster-bigname">
+	  <widget render="KravenHDpstrRndr" source="session.Event_Now" path="poster" position="42,150" size="200,300" backgroundColor="transparent" zPosition="1" transparent="0">
+        <convert type="KravenHDpstrCnvrt">POSTER</convert>
+	  </widget>
+	</screen>
+	
+	<screen name="infobar-style-nopicon-poster-smallname">
+	  <widget render="KravenHDpstrRndr" source="session.Event_Now" path="poster" position="42,194" size="200,300" backgroundColor="transparent" zPosition="1" transparent="0">
+        <convert type="KravenHDpstrCnvrt">POSTER</convert>
+	  </widget>
+	</screen>
+	
+	<screen name="infobar-style-nopicon-online">
+      <ePixmap alphatest="blend" pixmap="KravenHD/icons/ico_net_off.png" position="980,562" size="40,20" zPosition="1" transparent="1" />
+      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_net_on.png" position="980,562" zPosition="2" size="40,20" transparent="1" alphatest="blend">
+        <convert type="KravenHDRouteInfo">Lan</convert>
+        <convert type="ConditionalShowHide" />
+      </widget>
+      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_wifi_on.png" position="980,562" zPosition="3" size="40,20" transparent="1" alphatest="blend">
+        <convert type="KravenHDRouteInfo">Wifi</convert>
+        <convert type="ConditionalShowHide" />
+      </widget>
+	</screen>
+	
 	<screen name="infobar-style-nopicon">
 	  <widget backgroundColor="KravenIBbg" source="session.Event_Now" render="KravenHDEmptyEpg" foregroundColor="KravenIBFont1" font="Regular;30" position="199,584" size="708,38" halign="left" transparent="1" zPosition="1">
 		<convert type="KravenHDEventName">Name</convert>

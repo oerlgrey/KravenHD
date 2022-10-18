@@ -1047,6 +1047,16 @@ config.plugins.KravenHD.PopupStyle = ConfigSelection(default="popup-grad-trans",
 				("popup-box", _("box"))
 				])
 
+config.plugins.KravenHD.PosterView = ConfigSelection(default="none", choices = [
+				("on", _("on")),
+				("none", _("off"))
+				])
+
+config.plugins.KravenHD.OnlineInfo = ConfigSelection(default="none", choices = [
+				("on", _("on")),
+				("none", _("off"))
+				])
+
 config.plugins.KravenHD.IBProgressList = ConfigSelection(default="ffffff", choices = ProgressList)
 config.plugins.KravenHD.IBProgressSelf = ConfigText(default="ffffff")
 config.plugins.KravenHD.IBProgress = ConfigText(default="ffffff")
@@ -1373,7 +1383,9 @@ class KravenHD(ConfigListScreen, Screen):
 			else:
 				emptyLines+=1
 		list.append(getConfigListEntry(_("System-Infos"), config.plugins.KravenHD.SystemInfo, _("Choose from different additional windows with system informations or deactivate them completely.")))
-		for i in range(emptyLines+7):
+		list.append(getConfigListEntry(_("Show poster"), config.plugins.KravenHD.PosterView, _("Choose whether the poster should be displayed in the infobar or not.")))
+		list.append(getConfigListEntry(_("Show online indicator"), config.plugins.KravenHD.OnlineInfo, _("Choose whether the online indicator should be displayed in the infobar or not.")))
+		for i in range(emptyLines+5):
 			list.append(getConfigListEntry(_(" "), ))
 
 		# page 5
@@ -3783,6 +3795,50 @@ class KravenHD(ConfigListScreen, Screen):
 			else:
 				self.actInfobox = config.plugins.KravenHD.Infobox.value
 			self.skinSearchAndReplace.append(['<!-- Infobar infobox -->', '<panel name="infobar-style-zz1-zzz1-infobox-' + self.actInfobox + '"/>'])
+
+		# show poster
+		if config.plugins.KravenHD.PosterView.value == "on":
+			if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-nopicon":
+				if config.plugins.KravenHD.InfobarChannelName.value == "none":
+					self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-nopicon-poster"/>'])
+				elif config.plugins.KravenHD.InfobarChannelName.value in ("infobar-channelname-small", "infobar-channelname-number-small"):
+					self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-nopicon-poster-smallname"/>'])
+				else:
+					self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-nopicon-poster-bigname"/>'])
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-x1":
+				if config.plugins.KravenHD.InfobarChannelName.value == "none":
+					self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-x1-poster"/>'])
+				elif config.plugins.KravenHD.InfobarChannelName.value in ("infobar-channelname-small", "infobar-channelname-number-small"):
+					self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-x1-poster-smallname"/>'])
+				else:
+					self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-x1-poster-bigname"/>'])
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2"):
+				if config.plugins.KravenHD.InfobarChannelName.value == "none":
+					self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-x2-x3-z1-z2-poster"/>'])
+				elif config.plugins.KravenHD.InfobarChannelName.value in ("infobar-channelname-small", "infobar-channelname-number-small"):
+					self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-x2-x3-z1-z2-poster-smallname"/>'])
+				else:
+					self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-x2-x3-z1-z2-poster-bigname"/>'])
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zz1":
+				if config.plugins.KravenHD.InfobarChannelName.value == "none":
+					self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-zz1-poster"/>'])
+				elif config.plugins.KravenHD.InfobarChannelName.value in ("infobar-channelname-small", "infobar-channelname-number-small"):
+					self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-zz1-poster-smallname"/>'])
+				else:
+					self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-zz1-poster-bigname"/>'])
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
+				self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-zz2-zz3-poster"/>'])
+			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
+				self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-zzz1-poster"/>'])
+
+		# show online info
+		if config.plugins.KravenHD.OnlineInfo.value == "on":
+			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2"):
+				self.skinSearchAndReplace.append(['<!-- Online info -->', '<panel name="infobar-style-x2-x3-z1-z2-online"/>'])
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
+				self.skinSearchAndReplace.append(['<!-- Online info -->', '<panel name="infobar-style-zz2-zz3-online"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- Online info -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-online"/>'])
 
 		### SecondInfobar
 		self.skinSearchAndReplace.append(['<!-- SIB style -->', '<panel name="' + config.plugins.KravenHD.SIB.value + '"/>'])

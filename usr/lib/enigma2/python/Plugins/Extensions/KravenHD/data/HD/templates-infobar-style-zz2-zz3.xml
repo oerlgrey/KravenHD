@@ -18,6 +18,24 @@
 	  <eLabel position="0,535" size="1280,2" backgroundColor="KravenIBLine" zPosition="-8" />
 	</screen>
 	
+	<screen name="infobar-style-zz2-zz3-poster">
+	  <widget render="KravenHDpstrRndr" source="session.Event_Now" path="poster" position="30,200" size="200,300" backgroundColor="transparent" zPosition="1" transparent="0">
+        <convert type="KravenHDpstrCnvrt">POSTER</convert>
+	  </widget>
+	</screen>
+	
+	<screen name="infobar-style-zz2-zz3-online">
+      <ePixmap alphatest="blend" pixmap="KravenHD/icons/ico_net_off.png" position="980,544" size="40,20" zPosition="1" transparent="1" />
+      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_net_on.png" position="980,544"  zPosition="2" size="40,20" transparent="1" alphatest="blend">
+        <convert type="KravenHDRouteInfo">Lan</convert>
+        <convert type="ConditionalShowHide" />
+      </widget>
+      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_wifi_on.png" position="980,544" zPosition="3" size="40,20" transparent="1" alphatest="blend">
+        <convert type="KravenHDRouteInfo">Wifi</convert>
+        <convert type="ConditionalShowHide" />
+      </widget>
+	</screen>
+	
 	<screen name="infobar-style-zz2">
 	  <widget alphatest="blend" position="20,542" render="Picon" size="400,170" source="session.CurrentService" transparent="1" zPosition="4">
 		<convert type="ServiceName">Reference</convert>
@@ -233,13 +251,13 @@
 	</screen>
 	
 	<screen name="infobar-style-zz2-zz3-infobar-channelname-small">
-	  <widget font="Regular;40" halign="left" noWrap="1" backgroundColor="KravenNamebg" foregroundColor="KravenName" position="435,534" size="565,50" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+	  <widget font="Regular;40" halign="left" noWrap="1" backgroundColor="KravenNamebg" foregroundColor="KravenName" position="435,534" size="540,50" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
 		<convert type="ServiceName">Name</convert>
 	  </widget>
 	</screen>
 	
 	<screen name="infobar-style-zz2-zz3-infobar-channelname-number-small">
-	  <widget font="Regular;40" halign="left" noWrap="1" backgroundColor="KravenNamebg" foregroundColor="KravenName" position="435,534" size="565,50" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+	  <widget font="Regular;40" halign="left" noWrap="1" backgroundColor="KravenNamebg" foregroundColor="KravenName" position="435,534" size="540,50" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
 		<convert type="KravenHDServiceName2">%n - %N</convert>
 	  </widget>
 	</screen>

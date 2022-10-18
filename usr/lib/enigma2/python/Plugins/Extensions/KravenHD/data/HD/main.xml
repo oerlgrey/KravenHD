@@ -18,6 +18,8 @@
 	<!-- Infobar weatherbackground -->
 	<!-- Infobar systeminfo -->
 	<!-- Infobar systeminfobackground -->
+	<!-- Poster view -->
+	<!-- Online info -->
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1280,720" title="SecondInfoBar">

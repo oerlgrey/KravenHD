@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2020-10-14 17:40+0200\n"
+"PO-Revision-Date: 2022-10-16 09:50+0200\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: KravenHDECMLine.py
@@ -2289,3 +2289,19 @@ msgid ""
 msgstr ""
 "Wählen Sie aus verschiedenen Optionen um Ihre Einstellungen vorzunehmen.\n"
 "Drücken Sie die rote Taste um nach dem Wetter-Code zu suchen."
+
+#: KravenHD.py
+msgid "Show poster"
+msgstr "Zeige Poster"
+
+#: KravenHD.py
+msgid "Show online indicator"
+msgstr "Zeige Online-Indikator"
+
+#: KravenHD.py
+msgid "Choose whether the poster should be displayed in the infobar or not."
+msgstr "Wählen Sie, ob das Poster in der Infoleiste angezeigt werden soll oder nicht."
+
+#: KravenHD.py
+msgid "Choose whether the online indicator should be displayed in the infobar or not."
+msgstr "Wählen Sie, ob der Online-Indikator in der Infoleiste angezeigt werden soll oder nicht."
