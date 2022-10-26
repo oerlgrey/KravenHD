@@ -2579,7 +2579,7 @@
   <screen name="HDFRadio" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*HDFRadio*-->
 	<widget backgroundColor="KravenIBbg2" name="record" font="Regular2;32" foregroundColor="KravenIBGFont2" position="1030,25" size="300,41" valign="center" transparent="1" />
-	<widget backgroundColor="KravenIBbg2" name="recduration" font="Regular2;32" foregroundColor="KravenIBGFont2" position="1347,25" size="99,41" valign="center" transparent="1" />
+	<widget backgroundColor="KravenIBbg2" name="recduration" font="Regular2;32" foregroundColor="KravenIBGFont2" position="1339,25" size="113,41" valign="center" transparent="1" />
 	<widget backgroundColor="KravenIBbg2" name="recsize" font="Regular2;32" foregroundColor="KravenIBGFont2" position="1461,25" size="150,41" valign="center" transparent="1" />
 	<widget backgroundColor="Kravenbg2" source="station" render="Label" font="Regular2;44" foregroundColor="KravenFont2" position="63,112" size="914,57" halign="center" valign="center" transparent="1" />
 	<widget backgroundColor="Kravenbg2" source="songtitle" render="Label" font="Regular;44" foregroundColor="KravenFont1" position="63,180" size="914,114" halign="center" valign="top" transparent="1" />
