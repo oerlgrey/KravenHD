@@ -30,21 +30,16 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
-#
-# <widget source="session.CurrentService" render="Label" position="189,397" zPosition="4" size="50,20" valign="center" halign="center" font="Regular;14" foregroundColor="foreground" transparent="1"  backgroundColor="background">
-#	<convert type="RouteInfo">Info</convert>
-# </widget>
-#<widget source="session.CurrentService" render="Pixmap" pixmap="750HD/icons/ico_lan_on.png" position="1103,35" zPosition="1" size="28,15" transparent="1" alphatest="blend">
-#    <convert type="RouteInfo">Lan  | Wifi | Modem</convert>
-#    <convert type="ConditionalShowHide" />
-#  </widget>
 
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.config import config
+from Tools.Directories import fileExists
 from Screens.InfoBar import InfoBar
 from Components.Converter.Poll import Poll
 from Plugins.Extensions.KravenHD import ping
+
+infotext = ""
 
 class KravenHDRouteInfo(Poll, Converter, object):
 	def __init__(self, type):
@@ -55,6 +50,7 @@ class KravenHDRouteInfo(Poll, Converter, object):
 		self.type = type
 		self.info = False
 		InfoBar.instance.onShow.append(self.checkState)
+		InfoBar.instance.onHide.append(self.writeFile)
 
 	@cached
 	def getBoolean(self):
@@ -63,6 +59,7 @@ class KravenHDRouteInfo(Poll, Converter, object):
 	boolean = property(getBoolean)
 
 	def checkState(self):
+		global infotext
 		self.info = False
 
 		if config.plugins.KravenHD.OnlineInfo.value == "on":
@@ -71,8 +68,17 @@ class KravenHDRouteInfo(Poll, Converter, object):
 				if r != None and r <= 1.5:
 					for line in open("/proc/net/route"):
 						if self.type == "Lan" and line.split()[0] == "eth0" and line.split()[3] == "0003":
+							infotext = "Lan"
 							self.info = True
 						elif self.type == "Wifi" and (line.split()[0] == "wlan0" or line.split()[0] == "ra0") and line.split()[3] == "0003":
+							infotext = "Wifi"
 							self.info = True
 			except:
 				pass
+
+	def writeFile(self):
+		global infotext
+
+		open("/tmp/kraven_routeinfo", 'a').close()
+		with open("/tmp/kraven_routeinfo", 'w') as wf:
+			wf.write(infotext)

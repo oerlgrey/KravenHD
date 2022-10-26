@@ -2226,6 +2226,15 @@ class ActivateSkinSettings:
 			else:
 				self.skinSearchAndReplace.append(['<!-- Online info -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-online"/>'])
 
+		# show online info in SecondInfoBar
+		if config.plugins.KravenHD.OnlineInfo.value == "on":
+			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2"):
+				self.skinSearchAndReplace.append(['<!-- SIB Online info -->', '<panel name="infobar-style-x2-x3-z1-z2-sib-online"/>'])
+			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
+				self.skinSearchAndReplace.append(['<!-- SIB Online info -->', '<panel name="infobar-style-zz2-zz3-sib-online"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- SIB Online info -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-sib-online"/>'])
+
 		### SecondInfobar
 		self.skinSearchAndReplace.append(['<!-- SIB style -->', '<panel name="' + config.plugins.KravenHD.SIB.value + '"/>'])
 

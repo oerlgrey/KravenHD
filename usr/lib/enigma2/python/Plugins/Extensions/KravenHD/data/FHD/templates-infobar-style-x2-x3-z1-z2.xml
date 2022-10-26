@@ -105,6 +105,18 @@
       </widget>
 	</screen>
 	
+	<screen name="infobar-style-x2-x3-z1-z2-sib-online">
+      <ePixmap alphatest="blend" pixmap="KravenHD/icons/ico_net_off.png" position="1473,882" size="60,30" zPosition="1" transparent="1" />
+      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_net_on.png" position="1473,882" zPosition="2" size="60,30" transparent="1" alphatest="blend">
+        <convert type="KravenHDRouteInfoSIB">Lan</convert>
+        <convert type="ConditionalShowHide" />
+      </widget>
+      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_wifi_on.png" position="1473,882" zPosition="3" size="60,30" transparent="1" alphatest="blend">
+        <convert type="KravenHDRouteInfoSIB">Wifi</convert>
+        <convert type="ConditionalShowHide" />
+      </widget>
+	</screen>
+	
 	<screen name="infobar-style-x2-x3-z1-z2">
 	  <widget backgroundColor="KravenIBbg" source="session.Event_Now" render="KravenHDEmptyEpg" foregroundColor="KravenIBFont1" font="Regular;45" position="644,921" size="722,55" halign="left" transparent="1" zPosition="1">
 		<convert type="KravenHDEventName">Name</convert>

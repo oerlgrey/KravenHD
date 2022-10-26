@@ -88,6 +88,7 @@
 	<!-- Infobar clockstyle -->
 	<!-- SIB ecminfo -->
 	<!-- SIB style -->
+	<!-- SIB Online info -->
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Menu" position="0,0" size="1920,1080" title="Main menu">
@@ -945,11 +946,16 @@
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="LocationBox" position="0,0" size="1920,1080" title="Location Box">
 	<!--*LocationBox*-->
-    <widget backgroundColor="Kravenbg3" font="Regular;36" foregroundColor="KravenFont1" name="text" position="63,120" size="1104,45" transparent="1" />
-    <widget backgroundColor="Kravenbg3" font="Regular;36" foregroundColor="KravenFont1" name="target" position="63,172" size="1104,45" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="filelist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,240" size="1104,225" selectionDisabled="1" transparent="1" />
-    <widget backgroundColor="Kravenbg3" font="Regular;36" foregroundColor="KravenFont1" name="textbook" position="63,570" size="1104,45" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="booklist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,637" size="1104,225" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular2;35" foregroundColor="KravenFont2" name="text" position="63,120" size="1104,45" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular;32" foregroundColor="KravenFont1" name="targetfreespace" position="63,122" size="1104,41" halign="right" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular;35" foregroundColor="KravenFont1" name="target" position="63,172" size="1104,45" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="fileheading" font="Regular2;32" foregroundColor="KravenFont2" position="63,240" size="1104,45" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="filelist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,285" size="1104,225" selectionDisabled="1" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="quickselect" font="Regular;150" foregroundColor="KravenFont1" position="63,285" size="1104,225" transparent="1" />
+    <widget backgroundColor="Kravenbg3" font="Regular;35" foregroundColor="KravenFont1" name="textbook" position="63,615" size="1104,45" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="bookmarkheading" font="Regular2;32" foregroundColor="KravenFont2" position="63,615" size="1104,45" valign="center" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="booklist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,660" size="1104,225" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="bookmarklist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,660" size="1104,225" transparent="1" />
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -2222,10 +2228,10 @@
     <widget name="traffic_red" pixmap="icons/ared.png" position="729,780" size="54,146" alphatest="on" />
     <widget name="traffic_yellow" pixmap="icons/ayellow.png" position="729,780" size="54,146" alphatest="on" />
     <widget name="traffic_green" pixmap="icons/agreen.png" position="729,780" size="54,146" alphatest="on" />
-	<widget backgroundColor="Kravenbg3" name="feedstatus_red" font="Regular;32" foregroundColor="KravenFont1" position="780,804" size="363,41" transparent="1" />
-	<widget backgroundColor="Kravenbg3" name="feedstatus_off" font="Regular;32" foregroundColor="KravenFont1" position="780,832" size="363,41" transparent="1" />
-	<widget backgroundColor="Kravenbg3" name="feedstatus_yellow" font="Regular;32" foregroundColor="KravenFont1" position="780,832" size="363,41" transparent="1" />
-	<widget backgroundColor="Kravenbg3" name="feedstatus_green" font="Regular;32" foregroundColor="KravenFont1" position="780,882" size="363,41" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="feedstatus_red" font="Regular;32" foregroundColor="KravenFont1" position="800,804" size="346,41" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="feedstatus_off" font="Regular;32" foregroundColor="KravenFont1" position="800,832" size="346,41" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="feedstatus_yellow" font="Regular;32" foregroundColor="KravenFont1" position="800,832" size="346,41" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="feedstatus_green" font="Regular;32" foregroundColor="KravenFont1" position="800,882" size="346,41" transparent="1" />
     <panel name="Title-big"/>
   	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -3593,7 +3599,7 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerSelection" position="0,0" size="1920,1080" title="Timer selection">
 	<!--*TimerSelection*-->
     <eLabel text="Timer Editor" position="63,10" size="1500,69" backgroundColor="KravenIBbg3" font="Regular2;50" foregroundColor="KravenIBGFont2" transparent="1" halign="left" valign="center" />
-    <widget backgroundColor="Kravenbg3" name="timerlist" itemHeight="80" rowSplit="41" iconMargin="8" satPosLeft="240" setFont="Regular;30" setEventNameFont="Regular;32" setServiceNameFont="Regular;32" foregroundColor="KravenFont1" position="63,120" size="1104,800" selectionPixmap="KravenHD/graphics/sel_53.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="timerlist" itemHeight="80" rowSplit="41" iconMargin="8" satPosLeft="240" timerNameFont="Regular;30" statusFont="Regular;30" detailFont="Regular;27" topHeight="38" bottomHeight="38" foregroundColor="KravenFont1" position="63,120" size="1104,800" selectionPixmap="KravenHD/graphics/sel_53.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <panel name="RGYB_Buttons"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -3602,7 +3608,7 @@
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEditList" position="0,0" size="1920,1080" title="Timer Editor">
 	<!--*TimerEditList*-->
-    <widget backgroundColor="Kravenbg3" name="timerlist" itemHeight="80" rowSplit="41" iconMargin="8" satPosLeft="240" setFont="Regular;30" setEventNameFont="Regular;32" setServiceNameFont="Regular;32" foregroundColor="KravenFont1" position="63,120" size="1104,800" selectionPixmap="KravenHD/graphics/sel_53.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="timerlist" itemHeight="80" rowSplit="41" iconMargin="8" satPosLeft="240" timerNameFont="Regular;30" statusFont="Regular;30" detailFont="Regular;27" topHeight="38" bottomHeight="38" foregroundColor="KravenFont1" position="63,120" size="1104,800" selectionPixmap="KravenHD/graphics/sel_53.png" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -3637,8 +3643,8 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerSanityConflict" position="0,0" size="1920,1080" title="Timer sanity error">
 	<!--*TimerSanityConflict*-->
     <widget backgroundColor="Kravenbg3" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,120" size="1104,135" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="timer1" itemHeight="80" rowSplit="41" iconMargin="8" satPosLeft="240" setFont="Regular;30" setEventNameFont="Regular;32" setServiceNameFont="Regular;32" foregroundColor="KravenFont1" position="63,285" enableWrapAround="1" scrollbarMode="showNever" size="1104,160" selectionPixmap="KravenHD/graphics/sel_53.png" transparent="1" />
-    <widget backgroundColor="Kravenbg3" name="timer2" itemHeight="80" rowSplit="41" iconMargin="8" satPosLeft="240" setFont="Regular;30" setEventNameFont="Regular;32" setServiceNameFont="Regular;32" foregroundColor="KravenFont1" position="63,570" enableWrapAround="1" scrollbarMode="showNever" size="1104,160" selectionPixmap="KravenHD/graphics/sel_53.png" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="timer1" itemHeight="80" rowSplit="41" iconMargin="8" satPosLeft="240" timerNameFont="Regular;30" statusFont="Regular;30" detailFont="Regular;27" topHeight="38" bottomHeight="38" foregroundColor="KravenFont1" position="63,285" enableWrapAround="1" scrollbarMode="showNever" size="1104,160" selectionPixmap="KravenHD/graphics/sel_53.png" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="timer2" itemHeight="80" rowSplit="41" iconMargin="8" satPosLeft="240" timerNameFont="Regular;30" statusFont="Regular;30" detailFont="Regular;27" topHeight="38" bottomHeight="38" foregroundColor="KravenFont1" position="63,570" enableWrapAround="1" scrollbarMode="showNever" size="1104,160" selectionPixmap="KravenHD/graphics/sel_53.png" transparent="1" />
     <ePixmap pixmap="KravenHD/buttons/key_red1.png" position="63,520" size="300,7" alphatest="blend" />
     <ePixmap pixmap="KravenHD/buttons/key_green1.png" position="555,520" size="300,7" alphatest="blend" />
     <ePixmap pixmap="KravenHD/buttons/key_yellow1.png" position="63,805" size="300,7" alphatest="blend" />
