@@ -2579,8 +2579,7 @@
   <screen name="HDFRadio" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*HDFRadio*-->
 	<widget backgroundColor="KravenIBbg2" name="record" font="Regular2;22" foregroundColor="KravenIBGFont2" position="687,17" size="200,27" valign="center" transparent="1" />
-	<widget backgroundColor="KravenIBbg2" name="recduration" font="Regular2;22" foregroundColor="KravenIBGFont2" position="893,17" size="75,27" valign="center" transparent="1" />
-	<widget backgroundColor="KravenIBbg2" name="recsize" font="Regular2;22" foregroundColor="KravenIBGFont2" position="974,17" size="100,27" valign="center" transparent="1" />
+	<widget backgroundColor="KravenIBbg2" name="recinfos" font="Regular2;22" foregroundColor="KravenIBGFont2" position="893,17" size="181,27" valign="center" transparent="1" />
 	<widget backgroundColor="Kravenbg2" source="station" render="Label" font="Regular2;30" foregroundColor="KravenFont2" position="42,75" size="609,38" halign="center" valign="center" transparent="1" />
 	<widget backgroundColor="Kravenbg2" source="songtitle" render="Label" font="Regular;30" foregroundColor="KravenFont1" position="42,120" size="609,76" halign="center" valign="top" transparent="1" />
 	<widget backgroundColor="Kravenbg2" name="cover" position="146,220" size="400,400" zPosition="1" />
@@ -2641,6 +2640,7 @@
 	<widget backgroundColor="Kravenbg2" name="stations" font="Regular;22" foregroundColor="KravenFont1" position="42,114" size="581,390" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	<widget backgroundColor="Kravenbg2" name="favoritesname" font="Regular2;27" foregroundColor="KravenFont2" position="665,72" size="573,36" transparent="1"/>
 	<widget backgroundColor="Kravenbg2" name="favorites" font="Regular;22" foregroundColor="KravenFont1" position="665,114" size="573,510" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="sort" font="Regular;22" foregroundColor="KravenFont1" foregroundColorSelected="KravenMarked" position="665,114" size="573,510" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	<widget backgroundColor="Kravenbg2" source="instruction" render="Label" font="Regular2;21" foregroundColor="KravenFont2" position="42,518" size="581,104" halign="center" valign="center" transparent="1" />
     <panel name="Title-big2"/>
     <panel name="Background"/>
@@ -2724,6 +2724,7 @@
 	<widget backgroundColor="Kravenbg2" name="ownlist" font="Regular;22" foregroundColor="KravenFont1" position="42,114" size="581,390" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	<widget backgroundColor="Kravenbg2" name="playlistname" font="Regular2;27" foregroundColor="KravenFont2" position="665,72" size="573,36" transparent="1"/>
 	<widget backgroundColor="Kravenbg2" name="playlist" font="Regular;22" foregroundColor="KravenFont1" position="665,114" size="573,510" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="sort" font="Regular;22" foregroundColor="KravenFont1" foregroundColorSelected="KravenMarked" position="665,114" size="573,510" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	<widget backgroundColor="Kravenbg2" source="instruction" render="Label" font="Regular2;21" foregroundColor="KravenFont2" position="42,518" size="581,104" halign="center" valign="center" transparent="1" />
     <panel name="Title-big2"/>
     <panel name="Background"/>

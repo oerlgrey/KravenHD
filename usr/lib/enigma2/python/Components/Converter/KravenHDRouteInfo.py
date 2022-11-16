@@ -73,12 +73,20 @@ class KravenHDRouteInfo(Poll, Converter, object):
 						elif self.type == "Wifi" and (line.split()[0] == "wlan0" or line.split()[0] == "ra0") and line.split()[3] == "0003":
 							infotext = "Wifi"
 							self.info = True
+				else:
+					infotext = "offline"
+					self.info = False
 			except:
-				pass
+				infotext = "exception"
+				self.info = False
+		else:
+			infotext = "option-off"
+			self.info = False
 
 	def writeFile(self):
 		global infotext
 
-		open("/tmp/kraven_routeinfo", 'a').close()
+		if not fileExists("/tmp/kraven_routeinfo"):
+			open("/tmp/kraven_routeinfo", 'a').close()
 		with open("/tmp/kraven_routeinfo", 'w') as wf:
 			wf.write(infotext)

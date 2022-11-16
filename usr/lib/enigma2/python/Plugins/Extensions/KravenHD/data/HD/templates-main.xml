@@ -2740,85 +2740,79 @@
 	</screen>
 	
 	<screen name="messagebox-template">
-	  <widget backgroundColor="Kravenbg6" name="text" font="Regular;22" foregroundColor="KravenFont1" position="83,14" size="841,54" transparent="1" />
+	  <widget backgroundColor="Kravenbg6" name="text" font="Regular;22" foregroundColor="KravenFont1" position="83,10" size="741,54" transparent="1" />
 	  <widget backgroundColor="Kravenbg6" name="list" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="10,78" size="814,60" transparent="1" />
 		<applet type="onLayoutFinish">
 from enigma import eSize, ePoint, getDesktop
 deskwidth = getDesktop(0).size().width()
 deskheight = getDesktop(0).size().height()
-textsize_org = self["text"].getSize()
 
-textwidth_add = 20
-textsize = (textsize_org[0] + textwidth_add, textsize_org[1])
-
-offset_listposx = 10
-offset_listposy = 27
-offset_listwidth = 12
-offset_listheight = 30
-offset_textwidth = 73
-offset_textheight = 12
-min_width = 400
-min_height = 60
+textsize = self["text"].getSize()
 textwidth = textsize[0]
-textheight = textsize[1] + offset_textheight
+textheight = textsize[1]
+
+pixmap = 53
+offset_x = 10
+offset_y = 27
+
+text_minwidth = 400
+if text_minwidth &gt; textwidth:
+	textwidth = text_minwidth
+
+text_maxwidth = 1137
+if textwidth &gt; text_maxwidth:
+	textwidth = text_maxwidth
+
+text_minheight = 54
+if text_minheight &gt; textheight:
+	textheight = text_minheight
 
 listwidth = 0
 listheight = 0
-
+offset = 4
 if self.list:
 	try:
 		for i in self.list:
 			if len(i[0]) > listwidth:
 				listwidth = len(i[0])
-		listwidth = listwidth * offset_listwidth
-		listheight = len(self.list) * offset_listheight
+		listwidth = listwidth * 12
+		listheight = len(self.list) * 30
+		offset = 14
 	except:
 		pass
 
-if (min_height &gt; textheight):
-	textheight = min_height
-if (min_width &gt; textwidth):
-	textwidth = min_width
+list_maxwidth = 1200
+if listwidth &gt; list_maxwidth:
+	listwidth = list_maxwidth
 
-if (listheight &gt; 0):
-	offset = 14
+if (pixmap + offset_x + textwidth) &gt; listwidth:
+	wsizex = offset_x + pixmap + offset_x + textwidth + offset_x
 else:
-	offset = 4
-
-if (textwidth &gt; listwidth):
-	wsizex = offset_textwidth + textwidth + offset_listposx * 2
-else:
-	textwidth = listwidth - offset_textwidth
-	wsizex = listwidth + offset_listposx
+	wsizex = offset_x + listwidth + offset_x
 
 wsizey = textheight + listheight + offset
-
-if ((wsizey + offset_listposy - offset_listposx) &gt;deskheight):
-	textheight = deskheight - listheight - offset - offset_listposy + offset_listposx
+if (wsizey + offset_y - offset_x) &gt; deskheight:
+	textheight = deskheight - listheight - offset - offset_y + offset_x
 	wsizey = textheight + listheight + offset
 
-if (wsizex &gt; deskwidth):
-	textwidth = deskwidth - offset_textwidth - offset_listposx * 2
-	listwidth = wsizex = deskwidth
-
-wsize = (wsizex,wsizey + offset_listposy - offset_listposx)
+wsize = (wsizex, wsizey + offset_y - offset_x)
 
 # resize
 self.instance.resize(eSize(*wsize))
 
 # resize label
-textsize = (textwidth,textheight)
+textsize = (textwidth, textheight)
 self["text"].instance.resize(eSize(*textsize))
 
 # move list
-listsize = (wsizex - offset_listposx * 2,listheight)
-self["list"].instance.move(ePoint(offset_listposx,textheight + offset_listposy))
+listsize = (wsizex - offset_x * 2, listheight)
+self["list"].instance.move(ePoint(offset_x, textheight + offset_y))
 self["list"].instance.resize(eSize(*listsize))
 
 # center window
 newwidth = wsize[0]
 newheight = wsize[1]
-self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight)/2 + 19))
+self.instance.move(ePoint(int(deskwidth - newwidth)//2, int(deskheight - newheight)//2 + 19))
 		</applet>
 	</screen>
 	
