@@ -1547,6 +1547,21 @@
 	  </widget>
 	</screen>
 	
+	<screen name="player-weather_OAWeather">
+	  <widget alphatest="blend" render="OAWeatherPixmap" position="1635,922" size="150,150" source="session.OAWeather" transparent="1" zPosition="1">
+		<convert type="KravenHDOAWeather">weathericon,current,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget source="session.OAWeather" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont2" position="1785,932" size="135,40" font="Regular2;36" noWrap="1" halign="center" valign="center" zPosition="2" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_current</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1785,982" size="135,45" font="Regular;39" halign="center" valign="center" zPosition="2" transparent="1">
+		<convert type="KravenHDClockToText">Default</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1785,1032" size="135,32" font="Regular;26" halign="center" valign="center" zPosition="2" transparent="1">
+		<convert type="KravenHDClockToText">Format:%d.%m.%Y</convert>
+	  </widget>
+	</screen>
+	
 	<screen name="player-android">
 	  <widget backgroundColor="#00999999" font="Regular;39" halign="center" render="Label" position="1635,966" size="79,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
 		<convert type="KravenHDClockToText">Format:%H</convert>
@@ -1559,6 +1574,21 @@
 	  </widget>
 	  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;30" foregroundColor="KravenAndroid2" render="Label" position="1725,1012" size="150,37" source="session.CurrentService" zPosition="2" halign="right" valign="center" transparent="1">
 		<convert type="KravenHDWeather">temp_cur</convert>
+	  </widget>
+	</screen>
+	
+	<screen name="player-android_OAWeather">
+	  <widget backgroundColor="#00999999" font="Regular;39" halign="center" render="Label" position="1635,966" size="79,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
+		<convert type="KravenHDClockToText">Format:%H</convert>
+	  </widget>
+	  <widget backgroundColor="#00999999" font="Regular;37" halign="center" render="Label" position="1705,963" size="79,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
+		<convert type="KravenHDClockToText">Format:%M</convert>
+	  </widget>
+	  <widget alphatest="blend" render="OAWeatherPixmap" position="1611,882" size="300,183" source="session.OAWeather" transparent="1" zPosition="1">
+		<convert type="KravenHDOAWeather">weathericon,current,/usr/share/enigma2/KravenHD/clock/,png</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;30" foregroundColor="KravenAndroid2" render="Label" position="1725,1012" size="150,37" source="session.OAWeather" zPosition="2" halign="right" valign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_current</convert>
 	  </widget>
 	</screen>
 	
@@ -1632,6 +1662,21 @@
 	  </widget>
 	</screen>
 	
+	<screen name="weather-small_OAWeather">
+	  <widget backgroundColor="KravenIBbg" source="session.OAWeather" transparent="1" zPosition="8" position="1440,82" size="105,105" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,current,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular2;54" foregroundColor="KravenIBFont2" render="Label" position="1545,82" size="172,105" source="session.OAWeather" zPosition="3" halign="right" valign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_current</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;36" foregroundColor="KravenIBFont1" render="Label" position="1717,82" size="112,52" source="session.OAWeather" zPosition="8" halign="right" valign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high,day1</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;36" foregroundColor="KravenIBFont1" render="Label" position="1717,135" size="112,52" source="session.OAWeather" zPosition="8" halign="right" valign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_low,day1</convert>
+	  </widget>
+	</screen>
+	
 	<screen name="weather-small2">
 	  <widget backgroundColor="KravenIBbg" source="session.CurrentService" transparent="1" zPosition="8" position="1500,37" size="105,105" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons">
 		<convert  type="KravenHDWeather">icon_cur</convert>
@@ -1644,6 +1689,21 @@
 	  </widget>
 	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;36" foregroundColor="KravenIBFont1" render="Label" position="1777,90" size="112,52" source="session.CurrentService" zPosition="8" halign="right" valign="center" transparent="1">
 		<convert type="KravenHDWeather">low0</convert>
+	  </widget>
+	</screen>
+	
+	<screen name="weather-small2_OAWeather">
+	  <widget backgroundColor="KravenIBbg" source="session.OAWeather" transparent="1" zPosition="8" position="1500,37" size="105,105" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,current,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular2;54" foregroundColor="KravenIBFont2" render="Label" position="1605,37" size="172,105" source="session.OAWeather" zPosition="3" halign="right" valign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_current</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;36" foregroundColor="KravenIBFont1" render="Label" position="1777,37" size="112,52" source="session.OAWeather" zPosition="8" halign="right" valign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high,day1</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;36" foregroundColor="KravenIBFont1" render="Label" position="1777,90" size="112,52" source="session.OAWeather" zPosition="8" halign="right" valign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_low,day1</convert>
 	  </widget>
 	</screen>
 	
@@ -1708,6 +1768,48 @@
 	  </widget>
 	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;22" foregroundColor="KravenIBFont1" render="Label" position="741,51" size="105,37" source="session.CurrentService" zPosition="3" halign="left" transparent="1">
 		<convert type="KravenHDWeather">minmax3</convert>
+	  </widget>
+	</screen>
+	
+	<screen name="weather-left_OAWeather">
+	  <widget backgroundColor="KravenIBbg" source="session.OAWeather" position="18,13" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,current,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;30" foregroundColor="KravenIBFont2" render="Label" position="103,13" size="54,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day1</convert>
+	  </widget>
+	  <widget source="session.OAWeather" render="Label" position="157,13" size="82,37" font="Regular;30" halign="left" foregroundColor="KravenIBFont1" backgroundColor="KravenIBbg" noWrap="1" transparent="1" zPosition="3">
+		<convert type="KravenHDOAWeather">temperature_current</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;22" foregroundColor="KravenIBFont1" render="Label" position="103,51" size="105,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day1</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" source="session.OAWeather" position="265,13" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day2,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;30" foregroundColor="KravenIBFont2" render="Label" position="351,13" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day2</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;22" foregroundColor="KravenIBFont1" render="Label" position="351,51" size="105,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day2</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" source="session.OAWeather" position="462,13" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day3,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;30" foregroundColor="KravenIBFont2" render="Label" position="547,13" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day3</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;22" foregroundColor="KravenIBFont1" render="Label" position="547,51" size="105,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day3</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" source="session.OAWeather" position="655,13" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day4,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular;30" foregroundColor="KravenIBFont2" render="Label" position="741,13" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day4</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;22" foregroundColor="KravenIBFont1" render="Label" position="741,51" size="105,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day4</convert>
 	  </widget>
 	</screen>
 	
@@ -1795,6 +1897,93 @@
 	  </widget>
 	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="1567,120" size="322,33" source="session.CurrentService" zPosition="3" halign="left" valign="center" transparent="1">
 		<convert type="KravenHDWeather">city</convert>
+	  </widget>
+	</screen>
+	
+	<screen name="weather-big_OAWeather">
+	  <widget backgroundColor="KravenIBbg" font="Regular2;30" foregroundColor="KravenIBFont2" render="Label" position="15,27" size="82,37" source="session.OAWeather" zPosition="3" halign="right" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day1</convert>
+	  </widget>
+	  <widget source="session.OAWeather" position="118,1" transparent="1" zPosition="8" size="105,105" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,current,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular2;24" foregroundColor="KravenIBFont2" render="Label" position="69,106" size="204,60" source="session.OAWeather" halign="center" transparent="1" zPosition="8" valign="center" >
+		<convert type="KravenHDOAWeather">temperature_text,current</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="232,9" size="75,37" source="session.OAWeather" zPosition="8" halign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high,day1</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="232,46" size="75,37" source="session.OAWeather" zPosition="8" halign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_low,day1</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular2;30" foregroundColor="KravenIBFont2" render="Label" position="378,27" size="82,37" source="session.OAWeather" zPosition="3" halign="right" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day2</convert>
+	  </widget>
+	  <widget source="session.OAWeather" position="481,1" transparent="1" zPosition="8" size="105,105" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day2,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular2;24" foregroundColor="KravenIBFont2" render="Label" position="432,106" size="204,60" source="session.OAWeather" halign="center" transparent="1" zPosition="8" valign="center">
+		<convert type="KravenHDOAWeather">temperature_text,day2</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="595,9" size="75,37" source="session.OAWeather" zPosition="8" halign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high,day2</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="595,46" size="75,37" source="session.OAWeather" zPosition="8" halign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_low,day2</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular2;30" foregroundColor="KravenIBFont2" render="Label" position="741,27" size="82,37" source="session.OAWeather" zPosition="3" halign="right" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day3</convert>
+	  </widget>
+	  <widget source="session.OAWeather" position="844,1" transparent="1" zPosition="8" size="105,105" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day3,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular2;24" foregroundColor="KravenIBFont2" render="Label" position="795,106" size="204,60" source="session.OAWeather" halign="center" transparent="1" zPosition="8" valign="center">
+		<convert type="KravenHDOAWeather">temperature_text,day3</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="985,9" size="75,37" source="session.OAWeather" zPosition="8" halign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high,day3</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="985,46" size="75,37" source="session.OAWeather" zPosition="8" halign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_low,day3</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular2;30" foregroundColor="KravenIBFont2" render="Label" position="1104,27" size="82,37" source="session.OAWeather" zPosition="3" halign="right" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day4</convert>
+	  </widget>
+	  <widget source="session.OAWeather" position="1207,1" transparent="1" zPosition="8" size="105,105" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day4,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular2;24" foregroundColor="KravenIBFont2" render="Label" position="1158,106" size="204,60" source="session.OAWeather" halign="center" transparent="1" zPosition="8" valign="center">
+		<convert type="KravenHDOAWeather">temperature_text,day4</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="1321,9" size="75,37" source="session.OAWeather" zPosition="8" halign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high,day4</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="1321,46" size="75,37" source="session.OAWeather" zPosition="8" halign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_low,day4</convert>
+	  </widget>
+	  <widget source="Title" render="Label" position="1473,12" size="255,33" zPosition="5" halign="left" valign="center" font="Regular2;27" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+		<convert type="KravenHDTextTranslator">temp</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="1567,12" size="322,33" source="session.OAWeather" zPosition="3" halign="left" valign="center" transparent="1">
+		<convert type="KravenHDOAWeather">feelslike</convert>
+	  </widget>
+	  <widget source="Title" render="Label" position="1473,48" size="105,33" zPosition="5" halign="left" valign="center" font="Regular2;27" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+		<convert type="KravenHDTextTranslator">wind</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="1567,48" size="322,33" source="session.OAWeather" zPosition="3" halign="left" valign="center" transparent="1">
+		<convert type="KravenHDOAWeather">winddisplay</convert>
+	  </widget>
+	  <widget source="Title" render="Label" position="1473,84" size="270,33" zPosition="5" halign="left" valign="center" font="Regular2;27" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+		<convert type="KravenHDTextTranslator">clime</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="1567,84" size="322,33" source="session.OAWeather" zPosition="3" halign="left" valign="center" transparent="1">
+		<convert type="KravenHDOAWeather">humidity</convert>
+	  </widget>
+	  <widget source="Title" render="Label" position="1473,120" size="90,33" zPosition="5" halign="left" valign="center" font="Regular2;27" backgroundColor="KravenIBbg" transparent="1" foregroundColor="KravenIBFont2">
+		<convert type="KravenHDTextTranslator">city</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="KravenIBbg" font="Regular;27" foregroundColor="KravenIBFont1" render="Label" position="1567,120" size="322,33" source="session.OAWeather" zPosition="3" halign="left" valign="center" transparent="1">
+		<convert type="KravenHDOAWeather">city</convert>
 	  </widget>
 	</screen>
 	
@@ -2514,6 +2703,73 @@
 	  <!-- nontransbg */-->
 	</screen>
 	
+	<screen name="sib1_OAWeather">
+	  <widget backgroundColor="Kravenbg2" font="Regular2;38" foregroundColor="KravenFont2" valign="top" position="60,210" render="Label" size="1260,49" source="session.CurrentService" transparent="1" zPosition="1">
+		<convert type="ServiceName">Name</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" font="Regular2;38" foregroundColor="KravenFont1" valign="top" position="60,276" render="Label" size="1260,49" source="session.Event_Now" transparent="1">
+		<convert type="KravenHDEventName">Name</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" font="Regular;35" foregroundColor="KravenFont1" valign="top" position="60,342" render="Label" size="1260,45" source="session.Event_Now" transparent="1">
+		<convert type="KravenHDEventName">Description</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" font="Regular;35" foregroundColor="KravenFont1" position="60,405" size="960,450" name="KravenEventNowHeight" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Now" transparent="1">
+		<convert type="KravenHDEventName">ExtendedDescription</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" font="Regular2;35" foregroundColor="KravenFont2" position="1050,405" size="810,45" render="KravenHDEmptyEpg2" source="session.Event_Next" valign="top" transparent="1">
+		<convert type="KravenHDEventName">Name</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" font="Regular;35" foregroundColor="KravenFont2" position="1050,450" size="810,405" name="KravenEventNowHeight" render="KravenHDEmptyEpg3" source="session.Event_Next" transparent="1">
+		<convert type="EventName">FullDescription</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" source="session.OAWeather" position="60,109" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,current,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont2" render="Label" position="153,106" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day1</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont1" render="Label" position="213,106" size="82,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">temperature_current</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont1" render="Label" position="153,150" size="150,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day1</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" source="session.OAWeather" position="321,109" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day2,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont2" render="Label" position="414,106" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day2</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont1" render="Label" position="414,150" size="150,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day2</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" source="session.OAWeather" position="561,109" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day3,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont2" render="Label" position="654,106" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day3</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont1" render="Label" position="654,150" size="150,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day3</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" source="session.OAWeather" position="801,109" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day4,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont2" render="Label" position="894,106" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day4</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="Kravenbg2" font="Regular;30" foregroundColor="KravenFont1" render="Label" position="894,150" size="150,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day4</convert>
+	  </widget>
+	  <widget source="session.VideoPicture" render="KravenHDPig3" position="1380,106" size="480,270" zPosition="3" backgroundColor="transparent" />
+	  <eLabel backgroundColor="#00000000" position="1380,106" size="480,270" transparent="0" zPosition="2" />
+	  <eLabel backgroundColor="KravenBorder2" position="1380,106" size="480,4" transparent="0" zPosition="4" />
+	  <eLabel backgroundColor="KravenBorder2" position="1380,372" size="480,4" transparent="0" zPosition="4" />
+	  <eLabel backgroundColor="KravenBorder2" position="1380,106" size="4,270" transparent="0" zPosition="4" />
+	  <eLabel backgroundColor="KravenBorder2" position="1856,106" size="4,270" transparent="0" zPosition="4" />
+	  <!-- nontransbg */-->
+	</screen>
+	
 	<screen name="sib2">
 	  <widget backgroundColor="Kravenbg" font="Regular2;38" foregroundColor="KravenFont1" position="60,106" size="870,49" render="Label" source="session.Event_Now" valign="top" transparent="1">
 		<convert type="KravenHDEventName">Name</convert>
@@ -2642,6 +2898,58 @@
 	  <!-- globalbg */-->
 	</screen>
 	
+	<screen name="sib6_OAWeather">
+	  <widget backgroundColor="Kravenbg" font="Regular2;38" foregroundColor="KravenFont2" position="60,120" size="690,49" render="Label" source="session.CurrentService" valign="top" transparent="1">
+		<convert type="ServiceName">Name</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular2;38" foregroundColor="KravenFont1" position="60,201" size="1800,49" render="Label" source="session.Event_Now" valign="top" transparent="1">
+		<convert type="KravenHDEventName">Name</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;35" foregroundColor="KravenFont1" position="60,270" size="1800,585" name="KravenEventNowHeight" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Now" transparent="1">
+		<convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" source="session.OAWeather" position="1032,106" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,current,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont2" render="Label" position="1117,106" size="54,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day1</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont1" render="Label" position="1171,106" size="82,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">temperature_current</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="Kravenbg" font="Regular;22" foregroundColor="KravenFont1" render="Label" position="1117,143" size="105,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day1</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" source="session.OAWeather" position="1279,106" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day2,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont2" render="Label" position="1365,106" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day2</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="Kravenbg" font="Regular;22" foregroundColor="KravenFont1" render="Label" position="1365,143" size="105,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day2</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" source="session.OAWeather" position="1474,106" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day3,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont2" render="Label" position="1560,106" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day3</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="Kravenbg" font="Regular;22" foregroundColor="KravenFont1" render="Label" position="1560,143" size="105,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day3</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" source="session.OAWeather" position="1669,106" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day4,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont2" render="Label" position="1755,106" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day4</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="Kravenbg" font="Regular;22" foregroundColor="KravenFont1" render="Label" position="1755,143" size="105,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day4</convert>
+	  </widget>
+	  <!-- globalbg */-->
+	</screen>
+	
 	<screen name="sib7">
 	  <widget backgroundColor="Kravenbg" font="Regular2;38" foregroundColor="KravenFont1" position="1170,120" size="690,49" render="Label" source="session.CurrentService" valign="top" transparent="1">
 		<convert type="ServiceName">Name</convert>
@@ -2696,6 +3004,64 @@
 	  </widget>
 	  <widget noWrap="1" backgroundColor="Kravenbg" font="Regular;22" foregroundColor="KravenFont1" render="Label" position="783,143" size="105,37" source="session.CurrentService" zPosition="3" halign="left" transparent="1">
 		<convert type="KravenHDWeather">minmax3</convert>
+	  </widget>
+	  <!-- globalbg */-->
+	</screen>
+	
+	<screen name="sib7_OAWeather">
+	  <widget backgroundColor="Kravenbg" font="Regular2;38" foregroundColor="KravenFont1" position="1170,120" size="690,49" render="Label" source="session.CurrentService" valign="top" transparent="1">
+		<convert type="ServiceName">Name</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular2;38" foregroundColor="KravenFont1" position="60,201" size="1050,49" render="Label" source="session.Event_Now" valign="top" transparent="1">
+		<convert type="KravenHDEventName">Name</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;35" foregroundColor="KravenFont1" position="60,270" size="1050,585" name="KravenEventNowHeight" render="KravenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" source="session.Event_Now" transparent="1">
+		<convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular2;38" foregroundColor="KravenFont2" position="1170,201" size="690,49" render="Label" source="session.Event_Next" valign="top" transparent="1">
+		<convert type="KravenHDEventName">Name</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;35" foregroundColor="KravenFont2" position="1170,270" size="690,585" name="KravenEventNowHeight" render="KravenHDEmptyEpg3" source="session.Event_Next" transparent="1">
+		<convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" source="session.OAWeather" position="60,106" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,current,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont2" render="Label" position="145,106" size="54,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day1</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont1" render="Label" position="199,106" size="82,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">temperature_current</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="Kravenbg" font="Regular;22" foregroundColor="KravenFont1" render="Label" position="145,143" size="105,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day1</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" source="session.OAWeather" position="307,106" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day2,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont2" render="Label" position="393,106" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day2</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="Kravenbg" font="Regular;22" foregroundColor="KravenFont1" render="Label" position="393,143" size="105,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day2</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" source="session.OAWeather" position="502,106" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day3,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont2" render="Label" position="588,106" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day3</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="Kravenbg" font="Regular;22" foregroundColor="KravenFont1" render="Label" position="588,143" size="105,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day3</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" source="session.OAWeather" position="697,106" transparent="1" zPosition="8" size="75,75" render="OAWeatherPixmap" alphatest="blend">
+		<convert type="KravenHDOAWeather">weathericon,day4,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg" font="Regular;30" foregroundColor="KravenFont2" render="Label" position="783,106" size="60,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1" noWrap="1">
+		<convert type="KravenHDOAWeather">weekshortday,day4</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="Kravenbg" font="Regular;22" foregroundColor="KravenFont1" render="Label" position="783,143" size="105,37" source="session.OAWeather" zPosition="3" halign="left" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_high_low,day4</convert>
 	  </widget>
 	  <!-- globalbg */-->
 	</screen>

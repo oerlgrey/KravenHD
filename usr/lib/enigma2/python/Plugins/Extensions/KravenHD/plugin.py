@@ -2,8 +2,8 @@
 
 #  Plugin Code
 #
-#  Coded/Modified/Adapted by örlgrey
-#  Based on VTi and/or OpenATV image source code
+#  Coded/Modified/Adapted by oerlgrey
+#  Based on openATV image source code
 #
 #  This code is licensed under the Creative Commons 
 #  Attribution-NonCommercial-ShareAlike 3.0 Unported 
@@ -23,9 +23,7 @@ from os import environ
 import gettext
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from . import KravenHD
-
 from six.moves import reload_module
-
 
 lang = language.getLanguage()
 environ["LANGUAGE"] = lang[:2]

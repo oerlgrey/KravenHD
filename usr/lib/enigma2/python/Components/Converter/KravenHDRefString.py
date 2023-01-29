@@ -2,8 +2,8 @@
 
 #  Ref String Converter
 #
-#  Coded/Modified/Adapted by örlgrey
-#  Based on VTi and/or OpenATV image source code
+#  Coded/Modified/Adapted by oerlgrey
+#  Based on openATV image source code
 #  Based on Metrix Ref String by Vali (see below)
 #
 #  This code is licensed under the Creative Commons 
@@ -33,6 +33,7 @@
 #
 #######################################################################
 
+from __future__ import absolute_import
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Screens.InfoBar import InfoBar

@@ -2,8 +2,8 @@
 
 #  RouteInfo Converter
 #
-#  Coded/Modified/Adapted by örlgrey
-#  Based on OpenATV image source code
+#  Coded/Modified/Adapted by oerlgrey
+#  Based on openATV image source code
 #
 #  This code is licensed under the Creative Commons 
 #  Attribution-NonCommercial-ShareAlike 3.0 Unported 
@@ -31,6 +31,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+from __future__ import absolute_import
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.config import config

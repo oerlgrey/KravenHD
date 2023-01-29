@@ -2,8 +2,8 @@
 
 #  Color Selection Tool
 #
-#  Coded/Modified/Adapted by örlgrey
-#  Based on VTi and/or OpenATV image source code
+#  Coded/Modified/Adapted by oerlgrey
+#  Based on openATV image source code
 #  Thankfully inspired by MyMetrix by iMaxxx
 #
 #  This code is licensed under the Creative Commons 
@@ -16,6 +16,7 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
+from __future__ import absolute_import
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.Standby import TryQuitMainloop

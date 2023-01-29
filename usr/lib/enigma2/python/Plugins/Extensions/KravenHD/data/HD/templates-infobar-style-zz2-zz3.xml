@@ -228,6 +228,21 @@
 	  </widget>
 	</screen>
 	
+	<screen name="infobar-style-zz2-zz3-clock-weather_OAWeather">
+	  <widget alphatest="blend" render="OAWeatherPixmap" position="1066,608" size="96,96" source="session.OAWeather" transparent="1" zPosition="1">
+		<convert type="KravenHDOAWeather">weathericon,current,/usr/share/enigma2/KravenHD/WetterIcons/,png</convert>
+	  </widget>
+	  <widget source="session.OAWeather" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont2" position="1173,615" size="90,27" font="Regular2;24" noWrap="1" halign="center" valign="center" zPosition="2" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_current</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1173,648" size="90,30" font="Regular;26" halign="center" valign="center" zPosition="2" transparent="1">
+		<convert type="KravenHDClockToText">Default</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" backgroundColor="KravenIBbg" foregroundColor="KravenIBFont1" position="1173,681" size="90,21" font="Regular;17" halign="center" valign="center" zPosition="2" transparent="1">
+		<convert type="KravenHDClockToText">Format:%d.%m.%Y</convert>
+	  </widget>
+	</screen>
+	
 	<screen name="infobar-style-zz2-zz3-clock-analog">
 	  <widget backgroundColor="KravenIBbg" font="Regular2;18" foregroundColor="KravenIBFont2" halign="center" position="1058,689" render="Label" size="220,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2">
 		<convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
@@ -259,6 +274,24 @@
 	  </widget>
 	  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;20" foregroundColor="KravenAndroid" render="Label" position="1130,655" size="100,25" source="session.CurrentService" zPosition="2" halign="right" valign="center" transparent="1">
 		<convert type="KravenHDWeather">temp_cur</convert>
+	  </widget>
+	</screen>
+	
+	<screen name="infobar-style-zz2-zz3-clock-android_OAWeather">
+	  <widget backgroundColor="#00999999" font="Regular;26" halign="center" render="Label" position="1070,624" size="53,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
+		<convert type="KravenHDClockToText">Format:%H</convert>
+	  </widget>
+	  <widget backgroundColor="#00999999" font="Regular;25" halign="center" render="Label" position="1117,622" size="53,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="2" foregroundColor="black">
+		<convert type="KravenHDClockToText">Format:%M</convert>
+	  </widget>
+	  <widget backgroundColor="KravenIBbg" font="Regular2;16" foregroundColor="KravenIBFont2" halign="center" position="1054,685" size="200,30" render="Label" source="global.CurrentTime" transparent="1" valign="top" zPosition="2">
+		<convert type="KravenHDClockToText">Format:%A, %d.%m.%Y</convert>
+	  </widget>
+	  <widget alphatest="blend" render="OAWeatherPixmap" position="1054,568" size="200,122" source="session.OAWeather" transparent="1" zPosition="1">
+		<convert type="KravenHDOAWeather">weathericon,current,/usr/share/enigma2/KravenHD/clock/,png</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="#00666666" font="Regular2;20" foregroundColor="KravenAndroid" render="Label" position="1130,655" size="100,25" source="session.OAWeather" zPosition="2" halign="right" valign="center" transparent="1">
+		<convert type="KravenHDOAWeather">temperature_current</convert>
 	  </widget>
 	</screen>
 	

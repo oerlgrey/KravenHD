@@ -2,8 +2,8 @@
 
 #  Pixmap Scaler Renderer
 #
-#  Coded/Modified/Adapted by örlgrey
-#  Based on VTi and/or OpenATV image source code
+#  Coded/Modified/Adapted by oerlgrey
+#  Based on openATV image source code
 #  Based on the work of shamann (see below)
 #
 #  This code is licensed under the Creative Commons 
@@ -16,6 +16,7 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
+from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap
 

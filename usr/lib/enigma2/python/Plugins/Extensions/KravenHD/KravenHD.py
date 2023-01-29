@@ -2,8 +2,8 @@
 
 #  Kraven Plugin
 #
-#  Coded/Modified/Adapted by örlgrey
-#  Based on VTi and/or OpenATV image source code
+#  Coded/Modified/Adapted by oerlgrey
+#  Based on openATV image source code
 #  Thankfully inspired by MyMetrix by iMaxxx
 #
 #  This code is licensed under the Creative Commons 
@@ -41,9 +41,7 @@ import gettext, time, subprocess, requests
 from enigma import ePicLoad, getDesktop, eConsoleAppContainer, eTimer
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from xml.etree.cElementTree import fromstring
-
 import six
-
 
 DESKTOP_WIDTH = getDesktop(0).size().width()
 
@@ -843,16 +841,6 @@ config.plugins.KravenHD.DebugNames = ConfigSelection(default="none", choices = [
 				("screennames-on", _("on"))
 				])
 
-config.plugins.KravenHD.WeatherView = ConfigSelection(default="meteo", choices = [
-				("icon", _("Icon")),
-				("meteo", _("Meteo"))
-				])
-
-config.plugins.KravenHD.MeteoColor = ConfigSelection(default="meteo-light", choices = [
-				("meteo-light", _("light")),
-				("meteo-dark", _("dark"))
-				])
-
 config.plugins.KravenHD.Primetimeavailable = ConfigSelection(default="primetime-on", choices = [
 				("none", _("off")),
 				("primetime-on", _("on"))
@@ -1402,18 +1390,17 @@ class KravenHD(ConfigListScreen, Screen):
 				else:
 					list.append(getConfigListEntry(_("Weather"), config.plugins.KravenHD.WeatherStyle2, _("Activate or deactivate displaying the weather in the infobar.")))
 					self.actWeatherstyle=config.plugins.KravenHD.WeatherStyle2.value
-			list.append(getConfigListEntry(_("Search option"), config.plugins.KravenHD.msn_searchby, _("Choose from different options to enter your settings.\nPress the red button to search for the weather code.")))
-			if config.plugins.KravenHD.msn_searchby.value == "location":
-				list.append(getConfigListEntry(_("Location "), config.plugins.KravenHD.msn_cityname, _("Enter your location.\nPress OK to use the virtual keyboard.\nPress the red button to search for the weather code.")))
+			if not fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+				list.append(getConfigListEntry(_("Search option"), config.plugins.KravenHD.msn_searchby, _("Choose from different options to enter your settings.\nPress the red button to search for the weather code.")))
+				if config.plugins.KravenHD.msn_searchby.value == "location":
+					list.append(getConfigListEntry(_("Location "), config.plugins.KravenHD.msn_cityname, _("Enter your location.\nPress OK to use the virtual keyboard.\nPress the red button to search for the weather code.")))
+				else:
+					emptyLines+=1
+				list.append(getConfigListEntry(_("Language"), config.plugins.KravenHD.msn_language, _("Specify the language for the weather output.")))
+				list.append(getConfigListEntry(_("Refresh interval (in minutes)"), config.plugins.KravenHD.refreshInterval, _("Choose the frequency of loading weather data from the internet.")))
+				emptyLines+=2
 			else:
-				emptyLines+=1
-			list.append(getConfigListEntry(_("Language"), config.plugins.KravenHD.msn_language, _("Specify the language for the weather output.")))
-			list.append(getConfigListEntry(_("Refresh interval (in minutes)"), config.plugins.KravenHD.refreshInterval, _("Choose the frequency of loading weather data from the internet.")))
-			list.append(getConfigListEntry(_("Weather-Style"), config.plugins.KravenHD.WeatherView, _("Choose between graphical weather symbols and Meteo symbols.")))
-			if config.plugins.KravenHD.WeatherView.value == "meteo":
-				list.append(getConfigListEntry(_("Meteo-Color"), config.plugins.KravenHD.MeteoColor, _("Choose between light and dark Meteo symbols.")))
-			else:
-				emptyLines+=1
+				emptyLines+=6
 		else:
 			list.append(getConfigListEntry(_("Weather"), config.plugins.KravenHD.WeatherStyleNoInternet, _("You have no internet connection. This function is disabled.")))
 			self.actWeatherstyle="none"
@@ -2292,8 +2279,6 @@ class KravenHD(ConfigListScreen, Screen):
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/preview.png"
 			elif returnValue in ("about", "about2"):
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/about.png"
-			elif returnValue == ("meteo-light"):
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/meteo.jpg"
 			elif returnValue == "progress":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/colorfull.jpg"
 			elif returnValue in ("self", config.plugins.KravenHD.PermanentClock.value):
@@ -3217,26 +3202,6 @@ class KravenHD(ConfigListScreen, Screen):
 			else:
 				console2.execute("tar xf /usr/lib/enigma2/python/Plugins/Extensions/KravenHD/data/FHD/icons-black.tar.gz -C /usr/share/enigma2/KravenHD/")
 
-		### Weather-Server
-		if config.plugins.KravenHD.SkinResolution.value == "hd":
-			if config.plugins.KravenHD.WeatherView.value == "meteo":
-				self.skinSearchAndReplace.append(['size="50,50" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="50,50" render="Label" font="Meteo; 40" halign="right" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="70,70" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 60" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="100,100" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="100,100" render="Label" font="Meteo; 1000" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['"KravenHDWeather">icon', '"KravenHDWeather">meteo'])
-		else:
-			if config.plugins.KravenHD.WeatherView.value == "meteo":
-				self.skinSearchAndReplace.append(['size="75,75" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="75,75" render="Label" font="Meteo;60" halign="right" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="75,75" path="WetterIcons" render="KravenHDWetterPicon" alphatest="blend"', 'size="75,75" render="Label" font="Meteo;67" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="105,105" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="105,105" render="Label" font="Meteo;90" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['size="150,150" render="KravenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="150,150" render="Label" font="Meteo;1500" halign="center" valign="center" foregroundColor="KravenMeteo" noWrap="1"'])
-				self.skinSearchAndReplace.append(['"KravenHDWeather">icon', '"KravenHDWeather">meteo'])
-
-		### Meteo-Font
-		if config.plugins.KravenHD.MeteoColor.value == "meteo-dark":
-			self.skinSearchAndReplace.append(['name="KravenMeteo" value="#00fff0e0"', 'name="KravenMeteo" value="#00000000"'])
-
 		### Selection Style
 		if config.plugins.KravenHD.EMCSelectionColors.value == "custom":
 			self.skinSearchAndReplace.append(['selectionPixmap="KravenHD/graphics/sel_28.png"', " "])
@@ -3655,13 +3620,25 @@ class KravenHD(ConfigListScreen, Screen):
 
 		### Infobar Clock
 		if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-nopicon", "infobar-style-x1"):
-			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-' + self.actClockstyle + '"/>'])
+			if self.actClockstyle in ("clock-android", "clock-weather") and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-' + self.actClockstyle + '_OAWeather"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-' + self.actClockstyle + '"/>'])
 		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2"):
-			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="infobar-style-x2-x3-z1-z2-' + self.actClockstyle + '"/>'])
+			if self.actClockstyle in ("clock-android", "clock-weather") and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="infobar-style-x2-x3-z1-z2-' + self.actClockstyle + '_OAWeather"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="infobar-style-x2-x3-z1-z2-' + self.actClockstyle + '"/>'])
 		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
-			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="infobar-style-zz2-zz3-' + self.actClockstyle + '"/>'])
+			if self.actClockstyle in ("clock-android", "clock-weather") and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="infobar-style-zz2-zz3-' + self.actClockstyle + '_OAWeather"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="infobar-style-zz2-zz3-' + self.actClockstyle + '"/>'])
 		elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz1", "infobar-style-zzz1"):
-			self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="infobar-style-zz1-zzz1-' + self.actClockstyle + '"/>'])
+			if self.actClockstyle in ("clock-android", "clock-weather") and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="infobar-style-zz1-zzz1-' + self.actClockstyle + '_OAWeather"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- Infobar clockstyle -->', '<panel name="infobar-style-zz1-zzz1-' + self.actClockstyle + '"/>'])
 
 		### Infobar Channelname
 		if config.plugins.KravenHD.InfobarStyle.value == "infobar-style-nopicon" and not config.plugins.KravenHD.InfobarChannelName.value == "none":
@@ -3715,13 +3692,22 @@ class KravenHD(ConfigListScreen, Screen):
 					self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', '<panel name="texture-weather-small"/>'])
 				else:
 					self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', '<panel name="box-weather-small"/>'])
-				self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', '<panel name="weather-small2"/>'])
+				if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+					self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', '<panel name="weather-small2_OAWeather"/>'])
+				else:
+					self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', '<panel name="weather-small2"/>'])
 			else:
 				self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', '<panel name="gradient-weather-small"/>'])
-				self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', '<panel name="weather-small"/>'])
+				if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+					self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', '<panel name="weather-small_OAWeather"/>'])
+				else:
+					self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', '<panel name="weather-small"/>'])
 
 		elif self.actWeatherstyle == "weather-left":
-			self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', '<panel name="weather-left"/>'])
+			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+				self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', '<panel name="weather-left_OAWeather"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', '<panel name="weather-left"/>'])
 
 		elif self.actWeatherstyle == "weather-big":
 			if config.plugins.KravenHD.IBStyle.value == "box":
@@ -3733,7 +3719,10 @@ class KravenHD(ConfigListScreen, Screen):
 					self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', '<panel name="box-weather-big"/>'])
 			else:
 				self.skinSearchAndReplace.append(['<!-- Infobar weatherbackground -->', '<panel name="gradient-weather-big"/>'])
-			self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', '<panel name="weather-big"/>'])
+			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+				self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', '<panel name="weather-big_OAWeather"/>'])
+			else:
+				self.skinSearchAndReplace.append(['<!-- Infobar weatherstyle -->', '<panel name="weather-big"/>'])
 
 		if config.plugins.KravenHD.refreshInterval.value == "0":
 			config.plugins.KravenHD.refreshInterval.value = config.plugins.KravenHD.refreshInterval.default
@@ -3850,10 +3839,16 @@ class KravenHD(ConfigListScreen, Screen):
 				self.skinSearchAndReplace.append(['<!-- SIB Online info -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-sib-online"/>'])
 
 		### SecondInfoBar
-		self.skinSearchAndReplace.append(['<!-- SIB style -->', '<panel name="' + config.plugins.KravenHD.SIB.value + '"/>'])
+		if config.plugins.KravenHD.SIB.value in ("sib1", "sib6", "sib7") and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+			self.skinSearchAndReplace.append(['<!-- SIB style -->', '<panel name="' + config.plugins.KravenHD.SIB.value + '_OAWeather"/>'])
+		else:
+			self.skinSearchAndReplace.append(['<!-- SIB style -->', '<panel name="' + config.plugins.KravenHD.SIB.value + '"/>'])
 
 		### Players clockstyle
-		self.skinSearchAndReplace.append(['<!-- Player clockstyle -->', '<panel name="' + config.plugins.KravenHD.PlayerClock.value + '"/>'])
+		if config.plugins.KravenHD.PlayerClock.value in ("player-android", "player-weather") and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+			self.skinSearchAndReplace.append(['<!-- Player clockstyle -->', '<panel name="' + config.plugins.KravenHD.PlayerClock.value + '_OAWeather"/>'])
+		else:
+			self.skinSearchAndReplace.append(['<!-- Player clockstyle -->', '<panel name="' + config.plugins.KravenHD.PlayerClock.value + '"/>'])
 
 		### Volume
 		self.skinSearchAndReplace.append(['<!-- Volume style -->', '<panel name="' + config.plugins.KravenHD.Volume.value + '"/>'])

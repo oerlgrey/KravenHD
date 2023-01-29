@@ -2,8 +2,8 @@
 
 #  Menu Icon Path Converter
 #
-#  Coded/Modified/Adapted by örlgrey
-#  Based on VTi and/or OpenATV image source code
+#  Coded/Modified/Adapted by oerlgrey
+#  Based on openATV image source code
 #
 #  This code is licensed under the Creative Commons 
 #  Attribution-NonCommercial-ShareAlike 3.0 Unported 
@@ -15,6 +15,7 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
+from __future__ import absolute_import
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Tools.Directories import fileExists
@@ -298,7 +299,6 @@ class KravenHDMenuIconPath(Poll, Converter, object):
 		except:
 			try: # is it a menu? then we handle it according to current selection
 				cur = self.source.current
-				# print("[KravenHD] " + str(cur))
 				if cur and len(cur) > 5: #ATV 7.x
 					selection = cur[5] #ATV 7.x
 					name = self.userpath + selection + ".png"

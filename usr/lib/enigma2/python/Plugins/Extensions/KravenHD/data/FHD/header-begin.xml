@@ -65,7 +65,6 @@
     <color name="KravenECM" value="#00ffffff" />
 	<color name="KravenNotAvailable" value="#00FFEA04" />
     <color name="KravenPrime" value="#0070AD11" />
-    <color name="KravenMeteo" value="#00fff0e0" />
     <color name="KravenIBProgress" value="#00000000" />
     <color name="KravenIBProgressBorderLine" value="#00000000" />
     <color name="KravenMainmenuHorTitleFont" value="#00999999" />
@@ -170,7 +169,6 @@
     <font filename="/usr/share/enigma2/KravenHD/fonts/OpenSans-Semibold.ttf" name="Regular2" scale="95" />
     <font filename="/usr/share/enigma2/KravenHD/fonts/OpenSans-Regular.ttf" name="Fixed" scale="95" />
     <font filename="/usr/share/enigma2/KravenHD/fonts/OpenSans-Semibold.ttf" name="Arial" scale="95" />
-    <font filename="/usr/share/enigma2/KravenHD/fonts/meteocons.ttf" name="Meteo" scale="100" />
   </fonts>
   <subtitles>
     <sub font="Regular;44" name="Subtitle_TTX" shadowColor="shadow" shadowOffset="4,4" />
