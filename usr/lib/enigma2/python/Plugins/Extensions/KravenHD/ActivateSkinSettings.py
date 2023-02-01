@@ -653,6 +653,8 @@ config.plugins.KravenHD.WeatherStyleNoInternet = ConfigSelection(default="none",
 				("none", _("off"))
 				])
 
+config.plugins.KravenHD.CustomWeatherIcons = ConfigYesNo(default=False)
+
 config.plugins.KravenHD.ECMVisible = ConfigSelection(default="none", choices = [
 				("none", _("off")),
 				("ib", _("Infobar")),
@@ -1857,6 +1859,13 @@ class ActivateSkinSettings:
 				HSize_new = str(i)
 
 			self.skinSearchAndReplace.append([',' + HSize_old + '" name="KravenEventNowHeight"', ',' + HSize_new + '"'])
+
+		### Custom Weather Icons
+		if config.plugins.KravenHD.CustomWeatherIcons.value and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+			self.skinSearchAndReplace.append(["/usr/share/enigma2/KravenHD/WetterIcons/", "/usr/share/enigma2/Kraven-user-icons/"])
+		else:
+			config.plugins.KravenHD.CustomWeatherIcons.value = False
+			config.plugins.KravenHD.CustomWeatherIcons.save()
 
 		### Clock Analog Color
 		if self.actClockstyle == "clock-analog":

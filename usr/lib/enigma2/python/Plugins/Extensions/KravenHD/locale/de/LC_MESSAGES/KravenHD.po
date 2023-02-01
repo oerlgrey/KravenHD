@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2022-10-16 09:50+0200\n"
+"PO-Revision-Date: 2023-02-01 20:25+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -2275,6 +2275,10 @@ msgid "% humidity"
 msgstr "% Luftfeuchte"
 
 #: KravenHDWeather.py
+msgid "humidity"
+msgstr "Luftfeuchte"
+
+#: KravenHDWeather.py
 msgid ", feels "
 msgstr ", gefühlt "
 
@@ -2305,3 +2309,11 @@ msgstr "Wählen Sie, ob das Poster in der Infoleiste angezeigt werden soll oder 
 #: KravenHD.py
 msgid "Choose whether the online indicator should be displayed in the infobar or not."
 msgstr "Wählen Sie, ob der Online-Indikator in der Infoleiste angezeigt werden soll oder nicht."
+
+#: KravenHD.py
+msgid "Use custom weather icons"
+msgstr "Eigene Wettersymbole verwenden"
+
+#: KravenHD.py
+msgid "Choose whether to display own weather icons or not."
+msgstr "Wählen Sie, ob eigene Wettersymbole angezeigt werden sollen oder nicht."

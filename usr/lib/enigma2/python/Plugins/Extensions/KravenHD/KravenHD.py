@@ -690,6 +690,8 @@ config.plugins.KravenHD.WeatherStyleNoInternet = ConfigSelection(default="none",
 				("none", _("off"))
 				])
 
+config.plugins.KravenHD.CustomWeatherIcons = ConfigYesNo(default=False)
+
 config.plugins.KravenHD.ECMVisible = ConfigSelection(default="none", choices = [
 				("none", _("off")),
 				("ib", _("Infobar")),
@@ -1400,7 +1402,11 @@ class KravenHD(ConfigListScreen, Screen):
 				list.append(getConfigListEntry(_("Refresh interval (in minutes)"), config.plugins.KravenHD.refreshInterval, _("Choose the frequency of loading weather data from the internet.")))
 				emptyLines+=2
 			else:
-				emptyLines+=6
+				if fileExists("/usr/share/enigma2/Kraven-user-icons/3200.png"):
+					list.append(getConfigListEntry(_("Use custom weather icons"), config.plugins.KravenHD.CustomWeatherIcons, _("Choose whether to display own weather icons or not.")))
+				else:
+					emptyLines+=1
+				emptyLines+=5
 		else:
 			list.append(getConfigListEntry(_("Weather"), config.plugins.KravenHD.WeatherStyleNoInternet, _("You have no internet connection. This function is disabled.")))
 			self.actWeatherstyle="none"
@@ -3471,6 +3477,13 @@ class KravenHD(ConfigListScreen, Screen):
 				HSize_new = str(i)
 
 			self.skinSearchAndReplace.append([',' + HSize_old + '" name="KravenEventNowHeight"', ',' + HSize_new + '"'])
+
+		### Custom Weather Icons
+		if config.plugins.KravenHD.CustomWeatherIcons.value and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+			self.skinSearchAndReplace.append(["/usr/share/enigma2/KravenHD/WetterIcons/", "/usr/share/enigma2/Kraven-user-icons/"])
+		else:
+			config.plugins.KravenHD.CustomWeatherIcons.value = False
+			config.plugins.KravenHD.CustomWeatherIcons.save()
 
 		### Clock Analog Color
 		if self.actClockstyle == "clock-analog":

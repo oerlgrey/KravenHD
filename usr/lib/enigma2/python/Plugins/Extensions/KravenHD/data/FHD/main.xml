@@ -568,14 +568,49 @@
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HelpMenu" position="0,0" size="1920,1080" title="Menu">
 	<!--*HelpMenu*-->
-	<eLabel text="help..." position="63,10" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;50" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
-    <widget alphatest="blend" name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="283,220" size="154,500" zPosition="10" />
-    <widget backgroundColor="Kravenbg" font="Regular2;36" foregroundColor="KravenFont2" halign="center" name="long_key" position="135,810" size="450,45" transparent="1" />
-    <widget backgroundColor="Kravenbg" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="750,180" size="1080,675" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
-    <widget alphatest="blend" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
-    <widget alphatest="blend" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-150,-150" size="55,105" zPosition="11" />
-    <widget alphatest="blend" name="arrowup" pixmap="skin_default/arrowup.png" position="-150,-150" size="55,105" zPosition="11" />
-    <widget alphatest="blend" name="arrowup2" pixmap="skin_default/arrowup.png" position="-150,-150" size="55,105" zPosition="11" />
+	<eLabel text="help..." position="63,10" size="600,69" backgroundColor="KravenIBbg2" font="Regular2;50" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="KravenIBbg2" name="buttonlist" position="750,23" size="900,45" font="Regular2;35" foregroundColor="KravenIBGFont2" valign="center" transparent="1"/>
+	<widget backgroundColor="Kravenbg" source="list" render="Listbox" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_36.png" position="750,120" size="1107,810" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+		<convert type="TemplatedMultiContent">
+			{
+				"templates": {
+					# Simple help with no headings ("flat")
+					# data[1:] = [helpText]
+					"default": (54,[
+						MultiContentEntryText(pos=(7, 0), size=(1035, 54), font=1, flags=RT_WRAP | RT_VALIGN_CENTER, text=1),
+						]
+					),
+					# Simple help with headings
+					# data[1:] = [heading, None]  # For heading entries
+					# data[1:] = [None, helpText]  # For help entries
+					"default+headings": (54,[
+						MultiContentEntryText(pos=(7, 0), size=(1035, 54), font=0, flags=RT_WRAP | RT_VALIGN_CENTER, text=1),
+						MultiContentEntryText(pos=(42, 0), size=(993, 54), font=1, flags=RT_WRAP | RT_VALIGN_CENTER, text=2),
+						]
+					),
+					# Extended help with no headings
+					# data[1:] = [helpText, extendedHelpText]
+					"extended": (240,[
+						MultiContentEntryText(pos=(7, 0), size=(1035, 123), font=1, flags=RT_WRAP | RT_VALIGN_CENTER, text=1),
+						MultiContentEntryText(pos=(7, 123), size=(1035, 114), color=0x009e9fa4, color_sel=0x009e9fa4, font=3, flags=RT_WRAP | RT_VALIGN_TOP, text=2),
+						],
+					),
+					# Extended help with headings
+					# data[1:] = [heading, None, None]  # For heading entries
+					# data[1:] = [None, helpText, extendedHelpText]  # For help entries
+					"extended+headings": (240,[
+						MultiContentEntryText(pos=(7, 0), size=(1035, 135), font=0, flags=RT_WRAP | RT_VALIGN_CENTER, text=1),
+						MultiContentEntryText(pos=(42, 0), size=(993, 123), font=1, flags=RT_WRAP | RT_VALIGN_CENTER, text=2),
+						MultiContentEntryText(pos=(42, 123), size=(993, 114), color=0x009e9fa4, color_sel=0x009e9fa4, font=3, flags=RT_WRAP | RT_VALIGN_TOP, text=3),
+						],
+					),
+				},
+				"fonts": [gFont("Regular", 35), gFont("Regular", 32), gFont("Regular", 32), gFont("Regular", 30)],
+				"itemHeight": 54
+			}
+		</convert>
+	</widget>
+    <panel name="wizard_rc_template"/>
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
     <panel name="OKExit"/>
