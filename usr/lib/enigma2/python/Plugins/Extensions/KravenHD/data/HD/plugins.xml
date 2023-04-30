@@ -829,6 +829,16 @@
     <panel name="MenuOKExit"/>
   </screen>
 
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="YouTubePlayerConfig" position="0,0" size="1280,720" title="YouTubePlayer Config">
+	<!--*YouTubePlayerConfig*-->
+    <panel name="Title-big"/>
+	<widget backgroundColor="Kravenbg3" name="list" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <panel name="RGYB_Buttons"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="OKExit"/>
+  </screen>
+
   <screen name="YoutubeTVSettings" position="0,0" size="1280,720" title="YouTube TV Settings" backgroundColor="transparent" flags="wfNoBorder">
 	<!--*YoutubeTVSettings*-->
     <panel name="Title-big"/>
@@ -849,6 +859,48 @@
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
     <panel name="Exit"/>
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="YouTubeMain" position="0,0" size="1280,720" title="YouTube">
+	<!--*YouTubeMain*-->
+    <panel name="Title-big"/>
+	<widget backgroundColor="Kravenbg3" source="list" render="Listbox" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_90.png" position="42,80" size="736,540" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" >
+	  <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos=(4, 9), size=(100, 72), png=2), # Thumbnail
+					MultiContentEntryText(pos=(120, 0), size=(600, 54), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=3), # Title
+					MultiContentEntryText(pos=(120, 54), size=(290, 34), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=4), # Views
+					MultiContentEntryText(pos=(420, 54), size=(300, 34), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=5), # Duration
+					],
+				"fonts": [gFont("Regular",22), gFont("Regular",18)],
+				"itemHeight": 90}
+	  </convert>
+	</widget>
+	<widget name="thumbnail" position="4,9" backgroundColor="Kravenbg3" itemHeight="90" transparent="1" alphatest="on" size="100,72" />
+    <panel name="RGYB_Buttons"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="MenuOKExit"/>
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="YouTubeSearch" position="0,0" size="1280,720" title="YouTubeSearch">
+	<!--*YouTubeSearch*-->
+    <panel name="Title-big"/>
+	<widget backgroundColor="Kravenbg3" source="list" render="Listbox" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,360" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" >
+	  <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos=(10, 1), size=(710, 27), font=0, flags=RT_HALIGN_LEFT, text=0)
+				],
+				"fonts": [gFont("Regular",22)],
+				"itemHeight": 30}
+	  </convert>
+	</widget>
+	<widget backgroundColor="Kravenbg3" name="config" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,455" size="736,30" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="HelpWindow" position="42,502" size="736,135" zPosition="98" transparent="1" alphatest="blend" />
+    <panel name="RGYB_Buttons"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="OKExit"/>
   </screen>
 
   <screen name="EPGImportConfig" position="0,0" size="1280,720" title="EPG Import Configuration" backgroundColor="transparent" flags="wfNoBorder">
@@ -1344,15 +1396,16 @@
 		</convert>
 	</widget>
     <widget name="thumb" position="852,80" zPosition="2" size="280,280" alphatest="blend" />
- 	<widget name="Bez_sort" position="852,434" size="100,27" font="Regular;20" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" />
+ 	<widget name="Bez_sort" position="852,434" size="101,27" font="Regular2;20" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" />
     <widget name="key_sort" position="972,434" size="267,27" font="Regular;20" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" noWrap="1"/>
-    <widget name="button_ok" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PictureCenterFS/skin/pictures/key_ok.png" position="852,469" size="35,25" zPosition="1" alphatest="blend" />
-    <widget name="key_ok" position="905,467" zPosition="1" size="334,30" font="Regular;20" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" noWrap="1"/>
-    <widget name="button_0" pixmap="/usr/share/enigma2/skin_default/buttons/key_0.png" position="852,500" size="35,25" zPosition="1" alphatest="blend" />
-    <widget name="key_0" position="905,500" zPosition="1" size="334,30" font="Regular;20" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" noWrap="1"/>
-    <widget name="button_epg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PictureCenterFS/skin/pictures/key_epg.png" position="852,536" size="35,25" zPosition="1" alphatest="blend" />
+    <widget name="button_ok" pixmap="KravenHD/buttons/key_ok.png" position="852,467" size="27,30" zPosition="1" alphatest="blend" />
+    <widget name="key_ok" position="902,468" zPosition="1" size="334,30" font="Regular;20" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" noWrap="1"/>
+    <widget name="button_0" pixmap="KravenHD/buttons/key_0.png" position="852,500" size="27,30" zPosition="1" alphatest="blend" />
+    <widget name="key_0" position="902,501" zPosition="1" size="334,30" font="Regular;20" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" noWrap="1"/>
+    <widget name="dats" position="852,534" size="380,27" font="Regular;20" foregroundColor="KravenFont1" backgroundColor="Kravenbg" transparent="1" noWrap="1"/>
     <panel name="RGYB_Buttons2"/>
-    <panel name="MenuOKExit"/>
+    <ePixmap pixmap="KravenHD/infobar-global-icons/key_menu.png" position="1145,675" size="43,22" alphatest="blend" />
+    <ePixmap pixmap="KravenHD/infobar-global-icons/key_exit.png" position="1195,675" size="43,22" alphatest="blend" />
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PictureCenterFS7_Setup2" position="0,0" size="1280,720" title="PictureCenterFS">
@@ -1371,6 +1424,31 @@
 	<widget backgroundColor="Kravenbg3" name="config" font="Regular;21" secondfont="Regular;19" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,420" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
 	<widget backgroundColor="Kravenbg3" name="balken" font="Regular2;22" foregroundColor="KravenFont2" position="42,514" size="736,81" halign="center" valign="center" transparent="1" />
     <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="PictureCenterFS7_Filemenu" position="0,0" size="1920,1080" title="PictureCenterFS">
+	<!--*PictureCenterFS7_Filemenu*-->
+	<eLabel text="PictureCenterFS" position="42,7" size="1000,46" backgroundColor="KravenIBbg3" font="Regular2;34" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg3" source="m_liste" render="Listbox" position="42,80" size="736,300" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
+	  <convert type="TemplatedMultiContent">
+				{"templates": 
+					{"default": (30, [
+					MultiContentEntryText(pos = (10, 1), size = (710, 28), font=0, flags = RT_HALIGN_LEFT, text = 0)
+					],True), 
+					"with_numpic": (30,[
+					MultiContentEntryPixmapAlphaTest(pos = (3, 3), size = (40, 30), png = 2), # index 5: stream-logo
+					MultiContentEntryText(pos = (50, 1), size = (670, 28), font=0, flags = RT_HALIGN_LEFT, text = 0)
+					],True)
+					}, 
+				"fonts": [gFont("Regular", 22)],"itemHeight": 30
+				}
+	  </convert>
+	</widget>
+    <widget name="thumb" position="279,400" zPosition="2" size="220,220" alphatest="blend" />
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
     <panel name="RGYB_Buttons"/>
@@ -2574,6 +2652,32 @@
 	<panel name="gradient-menu"/>
     <panel name="RGYB_Buttons"/>
 	<panel name="OKExit"/>
+  </screen>
+
+  <screen name="PiconsUpdaterView" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*PiconsUpdaterView*-->
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;21" secondfont="Regular;19" position="42,80" size="736,180" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="backgroundImage" position="235,275" size="350,210" zPosition="1" transparent="1" alphatest="blend" />
+	<widget backgroundColor="Kravenbg3" name="previewImage" position="252,285" size="315,189" zPosition="2" transparent="1" alphatest="blend" />
+	<widget backgroundColor="Kravenbg3" name="foregroundImage" position="235,275" size="350,210" zPosition="3" transparent="1" alphatest="blend" />
+	<eLabel backgroundColor="Kravenbg3" text="coded by svox, idea by arn354" font="Regular2;22" foregroundColor="KravenFont2" halign="center" position="42,557" size="736,27" transparent="1" />
+    <widget name="HelpWindow" position="42,502" size="736,135" zPosition="98" transparent="1" alphatest="blend" />
+	<eLabel backgroundColor="KravenIBbg3" text="Cancel" position="47,670" size="240,26" font="Regular;20" foregroundColor="KravenButton" transparent="1" />
+	<eLabel backgroundColor="KravenIBbg3" text="Save" position="297,670" size="240,26" font="Regular;20" foregroundColor="KravenButton" transparent="1" />
+	<eLabel backgroundColor="KravenIBbg3" text="Download Picons" position="547,670" size="240,26" font="Regular;20" foregroundColor="KravenButton" transparent="1" />
+    <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="42,697" size="200,5" />
+    <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="292,697" size="200,5" />
+    <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_yellow1.png" position="542,697" size="200,5" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen name="JobProgressView" position="center,318" size="440,122" title="Job Progress" backgroundColor="Kravenbg6">
+	<widget backgroundColor="Kravenbg6" source="titleText" render="Label" position="10,10" size="420,27" font="Regular;22" foregroundColor="KravenFont1" transparent="1" />
+	<widget name="downloadProgress" position="10,53" size="420,15" borderWidth="1" foregroundColor="KravenProgress" borderColor="KravenFont1" transparent="1" />
+	<widget backgroundColor="Kravenbg6" source="downloadProgressText" render="Label" position="10,78" size="420,27" font="Regular;22" foregroundColor="KravenFont1" transparent="1" />
   </screen>
 
   <screen name="HDFRadio" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
