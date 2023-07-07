@@ -1406,7 +1406,7 @@ class KravenHD(ConfigListScreen, Screen):
 				list.append(getConfigListEntry(_("Refresh interval (in minutes)"), config.plugins.KravenHD.refreshInterval, _("Choose the frequency of loading weather data from the internet.")))
 				emptyLines+=2
 			else:
-				if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc") and (fileExists("/usr/share/enigma2/Kraven-user-icons/3200.png") or fileExists("/usr/share/enigma2/Kraven-user-icons/NA.png")):
+				if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
 					list.append(getConfigListEntry(_("Use custom weather icons"), config.plugins.KravenHD.CustomWeatherFolder, _("Choose whether to display own weather icons or not.")))
 				else:
 					emptyLines+=1
