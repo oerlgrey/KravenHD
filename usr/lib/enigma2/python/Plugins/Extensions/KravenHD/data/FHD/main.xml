@@ -348,6 +348,57 @@
     <panel name="MenuOKExit"/>
   </screen>
 
+  <screen name="PluginBrowserGrid" position="0,0" size="1920,1080" title="Plugin browser" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*PluginBrowserGrid*-->
+	<widget backgroundColor="Kravenbg" name="description" position="63,126" size="1794,45" font="Regular2;35" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1"/>
+	<widget backgroundColor="#0x505050" source="pluginGrid" render="Listbox" position="81,207" size="1788,726" foregroundColor="#0xffffff" itemSpacing="15,15" selectionZoom="10" scrollbarMode="showOnDemand" listOrientation="grid" moveBackgroundColor="KravenSelection" transparent="1">
+	  <convert type="TemplatedMultiContent">
+			{
+			"template": [
+				MultiContentEntryText(pos = (0, 0), size = (276, 159), font=0, backcolor=0x505050),
+				MultiContentEntryText(pos = (7, 75), size = (262, 75), font=0, flags = RT_VALIGN_CENTER|RT_HALIGN_CENTER|RT_WRAP, text = 1),
+				MultiContentEntryPixmapAlphaBlend(pos=(63, 15), size=(150, 60), png=3, flags=BT_SCALE)
+			],
+			"fonts": [gFont("Regular", 27),gFont("Regular", 21)],
+			"itemWidth": 276,
+			"itemHeight": 159
+			}
+	  </convert>
+	</widget>
+    <panel name="Title-big2"/>
+	<panel name="Background"/>
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons2"/>
+    <panel name="MenuOKExit"/>
+  </screen>
+
+  <screen name="PluginAction" position="0,0" size="1920,1080" title="Downloadable plugins" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*PluginAction*-->
+	<widget backgroundColor="Kravenbg3" render="Listbox" source="plugins" position="63,120" size="1104,675" selectionPixmap="KravenHD/graphics/sel_50.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
+	  <convert type="TemplatedMultiContent">
+			{
+			"template": [
+				MultiContentEntryPixmapAlphaBlend(pos=(7, 0), size=(90, 75), png=6, flags=BT_SCALE),
+				MultiContentEntryText(pos=(105, 0), size=(900, 75), font=0, flags=RT_VALIGN_CENTER, text=2), # Category
+				MultiContentEntryText(pos=(105, 0), size=(900, 38), font=1, flags=RT_VALIGN_CENTER, text=11), # Name + Version
+				# MultiContentEntryText(pos=(105, 0), size=(675, 38), font=1, flags=RT_VALIGN_CENTER, text=3), Name
+				# MultiContentEntryText(pos=(780, 0), size=(225, 38), font=1, flags=RT_VALIGN_CENTER, text=5), Version
+				MultiContentEntryText(pos=(105, 39), size=(900, 33), font=2, flags=RT_VALIGN_CENTER, text=4, color=0x00b0b0b0), # Description
+				MultiContentEntryPixmapAlphaBlend(pos=(1014, 1), size=(72, 72), png=7, flags=BT_SCALE)
+			],
+			"fonts": [gFont("Regular", 35),gFont("Regular", 27),gFont("Regular", 24)],
+			"itemHeight": 75
+			}
+	  </convert>
+	</widget>
+	<widget backgroundColor="Kravenbg3" name="description" position="63,810" size="1104,123" font="Regular2;32" foregroundColor="KravenFont2" conditional="description" halign="center" valign="center" transparent="1"/>
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+    <panel name="OKExit"/>
+  </screen>
+
   <screen backgroundColor="Kravenbg2" flags="wfNoBorder" name="NumericalTextInputHelpDialog" position="63,753" size="1104,202" zPosition="98">
     <eLabel backgroundColor="KravenBorder" position="0,0" size="1104,3" transparent="0" zPosition="9" />
     <eLabel backgroundColor="KravenBorder" position="0,0" size="3,202" transparent="0" zPosition="9" />
@@ -3716,6 +3767,11 @@
     <widget backgroundColor="Kravenbg6" name="text" position="494,369" size="932,52" font="Regular;41" foregroundColor="KravenFont1" valign="center" noWrap="1" transparent="1" />
     <widget backgroundColor="#001E1E1E" name="list" position="491,438" size="938,335" selectionDisabled="1" foregroundColor="white" transparent="1" />
     <widget backgroundColor="Kravenbg6" name="locale" conditional="locale" position="491,794" size="938,41" font="Regular;32" foregroundColor="KravenFont1" transparent="1" noWrap="1" />
+  </screen>
+
+  <screen name="Processing" position="center,499" size="780,138" title="Processing" flags="wfBorder" zPosition="99" backgroundColor="Kravenbg6">
+	<widget backgroundColor="Kravenbg6" name="progress" foregroundColor="KravenFont1" position="15,12" size="750,41" transparent="1"/>
+	<widget backgroundColor="Kravenbg6" name="description" position="15,81" size="750,41" font="Regular;32" foregroundColor="KravenFont1" halign="center" transparent="1" />
   </screen>
 
   <screen name="InputBox" position="center,499" size="780,138" title="Input" flags="wfBorder" zPosition="1" backgroundColor="Kravenbg6">

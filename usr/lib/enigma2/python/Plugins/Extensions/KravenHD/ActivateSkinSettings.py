@@ -653,11 +653,15 @@ config.plugins.KravenHD.WeatherStyleNoInternet = ConfigSelection(default="none",
 				("none", _("off"))
 				])
 
-IconsList = [_("off")]
-if path.exists("/usr/share/enigma2/WeatherIconSets"):
-	folders = listdir("/usr/share/enigma2/WeatherIconSets")
-	IconsList.extend(folders)
-config.plugins.KravenHD.CustomWeatherFolder = ConfigSelection(default=_("off"), choices = IconsList)
+IconsList = [("none", _("off"))]
+IconDir = "/usr/share/enigma2/WeatherIconSets"
+if path.exists(IconDir):
+	folders = listdir(IconDir)
+	for folder in folders:
+		folderpath = path.join(IconDir, folder)
+		if path.isdir(folderpath):
+			IconsList.append((folder, folder))
+config.plugins.KravenHD.CustomWeatherFolder = ConfigSelection(default="none", choices = IconsList)
 
 config.plugins.KravenHD.ECMVisible = ConfigSelection(default="none", choices = [
 				("none", _("off")),
@@ -1865,12 +1869,13 @@ class ActivateSkinSettings:
 			self.skinSearchAndReplace.append([',' + HSize_old + '" name="KravenEventNowHeight"', ',' + HSize_new + '"'])
 
 		### Custom Weather Icons
-		customFolder = "/usr/share/enigma2/WeatherIconSets/" + config.plugins.KravenHD.CustomWeatherFolder.value
-		if config.plugins.KravenHD.CustomWeatherFolder.value != _("off") and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc") and fileExists(customFolder):
-			self.skinSearchAndReplace.append(["/usr/share/enigma2/KravenHD/WetterIcons/", customFolder])
-		else:
-			config.plugins.KravenHD.CustomWeatherFolder.value = _("off")
-			config.plugins.KravenHD.CustomWeatherFolder.save()
+		if config.plugins.KravenHD.CustomWeatherFolder.value != "none":
+			customFolder = "/usr/share/enigma2/WeatherIconSets/" + str(config.plugins.KravenHD.CustomWeatherFolder.value) + "/"
+			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc") and fileExists(customFolder):
+				self.skinSearchAndReplace.append(["/usr/share/enigma2/KravenHD/WetterIcons/", customFolder])
+			else:
+				config.plugins.KravenHD.CustomWeatherFolder.value = "none"
+				config.plugins.KravenHD.CustomWeatherFolder.save()
 
 		### Clock Analog Color
 		if self.actClockstyle == "clock-analog":

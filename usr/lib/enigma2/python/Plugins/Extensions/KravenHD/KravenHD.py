@@ -690,11 +690,15 @@ config.plugins.KravenHD.WeatherStyleNoInternet = ConfigSelection(default="none",
 				("none", _("off"))
 				])
 
-IconsList = [_("off")]
-if path.exists("/usr/share/enigma2/WeatherIconSets"):
-	folders = listdir("/usr/share/enigma2/WeatherIconSets")
-	IconsList.extend(folders)
-config.plugins.KravenHD.CustomWeatherFolder = ConfigSelection(default=_("off"), choices = IconsList)
+IconsList = [("none", _("off"))]
+IconDir = "/usr/share/enigma2/WeatherIconSets"
+if path.exists(IconDir):
+	folders = listdir(IconDir)
+	for folder in folders:
+		folderpath = path.join(IconDir, folder)
+		if path.isdir(folderpath):
+			IconsList.append((folder, folder))
+config.plugins.KravenHD.CustomWeatherFolder = ConfigSelection(default="none", choices = IconsList)
 
 config.plugins.KravenHD.ECMVisible = ConfigSelection(default="none", choices = [
 				("none", _("off")),
@@ -1396,7 +1400,10 @@ class KravenHD(ConfigListScreen, Screen):
 				else:
 					list.append(getConfigListEntry(_("Weather"), config.plugins.KravenHD.WeatherStyle2, _("Activate or deactivate displaying the weather in the infobar.")))
 					self.actWeatherstyle=config.plugins.KravenHD.WeatherStyle2.value
-			if not fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
+				list.append(getConfigListEntry(_("Use custom weather icons"), config.plugins.KravenHD.CustomWeatherFolder, _("Choose from available custom weather icons or disable this option.")))
+				emptyLines+=5
+			else:
 				list.append(getConfigListEntry(_("Search option"), config.plugins.KravenHD.msn_searchby, _("Choose from different options to enter your settings.\nPress the red button to search for the weather code.")))
 				if config.plugins.KravenHD.msn_searchby.value == "location":
 					list.append(getConfigListEntry(_("Location "), config.plugins.KravenHD.msn_cityname, _("Enter your location.\nPress OK to use the virtual keyboard.\nPress the red button to search for the weather code.")))
@@ -1405,12 +1412,6 @@ class KravenHD(ConfigListScreen, Screen):
 				list.append(getConfigListEntry(_("Language"), config.plugins.KravenHD.msn_language, _("Specify the language for the weather output.")))
 				list.append(getConfigListEntry(_("Refresh interval (in minutes)"), config.plugins.KravenHD.refreshInterval, _("Choose the frequency of loading weather data from the internet.")))
 				emptyLines+=2
-			else:
-				if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
-					list.append(getConfigListEntry(_("Use custom weather icons"), config.plugins.KravenHD.CustomWeatherFolder, _("Choose whether to display own weather icons or not.")))
-				else:
-					emptyLines+=1
-				emptyLines+=5
 		else:
 			list.append(getConfigListEntry(_("Weather"), config.plugins.KravenHD.WeatherStyleNoInternet, _("You have no internet connection. This function is disabled.")))
 			self.actWeatherstyle="none"
@@ -2031,7 +2032,7 @@ class KravenHD(ConfigListScreen, Screen):
 			elif option.value == "480":
 				self.showText(50, "08:00")
 		elif option == config.plugins.KravenHD.CustomWeatherFolder:
-			if option.value == _("off"):
+			if option.value == "none":
 				self.showText(62, _("Off"))
 			else:
 				self.showText(36, option.value)
@@ -3488,12 +3489,13 @@ class KravenHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append([',' + HSize_old + '" name="KravenEventNowHeight"', ',' + HSize_new + '"'])
 
 		### Custom Weather Icons
-		customFolder = "/usr/share/enigma2/WeatherIconSets/" + config.plugins.KravenHD.CustomWeatherFolder.value
-		if config.plugins.KravenHD.CustomWeatherFolder.value != _("off") and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc") and fileExists(customFolder):
-			self.skinSearchAndReplace.append(["/usr/share/enigma2/KravenHD/WetterIcons/", customFolder])
-		else:
-			config.plugins.KravenHD.CustomWeatherFolder.value = _("off")
-			config.plugins.KravenHD.CustomWeatherFolder.save()
+		if config.plugins.KravenHD.CustomWeatherFolder.value != "none":
+			customFolder = "/usr/share/enigma2/WeatherIconSets/" + str(config.plugins.KravenHD.CustomWeatherFolder.value) + "/"
+			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc") and fileExists(customFolder):
+				self.skinSearchAndReplace.append(["/usr/share/enigma2/KravenHD/WetterIcons/", customFolder])
+			else:
+				config.plugins.KravenHD.CustomWeatherFolder.value = "none"
+				config.plugins.KravenHD.CustomWeatherFolder.save()
 
 		### Clock Analog Color
 		if self.actClockstyle == "clock-analog":
