@@ -1401,7 +1401,7 @@ class KravenHD(ConfigListScreen, Screen):
 					list.append(getConfigListEntry(_("Weather"), config.plugins.KravenHD.WeatherStyle2, _("Activate or deactivate displaying the weather in the infobar.")))
 					self.actWeatherstyle=config.plugins.KravenHD.WeatherStyle2.value
 			if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
-				list.append(getConfigListEntry(_("Use custom weather icons"), config.plugins.KravenHD.CustomWeatherFolder, _("Choose from available custom weather icons or disable this option.")))
+				list.append(getConfigListEntry(_("Use custom weather icons"), config.plugins.KravenHD.CustomWeatherFolder, _("Choose from available custom weather icons. The icons must be in a subdirectory in '/usr/share/enigma2/WeatherIconSets'.")))
 				emptyLines+=5
 			else:
 				list.append(getConfigListEntry(_("Search option"), config.plugins.KravenHD.msn_searchby, _("Choose from different options to enter your settings.\nPress the red button to search for the weather code.")))

@@ -372,9 +372,32 @@
     <panel name="MenuOKExit"/>
   </screen>
 
+  <screen name="PluginBrowserList" position="0,0" size="1920,1080" title="Plugin browser" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*PluginBrowserList*-->
+	<widget backgroundColor="Kravenbg3" source="pluginList" render="Listbox" position="63,120" size="1104,750" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_50.png" scrollbarMode="showOnDemand" enableWrapAround="1" listOrientation="vertical" transparent="1">
+	  <convert type="TemplatedMultiContent">
+			{
+			"template": [
+				MultiContentEntryText(pos = (180, 4), size = (900, 37), font=0, flags = RT_HALIGN_LEFT, text = 1),
+				MultiContentEntryText(pos = (180, 38), size = (900, 33), font=1, flags = RT_HALIGN_LEFT, text = 2),
+				MultiContentEntryPixmapAlphaBlend(pos=(15, 7), size=(150, 60), png=3, flags=BT_SCALE)
+			],
+			"fonts": [gFont("Regular", 26),gFont("Regular", 24)],
+			"itemHeight": 75
+			}
+	  </convert>
+	</widget>
+	<widget backgroundColor="Kravenbg3" name="description" position="63,892" size="1104,41" font="Regular2;32" foregroundColor="KravenFont2" halign="center" valign="center" transparent="1"/>
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+    <panel name="MenuOKExit"/>
+  </screen>
+
   <screen name="PluginAction" position="0,0" size="1920,1080" title="Downloadable plugins" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*PluginAction*-->
-	<widget backgroundColor="Kravenbg3" render="Listbox" source="plugins" position="63,120" size="1104,675" selectionPixmap="KravenHD/graphics/sel_50.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
+	<widget backgroundColor="Kravenbg3" render="Listbox" source="plugins" position="63,120" size="1104,750" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_50.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 	  <convert type="TemplatedMultiContent">
 			{
 			"template": [
@@ -383,7 +406,7 @@
 				MultiContentEntryText(pos=(105, 0), size=(900, 38), font=1, flags=RT_VALIGN_CENTER, text=11), # Name + Version
 				# MultiContentEntryText(pos=(105, 0), size=(675, 38), font=1, flags=RT_VALIGN_CENTER, text=3), Name
 				# MultiContentEntryText(pos=(780, 0), size=(225, 38), font=1, flags=RT_VALIGN_CENTER, text=5), Version
-				MultiContentEntryText(pos=(105, 39), size=(900, 33), font=2, flags=RT_VALIGN_CENTER, text=4, color=0x00b0b0b0), # Description
+				MultiContentEntryText(pos=(105, 39), size=(900, 33), font=2, flags=RT_VALIGN_CENTER, text=4), # Description
 				MultiContentEntryPixmapAlphaBlend(pos=(1014, 1), size=(72, 72), png=7, flags=BT_SCALE)
 			],
 			"fonts": [gFont("Regular", 35),gFont("Regular", 27),gFont("Regular", 24)],
@@ -391,7 +414,7 @@
 			}
 	  </convert>
 	</widget>
-	<widget backgroundColor="Kravenbg3" name="description" position="63,810" size="1104,123" font="Regular2;32" foregroundColor="KravenFont2" conditional="description" halign="center" valign="center" transparent="1"/>
+	<widget backgroundColor="Kravenbg3" name="description" position="63,882" size="1104,41" font="Regular2;32" foregroundColor="KravenFont2" conditional="description" halign="center" valign="center" transparent="1"/>
     <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
@@ -3452,7 +3475,6 @@
 
   <screen name="JobView" position="0,0" size="1920,1080" title="JobView" backgroundColor="transparent" flags="wfNoBorder">
 	<!--*JobView*-->
-    <panel name="Title-big"/>
     <widget backgroundColor="Kravenbg3" source="job_name" render="Label" foregroundColor="KravenFont2" font="Regular2;32" position="63,120" size="1104,41" transparent="1" />
     <widget backgroundColor="Kravenbg3" source="job_task" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="63,195" size="861,41" transparent="1" />
     <widget backgroundColor="Kravenbg3" source="job_progress" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="990,195" size="177,41" halign="right" zPosition="2" transparent="1">
@@ -3464,18 +3486,63 @@
     <widget backgroundColor="KravenIBbg2" source="cancelable" render="FixedLabel" text="Cancel" foregroundColor="KravenButton" font="Regular;30" position="71,1004" size="330,39" halign="left" valign="center" zPosition="1" transparent="1">
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget backgroundColor="KravenIBbg2" name="cancelable" render="FixedLabel" text="Cancel" foregroundColor="KravenButton" font="Regular;30" position="71,1004" size="330,39" halign="left" valign="center" zPosition="1" transparent="1">
-      <convert type="ConditionalShowHide" />
-    </widget>
+	<widget source="cancelable" render="Pixmap" pixmap="buttons/key_red1.png" position="63,1045" size="300,7" alphatest="blend" transparent="1">
+	  <convert type="ConditionalShowHide" />
+	</widget>
     <widget backgroundColor="KravenIBbg2" source="finished" render="FixedLabel" text="OK" foregroundColor="KravenButton" font="Regular;30" position="446,1004" size="330,39" halign="left" valign="center" zPosition="1" transparent="1">
       <convert type="ConditionalShowHide" />
     </widget>
+	<widget source="finished" render="Pixmap" pixmap="buttons/key_green1.png" position="438,1045" size="300,7" alphatest="blend" transparent="1">
+	  <convert type="ConditionalShowHide" />
+	</widget>
     <widget backgroundColor="KravenIBbg2" source="backgroundable" render="FixedLabel" text="Continue in background" foregroundColor="KravenButton" font="Regular;30" position="1196,1004" size="330,39" halign="left" valign="center" zPosition="1" transparent="1">
       <convert type="ConditionalShowHide" />
     </widget>
+	<widget source="backgroundable" render="Pixmap" pixmap="buttons/key_blue1.png" position="1188,1045" size="300,7" alphatest="blend" transparent="1">
+	  <convert type="ConditionalShowHide" />
+	</widget>
+    <panel name="Title-big"/>
 	<!-- Logo -->
 	<panel name="gradient-menu"/>
-    <panel name="RGYB_Buttons"/>
+  </screen>
+
+  <screen name="TaskView" position="0,0" size="1920,1080" title="TaskView" backgroundColor="transparent" flags="wfNoBorder">
+	<!--*TaskView*-->
+    <widget backgroundColor="Kravenbg3" source="name" render="Label" foregroundColor="KravenFont2" font="Regular2;32" position="63,120" size="1104,41" transparent="1" />
+    <widget backgroundColor="Kravenbg3" source="task" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="63,195" size="861,41" transparent="1" />
+    <widget backgroundColor="Kravenbg3" source="progress" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="990,195" size="177,41" halign="right" zPosition="2" transparent="1">
+      <convert type="ProgressToText" />
+    </widget>
+    <widget backgroundColor="Kravenbg3" source="progress" render="Progress" foregroundColor="KravenProgress" pixmap="KravenHD/progress/progress736.png" borderColor="KravenBorder" borderWidth="3" position="63,279" size="1104,23" transparent="1" zPosition="2" />
+    <widget backgroundColor="Kravenbg3" source="status" render="Label" foregroundColor="KravenFont1" font="Regular;32" position="63,345" size="1104,41" transparent="1" />
+    <widget backgroundColor="Kravenbg3" name="config" font="Regular;31" secondfont="Regular;29" position="63,420" size="1104,180" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="KravenIBbg2" source="key_red" render="Label" foregroundColor="KravenButton" font="Regular;30" position="71,1004" size="330,39" halign="left" valign="center" zPosition="1" transparent="1">
+      <convert type="ConditionalShowHide" />
+    </widget>
+	<widget source="key_red" render="Pixmap" pixmap="buttons/key_red1.png" position="63,1045" size="300,7" alphatest="blend" transparent="1">
+	  <convert type="ConditionalShowHide" />
+	</widget>
+    <widget backgroundColor="KravenIBbg2" source="key_green" render="Label" foregroundColor="KravenButton" font="Regular;30" position="446,1004" size="330,39" halign="left" valign="center" zPosition="1" transparent="1">
+      <convert type="ConditionalShowHide" />
+    </widget>
+	<widget source="key_green" render="Pixmap" pixmap="buttons/key_green1.png" position="438,1045" size="300,7" alphatest="blend" transparent="1">
+	  <convert type="ConditionalShowHide" />
+	</widget>
+    <widget backgroundColor="KravenIBbg2" source="key_yellow" render="Label" foregroundColor="KravenButton" font="Regular;30" position="821,1004" size="330,39" halign="left" valign="center" zPosition="1" transparent="1">
+      <convert type="ConditionalShowHide" />
+    </widget>
+	<widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow1.png" position="813,1045" size="300,7" alphatest="blend" transparent="1">
+	  <convert type="ConditionalShowHide" />
+	</widget>
+    <widget backgroundColor="KravenIBbg2" source="key_blue" render="Label" foregroundColor="KravenButton" font="Regular;30" position="1196,1004" size="330,39" halign="left" valign="center" zPosition="1" transparent="1">
+      <convert type="ConditionalShowHide" />
+    </widget>
+	<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue1.png" position="1188,1045" size="300,7" alphatest="blend" transparent="1">
+	  <convert type="ConditionalShowHide" />
+	</widget>
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
   </screen>
 
   <screen name="StreamingClientsInfo" title="Streaming clients info" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
@@ -3771,7 +3838,7 @@
 
   <screen name="Processing" position="center,499" size="780,138" title="Processing" flags="wfBorder" zPosition="99" backgroundColor="Kravenbg6">
 	<widget backgroundColor="Kravenbg6" name="progress" foregroundColor="KravenFont1" position="15,12" size="750,41" transparent="1"/>
-	<widget backgroundColor="Kravenbg6" name="description" position="15,81" size="750,41" font="Regular;32" foregroundColor="KravenFont1" halign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg6" name="description" position="15,81" size="750,41" font="Regular;32" foregroundColor="KravenFont1" transparent="1" />
   </screen>
 
   <screen name="InputBox" position="center,499" size="780,138" title="Input" flags="wfBorder" zPosition="1" backgroundColor="Kravenbg6">
