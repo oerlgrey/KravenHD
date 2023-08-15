@@ -25,7 +25,7 @@ from Screens.ChoiceBox import ChoiceBox
 from Screens.Standby import TryQuitMainloop
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Components.ActionMap import ActionMap
-from Components.AVSwitch import AVSwitch
+from Components.AVSwitch import iAVSwitch as eAVSwitch
 from copy import deepcopy
 from Components.config import config, configfile, getConfigListEntry, ConfigYesNo, ConfigSubsection, ConfigSelection, ConfigText, ConfigClock, ConfigSlider
 from Components.ConfigList import ConfigListScreen
@@ -1147,7 +1147,7 @@ class KravenHD(ConfigListScreen, Screen):
 		self.dateiTMP = self.datei + ".tmp"
 		self.picPath = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/"
 		self.profiles = "/etc/enigma2/"
-		self.Scale = AVSwitch().getFramebufferScale()
+		self.Scale = eAVSwitch.getFramebufferScale()
 		self.PicLoad = ePicLoad()
 		self["helperimage"] = Pixmap()
 		self["Canvas"] = CanvasSource()

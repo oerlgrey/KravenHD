@@ -73,8 +73,12 @@ class KravenHDClockToText(Converter, object):
 			return "%d:%02d" % (time / 3600, (time / 60) - ((time / 3600) * 60))
 		elif self.type == self.TIMESTAMP:
 			return str(time)
-		
-		t = localtime(time)
+
+		# fix overflow error
+		try:
+			t = localtime(time)
+		except OverflowError:
+			return "n/a"
 		
 		if self.type == self.WITH_SECONDS:
 			return "%2d:%02d:%02d" % (t.tm_hour, t.tm_min, t.tm_sec)
