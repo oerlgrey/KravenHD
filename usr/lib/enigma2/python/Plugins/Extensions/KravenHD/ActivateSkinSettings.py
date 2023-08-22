@@ -852,11 +852,6 @@ config.plugins.KravenHD.PVRState = ConfigSelection(default="pvrstate-center-big"
 config.plugins.KravenHD.PigStyle = ConfigText(default="")
 config.plugins.KravenHD.PigMenuActive = ConfigYesNo(default=False)
 
-config.plugins.KravenHD.FileCommander = ConfigSelection(default="filecommander-hor", choices = [
-				("filecommander-hor", _("horizontal")),
-				("filecommander-ver", _("vertical"))
-				])
-
 config.plugins.KravenHD.msn_language = ConfigSelection(default="de-DE", choices = [
 				("de-DE", _("Deutsch")),
 				("en-US", _("English")),
@@ -2425,9 +2420,6 @@ class ActivateSkinSettings:
 			config.usage.numberzap_show_picon.save()
 			config.usage.numberzap_show_servicename.value = True
 			config.usage.numberzap_show_servicename.save()
-
-		### FileCommander
-		self.appendSkinFile(self.data + config.plugins.KravenHD.FileCommander.value + ".xml")
 
 		### EPGSelection
 		self.appendSkinFile(self.data + config.plugins.KravenHD.EPGSelection.value + ".xml")

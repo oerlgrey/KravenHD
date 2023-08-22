@@ -25,7 +25,6 @@ from Screens.ChoiceBox import ChoiceBox
 from Screens.Standby import TryQuitMainloop
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Components.ActionMap import ActionMap
-from Components.AVSwitch import iAVSwitch as eAVSwitch
 from copy import deepcopy
 from Components.config import config, configfile, getConfigListEntry, ConfigYesNo, ConfigSubsection, ConfigSelection, ConfigText, ConfigClock, ConfigSlider
 from Components.ConfigList import ConfigListScreen
@@ -889,11 +888,6 @@ config.plugins.KravenHD.PVRState = ConfigSelection(default="pvrstate-center-big"
 config.plugins.KravenHD.PigStyle = ConfigText(default="")
 config.plugins.KravenHD.PigMenuActive = ConfigYesNo(default=False)
 
-config.plugins.KravenHD.FileCommander = ConfigSelection(default="filecommander-hor", choices = [
-				("filecommander-hor", _("horizontal")),
-				("filecommander-ver", _("vertical"))
-				])
-
 config.plugins.KravenHD.msn_language = ConfigSelection(default="de-DE", choices = [
 				("de-DE", _("Deutsch")),
 				("en-US", _("English")),
@@ -1147,7 +1141,6 @@ class KravenHD(ConfigListScreen, Screen):
 		self.dateiTMP = self.datei + ".tmp"
 		self.picPath = "/usr/lib/enigma2/python/Plugins/Extensions/KravenHD/images/"
 		self.profiles = "/etc/enigma2/"
-		self.Scale = eAVSwitch.getFramebufferScale()
 		self.PicLoad = ePicLoad()
 		self["helperimage"] = Pixmap()
 		self["Canvas"] = CanvasSource()
@@ -1472,14 +1465,13 @@ class KravenHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("MediaPortal"), config.plugins.KravenHD.MediaPortal, _("Choose whether you want the Kraven skin to be applied to 'MediaPortal' or not. To remove it again, you must deactivate it here and activate another skin in 'MediaPortal'.")))
 		else:
 			emptyLines+=1
-		list.append(getConfigListEntry(_("FileCommander"), config.plugins.KravenHD.FileCommander, _("Choose from different styles to display FileCommander.")))
 		list.append(getConfigListEntry(_("Popups"), config.plugins.KravenHD.PopupStyle, _("Choose from different styles to display popups like 'MessageBox', 'ChoiceBox', 'ExtensionsList', 'VirtualKeyboard' and more.")))
 		list.append(getConfigListEntry(_("PermanentClock-Color"), config.plugins.KravenHD.PermanentClock, _("Choose the colors of PermanentClock.")))
 		if config.plugins.KravenHD.PermanentClock.value in ("permanentclock-transparent-big", "permanentclock-transparent-small"):
 			list.append(getConfigListEntry(_("PermanentClock-Font"), config.plugins.KravenHD.PermanentClockFontList, _("Choose the font color of PermanentClock. Press OK to define your own RGB color.")))
 		else:
 			emptyLines+=1
-		for i in range(emptyLines):
+		for i in range(emptyLines+1):
 			list.append(getConfigListEntry(_(" "), ))
 
 		# page 7
@@ -2337,7 +2329,7 @@ class KravenHD(ConfigListScreen, Screen):
 		self.onLayoutFinish.append(self.ShowPicture)
 
 	def ShowPicture(self):
-		self.PicLoad.setPara([self["helperimage"].instance.size().width(), self["helperimage"].instance.size().height(), self.Scale[0], self.Scale[1], 0, 1, "#00000000"])
+		self.PicLoad.setPara([self["helperimage"].instance.size().width(), self["helperimage"].instance.size().height(), 1, 1, 0, 1, "#00000000"])
 		if self.picPath is not None:
 			self.picPath = None
 			self.PicLoad.startDecode(self.picPath)
@@ -4044,9 +4036,6 @@ class KravenHD(ConfigListScreen, Screen):
 			config.usage.numberzap_show_picon.save()
 			config.usage.numberzap_show_servicename.value = True
 			config.usage.numberzap_show_servicename.save()
-
-		### FileCommander
-		self.appendSkinFile(self.data + config.plugins.KravenHD.FileCommander.value + ".xml")
 
 		### EPGSelection
 		self.appendSkinFile(self.data + config.plugins.KravenHD.EPGSelection.value + ".xml")

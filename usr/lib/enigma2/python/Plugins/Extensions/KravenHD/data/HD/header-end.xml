@@ -81,6 +81,7 @@
 	<parameter name="HDFRadioDirectory" value="33,0,494,30" />
   </parameters>
   <fonts>
+	<configList entryFont="Regular;21" valueFont="Regular;19" />
 	<alias name="FileList" font="Regular" size="22" height="30" />
 	<alias name="FileListMulti" font="Regular" size="22" height="30" />
 	<alias name="PluginBrowser0" font="Regular" size="22" height="50"/>
