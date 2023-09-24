@@ -36,30 +36,6 @@
 	  </widget>
 	</screen>
 	
-	<screen name="infobar-style-x1-online">
-      <ePixmap alphatest="blend" pixmap="KravenHD/icons/ico_net_off.png" position="942,933" size="60,30" zPosition="1" transparent="1" />
-      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_net_on.png" position="942,933" zPosition="2" size="60,30" transparent="1" alphatest="blend">
-        <convert type="KravenHDRouteInfo">Lan</convert>
-        <convert type="ConditionalShowHide" />
-      </widget>
-      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_wifi_on.png" position="942,933" zPosition="3" size="60,30" transparent="1" alphatest="blend">
-        <convert type="KravenHDRouteInfo">Wifi</convert>
-        <convert type="ConditionalShowHide" />
-      </widget>
-	</screen>
-	
-	<screen name="infobar-style-x1-sib-online">
-      <ePixmap alphatest="blend" pixmap="KravenHD/icons/ico_net_off.png" position="942,933" size="60,30" zPosition="1" transparent="1" />
-      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_net_on.png" position="942,933" zPosition="2" size="60,30" transparent="1" alphatest="blend">
-        <convert type="KravenHDRouteInfoSIB">Lan</convert>
-        <convert type="ConditionalShowHide" />
-      </widget>
-      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_wifi_on.png" position="942,933" zPosition="3" size="60,30" transparent="1" alphatest="blend">
-        <convert type="KravenHDRouteInfoSIB">Wifi</convert>
-        <convert type="ConditionalShowHide" />
-      </widget>
-	</screen>
-	
 	<screen name="infobar-style-x1">
 	  <widget alphatest="blend" position="30,870" size="330,198" render="Picon" source="session.CurrentService" transparent="1" zPosition="4">
 		<convert type="ServiceName">Reference</convert>

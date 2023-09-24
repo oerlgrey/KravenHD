@@ -61,54 +61,6 @@
 	  </widget>
 	</screen>
 	
-	<screen name="infobar-style-zz1-online">
-      <ePixmap alphatest="blend" pixmap="KravenHD/icons/ico_net_off.png" position="1006,530" size="40,20" zPosition="1" transparent="1" />
-      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_net_on.png" position="1006,530" zPosition="2" size="40,20" transparent="1" alphatest="blend">
-        <convert type="KravenHDRouteInfo">Lan</convert>
-        <convert type="ConditionalShowHide" />
-      </widget>
-      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_wifi_on.png" position="1006,530" zPosition="3" size="40,20" transparent="1" alphatest="blend">
-        <convert type="KravenHDRouteInfo">Wifi</convert>
-        <convert type="ConditionalShowHide" />
-      </widget>
-	</screen>
-	
-	<screen name="infobar-style-zz1-sib-online">
-      <ePixmap alphatest="blend" pixmap="KravenHD/icons/ico_net_off.png" position="1006,530" size="40,20" zPosition="1" transparent="1" />
-      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_net_on.png" position="1006,530" zPosition="2" size="40,20" transparent="1" alphatest="blend">
-        <convert type="KravenHDRouteInfoSIB">Lan</convert>
-        <convert type="ConditionalShowHide" />
-      </widget>
-      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_wifi_on.png" position="1006,530" zPosition="3" size="40,20" transparent="1" alphatest="blend">
-        <convert type="KravenHDRouteInfoSIB">Wifi</convert>
-        <convert type="ConditionalShowHide" />
-      </widget>
-	</screen>
-	
-	<screen name="infobar-style-zzz1-online">
-      <ePixmap alphatest="blend" pixmap="KravenHD/icons/ico_net_off.png" position="1006,482" size="40,20" zPosition="1" transparent="1" />
-      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_net_on.png" position="1006,482" zPosition="2" size="40,20" transparent="1" alphatest="blend">
-        <convert type="KravenHDRouteInfo">Lan</convert>
-        <convert type="ConditionalShowHide" />
-      </widget>
-      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_wifi_on.png" position="1006,482" zPosition="3" size="40,20" transparent="1" alphatest="blend">
-        <convert type="KravenHDRouteInfo">Wifi</convert>
-        <convert type="ConditionalShowHide" />
-      </widget>
-	</screen>
-	
-	<screen name="infobar-style-zzz1-sib-online">
-      <ePixmap alphatest="blend" pixmap="KravenHD/icons/ico_net_off.png" position="1006,482" size="40,20" zPosition="1" transparent="1" />
-      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_net_on.png" position="1006,482" zPosition="2" size="40,20" transparent="1" alphatest="blend">
-        <convert type="KravenHDRouteInfoSIB">Lan</convert>
-        <convert type="ConditionalShowHide" />
-      </widget>
-      <widget source="session.CurrentService" render="Pixmap" pixmap="KravenHD/icons/ico_wifi_on.png" position="1006,482" zPosition="3" size="40,20" transparent="1" alphatest="blend">
-        <convert type="KravenHDRouteInfoSIB">Wifi</convert>
-        <convert type="ConditionalShowHide" />
-      </widget>
-	</screen>
-	
 	<screen name="infobar-style-zz1">
 	  <widget backgroundColor="KravenIBbg" font="Regular;22" foregroundColor="KravenIBFont1" halign="left" noWrap="1" position="388,560" render="Label" size="60,27" source="session.Event_Now" transparent="1" zPosition="1">
 		<convert type="KravenHDEventTime">StartTime</convert>

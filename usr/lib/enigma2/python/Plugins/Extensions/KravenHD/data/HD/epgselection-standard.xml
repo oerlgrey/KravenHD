@@ -7,7 +7,7 @@
     <widget backgroundColor="Kravenbg" font="Regular2;24" halign="left" noWrap="1" foregroundColor="KravenFont2" position="130,83" size="648,30" render="Label" source="Service" valign="center" transparent="1">
       <convert type="ServiceName">Name</convert>
     </widget>
-	<widget backgroundColor="Kravenbg" name="list" foregroundColor="KravenFont1" itemHeight="30" EventFontSingle="Regular;22" position="42,135" size="736,490" selectionPixmap="KravenHD/graphics/sel_ES.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="list" foregroundColor="KravenFont1" itemHeight="30" EventFontSingle="Regular;22" position="42,135" size="736,490" selectionPixmap="KravenHD/graphics/sel_ES.png" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
 	<panel name="gradient-menu"/>
     <panel name="MenuOKExit"/>
     <panel name="EPGSelection-template"/>

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2023-07-09 11:39+0200\n"
+"PO-Revision-Date: 2023-09-24 16:33+0200\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -2299,16 +2299,8 @@ msgid "Show poster"
 msgstr "Zeige Poster"
 
 #: KravenHD.py
-msgid "Show online indicator"
-msgstr "Zeige Online-Indikator"
-
-#: KravenHD.py
 msgid "Choose whether the poster should be displayed in the infobar or not."
 msgstr "Wählen Sie, ob das Poster in der Infoleiste angezeigt werden soll oder nicht."
-
-#: KravenHD.py
-msgid "Choose whether the online indicator should be displayed in the infobar or not."
-msgstr "Wählen Sie, ob der Online-Indikator in der Infoleiste angezeigt werden soll oder nicht."
 
 #: KravenHD.py
 msgid "Use custom weather icons"

@@ -9,7 +9,7 @@
     <widget source="Service" render="Label" position="512,75" size="266,25" font="Regular;19" foregroundColor="KravenFont2" backgroundColor="Kravenbg2" transparent="1" halign="right">
 	  <convert type="KravenHDDiskSpace">both</convert>
     </widget>
-    <widget backgroundColor="Kravenbg2" name="list" position="42,105" size="736,540" selectionPixmap="KravenHD/graphics/sel_MS.png" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="list" position="42,105" size="736,540" selectionPixmap="KravenHD/graphics/sel_MS.png" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" />
 	<widget source="session.VideoPicture" render="KravenHDPig3" position="822,75" size="272,153" zPosition="3" backgroundColor="transparent" />
     <eLabel backgroundColor="#00000000" position="822,75" size="272,153" transparent="0" zPosition="2" />
     <eLabel backgroundColor="KravenBorder2" position="822,75" size="272,3" transparent="0" zPosition="4" />

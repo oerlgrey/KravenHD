@@ -3,7 +3,7 @@
 	<!--*MovieSelection*-->
     <widget name="waitingtext" position="0,0" size="0,0" />
 	<eLabel text="MovieSelection" position="42,7" size="736,46" backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
-    <widget backgroundColor="Kravenbg" name="list" position="491,102" size="747,540" selectionPixmap="KravenHD/graphics/sel_MS.png" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="Kravenbg" name="list" position="491,102" size="747,540" selectionPixmap="KravenHD/graphics/sel_MS.png" foregroundColor="KravenFont1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" />
 	<widget source="Service" render="Label" position="497,70" size="444,27" font="Regular;22" foregroundColor="KravenFont2" backgroundColor="Kravenbg" transparent="1" noWrap="1" halign="left">
 	  <convert type="KravenHDDiskSpace">path</convert>
 	</widget>

@@ -1044,11 +1044,6 @@ config.plugins.KravenHD.PosterView = ConfigSelection(default="none", choices = [
 				("none", _("off"))
 				])
 
-config.plugins.KravenHD.OnlineInfo = ConfigSelection(default="none", choices = [
-				("on", _("on")),
-				("none", _("off"))
-				])
-
 config.plugins.KravenHD.IBProgressList = ConfigSelection(default="ffffff", choices = ProgressList)
 config.plugins.KravenHD.IBProgressSelf = ConfigText(default="ffffff")
 config.plugins.KravenHD.IBProgress = ConfigText(default="ffffff")
@@ -1375,8 +1370,7 @@ class KravenHD(ConfigListScreen, Screen):
 				emptyLines+=1
 		list.append(getConfigListEntry(_("System-Infos"), config.plugins.KravenHD.SystemInfo, _("Choose from different additional windows with system informations or deactivate them completely.")))
 		list.append(getConfigListEntry(_("Show poster"), config.plugins.KravenHD.PosterView, _("Choose whether the poster should be displayed in the infobar or not.")))
-		list.append(getConfigListEntry(_("Show online indicator"), config.plugins.KravenHD.OnlineInfo, _("Choose whether the online indicator should be displayed in the infobar or not.")))
-		for i in range(emptyLines+5):
+		for i in range(emptyLines+6):
 			list.append(getConfigListEntry(_(" "), ))
 
 		# page 5
@@ -3316,6 +3310,8 @@ class KravenHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress858.png"', " "]) # player
 			self.skinSearchAndReplace.append([' pixmap="KravenHD/progress/progress977.png"', " "]) # nopicon
 			self.skinSearchAndReplace.append(['name="KravenIBProgress" value="#00000000', 'name="KravenIBProgress" value="#00' + config.plugins.KravenHD.IBProgress.value])
+		else:
+			self.skinSearchAndReplace.append(['name="KravenIBProgress" value="#00000000', 'name="KravenIBProgress" value="#00C3461B'])
 
 		### Infobar Progress Background
 		if config.plugins.KravenHD.IBProgressBackgroundList.value == "none":
@@ -3837,24 +3833,6 @@ class KravenHD(ConfigListScreen, Screen):
 			elif config.plugins.KravenHD.InfobarStyle.value == "infobar-style-zzz1":
 				self.skinSearchAndReplace.append(['<!-- Poster view -->', '<panel name="infobar-style-zzz1-poster"/>'])
 
-		# show online info
-		if config.plugins.KravenHD.OnlineInfo.value == "on":
-			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2"):
-				self.skinSearchAndReplace.append(['<!-- Online info -->', '<panel name="infobar-style-x2-x3-z1-z2-online"/>'])
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
-				self.skinSearchAndReplace.append(['<!-- Online info -->', '<panel name="infobar-style-zz2-zz3-online"/>'])
-			else:
-				self.skinSearchAndReplace.append(['<!-- Online info -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-online"/>'])
-
-		# show online info in SecondInfoBar
-		if config.plugins.KravenHD.OnlineInfo.value == "on":
-			if config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-x2", "infobar-style-x3", "infobar-style-z1", "infobar-style-z2"):
-				self.skinSearchAndReplace.append(['<!-- SIB Online info -->', '<panel name="infobar-style-x2-x3-z1-z2-sib-online"/>'])
-			elif config.plugins.KravenHD.InfobarStyle.value in ("infobar-style-zz2", "infobar-style-zz3"):
-				self.skinSearchAndReplace.append(['<!-- SIB Online info -->', '<panel name="infobar-style-zz2-zz3-sib-online"/>'])
-			else:
-				self.skinSearchAndReplace.append(['<!-- SIB Online info -->', '<panel name="' + config.plugins.KravenHD.InfobarStyle.value + '-sib-online"/>'])
-
 		### SecondInfoBar
 		if config.plugins.KravenHD.SIB.value in ("sib1", "sib6", "sib7") and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/OAWeather/plugin.pyc"):
 			self.skinSearchAndReplace.append(['<!-- SIB style -->', '<panel name="' + config.plugins.KravenHD.SIB.value + '_OAWeather"/>'])
@@ -3911,18 +3889,18 @@ class KravenHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(['<!-- PVRState style -->', '<panel name="' + config.plugins.KravenHD.PVRState.value + '"/>'])
 			if config.plugins.KravenHD.SkinResolution.value == "hd":
 				if config.plugins.KravenHD.PVRState.value == "pvrstate-center-big":
-					self.skinSearchAndReplace.append(['screen name="PVRState" position="0,0" size="0,0"', 'screen name="PVRState" position="center,center" size="220,90"'])
+					self.skinSearchAndReplace.append(['PVRState" position="0,0" size="0,0"', 'PVRState" position="center,center" size="220,90"'])
 				elif config.plugins.KravenHD.PVRState.value == "pvrstate-center-small":
-					self.skinSearchAndReplace.append(['screen name="PVRState" position="0,0" size="0,0"', 'screen name="PVRState" position="center,center" size="110,45"'])
+					self.skinSearchAndReplace.append(['PVRState" position="0,0" size="0,0"', 'PVRState" position="center,center" size="110,45"'])
 				elif config.plugins.KravenHD.PVRState.value == "pvrstate-left-small":
-					self.skinSearchAndReplace.append(['screen name="PVRState" position="0,0" size="0,0"', 'screen name="PVRState" position="30,20" size="110,45"'])
+					self.skinSearchAndReplace.append(['PVRState" position="0,0" size="0,0"', 'PVRState" position="30,20" size="110,45"'])
 			else:
 				if config.plugins.KravenHD.PVRState.value == "pvrstate-center-big":
-					self.skinSearchAndReplace.append(['screen name="PVRState" position="0,0" size="0,0"', 'screen name="PVRState" position="center,center" size="330,135"'])
+					self.skinSearchAndReplace.append(['PVRState" position="0,0" size="0,0"', 'PVRState" position="center,center" size="330,135"'])
 				elif config.plugins.KravenHD.PVRState.value == "pvrstate-center-small":
-					self.skinSearchAndReplace.append(['screen name="PVRState" position="0,0" size="0,0"', 'screen name="PVRState" position="center,center" size="165,67"'])
+					self.skinSearchAndReplace.append(['PVRState" position="0,0" size="0,0"', 'PVRState" position="center,center" size="165,67"'])
 				elif config.plugins.KravenHD.PVRState.value == "pvrstate-left-small":
-					self.skinSearchAndReplace.append(['screen name="PVRState" position="0,0" size="0,0"', 'screen name="PVRState" position="45,30" size="165,67"'])
+					self.skinSearchAndReplace.append(['PVRState" position="0,0" size="0,0"', 'PVRState" position="45,30" size="165,67"'])
 
 		### Main XML
 		self.appendSkinFile(self.data + "main.xml")

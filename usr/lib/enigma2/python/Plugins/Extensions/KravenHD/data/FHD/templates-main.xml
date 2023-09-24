@@ -395,7 +395,7 @@
 	<screen name="Webradio1">
       <widget backgroundColor="KravenIBbg2" font="Regular2;50" foregroundColor="KravenIBGFont2" position="63,10" render="Label" size="1500,69" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
 	  <widget name="dummy" position="3,35" zPosition="0" size="144,45" backgroundColor="Kravenbg" alphatest="blend" />
-	  <widget backgroundColor="Kravenbg" foregroundColor="KravenFont1" source="streamlist" render="Listbox" position="63,170" enableWrapAround="1" scrollbarMode="showOnDemand" size="1104,600" selectionPixmap="KravenHD/graphics/sel_30.png" transparent="1" zPosition="2" >
+	  <widget backgroundColor="Kravenbg" foregroundColor="KravenFont1" source="streamlist" render="Listbox" position="63,170" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="15" size="1104,600" selectionPixmap="KravenHD/graphics/sel_30.png" transparent="1" zPosition="2" >
 		<convert type="TemplatedMultiContent" transparent="0">
 			{"templates": 
                 {"default": (50,[
@@ -463,7 +463,7 @@
 	<screen name="Webradio2">
       <widget backgroundColor="KravenIBbg2" font="Regular2;50" foregroundColor="KravenIBGFont2" position="63,10" render="Label" size="1500,69" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
       <widget backgroundColor="Kravenbg" font="Regular2;32" foregroundColor="KravenFont2" halign="center" name="rec_txt" position="63,120" size="1104,41" transparent="1" valign="center" zPosition="2" />
-      <widget backgroundColor="Kravenbg" name="config" font="Regular;30" foregroundColor="KravenFont1" itemHeight="38" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,170" size="1104,608" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="0" zPosition="3" />
+      <widget backgroundColor="Kravenbg" name="config" font="Regular;30" foregroundColor="KravenFont1" itemHeight="38" selectionPixmap="KravenHD/graphics/sel_30.png" position="63,170" size="1104,608" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="15" transparent="0" zPosition="3" />
       <widget backgroundColor="Kravenbg" font="Regular2;32" foregroundColor="KravenFont2" halign="center" name="playtext" position="63,817" size="1104,123" transparent="1" valign="center" zPosition="2" />
 	  <panel name="RGYB_Buttons2" />
 	</screen>
@@ -2613,7 +2613,7 @@
 	</screen>
 	
 	<screen name="mainmenu-small">
-      <widget position="63,120" render="Listbox" size="1104,810" enableWrapAround="1" scrollbarMode="showOnDemand" source="menu" selectionPixmap="KravenHD/graphics/sel_36.png" transparent="1">
+      <widget position="63,120" render="Listbox" size="1104,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="15" source="menu" selectionPixmap="KravenHD/graphics/sel_36.png" transparent="1">
         <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (24, 5), size = (1056, 44), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 35)],
@@ -2624,7 +2624,7 @@
 	</screen>
 	
 	<screen name="mainmenu-middle">
-      <widget position="63,117" render="Listbox" size="1104,816" enableWrapAround="1" scrollbarMode="showOnDemand" source="menu" selectionPixmap="KravenHD/graphics/sel_45.png" transparent="1">
+      <widget position="63,117" render="Listbox" size="1104,816" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="15" source="menu" selectionPixmap="KravenHD/graphics/sel_45.png" transparent="1">
         <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (24, 9), size = (1056, 50), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 39)],
@@ -2635,7 +2635,7 @@
 	</screen>
 	
 	<screen name="mainmenu-big">
-      <widget position="63,120" render="Listbox" size="1104,810" enableWrapAround="1" scrollbarMode="showOnDemand" source="menu" selectionPixmap="KravenHD/graphics/sel_60.png" transparent="1">
+      <widget position="63,120" render="Listbox" size="1104,810" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="15" source="menu" selectionPixmap="KravenHD/graphics/sel_60.png" transparent="1">
         <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (24, 15), size = (1056, 75), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 45)],
@@ -3193,7 +3193,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2, int(deskheight - newheig
 	
 	<screen name="choicebox-template">
 	  <widget backgroundColor="Kravenbg6" name="text" font="Regular;32" foregroundColor="KravenFont1" position="15,12" size="945,27" transparent="1" />
-	  <widget backgroundColor="Kravenbg6" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="15,12" size="945,45" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
+	  <widget backgroundColor="Kravenbg6" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="15,12" size="945,45" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="15" transparent="1"/>
 		<applet type="onLayoutFinish">
 from enigma import eSize, ePoint, getDesktop
 

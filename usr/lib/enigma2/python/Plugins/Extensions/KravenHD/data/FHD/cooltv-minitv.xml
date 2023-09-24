@@ -74,7 +74,7 @@
     <eLabel text="Cool TV Guide" position="63,10" size="600,69" backgroundColor="KravenIBbg2" font="Regular2;50" foregroundColor="KravenIBGFont2" valign="center" transparent="1" />
     <widget backgroundColor="KravenIBbg2" source="Title" render="Label" font="Regular;32" foregroundColor="KravenIBGFont2" position="732,24" size="675,41" noWrap="1" transparent="1" zPosition="3" />
     <widget backgroundColor="Kravenbg" name="timeline_text" position="7,105" size="1845,45" transparent="1" />
-    <widget CoolRecAlarmCol="#707000" CoolBackColorSel="#0045AD" CoolBackColor="#1B1B1B" CoolCurrentColSel="#0045AD" CoolCurrentCol="#000061" CoolRecCol="#610000" CoolRecColSel="#610000" CoolNowCol="#006100" CoolNowColSel="#0045AD" CoolFontColSel="#FFFFFF" CoolNowFontColSel="#FFFFFF" CoolPiconFontCol="#FFFFFF" CoolPiconBackCol="#0C0C0C" CoolNoPiconBackCol="#0C0C0C" backgroundColor="Kravenbg" foregroundColor="KravenFont1" name="list" position="63,142" size="1794,630" scrollbarMode="showNever" transparent="1" />
+    <widget CoolRecAlarmCol="#707000" CoolBackColorSel="#0045AD" CoolBackColor="#1B1B1B" CoolCurrentColSel="#0045AD" CoolCurrentCol="#000061" CoolRecCol="#610000" CoolRecColSel="#610000" CoolNowCol="#006100" CoolNowColSel="#0045AD" CoolFontColSel="#FFFFFF" CoolNowFontColSel="#FFFFFF" CoolPiconFontCol="#FFFFFF" CoolPiconBackCol="#0C0C0C" CoolNoPiconBackCol="#0C0C0C" backgroundColor="Kravenbg" foregroundColor="KravenFont1" name="list" position="63,142" size="1794,630" scrollbarMode="showOnDemand" scrollbarWidth="15" transparent="1" />
     <widget name="timeline0" pixmap="KravenHD/epg/timeline.png" position="0,210" size="0,0" zPosition="1" />
     <widget name="timeline1" pixmap="KravenHD/epg/timeline.png" position="0,210" size="0,0" zPosition="1" />
     <widget name="timeline2" pixmap="KravenHD/epg/timeline.png" position="0,210" size="0,0" zPosition="1" />
@@ -123,7 +123,7 @@
       <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="timeline_text" position="7,427" size="1845,45" transparent="1" />
-    <widget CoolRecAlarmCol="#707000" CoolBackColorSel="#0045AD" CoolBackColor="#1B1B1B" CoolCurrentColSel="#0045AD" CoolCurrentCol="#000061" CoolRecCol="#610000" CoolRecColSel="#610000" CoolNowCol="#006100" CoolNowColSel="#0045AD" CoolFontColSel="#FFFFFF" CoolNowFontColSel="#FFFFFF" CoolPiconFontCol="#FFFFFF" CoolPiconBackCol="#0C0C0C" CoolNoPiconBackCol="#0C0C0C" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="list" position="63,469" size="1794,502" scrollbarMode="showOnDemand" transparent="1" />
+    <widget CoolRecAlarmCol="#707000" CoolBackColorSel="#0045AD" CoolBackColor="#1B1B1B" CoolCurrentColSel="#0045AD" CoolCurrentCol="#000061" CoolRecCol="#610000" CoolRecColSel="#610000" CoolNowCol="#006100" CoolNowColSel="#0045AD" CoolFontColSel="#FFFFFF" CoolNowFontColSel="#FFFFFF" CoolPiconFontCol="#FFFFFF" CoolPiconBackCol="#0C0C0C" CoolNoPiconBackCol="#0C0C0C" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="list" position="63,469" size="1794,502" scrollbarMode="showOnDemand" scrollbarWidth="15" transparent="1" />
     <widget name="timeline0" pixmap="KravenHD/epg/timeline.png" position="0,480" size="0,0" zPosition="1" />
     <widget name="timeline1" pixmap="KravenHD/epg/timeline.png" position="0,480" size="0,0" zPosition="1" />
     <widget name="timeline2" pixmap="KravenHD/epg/timeline.png" position="0,480" size="0,0" zPosition="1" />
@@ -228,7 +228,7 @@
       <convert type="KravenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget backgroundColor="Kravenbg2" name="timeline_text" position="7,423" size="1845,45" transparent="1" />
-    <widget CoolRecAlarmCol="#707000" CoolBackColorSel="#0045AD" CoolBackColor="#1B1B1B" CoolCurrentColSel="#0045AD" CoolCurrentCol="#000061" CoolRecCol="#610000" CoolRecColSel="#610000" CoolNowCol="#006100" CoolNowColSel="#0045AD" CoolFontColSel="#FFFFFF" CoolNowFontColSel="#FFFFFF" CoolPiconFontCol="#FFFFFF" CoolPiconBackCol="#0C0C0C" CoolNoPiconBackCol="#0C0C0C" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="list" position="63,465" size="1794,505" scrollbarMode="showOnDemand" transparent="1" />
+    <widget CoolRecAlarmCol="#707000" CoolBackColorSel="#0045AD" CoolBackColor="#1B1B1B" CoolCurrentColSel="#0045AD" CoolCurrentCol="#000061" CoolRecCol="#610000" CoolRecColSel="#610000" CoolNowCol="#006100" CoolNowColSel="#0045AD" CoolFontColSel="#FFFFFF" CoolNowFontColSel="#FFFFFF" CoolPiconFontCol="#FFFFFF" CoolPiconBackCol="#0C0C0C" CoolNoPiconBackCol="#0C0C0C" backgroundColor="Kravenbg2" foregroundColor="KravenFont1" name="list" position="63,465" size="1794,505" scrollbarMode="showOnDemand" scrollbarWidth="15" transparent="1" />
     <widget name="timeline0" pixmap="KravenHD/epg/timeline.png" position="0,480" size="0,0" zPosition="1" />
     <widget name="timeline1" pixmap="KravenHD/epg/timeline.png" position="0,480" size="0,0" zPosition="1" />
     <widget name="timeline2" pixmap="KravenHD/epg/timeline.png" position="0,480" size="0,0" zPosition="1" />
@@ -252,7 +252,7 @@
     <eLabel text="Cool Tiny Guide" position="63,10" size="600,69" backgroundColor="KravenIBbg2" font="Regular2;50" foregroundColor="KravenIBGFont2" valign="center" transparent="1" />
     <widget backgroundColor="KravenIBbg2" source="Title" render="Label" font="Regular;32" foregroundColor="KravenIBGFont2" position="732,24" size="675,41" noWrap="1" transparent="1" zPosition="3" />
     <widget backgroundColor="Kravenbg" name="timeline_text" position="7,105" size="1845,45" transparent="1" />
-    <widget CoolRecAlarmCol="#707000" CoolBackColorSel="#0045AD" CoolBackColor="#1B1B1B" CoolCurrentColSel="#0045AD" CoolCurrentCol="#000061" CoolRecCol="#610000" CoolRecColSel="#610000" CoolNowCol="#006100" CoolNowColSel="#0045AD" CoolFontColSel="#FFFFFF" CoolNowFontColSel="#FFFFFF" CoolPiconFontCol="#FFFFFF" CoolPiconBackCol="#0C0C0C" CoolNoPiconBackCol="#0C0C0C" backgroundColor="Kravenbg" foregroundColor="KravenFont1" name="list" position="63,142" size="1794,630" scrollbarMode="showOnDemand" transparent="1" />
+    <widget CoolRecAlarmCol="#707000" CoolBackColorSel="#0045AD" CoolBackColor="#1B1B1B" CoolCurrentColSel="#0045AD" CoolCurrentCol="#000061" CoolRecCol="#610000" CoolRecColSel="#610000" CoolNowCol="#006100" CoolNowColSel="#0045AD" CoolFontColSel="#FFFFFF" CoolNowFontColSel="#FFFFFF" CoolPiconFontCol="#FFFFFF" CoolPiconBackCol="#0C0C0C" CoolNoPiconBackCol="#0C0C0C" backgroundColor="Kravenbg" foregroundColor="KravenFont1" name="list" position="63,142" size="1794,630" scrollbarMode="showOnDemand" scrollbarWidth="15" transparent="1" />
     <widget name="timeline0" pixmap="KravenHD/epg/timeline.png" position="0,210" size="0,0" zPosition="1" />
     <widget name="timeline1" pixmap="KravenHD/epg/timeline.png" position="0,210" size="0,0" zPosition="1" />
     <widget name="timeline2" pixmap="KravenHD/epg/timeline.png" position="0,210" size="0,0" zPosition="1" />

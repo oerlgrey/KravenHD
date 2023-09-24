@@ -14,16 +14,16 @@
     <eLabel backgroundColor="KravenBorder2" position="938,120" size="3,182" transparent="0" zPosition="6" />
     <eLabel backgroundColor="KravenBorder2" position="1257,120" size="3,182" transparent="0" zPosition="6" />
 	<!-- Sender zuordnen /-->
-    <widget backgroundColor="Kravenbg2" name="list" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="20,150" size="870,450" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="5" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="list" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="20,150" size="870,450" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" zPosition="5" transparent="1" />
 	<!-- Menu /-->
-    <widget backgroundColor="Kravenbg2" name="config" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="20,120" size="870,480" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="5" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="config" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="20,120" size="870,480" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" zPosition="5" transparent="1" />
 	<!-- Planer/Marker /-->
-    <widget backgroundColor="Kravenbg2" name="menu_list" font="Regular;22" foregroundColor="KravenFont1" itemHeight="80" position="20,120" size="870,480" selectionPixmap="KravenHD/graphics/sel_90.png" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="5" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="menu_list" font="Regular;22" foregroundColor="KravenFont1" itemHeight="80" position="20,120" size="870,480" selectionPixmap="KravenHD/graphics/sel_90.png" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" zPosition="5" transparent="1" />
 	<!-- Log /-->
-    <widget backgroundColor="Kravenbg2" name="log" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="20,120" size="870,480" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="5" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="log" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="20,120" size="870,480" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" zPosition="5" transparent="1" />
 	<!-- Senderauswahl/Staffelauswahl /-->
-    <widget backgroundColor="Kravenbg2" name="popup_list" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="190,175" size="560,360" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="7" transparent="1" />
-    <widget backgroundColor="Kravenbg2" name="popup_list2" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="190,175" size="560,360" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" zPosition="8" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="popup_list" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="190,175" size="560,360" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" zPosition="7" transparent="1" />
+    <widget backgroundColor="Kravenbg2" name="popup_list2" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" position="190,175" size="560,360" selectionPixmap="KravenHD/graphics/sel_30.png" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" zPosition="8" transparent="1" />
     <widget backgroundColor="Kravenbg2" name="popup_bg" position="170,160" size="600,390" pixmap="KravenHD/graphics/popup_bg.png" zPosition="6" transparent="0" />
     <widget backgroundColor="Kravenbg2" name="Web_Channel" position="55,115" size="200,30" halign="left" font="Regular;25" foregroundColor="KravenFont2" transparent="1" />
     <widget backgroundColor="Kravenbg2" name="STB_Channel" position="370,115" size="200,30" halign="left" font="Regular;25" foregroundColor="KravenFont2" transparent="1" />
