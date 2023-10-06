@@ -41,8 +41,11 @@
     <parameter name="FileListFont" value="Regular;22" />
     <parameter name="FileListItemHeight" value="30" />
     <!-- FileCommander -->
-    <parameter name="FcFileListName" value="3,0,1190,30" />
-    <parameter name="FcFileListMultiName" value="33,0,1160,30" />
+    <parameter name="FcFileListName" value="33,0,1160,30" />
+    <parameter name="FcFileListIcon" value="3,5,20,20" />
+    <parameter name="FcFileListMultiName" value="63,0,1130,30" />
+    <parameter name="FcFileListMultiIcon" value="33,5,20,20" />
+    <parameter name="FcFileListMultiLock" value="3,5,20,20" />
 	<!-- PluginBrowser -->
 	<parameter name="PluginBrowserName" value="120,2,30"/>
 	<parameter name="PluginBrowserDescr" value="120,28,26"/>
