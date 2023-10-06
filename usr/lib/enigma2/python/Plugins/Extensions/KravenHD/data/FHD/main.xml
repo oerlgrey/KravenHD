@@ -3891,16 +3891,12 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   </screen>
 
   <screen name="MessageBox" flags="wfBorder" position="center,center" size="1401,15" zPosition="1" title="Message" backgroundColor="Kravenbg6">
-    <widget name="ErrorPixmap" pixmap="KravenHD/global-icons/messages-fhd/attention.png" position="15,24" size="79,79" alphatest="blend" />
-    <widget name="QuestionPixmap" pixmap="KravenHD/global-icons/messages-fhd/question.png" position="15,24" size="79,79" alphatest="blend" />
-    <widget name="InfoPixmap" pixmap="KravenHD/global-icons/messages-fhd/info.png" position="15,24" size="79,79" alphatest="blend" />
+	<widget name="icon" position="15,24" size="79,79" pixmaps="KravenHD/icons-light/messages-fhd/question.png,KravenHD/icons-light/messages-fhd/info.png,KravenHD/icons-light/messages-fhd/info.png,KravenHD/icons-light/messages-fhd/attention.png,KravenHD/icons-light/messages-fhd/info.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
     <panel name="messagebox-template"/>
   </screen>
 
   <screen name="MessageBoxSimple" flags="wfBorder" position="center,center" size="1401,15" zPosition="1" title="Message" backgroundColor="Kravenbg6">
-    <widget name="ErrorPixmap" pixmap="KravenHD/global-icons/messages-fhd/attention.png" position="15,24" size="79,79" alphatest="blend" />
-    <widget name="QuestionPixmap" pixmap="KravenHD/global-icons/messages-fhd/question.png" position="15,24" size="79,79" alphatest="blend" />
-    <widget name="InfoPixmap" pixmap="KravenHD/global-icons/messages-fhd/info.png" position="15,24" size="79,79" alphatest="blend" />
+	<widget name="icon" position="15,24" size="79,79" pixmaps="KravenHD/icons-light/messages-fhd/question.png,KravenHD/icons-light/messages-fhd/info.png,KravenHD/icons-light/messages-fhd/info.png,KravenHD/icons-light/messages-fhd/attention.png,KravenHD/icons-light/messages-fhd/info.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
     <panel name="messagebox-template"/>
   </screen>
 

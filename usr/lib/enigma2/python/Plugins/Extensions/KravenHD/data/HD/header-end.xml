@@ -40,6 +40,9 @@
     <parameter name="FileListMultiLock" value="3,5,20,20" />
     <parameter name="FileListFont" value="Regular;22" />
     <parameter name="FileListItemHeight" value="30" />
+    <!-- FileCommander -->
+    <parameter name="FcFileListName" value="3,0,1190,30" />
+    <parameter name="FcFileListMultiName" value="33,0,1160,30" />
 	<!-- PluginBrowser -->
 	<parameter name="PluginBrowserName" value="120,2,30"/>
 	<parameter name="PluginBrowserDescr" value="120,28,26"/>

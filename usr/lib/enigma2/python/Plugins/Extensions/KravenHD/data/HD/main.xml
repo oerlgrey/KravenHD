@@ -3891,16 +3891,12 @@ self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheigh
   </screen>
 
   <screen name="MessageBox" flags="wfBorder" position="center,center" size="934,10" zPosition="1" title="Message" backgroundColor="Kravenbg6">
-    <widget name="ErrorPixmap" pixmap="KravenHD/global-icons/messages-hd/attention.png" position="10,16" size="53,53" alphatest="blend" />
-    <widget name="QuestionPixmap" pixmap="KravenHD/global-icons/messages-hd/question.png" position="10,16" size="53,53" alphatest="blend" />
-    <widget name="InfoPixmap" pixmap="KravenHD/global-icons/messages-hd/info.png" position="10,16" size="53,53" alphatest="blend" />
+	<widget name="icon" position="10,16" size="53,53" pixmaps="KravenHD/icons-light/messages-hd/question.png,KravenHD/icons-light/messages-hd/info.png,KravenHD/icons-light/messages-hd/info.png,KravenHD/icons-light/messages-hd/attention.png,KravenHD/icons-light/messages-hd/info.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
     <panel name="messagebox-template"/>
   </screen>
 
   <screen name="MessageBoxSimple" flags="wfBorder" position="center,center" size="934,10" zPosition="1" title="Message" backgroundColor="Kravenbg6">
-    <widget name="ErrorPixmap" pixmap="KravenHD/global-icons/messages-hd/attention.png" position="10,16" size="53,53" alphatest="blend" />
-    <widget name="QuestionPixmap" pixmap="KravenHD/global-icons/messages-hd/question.png" position="10,16" size="53,53" alphatest="blend" />
-    <widget name="InfoPixmap" pixmap="KravenHD/global-icons/messages-hd/info.png" position="10,16" size="53,53" alphatest="blend" />
+	<widget name="icon" position="10,16" size="53,53" pixmaps="KravenHD/icons-light/messages-hd/question.png,KravenHD/icons-light/messages-hd/info.png,KravenHD/icons-light/messages-hd/info.png,KravenHD/icons-light/messages-hd/attention.png,KravenHD/icons-light/messages-hd/info.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
     <panel name="messagebox-template"/>
   </screen>
 

@@ -2772,6 +2772,49 @@
     <panel name="OKExit"/>
   </screen>
 
+  <screen name="vEditorScreen" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*vEditorScreen*-->
+	<widget backgroundColor="Kravenbg" name="list_head" position="42,80" size="1196,30" font="Regular;24" foregroundColor="KravenFont2" noWrap="1" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="filedata" position="42,120" size="1196,510" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
+    <panel name="Title-big2"/>
+    <panel name="Background"/>
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+	<!-- ### do not remove this line. Set x-size and font same as is set "input" in InputBoxWide screen ### -->
+	<widget backgroundColor="Kravenbg" name="InputBoxWide_input" position="0,0" size="1080,0" font="Regular;22" transparent="1" />
+  </screen>
+
+  <screen name="ImageViewer" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*ImageViewer*-->
+	<eLabel backgroundColor="black" position="0,0" size="1280,720" />
+	<widget name="image" position="27,30" size="1225,660" zPosition="1" alphatest="on" />
+	<widget name="status" position="40,5" size="20,20" zPosition="2" pixmap="skin_default/icons/record.png" alphatest="on" />
+	<widget name="icon" position="15,5" size="20,20" zPosition="2" pixmap="skin/default/icons/ico_mp_play.png" alphatest="on" />
+	<widget backgroundColor="black" source="message" render="Label" position="66,3" size="1060,26" font="Regular;20" foregroundColor="green" noWrap="1" zPosition="2" transparent="1" />
+	<eLabel backgroundColor="black" position="0,0" size="100,34" zPosition="-1" />
+   </screen>
+
+  <screen name="ArchiverMenuScreen" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*ArchiverMenuScreen*-->
+	<widget backgroundColor="Kravenbg3" name="list_left_head" position="42,80" size="736,30" font="Regular;24" foregroundColor="KravenFont2" noWrap="1" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="list_left" position="42,120" size="736,510" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg3" name="unpacking" position="42,300" size="736,30" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
+    <panel name="Title-big"/>
+    <!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+  </screen>
+
+  <screen name="ArchiverInfoScreen" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*ArchiverInfoScreen*-->
+	<widget backgroundColor="Kravenbg" name="list_left_head" position="42,80" size="1196,30" font="Regular;24" foregroundColor="KravenFont2" noWrap="1" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="list_left" position="42,120" size="1196,510" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
+    <panel name="Title-big2"/>
+    <panel name="Background"/>
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+  </screen>
+
   <screen name="FileCommanderContextMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" >
 	<!--*FileCommanderContextMenu*-->
 	<widget backgroundColor="Kravenbg3" name="menu" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" position="42,80" size="736,540" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" />
