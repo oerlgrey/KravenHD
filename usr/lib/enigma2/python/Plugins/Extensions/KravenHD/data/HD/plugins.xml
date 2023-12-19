@@ -1128,11 +1128,11 @@
 
   <screen name="oscInfo" position="0,0" size="1280,720" title="Client Info" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*oscInfo*-->
-	<widget backgroundColor="Kravenbg3" name="output" position="42,80" size="736,540" font="Regular;22" foregroundColor="KravenFont1" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" />
-    <panel name="Title-big"/>
-	<!-- Logo -->
+	<widget backgroundColor="Kravenbg" name="output" position="42,80" size="1196,540" font="Regular;22" foregroundColor="KravenFont1" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" />
+    <panel name="Title-big2"/>
+    <panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <panel name="RGYB_Buttons"/>
+    <panel name="RGYB_Buttons2"/>
     <panel name="OKExit"/>
   </screen>
 
@@ -1252,9 +1252,9 @@
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CCcamInfoInfoScreen" position="0,0" size="1280,720" title=" ">
 	<!--*CCcamInfoInfoScreen*-->
-	<eLabel text="CCcam Info" position="42,7" size="1000,46" backgroundColor="KravenIBbg3" font="Regular2;34" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
-	<widget backgroundColor="Kravenbg3" name="text" font="Regular;22" foregroundColor="KravenFont1" position="42,80" size="736,540" transparent="1" />
-	<!-- Logo -->
+	<eLabel text="CCcam Info" position="42,7" size="1000,46" backgroundColor="KravenIBbg2" font="Regular2;34" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="text" font="Regular;22" foregroundColor="KravenFont1" position="42,80" size="1196,540" transparent="1" />
+    <panel name="Background"/>
 	<panel name="gradient-menu"/>
     <panel name="OKExit"/>
   </screen>
@@ -2944,12 +2944,14 @@
 	</widget>
 	<widget backgroundColor="Kravenbg2" source="artist" render="Label" font="Regular2;33" foregroundColor="KravenFont2" position="42,118" size="880,42" noWrap="1" valign="top" transparent="1" />
 	<widget backgroundColor="Kravenbg2" source="songtitle" render="Label" font="Regular;30" foregroundColor="KravenFont1" position="42,168" size="880,38" noWrap="1" valign="top" transparent="1" />
-	<widget backgroundColor="Kravenbg2" name="albumname" font="Regular2;24" foregroundColor="KravenFont2" position="42,224" size="134,30" noWrap="1" valign="top" transparent="1"/>
-	<widget backgroundColor="Kravenbg2" name="album" font="Regular;24" foregroundColor="KravenFont1" position="182,224" size="740,30" noWrap="1" valign="top" transparent="1" />
-	<widget backgroundColor="Kravenbg2" name="genrename" font="Regular2;24" foregroundColor="KravenFont2" position="42,266" size="134,30" noWrap="1" valign="top" transparent="1"/>
-	<widget backgroundColor="Kravenbg2" name="genre" font="Regular;24" foregroundColor="KravenFont1" position="182,266" size="740,30" noWrap="1" valign="top" transparent="1" />
-	<widget backgroundColor="Kravenbg2" name="yearname" font="Regular2;24" foregroundColor="KravenFont2" position="42,308" size="134,30" noWrap="1" valign="top" transparent="1"/>
-	<widget backgroundColor="Kravenbg2" name="year" font="Regular;24" foregroundColor="KravenFont1" position="182,308" size="740,30" noWrap="1" valign="top" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="albumname" font="Regular2;24" foregroundColor="KravenFont2" position="42,222" size="134,30" noWrap="1" valign="top" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="album" font="Regular;24" foregroundColor="KravenFont1" position="182,222" size="740,30" noWrap="1" valign="top" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="genrename" font="Regular2;24" foregroundColor="KravenFont2" position="42,254" size="134,30" noWrap="1" valign="top" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="genre" font="Regular;24" foregroundColor="KravenFont1" position="182,254" size="740,30" noWrap="1" valign="top" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="yearname" font="Regular2;24" foregroundColor="KravenFont2" position="42,286" size="134,30" noWrap="1" valign="top" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="year" font="Regular;24" foregroundColor="KravenFont1" position="182,286" size="740,30" noWrap="1" valign="top" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="trackname" font="Regular2;24" foregroundColor="KravenFont2" position="42,318" size="134,30" noWrap="1" valign="top" transparent="1"/>
+	<widget backgroundColor="Kravenbg2" name="track" font="Regular;24" foregroundColor="KravenFont1" position="182,318" size="740,30" noWrap="1" valign="top" transparent="1" />
 	<widget backgroundColor="Kravenbg2" name="playlistname" font="Regular2;24" foregroundColor="KravenFont2" position="42,220" size="622,30" valign="center" transparent="1"/>
 	<widget backgroundColor="Kravenbg2" name="playlist" font="Regular;22" foregroundColor="KravenFont1" position="42,254" size="622,360" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1"/>
 	<widget backgroundColor="Kravenbg2" name="quickmenu" font="Regular;22" foregroundColor="KravenFont1" position="42,224" size="622,390" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1"/>
