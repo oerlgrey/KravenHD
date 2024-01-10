@@ -3193,7 +3193,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2, int(deskheight - newheig
 	
 	<screen name="choicebox-template">
 	  <widget backgroundColor="Kravenbg6" name="text" font="Regular;32" foregroundColor="KravenFont1" position="15,12" size="945,27" transparent="1" />
-	  <widget backgroundColor="Kravenbg6" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="15,12" size="945,750" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="15" transparent="1"/>
+	  <widget backgroundColor="Kravenbg6" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="15,12" size="945,45" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="15" transparent="1"/>
 		<applet type="onLayoutFinish">
 from enigma import eSize, ePoint, getDesktop
 
@@ -3241,13 +3241,12 @@ self.instance.resize(eSize(*windowsize))
 self["text"].instance.resize(eSize(*textsize))
 
 # move list
-if self.list:
-        listsize = (windowwidth - width_offset * 2, listheight)
-        if textheight &gt; 0:
-	        self["list"].instance.move(ePoint(width_offset, height_offset + textheight + middle_offset))
-        else:
-	        self["list"].instance.move(ePoint(width_offset, height_offset))
-                self["list"].instance.resize(eSize(*listsize))
+listsize = (windowwidth - width_offset * 2, listheight)
+if textheight &gt; 0:
+	self["list"].instance.move(ePoint(width_offset, height_offset + textheight + middle_offset))
+else:
+	self["list"].instance.move(ePoint(width_offset, height_offset))
+self["list"].instance.resize(eSize(*listsize))
 
 # center window
 self.instance.move(ePoint((deskwidth - windowwidth)/2, (deskheight - windowheight)/2 + 28))
