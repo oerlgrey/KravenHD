@@ -35,6 +35,18 @@
     <eLabel backgroundColor="Kravenbg2" position="399,375" size="1122,330" transparent="0" zPosition="-1" />
   </screen>
 
+  <screen name="KravenHDBrowser" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*KravenHDBrowser*-->
+    <widget backgroundColor="Kravenbg2" source="info" render="Label" font="Regular2;35" foregroundColor="KravenFont2" position="63,120" size="1104,45" transparent="1" zPosition="1" />
+    <widget backgroundColor="Kravenbg2" name="list" font="Regular;31" secondfont="Regular;29" position="63,180" size="1104,135" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" foregroundColor="KravenFont1" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="15" zPosition="2" />
+    <widget backgroundColor="Kravenbg2" source="instruction" render="Label" font="Regular2;32" foregroundColor="KravenFont2" position="63,870" size="1104,82" halign="center" valign="center" transparent="1" zPosition="1" />
+    <panel name="Title-big"/>
+	<!-- Logo -->
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+    <panel name="OKExit"/>
+  </screen>
+
   <screen name="BitrateViewer" backgroundColor="transparent" position="0,0" size="1920,1080" title="Bitrate viewer" flags="wfBorder">
 	<!--*BitrateViewer*-->
 	<widget source="video" render="Label" position="127,180" zPosition="1" size="120,30" font="Regular;30" foregroundColor="KravenFont2" backgroundColor="Kravenbg3" transparent="1" />

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KravenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-06 23:16+0200\n"
-"PO-Revision-Date: 2023-09-24 16:33+0200\n"
+"PO-Revision-Date: 2024-01-21 15:45+0100\n"
 "Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -2309,3 +2309,41 @@ msgstr "Eigene Wettersymbole verwenden"
 #: KravenHD.py
 msgid "Choose from available custom weather icons. The icons must be in a subdirectory in '/usr/share/enigma2/WeatherIconSets'."
 msgstr "Wählen Sie aus den verfügbaren benutzerdefinierten Wettersymbolen. Die Symbole müssen sich in einem Unterverzeichnis in '/usr/share/enigma2/WeatherIconSets' befinden."
+
+#: KravenHD.py
+msgid "The full path can be seen in the preview text."
+msgstr "Der vollständige Pfad ist im Vorschautext zu sehen."
+
+#: KravenHD.py
+msgid "Choose the poster path"
+msgstr "Wählen Sie den Posterpfad"
+
+#: KravenHD.py
+msgid "apply path"
+msgstr "Pfad übernehmen"
+
+#: KravenHD.py
+msgid "The path is not available"
+msgstr "Der Pfad ist nicht verfügbar"
+
+#: KravenHD.py
+msgid "Poster path"
+msgstr "Posterpfad"
+
+#: KravenHD.py
+msgid ""
+"Choose the poster path.\n"
+"Press OK to open the browser.\n"
+"A folder 'poster' is automatically created for the poster path."
+msgstr ""
+"Wählen Sie den Posterpfad.\n"
+"Drücken Sie OK, um den Browser zu öffnen.\n"
+"Im Posterpfad wird automatisch ein Ordner 'poster' erstellt."
+
+#: KravenHD.py
+msgid ""
+"You have no permissions.\n"
+"Please choose another path."
+msgstr ""
+"Sie haben keine Berechtigungen.\n"
+"Bitte wählen Sie einen anderen Pfad."

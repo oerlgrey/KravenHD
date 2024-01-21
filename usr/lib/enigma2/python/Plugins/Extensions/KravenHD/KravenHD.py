@@ -19,6 +19,7 @@
 from __future__ import absolute_import
 from __future__ import print_function
 from .ColorSelection import KravenHDColorSelection
+from .DirectoryBrowser import KravenHDBrowser
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.ChoiceBox import ChoiceBox
@@ -30,7 +31,7 @@ from Components.config import config, configfile, getConfigListEntry, ConfigYesN
 from Components.ConfigList import ConfigListScreen
 from Components.Sources.StaticText import StaticText
 from Components.Language import language
-from os import environ, listdir, system, popen, path
+from os import environ, listdir, system, popen, path, makedirs
 from shutil import move
 from Components.Pixmap import Pixmap
 from Components.Sources.CanvasSource import CanvasSource
@@ -55,12 +56,6 @@ def _(txt):
 	if t == txt:
 		t = gettext.gettext(txt)
 	return t
-
-def translateBlock(block):
-	for x in TranslationHelper:
-		if block.__contains__(x[0]):
-			block = block.replace(x[0], x[1])
-	return block
 
 ColorSelfList = [
 	("F0A30A", _("amber")),
@@ -1043,6 +1038,7 @@ config.plugins.KravenHD.PosterView = ConfigSelection(default="none", choices = [
 				("on", _("on")),
 				("none", _("off"))
 				])
+config.plugins.KravenHD.PosterPath = ConfigText(default="/media/hdd", fixed_size=False)
 
 config.plugins.KravenHD.IBProgressList = ConfigSelection(default="ffffff", choices = ProgressList)
 config.plugins.KravenHD.IBProgressSelf = ConfigText(default="ffffff")
@@ -1370,7 +1366,11 @@ class KravenHD(ConfigListScreen, Screen):
 				emptyLines+=1
 		list.append(getConfigListEntry(_("System-Infos"), config.plugins.KravenHD.SystemInfo, _("Choose from different additional windows with system informations or deactivate them completely.")))
 		list.append(getConfigListEntry(_("Show poster"), config.plugins.KravenHD.PosterView, _("Choose whether the poster should be displayed in the infobar or not.")))
-		for i in range(emptyLines+6):
+		if config.plugins.KravenHD.PosterView.value == "on":
+			list.append(getConfigListEntry(_("Poster path"), config.plugins.KravenHD.PosterPath, _("Choose the poster path.\nPress OK to open the browser.\nA folder 'poster' is automatically created for the poster path.")))
+		else:
+			emptyLines+=1
+		for i in range(emptyLines+5):
 			list.append(getConfigListEntry(_(" "), ))
 
 		# page 5
@@ -2544,6 +2544,19 @@ class KravenHD(ConfigListScreen, Screen):
 		except:
 			pass
 
+	def BrowserCallBack(self, callback):
+		try:
+			if callback:
+				posterpath = path.join(callback, "poster")
+				if not path.exists(posterpath):
+					makedirs(posterpath)
+				config.plugins.KravenHD.PosterPath.value = callback
+		except:
+			self.session.open(MessageBox, _("You have no permissions.\nPlease choose another path."), MessageBox.TYPE_INFO, timeout=8)
+			config.plugins.KravenHD.PosterPath.value = ""
+			config.plugins.KravenHD.PosterPath.save()
+		self.mylist()
+
 	def keyOK(self):
 		option = self["config"].getCurrent()[1]
 		optionislistcolor=False
@@ -2729,6 +2742,8 @@ class KravenHD(ConfigListScreen, Screen):
 			self.saveProfile(msg=True)
 		elif option == config.plugins.KravenHD.defaultProfile:
 			self.reset()
+		elif option == config.plugins.KravenHD.PosterPath:
+			self.session.openWithCallback(self.BrowserCallBack, KravenHDBrowser, _("Choose the poster path"))
 
 	def faq(self):
 		from Plugins.SystemPlugins.MPHelp.plugin import PluginHelp

@@ -20,63 +20,69 @@
 from __future__ import absolute_import
 from Components.Converter.Converter import Converter
 from Components.Element import cached
+from Components.config import config
 import json, re, os, six.moves.urllib.request
-
-if not os.path.isdir('/media/hdd/poster'):
-	os.mkdir('/media/hdd/poster')
 
 class KravenHDpstrCnvrt(Converter, object):
 	def __init__(self, type):
 		Converter.__init__(self, type)
 		self.type = type
+		self.posterpath = ""
 
 	@cached
 	def getText(self):
-		event = self.source.event
-		if event is None:
-			return ""
+		if config.plugins.KravenHD.PosterPath.value:
+			self.posterpath = os.path.join(config.plugins.KravenHD.PosterPath.value, "poster")
+			if os.path.isdir(self.posterpath):
+				event = self.source.event
+				if event is None:
+					return ""
 
-		if not event is None:
-			if self.type == "POSTER":
-				self.evnt = event.getEventName()
-				try:
-					p = '((.*?)) \([T](\d+)\)'
-					e1 = re.search(p,self.evnt)
-					if e1:
-						jr = e1.group(1)
-						self.evntNm = re.sub('\s+', '+', jr)
-					else:
-						self.evntNm = re.sub('\s+', '+', self.evnt)
-					self.evntNmPstr = self.evntNm + ".jpg"
-					if not os.path.exists("/media/hdd/poster/%s.jpg" % (self.evntNm)):
-						ses_ep = self.sessionEpisode(event)
-						if ses_ep != "" and len(ses_ep) > 0:
-							self.srch = "tv"
-							self.searchPoster()
-						else:
-							self.srch = "multi"
-							self.searchPoster()
-					else:
-						return self.evntNm
-				except:
-					pass
+				if not event is None:
+					if self.type == "POSTER":
+						self.evnt = event.getEventName()
+						try:
+							p = '((.*?)) \([T](\d+)\)'
+							e1 = re.search(p,self.evnt)
+							if e1:
+								jr = e1.group(1)
+								self.evntNm = re.sub('\s+', '+', jr)
+							else:
+								self.evntNm = re.sub('\s+', '+', self.evnt)
+							self.evntNmPstr = self.evntNm + ".jpg"
+							if not os.path.exists(self.posterpath + "/%s.jpg" % (self.evntNm)):
+								ses_ep = self.sessionEpisode(event)
+								if ses_ep != "" and len(ses_ep) > 0:
+									self.srch = "tv"
+									self.searchPoster()
+								else:
+									self.srch = "multi"
+									self.searchPoster()
+							else:
+								return self.evntNm
+						except:
+							pass
+				else:
+					return ""
+			else:
+				return ""
 		else:
 			return ""
 
 	text = property(getText)
 
 	def searchPoster(self):
-		url_json = "https://api.themoviedb.org/3/search/%s?api_key=3c3efcf47c3577558812bb9d64019d65&query=%s" % (self.srch, self.evntNm)
-		jp = json.load(six.moves.urllib.request.urlopen(url_json))
-
-		imgP = (jp['results'][0]['poster_path'])
-		url_poster = "https://image.tmdb.org/t/p/w185_and_h278_bestv2%s" % (imgP)
-		dwn_poster = "/media/hdd/poster/%s.jpg" % (self.evntNm)
-		if not os.path.exists(dwn_poster):
-			with open(dwn_poster, 'wb') as f:
-				f.write(six.moves.urllib.request.urlopen(url_poster).read())
-				f.close()
-				return self.evntNm
+		if os.path.isdir(self.posterpath):
+			url_json = "https://api.themoviedb.org/3/search/%s?api_key=3c3efcf47c3577558812bb9d64019d65&query=%s" % (self.srch, self.evntNm)
+			jp = json.load(six.moves.urllib.request.urlopen(url_json))
+			imgP = (jp['results'][0]['poster_path'])
+			url_poster = "https://image.tmdb.org/t/p/w185_and_h278_bestv2%s" % (imgP)
+			dwn_poster = self.posterpath + "/%s.jpg" % (self.evntNm)
+			if not os.path.exists(dwn_poster):
+				with open(dwn_poster, 'wb') as f:
+					f.write(six.moves.urllib.request.urlopen(url_poster).read())
+					f.close()
+					return self.evntNm
 
 	def sessionEpisode(self, event):
 		fd = event.getShortDescription() + "\n" + event.getExtendedDescription()
