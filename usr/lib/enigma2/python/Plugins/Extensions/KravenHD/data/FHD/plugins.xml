@@ -1196,7 +1196,7 @@
 
   <screen name="oscEntitlements" position="0,0" size="1920,1080" title="OscamReader Stats" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*oscEntitlements*-->
-	<widget backgroundColor="Kravenbg" source="output" render="Listbox" position="63,120" size="1796,810" selectionPixmap="KravenHD/graphics/sel_60.png" foregroundColor="KravenFont1" scrollbarMode="showOnDemand" scrollbarWidth="15" transparent="1" >
+	<widget backgroundColor="Kravenbg" source="output" render="Listbox" position="63,120" size="1794,810" selectionPixmap="KravenHD/graphics/sel_60.png" foregroundColor="KravenFont1" scrollbarMode="showOnDemand" scrollbarWidth="15" transparent="1" >
 		<convert type="TemplatedMultiContent">
 				{"templates":
 					{"default": (60,[
@@ -1265,7 +1265,7 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CCcamInfoInfoScreen" position="0,0" size="1920,1080" title=" ">
 	<!--*CCcamInfoInfoScreen*-->
 	<eLabel text="CCcam Info" position="63,10" size="1500,69" backgroundColor="KravenIBbg2" font="Regular2;50" foregroundColor="KravenIBGFont2" halign="left" valign="center" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="text" font="Regular;33" foregroundColor="KravenFont1" position="63,120" size="1104,810" />
+	<widget backgroundColor="Kravenbg" name="text" font="Regular;33" foregroundColor="KravenFont1" position="63,120" size="1794,810" />
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
     <panel name="OKExit"/>
