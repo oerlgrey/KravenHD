@@ -15,7 +15,6 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.Converter.Poll import Poll
@@ -26,25 +25,24 @@ import NavigationInstance
 class KravenHDTunerState(Poll, Converter, object):
 
 	def __init__(self, type):
-	
 		Poll.__init__(self)
 		Converter.__init__(self, type)
 		self.poll_interval = 1000
 		self.poll_enabled = True
-		
+
 		inputlist = type.split(",")
 		typelist = inputlist[0].split("_")
-		
+
 		self.query = typelist[0]
-		
+
 		self.boxnum = 0
 		if len(typelist) > 1:
 			self.boxnum = int(typelist[1])
-		
+
 		self.boxcount = 0
 		if len(typelist) > 2:
 			self.boxcount = int(typelist[2])
-					
+
 		self.showunused = False
 		self.streamastuner = False
 		for arg in inputlist:
@@ -52,39 +50,36 @@ class KravenHDTunerState(Poll, Converter, object):
 				self.showunused = True
 			if arg == "StreamAsTuner":
 				self.streamastuner = True
-			
+
 	@cached
 	def getBoolean(self):
-	
 		self.getBoxes()
-		
+
 		if self.query == "IsActive":
 			if self.box >= 0 and self.box < self.activetuners:
 				return True
 			else:
 				return False
-			
+
 		elif self.query == "IsAvailable":
 			if self.showunused and self.box >= 0 and self.box >= self.activetuners and self.box < self.availabletuners:
 				return True
 			else:
 				return False
-				
+
 		elif self.query == "IsStreamActive":
 			return (self.streamactive or self.streamrecord)
 							
 		elif self.query == "IsStreamAvailable":
 			return self.showunused and not (self.streamactive or self.streamrecord)
-							
+
 	boolean = property(getBoolean)
 	
 	@cached
 	def getText(self):
-	
 		self.getBoxes()
 
 		if self.query == "StreamText":
-		
 			if self.availabletuners == 1:
 				txt = "Stream"
 			else:
@@ -99,37 +94,35 @@ class KravenHDTunerState(Poll, Converter, object):
 			else:
 				txt = ""
 				col = "T"
-				
+
 			return txt + "_" + col
-		
+
 		else:
-		
 			if self.box >= 0 and self.activetuners > 0 and self.box < self.activetuners:
 				num = self.boxes[self.box].split("_")[0]
 				col = self.boxes[self.box].split("_")[1]
-				
+
 				if num == "99":
 					tun = "@"
 				else:
 					tun = chr(int(num) + 65)
-				
+
 				if tun == "A" and self.availabletuners == 1:
 					tun = "Tuner"
 
 				return tun + "_" + col
-				
+
 			else:
 				return "_T"
-			
+
 	text = property(getText)
-	
+
 	def getBoxes(self):
-	
 		self.streamactive = False
 		self.streamrecord = False
-		
+
 		boxes = []
-		
+
 		# busy tuners
 		mask = self.source.getTunerUseMask()
 		mcnt = 0
@@ -172,29 +165,29 @@ class KravenHDTunerState(Poll, Converter, object):
 					boxes.append(str(tuner) + "_X")
 		else:			
 			info = service and service.info()
-			
+
 			if info:
 				self.streamactive = service.streamed() is not None
-					
+
 				if self.streamastuner and self.streamactive:
 					if boxes.count("99_R") > 0:
 						boxes.remove("99_R")
 						boxes.append("99_X")
 					else:
 						boxes.append("99_L")
-		
+
 		boxes.sort(key=self.intFirst)
-		
+
 		self.boxes = boxes
 		self.activetuners = len(boxes)
 		self.availabletuners = self.source.getTunerAmount() + int(self.streamastuner)
-		
+
 		self.box = self.boxnum
 		if self.boxcount > 0:
 			if self.showunused:
 				self.box -= (self.boxcount - self.availabletuners)
 			else:
 				self.box -= (self.boxcount - self.activetuners)
-			
+
 	def intFirst(self, elem):
 		return int(elem.split("_")[0])

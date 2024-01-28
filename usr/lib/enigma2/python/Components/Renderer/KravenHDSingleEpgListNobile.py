@@ -15,14 +15,12 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Components.VariableText import VariableText
 from enigma import eLabel, eEPGCache
 from Components.Renderer.Renderer import Renderer
 from time import localtime
 
 class KravenHDSingleEpgListNobile(Renderer, VariableText):
-
     def __init__(self):
         Renderer.__init__(self)
         VariableText.__init__(self)
@@ -39,10 +37,7 @@ class KravenHDSingleEpgListNobile(Renderer, VariableText):
         text = ''
         evt = None
         if self.epgcache is not None:
-            evt = self.epgcache.lookupEvent(['IBDCT', (service.toString(),
-              0,
-              -1,
-              -1)])
+            evt = self.epgcache.lookupEvent(['IBDCT', (service.toString(), 0, -1, -1)])
         if evt:
             maxx = 0
             for x in evt:

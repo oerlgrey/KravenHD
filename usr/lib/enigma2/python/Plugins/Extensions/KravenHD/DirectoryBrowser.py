@@ -16,7 +16,6 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Screens.Screen import Screen
 from Components.ActionMap import ActionMap
 from Components.FileList import FileList
@@ -46,9 +45,8 @@ def _(txt):
 #############################################################
 
 class KravenHDBrowser(Screen):
-
 	if DESKTOP_WIDTH <= 1280:
-	  skin = """
+		skin = """
 <screen name="KravenHDBrowser" position="center,center" size="800,600" backgroundColor="#00000000">
   <widget backgroundColor="#00000000" source="info" render="Label" font="Regular;24" foregroundColor="#00f0a30a" position="14,14" size="772,30" transparent="1" />
   <widget backgroundColor="#00000000" name="list" font="Regular;22" foregroundColor="#00ffffff" itemHeight="30" position="14,58" size="772,390" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
@@ -60,7 +58,7 @@ class KravenHDBrowser(Screen):
 </screen>
 """
 	else:
-	  skin = """
+		skin = """
 <screen name="KravenHDBrowser" position="center,center" size="1200,900" backgroundColor="#00000000">
   <widget backgroundColor="#00000000" source="info" render="Label" font="Regular;35" foregroundColor="#00f0a30a" position="21,21" size="1158,45" transparent="1" />
   <widget backgroundColor="#00000000" name="list" font="Regular;32" foregroundColor="#00ffffff" itemHeight="45" position="21,87" size="1158,585" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />

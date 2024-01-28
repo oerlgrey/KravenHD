@@ -15,7 +15,6 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 import math
 from Components.Renderer.Renderer import Renderer
 from skin import parseColor
@@ -23,7 +22,6 @@ from enigma import eCanvas, eSize, gRGB, eRect
 from Components.VariableText import VariableText
 
 class KravenHDWatches(Renderer):
-
     def __init__(self):
         Renderer.__init__(self)
         self.fColor = gRGB(255, 255, 255, 0)

@@ -15,26 +15,18 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.Converter.Poll import Poll
-from os import popen, statvfs
-
-SIZE_UNITS = ['B',
- 'KB',
- 'MB',
- 'GB',
- 'TB',
- 'PB',
- 'EB']
-
-import os, gettext
+from os import popen, statvfs, environ
+import gettext
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from Components.Language import language
 
+SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB']
+
 lang = language.getLanguage()
-os.environ["LANGUAGE"] = lang[:2]
+environ["LANGUAGE"] = lang[:2]
 gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 gettext.textdomain("enigma2")
 gettext.bindtextdomain("KravenHD", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/KravenHD/locale/"))

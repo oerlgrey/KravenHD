@@ -48,7 +48,6 @@
 # take a look at the discussion: http://board.dreambox-tools.info/showthread.php?6050-Erweiterung-Running-Text-render
 ################################################################################
 
-from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
 from skin import parseColor, parseFont
 from enigma import eWidget, eCanvas, eLabel, eTimer, eRect, ePoint, eSize, gRGB, gFont, \
@@ -90,7 +89,6 @@ class KravenHDRunningText(Renderer):
 		self.mPageDelay = self.mPageLength = 0
 		self.lineHeight = 0		# for text height auto correction on dmm-enigma2
 		self.mShown = 0
-
 
 	GUI_WIDGET = eWidget
 

@@ -15,25 +15,20 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from enigma import eTimer
 from Screens.InfoBar import InfoBar
 
 class KravenTool:
-
 	def __init__(self):
 		self.fb_proc_path = '/proc/stb/vmpeg'
-		self.fb_info = ['dst_width',
-		 'dst_height',
-		 'dst_left',
-		 'dst_top']
+		self.fb_info = ['dst_width', 'dst_height', 'dst_left', 'dst_top']
 		self.new_fb_size_pos = None
 		self.decoder = None
 		self.delayTimer = None
 		self.is_PiG = False
 		return
 
-	def getFBSize(self, decoder = 0):
+	def getFBSize(self, decoder=0):
 		ret = []
 		for val in self.fb_info:
 			f = open('%s/%d/%s' % (self.fb_proc_path, decoder, val), 'r')
@@ -46,7 +41,7 @@ class KravenTool:
 		else:
 			return None
 
-	def setFBSize(self, fb_size_pos, decoder = 0, force = False):
+	def setFBSize(self, fb_size_pos, decoder=0, force=False):
 		if self.delayTimer:
 			self.delayTimer.stop()
 		if InfoBar.instance and InfoBar.instance.session.pipshown or force:
@@ -80,7 +75,7 @@ class KravenTool:
 			self.setFBSize(fb_size_pos, decoder)
 		return
 
-	def setFBSize_delayed(self, fb_size_pos, decoder = 0, delay = 1000):
+	def setFBSize_delayed(self, fb_size_pos, decoder=0, delay=1000):
 		if fb_size_pos and len(fb_size_pos) >= 4:
 			self.new_fb_size_pos = fb_size_pos
 			self.decoder = decoder

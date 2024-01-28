@@ -15,7 +15,6 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Plugins.Plugin import PluginDescriptor
 from enigma import getDesktop
 from Components.Language import language

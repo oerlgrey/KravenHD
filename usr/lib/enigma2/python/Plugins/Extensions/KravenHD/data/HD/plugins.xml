@@ -2714,97 +2714,63 @@
     <panel name="OKExit"/>
   </screen>
 
-  <screen name="FileCommanderScreen" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
-	<!--*FileCommanderScreen*-->
-	<widget backgroundColor="Kravenbg" name="list_left_head1" position="42,74" size="585,26" font="Regular2;20" foregroundColor="KravenFont2" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="list_left_filename" position="42,102" size="585,26" font="Regular;20" noWrap="1" zPosition="1" foregroundColor="KravenFont1" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="list_left_select" position="42,130" size="585,26" font="Regular;20" zPosition="1" foregroundColor="KravenFont1" transparent="1" />
-	<widget backgroundColor="Kravenbg" source="list_left_head2" render="Listbox" position="42,130" size="585,26" foregroundColor="KravenFont2" selectionDisabled="1" transparent="1">
+  <screen name="IPTVDMWidget" position="0,0" size="1280,720" title="E2iPlayer Download Manager" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*IPTVDMWidget*-->
+	<widget backgroundColor="Kravenbg" name="list" position="42,80" size="1196,460" foregroundColor="KravenFont1" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
+    <widget backgroundColor="Kravenbg" name="titel" font="Regular2;22" foregroundColor="KravenFont2" position="42,560" size="300,27" transparent="1" />
+    <panel name="Title-big2"/>
+    <panel name="Background"/>
+	<panel name="gradient-menu"/>
+    <panel name="RGYB_Buttons"/>
+    <panel name="OKExit"/>
+  </screen>
+
+  <screen name="IPTVDMNotificationWidget" position="center,544" size="360,87" title="IPTVPlayer downloader" flags="wfNoBorder" backgroundColor="KravenBorder" zPosition="10" >
+	<widget backgroundColor="Kravenbg2" source="Title" render="Label" position="0,10" size="360,30" font="Regular2;24" foregroundColor="KravenFont2" halign="center" zPosition="2" transparent="1" />
+	<widget backgroundColor="Kravenbg2" name="message_label" position="0,50" size="360,27" font="Regular;22" foregroundColor="KravenFont1" halign="center" zPosition="2" transparent="1" />
+	<eLabel backgroundColor="Kravenbg2" position="2,2" size="356,83" zPosition="1" />
+  </screen>
+
+  <screen name="FileCommander" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
+	<!--*FileCommander*-->
+	<widget backgroundColor="Kravenbg" source="headleft" render="Listbox" position="42,72" size="585,74" foregroundColor="KravenFont2" selectionDisabled="1" transparent="1">
 	  <convert type="TemplatedMultiContent">
 			{"template": [
-				MultiContentEntryText(pos = (0, 0), size = (140, 26), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
-				MultiContentEntryText(pos = (150, 0), size = (120, 26), font = 0, flags = RT_HALIGN_LEFT, text = 11), # index 11 is the scaled size
-				MultiContentEntryText(pos = (280, 0), size = (330, 26), font = 0, flags = RT_HALIGN_LEFT, text = 15), # index 15 is the modification time
+				MultiContentEntryText(pos = (2, 0), size= (581, 50), font = 1, flags = RT_HALIGN_LEFT | RT_WRAP, text = 26),  # Index 26 is the current directory + the current file.
+				MultiContentEntryText(pos = (2, 50), size = (120, 24), font = 0, flags = RT_HALIGN_LEFT, text = 16), # index 16 is the sort
+				MultiContentEntryText(pos = (127, 50), size = (120, 24), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+				MultiContentEntryText(pos = (247, 50), size = (120, 24), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+				MultiContentEntryText(pos = (367, 50), size = (214, 24), font = 0, flags = RT_HALIGN_RIGHT, text = 13), # index 13 is the modification time
 				],
-				"fonts": [gFont("Regular2", 20)],
-				"itemHeight": 26,
+				"fonts": [gFont("Regular2", 18),gFont("Regular2", 19)],
+				"itemHeight": 74,
 				"selectionEnabled": False
 			}
 	  </convert>
 	</widget>
-	<widget backgroundColor="Kravenbg" name="list_right_head1" position="653,74" size="585,26" font="Regular2;20" foregroundColor="KravenFont2" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="list_right_filename" position="653,102" size="585,26" font="Regular;20" noWrap="1" zPosition="1" foregroundColor="KravenFont1" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="list_right_select" position="653,130" size="585,26" font="Regular;20" zPosition="1" foregroundColor="KravenFont1" transparent="1" />
-	<widget backgroundColor="Kravenbg" source="list_right_head2" render="Listbox" position="653,130" size="585,26" foregroundColor="KravenFont2" selectionDisabled="1" transparent="1">
+	<widget backgroundColor="Kravenbg" source="headright" render="Listbox" position="653,72" size="585,74" foregroundColor="KravenFont2" selectionDisabled="1" transparent="1">
 	  <convert type="TemplatedMultiContent">
 			{"template": [
-				MultiContentEntryText(pos = (0, 0), size = (140, 26), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
-				MultiContentEntryText(pos = (150, 0), size = (120, 26), font = 0, flags = RT_HALIGN_LEFT, text = 11), # index 11 is the scaled size
-				MultiContentEntryText(pos = (280, 0), size = (330, 26), font = 0, flags = RT_HALIGN_LEFT, text = 15), # index 15 is the modification time
+				MultiContentEntryText(pos = (2, 0), size= (581, 50), font = 1, flags = RT_HALIGN_LEFT | RT_WRAP, text = 26),  # Index 26 is the current directory + the current file.
+				MultiContentEntryText(pos = (2, 50), size = (120, 24), font = 0, flags = RT_HALIGN_LEFT, text = 16), # index 16 is the sort
+				MultiContentEntryText(pos = (127, 50), size = (120, 24), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+				MultiContentEntryText(pos = (247, 50), size = (120, 24), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+				MultiContentEntryText(pos = (367, 50), size = (214, 24), font = 0, flags = RT_HALIGN_RIGHT, text = 13), # index 13 is the modification time
 				],
-				"fonts": [gFont("Regular2", 20)],
-				"itemHeight": 26,
+				"fonts": [gFont("Regular2", 18),gFont("Regular2", 19)],
+				"itemHeight": 74,
 				"selectionEnabled": False
 			}
 	  </convert>
 	</widget>
-	<widget backgroundColor="Kravenbg" name="list_left" position="42,170" size="585,420" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="list_right" position="653,170" size="585,420" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="list_left_free" position="42,604" size="100,26" font="Regular2;20" foregroundColor="KravenFont2" transparent="1" />
-	<!-- for FileCommanderScreenFileSelect, do not remove it -->
-	<widget backgroundColor="Kravenbg" name="list_right_free" position="653,604" size="100,26" font="Regular2;20" foregroundColor="KravenFont2" transparent="1" />
-	<!-- for FileCommanderScreenFileSelect, do not remove it -->
-	<widget backgroundColor="Kravenbg" name="sort_left" position="42,604" size="585,26" halign="center" font="Regular2;20" foregroundColor="KravenFont2" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="sort_right" position="653,604" size="585,26" halign="center" font="Regular2;20" foregroundColor="KravenFont2" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="listleft" position="42,151" size="585,480" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="Kravenbg" name="listright" position="653,151" size="585,480" font="Regular;22" foregroundColor="KravenFont1" itemHeight="30" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
     <panel name="Title-big2"/>
     <panel name="RGYB_Buttons"/>
     <panel name="Background"/>
 	<panel name="gradient-menu"/>
     <panel name="OKExit"/>
   </screen>
-
-  <screen name="FileCommanderFileStatInfo" position="0,0" size="1280,720" title="File/Directory Status Information" flags="wfNoBorder" backgroundColor="transparent">
-	<!--*FileCommanderFileStatInfo*-->
-	<widget backgroundColor="Kravenbg3" name="filename" position="42,80" size="736,54" font="Regular2;22" foregroundColor="KravenFont2" transparent="1" />
-	<widget backgroundColor="Kravenbg3" source="list" render="Listbox" position="42,150" size="736,480" foregroundColor="KravenFont1" scrollbarMode="showOnDemand" scrollbarWidth="10" selectionDisabled="1" transparent="1">
-	  <convert type="TemplatedMultiContent">
-			{"template": [
-				MultiContentEntryText(pos = (0, 1), size = (260, 28), font = 0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is a label
-				MultiContentEntryText(pos = (280, 1), size = (340, 28), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the information
-				],
-				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 30,
-				"selectionEnabled": False
-			}
-	  </convert>
-	</widget>
-    <panel name="Title-big"/>
-	<!-- Logo -->
-	<panel name="gradient-menu"/>
-    <panel name="OKExit"/>
-  </screen>
-
-  <screen name="vEditorScreen" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
-	<!--*vEditorScreen*-->
-	<widget backgroundColor="Kravenbg" name="list_head" position="42,80" size="1196,30" font="Regular;24" foregroundColor="KravenFont2" noWrap="1" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="filedata" position="42,120" size="1196,510" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
-    <panel name="Title-big2"/>
-    <panel name="Background"/>
-	<panel name="gradient-menu"/>
-    <panel name="RGYB_Buttons"/>
-	<!-- ### do not remove this line. Set x-size and font same as is set "input" in InputBoxWide screen ### -->
-	<widget backgroundColor="Kravenbg" name="InputBoxWide_input" position="0,0" size="1080,0" font="Regular;22" transparent="1" />
-  </screen>
-
-  <screen name="ImageViewer" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
-	<!--*ImageViewer*-->
-	<eLabel backgroundColor="black" position="0,0" size="1280,720" />
-	<widget name="image" position="27,30" size="1225,660" zPosition="1" alphatest="on" />
-	<widget name="status" position="40,5" size="20,20" zPosition="2" pixmap="skin_default/icons/record.png" alphatest="on" />
-	<widget name="icon" position="15,5" size="20,20" zPosition="2" pixmap="skin/default/icons/ico_mp_play.png" alphatest="on" />
-	<widget backgroundColor="black" source="message" render="Label" position="66,3" size="1060,26" font="Regular;20" foregroundColor="green" noWrap="1" zPosition="2" transparent="1" />
-	<eLabel backgroundColor="black" position="0,0" size="100,34" zPosition="-1" />
-   </screen>
 
   <screen name="ArchiverMenuScreen" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
 	<!--*ArchiverMenuScreen*-->
@@ -2813,16 +2779,6 @@
 	<widget backgroundColor="Kravenbg3" name="unpacking" position="42,300" size="736,30" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
     <panel name="Title-big"/>
     <!-- Logo -->
-	<panel name="gradient-menu"/>
-    <panel name="RGYB_Buttons"/>
-  </screen>
-
-  <screen name="ArchiverInfoScreen" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
-	<!--*ArchiverInfoScreen*-->
-	<widget backgroundColor="Kravenbg" name="list_left_head" position="42,80" size="1196,30" font="Regular;24" foregroundColor="KravenFont2" noWrap="1" transparent="1" />
-	<widget backgroundColor="Kravenbg" name="list_left" position="42,120" size="1196,510" foregroundColor="KravenFont1" selectionPixmap="KravenHD/graphics/sel_30.png" itemHeight="30" scrollbarMode="showOnDemand" scrollbarWidth="10" enableWrapAround="1" transparent="1" />
-    <panel name="Title-big2"/>
-    <panel name="Background"/>
 	<panel name="gradient-menu"/>
     <panel name="RGYB_Buttons"/>
   </screen>

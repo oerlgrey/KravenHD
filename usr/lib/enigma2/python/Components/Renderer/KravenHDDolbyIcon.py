@@ -15,13 +15,11 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer 
 from enigma import ePixmap
 from Tools.Directories import fileExists
 
 class KravenHDDolbyIcon(Renderer):
-
 	def __init__(self):
 		Renderer.__init__(self)
 		self.pngname = ''

@@ -15,8 +15,6 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
-from __future__ import print_function
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.config import config
@@ -102,7 +100,7 @@ class KravenHDWeather(Poll, Converter, object):
 			try:
 				r = ping.doOne("8.8.8.8", 1.5)
 				if r != None and r <= 1.5:
-					print("KravenHD: download from URL")
+					print("[KravenHD]: download from URL")
 					res = requests.get('http://weather.service.msn.com/data.aspx?src=windows&weadegreetype=C&culture=' + str(config.plugins.KravenHD.msn_language.value) + '&wealocations=' + str(config.plugins.KravenHD.msn_code.value), timeout=1.5)
 					self.data = fromstring(res.text)
 					WEATHER_DATA = self.data

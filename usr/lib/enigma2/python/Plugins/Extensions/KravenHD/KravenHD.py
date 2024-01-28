@@ -16,8 +16,6 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
-from __future__ import print_function
 from .ColorSelection import KravenHDColorSelection
 from .DirectoryBrowser import KravenHDBrowser
 from Screens.Screen import Screen
@@ -1066,7 +1064,6 @@ config.plugins.KravenHD.BackgroundSelfColorG = ConfigSlider(default=0, increment
 config.plugins.KravenHD.BackgroundSelfColorB = ConfigSlider(default=75, increment=5, limits=(0, 255))
 
 class KravenHD(ConfigListScreen, Screen):
-
 	if DESKTOP_WIDTH <= 1280:
 	  skin = """
 <screen name="KravenHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="#00000000">

@@ -16,7 +16,6 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Components.Converter.Converter import Converter
 from Components.Converter.Poll import Poll
 from Components.Element import cached
@@ -27,7 +26,7 @@ class KravenHDCpuUsage(Converter, object):
 
 	def __init__(self, type):
 		Converter.__init__(self, type)
-		
+
 		self.percentlist = [ ]
 		self.pfmt = "%3d%%"
 		if not type or type == "Total":
@@ -90,7 +89,6 @@ class KravenHDCpuUsage(Converter, object):
 
 
 class CpuUsageMonitor(Poll, object):
-
 	def __init__(self):
 		Poll.__init__(self)
 		self.__callbacks = [ ]

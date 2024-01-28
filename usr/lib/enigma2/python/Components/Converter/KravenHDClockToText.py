@@ -16,7 +16,6 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Components.Converter.Converter import Converter
 from time import localtime, strftime
 from Components.Element import cached
@@ -32,10 +31,10 @@ class KravenHDClockToText(Converter, object):
 	ANALOG_SEC = 7
 	ANALOG_MIN = 8
 	ANALOG_HOUR = 9
-	
+
 	# add: date, date as string, weekday, ... 
 	# (whatever you need!)
-	
+
 	def __init__(self, type):
 		Converter.__init__(self, type)
 		if type == "WithSeconds":

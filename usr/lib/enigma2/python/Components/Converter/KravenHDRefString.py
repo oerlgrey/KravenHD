@@ -33,7 +33,6 @@
 #
 #######################################################################
 
-from __future__ import absolute_import
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Screens.InfoBar import InfoBar
@@ -45,10 +44,7 @@ class KravenHDRefString(Converter, object):
 	def __init__(self, type):
 		Converter.__init__(self, type)
 		self.CHANSEL = None
-		self.type = {
-				"CurrentRef": self.CURRENT,
-				"ServicelistRef": self.EVENT
-			}[type]
+		self.type = {"CurrentRef": self.CURRENT, "ServicelistRef": self.EVENT}[type]
 
 	@cached
 	def getText(self):

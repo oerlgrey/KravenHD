@@ -35,7 +35,6 @@
 #    
 #######################################################################
 
-from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
 from enigma import eLabel, eTimer, eSize
 from Components.VariableText import VariableText
@@ -43,7 +42,6 @@ from Components.config import config
 from skin import parseFont
 
 class KravenHDEmptyEpg(VariableText, Renderer):
-
 	def __init__(self):
 		Renderer.__init__(self)
 		VariableText.__init__(self)

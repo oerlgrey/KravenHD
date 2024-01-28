@@ -15,14 +15,12 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.Converter.Poll import Poll
 from enigma import iServiceInformation
 
 class KravenHDTunerType(Poll, Converter, object):
-
 	def __init__(self, type):
 		Converter.__init__(self, type)
 		Poll.__init__(self)
@@ -31,23 +29,20 @@ class KravenHDTunerType(Poll, Converter, object):
 
 	@cached
 	def getBoolean(self):
-	
 		if self.type == "IsStream" and self.getServiceType() == "STREAM":
 			return True
-		
+
 		return False
-		
+
 	boolean = property(getBoolean)
-	
+
 	@cached
 	def getText(self):
-	
 		return self.getServiceType()
-		
+
 	text = property(getText)
 
 	def getServiceType(self):
-	
 		type = "N/A"
 		stream = False
 
@@ -56,7 +51,7 @@ class KravenHDTunerType(Poll, Converter, object):
 
 		if info:
 			stream = service.streamed() is not None
-			
+
 		if stream:
 			type = "STREAM"
 		elif info:
@@ -65,7 +60,7 @@ class KravenHDTunerType(Poll, Converter, object):
 				type = tpdata.get("tuner_type", "")
 			else:
 				type = "STREAM"
-			
+
 			if type == "DVB-S" and tpdata.get("system", 0) == 1:
 				type = "DVB-S2"
 

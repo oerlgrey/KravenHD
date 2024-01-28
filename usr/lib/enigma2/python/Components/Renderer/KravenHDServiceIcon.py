@@ -15,13 +15,11 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer 
 from enigma import ePixmap
 from Tools.Directories import fileExists
 
 class KravenHDServiceIcon(Renderer):
-
 	def __init__(self):
 		Renderer.__init__(self)
 		self.pngname = ""
@@ -48,9 +46,8 @@ class KravenHDServiceIcon(Renderer):
 	def changed(self, what):
 		if self.instance:
 			if self.path:
-			
 				icon = ""
-				
+
 				if self.option == "VideoHeight":
 					value = self.source.value
 					if value > 1080:
@@ -61,42 +58,42 @@ class KravenHDServiceIcon(Renderer):
 						icon = "ico_sd"
 					else:
 						icon = "ico_hd_off"
-						
+
 				elif self.option == "IsCrypted":
 					bool = self.source.boolean
 					if bool:
 						icon = "ico_crypt_on"
 					else:
 						icon = "ico_crypt_off"
-				
+
 				elif self.option == "HasTelext":
 					bool = self.source.boolean
 					if bool:
 						icon = "ico_txt_on"
 					else:
 						icon = "ico_txt_off"
-				
+
 				elif self.option == "HasHBBTV":
 					bool = self.source.boolean
 					if bool:
 						icon = "ico_hbbtv_on"
 					else:
 						icon = "ico_hbbtv_off"
-				
+
 				elif self.option == "SubtitlesAvailable":
 					bool = self.source.boolean
 					if bool:
 						icon = "ico_sub_on"
 					else:
 						icon = "ico_sub_off"
-				
+
 				elif self.option == "IsWidescreen":
 					bool = self.source.boolean
 					if bool:
 						icon = "ico_format_on"
 					else:
 						icon = "ico_format_off"
-				
+
 				pngname = "/usr/share/enigma2/KravenHD/" + self.path + icon + ".png"
 				if fileExists(pngname):
 					self.instance.setPixmapFromFile(pngname)

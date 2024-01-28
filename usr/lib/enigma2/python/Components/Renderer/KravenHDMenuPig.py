@@ -15,14 +15,12 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
 from enigma import eVideoWidget, getDesktop, eTimer
 from Screens.PictureInPicture import PipPigMode
 from Components.config import config
 
 class KravenHDMenuPig(Renderer):
-
 	def __init__(self):
 		Renderer.__init__(self)
 		self.Position = self.Size = None

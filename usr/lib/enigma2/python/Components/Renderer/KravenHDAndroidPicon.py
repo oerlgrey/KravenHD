@@ -15,13 +15,11 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer 
 from enigma import ePixmap
 from Tools.Directories import fileExists, SCOPE_CURRENT_SKIN, resolveFilename 
 
 class KravenHDAndroidPicon(Renderer):
-
 	__module__ = __name__
 	def __init__(self):
 		Renderer.__init__(self)
@@ -42,8 +40,8 @@ class KravenHDAndroidPicon(Renderer):
 	def changed(self, what):
 		if self.instance:
 			if self.path:
-                           self.pngname = '/usr/share/enigma2/KravenHD/' + self.path + '/' + str(self.source.text) + '.png'
-                           if not fileExists(self.pngname):
-                              self.pngname = resolveFilename(SCOPE_CURRENT_SKIN, 'picon_default.png')
-                           self.instance.setScale(1)
-                           self.instance.setPixmapFromFile(self.pngname)
+				self.pngname = '/usr/share/enigma2/KravenHD/' + self.path + '/' + str(self.source.text) + '.png'
+				if not fileExists(self.pngname):
+					self.pngname = resolveFilename(SCOPE_CURRENT_SKIN, 'picon_default.png')
+				self.instance.setScale(1)
+				self.instance.setPixmapFromFile(self.pngname)

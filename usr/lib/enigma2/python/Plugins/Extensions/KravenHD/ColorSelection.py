@@ -16,7 +16,6 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Screens.Screen import Screen
 from Components.ActionMap import ActionMap
 from Components.config import config, getConfigListEntry
@@ -48,9 +47,8 @@ def _(txt):
 #############################################################
 
 class KravenHDColorSelection(ConfigListScreen, Screen):
-
 	if DESKTOP_WIDTH <= 1280:
-	  skin = """
+		skin = """
 <screen name="KravenHDColorSelection" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="#FF000000">
   <widget backgroundColor="#00000000" source="Title" render="Label" font="Regular;28" foregroundColor="#00f0a30a" position="286,260" size="540,36" valign="center" transparent="1" zPosition="1" />
   <widget backgroundColor="#00000000" source="Title" render="Label" font="Regular;28" foregroundColor="#00ffffff" position="844,260" size="150,36" halign="right" transparent="1" valign="center">
@@ -66,7 +64,7 @@ class KravenHDColorSelection(ConfigListScreen, Screen):
 </screen>
 """
 	else:
-	  skin = """
+		skin = """
 <screen name="KravenHDColorSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="#FF000000">
   <widget backgroundColor="#00000000" source="Title" render="Label" font="Regular;42" foregroundColor="#00f0a30a" position="429,390" size="810,54" valign="center" transparent="1" zPosition="1" />
   <widget backgroundColor="#00000000" source="Title" render="Label" font="Regular;42" foregroundColor="#00ffffff" position="1266,390" size="225,54" halign="right" transparent="1" valign="center">

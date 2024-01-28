@@ -15,7 +15,6 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from enigma import iServiceInformation, iPlayableService
 from Components.Converter.Converter import Converter
 from Components.Element import cached
@@ -25,10 +24,9 @@ from Tools.Directories import fileExists
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from Components.Language import language
 
+CI = False
 if fileExists("/etc/enigma2/ci0.xml") or fileExists("/etc/enigma2/ci1.xml"):
-		CI = True
-else:
-		CI = False
+	CI = True
 
 lang = language.getLanguage()
 os.environ["LANGUAGE"] = lang[:2]
@@ -43,7 +41,6 @@ def _(txt):
 	return t
 
 class KravenHDECMLine(Poll, Converter, object):
-
 	SATINFO = 0
 	VERYSHORTCAID = 1
 	VERYSHORTREADER = 2
@@ -98,13 +95,11 @@ class KravenHDECMLine(Poll, Converter, object):
 				flines = f.readlines()
 				f.close()
 			except:
-				
 				if CI:
 					ecmline = _('CI Modul')
-
 				else:
 					ecmline = _('waiting for information ...')
-	
+
 			else:
 				camInfo = {}
 				for line in flines:

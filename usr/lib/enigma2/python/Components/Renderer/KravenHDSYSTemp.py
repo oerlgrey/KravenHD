@@ -15,7 +15,6 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Components.VariableText import VariableText
 from enigma import eLabel
 from Components.Renderer.Renderer import Renderer
@@ -25,7 +24,7 @@ class KravenHDSYSTemp(Renderer, VariableText):
 	def __init__(self):
 		Renderer.__init__(self)
 		VariableText.__init__(self)
-		
+
 	GUI_WIDGET = eLabel
 
 	def changed(self, what):
@@ -43,7 +42,7 @@ class KravenHDSYSTemp(Renderer, VariableText):
 			except:
 				pass
 			self.text = systemp + str('\xc2\xb0') + "C"
-			
+
 	def onShow(self):
 		self.suspended = False
 		self.changed(None)

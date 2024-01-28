@@ -15,12 +15,10 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
-from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap, eTimer, eDVBVolumecontrol
 
 class KravenHDVolumeCycle(Renderer):
-
     def __init__(self):
         Renderer.__init__(self)
         self.vol_timer = eTimer()
