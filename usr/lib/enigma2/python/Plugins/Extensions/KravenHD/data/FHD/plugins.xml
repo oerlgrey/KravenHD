@@ -2765,6 +2765,7 @@
 	</widget>
 	<widget backgroundColor="Kravenbg" name="listleft" position="63,226" size="877,720" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" scrollbarWidth="15" enableWrapAround="1" transparent="1" />
 	<widget backgroundColor="Kravenbg" name="listright" position="980,226" size="877,720" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" scrollbarMode="showOnDemand" scrollbarWidth="15" enableWrapAround="1" transparent="1" />
+	<widget backgroundColor="#00fff000" name="status" position="63,901" size="1794,45" font="Regular2;31" foregroundColor="#00ffffff" borderColor="#00000000" borderWidth="3" halign="center" valign="center" zPosition="1" />
     <panel name="Title-big2"/>
     <panel name="RGYB_Buttons"/>
     <panel name="Background"/>
