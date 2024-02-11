@@ -1503,22 +1503,22 @@
     <widget backgroundColor="Kravenbg" name="servicelist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="63,390" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="15" selectionDisabled="1" size="1104,540" transparent="1" />
     <panel name="Title-big"/>
     <panel name="RGYB_Buttons"/>
-	<panel name="Logo2"/>
+	<panel name="NonTransbg"/>
 	<panel name="gradient-menu"/>
     <panel name="OKExit"/>
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ServiceInfo" position="0,0" size="1920,1080" title="Serviceinfo">
 	<!--*ServiceInfo*-->
-    <widget backgroundColor="Kravenbg3" name="infolist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="63,120" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="15" selectionDisabled="1" size="1104,720" transparent="1" />
+    <widget backgroundColor="Kravenbg" name="infolist" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" position="63,120" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="15" selectionDisabled="1" size="1794,720" transparent="1" />
     <panel name="Title-big"/>
     <panel name="RGYB_Buttons"/>
-	<!-- Logo -->
+	<panel name="Background"/>
 	<panel name="gradient-menu"/>
-    <widget font="Regular;30" halign="left" valign="center" name="red" position="71,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <widget font="Regular;30" halign="left" valign="center" name="green" position="446,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <widget font="Regular;30" halign="left" valign="center" name="yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
-    <widget font="Regular;30" halign="left" valign="center" name="blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg3" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="red" position="71,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="green" position="446,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="yellow" position="821,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
+    <widget font="Regular;30" halign="left" valign="center" name="blue" position="1196,1004" size="330,39" backgroundColor="KravenIBbg2" foregroundColor="KravenButton" transparent="1" zPosition="1" />
     <panel name="Exit"/>
   </screen>
 

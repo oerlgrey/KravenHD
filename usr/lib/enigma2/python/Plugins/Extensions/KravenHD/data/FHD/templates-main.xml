@@ -179,6 +179,28 @@
 	  </widget>
 	</screen>
 	
+	<screen name="NonTransbg">
+	  <!-- nontransbg */-->
+	  <ePixmap backgroundColor="Kravenbg2" pixmap="KravenHD/logo.png" position="1353,108" size="384,384" alphatest="blend" />
+	  <widget backgroundColor="Kravenbg2" font="Regular;64" foregroundColor="KravenFont1" halign="center" position="1407,531" render="Label" size="97,120" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	    <convert type="KravenHDClockToText">Format:%H</convert>
+	  </widget>
+	  <eLabel backgroundColor="Kravenbg2" font="Regular;64" foregroundColor="KravenFont1" halign="center" position="1492,531" size="22,120" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="Kravenbg2" font="Regular;64" foregroundColor="KravenFont1" halign="center" position="1507,531" render="Label" size="97,120" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	    <convert type="KravenHDClockToText">Format:%M</convert>
+	  </widget>
+	  <eLabel backgroundColor="Kravenbg2" font="Regular;48" foregroundColor="KravenFont1" halign="center" position="1591,550" size="22,90" text=":" transparent="1" valign="center" zPosition="1" />
+	  <widget backgroundColor="Kravenbg2" font="Regular;48" foregroundColor="KravenFont1" halign="center" position="1606,550" render="Label" size="75,90" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	    <convert type="KravenHDClockToText">Format:%S</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" font="Regular;27" foregroundColor="KravenFont1" halign="center" position="1392,636" render="Label" size="304,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	    <convert type="KravenHDClockToText">Format:%A</convert>
+	  </widget>
+	  <widget backgroundColor="Kravenbg2" font="Regular;27" foregroundColor="KravenFont1" halign="center" position="1392,673" render="Label" size="304,45" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+	    <convert type="KravenHDClockToText">Format:%e. %B</convert>
+	  </widget>
+	</screen>
+	
 	<screen name="Colorbuttons">
       <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_red1.png" position="63,1045" size="300,7" />
       <ePixmap alphatest="blend" pixmap="KravenHD/buttons/key_green1.png" position="438,1045" size="300,7" />
@@ -3116,7 +3138,7 @@
 	
 	<screen name="messagebox-template">
 	  <widget backgroundColor="Kravenbg6" name="text" font="Regular;32" foregroundColor="KravenFont1" position="124,15" size="1112,82" transparent="1" />
-	  <widget backgroundColor="Kravenbg6" name="list" font="Regular;32" foregroundColor="KravenFont1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="15,117" size="1221,90" transparent="1" />
+	  <widget backgroundColor="Kravenbg6" name="list" font="Regular;32" foregroundColor="KravenFont1" textOffset="6,1" itemHeight="45" selectionPixmap="KravenHD/graphics/sel_30.png" position="15,117" size="1221,90" transparent="1" />
 		<applet type="onLayoutFinish">
 from enigma import eSize, ePoint, getDesktop
 deskwidth = getDesktop(0).size().width()

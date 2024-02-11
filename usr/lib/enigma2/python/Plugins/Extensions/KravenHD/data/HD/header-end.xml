@@ -32,6 +32,9 @@
     <parameter name="PiconManagerList" value="7,1,1212,27" />
     <parameter name="PiconManagerListFont" value="Regular;22" />
     <parameter name="PiconManagerListItemHeight" value="30" />
+    <!-- ServiceInfo -->
+    <parameter name="ServiceInfoLeft" value="0,1,400,27" />
+    <parameter name="ServiceInfoRight" value="420,1,800,27" />
     <!-- FileList -->
     <parameter name="FileListName" value="33,0,694,30" />
     <parameter name="FileListIcon" value="3,5,20,20" />

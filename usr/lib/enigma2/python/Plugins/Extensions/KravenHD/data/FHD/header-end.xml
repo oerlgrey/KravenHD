@@ -86,6 +86,9 @@
     <parameter name="ServiceInfo_I" value="20,0,1100,40" />
     <parameter name="ServiceInfo_II" value="20,0,1100,40" />
     <parameter name="ServiceInfo_III" value="630,0,1100,40" />
+	<parameter name="ServiceInfo" value="0,1,1104,41" />
+    <parameter name="ServiceInfoLeft" value="0,1,600,41" />
+    <parameter name="ServiceInfoRight" value="630,1,1200,41" />
     <!-- AudioSelection -->
     <parameter name="AudioSelectionSliderSeparation" value="300" />
     <!-- general slider separation in config menues -->
@@ -114,10 +117,6 @@
 	<parameter name="PluginBrowserDownloadName" value="125,3,45"/>
 	<parameter name="PluginBrowserDownloadDescr" value="125,42,39"/>
 	<parameter name="PluginBrowserDownloadIcon" value="2,0,120,75"/>
-	<!-- ServiceInfo -->
-	<parameter name="ServiceInfo" value="0,0,450,50" />
-    <parameter name="ServiceInfoLeft" value="0,0,450,45" />
-    <parameter name="ServiceInfoRight" value="450,0,1000,45" />
 	<!-- SelectionList -->
     <parameter name="SelectionListDescr" value="55,2,1042,41" />
     <parameter name="SelectionListLock" value="5,8,30,30" />
